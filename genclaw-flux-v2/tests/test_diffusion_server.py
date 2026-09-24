@@ -11,7 +11,7 @@ import uvicorn
 from fastapi.testclient import TestClient
 from PIL import Image
 
-from server.flux_server import FluxEngine, create_app, fill_canvas
+from server.diffusion_server import DiffusionEngine, create_app, fill_canvas
 
 
 def encoded_image(color="red", size=(320, 192)):
@@ -22,7 +22,7 @@ def encoded_image(color="red", size=(320, 192)):
 
 @pytest.fixture
 def worker():
-    engine = FluxEngine("mock", "/unused")
+    engine = DiffusionEngine("mock", "/unused")
     sock = socket.socket()
     sock.bind(("127.0.0.1", 0))
     server = uvicorn.Server(uvicorn.Config(create_app(engine), log_level="error"))
@@ -44,10 +44,10 @@ def worker():
 @pytest.fixture
 def configured(monkeypatch, tmp_path, worker):
     from cc_genclaw.runtime.session_dir import reset_session_dir
-    for key, value in {"CC_GENCLAW_IMAGE_PROVIDER": "flux_remote", "FLUX_BASE_URL": worker[0],
-                       "FLUX_MODEL_NAME": "flux-fill", "FLUX_API_KEY": "", "FLUX_WIDTH": "320",
-                       "FLUX_HEIGHT": "320", "FLUX_STEPS": "2", "FLUX_SEED": "123",
-                       "FLUX_ALLOW_MOCK": "1", "FLUX_TIMEOUT": "5"}.items():
+    for key, value in {"CC_GENCLAW_IMAGE_PROVIDER": "qwen_remote", "QWEN_IMAGE_BASE_URL": worker[0],
+                       "QWEN_IMAGE_MODEL_NAME": "qwen-image", "QWEN_IMAGE_API_KEY": "", "QWEN_IMAGE_WIDTH": "320",
+                       "QWEN_IMAGE_HEIGHT": "320", "QWEN_IMAGE_STEPS": "2", "QWEN_IMAGE_SEED": "123",
+                       "QWEN_IMAGE_ALLOW_MOCK": "1", "QWEN_IMAGE_TIMEOUT": "5"}.items():
         monkeypatch.setenv(key, value)
     reset_session_dir(str(tmp_path / "runs"))
     return worker
@@ -94,7 +94,7 @@ def test_text_layout_uses_same_remote_backend(configured, tmp_path):
 
 def test_no_silent_mock_fallback(configured, monkeypatch):
     from cc_genclaw.tools._image_gen import generate_image
-    monkeypatch.delenv("FLUX_ALLOW_MOCK")
+    monkeypatch.delenv("QWEN_IMAGE_ALLOW_MOCK")
     with pytest.raises(RuntimeError, match="mock mode"):
         generate_image("cup")
 
@@ -113,7 +113,7 @@ def test_worker_failure_is_not_retried(configured):
     assert len(calls) == 1
 
 
-def test_agent_loop_can_call_remote_flux(configured):
+def test_agent_loop_can_call_remote_qwen(configured):
     from cc_genclaw.loop import LoopConfig, run_agent_loop
     from cc_genclaw.types import AgentContext, UserMessage, ToolResultMessage
     from cc_genclaw.tools.t2i import T2ITool
@@ -155,7 +155,7 @@ def test_fill_mask_protects_reference_and_crops_only_output():
 
 
 def test_auth_and_bad_input_rejected_before_inference():
-    client = TestClient(create_app(FluxEngine("mock", "/unused"), token="test-token"))
+    client = TestClient(create_app(DiffusionEngine("mock", "/unused"), token="test-token"))
     assert client.get("/health").status_code == 401
     headers = {"Authorization": "Bearer test-token"}
     assert client.get("/health", headers=headers).status_code == 200
@@ -165,9 +165,9 @@ def test_auth_and_bad_input_rejected_before_inference():
 
 
 def test_dev_backend_rejects_extra_references_and_wrong_model():
-    client = TestClient(create_app(FluxEngine("flux-dev", "/missing")))
-    assert client.post("/v1/generate", json={"prompt": "cup", "model": "flux-fill"}).status_code == 409
-    response = client.post("/v1/generate", json={"prompt": "cup", "model": "flux-dev",
+    client = TestClient(create_app(DiffusionEngine("qwen-image-edit", "/missing")))
+    assert client.post("/v1/generate", json={"prompt": "cup", "model": "qwen-image"}).status_code == 409
+    response = client.post("/v1/generate", json={"prompt": "cup", "model": "qwen-image-edit",
                                                 "images": [encoded_image(), encoded_image()]})
     assert response.status_code == 422
 
@@ -176,7 +176,7 @@ def test_health_does_not_load_models_and_reports_missing_shards(tmp_path):
     transformer = tmp_path / "transformer"
     transformer.mkdir()
     (transformer / "weights.index.json").write_text(json.dumps({"weight_map": {"x": "missing.safetensors"}}))
-    engine = FluxEngine("flux-fill", str(tmp_path))
+    engine = DiffusionEngine("qwen-image", str(tmp_path))
     response = TestClient(create_app(engine)).get("/health").json()
     assert engine.pipe is None
     assert not response["model_files_ready"]
@@ -184,7 +184,7 @@ def test_health_does_not_load_models_and_reports_missing_shards(tmp_path):
 
 
 def test_busy_worker_does_not_start_second_generation():
-    engine = FluxEngine("mock", "/unused")
+    engine = DiffusionEngine("mock", "/unused")
     start, finish = threading.Event(), threading.Event()
     original = engine.generate
 

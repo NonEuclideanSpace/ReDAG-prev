@@ -65,7 +65,7 @@ def main():
         finished = list(previous.get('completed_rounds', []))
         state = {'pid': os.getpid(), 'status': 'running', 'round': round_number,
                  'completed_rounds': finished, 'order': ORDER,
-                 'policy': 'real_genclaw_draft_then_flux_once_keep_failed_images',
+                 'policy': 'real_genclaw_draft_then_qwen_once_keep_failed_images',
                  'stop_file': str(STOP)}
 
         def update(**values):

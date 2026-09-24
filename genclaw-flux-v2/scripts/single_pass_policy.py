@@ -49,7 +49,7 @@ Generate one draft and then call i2i with that draft as the main image_path;
 include the user's input image and retrieved references as additional references when relevant.
 Do not use direct t2i. Do not repeat a draft or image because its quality is poor.
 Set scene-draft self_review=false. The batch runner will review and save the first
-Flux result, including failures, then continue to the next original prompt.
+Qwen image result, including failures, then continue to the next original prompt.
 """
     run.config.hooks.register_before_tool_call(policy.before)
     run.context.tools = [t for t in run.context.tools if t.name != "vlm_review"]
@@ -65,14 +65,14 @@ Flux result, including failures, then continue to the next original prompt.
     return policy
 
 
-def collect_flux(session):
+def collect_qwen(session):
     collected = []
     for path in sorted(Path(session).rglob("*.json")):
         try:
             data = json.loads(path.read_text())
         except (ValueError, UnicodeDecodeError, OSError):
             continue
-        if isinstance(data, dict) and data.get("backend") in {"mock", "flux-fill", "flux-dev"}:
+        if isinstance(data, dict) and data.get("backend") in {"mock", "qwen-image", "qwen-image-edit", "flux-fill", "flux-dev"}:
             if data["backend"] == "mock":
                 raise RuntimeError("Mock output is forbidden in paper reproduction")
             collected.append({"metadata_path": str(path), **data})
@@ -83,13 +83,13 @@ def archive_generated_images(report, folder, case):
     session = report.get("run_dir")
     if not session:
         return
-    flux = collect_flux(session)
-    report["flux_generations"] = flux
-    report["used_flux"] = bool(flux)
+    qwen = collect_qwen(session)
+    report["qwen_generations"] = qwen
+    report["used_qwen"] = bool(qwen)
     archive = (Path(folder) / case["output"]).parent / "attempts" / case["id"] / Path(session).name
     reviews = {str(Path(r.get("image_path", "")).resolve()): r for r in report.get("reviews", [])}
     images = []
-    for index, generation in enumerate(flux, 1):
+    for index, generation in enumerate(qwen, 1):
         source = Path(generation["metadata_path"]).with_suffix(".png")
         if not source.is_file():
             continue
@@ -105,4 +105,3 @@ def archive_generated_images(report, folder, case):
         images.append({"path": str(target.resolve()), "source": str(source.resolve()),
                        "review_status": verdict, "review": review})
     report["saved_attempts"] = images
-

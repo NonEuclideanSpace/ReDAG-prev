@@ -64,14 +64,14 @@ def run_case(case, folder, max_turns, seed):
     if output.exists():
         raise FileExistsError("Existing final image is never overwritten; move it before rerunning")
     os.environ["CC_GENCLAW_RUNS_DIR"] = str(folder / "runs" / case["id"])
-    os.environ["FLUX_SEED"] = str(seed)
-    os.environ["CC_GENCLAW_IMAGE_PROVIDER"] = "flux_remote"
-    os.environ.pop("FLUX_ALLOW_MOCK", None)
+    os.environ["QWEN_IMAGE_SEED"] = str(seed)
+    os.environ["CC_GENCLAW_IMAGE_PROVIDER"] = "qwen_remote"
+    os.environ.pop("QWEN_IMAGE_ALLOW_MOCK", None)
     os.environ["GENCLAW_REPRO_SINGLE_PASS"] = "1"
     report = {"id": case["id"], "title": case["title"], "prompt": case["prompt"],
               "case_sha256": case_digest(case, folder), "status": "running",
               "started_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "seed": seed,
-              "workflow": "full_genclaw_flux", "tools": [], "reviews": [],
+              "workflow": "full_genclaw_qwen", "tools": [], "reviews": [],
               "quality_retry_policy": "record_only", "draft_logic_executed": False}
     started = time.monotonic()
     write_json(report_path, report)
@@ -102,7 +102,7 @@ def run_case(case, folder, max_turns, seed):
                 item["status"] = payload.get("status")
                 if event.tool_name in {"t2i", "i2i"} and item["is_error"]:
                     error = str(payload.get("error", ""))
-                    if any(token in error for token in ("Cannot connect to Flux", "timed out", "Flux HTTP 429", "Flux HTTP 503")):
+                    if any(token in error for token in ("Cannot connect to Qwen", "timed out", "Qwen diffusion HTTP 429", "Qwen diffusion HTTP 503")):
                         report.setdefault("infrastructure_errors", []).append(event.tool_name)
                 if event.tool_name == "vlm_review" and payload.get("status") == "success":
                     report["reviews"].append(payload)
@@ -112,7 +112,7 @@ def run_case(case, folder, max_turns, seed):
             policy.accept(event.tool_name, payload, item["is_error"])
             write_json(report_path, report)
             if report.get("infrastructure_errors"):
-                raise RuntimeError("Flux infrastructure failed; stop before fallback generation")
+                raise RuntimeError("Qwen image infrastructure failed; stop before fallback generation")
             if event.tool_name == "i2i" and not item["is_error"] and payload.get("status") == "success":
                 if not report["draft_logic_executed"]:
                     raise RuntimeError("A real GenClaw draft is required before image generation")
@@ -128,7 +128,7 @@ def run_case(case, folder, max_turns, seed):
         if any(getattr(m, "stop_reason", None) in {"error", "max_turns"} for m in messages):
             raise RuntimeError("Agent stopped with an error or reached the turn limit")
         if report.get("infrastructure_errors"):
-            raise RuntimeError("Flux infrastructure failed during this run; a fallback image is not accepted")
+            raise RuntimeError("Qwen image infrastructure failed during this run; a fallback image is not accepted")
         state = get_completion_state()
         if not state.image_produced or not state.latest_final_path:
             raise RuntimeError("Agent did not produce a final image")
@@ -151,20 +151,20 @@ def run_case(case, folder, max_turns, seed):
         report["source_final_path"] = str(final)
         if not report["draft_logic_executed"]:
             raise RuntimeError("The GenClaw draft was not executed")
-        flux = []
+        qwen = []
         for path in session.rglob("*.json"):
             try:
                 data = json.loads(path.read_text())
             except (ValueError, UnicodeDecodeError):
                 continue
-            if isinstance(data, dict) and data.get("backend") in {"mock", "flux-fill", "flux-dev"}:
+            if isinstance(data, dict) and data.get("backend") in {"mock", "qwen-image", "qwen-image-edit", "flux-fill", "flux-dev"}:
                 if data["backend"] == "mock":
                     raise RuntimeError("Mock output is forbidden in paper reproduction")
-                flux.append({"metadata_path": str(path), **data})
-        report["flux_generations"] = flux
-        report["used_flux"] = bool(flux)
-        if not flux:
-            raise RuntimeError("A real Flux output is required for this reproduction")
+                qwen.append({"metadata_path": str(path), **data})
+        report["qwen_generations"] = qwen
+        report["used_qwen"] = bool(qwen)
+        if not qwen:
+            raise RuntimeError("A real Qwen image output is required for this reproduction")
         report["quality_passed"] = bool(reviews[-1].get("passed"))
         output.parent.mkdir(parents=True, exist_ok=True)
         with Image.open(final) as img:
@@ -196,7 +196,7 @@ def preflight(cases, folder):
         issues.append("TAVILY_API_KEY is missing")
     check = subprocess.run([sys.executable, str(ROOT / "scripts/check_setup.py")], cwd=ROOT)
     if check.returncode:
-        issues.append("Model/browser/Flux setup check failed")
+        issues.append("Model/browser/Qwen setup check failed")
     for item in issues:
         print(item, flush=True)
     return issues
@@ -235,7 +235,7 @@ def main():
         except BlockingIOError:
             parser.error("Another batch is already running")
         issues = preflight(cases, folder)
-        state = {"workflow": "full_genclaw_flux", "status": "blocked" if issues else "ready",
+        state = {"workflow": "full_genclaw_qwen", "status": "blocked" if issues else "ready",
                  "issues": issues, "selected": [c["id"] for c in cases],
                  "excluded": [{"id": c["id"], "reason": c["source_status"]} for c in all_cases if c["source_status"] != "complete"]}
         status_file = folder / "reproduction_status.json"
@@ -268,4 +268,3 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

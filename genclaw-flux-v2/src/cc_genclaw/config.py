@@ -27,6 +27,12 @@ _FORCE_OVERRIDE_KEYS = {
     "OPENAI_API_KEY",
     "OPENAI_BASE_URL",
     "OPENAI_MODEL_NAME",
+    "QWEN_API_KEY",
+    "QWEN_BASE_URL",
+    "QWEN_MODEL_NAME",
+    "QWEN_IMAGE_API_KEY",
+    "QWEN_IMAGE_BASE_URL",
+    "QWEN_IMAGE_MODEL_NAME",
 }
 
 _MAIN_LLM_PROFILE_KEYS = {
@@ -100,6 +106,25 @@ def load_genclaw_config(yaml_path: Optional[str] = None) -> Dict[str, Any]:
         os.environ[k] = v
         cfg[k] = v
 
+    qwen_base = os.environ.get("QWEN_BASE_URL")
+    qwen_key = os.environ.get("QWEN_API_KEY")
+    qwen_model = os.environ.get("QWEN_MODEL_NAME")
+    aliases = {
+        "OPENAI_BASE_URL": qwen_base,
+        "MAIN_LLM_BASE_URL": qwen_base,
+        "CODE_LLM_BASE_URL": qwen_base,
+        "OPENAI_API_KEY": qwen_key,
+        "MAIN_LLM_API_KEY": qwen_key,
+        "CODE_LLM_API_KEY": qwen_key,
+        "OPENAI_MODEL_NAME": qwen_model,
+        "MAIN_LLM_MODEL_NAME": qwen_model,
+        "CODE_LLM_MODEL_NAME": qwen_model,
+    }
+    for key, value in aliases.items():
+        if value and not os.environ.get(key):
+            os.environ[key] = value
+            cfg[key] = value
+
     main_base = os.environ.get("OPENAI_BASE_URL") or os.environ.get("MAIN_LLM_BASE_URL")
     main_key = os.environ.get("OPENAI_API_KEY") or os.environ.get("MAIN_LLM_API_KEY")
     if main_base and not os.environ.get("GEMINI_BASE_URL"):
@@ -117,4 +142,3 @@ def get_session_root(cfg: Optional[Dict[str, Any]] = None) -> str:
     if env:
         return env
     return str(Path(__file__).resolve().parents[2] / "runs")
-

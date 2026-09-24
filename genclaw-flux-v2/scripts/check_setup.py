@@ -13,8 +13,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--flux-only", action="store_true")
-    parser.add_argument("--skip-flux", action="store_true")
+    parser.add_argument("--qwen-only", "--flux-only", dest="qwen_only", action="store_true")
+    parser.add_argument("--skip-qwen", "--skip-flux", dest="skip_qwen", action="store_true")
     args = parser.parse_args()
     from cc_genclaw.config import load_genclaw_config
     try:
@@ -23,7 +23,7 @@ def main():
         print(str(exc))
         return 1
     problems = []
-    if not args.flux_only:
+    if not args.qwen_only:
         for name in ["chainlit", "openai", "playwright", "PIL", "requests", "yaml"]:
             if importlib.util.find_spec(name) is None:
                 problems.append(f"Missing dependency: {name}")
@@ -39,7 +39,7 @@ def main():
     from cc_genclaw.tools._image_gen.core import _load_default_provider, _resolve_model
     cfg = _load_default_provider()
     print("Image provider:", cfg["_name"])
-    if cfg.get("protocol") == "flux_remote" and not args.skip_flux:
+    if cfg.get("protocol") in {"qwen_remote", "flux_remote"} and not args.skip_qwen:
         import requests
         endpoint = str(cfg.get("base_url") or "http://127.0.0.1:8188").rstrip("/")
         headers = {"Authorization": "Bearer " + cfg["api_key"]} if cfg.get("api_key") else {}
@@ -53,9 +53,9 @@ def main():
             if not result.get("model_files_ready"):
                 problems.append("Worker model files are incomplete.")
             if result.get("backend") != _resolve_model(cfg, False):
-                problems.append("Worker backend differs from FLUX_MODEL_NAME (mock is not a real Flux worker).")
+                problems.append("Worker backend differs from QWEN_IMAGE_MODEL_NAME (mock is not a real Qwen worker).")
         except (requests.RequestException, ValueError) as exc:
-            problems.append(f"Flux health check failed: {type(exc).__name__}. Check the worker, tunnel and token.")
+            problems.append(f"Qwen worker health check failed: {type(exc).__name__}. Check the worker, tunnel and token.")
     for item in problems:
         print("NOT READY:", item)
     if not problems:
@@ -65,4 +65,3 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

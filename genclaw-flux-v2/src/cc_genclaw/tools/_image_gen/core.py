@@ -86,8 +86,8 @@ def _encode_image_to_data_uri(path: str) -> str:
     return f"data:{mime};base64,{b64}"
 
 
-def _handle_flux_remote(prompt, reference_images, model, cfg):
-    from .flux_remote import request_image
+def _handle_qwen_remote(prompt, reference_images, model, cfg):
+    from .qwen_remote import request_image
     return request_image(prompt, reference_images, model, cfg, _output_path())
 
 
@@ -181,7 +181,8 @@ def _handle_openai_chat(
 
 
 _PROTOCOL_HANDLERS = {
-    "flux_remote": _handle_flux_remote,
+    "qwen_remote": _handle_qwen_remote,
+    "flux_remote": _handle_qwen_remote,
     "openai": _handle_openai,
     "openai_chat": _handle_openai_chat,
 }
@@ -295,7 +296,7 @@ def generate_image(
     model = _resolve_model(cfg, has_refs=bool(refs))
 
     last_err: Optional[Exception] = None
-    total = 1 if protocol == "flux_remote" else _MAX_RETRIES + 1
+    total = 1 if protocol in {"qwen_remote", "flux_remote"} else _MAX_RETRIES + 1
     for attempt in range(total):
         try:
             t0 = time.time()
@@ -331,4 +332,3 @@ def generate_image(
                 time.sleep(delay)
 
     raise RuntimeError(f"image_gen failed after {total} attempts: {last_err}")
-

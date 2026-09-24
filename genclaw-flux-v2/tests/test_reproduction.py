@@ -44,7 +44,7 @@ def test_reference_change_invalidates_resume(tmp_path):
     assert first!=case_digest(case,tmp_path)
 
 
-def test_flux_outage_cannot_be_counted_as_completed(monkeypatch,tmp_path):
+def test_qwen_outage_cannot_be_counted_as_completed(monkeypatch,tmp_path):
     from scripts.reproduce_paper import run_case
     import cc_genclaw.runtime.agent_runner as runner
     import cc_genclaw.runtime.perception_state as perception
@@ -55,7 +55,7 @@ def test_flux_outage_cannot_be_counted_as_completed(monkeypatch,tmp_path):
     monkeypatch.setattr(runner,'initialize_perception',lambda *a,**kw:None)
     monkeypatch.setattr(perception,'get_perception_state',lambda:SimpleNamespace(_fallback_used=False))
     def fake_run(prompt,run,emit):
-        emit(SimpleNamespace(type='tool_execution_end',tool_name='i2i',result=SimpleNamespace(is_error=True,content=json.dumps({'status':'failed','error':'Cannot connect to Flux'}))))
+        emit(SimpleNamespace(type='tool_execution_end',tool_name='i2i',result=SimpleNamespace(is_error=True,content=json.dumps({'status':'failed','error':'Cannot connect to Qwen'}))))
         return []
     monkeypatch.setattr(runner,'run_prompt',fake_run)
     case={'id':'03','title':'fixture','prompt':'fixture','source_status':'complete','reference_image':None,'output':'images/03.png'}

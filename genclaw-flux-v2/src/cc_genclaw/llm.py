@@ -29,17 +29,19 @@ class LLMConfig:
     def from_env(cls) -> "LLMConfig":
         model = (
             os.getenv("MAIN_LLM_MODEL_NAME")
+            or os.getenv("QWEN_MODEL_NAME")
             or os.getenv("OPENAI_MODEL_NAME")
             or "gpt-4o"
         )
         base_url = (
             os.getenv("MAIN_LLM_BASE_URL")
+            or os.getenv("QWEN_BASE_URL")
             or os.getenv("OPENAI_BASE_URL")
             or "https://api.openai.com/v1"
         )
         return cls(
             provider="openai_chat",
-            api_key=os.getenv("MAIN_LLM_API_KEY") or os.getenv("OPENAI_API_KEY"),
+            api_key=os.getenv("MAIN_LLM_API_KEY") or os.getenv("QWEN_API_KEY") or os.getenv("OPENAI_API_KEY"),
             base_url=base_url,
             model=model,
         )
@@ -60,17 +62,19 @@ class LLMConfig:
         model = (
             os.getenv("CODE_LLM_MODEL_NAME")
             or os.getenv("SVG_GEN_MODEL_NAME")
+            or os.getenv("QWEN_MODEL_NAME")
             or os.getenv("OPENAI_MODEL_NAME")
             or "gpt-4o"
         )
         base_url = (
             os.getenv("CODE_LLM_BASE_URL")
+            or os.getenv("QWEN_BASE_URL")
             or os.getenv("OPENAI_BASE_URL")
             or "https://api.openai.com/v1"
         )
         return cls(
             provider="openai_chat",
-            api_key=os.getenv("CODE_LLM_API_KEY") or os.getenv("OPENAI_API_KEY"),
+            api_key=os.getenv("CODE_LLM_API_KEY") or os.getenv("QWEN_API_KEY") or os.getenv("OPENAI_API_KEY"),
             base_url=base_url,
             model=model,
         )
@@ -90,12 +94,13 @@ class LLMClient:
 
     def __init__(self, config: Optional[LLMConfig] = None):
         self.config = config or LLMConfig.from_env()
-        from openai import OpenAI
+        from openai import DefaultHttpxClient, OpenAI
 
         self._client = OpenAI(
             api_key=self.config.api_key,
             base_url=self.config.base_url,
             timeout=self.config.timeout,
+            http_client=DefaultHttpxClient(trust_env=False),
         )
 
     def create(
@@ -123,4 +128,3 @@ class LLMClient:
 
         response = chat_completion(self._client, **kwargs)
         return response.model_dump()
-

@@ -16,9 +16,26 @@ from PIL import Image, ImageDraw, ImageOps
 from pydantic import BaseModel, ConfigDict, Field
 
 
+MODEL_PATH = "/home/hdd4/lpz/Qwen-Image-2.1"
+QWEN_BACKENDS = {"qwen-image"}
+FILL_BACKENDS = {"flux-fill"}
+EDIT_BACKENDS = {"qwen-image-edit", "flux-dev"}
+BACKENDS = sorted(QWEN_BACKENDS | FILL_BACKENDS | EDIT_BACKENDS | {"mock"})
+
+
+def backend_kind(backend: str) -> str:
+    if backend in QWEN_BACKENDS:
+        return "qwen"
+    if backend in FILL_BACKENDS:
+        return "fill"
+    if backend in EDIT_BACKENDS:
+        return "edit"
+    return backend
+
+
 class GenerationRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    model: Literal["flux-fill", "flux-dev"] = "flux-fill"
+    model: Literal["qwen-image", "qwen-image-edit", "flux-fill", "flux-dev"] = "qwen-image"
     prompt: str = Field(min_length=1, max_length=20000)
     images: List[str] = Field(default_factory=list, max_length=8)
     width: int = Field(default=768, ge=64, le=1536, multiple_of=16)
@@ -69,7 +86,7 @@ def fill_canvas(images: List[Image.Image], width: int, height: int):
     return canvas, mask, (width, 0, width * 2, height)
 
 
-class FluxEngine:
+class DiffusionEngine:
     def __init__(self, backend: str, model_path: str, cpu_offload=False, lora_path=None):
         self.backend = backend
         self.model_path = Path(model_path)
@@ -82,20 +99,35 @@ class FluxEngine:
         if self.backend == "mock":
             return []
         missing = []
+        kind = backend_kind(self.backend)
         index_path = self.model_path / "model_index.json"
+        components = {}
         if index_path.is_file():
             try:
-                expected = "FluxFillPipeline" if self.backend == "flux-fill" else "FluxPipeline"
-                if json.loads(index_path.read_text()).get("_class_name") != expected:
+                index = json.loads(index_path.read_text())
+                expected = "QwenImage21Pipeline" if kind == "qwen" else (
+                    "FluxFillPipeline" if kind == "fill" else "FluxPipeline")
+                if index.get("_class_name") != expected:
                     missing.append("model_index.json (pipeline does not match selected backend)")
+                components = {k: v for k, v in index.items() if isinstance(v, list) and len(v) >= 2}
             except (ValueError, OSError):
                 missing.append("model_index.json (invalid)")
-        for relative in ["model_index.json", "transformer/config.json", "vae/config.json",
-                         "scheduler/scheduler_config.json", "tokenizer/tokenizer_config.json",
-                         "tokenizer_2/tokenizer_config.json"]:
+        if kind == "qwen":
+            required = ["model_index.json", "transformer/config.json", "vae/config.json",
+                        "scheduler/scheduler_config.json", "text_encoder/config.json"]
+            for component in ["processor"]:
+                if component in components and not (self.model_path / component).is_dir():
+                    missing.append(component + "/")
+        else:
+            required = ["model_index.json", "transformer/config.json", "vae/config.json",
+                        "scheduler/scheduler_config.json", "tokenizer/tokenizer_config.json",
+                        "tokenizer_2/tokenizer_config.json"]
+        for relative in required:
             if not (self.model_path / relative).is_file():
                 missing.append(relative)
-        for component in ["transformer", "vae", "text_encoder", "text_encoder_2"]:
+        weight_components = ["transformer", "vae", "text_encoder"] if kind == "qwen" else [
+            "transformer", "vae", "text_encoder", "text_encoder_2"]
+        for component in weight_components:
             folder = self.model_path / component
             weights = list(folder.glob("*.safetensors")) + list(folder.glob("*.bin"))
             if not weights:
@@ -118,10 +150,16 @@ class FluxEngine:
         if missing:
             raise RuntimeError("Local model files missing: " + ", ".join(missing))
         import torch
-        from diffusers import FluxFillPipeline, FluxPipeline
+        import diffusers
         if not torch.cuda.is_available():
             raise RuntimeError("CUDA is unavailable; launch this worker in the GPU environment.")
-        cls = FluxFillPipeline if self.backend == "flux-fill" else FluxPipeline
+        kind = backend_kind(self.backend)
+        if kind == "qwen":
+            cls = getattr(diffusers, "QwenImage21Pipeline", None)
+            if cls is None:
+                raise RuntimeError("diffusers does not provide QwenImage21Pipeline; install the Qwen-Image-2.1 compatible diffusers build.")
+        else:
+            cls = diffusers.FluxFillPipeline if kind == "fill" else diffusers.FluxPipeline
         pipe = cls.from_pretrained(str(self.model_path), torch_dtype=torch.bfloat16,
                                    local_files_only=True)
         if self.lora_path:
@@ -149,13 +187,20 @@ class FluxEngine:
     def generate(self, req: GenerationRequest, images: List[Image.Image], seed: int):
         if self.backend == "mock":
             image = Image.new("RGB", (req.width, req.height), "#dae7f7")
-            ImageDraw.Draw(image).text((12, 12), "MOCK TRANSPORT TEST - NOT FLUX", fill="black")
+            ImageDraw.Draw(image).text((12, 12), "MOCK TRANSPORT TEST - NOT DIFFUSION", fill="black")
             return image, "mock"
         self.load()
         import torch
+        kind = backend_kind(self.backend)
         generator = torch.Generator(device="cpu").manual_seed(seed)
         kwargs = dict(num_inference_steps=req.steps, guidance_scale=req.guidance, generator=generator)
-        if self.backend == "flux-fill":
+        if kind == "qwen":
+            if images:
+                raise RuntimeError("qwen-image backend does not support reference images in this worker.")
+            with torch.inference_mode():
+                result = self.pipe(prompt=req.prompt, width=req.width, height=req.height, **kwargs).images[0]
+            return result, "text-to-image"
+        if kind == "fill":
             canvas, mask, crop = fill_canvas(images, req.width, req.height)
             prompt = req.prompt
             if images:
@@ -187,8 +232,8 @@ class FluxEngine:
         return result, "text-to-image"
 
 
-def create_app(engine: FluxEngine, token: str = "") -> FastAPI:
-    app = FastAPI(title="GenClaw Flux worker", version="0.1.0")
+def create_app(engine: DiffusionEngine, token: str = "") -> FastAPI:
+    app = FastAPI(title="GenClaw Diffusion worker", version="0.1.0")
     gate = threading.Lock()
 
     def authorize(authorization):
@@ -202,7 +247,7 @@ def create_app(engine: FluxEngine, token: str = "") -> FastAPI:
         return {"status": "ok" if not missing else "model_files_missing",
                 "backend": engine.backend, "model_files_ready": not missing,
                 "model_loaded": engine.pipe is not None, "missing_files": missing,
-                "busy": gate.locked(), "max_references": 1 if engine.backend == "flux-dev" else 8,
+                "busy": gate.locked(), "max_references": 1 if backend_kind(engine.backend) == "edit" else 8,
                 "note": "File presence only; generation validates CUDA and model loading."}
 
     @app.post("/v1/generate")
@@ -212,11 +257,12 @@ def create_app(engine: FluxEngine, token: str = "") -> FastAPI:
             raise HTTPException(422, "Prompt cannot be blank.")
         if engine.backend != "mock" and req.model != engine.backend:
             raise HTTPException(409, f"Worker runs {engine.backend}, request specifies {req.model}.")
-        if engine.backend == "flux-dev" and len(req.images) > 1:
-            raise HTTPException(422, "flux-dev img2img supports one image; extra references will not be discarded.")
-        if engine.backend == "flux-dev" and req.images and int(req.steps * req.strength) < 1:
+        kind = backend_kind(engine.backend)
+        if kind == "edit" and len(req.images) > 1:
+            raise HTTPException(422, "qwen-image-edit img2img supports one image; extra references will not be discarded.")
+        if kind == "edit" and req.images and int(req.steps * req.strength) < 1:
             raise HTTPException(422, "steps * strength must be at least 1 for img2img.")
-        area = req.width * req.height * (2 if engine.backend == "flux-fill" and req.images else 1)
+        area = req.width * req.height * (2 if kind == "fill" and req.images else 1)
         if area > 2_097_152:
             raise HTTPException(422, "Working canvas exceeds 2 megapixels; reduce width/height.")
         try:
@@ -240,7 +286,7 @@ def create_app(engine: FluxEngine, token: str = "") -> FastAPI:
                     "warnings": ["Experimental reference-panel conditioning; layout/text fidelity is not guaranteed."]
                     if mode == "reference-panel-fill" else []}
         except Exception as exc:
-            raise HTTPException(503, f"Flux inference failed: {type(exc).__name__}: {str(exc)[:500]}") from exc
+            raise HTTPException(503, f"Diffusion inference failed: {type(exc).__name__}: {str(exc)[:500]}") from exc
         finally:
             engine.release_memory()
             gate.release()
@@ -250,18 +296,19 @@ def create_app(engine: FluxEngine, token: str = "") -> FastAPI:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--backend", choices=["flux-fill", "flux-dev", "mock"], default="flux-fill")
-    parser.add_argument("--model-path", default=os.environ.get("FLUX_MODEL_PATH", ""))
+    parser.add_argument("--backend", choices=BACKENDS, default="qwen-image")
+    parser.add_argument("--model-path", default=os.environ.get(
+        "QWEN_IMAGE_MODEL_PATH",
+        os.environ.get("DIFFUSION_MODEL_PATH", os.environ.get("FLUX_MODEL_PATH", MODEL_PATH))))
     parser.add_argument("--port", type=int, default=8188)
     parser.add_argument("--cpu-offload", action="store_true")
     parser.add_argument("--lora-path", default=None)
     args = parser.parse_args()
     import uvicorn
-    app = create_app(FluxEngine(args.backend, args.model_path, args.cpu_offload, args.lora_path),
-                     token=os.environ.get("FLUX_API_KEY", ""))
+    app = create_app(DiffusionEngine(args.backend, args.model_path, args.cpu_offload, args.lora_path),
+                     token=os.environ.get("QWEN_IMAGE_API_KEY", os.environ.get("FLUX_API_KEY", "")))
     uvicorn.run(app, host="127.0.0.1", port=args.port, workers=1)
 
 
 if __name__ == "__main__":
     main()
-

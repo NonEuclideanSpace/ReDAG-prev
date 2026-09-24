@@ -16,13 +16,29 @@ def _number(name: str, default: Any, convert):
     return convert(value) if value else default
 
 
+def _env(name: str, fallback: str = "") -> str:
+    return os.environ.get(name) or os.environ.get(fallback, "")
+
+
+def _number_any(names: List[str], default: Any, convert):
+    for name in names:
+        value = os.environ.get(name, "").strip()
+        if value:
+            return convert(value)
+    return default
+
+
 def _budgeted_size(src_width: int, src_height: int, budget: int):
+    if src_width * src_height <= budget:
+        width = min(1536, max(64, (src_width // 16) * 16))
+        height = min(1536, max(64, (src_height // 16) * 16))
+        return width, height
     aspect = min(2.0, max(0.5, src_width / float(src_height)))
     side = budget ** 0.5
     width = int(round(side * aspect ** 0.5))
     height = int(round(side / aspect ** 0.5))
-    width = min(1536, max(256, (width // 16) * 16))
-    height = min(1536, max(256, (height // 16) * 16))
+    width = min(1536, max(64, (width // 16) * 16))
+    height = min(1536, max(64, (height // 16) * 16))
     return width, height
 
 
@@ -30,9 +46,9 @@ def request_image(prompt: str, reference_images: Optional[List[str]], model: str
                   cfg: Dict[str, Any], output_path: str) -> str:
     refs = reference_images or []
     if len(refs) > 8:
-        raise RuntimeError("Flux accepts at most 8 reference images; none were sent.")
-    width = _number("FLUX_WIDTH", 768, int)
-    height = _number("FLUX_HEIGHT", 768, int)
+        raise RuntimeError("Qwen diffusion worker accepts at most 8 reference images; none were sent.")
+    width = _number_any(["QWEN_IMAGE_WIDTH", "FLUX_WIDTH"], 768, int)
+    height = _number_any(["QWEN_IMAGE_HEIGHT", "FLUX_HEIGHT"], 768, int)
     encoded = []
     for index, path in enumerate(refs):
         with Image.open(path) as source:
@@ -46,31 +62,32 @@ def request_image(prompt: str, reference_images: Optional[List[str]], model: str
 
     body = {"model": model, "prompt": prompt, "images": encoded,
             "width": width, "height": height,
-            "seed": _number("FLUX_SEED", None, int),
-            "steps": _number("FLUX_STEPS", 28, int),
-            "guidance": _number("FLUX_GUIDANCE", 30.0 if model == "flux-fill" else 3.5, float),
-            "strength": _number("FLUX_STRENGTH", 0.6, float)}
+            "seed": _number_any(["QWEN_IMAGE_SEED", "FLUX_SEED"], None, int),
+            "steps": _number_any(["QWEN_IMAGE_STEPS", "FLUX_STEPS"], 28, int),
+            "guidance": _number_any(["QWEN_IMAGE_GUIDANCE", "FLUX_GUIDANCE"],
+                                    30.0 if model in {"qwen-image", "flux-fill"} else 3.5, float),
+            "strength": _number_any(["QWEN_IMAGE_STRENGTH", "FLUX_STRENGTH"], 0.6, float)}
     base_url = str(cfg.get("base_url") or "http://127.0.0.1:8188").rstrip("/")
     headers = {}
     token = cfg.get("api_key") or ""
     if token:
         headers["Authorization"] = f"Bearer {token}"
-    timeout = _number("FLUX_TIMEOUT", 900.0, float)
+    timeout = _number_any(["QWEN_IMAGE_TIMEOUT", "FLUX_TIMEOUT"], 900.0, float)
     try:
         with requests.Session() as session:
             session.trust_env = False
             response = session.post(base_url + "/v1/generate", json=body,
                                     headers=headers, timeout=(10, timeout))
     except requests.ConnectionError as exc:
-        raise RuntimeError(f"Cannot connect to Flux at {base_url}. Start the worker and SSH tunnel.") from exc
+        raise RuntimeError(f"Cannot connect to Qwen diffusion worker at {base_url}. Start the worker and tunnel.") from exc
     except requests.Timeout as exc:
-        raise RuntimeError("Flux request timed out. It may still be running remotely; it was not retried.") from exc
+        raise RuntimeError("Qwen diffusion request timed out. It may still be running remotely; it was not retried.") from exc
     if not response.ok:
         try:
             detail = response.json().get("detail", "request rejected")
         except ValueError:
             detail = response.text[:400]
-        raise RuntimeError(f"Flux HTTP {response.status_code}: {str(detail)[:600]}")
+        raise RuntimeError(f"Qwen diffusion HTTP {response.status_code}: {str(detail)[:600]}")
     try:
         payload = response.json()
         raw = base64.b64decode(payload["image_base64"], validate=True)
@@ -78,9 +95,9 @@ def request_image(prompt: str, reference_images: Optional[List[str]], model: str
             generated.load()
             image = generated.convert("RGB")
     except (KeyError, ValueError, OSError, TypeError) as exc:
-        raise RuntimeError("Flux returned an invalid image response.") from exc
-    if payload.get("backend") == "mock" and os.environ.get("FLUX_ALLOW_MOCK") != "1":
-        raise RuntimeError("Worker is in mock mode. Set FLUX_ALLOW_MOCK=1 only for an explicit transport test.")
+        raise RuntimeError("Qwen diffusion worker returned an invalid image response.") from exc
+    if payload.get("backend") == "mock" and _env("QWEN_IMAGE_ALLOW_MOCK", "FLUX_ALLOW_MOCK") != "1":
+        raise RuntimeError("Worker is in mock mode. Set QWEN_IMAGE_ALLOW_MOCK=1 only for an explicit transport test.")
     target = Path(output_path).resolve()
     target.parent.mkdir(parents=True, exist_ok=True)
     image.save(target, format="PNG")
@@ -88,4 +105,3 @@ def request_image(prompt: str, reference_images: Optional[List[str]], model: str
     metadata["reference_count"] = len(refs)
     target.with_suffix(".json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
     return str(target)
-

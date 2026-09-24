@@ -21,7 +21,7 @@ def main():
     from cc_genclaw.tools._image_gen import generate_image
     load_genclaw_config()
     if args.allow_mock:
-        os.environ["FLUX_ALLOW_MOCK"] = "1"
+        os.environ["QWEN_IMAGE_ALLOW_MOCK"] = "1"
     try:
         path = Path(generate_image(args.prompt, [str(Path(p).resolve()) for p in args.reference]))
         if args.output:
@@ -43,4 +43,3 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
