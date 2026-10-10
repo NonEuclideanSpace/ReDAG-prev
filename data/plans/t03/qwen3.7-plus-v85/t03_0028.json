@@ -1,0 +1,237 @@
+{
+ "style": "cinematic film still, dramatic lighting, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark fire station interior with a polished concrete floor",
+   "question": "Does the image show a dark fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter wearing a soot-stained yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    380,
+    550,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "paramedic",
+   "type": "entity",
+   "class": "paramedic",
+   "plural": "paramedics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paramedic in blue scrubs",
+   "question": "Is there a paramedic wearing blue scrubs?",
+   "box": [
+    680,
+    250,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "oxygen_mask",
+   "type": "entity",
+   "class": "oxygen mask",
+   "plural": "oxygen masks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver oxygen mask",
+   "question": "Is there a silver oxygen mask?",
+   "box": [
+    300,
+    450,
+    450,
+    600
+   ]
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter stands rigidly",
+   "question": "Is the firefighter standing rigidly?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian sits calmly",
+   "question": "Is the dalmatian sitting calmly?"
+  },
+  {
+   "id": "paramedic_kneeling",
+   "type": "state",
+   "of": "paramedic",
+   "desc": "the paramedic kneels",
+   "question": "Is the paramedic kneeling?"
+  },
+  {
+   "id": "dalmatian_gaze",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian's gaze is fixed forward",
+   "question": "Is the dalmatian's gaze fixed forward?"
+  },
+  {
+   "id": "firefighter_holds_mask",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds the silver oxygen mask",
+   "question": "Is the firefighter holding the silver oxygen mask?"
+  },
+  {
+   "id": "paramedic_looks_at_mask",
+   "type": "action",
+   "of": [
+    "paramedic",
+    "oxygen_mask"
+   ],
+   "desc": "the paramedic looks intently at the silver oxygen mask",
+   "question": "Is the paramedic looking intently at the silver oxygen mask?"
+  },
+  {
+   "id": "mask_toward_dog",
+   "type": "relation",
+   "of": [
+    "oxygen_mask",
+    "dalmatian"
+   ],
+   "desc": "the silver oxygen mask is extended toward the dalmatian",
+   "question": "Is the silver oxygen mask being extended toward the dalmatian?"
+  },
+  {
+   "id": "paramedic_beside_dog",
+   "type": "relation",
+   "of": [
+    "paramedic",
+    "dalmatian"
+   ],
+   "desc": "the paramedic is beside the dalmatian",
+   "question": "Is the paramedic beside the dalmatian?"
+  },
+  {
+   "id": "no_fire_smoke",
+   "type": "absent",
+   "desc": "fire or smoke",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "concrete floor",
+   "plural": "concrete floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished concrete floor",
+   "question": "Is there a polished concrete floor?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "helmet_soot",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter's yellow helmet is soot-stained",
+   "question": "Is the firefighter's yellow helmet soot-stained?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "firefighter",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dalmatian",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "paramedic",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "dalmatian",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "paramedic",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "firefighter",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0028",
+ "prompt": "A cinematic film still captures a tense moment inside a fire station. On the left, a firefighter in a soot-stained yellow helmet stands rigidly. In the center, a dalmatian with black spots sits calmly on the polished concrete floor. To the right, a paramedic in blue scrubs kneels beside the dog. The firefighter holds a silver oxygen mask, extending it toward the animal. The paramedic looks intently at the mask being offered. The dog remains still, its gaze fixed forward. There is no fire or smoke visible in the background. The scene is stark and quiet, focusing entirely on the exchange between the three figures. The lighting highlights the texture of the helmet and the dog's fur, creating a dramatic contrast against the dark station interior.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

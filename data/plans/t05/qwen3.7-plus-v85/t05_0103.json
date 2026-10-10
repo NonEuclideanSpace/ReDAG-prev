@@ -1,0 +1,299 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop with a wooden shelf in the background",
+   "question": "Does the image show a pottery workshop with a wooden shelf in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow shirt",
+   "question": "Is there a man in a yellow shirt?",
+   "box": [
+    650,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large terracotta vase, unglazed",
+   "question": "Is there a large unglazed terracotta vase?",
+   "box": [
+    420,
+    500,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "wooden shelf",
+   "plural": "wooden shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden shelf",
+   "question": "Is there a wooden shelf?",
+   "box": [
+    100,
+    100,
+    924,
+    300
+   ]
+  },
+  {
+   "id": "bowls",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three small green bowls stacked neatly",
+   "question": "Are there three small green bowls stacked neatly?",
+   "box": [
+    600,
+    150,
+    750,
+    250
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    760,
+    160,
+    900,
+    280
+   ]
+  },
+  {
+   "id": "woman_hands_clay",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman's hands are covered in clay",
+   "question": "Are the woman's hands covered in clay?"
+  },
+  {
+   "id": "woman_shaping_wheel",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman shapes a spinning wheel",
+   "question": "Is the woman shaping a spinning wheel?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman is sitting",
+   "question": "Is the woman sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is standing",
+   "question": "Is the man standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "vase"
+   ],
+   "desc": "the man points at the vase with his index finger",
+   "question": "Is the man pointing at the vase with his index finger?"
+  },
+  {
+   "id": "man_looking_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man looks toward the woman",
+   "question": "Is the man looking toward the woman?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman looks at the man",
+   "question": "Is the woman looking at the man?"
+  },
+  {
+   "id": "vase_on_floor",
+   "type": "state",
+   "of": "vase",
+   "desc": "the vase stands on the floor",
+   "question": "Is the vase standing on the floor?"
+  },
+  {
+   "id": "vase_next_to_woman",
+   "type": "relation",
+   "of": [
+    "vase",
+    "woman"
+   ],
+   "desc": "the vase is next to the woman",
+   "question": "Is the vase next to the woman?"
+  },
+  {
+   "id": "bowls_on_shelf",
+   "type": "relation",
+   "of": [
+    "bowls",
+    "shelf"
+   ],
+   "desc": "the bowls are on the wooden shelf",
+   "question": "Are the bowls on the wooden shelf?"
+  },
+  {
+   "id": "cat_on_shelf",
+   "type": "relation",
+   "of": [
+    "cat",
+    "shelf"
+   ],
+   "desc": "the cat is on the wooden shelf",
+   "question": "Is the cat on the wooden shelf?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is curled into a tight ball",
+   "question": "Is the black cat curled into a tight ball?"
+  },
+  {
+   "id": "cat_beside_bowls",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bowls"
+   ],
+   "desc": "the cat is beside the bowls",
+   "question": "Is the cat beside the bowls?"
+  },
+  {
+   "id": "no_kiln",
+   "type": "absent",
+   "desc": "an electric kiln",
+   "question": "Is there an electric kiln visible in the background?"
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    350,
+    600,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sleeping",
+   "question": "Is the black cat sleeping?"
+  },
+  {
+   "id": "woman_hands_wet",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the clay on the woman's hands is wet",
+   "question": "Is the clay on the woman's hands wet?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "shelf",
+   "to": "bowls",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0103",
+ "prompt": "In a photorealistic photo of a pottery workshop, a woman in a blue apron sits on the left, her hands covered in wet clay as she shapes a spinning wheel. Next to her on the center floor, a large terracotta vase stands tall and unglazed. A man in a yellow shirt stands on the right, pointing at the vase with his index finger while looking toward the woman. Behind them, a wooden shelf holds three small green bowls stacked neatly. A black cat sleeps on the shelf, curled into a tight ball beside the bowls. The woman looks at the man, acknowledging his gesture. There is no electric kiln visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

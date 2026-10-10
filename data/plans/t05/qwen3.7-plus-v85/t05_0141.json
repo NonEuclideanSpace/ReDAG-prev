@@ -1,0 +1,275 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court setting",
+   "question": "Does the image show a beach volleyball court setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue visor",
+   "question": "Is there a woman wearing a blue visor?",
+   "box": [
+    50,
+    250,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in striped shorts",
+   "question": "Is there a man wearing striped shorts?",
+   "box": [
+    400,
+    100,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    650,
+    150,
+    750,
+    250
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in black pants",
+   "question": "Is there a referee wearing black pants?",
+   "box": [
+    100,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green hat",
+   "question": "Is there a boy wearing a green hat?",
+   "box": [
+    850,
+    500,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cooler",
+   "question": "Is there a cooler?",
+   "box": [
+    820,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman_ready",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue visor stands ready",
+   "question": "Is the woman in a blue visor standing in a ready stance?"
+  },
+  {
+   "id": "man_jumping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in striped shorts jumps high",
+   "question": "Is the man in striped shorts jumping high?"
+  },
+  {
+   "id": "ball_floating",
+   "type": "state",
+   "of": "ball",
+   "desc": "the yellow volleyball floats mid-air",
+   "question": "Is the yellow volleyball floating mid-air?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in black pants watches intently",
+   "question": "Is the referee in black pants watching intently?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a green hat sits",
+   "question": "Is the boy in a green hat sitting?"
+  },
+  {
+   "id": "man_reaches_ball",
+   "type": "action",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in striped shorts reaches for the yellow volleyball",
+   "question": "Is the man in striped shorts reaching for the yellow volleyball?"
+  },
+  {
+   "id": "referee_looks_woman",
+   "type": "relation",
+   "of": [
+    "referee",
+    "woman"
+   ],
+   "desc": "the referee in black pants looks at the woman in a blue visor",
+   "question": "Is the referee in black pants looking at the woman in a blue visor?"
+  },
+  {
+   "id": "boy_next_to_cooler",
+   "type": "relation",
+   "of": [
+    "boy",
+    "cooler"
+   ],
+   "desc": "the boy in a green hat sits next to the cooler",
+   "question": "Is the boy in a green hat sitting next to the cooler?"
+  },
+  {
+   "id": "no_ocean",
+   "type": "absent",
+   "desc": "ocean",
+   "question": "Is there an ocean visible in the background?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "net"
+   ],
+   "desc": "the woman in a blue visor is near the net on the left",
+   "question": "Is the woman in a blue visor near the volleyball net?"
+  },
+  {
+   "id": "man_right_ball",
+   "type": "relation",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the yellow volleyball is to the right of the man in striped shorts",
+   "question": "Is the yellow volleyball to the right of the man in striped shorts?"
+  },
+  {
+   "id": "woman_visor_attr",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue visor",
+   "question": "Does the woman wear a blue visor?"
+  },
+  {
+   "id": "man_shorts_attr",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears striped shorts",
+   "question": "Does the man wear striped shorts?"
+  },
+  {
+   "id": "referee_pants_attr",
+   "type": "attribute",
+   "of": "referee",
+   "desc": "the referee wears black pants",
+   "question": "Does the referee wear black pants?"
+  },
+  {
+   "id": "boy_hat_attr",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wears a green hat",
+   "question": "Does the boy wear a green hat?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0141",
+ "prompt": "In a pencil sketch with light color wash, a beach volleyball tournament unfolds. On the left, a woman in a blue visor stands ready. In the center, a man in striped shorts jumps high. To his right, a yellow volleyball floats mid-air. Near the net on the left, a referee in black pants watches intently. On the far right, a boy in a green hat sits on a cooler. The man in striped shorts reaches for the yellow volleyball. The referee in black pants looks at the woman in a blue visor. The boy in a green hat sits next to the cooler. There is no ocean visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

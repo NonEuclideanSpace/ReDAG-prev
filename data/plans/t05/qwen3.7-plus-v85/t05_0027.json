@@ -1,0 +1,355 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station interior",
+   "question": "Does the image depict a fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    350,
+    500,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "older_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a blue shirt",
+   "question": "Is there an older man in a blue shirt?",
+   "box": [
+    700,
+    150,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "locker",
+   "type": "entity",
+   "class": "locker",
+   "plural": "lockers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red locker",
+   "question": "Is there a red locker?",
+   "box": [
+    850,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a green jacket",
+   "question": "Is there a small child in a green jacket?",
+   "box": [
+    650,
+    400,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "helmet",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny brass helmet",
+   "question": "Is there a shiny brass helmet?",
+   "box": [
+    750,
+    650,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    700,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    720,
+    600,
+    820,
+    720
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "badge",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a badge",
+   "question": "Is the firefighter holding a badge?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dalmatian_calm",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian looks calm",
+   "question": "Does the dalmatian look calm?"
+  },
+  {
+   "id": "older_man_leaning",
+   "type": "state",
+   "of": "older_man",
+   "desc": "the older man is leaning",
+   "question": "Is the older man leaning?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is pointing",
+   "question": "Is the child pointing?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is standing",
+   "question": "Is the child standing?"
+  },
+  {
+   "id": "cat_perching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is perched",
+   "question": "Is the black cat perched?"
+  },
+  {
+   "id": "cat_looking_down",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is looking down",
+   "question": "Is the black cat looking down?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "older_man"
+   ],
+   "desc": "the firefighter hands a badge to the older man",
+   "question": "Is the firefighter handing a badge to the older man?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "floor"
+   ],
+   "desc": "the dalmatian sits on the floor",
+   "question": "Is the dalmatian sitting on the floor?"
+  },
+  {
+   "id": "older_man_against_locker",
+   "type": "relation",
+   "of": [
+    "older_man",
+    "locker"
+   ],
+   "desc": "the older man leans against the red locker",
+   "question": "Is the older man leaning against the red locker?"
+  },
+  {
+   "id": "child_next_to_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "older_man"
+   ],
+   "desc": "the child stands next to the older man",
+   "question": "Is the child standing next to the older man?"
+  },
+  {
+   "id": "helmet_on_bench",
+   "type": "relation",
+   "of": [
+    "helmet",
+    "bench"
+   ],
+   "desc": "the shiny brass helmet rests on the wooden bench",
+   "question": "Is the shiny brass helmet resting on the wooden bench?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat perches on top of the wooden bench",
+   "question": "Is the black cat perched on top of the wooden bench?"
+  },
+  {
+   "id": "cat_looking_at_dog",
+   "type": "relation",
+   "of": [
+    "cat",
+    "dalmatian"
+   ],
+   "desc": "the black cat looks at the dalmatian",
+   "question": "Is the black cat looking at the dalmatian?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke in the image?"
+  },
+  {
+   "id": "child_next_to_older_man_v2",
+   "type": "relation",
+   "of": [
+    "child",
+    "older_man"
+   ],
+   "desc": "the small child in a green jacket is next to the older man in a blue shirt",
+   "question": "Is the small child in a green jacket next to the older man in a blue shirt?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "floor",
+   "plural": "floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished concrete floor",
+   "question": "Is there a polished concrete floor?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "helmet",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0027",
+ "prompt": "This oil painting depicts a fire station interior. On the left, a firefighter in yellow gear stands holding a coiled hose. In the center, a dalmatian sits calmly on the polished concrete floor. To the right, an older man in a blue shirt leans against a red locker. Next to him, a small child in a green jacket points at a shiny brass helmet resting on a wooden bench. A black cat perches on top of the same bench, looking down at the dog. The firefighter is handing a badge to the older man. The child is standing next to the older man. There is no smoke.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 3,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

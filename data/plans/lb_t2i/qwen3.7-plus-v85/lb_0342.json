@@ -1,0 +1,462 @@
+{
+ "style": "cinematic warm amber glow, photorealistic, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wooden deck with a railing and distant dunes under an afternoon sky",
+   "question": "Does the image show a wooden deck with a railing and distant dunes under an afternoon sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open leather suitcase",
+   "question": "Is there an open leather suitcase?",
+   "box": [
+    100,
+    600,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "postcards",
+   "type": "entity",
+   "class": "postcard",
+   "plural": "postcards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "yellowed postcards",
+   "question": "Are there yellowed postcards?",
+   "box": [
+    150,
+    650,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolled map cracked at the edges",
+   "question": "Is there a rolled map cracked at the edges?",
+   "box": [
+    450,
+    700,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wicker chair",
+   "plural": "wicker chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker chair",
+   "question": "Is there a wicker chair?",
+   "box": [
+    800,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "binoculars with cracked lenses",
+   "question": "Are there binoculars with cracked lenses?",
+   "box": [
+    820,
+    500,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "basil_plant",
+   "type": "entity",
+   "class": "basil plant",
+   "plural": "basil plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green basil plant in a pot",
+   "question": "Is there a green basil plant in a pot?",
+   "box": [
+    50,
+    500,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "solar lantern",
+   "plural": "solar lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a solar lantern",
+   "question": "Is there a solar lantern?",
+   "box": [
+    220,
+    550,
+    300,
+    650
+   ]
+  },
+  {
+   "id": "feather",
+   "type": "entity",
+   "class": "feather",
+   "plural": "feathers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single feather",
+   "question": "Is there a single feather?",
+   "box": [
+    241,
+    676,
+    289,
+    724
+   ]
+  },
+  {
+   "id": "wasp",
+   "type": "entity",
+   "class": "wasp",
+   "plural": "wasps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wasp",
+   "question": "Is there a wasp?",
+   "box": [
+    171,
+    471,
+    219,
+    519
+   ]
+  },
+  {
+   "id": "suitcase_open",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the leather suitcase is open",
+   "question": "Is the leather suitcase open?"
+  },
+  {
+   "id": "postcards_spilled",
+   "type": "state",
+   "of": "postcards",
+   "desc": "the postcards are spilling out of the suitcase",
+   "question": "Are the postcards spilling out of the suitcase?"
+  },
+  {
+   "id": "map_unspooled",
+   "type": "state",
+   "of": "map",
+   "desc": "the map is unspooled across the deck planks",
+   "question": "Is the map unspooled across the deck planks?"
+  },
+  {
+   "id": "binoculars_dangling",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "chair"
+   ],
+   "desc": "the binoculars are dangling from the wicker chair",
+   "question": "Are the binoculars dangling from the wicker chair?"
+  },
+  {
+   "id": "basil_leaning",
+   "type": "relation",
+   "of": [
+    "basil_plant",
+    "lantern"
+   ],
+   "desc": "the basil plant is leaning toward the solar lantern",
+   "question": "Is the basil plant leaning toward the solar lantern?"
+  },
+  {
+   "id": "wasp_hovering",
+   "type": "state",
+   "of": "wasp",
+   "desc": "the wasp is hovering near the basil plant",
+   "question": "Is the wasp hovering near the basil plant?"
+  },
+  {
+   "id": "postcards_on_deck",
+   "type": "state",
+   "of": "postcards",
+   "desc": "the postcards are on the deck",
+   "question": "Are the postcards on the deck?"
+  },
+  {
+   "id": "map_on_deck",
+   "type": "state",
+   "of": "map",
+   "desc": "the map is on the deck",
+   "question": "Is the map on the deck?"
+  },
+  {
+   "id": "chair_on_deck",
+   "type": "state",
+   "of": "chair",
+   "desc": "the wicker chair is on the deck",
+   "question": "Is the wicker chair on the deck?"
+  },
+  {
+   "id": "suitcase_on_deck",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the suitcase is on the deck",
+   "question": "Is the suitcase on the deck?"
+  },
+  {
+   "id": "lantern_on_deck",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the solar lantern is on the deck",
+   "question": "Is the solar lantern on the deck?"
+  },
+  {
+   "id": "feather_on_deck",
+   "type": "relation",
+   "of": [
+    "feather",
+    "lantern"
+   ],
+   "desc": "the feather is on the deck beside the lantern",
+   "question": "Is the feather on the deck beside the lantern?"
+  },
+  {
+   "id": "binoculars_on_chair",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "chair"
+   ],
+   "desc": "the binoculars are hanging from the wicker chair",
+   "question": "Are the binoculars hanging from the wicker chair?"
+  },
+  {
+   "id": "postcards_arranged",
+   "type": "state",
+   "of": "postcards",
+   "desc": "the postcards are aligned in a pattern outlining a shipwreck",
+   "question": "Are the postcards aligned in a pattern that outlines a shipwreck?"
+  },
+  {
+   "id": "lantern_flaring",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the solar lantern flares with a pulse of gold light",
+   "question": "Does the solar lantern flare with a pulse of gold light?"
+  },
+  {
+   "id": "wasp_circling_basil",
+   "type": "action",
+   "of": [
+    "wasp",
+    "basil_plant"
+   ],
+   "desc": "the wasp circles around the basil plant",
+   "question": "Is the wasp circling around the basil plant?"
+  },
+  {
+   "id": "feather_still",
+   "type": "state",
+   "of": "feather",
+   "desc": "the single feather is unmoving",
+   "question": "Is the single feather unmoving?"
+  },
+  {
+   "id": "postcards_in_suitcase",
+   "type": "relation",
+   "of": [
+    "postcards",
+    "suitcase"
+   ],
+   "desc": "the postcards are spilling out of the open leather suitcase",
+   "question": "Are the postcards spilling out of the open leather suitcase?"
+  },
+  {
+   "id": "map_cracked",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map is cracked at the edges",
+   "question": "Is the map cracked at the edges?"
+  },
+  {
+   "id": "binoculars_cracked",
+   "type": "attribute",
+   "of": "binoculars",
+   "desc": "the binoculars have cracked lenses",
+   "question": "Do the binoculars have cracked lenses?"
+  },
+  {
+   "id": "basil_green",
+   "type": "attribute",
+   "of": "basil_plant",
+   "desc": "the basil plant is green",
+   "question": "Is the basil plant green?"
+  },
+  {
+   "id": "lantern_solar",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern is a solar lantern",
+   "question": "Is the lantern a solar lantern?"
+  },
+  {
+   "id": "feather_single",
+   "type": "attribute",
+   "of": "feather",
+   "desc": "there is a single feather",
+   "question": "Is there a single feather?"
+  },
+  {
+   "id": "weather_vane",
+   "type": "entity",
+   "class": "weather vane",
+   "plural": "weather vanes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weather vane",
+   "question": "Is there a weather vane?",
+   "box": [
+    800,
+    50,
+    950,
+    200
+   ]
+  },
+  {
+   "id": "eaves",
+   "type": "entity",
+   "class": "eaves",
+   "plural": "eaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the eaves of the structure",
+   "question": "Are there eaves visible in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    100
+   ]
+  },
+  {
+   "id": "binoculars_near_railing",
+   "type": "state",
+   "of": "binoculars",
+   "desc": "the binoculars are near the railing",
+   "question": "Are the binoculars near the railing?"
+  },
+  {
+   "id": "binoculars_near_map",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "map"
+   ],
+   "desc": "the binoculars are near the map",
+   "question": "Are the binoculars near the map?"
+  },
+  {
+   "id": "postcards_handwritten",
+   "type": "attribute",
+   "of": "postcards",
+   "desc": "the postcards have handwritten notes",
+   "question": "Do the postcards have handwritten notes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "suitcase",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "chair",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "lantern",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "basil_plant",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0342",
+ "prompt": "The afternoon was heavy with the scent of sun-warmed cedar and crushed basil, the deck beneath the suitcase groaning like an old man roused from sleep as the wind began its slow, deliberate unraveling of the day’s order. The leather suitcase, open like a wounded animal, let its secrets spill into the dust—postcards yellowed with age and salt air, their handwritten notes half-erased by the years, fluttered as if trying to remember the hands that once held them. The map, rolled and cracked at the edges, unspooled itself lazily across the planks, its faded lines tracing forgotten coastlines and ghost towns that no longer existed, or perhaps never had. Beside it, the binoculars dangled precariously from a rung of the wicker chair, their cracked lenses catching the sun and scattering fractured beams of light that danced like spirits across the faded paint of the railing. The basil plant, defiant in its green stubbornness, leaned into the weak glow of the solar lantern, its leaves trembling not from the breeze but from some unseen anticipation, as though the plant could feel the lantern’s pulse weakening, its charge slipping like a fading heartbeat. The lantern itself flickered uncertainly, its tiny bulb dimming and brightening in rhythm with the distant chime of a weather vane that no one had seen turning for years. The wind, carrying with it the dry rustle of the sea and the faint scent of distant citrus, stirred the map into motion, causing it to curl and unfurl like a living thing seeking a direction, while the postcards shifted like cards in a deck waiting to be played, each image a possible door into another world. The binoculars, left hanging by a frayed leather strap, swayed gently until one lens caught a glint from the deck’s edge, and the wind seemed to pause just long enough for a single feather to fall from the eaves and land in perfect stillness beside the lantern. The feather was the only unmoving thing in the scene, yet its presence seemed to anchor everything else, as if the air itself had paused to observe its descent. Shadows stretched and contracted in irregular pulses, not only from the sun but from some deeper source, as if the deck were breathing in slow, measured exhales. A wasp circled lazily around the basil, drawn not to the plant but to the faint hum the lantern emitted, a sound so low it was more felt than heard, and as it hovered, the lantern’s flicker seemed to respond in kind, like two organisms exchanging silent signals. The suitcase’s hinge creaked again, deeper this time, as if something within had shifted, though nothing moved—only the suggestion of movement, a shadow that didn’t quite match the angle of the light, a ripple across the map where no gust had touched. The postcards began to drift together, aligning in a pattern too precise to be accidental, their edges curling into a rough outline of a shipwreck on the horizon. The lantern, as if sensing the shift in alignment, flared once, a brief pulse of gold that caught the wasp’s wings mid-dance, suspending it in a perfect frame of light and shadow. The deck groaned again, a long and resonant sound, as if the wood had grown tired of carrying the weight of all this stillness and story, and the air grew heavy with the possibility of a memory that was never lived but was somehow remembered. The sun, slipping behind the distant dunes, cast the entire scene into a warm amber glow, turning the lantern’s flicker into a heartbeat, the binoculars into eyes, the suitcase into a threshold between now and never.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 47,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 1,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "wasp_circling",
+     "wasp_circling_basil"
+    ]
+   ]
+  }
+ }
+}

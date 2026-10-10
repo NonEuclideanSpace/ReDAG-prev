@@ -1,0 +1,461 @@
+{
+ "style": "photorealistic construction site photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site",
+   "question": "Does the image show a construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive yellow crane",
+   "question": "Is there a massive yellow crane?",
+   "box": [
+    300,
+    50,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "lifted_beam",
+   "type": "entity",
+   "class": "steel i-beam",
+   "plural": "steel i-beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single steel I-beam",
+   "question": "Is there a single steel I-beam?",
+   "box": [
+    350,
+    200,
+    750,
+    250
+   ]
+  },
+  {
+   "id": "bulldozer",
+   "type": "entity",
+   "class": "bulldozer",
+   "plural": "bulldozers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red bulldozer",
+   "question": "Is there a red bulldozer?",
+   "box": [
+    650,
+    500,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "dirt_pile",
+   "type": "entity",
+   "class": "pile of dirt",
+   "plural": "piles of dirt",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pile of dirt",
+   "question": "Is there a pile of dirt?",
+   "box": [
+    900,
+    600,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "foundation",
+   "type": "entity",
+   "class": "concrete foundation",
+   "plural": "concrete foundations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a concrete foundation",
+   "question": "Is there a concrete foundation?",
+   "box": [
+    100,
+    700,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "worker_foundation",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a construction worker",
+   "question": "Is there a construction worker?",
+   "box": [
+    250,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "barrels",
+   "type": "entity",
+   "class": "orange barrel",
+   "plural": "orange barrels",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two orange barrels",
+   "question": "Are there two orange barrels?",
+   "box": [
+    50,
+    750,
+    150,
+    900
+   ]
+  },
+  {
+   "id": "cones",
+   "type": "entity",
+   "class": "traffic cone",
+   "plural": "traffic cones",
+   "count": 4,
+   "count_exact": true,
+   "desc": "a stack of four traffic cones",
+   "question": "Is there a stack of four traffic cones?",
+   "box": [
+    160,
+    750,
+    240,
+    900
+   ]
+  },
+  {
+   "id": "ground_beams",
+   "type": "entity",
+   "class": "steel beam",
+   "plural": "steel beams",
+   "count": 4,
+   "count_exact": true,
+   "desc": "a separate pile of four steel beams",
+   "question": "Is there a separate pile of four steel beams?",
+   "box": [
+    50,
+    850,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "large rock",
+   "plural": "large rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rock",
+   "question": "Is there a large rock?",
+   "box": [
+    850,
+    750,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "worker_cabin",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second construction worker",
+   "question": "Is there a second construction worker?",
+   "box": [
+    400,
+    100,
+    450,
+    150
+   ]
+  },
+  {
+   "id": "crane_lifts_beam",
+   "type": "action",
+   "of": [
+    "crane",
+    "lifted_beam"
+   ],
+   "desc": "the massive yellow crane is lifting the single steel I-beam",
+   "question": "Is the massive yellow crane lifting the single steel I-beam?"
+  },
+  {
+   "id": "bulldozer_pushes_dirt",
+   "type": "action",
+   "of": [
+    "bulldozer",
+    "dirt_pile"
+   ],
+   "desc": "the red bulldozer is pushing the pile of dirt",
+   "question": "Is the red bulldozer pushing the pile of dirt?"
+  },
+  {
+   "id": "beam_above_foundation",
+   "type": "relation",
+   "of": [
+    "lifted_beam",
+    "foundation"
+   ],
+   "desc": "the single steel I-beam is suspended directly above the concrete foundation",
+   "question": "Is the single steel I-beam suspended directly above the concrete foundation?"
+  },
+  {
+   "id": "worker_on_foundation",
+   "type": "relation",
+   "of": [
+    "worker_foundation",
+    "foundation"
+   ],
+   "desc": "the construction worker wearing a white hard hat is standing on the concrete foundation",
+   "question": "Is the construction worker wearing a white hard hat standing on the concrete foundation?"
+  },
+  {
+   "id": "worker_points_beam",
+   "type": "action",
+   "of": [
+    "worker_foundation",
+    "lifted_beam"
+   ],
+   "desc": "the construction worker wearing a white hard hat is pointing up at the single steel I-beam",
+   "question": "Is the construction worker wearing a white hard hat pointing up at the single steel I-beam?"
+  },
+  {
+   "id": "barrels_near_foundation",
+   "type": "relation",
+   "of": [
+    "barrels",
+    "foundation"
+   ],
+   "desc": "the two orange barrels are near the concrete foundation",
+   "question": "Are the two orange barrels near the concrete foundation?"
+  },
+  {
+   "id": "cones_near_foundation",
+   "type": "relation",
+   "of": [
+    "cones",
+    "foundation"
+   ],
+   "desc": "the stack of traffic cones is near the concrete foundation",
+   "question": "Is the stack of traffic cones near the concrete foundation?"
+  },
+  {
+   "id": "bulldozer_away_crane",
+   "type": "relation",
+   "of": [
+    "bulldozer",
+    "crane"
+   ],
+   "desc": "the red bulldozer is facing away from the massive yellow crane",
+   "question": "Is the red bulldozer facing away from the massive yellow crane?"
+  },
+  {
+   "id": "worker_operates_crane",
+   "type": "action",
+   "of": [
+    "worker_cabin",
+    "crane"
+   ],
+   "desc": "the second construction worker is operating the controls of the massive yellow crane",
+   "question": "Is the second construction worker operating the controls of the massive yellow crane?"
+  },
+  {
+   "id": "beam_points_beams",
+   "type": "relation",
+   "of": [
+    "lifted_beam",
+    "ground_beams"
+   ],
+   "desc": "the single steel I-beam is pointing towards the separate pile of steel beams",
+   "question": "Is the single steel I-beam pointing towards the separate pile of steel beams?"
+  },
+  {
+   "id": "skyscraper_behind_crane",
+   "type": "state",
+   "of": "crane",
+   "desc": "the tall skyscraper frame is behind the massive yellow crane",
+   "question": "Is the tall skyscraper frame behind the massive yellow crane?"
+  },
+  {
+   "id": "skyscraper_behind_bulldozer",
+   "type": "state",
+   "of": "bulldozer",
+   "desc": "the tall skyscraper frame is behind the red bulldozer",
+   "question": "Is the tall skyscraper frame behind the red bulldozer?"
+  },
+  {
+   "id": "worker_holds_walkie",
+   "type": "attribute",
+   "of": "worker_foundation",
+   "desc": "the construction worker wearing a white hard hat is holding a walkie-talkie",
+   "question": "Is the construction worker wearing a white hard hat holding a walkie-talkie?"
+  },
+  {
+   "id": "bulldozer_breaks_rock",
+   "type": "action",
+   "of": [
+    "bulldozer",
+    "rock"
+   ],
+   "desc": "the red bulldozer is breaking up the large rock",
+   "question": "Is the red bulldozer breaking up the large rock?"
+  },
+  {
+   "id": "ground_beams_on_ground",
+   "type": "state",
+   "of": "ground_beams",
+   "desc": "the separate pile of four steel beams is on the ground",
+   "question": "Is the separate pile of four steel beams on the ground?"
+  },
+  {
+   "id": "crane_taller_bulldozer",
+   "type": "relation",
+   "of": [
+    "crane",
+    "bulldozer"
+   ],
+   "desc": "the massive yellow crane is much taller than the red bulldozer",
+   "question": "Is the massive yellow crane much taller than the red bulldozer?"
+  },
+  {
+   "id": "beam_longer_bulldozer",
+   "type": "relation",
+   "of": [
+    "lifted_beam",
+    "bulldozer"
+   ],
+   "desc": "the single steel I-beam is longer than the red bulldozer",
+   "question": "Is the single steel I-beam longer than the red bulldozer?"
+  },
+  {
+   "id": "worker_shorter_barrels",
+   "type": "relation",
+   "of": [
+    "worker_foundation",
+    "barrels"
+   ],
+   "desc": "the construction worker wearing a white hard hat is shorter than the two orange barrels",
+   "question": "Is the construction worker wearing a white hard hat shorter than the two orange barrels?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker_foundation",
+   "desc": "the construction worker wearing a white hard hat is standing",
+   "question": "Is the construction worker wearing a white hard hat standing?"
+  },
+  {
+   "id": "skyscraper_behind_both",
+   "type": "relation",
+   "of": [
+    "crane",
+    "bulldozer"
+   ],
+   "desc": "the tall skyscraper frame is behind both the massive yellow crane and the red bulldozer",
+   "question": "Is the tall skyscraper frame behind both the massive yellow crane and the red bulldozer?"
+  },
+  {
+   "id": "skyscraper",
+   "type": "entity",
+   "class": "skyscraper frame",
+   "plural": "skyscraper frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall skyscraper frame",
+   "question": "Is there a tall skyscraper frame?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "beam_suspended",
+   "type": "state",
+   "of": "lifted_beam",
+   "desc": "the single steel I-beam is suspended in the air",
+   "question": "Is the single steel I-beam suspended in the air?"
+  },
+  {
+   "id": "worker_hat",
+   "type": "attribute",
+   "of": "worker_foundation",
+   "desc": "the construction worker wears a white hard hat",
+   "question": "Does the construction worker wear a white hard hat?"
+  },
+  {
+   "id": "worker_in_cabin",
+   "type": "relation",
+   "of": [
+    "worker_cabin",
+    "crane"
+   ],
+   "desc": "the second construction worker is inside the crane's cabin",
+   "question": "Is the second construction worker inside the massive yellow crane's cabin?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "foundation",
+   "to": "worker_foundation",
+   "kind": "support"
+  },
+  {
+   "from": "foundation",
+   "to": "barrels",
+   "kind": "support"
+  },
+  {
+   "from": "foundation",
+   "to": "cones",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_036",
+ "prompt": "On a construction site, a massive yellow crane is lifting a single steel I-beam. Next to the crane, a red bulldozer is pushing a pile of dirt. The crane is much taller than the bulldozer. The steel I-beam, which is longer than the bulldozer, is suspended in the air directly above a concrete foundation. A construction worker wearing a white hard hat is standing on the foundation, pointing up at the I-beam. The worker is shorter than the orange barrels nearby. Near the foundation, there are two orange barrels and a stack of traffic cones. The number of cones is double the number of barrels. The bulldozer is facing away from the crane. Another worker is inside the crane's cabin, operating the controls. On the ground is a separate pile of steel beams, and the number of beams in this pile is three more than the number being lifted by the crane. The lifted I-beam is pointing towards the pile of beams. A tall skyscraper frame is behind both the crane and the bulldozer. The worker on the foundation is holding a walkie-talkie. The bulldozer is breaking up a large rock.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,259 @@
+{
+ "style": "flat vector illustration, simple shapes, bold colors, no shading",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow hat",
+   "question": "Is there a small child in a yellow hat?",
+   "box": [
+    260,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "snowman",
+   "type": "entity",
+   "class": "snowman",
+   "plural": "snowmen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large snowman with a carrot nose",
+   "question": "Is there a large snowman with a carrot nose?",
+   "box": [
+    450,
+    200,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "stone bench",
+   "plural": "stone benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone bench",
+   "question": "Is there a stone bench?",
+   "box": [
+    400,
+    600,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a gray scarf",
+   "question": "Is there an old man in a gray scarf?",
+   "box": [
+    750,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog with floppy ears",
+   "question": "Is there a brown dog with floppy ears?",
+   "box": [
+    600,
+    700,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "ball",
+   "plural": "balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red ball",
+   "question": "Is there a red ball?",
+   "box": [
+    850,
+    850,
+    920,
+    920
+   ]
+  },
+  {
+   "id": "woman_mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a steaming mug",
+   "question": "Is the woman in a blue coat holding a steaming mug?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow hat is pointing upward",
+   "question": "Is the small child in a yellow hat pointing upward?"
+  },
+  {
+   "id": "old_man_smiling",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man in a gray scarf has a gentle smile",
+   "question": "Does the old man in a gray scarf have a gentle smile?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child in a yellow hat is next to the woman in a blue coat",
+   "question": "Is the small child in a yellow hat next to the woman in a blue coat?"
+  },
+  {
+   "id": "snowman_on_bench",
+   "type": "relation",
+   "of": [
+    "snowman",
+    "bench"
+   ],
+   "desc": "the large snowman with a carrot nose sits atop the stone bench",
+   "question": "Is the large snowman with a carrot nose sitting atop the stone bench?"
+  },
+  {
+   "id": "old_man_looking_at_snowman",
+   "type": "action",
+   "of": [
+    "old_man",
+    "snowman"
+   ],
+   "desc": "the old man in a gray scarf looks at the large snowman with a carrot nose",
+   "question": "Is the old man in a gray scarf looking at the large snowman with a carrot nose?"
+  },
+  {
+   "id": "dog_chasing_ball",
+   "type": "action",
+   "of": [
+    "dog",
+    "ball"
+   ],
+   "desc": "the brown dog with floppy ears chases the red ball",
+   "question": "Is the brown dog with floppy ears chasing the red ball?"
+  },
+  {
+   "id": "ball_near_old_man",
+   "type": "relation",
+   "of": [
+    "ball",
+    "old_man"
+   ],
+   "desc": "the red ball is near the feet of the old man in a gray scarf",
+   "question": "Is the red ball near the feet of the old man in a gray scarf?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "visible sun",
+   "question": "Is there a visible sun in the image?"
+  },
+  {
+   "id": "no_sky_gradient",
+   "type": "absent",
+   "desc": "sky gradient",
+   "question": "Is there a sky gradient in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "snowman_sitting",
+   "type": "state",
+   "of": "snowman",
+   "desc": "the large snowman with a carrot nose sits",
+   "question": "Is the large snowman with a carrot nose sitting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "snowman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0019",
+ "prompt": "In a flat vector illustration of a snowy town square, a woman in a blue coat stands on the left holding a steaming mug. Next to her, a small child in a yellow hat points excitedly toward the center where a large snowman with a carrot nose sits atop a stone bench. To the right, an old man in a gray scarf looks at the snowman with a gentle smile. A brown dog with floppy ears runs past the bench, chasing a red ball that rolls near the old man's feet. The scene is crisp and clean, emphasizing simple shapes and bold colors without shading. There is no visible sun or sky gradient, keeping the focus entirely on the figures and their immediate surroundings. The woman remains stationary while the child gestures upward. The dog moves dynamically across the foreground. The snowman remains still as the central anchor. The old man observes quietly from his position. All elements are distinct and easily recognizable by their color and form alone.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

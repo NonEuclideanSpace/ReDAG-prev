@@ -1,0 +1,279 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene with a glass roof structure",
+   "question": "Does the image show an indoor scene with a glass roof structure?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "fern_pot",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green fern in a terracotta pot",
+   "question": "Is there a green fern in a terracotta pot?",
+   "box": [
+    10,
+    600,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a brown coat",
+   "question": "Is there a man in a brown coat?",
+   "box": [
+    400,
+    180,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "orchid",
+   "type": "entity",
+   "class": "orchid",
+   "plural": "orchids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall orchid blooming white flowers",
+   "question": "Is there a tall orchid blooming white flowers?",
+   "box": [
+    550,
+    100,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    750,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray cat",
+   "question": "Is there a gray cat?",
+   "box": [
+    800,
+    650,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    780,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small watering can",
+   "question": "Is the woman in a blue dress holding a small watering can?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "fern_sitting",
+   "type": "state",
+   "of": "fern_pot",
+   "desc": "the green fern in a terracotta pot is sitting",
+   "question": "Is the green fern in a terracotta pot sitting?"
+  },
+  {
+   "id": "orchid_rising",
+   "type": "state",
+   "of": "orchid",
+   "desc": "the tall orchid rises from the floor",
+   "question": "Does the tall orchid rise from the floor?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is resting",
+   "question": "Is the gray cat resting?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is sleeping peacefully",
+   "question": "Is the gray cat sleeping peacefully?"
+  },
+  {
+   "id": "fern_next_to_woman",
+   "type": "relation",
+   "of": [
+    "fern_pot",
+    "woman"
+   ],
+   "desc": "the green fern in a terracotta pot is next to the woman in a blue dress on her left",
+   "question": "Is the green fern in a terracotta pot next to the woman in a blue dress on her left?"
+  },
+  {
+   "id": "man_points_orchid",
+   "type": "action",
+   "of": [
+    "man",
+    "orchid"
+   ],
+   "desc": "the man in a brown coat points toward the tall orchid",
+   "question": "Is the man in a brown coat pointing toward the tall orchid?"
+  },
+  {
+   "id": "orchid_near_man",
+   "type": "relation",
+   "of": [
+    "orchid",
+    "man"
+   ],
+   "desc": "the tall orchid is near the feet of the man in a brown coat",
+   "question": "Is the tall orchid near the feet of the man in a brown coat?"
+  },
+  {
+   "id": "child_looks_cat",
+   "type": "action",
+   "of": [
+    "child",
+    "cat"
+   ],
+   "desc": "the child in a yellow hat looks at the gray cat",
+   "question": "Is the child in a yellow hat looking at the gray cat?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the gray cat is on the wooden bench",
+   "question": "Is the gray cat on the wooden bench?"
+  },
+  {
+   "id": "cat_beside_child",
+   "type": "relation",
+   "of": [
+    "cat",
+    "child"
+   ],
+   "desc": "the gray cat is beside the child in a yellow hat",
+   "question": "Is the gray cat beside the child in a yellow hat?"
+  },
+  {
+   "id": "woman_waters_fern",
+   "type": "action",
+   "of": [
+    "woman",
+    "fern_pot"
+   ],
+   "desc": "the woman in a blue dress waters the green fern in a terracotta pot",
+   "question": "Is the woman in a blue dress watering the green fern in a terracotta pot?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through the glass roof",
+   "question": "Is there sunlight streaming through the glass roof?"
+  },
+  {
+   "id": "man_gesturing_petals",
+   "type": "action",
+   "of": [
+    "man",
+    "orchid"
+   ],
+   "desc": "the man in a brown coat gestures specifically at the orchid petals",
+   "question": "Is the man in a brown coat gesturing specifically at the petals of the tall orchid?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0047",
+ "prompt": "In this oil painting, a woman in a blue dress stands on the left holding a small watering can. Next to her on the left, a green fern sits in a terracotta pot. In the center, a man in a brown coat points toward a tall orchid blooming white flowers. The orchid rises from the center floor near his feet. On the right, a child in a yellow hat looks at a gray cat resting on a wooden bench. The cat sleeps peacefully beside the child. The woman waters the fern gently. The man gestures specifically at the orchid petals. There is no sunlight streaming through the glass roof.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

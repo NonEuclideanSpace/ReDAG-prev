@@ -1,0 +1,375 @@
+{
+ "style": "photorealistic photo, high fidelity textures, natural lighting, candid energy, sharp focus",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception venue interior",
+   "question": "Does the image show a wedding reception venue interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a navy tuxedo",
+   "question": "Is there a tall man in a navy tuxedo?",
+   "box": [
+    50,
+    100,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman_silver",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a shimmering silver gown",
+   "question": "Is there a woman in a shimmering silver gown?",
+   "box": [
+    250,
+    250,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    280,
+    400,
+    520,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a white dress",
+   "question": "Is there a small child in a white dress?",
+   "box": [
+    400,
+    500,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "wedding cake",
+   "plural": "wedding cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiered wedding cake",
+   "question": "Is there a tiered wedding cake?",
+   "box": [
+    550,
+    550,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    500,
+    600,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    650,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "woman_floral",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a floral blouse",
+   "question": "Is there an older woman in a floral blouse?",
+   "box": [
+    600,
+    200,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    750,
+    150,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "man_holding_glass",
+   "type": "attribute",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a navy tuxedo holds a champagne flute upright",
+   "question": "Is the tall man in a navy tuxedo holding a champagne flute upright?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in a shimmering silver gown is sitting",
+   "question": "Is the woman in a shimmering silver gown sitting?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a white dress reaches out eagerly",
+   "question": "Is the small child in a white dress reaching out eagerly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever sits patiently",
+   "question": "Is the golden retriever sitting patiently?"
+  },
+  {
+   "id": "dog_looking_cake",
+   "type": "relation",
+   "of": [
+    "dog",
+    "cake"
+   ],
+   "desc": "the golden retriever's gaze is fixed intently on the frosting",
+   "question": "Is the golden retriever's gaze fixed intently on the frosting of the cake?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman_floral",
+    "dog"
+   ],
+   "desc": "the older woman in a floral blouse points directly at the dog",
+   "question": "Is the older woman in a floral blouse pointing directly at the dog?"
+  },
+  {
+   "id": "woman_amused",
+   "type": "state",
+   "of": "woman_floral",
+   "desc": "the older woman in a floral blouse has an amused expression",
+   "question": "Does the older woman in a floral blouse have an amused expression?"
+  },
+  {
+   "id": "waiter_looking_notepad",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a black vest looks down at a notepad in his hands",
+   "question": "Is the waiter in a black vest looking down at a notepad in his hands?"
+  },
+  {
+   "id": "man_handing_napkin",
+   "type": "action",
+   "of": [
+    "man_tuxedo",
+    "woman_silver"
+   ],
+   "desc": "the tall man in a navy tuxedo is handing a napkin to the woman in a shimmering silver gown",
+   "question": "Is the tall man in a navy tuxedo handing a napkin to the woman in a shimmering silver gown?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in a shimmering silver gown has a gentle smile",
+   "question": "Does the woman in a shimmering silver gown have a gentle smile?"
+  },
+  {
+   "id": "child_looking_dog",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the small child in a white dress is looking at the golden retriever with curiosity",
+   "question": "Is the small child in a white dress looking at the golden retriever with curiosity?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "man_tuxedo",
+    "woman_silver"
+   ],
+   "desc": "the tall man in a navy tuxedo stands beside the woman in a shimmering silver gown",
+   "question": "Is the tall man in a navy tuxedo standing beside the woman in a shimmering silver gown?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman_silver",
+    "chair"
+   ],
+   "desc": "the woman in a shimmering silver gown sits in the chair",
+   "question": "Is the woman in a shimmering silver gown sitting in the chair?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the tiered wedding cake is placed on the wooden table",
+   "question": "Is the tiered wedding cake placed on the wooden table?"
+  },
+  {
+   "id": "dog_next_to_cake",
+   "type": "relation",
+   "of": [
+    "dog",
+    "cake"
+   ],
+   "desc": "the golden retriever sits next to the tiered wedding cake",
+   "question": "Is the golden retriever sitting next to the tiered wedding cake?"
+  },
+  {
+   "id": "woman_behind_table",
+   "type": "relation",
+   "of": [
+    "woman_floral",
+    "table"
+   ],
+   "desc": "the older woman in a floral blouse is behind the wooden table",
+   "question": "Is the older woman in a floral blouse behind the wooden table?"
+  },
+  {
+   "id": "waiter_right_of_woman",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "woman_floral"
+   ],
+   "desc": "the waiter in a black vest is to the right of the older woman in a floral blouse",
+   "question": "Is the waiter in a black vest to the right of the older woman in a floral blouse?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a navy tuxedo stands",
+   "question": "Is the tall man in a navy tuxedo standing?"
+  },
+  {
+   "id": "waiter_holding_notepad",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a black vest holds a notepad",
+   "question": "Is the waiter in a black vest holding a notepad?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in a shimmering silver gown leans back slightly",
+   "question": "Does the woman in a shimmering silver gown lean back slightly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  },
+  {
+   "from": "chair",
+   "to": "woman_silver",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0015",
+ "prompt": "In this photorealistic photo, a bustling wedding reception unfolds with precise detail. On the left stands a tall man in a navy tuxedo holding a champagne flute upright. Beside him on the right sits a woman in a shimmering silver gown, her posture relaxed as she leans back slightly in her chair. In the center foreground, a small child in a white dress reaches out eagerly toward a tiered wedding cake placed on a wooden table. Next to the cake, a golden retriever sits patiently, its gaze fixed intently on the frosting. Behind the table, an older woman in a floral blouse points directly at the dog with a amused expression. To her right, a waiter in a black vest looks down at a notepad in his hands, seemingly taking an order. The man in the navy tuxedo is handing a napkin to the woman in the silver gown, who accepts it with a gentle smile. The child in the white dress is looking at the golden retriever with curiosity. There is no confetti in the air. The scene captures the candid energy of the celebration without any artificial staging or blurred backgrounds. Every texture, from the silk of the gown to the fur of the dog, is rendered with high fidelity. The lighting highlights the expressions of the guests naturally. The composition balances the human elements with the animal presence seamlessly. The interaction between the waiter and the older woman suggests a moment of service amidst the joy. The spatial arrangement places the key figures in a triangular formation that draws the eye across the frame. The absence of confetti keeps the focus on the interpersonal dynamics and the detailed setting of the venue.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

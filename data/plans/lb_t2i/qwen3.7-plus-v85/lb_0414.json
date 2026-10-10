@@ -1,0 +1,382 @@
+{
+ "style": "surreal, dimly lit, dreamlike, high contrast, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit attic room",
+   "question": "Does the image show a dimly lit attic room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "wooden desk",
+   "plural": "wooden desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a creaking wooden desk",
+   "question": "Is there a wooden desk in the image?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty old typewriter",
+   "question": "Is there a dusty old typewriter?",
+   "box": [
+    400,
+    550,
+    624,
+    750
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flickering desk lamp",
+   "question": "Is there a flickering desk lamp?",
+   "box": [
+    700,
+    400,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming mug of coffee, half-drunk",
+   "question": "Is there a steaming mug of coffee that is half-drunk?",
+   "box": [
+    150,
+    520,
+    250,
+    620
+   ]
+  },
+  {
+   "id": "papers",
+   "type": "entity",
+   "class": "yellowed paper",
+   "plural": "yellowed papers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of yellowed paper with curling edges and inked text",
+   "question": "Is there a stack of yellowed paper with curling edges and inked text?",
+   "box": [
+    300,
+    580,
+    400,
+    680
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek black cat",
+   "question": "Is there a sleek black cat?",
+   "box": [
+    50,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "feather",
+   "type": "entity",
+   "class": "feather",
+   "plural": "feathers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single feather",
+   "question": "Is there a single feather?",
+   "box": [
+    450,
+    300,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "cord",
+   "type": "entity",
+   "class": "lamp cord",
+   "plural": "lamp cords",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a serpentine lamp cord slithering across the floor",
+   "question": "Is there a serpentine lamp cord slithering across the floor?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "typewriter_askew",
+   "type": "state",
+   "of": "typewriter",
+   "desc": "the typewriter's keyboard is slightly askew",
+   "question": "Is the typewriter's keyboard slightly askew?"
+  },
+  {
+   "id": "mug_steaming",
+   "type": "state",
+   "of": "mug",
+   "desc": "swirling mist rises from the coffee mug",
+   "question": "Is swirling mist rising from the coffee mug?"
+  },
+  {
+   "id": "papers_fluttering",
+   "type": "state",
+   "of": "papers",
+   "desc": "the yellowed pages are fluttering",
+   "question": "Are the yellowed pages fluttering?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is watching the typewriter with intensity",
+   "question": "Is the black cat watching the typewriter with intensity?"
+  },
+  {
+   "id": "feather_quivering",
+   "type": "state",
+   "of": "feather",
+   "desc": "the feather is quivering in the air",
+   "question": "Is the feather quivering in the air?"
+  },
+  {
+   "id": "coffee_swirling",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee liquid is swirling in slow spirals",
+   "question": "Is the coffee liquid swirling in slow spirals?"
+  },
+  {
+   "id": "mist_curling_typewriter",
+   "type": "relation",
+   "of": [
+    "mug",
+    "typewriter"
+   ],
+   "desc": "the mist from the mug curls around the typewriter",
+   "question": "Does the mist from the mug curl around the typewriter?"
+  },
+  {
+   "id": "typewriter_on_desk",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "desk"
+   ],
+   "desc": "the typewriter is on the desk",
+   "question": "Is the typewriter on the desk?"
+  },
+  {
+   "id": "lamp_on_desk",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "desk"
+   ],
+   "desc": "the desk lamp is on the desk",
+   "question": "Is the desk lamp on the desk?"
+  },
+  {
+   "id": "mug_on_desk",
+   "type": "relation",
+   "of": [
+    "mug",
+    "desk"
+   ],
+   "desc": "the coffee mug is perched on the edge of the desk",
+   "question": "Is the coffee mug perched on the edge of the desk?"
+  },
+  {
+   "id": "papers_beside_typewriter",
+   "type": "relation",
+   "of": [
+    "papers",
+    "typewriter"
+   ],
+   "desc": "the stack of yellowed paper is beside the typewriter",
+   "question": "Is the stack of yellowed paper beside the typewriter?"
+  },
+  {
+   "id": "feather_above_desk",
+   "type": "relation",
+   "of": [
+    "feather",
+    "desk"
+   ],
+   "desc": "the feather is floating above the desk",
+   "question": "Is the feather floating above the desk?"
+  },
+  {
+   "id": "cord_plugged_outlet",
+   "type": "relation",
+   "of": [
+    "cord",
+    "outlet"
+   ],
+   "desc": "the lamp cord is plugged into the wall outlet",
+   "question": "Is the lamp cord plugged into the wall outlet?"
+  },
+  {
+   "id": "cord_connected_lamp",
+   "type": "relation",
+   "of": [
+    "cord",
+    "lamp"
+   ],
+   "desc": "the cord twists into the base of the lamp",
+   "question": "Does the cord twist into the base of the lamp?"
+  },
+  {
+   "id": "cat_yawning",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is yawning",
+   "question": "Is the black cat yawning?"
+  },
+  {
+   "id": "cord_on_floor",
+   "type": "relation",
+   "of": [
+    "cord",
+    "desk"
+   ],
+   "desc": "the lamp cord slithers across the floor",
+   "question": "Is the lamp cord on the floor?"
+  },
+  {
+   "id": "cord_connected_desk",
+   "type": "relation",
+   "of": [
+    "cord",
+    "desk"
+   ],
+   "desc": "the lamp cord twists into the leg of the desk",
+   "question": "Does the lamp cord twist into the leg of the desk?"
+  },
+  {
+   "id": "cord_connected_typewriter",
+   "type": "relation",
+   "of": [
+    "cord",
+    "typewriter"
+   ],
+   "desc": "the lamp cord twists into the edge of the typewriter",
+   "question": "Does the lamp cord twist into the edge of the typewriter?"
+  },
+  {
+   "id": "outlet",
+   "type": "entity",
+   "class": "wall outlet",
+   "plural": "wall outlets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient wall outlet",
+   "question": "Is there an ancient wall outlet?",
+   "box": [
+    50,
+    400,
+    150,
+    500
+   ]
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has one emerald eye and one golden filmed-over eye",
+   "question": "Does the cat have one emerald eye and one golden filmed-over eye?"
+  },
+  {
+   "id": "typewriter_keys_askew",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter's keys are slightly askew",
+   "question": "Are the typewriter's keys slightly askew?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "typewriter",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "papers",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0414",
+ "prompt": "In the hushed stillness of a dimly lit attic room that seemed to breathe in and out with the passage of time, a creaking wooden desk bore the burden of stories long past and perhaps never told. At its center, a dusty old typewriter, its keyboard slightly askew as if caught mid-revelation, cast a faint shimmer under the glow of a flickering desk lamp. The lamp’s single cord slithered across the floor like a serpentine shadow, plugged into an ancient wall outlet that buzzed faintly, as if whispering secrets only the lamp could understand. The light, though soft, seemed to ripple like water, bending the edges of the room into subtle undulations, casting long, distorted shadows of objects that defied the rules of scale and space. A steaming mug of coffee perched precariously on the edge of the desk, its warmth creating a swirling halo of mist that twisted upward into a ghostly plume. This plume curled around the typewriter’s letters, briefly morphing them into foreign symbols before dissolving back into vapor. A stack of yellowed paper sat beside it, their edges curling inward like petals of a forgotten flower, each page inked with fragmented thoughts and half-formed sentences that seemed to breathe with the pulse of the lamp. The cat, a sleek black feline with one emerald eye and one filmed over in golden slumber, watched the typewriter with the patient intensity of an oracle. Its fur shimmered faintly in the dim light, as though woven from moonlight and moth wings. With every slow blink, the room seemed to pause—time folding into itself in the spaces between. The lamp flickered again, and the cat’s eye reflected not just the desk, but glimpses of other worlds—cities of glass and ink, forests where words grew like vines. The typewriter’s keys, as if sensing this unseen audience, began to rattle softly, producing not only the sound of clacking metal but the faint hum of distant conversations, voices overlapping in languages both familiar and alien. The coffee, now half-drunk, began to swirl in slow spirals as if stirred by an invisible hand, the liquid dark and thick with meaning, as though it had once been the ink of forgotten histories. The yellowed pages fluttered, not from wind, but from the typewriter’s unseen momentum, as if the story being written had the power to bend reality itself. The lamp’s light stretched and shifted, sometimes flattening the room into a two-dimensional dream, other times expanding it into a vast, impossible expanse where the cat could stretch into the shadows and vanish. A single feather, inexplicably floating above the desk, quivered in rhythm with the lamp’s flicker, its movements tracing unseen lines in the air, as if mapping the structure of the scene like a cartographer of dreams. The cord from the outlet, now visible as a living, sinuous entity, slithered across the floor and twisted into the base of the lamp, but also—impossibly—into the leg of the desk and the edge of the typewriter, as if all the objects were connected by a singular, electric thread of narrative force. The cat yawned, and in that instant, the entire room seemed to inhale—shadows lengthening, light refracting, the coffee’s steam rising in the shape of a spiral staircase into a sky that did not exist. Yet everything fit together, defying logic but never contradicting itself, each object bound to the next in a delicate, surreal choreography of existence.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

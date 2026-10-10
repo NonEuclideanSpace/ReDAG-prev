@@ -1,0 +1,266 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage area",
+   "question": "Does the image depict a quiet theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    380,
+    650,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a velvet coat",
+   "question": "Is there a tall man in a velvet coat?",
+   "box": [
+    50,
+    100,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "woman_seated",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weary woman in a sequined dress",
+   "question": "Is there a weary woman in a sequined dress?",
+   "box": [
+    350,
+    300,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small gray cat",
+   "question": "Is there a small gray cat?",
+   "box": [
+    420,
+    580,
+    520,
+    680
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in suspenders",
+   "question": "Is there a young boy in suspenders?",
+   "box": [
+    700,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "woman_older",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a floral blouse",
+   "question": "Is there an older woman in a floral blouse?",
+   "box": [
+    850,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted fern",
+   "question": "Is there a large potted fern?",
+   "box": [
+    750,
+    150,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "man_lantern",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the tall man in a velvet coat holds a brass lantern",
+   "question": "Is the tall man in a velvet coat holding a brass lantern?"
+  },
+  {
+   "id": "man_lantern_high",
+   "type": "state",
+   "of": "man",
+   "desc": "the tall man in a velvet coat holds the lantern high above his head",
+   "question": "Is the tall man in a velvet coat holding the lantern high above his head?"
+  },
+  {
+   "id": "woman_seated_sitting",
+   "type": "state",
+   "of": "woman_seated",
+   "desc": "the weary woman in a sequined dress is sitting",
+   "question": "Is the weary woman in a sequined dress sitting?"
+  },
+  {
+   "id": "woman_seated_chin",
+   "type": "state",
+   "of": "woman_seated",
+   "desc": "the weary woman in a sequined dress rests her chin on her hand",
+   "question": "Is the weary woman in a sequined dress resting her chin on her hand?"
+  },
+  {
+   "id": "woman_seated_looking",
+   "type": "relation",
+   "of": [
+    "woman_seated",
+    "cat"
+   ],
+   "desc": "the weary woman in a sequined dress is looking at the small gray cat",
+   "question": "Is the weary woman in a sequined dress looking at the small gray cat?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in suspenders is pointing",
+   "question": "Is the young boy in suspenders pointing?"
+  },
+  {
+   "id": "woman_older_scripts",
+   "type": "attribute",
+   "of": "woman_older",
+   "desc": "the older woman in a floral blouse holds a stack of scripts",
+   "question": "Is the older woman in a floral blouse holding a stack of scripts?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small gray cat is perched on the wooden crate",
+   "question": "Is the small gray cat perched on the wooden crate?"
+  },
+  {
+   "id": "crate_next_to_woman",
+   "type": "relation",
+   "of": [
+    "crate",
+    "woman_seated"
+   ],
+   "desc": "the wooden crate is next to the weary woman in a sequined dress",
+   "question": "Is the wooden crate next to the weary woman in a sequined dress?"
+  },
+  {
+   "id": "boy_points_to_woman",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman_older"
+   ],
+   "desc": "the young boy in suspenders points toward the older woman in a floral blouse",
+   "question": "Is the young boy in suspenders pointing toward the older woman in a floral blouse?"
+  },
+  {
+   "id": "fern_behind_boy",
+   "type": "relation",
+   "of": [
+    "fern",
+    "boy"
+   ],
+   "desc": "the large potted fern is behind the young boy in suspenders",
+   "question": "Is the large potted fern behind the young boy in suspenders?"
+  },
+  {
+   "id": "man_hands_ticket",
+   "type": "action",
+   "of": [
+    "man",
+    "woman_older"
+   ],
+   "desc": "the tall man in a velvet coat hands a ticket to the older woman in a floral blouse",
+   "question": "Is the tall man in a velvet coat handing a ticket to the older woman in a floral blouse?"
+  },
+  {
+   "id": "no_mirror",
+   "type": "absent",
+   "desc": "mirror",
+   "question": "Is there any mirror visible in the background?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the tall man in a velvet coat is standing",
+   "question": "Is the tall man in a velvet coat standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0031",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet theatre backstage moment. On the left stands a tall man in a velvet coat, holding a brass lantern high above his head. In the center sits a weary woman in a sequined dress, resting her chin on her hand while looking at a small gray cat perched on a wooden crate next to her. To the right, a young boy in suspenders points toward a stack of scripts held by an older woman in a floral blouse. The fifth entity is a large potted fern placed behind the boy. The man in the velvet coat is handing a ticket to the older woman in the floral blouse. There is no mirror visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

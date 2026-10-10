@@ -1,0 +1,201 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with blue hair",
+   "question": "Is there a girl?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with glasses",
+   "question": "Is there a boy?",
+   "box": [
+    380,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    700,
+    400,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    720,
+    500,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds a thick book",
+   "question": "Is the boy holding a book?"
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl is sitting",
+   "question": "Is the girl sitting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy is standing",
+   "question": "Is the boy standing?"
+  },
+  {
+   "id": "girl_looking_down",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue hair is looking down at her lap",
+   "question": "Is the girl with blue hair looking down at her lap?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy is pointing his finger forward",
+   "question": "Is the boy pointing his finger forward?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sleeping curled up",
+   "question": "Is the tabby cat sleeping curled up?"
+  },
+  {
+   "id": "boy_handing_book",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy with glasses is handing the book to the girl with blue hair",
+   "question": "Is the boy with glasses handing the book to the girl with blue hair?"
+  },
+  {
+   "id": "cat_on_chair",
+   "type": "relation",
+   "of": [
+    "cat",
+    "chair"
+   ],
+   "desc": "the tabby cat rests on the wooden chair",
+   "question": "Is the tabby cat resting on the wooden chair?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "girl_blue_hair",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has blue hair",
+   "question": "Does the girl have blue hair?"
+  },
+  {
+   "id": "boy_glasses",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wears glasses",
+   "question": "Does the boy wear glasses?"
+  },
+  {
+   "id": "book_thick",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the book held by the boy is thick",
+   "question": "Is the book held by the boy thick?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0005",
+ "prompt": "In an anime style library reading room, a girl with blue hair sits on the left. A boy with glasses stands in the center holding a thick book. On the right, a tabby cat rests on a wooden chair. The girl is looking down at her lap. The boy is pointing his finger forward. The tabby cat is sleeping curled up. The boy is handing the book to the girl. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

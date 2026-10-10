@@ -1,0 +1,464 @@
+{
+ "style": "photorealistic close-up, detailed, warm lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an old-fashioned watchmaker's desk with a wooden surface",
+   "question": "Does the image show an old-fashioned watchmaker's desk with a wooden surface?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tool",
+   "plural": "tools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "delicate watchmaking tools",
+   "question": "Are there delicate watchmaking tools?",
+   "box": [
+    100,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "loupe",
+   "type": "entity",
+   "class": "jeweler's loupe",
+   "plural": "jeweler's loupes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jeweler's loupe",
+   "question": "Is there a jeweler's loupe?",
+   "box": [
+    450,
+    400,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "watch_case",
+   "type": "entity",
+   "class": "pocket watch case",
+   "plural": "pocket watch cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a disassembled pocket watch case",
+   "question": "Is there a disassembled pocket watch case?",
+   "box": [
+    580,
+    380,
+    700,
+    520
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tray",
+   "question": "Is there a tray?",
+   "box": [
+    200,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "screws_gears",
+   "type": "attribute",
+   "of": "tray",
+   "desc": "the tray holds tiny screws",
+   "question": "Does the tray hold tiny screws?"
+  },
+  {
+   "id": "tweezers",
+   "type": "entity",
+   "class": "tweezers",
+   "plural": "tweezers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of fine-tipped tweezers",
+   "question": "Is there a pair of fine-tipped tweezers?",
+   "box": [
+    600,
+    600,
+    750,
+    650
+   ]
+  },
+  {
+   "id": "mainspring",
+   "type": "entity",
+   "class": "mainspring",
+   "plural": "mainsprings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mainspring",
+   "question": "Is there a mainspring?",
+   "box": [
+    760,
+    580,
+    850,
+    670
+   ]
+  },
+  {
+   "id": "oiler",
+   "type": "entity",
+   "class": "oiler",
+   "plural": "oilers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small oiler",
+   "question": "Is there a small oiler?",
+   "box": [
+    800,
+    300,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "brush",
+   "type": "entity",
+   "class": "cleaning brush",
+   "plural": "cleaning brushes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cleaning brush",
+   "question": "Is there a cleaning brush?",
+   "box": [
+    820,
+    420,
+    920,
+    520
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "workbench lamp",
+   "plural": "workbench lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench lamp with a green shade",
+   "question": "Is there a workbench lamp with a green shade?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "manual",
+   "type": "entity",
+   "class": "manual",
+   "plural": "manuals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small leather-bound manual on horology",
+   "question": "Is there a small leather-bound manual on horology?",
+   "box": [
+    300,
+    100,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "watch_stand",
+   "type": "entity",
+   "class": "watch stand",
+   "plural": "watch stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an empty watch stand",
+   "question": "Is there an empty watch stand?",
+   "box": [
+    700,
+    100,
+    850,
+    250
+   ]
+  },
+  {
+   "id": "cloth",
+   "type": "entity",
+   "class": "polishing cloth",
+   "plural": "polishing cloths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polishing cloth",
+   "question": "Is there a polishing cloth?",
+   "box": [
+    850,
+    100,
+    980,
+    250
+   ]
+  },
+  {
+   "id": "tools_scattered",
+   "type": "state",
+   "of": "tools",
+   "desc": "the delicate watchmaking tools are scattered on the surface",
+   "question": "Are the delicate watchmaking tools scattered on the surface?"
+  },
+  {
+   "id": "loupe_beside_case",
+   "type": "relation",
+   "of": [
+    "loupe",
+    "watch_case"
+   ],
+   "desc": "the jeweler's loupe rests beside the disassembled pocket watch case",
+   "question": "Is the jeweler's loupe resting beside the disassembled pocket watch case?"
+  },
+  {
+   "id": "tweezers_next_to_spring",
+   "type": "relation",
+   "of": [
+    "tweezers",
+    "mainspring"
+   ],
+   "desc": "the fine-tipped tweezers are positioned next to the mainspring",
+   "question": "Are the fine-tipped tweezers positioned next to the mainspring?"
+  },
+  {
+   "id": "oiler_brush_arranged",
+   "type": "relation",
+   "of": [
+    "oiler",
+    "brush"
+   ],
+   "desc": "the small oiler and the cleaning brush are neatly arranged together",
+   "question": "Are the small oiler and the cleaning brush neatly arranged together?"
+  },
+  {
+   "id": "no_hammer",
+   "type": "absent",
+   "desc": "a large hammer",
+   "question": "Is there a large hammer in the image?"
+  },
+  {
+   "id": "no_anvil",
+   "type": "absent",
+   "desc": "an anvil",
+   "question": "Is there an anvil in the image?"
+  },
+  {
+   "id": "no_wall_clock",
+   "type": "absent",
+   "desc": "a large wall clock",
+   "question": "Is there a large wall clock in the image?"
+  },
+  {
+   "id": "no_smartphone",
+   "type": "absent",
+   "desc": "a smartphone",
+   "question": "Is there a smartphone in the image?"
+  },
+  {
+   "id": "no_caliper",
+   "type": "absent",
+   "desc": "a digital caliper",
+   "question": "Is there a digital caliper in the image?"
+  },
+  {
+   "id": "lamp_lit",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the workbench lamp casts a pool of light",
+   "question": "Does the workbench lamp cast a pool of light?"
+  },
+  {
+   "id": "tools_on_surface",
+   "type": "state",
+   "of": "tools",
+   "desc": "the delicate watchmaking tools are scattered on the wooden surface",
+   "question": "Are the delicate watchmaking tools scattered on the wooden surface?"
+  },
+  {
+   "id": "loupe_on_surface",
+   "type": "state",
+   "of": "loupe",
+   "desc": "the jeweler's loupe rests on the wooden surface",
+   "question": "Does the jeweler's loupe rest on the wooden surface?"
+  },
+  {
+   "id": "watch_case_on_surface",
+   "type": "state",
+   "of": "watch_case",
+   "desc": "the disassembled pocket watch case rests on the wooden surface",
+   "question": "Does the disassembled pocket watch case rest on the wooden surface?"
+  },
+  {
+   "id": "tray_on_surface",
+   "type": "state",
+   "of": "tray",
+   "desc": "the tray rests on the wooden surface",
+   "question": "Does the tray rest on the wooden surface?"
+  },
+  {
+   "id": "tweezers_on_surface",
+   "type": "state",
+   "of": "tweezers",
+   "desc": "the fine-tipped tweezers are positioned on the wooden surface",
+   "question": "Are the fine-tipped tweezers positioned on the wooden surface?"
+  },
+  {
+   "id": "mainspring_on_surface",
+   "type": "state",
+   "of": "mainspring",
+   "desc": "the mainspring is on the wooden surface",
+   "question": "Is the mainspring on the wooden surface?"
+  },
+  {
+   "id": "oiler_on_surface",
+   "type": "state",
+   "of": "oiler",
+   "desc": "the small oiler is arranged on the wooden surface",
+   "question": "Is the small oiler arranged on the wooden surface?"
+  },
+  {
+   "id": "brush_on_surface",
+   "type": "state",
+   "of": "brush",
+   "desc": "the cleaning brush is arranged on the wooden surface",
+   "question": "Is the cleaning brush arranged on the wooden surface?"
+  },
+  {
+   "id": "manual_on_surface",
+   "type": "state",
+   "of": "manual",
+   "desc": "the small leather-bound manual is on the wooden surface",
+   "question": "Is the small leather-bound manual on the wooden surface?"
+  },
+  {
+   "id": "watch_stand_on_surface",
+   "type": "state",
+   "of": "watch_stand",
+   "desc": "the empty watch stand is on the wooden surface",
+   "question": "Is the empty watch stand on the wooden surface?"
+  },
+  {
+   "id": "cloth_on_surface",
+   "type": "state",
+   "of": "cloth",
+   "desc": "the polishing cloth is on the wooden surface",
+   "question": "Is the polishing cloth on the wooden surface?"
+  },
+  {
+   "id": "gears_in_tray",
+   "type": "attribute",
+   "of": "tray",
+   "desc": "the tray holds a collection of brass gears",
+   "question": "Does the tray hold a collection of brass gears?"
+  },
+  {
+   "id": "manual_open",
+   "type": "state",
+   "of": "manual",
+   "desc": "the manual is open to a diagram",
+   "question": "Is the manual open to a diagram?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "tools",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "loupe",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "watch_case",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tray",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tweezers",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mainspring",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "oiler",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "brush",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "manual",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "watch_stand",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cloth",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_055",
+ "prompt": "A close-up, detailed view of an old-fashioned watchmaker's desk. The wooden surface is scattered with delicate tools. A jeweler's loupe rests beside a disassembled pocket watch case. A tray holds tiny screws and a collection of brass gears. A pair of fine-tipped tweezers is positioned next to a mainspring. A small oiler and a cleaning brush are neatly arranged. A workbench lamp with a green shade casts a pool of light. A small, leather-bound manual on horology is open to a diagram. An empty watch stand and a polishing cloth complete the scene. This is a place of mechanical precision, not heavy industry, so there is no large hammer or anvil. The focus is on timepieces, so you will not see a large wall clock, and modern gadgets like a smartphone or a digital caliper are absent.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 12,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

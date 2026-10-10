@@ -1,0 +1,163 @@
+{
+ "style": "cinematic film still, sunlit, lush greenery",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit botanical greenhouse with lush greenery",
+   "question": "Does the image show a sunlit botanical greenhouse with lush greenery?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    300,
+    600,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall fern in a terracotta pot",
+   "question": "Is there a tall fern in a terracotta pot?",
+   "box": [
+    450,
+    300,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    700,
+    350,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_holding_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a silver watering can",
+   "question": "Is the woman in a blue dress holding a silver watering can?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue dress is looking at the child",
+   "question": "Is the woman in a blue dress looking at the child?"
+  },
+  {
+   "id": "woman_pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in a blue dress pours water near the base of the fern",
+   "question": "Is the woman in a blue dress pouring water near the base of the fern?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "fern"
+   ],
+   "desc": "the child in a yellow hat points at the leaves of the fern",
+   "question": "Is the child in a yellow hat pointing at the leaves of the fern?"
+  },
+  {
+   "id": "fern_on_bench",
+   "type": "relation",
+   "of": [
+    "fern",
+    "bench"
+   ],
+   "desc": "the potted fern sits on the wooden bench",
+   "question": "Is the potted fern sitting on the wooden bench?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "glass roof",
+   "question": "Is there a glass roof visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0070",
+ "prompt": "A cinematic film still captures a sunlit botanical greenhouse. On the left, a woman in a blue dress stands holding a silver watering can. In the center, a tall fern in a terracotta pot sits on a wooden bench. To the right, a child in a yellow hat points at the fern's leaves. The woman looks at the child while pouring water near the plant's base. There is no glass roof visible above them. The scene focuses strictly on these three figures and their immediate surroundings within the lush greenery.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

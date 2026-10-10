@@ -1,0 +1,180 @@
+{
+ "style": "photorealistic macro photography, high contrast, sharp focus",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark neutral surface",
+   "question": "Is the background a dark neutral surface?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "parchment",
+   "type": "entity",
+   "class": "parchment",
+   "plural": "parchments",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open sheet of parchment",
+   "question": "Is there an open sheet of parchment?",
+   "box": [
+    100,
+    400,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "quill",
+   "type": "entity",
+   "class": "quill pen",
+   "plural": "quill pens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sterling-silver quill pen",
+   "question": "Is there a sterling-silver quill pen?",
+   "box": [
+    200,
+    350,
+    800,
+    650
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass desk lamp",
+   "question": "Is there a brass desk lamp?",
+   "box": [
+    700,
+    50,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "inkwell",
+   "type": "entity",
+   "class": "inkwell",
+   "plural": "inkwells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a midnight-blue glass inkwell",
+   "question": "Is there a midnight-blue glass inkwell?",
+   "box": [
+    100,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "quill_feather_detail",
+   "type": "attribute",
+   "of": "quill",
+   "desc": "the quill pen has fine silver filaments fanning elegantly with intact barbs",
+   "question": "Does the quill pen have fine silver filaments fanning elegantly with intact barbs?"
+  },
+  {
+   "id": "quill_nib_detail",
+   "type": "attribute",
+   "of": "quill",
+   "desc": "the quill pen has a metal nib honed to a mirror finish",
+   "question": "Does the quill pen have a metal nib honed to a mirror finish?"
+  },
+  {
+   "id": "quill_enamel_detail",
+   "type": "attribute",
+   "of": "quill",
+   "desc": "blue enamel vines wind around the shaft of the quill pen",
+   "question": "Do blue enamel vines wind around the shaft of the quill pen?"
+  },
+  {
+   "id": "quill_beads_detail",
+   "type": "attribute",
+   "of": "quill",
+   "desc": "tiny lapis beads accent the ferrule of the quill pen",
+   "question": "Do tiny lapis beads accent the ferrule of the quill pen?"
+  },
+  {
+   "id": "quill_condition",
+   "type": "state",
+   "of": "quill",
+   "desc": "the quill pen is untarnished and straight",
+   "question": "Is the quill pen untarnished and straight?"
+  },
+  {
+   "id": "inkwell_state",
+   "type": "state",
+   "of": "inkwell",
+   "desc": "the midnight-blue glass inkwell is upright",
+   "question": "Is the midnight-blue glass inkwell upright?"
+  },
+  {
+   "id": "quill_on_parchment",
+   "type": "relation",
+   "of": [
+    "quill",
+    "parchment"
+   ],
+   "desc": "the quill pen rests across the open parchment",
+   "question": "Does the quill pen rest across the open parchment?"
+  },
+  {
+   "id": "lamp_over_quill",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "quill"
+   ],
+   "desc": "the brass desk lamp is above the quill pen",
+   "question": "Is the brass desk lamp positioned above the quill pen?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic parts on the pen",
+   "question": "Are there any plastic parts on the pen?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "parchment",
+   "to": "quill",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_079",
+ "prompt": "Paint a single sterling-silver quill pen resting across an open parchment under a brass desk lamp. The feather consists of fine silver filaments fanning elegantly, each barb intact. The quill shaft tapers to an metal nib honed to a mirror finish. Blue enamel vines wind around the shaft, and tiny lapis beads accent the ferrule. A midnight-blue glass inkwell shares the scene, remaining upright. The silver shows no tarnish, the quill has no bends, and the pen is not plastic.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

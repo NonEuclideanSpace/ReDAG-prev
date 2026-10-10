@@ -1,0 +1,128 @@
+{
+ "style": "cinematic film still, high contrast, sharp shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sandy beach volleyball court under bright sun",
+   "question": "Does the image show a sandy beach volleyball court under bright sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in black shorts",
+   "question": "Is there a man in black shorts?",
+   "box": [
+    550,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an incoming volleyball",
+   "question": "Is there an incoming volleyball?",
+   "box": [
+    850,
+    100,
+    980,
+    230
+   ]
+  },
+  {
+   "id": "woman_knees",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue bikini has her knees bent",
+   "question": "Does the woman in the blue bikini have her knees bent?"
+  },
+  {
+   "id": "man_crouching",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in black shorts is crouching low",
+   "question": "Is the man in black shorts crouching low?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in black shorts has his eyes fixed on the ball",
+   "question": "Are the eyes of the man in black shorts fixed on the volleyball?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue bikini is next to the man in black shorts",
+   "question": "Is the woman in the blue bikini next to the man in black shorts?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue bikini stands",
+   "question": "Is the woman in the blue bikini standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0024",
+ "prompt": "A cinematic film still captures a tense moment on the sand. On the left, a woman in a blue bikini stands ready with knees bent. To her right, a man in black shorts crouches low, eyes fixed on the incoming ball. The two athletes are positioned next to each other, anticipating the play. The bright sun casts sharp shadows across the court. There is no net visible in the frame, focusing entirely on the players' intense preparation and physical stance amidst the golden sand of the tournament venue.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,221 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet library reading room",
+   "question": "Does the image depict a quiet library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "student",
+   "type": "entity",
+   "class": "student",
+   "plural": "students",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a student in a blue hoodie",
+   "question": "Is there a student in a blue hoodie?",
+   "box": [
+    80,
+    250,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "librarian",
+   "type": "entity",
+   "class": "librarian",
+   "plural": "librarians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a librarian",
+   "question": "Is there a librarian?",
+   "box": [
+    400,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "small table",
+   "plural": "small tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    750,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    780,
+    550,
+    920,
+    700
+   ]
+  },
+  {
+   "id": "student_sitting",
+   "type": "state",
+   "of": "student",
+   "desc": "the student in the blue hoodie is sitting",
+   "question": "Is the student in the blue hoodie sitting?"
+  },
+  {
+   "id": "librarian_standing",
+   "type": "state",
+   "of": "librarian",
+   "desc": "the librarian with round glasses is standing",
+   "question": "Is the librarian with round glasses standing?"
+  },
+  {
+   "id": "librarian_books",
+   "type": "attribute",
+   "of": "librarian",
+   "desc": "the librarian with round glasses holds a stack of books",
+   "question": "Is the librarian with round glasses holding a stack of books?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with orange fur is resting",
+   "question": "Is the cat with orange fur resting?"
+  },
+  {
+   "id": "student_on_chair",
+   "type": "relation",
+   "of": [
+    "student",
+    "chair"
+   ],
+   "desc": "the student in the blue hoodie sits on the wooden chair",
+   "question": "Is the student in the blue hoodie sitting on the wooden chair?"
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the cat with orange fur rests on the small table",
+   "question": "Is the cat with orange fur resting on the small table?"
+  },
+  {
+   "id": "student_looking_librarian",
+   "type": "action",
+   "of": [
+    "student",
+    "librarian"
+   ],
+   "desc": "the student in the blue hoodie is looking at the librarian with round glasses",
+   "question": "Is the student in the blue hoodie looking at the librarian with round glasses?"
+  },
+  {
+   "id": "librarian_handing_student",
+   "type": "action",
+   "of": [
+    "librarian",
+    "student"
+   ],
+   "desc": "the librarian with round glasses is handing a book to the student in the blue hoodie",
+   "question": "Is the librarian with round glasses handing a book to the student in the blue hoodie?"
+  },
+  {
+   "id": "no_computer",
+   "type": "absent",
+   "desc": "a computer",
+   "question": "Is there a computer in the scene?"
+  },
+  {
+   "id": "librarian_glasses",
+   "type": "attribute",
+   "of": "librarian",
+   "desc": "the librarian wears round glasses",
+   "question": "Does the librarian wear round glasses?"
+  },
+  {
+   "id": "cat_orange",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has orange fur",
+   "question": "Does the cat have orange fur?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "student",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0120",
+ "prompt": "This flat vector illustration depicts a quiet library reading room. On the left, a student in a blue hoodie sits on a wooden chair. In the center, a librarian with round glasses stands holding a stack of books. On the right, a cat with orange fur rests on a small table. The student in the blue hoodie is looking at the librarian with round glasses. The librarian with round glasses is handing a book to the student in the blue hoodie. There is no computer in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

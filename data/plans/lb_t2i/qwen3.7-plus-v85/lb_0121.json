@@ -1,0 +1,517 @@
+{
+ "style": "surreal digital painting, pale green-tinged twilight, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal landscape with smooth black glass-like water, a curved horizon bending into a second reflection, and a paradoxical twilight sky",
+   "question": "Does the image show a surreal landscape with smooth black water, a curved horizon reflecting the scene, and a pale green-tinged twilight sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red tent half-buried in sand",
+   "question": "Is there a red tent half-buried in sand?",
+   "box": [
+    100,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate filled with items",
+   "question": "Is there a wooden crate filled with items?",
+   "box": [
+    450,
+    500,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "willow",
+   "type": "entity",
+   "class": "willow tree",
+   "plural": "willow trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled willow tree",
+   "question": "Is there a gnarled willow tree?",
+   "box": [
+    700,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "boat",
+   "type": "entity",
+   "class": "toy boat",
+   "plural": "toy boats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s toy boat with a worn red hull",
+   "question": "Is there a child’s toy boat with a worn red hull?",
+   "box": [
+    800,
+    700,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "gourds",
+   "type": "entity",
+   "class": "hollow gourd",
+   "plural": "hollow gourds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a cluster of hollow gourds",
+   "question": "Is there a cluster of hollow gourds?",
+   "box": [
+    750,
+    300,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "mirror_tent",
+   "type": "entity",
+   "class": "red tent",
+   "plural": "red tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an identical red tent",
+   "question": "Is there an identical red tent?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "fishing net",
+   "plural": "fishing nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a limp waterlogged fishing net",
+   "question": "Is there a limp waterlogged fishing net?",
+   "box": [
+    450,
+    480,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "pot_steaming",
+   "type": "attribute",
+   "of": "tent",
+   "desc": "a metal pot steaming inside the tent",
+   "question": "Is there a metal pot steaming inside the tent?"
+  },
+  {
+   "id": "fungi_glowing",
+   "type": "attribute",
+   "of": "willow",
+   "desc": "bioluminescent fungi glowing inside the willow's hollow",
+   "question": "Are there bioluminescent fungi glowing inside the willow's hollow?"
+  },
+  {
+   "id": "compass_spinning",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "a rusted compass spinning in the crate",
+   "question": "Is there a rusted compass spinning in the crate?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "tent",
+   "desc": "a small mirror inside the tent reflecting the distant tent",
+   "question": "Is there a small mirror inside the tent reflecting the distant tent?"
+  },
+  {
+   "id": "roots_submerged",
+   "type": "relation",
+   "of": [
+    "willow",
+    "mirror_tent"
+   ],
+   "desc": "the willow's roots twisting down into the water",
+   "question": "Do the willow's roots twist down into the water?"
+  },
+  {
+   "id": "cables_adjusting",
+   "type": "action",
+   "of": [
+    "willow",
+    "boat"
+   ],
+   "desc": "submerged cables and pulleys adjusting the boat's tether",
+   "question": "Are submerged cables and pulleys adjusting the boat's tether?"
+  },
+  {
+   "id": "tent_beside_crate",
+   "type": "relation",
+   "of": [
+    "tent",
+    "crate"
+   ],
+   "desc": "the red tent is beside the wooden crate",
+   "question": "Is the red tent beside the wooden crate?"
+  },
+  {
+   "id": "crate_beside_willow",
+   "type": "relation",
+   "of": [
+    "crate",
+    "willow"
+   ],
+   "desc": "the wooden crate is beside the willow tree",
+   "question": "Is the wooden crate beside the willow tree?"
+  },
+  {
+   "id": "boat_near_willow",
+   "type": "relation",
+   "of": [
+    "boat",
+    "willow"
+   ],
+   "desc": "the toy boat is near the willow tree",
+   "question": "Is the toy boat near the willow tree?"
+  },
+  {
+   "id": "gourds_in_willow",
+   "type": "relation",
+   "of": [
+    "gourds",
+    "willow"
+   ],
+   "desc": "the hollow gourds are nestled among the willow's lower branches",
+   "question": "Are the hollow gourds nestled among the willow's lower branches?"
+  },
+  {
+   "id": "rope_boat_to_gourds",
+   "type": "relation",
+   "of": [
+    "boat",
+    "gourds"
+   ],
+   "desc": "a frayed rope tethers the boat to the gourd cluster",
+   "question": "Is a frayed rope tethering the boat to the gourd cluster?"
+  },
+  {
+   "id": "mirror_tent_in_water",
+   "type": "state",
+   "of": "mirror_tent",
+   "desc": "the identical red tent is emerging from the water in the distance",
+   "question": "Is the identical red tent emerging from the water in the distance?"
+  },
+  {
+   "id": "net_on_crate",
+   "type": "relation",
+   "of": [
+    "net",
+    "crate"
+   ],
+   "desc": "the fishing net sags across the wooden crate",
+   "question": "Does the fishing net sag across the wooden crate?"
+  },
+  {
+   "id": "willow_arching",
+   "type": "state",
+   "of": "willow",
+   "desc": "the willow tree arches over the shore",
+   "question": "Does the willow tree arch over the shore?"
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "camping stove",
+   "plural": "camping stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a portable camping stove",
+   "question": "Is there a portable camping stove inside the red tent?",
+   "box": [
+    480,
+    650,
+    544,
+    720
+   ]
+  },
+  {
+   "id": "ropes",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tangled ropes",
+   "question": "Are there tangled ropes in the wooden crate?",
+   "box": [
+    100,
+    600,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "maps",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "faded maps",
+   "question": "Are there faded maps in the wooden crate?",
+   "box": [
+    120,
+    620,
+    220,
+    720
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mirror",
+   "question": "Is there a small mirror on the wall inside the red tent?",
+   "box": [
+    400,
+    500,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "spirals",
+   "type": "entity",
+   "class": "glowing spiral",
+   "plural": "glowing spirals",
+   "count": 2,
+   "count_exact": false,
+   "desc": "faintly glowing spirals in the sand",
+   "question": "Are there faintly glowing spirals in the sand?",
+   "box": [
+    250,
+    750,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "tent_breathing",
+   "type": "state",
+   "of": "tent",
+   "desc": "the red tent breathes gently",
+   "question": "Does the red tent appear to be breathing gently?"
+  },
+  {
+   "id": "net_sagging",
+   "type": "state",
+   "of": "net",
+   "desc": "the fishing net sags",
+   "question": "Is the fishing net sagging?"
+  },
+  {
+   "id": "boat_lurching",
+   "type": "state",
+   "of": "boat",
+   "desc": "the toy boat lurches slightly",
+   "question": "Does the toy boat appear to be lurching slightly?"
+  },
+  {
+   "id": "rope_taut",
+   "type": "state",
+   "of": "boat",
+   "desc": "the frayed rope tethering the boat is taut",
+   "question": "Is the frayed rope tethering the toy boat taut?"
+  },
+  {
+   "id": "stove_in_tent",
+   "type": "relation",
+   "of": [
+    "stove",
+    "tent"
+   ],
+   "desc": "the portable camping stove is inside the red tent",
+   "question": "Is the portable camping stove inside the red tent?"
+  },
+  {
+   "id": "ropes_in_crate",
+   "type": "relation",
+   "of": [
+    "ropes",
+    "crate"
+   ],
+   "desc": "the tangled ropes are in the wooden crate",
+   "question": "Are the tangled ropes in the wooden crate?"
+  },
+  {
+   "id": "maps_in_crate",
+   "type": "relation",
+   "of": [
+    "maps",
+    "crate"
+   ],
+   "desc": "the faded maps are in the wooden crate",
+   "question": "Are the faded maps in the wooden crate?"
+  },
+  {
+   "id": "mirror_in_tent",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "tent"
+   ],
+   "desc": "the small mirror is on the wall inside the red tent",
+   "question": "Is the small mirror on the wall inside the red tent?"
+  },
+  {
+   "id": "spirals_between_tents",
+   "type": "relation",
+   "of": [
+    "spirals",
+    "tent"
+   ],
+   "desc": "the glowing spirals are in the sand between the two tents",
+   "question": "Are the glowing spirals in the sand between the two tents?"
+  },
+  {
+   "id": "rope_through_ring",
+   "type": "relation",
+   "of": [
+    "boat",
+    "gourds"
+   ],
+   "desc": "the rope tethering the boat is threaded through the ring on the gourds",
+   "question": "Is the rope tethering the boat threaded through the ring on the gourds?"
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted key",
+   "question": "Is there a rusted key?",
+   "box": [
+    480,
+    850,
+    544,
+    900
+   ]
+  },
+  {
+   "id": "sand_water_boundary",
+   "type": "state",
+   "of": "crate",
+   "desc": "the sand gives way to water beyond the crate",
+   "question": "Does the sand give way to water beyond the wooden crate?"
+  },
+  {
+   "id": "pot_broth",
+   "type": "attribute",
+   "of": "tent",
+   "desc": "broth in the metal pot",
+   "question": "Is there broth in the metal pot?"
+  },
+  {
+   "id": "mirror_tent_emerging",
+   "type": "state",
+   "of": "mirror_tent",
+   "desc": "the identical red tent emerging from the water",
+   "question": "Is the identical red tent emerging from the water?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "net",
+   "kind": "support"
+  },
+  {
+   "from": "tent",
+   "to": "stove",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "ropes",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "maps",
+   "kind": "support"
+  },
+  {
+   "from": "willow",
+   "to": "gourds",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0121",
+ "prompt": "The red tent, half-buried in the soft, damp sand like a forgotten relic, breathes gently with the warmth of the portable camping stove inside, its metal pot steaming with a fragrant broth of wild herbs and something faintly unplaceable, perhaps fish or memory. Outside, the fishing net, limp and waterlogged, sags across a wooden crate filled with tangled ropes, faded maps, and a rusted compass spinning lazily in the breeze. Beyond the crate, the sand gives way to smooth, black glass-like water, the lake so still it reflects not just the sky but the inverted world of willow branches swaying upward. At the edge of this mirroring surface floats a child’s toy boat, its red hull worn and waterlogged, tethered by a frayed rope to the gnarled base of a willow tree that arches over the shore like a watching giant. From within the tree’s hollow, a soft glow pulses in rhythm with the steaming pot—bioluminescent fungi flicker in tandem with the heat, as if breathing together in some ancient, unseen bond. Above the tree, the willow’s roots twist down into the water, merging imperceptibly with submerged cables and pulleys that appear to be adjusting the boat’s tether, drawing it in and letting it drift in a slow, deliberate dance. The air hums faintly with static, as if charged by the convergence of elements—sand, water, heat, and time itself. In the distance, beyond the shimmering horizon of the lake, the land curves unnaturally, the skyline bending into a second reflection of the landscape as though reality has been folded over itself. The sun hangs in a paradoxical twilight, neither rising nor setting, casting a pale, green-tinged light that ripples in waves through the scene. Nestled among the willow’s lower branches is a cluster of hollow gourds, each one tuned to the wind and producing a low, droning hum that resonates with the tent’s fabric, making it vibrate as if singing along. The rope tethering the toy boat is threaded through a ring on the gourd cluster, as though the melody is being translated into a language the lake understands. Within the tent, shadows shift and twist like living things, and a small mirror on the wall reflects not the interior of the tent but a view of the far side of the lake, where an identical red tent appears to be emerging from the water, as if mirroring the scene in a delayed echo. Between the two tents, the sand is marked by strange patterns—faintly glowing spirals that seem to expand when looked at directly and shrink when glanced sideways, as though responding to the observer. In the middle of the lake, the reflections have become distorted by a sudden ripple, not from wind or water but from something unseen beneath the surface. The toy boat lurches slightly, the frayed rope tautening, and the willow’s roots tremble. A low groan rumbles through the ground, vibrating through the crate and dislodging a rusted key that tumbles into the sand and vanishes into a crevice where the sand and water meet in a seamless, unexplainable line. Somewhere, just beyond the edge of perception, the scene seems to breathe, folding in on itself like a closed map that never stops unfolding.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "coverage_added": 1,
+  "coverage_dropped": 2,
+  "facts_pass": {
+   "n_facts": 47,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 2,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

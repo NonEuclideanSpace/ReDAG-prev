@@ -1,0 +1,141 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station garage with a concrete floor",
+   "question": "Does the image show the interior of a fire station garage with a concrete floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck?",
+   "box": [
+    350,
+    250,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dalmatian",
+   "plural": "dalmatians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    750,
+    400,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "truck_facing_forward",
+   "type": "state",
+   "of": "truck",
+   "desc": "the red fire truck faces forward",
+   "question": "Does the red fire truck face forward?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dalmatian_looking",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "truck"
+   ],
+   "desc": "the dalmatian looks at the red fire truck",
+   "question": "Is the dalmatian looking at the red fire truck?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0014",
+ "prompt": "In a flat vector illustration, a firefighter in a yellow helmet stands on the left side of a fire station garage. In the center, a red fire truck is parked with its front facing forward. On the right, a dalmatian with black spots sits calmly on the concrete floor. The firefighter holds a coiled hose in their hands. The dalmatian looks directly at the red fire truck. There is no smoke visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

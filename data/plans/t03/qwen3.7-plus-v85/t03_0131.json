@@ -1,0 +1,151 @@
+{
+ "style": "oil painting style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    300,
+    500,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hat",
+   "question": "Is there a woman wearing a blue hat?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man wearing a grey suit?",
+   "box": [
+    674,
+    150,
+    974,
+    850
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    462,
+    450,
+    562,
+    550
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue hat is sitting",
+   "question": "Is the woman in the blue hat sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is standing",
+   "question": "Is the man in the grey suit standing?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the silver teapot rests on the table",
+   "question": "Is the silver teapot resting on the table?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "teapot"
+   ],
+   "desc": "the woman in the blue hat is looking at the silver teapot",
+   "question": "Is the woman in the blue hat looking at the silver teapot?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "teapot"
+   ],
+   "desc": "the man in the grey suit is pointing at the silver teapot",
+   "question": "Is the man in the grey suit pointing at the silver teapot?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0131",
+ "prompt": "In an oil painting style, a woman in a blue hat sits on the left side of a train dining car. A silver teapot rests on the table in the center. A man in a grey suit stands on the right. The woman is looking at the teapot. The man is pointing at the teapot. There is no window visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,534 @@
+{
+ "style": "photorealistic, bright natural lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an artist's studio",
+   "question": "Does the image show an artist's studio?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "easel",
+   "type": "entity",
+   "class": "easel",
+   "plural": "easels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden easel",
+   "question": "Is there a wooden easel?",
+   "box": [
+    350,
+    200,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "canvas",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large canvas",
+   "question": "Is there a large canvas?",
+   "box": [
+    380,
+    220,
+    644,
+    700
+   ]
+  },
+  {
+   "id": "artist",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a female artist",
+   "question": "Is there a female artist?",
+   "box": [
+    200,
+    250,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "palette",
+   "type": "entity",
+   "class": "palette",
+   "plural": "palettes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden palette",
+   "question": "Is there a wooden palette?",
+   "box": [
+    280,
+    550,
+    380,
+    650
+   ]
+  },
+  {
+   "id": "brush",
+   "type": "entity",
+   "class": "paintbrush",
+   "plural": "paintbrushes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paintbrush",
+   "question": "Is there a paintbrush?",
+   "box": [
+    300,
+    500,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "sculpture",
+   "type": "entity",
+   "class": "sculpture",
+   "plural": "sculptures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-finished marble sculpture of a hand",
+   "question": "Is there a half-finished marble sculpture of a hand?",
+   "box": [
+    50,
+    400,
+    200,
+    600
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pedestal",
+   "question": "Is there a pedestal?",
+   "box": [
+    80,
+    600,
+    170,
+    850
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wooden stool",
+   "question": "Is there a small wooden stool?",
+   "box": [
+    250,
+    700,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single red apple",
+   "question": "Is there a single red apple?",
+   "box": [
+    800,
+    300,
+    850,
+    350
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bowl",
+   "question": "Is there a bowl?",
+   "box": [
+    860,
+    290,
+    950,
+    360
+   ]
+  },
+  {
+   "id": "cherries",
+   "type": "entity",
+   "class": "cherry",
+   "plural": "cherries",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five cherries",
+   "question": "Are there exactly five cherries?",
+   "box": [
+    870,
+    300,
+    940,
+    350
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    700,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "blue_tubes",
+   "type": "entity",
+   "class": "tube",
+   "plural": "tubes",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three blue tubes of paint",
+   "question": "Are there exactly three blue tubes of paint?",
+   "box": [
+    720,
+    620,
+    800,
+    680
+   ]
+  },
+  {
+   "id": "yellow_tubes",
+   "type": "entity",
+   "class": "tube",
+   "plural": "tubes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two yellow tubes of paint",
+   "question": "Are there exactly two yellow tubes of paint?",
+   "box": [
+    810,
+    620,
+    880,
+    680
+   ]
+  },
+  {
+   "id": "artist_standing",
+   "type": "state",
+   "of": "artist",
+   "desc": "the female artist is standing",
+   "question": "Is the female artist standing?"
+  },
+  {
+   "id": "artist_facing_canvas",
+   "type": "state",
+   "of": "artist",
+   "desc": "the female artist is facing the canvas",
+   "question": "Is the female artist facing the canvas?"
+  },
+  {
+   "id": "canvas_on_easel",
+   "type": "relation",
+   "of": [
+    "canvas",
+    "easel"
+   ],
+   "desc": "the large canvas is resting on the wooden easel",
+   "question": "Is the large canvas resting on the wooden easel?"
+  },
+  {
+   "id": "artist_holding_brush",
+   "type": "attribute",
+   "of": "artist",
+   "desc": "the female artist holds a paintbrush",
+   "question": "Is the female artist holding a paintbrush?"
+  },
+  {
+   "id": "artist_holding_palette",
+   "type": "attribute",
+   "of": "artist",
+   "desc": "the female artist holds a wooden palette",
+   "question": "Is the female artist holding a wooden palette?"
+  },
+  {
+   "id": "dabbing_action",
+   "type": "action",
+   "of": [
+    "artist",
+    "palette"
+   ],
+   "desc": "the female artist is dabbing the paintbrush onto the wooden palette",
+   "question": "Is the female artist dabbing the paintbrush onto the wooden palette?"
+  },
+  {
+   "id": "sculpture_on_pedestal",
+   "type": "relation",
+   "of": [
+    "sculpture",
+    "pedestal"
+   ],
+   "desc": "the marble sculpture rests on the pedestal",
+   "question": "Is the marble sculpture resting on the pedestal?"
+  },
+  {
+   "id": "pedestal_next_to_artist",
+   "type": "relation",
+   "of": [
+    "pedestal",
+    "artist"
+   ],
+   "desc": "the pedestal is next to the female artist",
+   "question": "Is the pedestal next to the female artist?"
+  },
+  {
+   "id": "sculpture_left_of_artist",
+   "type": "relation",
+   "of": [
+    "sculpture",
+    "artist"
+   ],
+   "desc": "the marble sculpture is to the left of the female artist",
+   "question": "Is the marble sculpture to the left of the female artist?"
+  },
+  {
+   "id": "stool_behind_artist",
+   "type": "relation",
+   "of": [
+    "stool",
+    "artist"
+   ],
+   "desc": "the small wooden stool is behind the female artist",
+   "question": "Is the small wooden stool behind the female artist?"
+  },
+  {
+   "id": "apple_on_windowsill",
+   "type": "relation",
+   "of": [
+    "apple",
+    "window"
+   ],
+   "desc": "the red apple is on the windowsill",
+   "question": "Is the red apple on the windowsill?"
+  },
+  {
+   "id": "bowl_on_windowsill",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "window"
+   ],
+   "desc": "the bowl is on the windowsill",
+   "question": "Is the bowl on the windowsill?"
+  },
+  {
+   "id": "apple_next_to_bowl",
+   "type": "relation",
+   "of": [
+    "apple",
+    "bowl"
+   ],
+   "desc": "the red apple is placed next to the bowl",
+   "question": "Is the red apple placed next to the bowl?"
+  },
+  {
+   "id": "cherries_in_bowl",
+   "type": "relation",
+   "of": [
+    "cherries",
+    "bowl"
+   ],
+   "desc": "the cherries are in the bowl",
+   "question": "Are the cherries in the bowl?"
+  },
+  {
+   "id": "tubes_on_table",
+   "type": "relation",
+   "of": [
+    "blue_tubes",
+    "table"
+   ],
+   "desc": "the blue tubes are on the small table",
+   "question": "Are the blue tubes on the small table?"
+  },
+  {
+   "id": "yellow_tubes_on_table",
+   "type": "relation",
+   "of": [
+    "yellow_tubes",
+    "table"
+   ],
+   "desc": "the yellow tubes are on the small table",
+   "question": "Are the yellow tubes on the small table?"
+  },
+  {
+   "id": "table_next_to_easel",
+   "type": "relation",
+   "of": [
+    "table",
+    "easel"
+   ],
+   "desc": "the small table is next to the easel",
+   "question": "Is the small table next to the easel?"
+  },
+  {
+   "id": "cap_off",
+   "type": "state",
+   "of": "blue_tubes",
+   "desc": "one of the blue tubes has its cap off",
+   "question": "Does one of the blue tubes have its cap off?"
+  },
+  {
+   "id": "easel_between_artist_window",
+   "type": "relation",
+   "of": [
+    "easel",
+    "artist"
+   ],
+   "desc": "the easel is between the female artist and the window",
+   "question": "Is the easel positioned between the female artist and the window?"
+  },
+  {
+   "id": "palette_thumb_hole",
+   "type": "attribute",
+   "of": "palette",
+   "desc": "the wooden palette has a thumb hole which the artist is using",
+   "question": "Is the artist using the thumb hole of the wooden palette?"
+  },
+  {
+   "id": "artist_shorter_easel",
+   "type": "relation",
+   "of": [
+    "artist",
+    "easel"
+   ],
+   "desc": "the female artist is shorter than the wooden easel",
+   "question": "Is the female artist shorter than the wooden easel?"
+  },
+  {
+   "id": "pedestal_shorter_easel",
+   "type": "relation",
+   "of": [
+    "pedestal",
+    "easel"
+   ],
+   "desc": "the pedestal is shorter than the wooden easel",
+   "question": "Is the pedestal shorter than the wooden easel?"
+  },
+  {
+   "id": "pedestal_taller_stool",
+   "type": "relation",
+   "of": [
+    "pedestal",
+    "stool"
+   ],
+   "desc": "the pedestal is taller than the small wooden stool",
+   "question": "Is the pedestal taller than the small wooden stool?"
+  },
+  {
+   "id": "brush_longer_tubes",
+   "type": "relation",
+   "of": [
+    "brush",
+    "blue_tubes"
+   ],
+   "desc": "the paintbrush is longer than the paint tubes on the table",
+   "question": "Is the paintbrush longer than the paint tubes on the table?"
+  },
+  {
+   "id": "palette_hole",
+   "type": "attribute",
+   "of": "palette",
+   "desc": "the wooden palette has a thumb hole",
+   "question": "Does the wooden palette have a thumb hole?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window with a windowsill",
+   "question": "Is there a large window with a windowsill?",
+   "box": [
+    700,
+    50,
+    950,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "easel",
+   "to": "canvas",
+   "kind": "support"
+  },
+  {
+   "from": "pedestal",
+   "to": "sculpture",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "blue_tubes",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "yellow_tubes",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_037",
+ "prompt": "An artist's studio filled with light from a large window. A female artist is standing in front of a large canvas, which is resting on a wooden easel. She is holding a paintbrush and dabbing it onto a wooden palette she holds in her other hand. To her left, a half-finished marble sculpture of a hand rests on a pedestal. The pedestal is shorter than the easel but taller than the small wooden stool. The artist is facing the canvas. The small wooden stool is behind the artist. On the windowsill of the large window, there is a single red apple placed next to a bowl of cherries. The number of cherries is four more than the number of apples. On a small table next to the easel, there are three blue tubes of paint and some yellow tubes. One of the blue tubes has its cap off. The number of yellow tubes is one less than the number of blue tubes. The easel is between the artist and the window. The palette has a thumb hole which the artist is using. The sculpture is on a pedestal which is next to the artist. The artist's paintbrush is longer than the paint tubes on the table. The artist is shorter than the easel.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

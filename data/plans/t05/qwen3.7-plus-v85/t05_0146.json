@@ -1,0 +1,314 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image depict a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white table",
+   "question": "Is there a white table?",
+   "box": [
+    300,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a blue cap",
+   "question": "Is there a boy wearing a blue cap?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl",
+   "question": "Is there a girl?",
+   "box": [
+    350,
+    250,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "teacher",
+   "plural": "teachers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher wearing glasses",
+   "question": "Is there a teacher wearing glasses?",
+   "box": [
+    650,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robot",
+   "question": "Is there a robot?",
+   "box": [
+    400,
+    400,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of books",
+   "question": "Is there a stack of books?",
+   "box": [
+    700,
+    500,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    720,
+    480,
+    780,
+    550
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green beaker",
+   "question": "Is there a green beaker?",
+   "box": [
+    500,
+    550,
+    580,
+    650
+   ]
+  },
+  {
+   "id": "poster",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds a poster board upright",
+   "question": "Is the boy holding a poster board upright?"
+  },
+  {
+   "id": "girl_points",
+   "type": "action",
+   "of": [
+    "girl",
+    "beaker"
+   ],
+   "desc": "the girl points at the beaker",
+   "question": "Is the girl pointing at the beaker?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy is next to the girl",
+   "question": "Is the boy next to the girl?"
+  },
+  {
+   "id": "teacher_right_of_girl",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "girl"
+   ],
+   "desc": "the teacher is to the right of the girl",
+   "question": "Is the teacher to the right of the girl?"
+  },
+  {
+   "id": "teacher_looks_beaker",
+   "type": "action",
+   "of": [
+    "teacher",
+    "beaker"
+   ],
+   "desc": "the teacher looks at the beaker",
+   "question": "Is the teacher looking at the beaker?"
+  },
+  {
+   "id": "robot_behind_table",
+   "type": "relation",
+   "of": [
+    "robot",
+    "table"
+   ],
+   "desc": "the robot is behind the table",
+   "question": "Is the robot behind the table?"
+  },
+  {
+   "id": "robot_near_books",
+   "type": "relation",
+   "of": [
+    "robot",
+    "books"
+   ],
+   "desc": "the robot is near the stack of books",
+   "question": "Is the robot near the stack of books?"
+  },
+  {
+   "id": "cat_on_books",
+   "type": "relation",
+   "of": [
+    "cat",
+    "books"
+   ],
+   "desc": "the cat is on top of the books",
+   "question": "Is the cat on top of the books?"
+  },
+  {
+   "id": "cat_sleeps",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat sleeps",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "boy_shows_poster",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy holds the poster for the girl to see",
+   "question": "Is the boy holding the poster so the girl can see it?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows with sunlight",
+   "question": "Are there any windows with sunlight streaming through?"
+  },
+  {
+   "id": "beaker_bubbling",
+   "type": "state",
+   "of": "beaker",
+   "desc": "the green beaker is bubbling",
+   "question": "Is the green beaker bubbling?"
+  },
+  {
+   "id": "girl_pigtails",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has pigtails",
+   "question": "Does the girl have pigtails?"
+  },
+  {
+   "id": "robot_wheels",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot has wheels",
+   "question": "Does the robot have wheels?"
+  },
+  {
+   "id": "cat_stripes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has orange stripes",
+   "question": "Does the cat have orange stripes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "beaker",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "books",
+   "kind": "support"
+  },
+  {
+   "from": "books",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0146",
+ "prompt": "In a flat vector illustration of a school science fair, a boy in a blue cap stands on the left holding a poster board upright. Next to him in the center, a girl with pigtails points at a bubbling green beaker sitting on a white table. To her right, a teacher in glasses looks at the experiment with interest. Behind the table, a robot with wheels sits stationary near a stack of books. A cat with orange stripes sleeps on top of the books. The boy holds the poster for the girl to see. The teacher observes the beaker closely. There is no sunlight streaming through windows.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

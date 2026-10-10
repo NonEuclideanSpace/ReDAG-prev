@@ -1,0 +1,283 @@
+{
+ "style": "oil painting, thick impasto brushstrokes, gritty maritime realism, gray fog atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a weathered shipyard dock with wet wooden planks and peeling paint, stretching into gray mist",
+   "question": "Does the image show a weathered shipyard dock with wet wooden planks and peeling paint stretching into gray mist?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large blue crane",
+   "question": "Is there a large blue crane?",
+   "box": [
+    350,
+    50,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in yellow overalls",
+   "question": "Is there a woman in yellow overalls?",
+   "box": [
+    700,
+    350,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    850,
+    600,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overturned wooden crate",
+   "question": "Is there an overturned wooden crate?",
+   "box": [
+    820,
+    700,
+    990,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a striped shirt",
+   "question": "Is there a boy in a striped shirt?",
+   "box": [
+    550,
+    500,
+    720,
+    950
+   ]
+  },
+  {
+   "id": "man_wrench",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a rusted wrench firmly in his right hand",
+   "question": "Is the man wearing a red scarf holding a rusted wrench?"
+  },
+  {
+   "id": "crane_hook",
+   "type": "state",
+   "of": "crane",
+   "desc": "the large blue crane has a heavy hook suspended motionless",
+   "question": "Is the heavy hook of the large blue crane suspended?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in yellow overalls is pointing decisively",
+   "question": "Is the woman in yellow overalls pointing decisively?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat sits calmly on an overturned crate",
+   "question": "Is the small black cat sitting?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a striped shirt looks intently at the woman",
+   "question": "Is the boy in a striped shirt looking intently?"
+  },
+  {
+   "id": "man_blueprint",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the blueprint held by the man is rolled",
+   "question": "Is the blueprint held by the man rolled?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small black cat is on the overturned crate",
+   "question": "Is the small black cat on the overturned crate?"
+  },
+  {
+   "id": "crate_next_to_woman",
+   "type": "relation",
+   "of": [
+    "crate",
+    "woman"
+   ],
+   "desc": "the overturned crate is next to the woman in yellow overalls",
+   "question": "Is the overturned crate next to the woman in yellow overalls?"
+  },
+  {
+   "id": "boy_near_water",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a striped shirt is near the water's edge",
+   "question": "Is the boy in a striped shirt near the water's edge?"
+  },
+  {
+   "id": "boy_looks_at_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in a striped shirt looks at the woman in yellow overalls",
+   "question": "Does the boy in a striped shirt look at the woman in yellow overalls?"
+  },
+  {
+   "id": "man_hands_to_boy",
+   "type": "action",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the man wearing a red scarf hands the rolled blueprint to the boy in a striped shirt",
+   "question": "Is the man wearing a red scarf handing a rolled blueprint to the boy in a striped shirt?"
+  },
+  {
+   "id": "no_sky",
+   "type": "absent",
+   "desc": "visible sky",
+   "question": "Is there any visible sky in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf stands",
+   "question": "Is the man wearing a red scarf standing?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is watching the activity",
+   "question": "Is the small black cat watching the activity?"
+  },
+  {
+   "id": "wrench_rusted",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the wrench held by the man is rusted",
+   "question": "Is the wrench held by the man rusted?"
+  },
+  {
+   "id": "wrench_right_hand",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds the wrench in his right hand",
+   "question": "Is the man holding the wrench in his right hand?"
+  },
+  {
+   "id": "hook_above_planks",
+   "type": "state",
+   "of": "crane",
+   "desc": "the heavy hook of the crane is positioned above the wooden planks",
+   "question": "Is the heavy hook of the crane positioned above the wooden planks?"
+  },
+  {
+   "id": "hook_motionless",
+   "type": "state",
+   "of": "crane",
+   "desc": "the heavy hook of the crane is motionless",
+   "question": "Is the heavy hook of the crane motionless?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0072",
+ "prompt": "In this oil painting, a weathered shipyard dock stretches into the mist. On the left stands a man in a red scarf, holding a rusted wrench firmly in his right hand. In the center, a large blue crane looms over the scene, its heavy hook suspended motionless above the wooden planks. To the right, a woman in yellow overalls points decisively toward the distant horizon where ships are being built. Next to her sits a small black cat, resting calmly on an overturned crate while watching the activity with keen interest. Near the water's edge, a boy in a striped shirt looks intently at the woman in yellow overalls, seeking guidance on his task. The man in the red scarf hands a rolled blueprint to the boy in the striped shirt, completing the chain of communication across the busy yard. There is no sky visible in the frame, only the gray fog that blankets the upper portion of the composition. The textures of peeling paint and wet wood are rendered with thick, deliberate brushstrokes that emphasize the gritty reality of maritime labor. The five distinct figures and objects create a balanced triangular composition that draws the eye through the narrative of construction and mentorship.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

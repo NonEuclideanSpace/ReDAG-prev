@@ -1,0 +1,204 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with a polished floor",
+   "question": "Does the image show a room with a polished floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    100,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    380,
+    400,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic wearing blue overalls?",
+   "box": [
+    700,
+    150,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck?",
+   "box": [
+    650,
+    50,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "axe",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a shiny silver axe",
+   "question": "Is the firefighter holding a shiny silver axe?"
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a water hose",
+   "question": "Is the firefighter holding a water hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_looking_up",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is looking up",
+   "question": "Is the dalmatian looking up?"
+  },
+  {
+   "id": "mechanic_leaning",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is leaning",
+   "question": "Is the mechanic leaning?"
+  },
+  {
+   "id": "mechanic_wiping",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic wipes grease from hands",
+   "question": "Is the mechanic wiping grease from hands?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "mechanic"
+   ],
+   "desc": "the firefighter hands a water hose to the mechanic",
+   "question": "Is the firefighter handing a water hose to the mechanic?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian sits on the floor",
+   "question": "Is the dalmatian sitting on the floor?"
+  },
+  {
+   "id": "mechanic_against_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic leans against the red fire truck",
+   "question": "Is the mechanic leaning against the red fire truck?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  },
+  {
+   "id": "dalmatian_calm",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots sits calmly",
+   "question": "Is the dalmatian with black spots sitting?"
+  },
+  {
+   "id": "dalmatian_attentive",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots looks up attentively",
+   "question": "Is the dalmatian with black spots looking up attentively?"
+  },
+  {
+   "id": "firefighter_firm",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter in a yellow helmet holds the shiny silver axe firmly",
+   "question": "Is the firefighter in a yellow helmet holding the shiny silver axe firmly?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0017",
+ "prompt": "In an anime style illustration, a firefighter in a yellow helmet stands on the left, holding a shiny silver axe firmly. In the center, a dalmatian with black spots sits calmly on the polished floor, looking up attentively. On the right, a mechanic in blue overalls leans against a red fire truck, wiping grease from hands. The firefighter is handing a water hose to the mechanic. There is no smoke visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

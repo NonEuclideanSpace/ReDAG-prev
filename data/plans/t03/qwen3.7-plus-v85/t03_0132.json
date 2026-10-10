@@ -1,0 +1,194 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop under a night sky",
+   "question": "Does the image show a rooftop under a night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    380,
+    550,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    380,
+    250,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    400,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a glass",
+   "question": "Is the woman in a blue dress holding a glass?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green shirt is sitting",
+   "question": "Is the man in a green shirt sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green shirt is leaning back",
+   "question": "Is the man in a green shirt leaning back?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is watching the scene",
+   "question": "Is the black cat looking towards the people?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress is to the left of the man in a green shirt",
+   "question": "Is the woman in a blue dress to the left of the man in a green shirt?"
+  },
+  {
+   "id": "man_center",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green shirt is in the center relative to the woman and cat",
+   "question": "Is the man in a green shirt positioned between the woman and the cat?"
+  },
+  {
+   "id": "cat_right",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the black cat is to the right of the man in a green shirt",
+   "question": "Is the black cat to the right of the man in a green shirt?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in a green shirt is on the chair",
+   "question": "Is the man in a green shirt on the chair?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress is handing a drink to the man in a green shirt",
+   "question": "Is the woman in a blue dress handing a drink to the man in a green shirt?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0132",
+ "prompt": "In a flat vector illustration, a rooftop party unfolds under the night sky. On the left stands a woman in a blue dress holding a glass. In the center sits a man in a green shirt leaning back on a chair. To the right perches a black cat watching the scene. The woman is handing a drink to the man. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

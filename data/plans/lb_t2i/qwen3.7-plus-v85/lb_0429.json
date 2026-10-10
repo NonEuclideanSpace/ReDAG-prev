@@ -1,0 +1,654 @@
+{
+ "style": "surreal photorealistic, high detail, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior with a warped wooden counter, a cluttered stovetop, a sink, and walls",
+   "question": "Does the image show a kitchen interior with a warped wooden counter, a cluttered stovetop, a sink, and walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "potato",
+   "type": "entity",
+   "class": "potato",
+   "plural": "potatoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red potato",
+   "question": "Is there a red potato?",
+   "box": [
+    300,
+    650,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "kitchen counter",
+   "plural": "kitchen counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped wooden kitchen counter",
+   "question": "Is there a warped wooden kitchen counter?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "salt_shaker",
+   "type": "entity",
+   "class": "salt shaker",
+   "plural": "salt shakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a delicate glass salt shaker",
+   "question": "Is there a delicate glass salt shaker?",
+   "box": [
+    500,
+    700,
+    580,
+    780
+   ]
+  },
+  {
+   "id": "cookbook",
+   "type": "entity",
+   "class": "cookbook",
+   "plural": "cookbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open cookbook",
+   "question": "Is there a half-open cookbook?",
+   "box": [
+    400,
+    750,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "salt_pool",
+   "type": "entity",
+   "class": "salt pile",
+   "plural": "salt piles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow pool of white granules and liquid",
+   "question": "Is there a shallow pool of white granules and liquid?",
+   "box": [
+    350,
+    780,
+    600,
+    920
+   ]
+  },
+  {
+   "id": "copper_pot",
+   "type": "entity",
+   "class": "copper pot",
+   "plural": "copper pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging copper pot",
+   "question": "Is there a hanging copper pot?",
+   "box": [
+    700,
+    100,
+    850,
+    300
+   ]
+  },
+  {
+   "id": "basil_plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted basil plant",
+   "question": "Is there a small potted basil plant?",
+   "box": [
+    900,
+    500,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spoon",
+   "question": "Is there a spoon?",
+   "box": [
+    100,
+    650,
+    200,
+    750
+   ]
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a translucent metallic butterfly",
+   "question": "Is there a translucent metallic butterfly?",
+   "box": [
+    750,
+    350,
+    850,
+    450
+   ]
+  },
+  {
+   "id": "ceiling_fan",
+   "type": "entity",
+   "class": "ceiling fan",
+   "plural": "ceiling fans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceiling fan",
+   "question": "Is there a ceiling fan?",
+   "box": [
+    400,
+    0,
+    600,
+    100
+   ]
+  },
+  {
+   "id": "teakettle",
+   "type": "entity",
+   "class": "teakettle",
+   "plural": "teakettles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teakettle",
+   "question": "Is there a teakettle?",
+   "box": [
+    600,
+    550,
+    700,
+    650
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a high narrow window",
+   "question": "Is there a high narrow window?",
+   "box": [
+    100,
+    50,
+    300,
+    200
+   ]
+  },
+  {
+   "id": "shadow_pot",
+   "type": "attribute",
+   "of": "copper_pot",
+   "desc": "a rippling copper-toned shadow cast by the copper pot",
+   "question": "Is there a rippling copper-toned shadow cast by the copper pot?"
+  },
+  {
+   "id": "reflection_kitchen",
+   "type": "attribute",
+   "of": "salt_pool",
+   "desc": "a reflection of a different kitchen in the salt pool",
+   "question": "Is there a reflection of a different kitchen in the salt pool?"
+  },
+  {
+   "id": "gold_drop",
+   "type": "attribute",
+   "of": "salt_pool",
+   "desc": "a drop of liquid gold in the salt pool",
+   "question": "Is there a drop of liquid gold in the salt pool?"
+  },
+  {
+   "id": "potato_still",
+   "type": "state",
+   "of": "potato",
+   "desc": "the red potato is still",
+   "question": "Is the red potato still?"
+  },
+  {
+   "id": "shaker_toppled",
+   "type": "state",
+   "of": "salt_shaker",
+   "desc": "the salt shaker is toppled on its side",
+   "question": "Is the salt shaker toppled on its side?"
+  },
+  {
+   "id": "book_pages_fluttering",
+   "type": "state",
+   "of": "cookbook",
+   "desc": "the pages of the cookbook are fluttering slightly",
+   "question": "Are the pages of the cookbook fluttering slightly?"
+  },
+  {
+   "id": "pot_shivering",
+   "type": "state",
+   "of": "copper_pot",
+   "desc": "the copper pot is shivering slightly",
+   "question": "Is the copper pot shivering slightly?"
+  },
+  {
+   "id": "leaves_quivering",
+   "type": "state",
+   "of": "basil_plant",
+   "desc": "the leaves of the basil plant are quivering",
+   "question": "Are the leaves of the basil plant quivering?"
+  },
+  {
+   "id": "spoon_wobbling",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the spoon is wobbling",
+   "question": "Is the spoon wobbling?"
+  },
+  {
+   "id": "fan_rotating",
+   "type": "state",
+   "of": "ceiling_fan",
+   "desc": "the ceiling fan is rotating lazily",
+   "question": "Is the ceiling fan rotating lazily?"
+  },
+  {
+   "id": "potato_on_counter",
+   "type": "relation",
+   "of": [
+    "potato",
+    "counter"
+   ],
+   "desc": "the red potato is on the warped wooden kitchen counter",
+   "question": "Is the red potato on the warped wooden kitchen counter?"
+  },
+  {
+   "id": "shaker_on_book",
+   "type": "relation",
+   "of": [
+    "salt_shaker",
+    "cookbook"
+   ],
+   "desc": "the salt shaker is on the edge of the cookbook",
+   "question": "Is the salt shaker on the edge of the cookbook?"
+  },
+  {
+   "id": "book_on_counter",
+   "type": "relation",
+   "of": [
+    "cookbook",
+    "counter"
+   ],
+   "desc": "the cookbook is on the edge of the counter",
+   "question": "Is the cookbook on the edge of the counter?"
+  },
+  {
+   "id": "salt_on_book",
+   "type": "relation",
+   "of": [
+    "salt_pool",
+    "cookbook"
+   ],
+   "desc": "the salt pool is cascading across the cookbook",
+   "question": "Is the salt pool cascading across the cookbook?"
+  },
+  {
+   "id": "pot_hanging",
+   "type": "state",
+   "of": "copper_pot",
+   "desc": "the copper pot is hanging in the kitchen",
+   "question": "Is the copper pot hanging in the kitchen?"
+  },
+  {
+   "id": "plant_in_corner",
+   "type": "state",
+   "of": "basil_plant",
+   "desc": "the basil plant is sitting in the corner of the kitchen",
+   "question": "Is the basil plant sitting in the corner of the kitchen?"
+  },
+  {
+   "id": "spoon_in_sink",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the spoon is in the sink",
+   "question": "Is the spoon in the sink?"
+  },
+  {
+   "id": "butterfly_near_pot",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "copper_pot"
+   ],
+   "desc": "the butterfly is near the shadow of the copper pot",
+   "question": "Is the butterfly near the shadow of the copper pot?"
+  },
+  {
+   "id": "kettle_on_stove",
+   "type": "state",
+   "of": "teakettle",
+   "desc": "the teakettle is on the stove",
+   "question": "Is the teakettle on the stove?"
+  },
+  {
+   "id": "window_above_sink",
+   "type": "state",
+   "of": "window",
+   "desc": "the window is above the sink",
+   "question": "Is the window above the sink?"
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly",
+   "question": "Is there a fly?",
+   "box": [
+    400,
+    700,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "potato_between",
+   "type": "relation",
+   "of": [
+    "potato",
+    "counter",
+    "cookbook"
+   ],
+   "desc": "the red potato is wedged between the counter and the cookbook",
+   "question": "Is the red potato wedged between the warped wooden kitchen counter and the half-open cookbook?"
+  },
+  {
+   "id": "salt_around_potato",
+   "type": "relation",
+   "of": [
+    "salt_pool",
+    "potato"
+   ],
+   "desc": "the salt pool forms a shallow pool around the red potato",
+   "question": "Does the shallow pool of white granules and liquid surround the red potato?"
+  },
+  {
+   "id": "fly_on_ripple",
+   "type": "relation",
+   "of": [
+    "fly",
+    "salt_pool"
+   ],
+   "desc": "the fly lands on the edge of the ripple in the salt pool",
+   "question": "Is the fly landing on the edge of the ripple in the shallow pool?"
+  },
+  {
+   "id": "fly_dissolving",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is dissolving into the air",
+   "question": "Is the fly dissolving into the air?"
+  },
+  {
+   "id": "potato_smooth",
+   "type": "attribute",
+   "of": "potato",
+   "desc": "the red potato is smooth",
+   "question": "Is the red potato smooth?"
+  },
+  {
+   "id": "counter_imperfections",
+   "type": "attribute",
+   "of": "counter",
+   "desc": "the warped wooden kitchen counter has tiny imperfections in the grain",
+   "question": "Does the warped wooden kitchen counter have tiny imperfections in the grain?"
+  },
+  {
+   "id": "shaker_brass_lid",
+   "type": "attribute",
+   "of": "salt_shaker",
+   "desc": "the salt shaker has a brass lid",
+   "question": "Does the salt shaker have a brass lid?"
+  },
+  {
+   "id": "book_sicilian_page",
+   "type": "attribute",
+   "of": "cookbook",
+   "desc": "the cookbook is splayed open to a page about Sicilian eggplant dishes",
+   "question": "Is the cookbook splayed open to a page about Sicilian eggplant dishes?"
+  },
+  {
+   "id": "salt_glittering",
+   "type": "attribute",
+   "of": "salt_pool",
+   "desc": "the salt in the pool is fine",
+   "question": "Is the salt in the pool fine?"
+  },
+  {
+   "id": "butterfly_wings",
+   "type": "attribute",
+   "of": "butterfly",
+   "desc": "the butterfly has translucent metallic wings",
+   "question": "Does the butterfly have translucent metallic wings?"
+  },
+  {
+   "id": "fan_reverse",
+   "type": "state",
+   "of": "ceiling_fan",
+   "desc": "the ceiling fan rotates in the opposite direction of its design",
+   "question": "Is the ceiling fan rotating in the opposite direction of its design?"
+  },
+  {
+   "id": "potato_iridescent",
+   "type": "state",
+   "of": "potato",
+   "desc": "the red potato's skin has taken on a faint iridescence",
+   "question": "Has the red potato's skin taken on a faint iridescence?"
+  },
+  {
+   "id": "ripple_pulsing",
+   "type": "state",
+   "of": "salt_pool",
+   "desc": "a tiny ripple in the salt pool pulses outward slowly",
+   "question": "Is a tiny ripple in the salt pool pulsing outward slowly?"
+  },
+  {
+   "id": "water_swirling",
+   "type": "state",
+   "of": "salt_pool",
+   "desc": "the water in the salt pool swirls",
+   "question": "Is the water in the salt pool swirling?"
+  },
+  {
+   "id": "potato_hits_shaker",
+   "type": "action",
+   "of": [
+    "potato",
+    "salt_shaker"
+   ],
+   "desc": "the red potato smashes into the salt shaker",
+   "question": "Does the red potato smash into the salt shaker?"
+  },
+  {
+   "id": "shaker_knocked",
+   "type": "action",
+   "of": [
+    "potato",
+    "salt_shaker"
+   ],
+   "desc": "the red potato knocks the salt shaker sideways",
+   "question": "Does the red potato knock the salt shaker sideways?"
+  },
+  {
+   "id": "sunlight_beam",
+   "type": "relation",
+   "of": [
+    "window",
+    "copper_pot"
+   ],
+   "desc": "a beam of sunlight from the window catches on the copper pot",
+   "question": "Does a beam of sunlight from the window catch on the copper pot?"
+  },
+  {
+   "id": "shadow_on_plant",
+   "type": "relation",
+   "of": [
+    "copper_pot",
+    "basil_plant"
+   ],
+   "desc": "the shadow of the copper pot dances over the basil plant",
+   "question": "Does the shadow of the copper pot dance over the basil plant?"
+  },
+  {
+   "id": "shadow_on_spoon",
+   "type": "relation",
+   "of": [
+    "copper_pot",
+    "spoon"
+   ],
+   "desc": "the shadow of the copper pot moves over the spoon",
+   "question": "Does the shadow of the copper pot move over the spoon?"
+  },
+  {
+   "id": "butterfly_from_shadow",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "copper_pot"
+   ],
+   "desc": "the butterfly flutters from the shadow of the copper pot",
+   "question": "Does the butterfly flutter from the shadow of the copper pot?"
+  },
+  {
+   "id": "butterfly_brushes_fan",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "ceiling_fan"
+   ],
+   "desc": "the butterfly brushes against the ceiling fan",
+   "question": "Does the butterfly brush against the ceiling fan?"
+  },
+  {
+   "id": "shaker_on_stove",
+   "type": "state",
+   "of": "salt_shaker",
+   "desc": "the salt shaker is perched on the edge of the stovetop",
+   "question": "Is the salt shaker perched on the edge of the stovetop?"
+  },
+  {
+   "id": "salt_on_book_edge",
+   "type": "relation",
+   "of": [
+    "salt_pool",
+    "cookbook"
+   ],
+   "desc": "white granules are on the edge of the cookbook",
+   "question": "Are white granules on the edge of the cookbook?"
+  },
+  {
+   "id": "salt_ripple",
+   "type": "state",
+   "of": "salt_pool",
+   "desc": "there is a ripple in the salt pool",
+   "question": "Is there a ripple in the salt pool?"
+  },
+  {
+   "id": "pot_chain",
+   "type": "attribute",
+   "of": "copper_pot",
+   "desc": "the copper pot is suspended by a twisted chain",
+   "question": "Is the copper pot suspended by a twisted chain?"
+  },
+  {
+   "id": "potato_plump",
+   "type": "attribute",
+   "of": "potato",
+   "desc": "the red potato is plump",
+   "question": "Is the red potato plump?"
+  },
+  {
+   "id": "salt_shiny",
+   "type": "attribute",
+   "of": "salt_pool",
+   "desc": "the salt in the pool is glittering",
+   "question": "Is the salt in the pool glittering?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "cookbook",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "potato",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "salt_pool",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0429",
+ "prompt": "A red potato, smooth and almost too plump for its own good, tumbles down the length of a warped wooden kitchen counter, its rounded sides catching on tiny imperfections in the grain, each bump sending it lurching forward in a clumsy, comedic roll. As it gains momentum, it smashes into a salt shaker perched precariously on the edge of a cluttered stovetop, knocking it sideways with a sharp *clink* that echoes through the otherwise silent kitchen. The salt shaker, a delicate glass vessel with a brass lid, topples and lands in a heap of white granules on the edge of a half-open cookbook splayed open to a page about Sicilian eggplant dishes, its pages fluttering slightly as if caught in a phantom breeze. The salt, fine and glittering, cascades across the paper, some sticking to the words like a cryptic garnish and others forming a miniature saltwater trench between the book and the edge of the counter. Meanwhile, a beam of sunlight pierces the kitchen from a high, narrow window above the sink, slanting across the room like a spotlight and catching on the glinting curve of a hanging copper pot suspended by a twisted chain. The pot shivers slightly, as if the sun has jolted it awake, and begins to cast a rippling, copper-toned shadow that dances over a small potted basil plant sitting in the corner, its leaves quivering as though in a silent, solar-induced pantomime. A spoon, left in the sink from a forgotten dish, wobbles as the shadow moves over it, briefly morphing into the shape of a face with a twisted grin. Somewhere, a clock chimes—off-kilter and slow—as if time itself has been delayed by the surrealism of the scene. A butterfly, translucent and strangely metallic, flutters from the shadow of the copper pot, its wings catching the light in prismatic bursts that scatter across the walls like stardust. The butterfly drifts upward, brushing against a ceiling fan that begins to rotate lazily in the opposite direction of its design, stirring the warm air into something like a current of memory. A teakettle nearby, long forgotten on the stove, starts to whistle faintly, not with steam but with the echo of a lullaby sung decades ago by a grandmother now only remembered in faded recipes. The potato, now wedged between the counter and the book, has grown oddly still, its skin taking on a faint iridescence as if it, too, has absorbed some of the surreal energy of the kitchen. The salt, still spilling from the overturned shaker, forms a shallow pool around the potato, and in the center of it, a tiny ripple begins—too slow to be real—to pulse outward, as if the ground beneath the potato is no longer counter, but a shallow ocean. A fly, drawn by the scent of the spilling salt and the strange resonance of the space, lands on the edge of the ripple, its wings beating faster and faster until it seems to dissolve into the air, leaving behind a single drop of liquid gold that lands with a *plop* into the pool, causing the water to swirl and reflect a scene of a completely different kitchen far away, one where another potato is about to tumble again. In this impossible yet coherent world, the kitchen breathes in silence, each object tethered to the next in a web of surreal causality, where the rolling of a potato sets off a chain of events that loops back upon itself, forever beginning, forever unfolding.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 18,
+  "coverage_dropped": 3,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 64,
+   "n_uncovered": 7,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

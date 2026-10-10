@@ -1,0 +1,286 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image depict a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long wooden table",
+   "question": "Is there a long wooden table?",
+   "box": [
+    50,
+    600,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    320,
+    500,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with glasses",
+   "question": "Is there a woman with glasses?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a blue shirt",
+   "question": "Is there a boy in a blue shirt?",
+   "box": [
+    620,
+    280,
+    820,
+    820
+   ]
+  },
+  {
+   "id": "book_open",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    550,
+    500,
+    680,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    850,
+    400,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "stack_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of green books",
+   "question": "Is there a stack of green books?",
+   "box": [
+    860,
+    600,
+    970,
+    750
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is resting its head on the floor",
+   "question": "Is the brown dog resting its head on the floor?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "book_open"
+   ],
+   "desc": "the woman with glasses points at the open book",
+   "question": "Is the woman with glasses pointing at the open book?"
+  },
+  {
+   "id": "boy_holding_book",
+   "type": "action",
+   "of": [
+    "boy",
+    "book_open"
+   ],
+   "desc": "the boy in a blue shirt holds the open book with both hands",
+   "question": "Is the boy in a blue shirt holding the open book with both hands?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a blue shirt looks at the pages intently",
+   "question": "Is the boy in a blue shirt looking at the pages intently?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with white paws is sleeping",
+   "question": "Is the cat with white paws sleeping?"
+  },
+  {
+   "id": "man_next_to_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the brown dog is next to the man in a red scarf",
+   "question": "Is the brown dog next to the man in a red scarf?"
+  },
+  {
+   "id": "boy_beside_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in a blue shirt stands beside the woman with glasses",
+   "question": "Is the boy in a blue shirt standing beside the woman with glasses?"
+  },
+  {
+   "id": "cat_on_stack",
+   "type": "relation",
+   "of": [
+    "cat",
+    "stack_books"
+   ],
+   "desc": "the cat with white paws is on the stack of green books",
+   "question": "Is the cat with white paws on the stack of green books?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a blue shirt is standing",
+   "question": "Is the boy in a blue shirt standing?"
+  },
+  {
+   "id": "cat_white_paws",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has white paws",
+   "question": "Does the cat have white paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stack_books",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0016",
+ "prompt": "In a flat vector illustration of a library reading room, a man in a red scarf sits on the left side of a long wooden table. Next to him on the right is a brown dog resting its head on the floor. In the center, a woman with glasses points at an open book held by a boy in a blue shirt who stands beside her. The boy looks at the pages intently while holding the book open with both hands. On the far right, a cat with white paws sleeps on a stack of green books. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "dog_on_floor",
+     "dog_resting"
+    ]
+   ]
+  }
+ }
+}

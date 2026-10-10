@@ -1,0 +1,247 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image depict a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall streetlamp",
+   "question": "Is there a tall streetlamp?",
+   "box": [
+    680,
+    100,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green coat",
+   "question": "Is there a woman in a green coat?",
+   "box": [
+    400,
+    350,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    620,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a purple hat",
+   "question": "Is there a child in a purple hat?",
+   "box": [
+    820,
+    400,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "man_mug",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a blue mug",
+   "question": "Is the man in a red scarf holding a blue mug?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a green coat is sitting",
+   "question": "Is the woman in a green coat sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf is looking at the woman in a green coat",
+   "question": "Is the man in a red scarf looking at the woman in a green coat?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in a green coat is on the wooden bench",
+   "question": "Is the woman in a green coat on the wooden bench?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the small brown dog is next to the woman in a green coat",
+   "question": "Is the small brown dog next to the woman in a green coat?"
+  },
+  {
+   "id": "lamp_behind_bench",
+   "type": "relation",
+   "of": [
+    "streetlamp",
+    "bench"
+   ],
+   "desc": "the tall streetlamp stands behind the wooden bench",
+   "question": "Is the tall streetlamp standing behind the wooden bench?"
+  },
+  {
+   "id": "child_next_to_lamp",
+   "type": "relation",
+   "of": [
+    "child",
+    "streetlamp"
+   ],
+   "desc": "the child in a purple hat is next to the tall streetlamp",
+   "question": "Is the child in a purple hat next to the tall streetlamp?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a purple hat is pointing at the small brown dog",
+   "question": "Is the child in a purple hat pointing at the small brown dog?"
+  },
+  {
+   "id": "no_snow_falling",
+   "type": "absent",
+   "desc": "snow falling from the sky",
+   "question": "Is there snow falling from the sky?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf stands",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "streetlamp_orb",
+   "type": "attribute",
+   "of": "streetlamp",
+   "desc": "the tall streetlamp has a glowing orb",
+   "question": "Does the tall streetlamp have a glowing orb?"
+  },
+  {
+   "id": "dog_vest",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small brown dog wears a yellow vest",
+   "question": "Is the small brown dog wearing a yellow vest?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0003",
+ "prompt": "This flat vector illustration depicts a snowy town square. On the left stands a man in a red scarf holding a blue mug. In the center sits a woman in a green coat on a wooden bench. To her right is a small brown dog wearing a yellow vest. Behind the bench stands a tall streetlamp with a glowing orb. Next to the lamp is a child in a purple hat. The man in the red scarf is looking at the woman in the green coat. The child in the purple hat is pointing at the small brown dog. The woman in the green coat is sitting on the wooden bench. The small brown dog is next to the woman in a green coat. There is no snow falling from the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

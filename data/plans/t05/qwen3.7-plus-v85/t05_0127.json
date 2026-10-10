@@ -1,0 +1,304 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage with a brick wall",
+   "question": "Does the image depict a quiet theatre backstage with a brick wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a velvet dress",
+   "question": "Is there a woman in a velvet dress?",
+   "box": [
+    80,
+    300,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    320,
+    250,
+    520,
+    850
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall ladder",
+   "question": "Is there a tall ladder?",
+   "box": [
+    450,
+    100,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    620,
+    700,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large spotlight",
+   "question": "Is there a large spotlight?",
+   "box": [
+    760,
+    750,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress is sitting",
+   "question": "Is the woman in the velvet dress sitting?"
+  },
+  {
+   "id": "woman_slumped",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress has a slumped posture",
+   "question": "Does the woman in the velvet dress have a slumped posture?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "man_gaze",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf has his gaze fixed on the pages of the script",
+   "question": "Is the man in the red scarf looking at the pages of the script he holds?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is crouching low",
+   "question": "Is the black cat crouching low?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat has wide eyes",
+   "question": "Does the black cat have wide eyes?"
+  },
+  {
+   "id": "man_script",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a script",
+   "question": "Is the man in the red scarf holding a script?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the woman in the velvet dress sits on the wooden crate",
+   "question": "Is the woman in the velvet dress sitting on the wooden crate?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is next to the woman in the velvet dress",
+   "question": "Is the man in the red scarf next to the woman in the velvet dress?"
+  },
+  {
+   "id": "ladder_against_wall",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the tall ladder leans against the brick wall",
+   "question": "Does the tall ladder lean against the brick wall?"
+  },
+  {
+   "id": "cat_right_of_ladder",
+   "type": "relation",
+   "of": [
+    "cat",
+    "ladder"
+   ],
+   "desc": "the black cat is to the right of the tall ladder",
+   "question": "Is the black cat to the right of the tall ladder?"
+  },
+  {
+   "id": "spotlight_beside_cat",
+   "type": "relation",
+   "of": [
+    "spotlight",
+    "cat"
+   ],
+   "desc": "the large spotlight is beside the black cat",
+   "question": "Is the large spotlight beside the black cat?"
+  },
+  {
+   "id": "spotlight_on_floor",
+   "type": "state",
+   "of": "spotlight",
+   "desc": "the large spotlight rests on the floor",
+   "question": "Does the large spotlight rest on the floor?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf hands a page to the woman in the velvet dress",
+   "question": "Is the man in the red scarf handing a page to the woman in the velvet dress?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the velvet dress reaches out to take the page from the man in the red scarf",
+   "question": "Is the woman in the velvet dress reaching out to take the page from the man in the red scarf?"
+  },
+  {
+   "id": "cat_looking_spotlight",
+   "type": "action",
+   "of": [
+    "cat",
+    "spotlight"
+   ],
+   "desc": "the black cat is looking at the large spotlight",
+   "question": "Is the black cat looking at the large spotlight?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the image?"
+  },
+  {
+   "id": "ladder_worn",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the tall ladder has worn rungs",
+   "question": "Does the tall ladder have worn rungs?"
+  },
+  {
+   "id": "spotlight_dusty",
+   "type": "attribute",
+   "of": "spotlight",
+   "desc": "the large spotlight has a dusty lens",
+   "question": "Does the large spotlight have a dusty lens?"
+  },
+  {
+   "id": "cat_alert",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat looks alert",
+   "question": "Does the black cat look alert?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0127",
+ "prompt": "A pencil sketch with light color wash depicts a quiet theatre backstage. On the left, a woman in a velvet dress sits on a wooden crate, her posture slumped in exhaustion. Next to her, a man in a red scarf stands holding a script, his gaze fixed on the pages. In the center, a tall ladder leans against the brick wall, its rungs worn from use. To the right of the ladder, a black cat crouches low, its eyes wide and alert. Beside the cat, a large spotlight rests on the floor, its lens dusty. The man in the red scarf is handing a page to the woman in the velvet dress, who reaches out to take it. The black cat is looking at the large spotlight, seemingly curious about the object. There is no audience visible in this intimate behind-the-scenes moment. The scene captures the stillness before the performance begins, with the distinct elements arranged clearly within the space. The light wash adds subtle warmth to the otherwise monochrome lines, highlighting the textures of the velvet and the rough brick.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

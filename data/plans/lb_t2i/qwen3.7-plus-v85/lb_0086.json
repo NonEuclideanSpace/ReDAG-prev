@@ -1,0 +1,446 @@
+{
+ "style": "surreal cinematic photography, twilight lighting, high contrast shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet cul-de-sac with cobblestones and grass under a twilight sky shifting from blue to orange-tinged purple",
+   "question": "Does the image show a quiet cul-de-sac with cobblestones and grass under a twilight sky shifting from blue to orange-tinged purple?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden park bench",
+   "question": "Is there a wooden park bench?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered open backpack",
+   "question": "Is there a weathered open backpack?",
+   "box": [
+    250,
+    520,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "half of a red apple",
+   "question": "Is there half of a red apple?",
+   "box": [
+    300,
+    650,
+    380,
+    730
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled map",
+   "question": "Is there a crumpled map?",
+   "box": [
+    350,
+    680,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-full water bottle",
+   "question": "Is there a half-full water bottle?",
+   "box": [
+    580,
+    600,
+    660,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lean tabby cat",
+   "question": "Is there a lean tabby cat?",
+   "box": [
+    150,
+    700,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cyclist",
+   "type": "entity",
+   "class": "cyclist",
+   "plural": "cyclists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cyclist wearing a helmet",
+   "question": "Is there a cyclist wearing a helmet?",
+   "box": [
+    800,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "pigeons",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several pigeons",
+   "question": "Are there several pigeons?",
+   "box": [
+    50,
+    800,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "leaf",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leaf",
+   "question": "Is there a leaf?",
+   "box": [
+    596,
+    576,
+    644,
+    624
+   ]
+  },
+  {
+   "id": "backpack_on_bench",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "bench"
+   ],
+   "desc": "the backpack rests on the bench",
+   "question": "Is the backpack resting on the bench?"
+  },
+  {
+   "id": "apple_beside_map",
+   "type": "relation",
+   "of": [
+    "apple",
+    "map"
+   ],
+   "desc": "the apple rests beside the map",
+   "question": "Is the apple resting beside the map?"
+  },
+  {
+   "id": "map_on_bench",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the map rests on the bench",
+   "question": "Is the map resting on the bench?"
+  },
+  {
+   "id": "bottle_on_bench",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "bench"
+   ],
+   "desc": "the water bottle balances on the edge of the bench",
+   "question": "Is the water bottle balancing on the edge of the bench?"
+  },
+  {
+   "id": "cat_near_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the cat is near the bench",
+   "question": "Is the cat near the bench?"
+  },
+  {
+   "id": "cyclist_passing",
+   "type": "action",
+   "of": [
+    "cyclist",
+    "bench"
+   ],
+   "desc": "the cyclist glides past the bench",
+   "question": "Is the cyclist gliding past the bench?"
+  },
+  {
+   "id": "pigeons_erupting",
+   "type": "state",
+   "of": "pigeons",
+   "desc": "the pigeons are erupting from the grass",
+   "question": "Are the pigeons erupting from the grass?"
+  },
+  {
+   "id": "cat_frozen",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is frozen mid-step",
+   "question": "Is the cat frozen mid-step?"
+  },
+  {
+   "id": "map_fluttering",
+   "type": "state",
+   "of": "map",
+   "desc": "the map is fluttering",
+   "question": "Is the map fluttering?"
+  },
+  {
+   "id": "bottle_tilting",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the water bottle is tilting slightly",
+   "question": "Is the water bottle tilting slightly?"
+  },
+  {
+   "id": "shadows_entwined",
+   "type": "relation",
+   "of": [
+    "bench",
+    "backpack",
+    "pigeons",
+    "cat"
+   ],
+   "desc": "shadows from the bench, backpack, pigeons, and cat entwine on the ground beneath the bench",
+   "question": "Do shadows from the bench, backpack, pigeons, and cat entwine on the ground beneath the bench?"
+  },
+  {
+   "id": "reflection_in_bottle",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the water bottle reflects the cyclist's helmet in a distorted way",
+   "question": "Does the water bottle reflect the cyclist's helmet in a distorted way?"
+  },
+  {
+   "id": "leaf_on_cap",
+   "type": "relation",
+   "of": [
+    "leaf",
+    "bottle"
+   ],
+   "desc": "the leaf is caught on the water bottle's cap",
+   "question": "Is the leaf caught on the water bottle's cap?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "cyclist_helmet",
+   "type": "attribute",
+   "of": "cyclist",
+   "desc": "the cyclist wears a helmet",
+   "question": "Is the cyclist wearing a helmet?"
+  },
+  {
+   "id": "pigeons_pecking",
+   "type": "action",
+   "of": [
+    "pigeons",
+    "map"
+   ],
+   "desc": "the pigeons peck at the map's edges",
+   "question": "Are the pigeons pecking at the edges of the crumpled map?"
+  },
+  {
+   "id": "bench_sits",
+   "type": "state",
+   "of": "bench",
+   "desc": "the wooden park bench sits alone",
+   "question": "Is the wooden park bench sitting?"
+  },
+  {
+   "id": "backpack_spills",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the weathered open backpack spills its contents",
+   "question": "Is the weathered open backpack spilling its contents?"
+  },
+  {
+   "id": "cyclist_helmet_reflection",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the water bottle reflects the cyclist's helmet",
+   "question": "Does the water bottle reflect the cyclist's helmet?"
+  },
+  {
+   "id": "apple_shadow_distorted",
+   "type": "state",
+   "of": "apple",
+   "desc": "the apple casts a distorted shadow",
+   "question": "Does the half red apple cast a distorted shadow?"
+  },
+  {
+   "id": "map_fused",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the map is fused to the bench by dried apple juice",
+   "question": "Is the map fused to the bench?"
+  },
+  {
+   "id": "leaf_spiraling",
+   "type": "state",
+   "of": "leaf",
+   "desc": "the leaf is spiraling downward",
+   "question": "Is the leaf spiraling downward?"
+  },
+  {
+   "id": "map_folded",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map has folded lines",
+   "question": "Does the map have folded lines?"
+  },
+  {
+   "id": "map_corners_curled",
+   "type": "state",
+   "of": "map",
+   "desc": "the map's corners are curled",
+   "question": "Are the map's corners curled?"
+  },
+  {
+   "id": "pigeons_landing",
+   "type": "state",
+   "of": "pigeons",
+   "desc": "the pigeons are landing",
+   "question": "Are the pigeons landing?"
+  },
+  {
+   "id": "apple_core_exposed",
+   "type": "state",
+   "of": "apple",
+   "desc": "the core of the half red apple is exposed",
+   "question": "Is the core of the half red apple exposed?"
+  },
+  {
+   "id": "bottle_condensation",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the water bottle has condensation droplets",
+   "question": "Does the water bottle have condensation droplets?"
+  },
+  {
+   "id": "pigeons_color",
+   "type": "attribute",
+   "of": "pigeons",
+   "desc": "the pigeons are white and gray",
+   "question": "Are the pigeons white and gray?"
+  },
+  {
+   "id": "pigeons_wings_spread",
+   "type": "state",
+   "of": "pigeons",
+   "desc": "the pigeons have wings spread",
+   "question": "Do the pigeons have wings spread?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "backpack",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "map",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "bottle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0086",
+ "prompt": "Beneath a sky that shifts from the blue of late afternoon to the orange-tinged purple of twilight, the wooden park bench sits alone at the edge of a quiet cul-de-sac where the world seems to pause just long enough to catch its breath. The weathered backpack, open like a satchel of secrets, spills its contents with an air of abandonment—half of a red apple, its core exposed to the evening breeze, rests beside a crumpled map whose lines have been folded so many times they seem to ripple in the dimming light. A water bottle, half full and sweating droplets that glisten like tiny lanterns, balances precariously on the edge of the bench, its condensation trickling down in a slow, liquid spiral that threatens to pool on the map. The cat, a lean and spectral tabby with eyes that shimmer like wet stone, circles the bench, drawn by the apple’s aroma and the subtle, unseen tension in the air. Each time it pauses to sniff the fruit, the cyclist passes, her silhouette sharp and angular against the fading light, the tires hissing over cobblestones as she glides past. The pigeons, startled by the motion, erupt from the grass in a sudden flurry of white and gray feathers, their wings casting shadowy ripples across the ground. In this instant, the cat darts, the map flutters as if in protest, and the water bottle tilts slightly, catching a shaft of light that bends and distorts the apple’s shadow into something more abstract, almost dreamlike. On the ground beneath the bench, the shadows from the bench and backpack entwine with those of the pigeons and the cat, creating a labyrinth of dark, shifting forms that seem to move independently of their sources. The apple’s juice, long dried on the map, has fused the paper to the bench, making it appear as if the bench itself is a part of the world’s forgotten plans. The water bottle, in a moment of surreal balance, reflects the cyclist’s helmet in a warped, looping distortion that mirrors the curvature of the Earth, as if it were a tiny window into an impossible geography. The map’s crumpled corners curl like wings, and the cat freezes mid-step, as if it, too, senses the magic of this confluence—where past, present, and imagined future converge in a single, breathless instant. A leaf, carried on the breeze from a tree unseen, catches on the water bottle’s cap and spirals downward, its descent a slow-motion dance through a web of intersecting lines and shadows. The pigeons, now landing in disarray, begin to peck at the map’s edges, peeling back its layers as if unearthing the buried routes of a world that no longer exists. In this strange, layered moment, the world is both ordinary and enchanted, bound together by the quiet, almost ritualistic interactions of things both animate and inanimate, each element a thread in a tapestry that resists being unraveled.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 39,
+   "n_uncovered": 7,
+   "proposed": 6,
+   "ungrounded": 1,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

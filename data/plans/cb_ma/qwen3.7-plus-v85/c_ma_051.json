@@ -1,0 +1,180 @@
+{
+ "style": "photorealistic macro photography, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark wooden table surface",
+   "question": "Is there a dark wooden table surface?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "compass",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a magical compass",
+   "question": "Is there a magical compass?",
+   "box": [
+    312,
+    312,
+    712,
+    712
+   ]
+  },
+  {
+   "id": "compass_lid",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass is covered by a dusty glass lid",
+   "question": "Is the compass covered by a dusty glass lid?"
+  },
+  {
+   "id": "compass_points",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass has four cardinal points marked with lettering",
+   "question": "Does the compass have four cardinal points marked with lettering?"
+  },
+  {
+   "id": "compass_face",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the face of the compass is black",
+   "question": "Is the face of the compass black?"
+  },
+  {
+   "id": "runes_glowing",
+   "type": "state",
+   "of": "compass",
+   "desc": "some of the white runes on the compass face are glowing while others are not",
+   "question": "Are some of the white runes on the compass face glowing while others are not?"
+  },
+  {
+   "id": "compass_needle",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass has a single needle made of blued steel",
+   "question": "Does the compass have a single needle made of blued steel?"
+  },
+  {
+   "id": "compass_cord",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "a single frayed leather cord is tied to the compass",
+   "question": "Is a single frayed leather cord tied to the compass?"
+  },
+  {
+   "id": "compass_on_table",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass rests on the dark wooden table",
+   "question": "Is the compass resting on the dark wooden table?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic material on the compass",
+   "question": "Is any part of the compass made of plastic?"
+  },
+  {
+   "id": "no_pristine_ivory",
+   "type": "absent",
+   "desc": "white pristine ivory on the compass body",
+   "question": "Is the compass body made of white pristine ivory?"
+  },
+  {
+   "id": "no_brand_new",
+   "type": "absent",
+   "desc": "brand new appearance of the compass",
+   "question": "Does the compass look brand new?"
+  },
+  {
+   "id": "compass_body_material",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass body is carved from yellowed, cracked ivory",
+   "question": "Is the compass body carved from yellowed, cracked ivory?"
+  },
+  {
+   "id": "compass_old_looking",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass looks old",
+   "question": "Does the compass look old?"
+  },
+  {
+   "id": "compass_lid_shape",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the glass lid covering the compass is convex",
+   "question": "Is the glass lid covering the compass convex?"
+  },
+  {
+   "id": "compass_face_runes",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass face features several intricate white runes",
+   "question": "Does the compass face feature several intricate white runes?"
+  },
+  {
+   "id": "compass_needle_shape",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass needle is shaped like a spiral",
+   "question": "Is the compass needle shaped like a spiral?"
+  },
+  {
+   "id": "compass_needle_gem",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the compass needle has a small glowing red gemstone at its tip",
+   "question": "Does the compass needle have a small glowing red gemstone at its tip?"
+  },
+  {
+   "id": "compass_points_color",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the lettering on the compass cardinal points is tarnished gold",
+   "question": "Is the lettering on the compass cardinal points tarnished gold?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "compass",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_051",
+ "prompt": "A single, old-looking, magical compass resting on a dark wooden table. The body of the compass is carved from yellowed, cracked ivory. All of its four cardinal points are marked with tarnished gold lettering. It is covered by a dusty, convex glass lid. The compass has a single, spinning needle made of blued steel, which is shaped like a spiral and has a small, glowing red gemstone at its tip. The face of the compass is black and features several intricate, glowing white runes, some of which are clearly not glowing. A single, frayed leather cord is tied to it. Crucially, the compass is not brand new, it is not made of plastic, its needle is not pointing to a specific direction because it's spinning, and the ivory is not white and pristine.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

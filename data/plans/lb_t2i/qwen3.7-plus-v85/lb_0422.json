@@ -1,0 +1,578 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, impossible geometry, soft morning light, ethereal glow",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior with a sloping, curving ceiling",
+   "question": "Does the image show a kitchen interior with a sloping, curving ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a frosted kitchen window",
+   "question": "Is there a frosted kitchen window?",
+   "box": [
+    600,
+    50,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red spiral notebook splayed open with pages full of tangled equations and a torn page revealing a faded blueprint",
+   "question": "Is there a red spiral notebook splayed open?",
+   "box": [
+    300,
+    500,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty coffee mug",
+   "question": "Is there a half-empty coffee mug?",
+   "box": [
+    150,
+    550,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a laptop",
+   "question": "Is there a laptop?",
+   "box": [
+    350,
+    450,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "postit",
+   "type": "entity",
+   "class": "sticky note",
+   "plural": "sticky notes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow sticky note",
+   "question": "Is there a yellow sticky note?",
+   "box": [
+    620,
+    460,
+    680,
+    520
+   ]
+  },
+  {
+   "id": "receipt",
+   "type": "entity",
+   "class": "receipt",
+   "plural": "receipts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled receipt",
+   "question": "Is there a crumpled receipt?",
+   "box": [
+    600,
+    480,
+    700,
+    580
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pencil",
+   "question": "Is there a pencil?",
+   "box": [
+    580,
+    496,
+    720,
+    544
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "wall clock",
+   "plural": "wall clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging wall clock",
+   "question": "Is there a hanging wall clock?",
+   "box": [
+    450,
+    50,
+    550,
+    150
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "plant",
+   "plural": "plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted plant with leaves shaped like open eyes",
+   "question": "Is there a potted plant?",
+   "box": [
+    850,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single fly suspended in the air",
+   "question": "Is there a single fly suspended in the air?",
+   "box": [
+    400,
+    450,
+    450,
+    500
+   ]
+  },
+  {
+   "id": "notebook_state",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the red spiral notebook is splayed open",
+   "question": "Is the red spiral notebook splayed open?"
+  },
+  {
+   "id": "mug_state",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee mug is steaming gently",
+   "question": "Is the coffee mug steaming gently?"
+  },
+  {
+   "id": "laptop_state",
+   "type": "state",
+   "of": "laptop",
+   "desc": "the laptop screen is flickering",
+   "question": "Is the laptop screen flickering?"
+  },
+  {
+   "id": "clock_state",
+   "type": "state",
+   "of": "clock",
+   "desc": "the hanging clock is ticking in reverse",
+   "question": "Is the hanging clock depicted as ticking in reverse (e.g., blurred hands moving counter-clockwise or visual ripples indicating reverse time)?"
+  },
+  {
+   "id": "fly_state",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is hovering motionless in the air",
+   "question": "Is the fly hovering motionless in the air?"
+  },
+  {
+   "id": "plant_state",
+   "type": "state",
+   "of": "plant",
+   "desc": "the plant is shivering subtly",
+   "question": "Is the plant depicted as shivering subtly (e.g., motion blur on leaves)?"
+  },
+  {
+   "id": "window_ripple",
+   "type": "attribute",
+   "of": "window",
+   "desc": "the windowpane appears rippled and fluid due to heat distortion",
+   "question": "Does the windowpane appear rippled and fluid due to heat distortion?"
+  },
+  {
+   "id": "notebook_mug_relation",
+   "type": "relation",
+   "of": [
+    "mug",
+    "notebook"
+   ],
+   "desc": "the coffee mug is to the left of the red spiral notebook",
+   "question": "Is the coffee mug to the left of the red spiral notebook?"
+  },
+  {
+   "id": "laptop_mug_relation",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "mug"
+   ],
+   "desc": "the laptop is beside the coffee mug",
+   "question": "Is the laptop beside the coffee mug?"
+  },
+  {
+   "id": "postit_laptop_relation",
+   "type": "relation",
+   "of": [
+    "postit",
+    "laptop"
+   ],
+   "desc": "the yellow sticky note clings to the edge of the laptop",
+   "question": "Is the yellow sticky note clinging to the edge of the laptop?"
+  },
+  {
+   "id": "receipt_postit_relation",
+   "type": "relation",
+   "of": [
+    "receipt",
+    "postit"
+   ],
+   "desc": "the crumpled receipt partially obscures the yellow sticky note",
+   "question": "Is the crumpled receipt partially obscuring the yellow sticky note?"
+  },
+  {
+   "id": "pencil_receipt_relation",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "receipt"
+   ],
+   "desc": "the pencil lies across the receipt",
+   "question": "Is the pencil lying across the receipt?"
+  },
+  {
+   "id": "fly_notebook_relation",
+   "type": "relation",
+   "of": [
+    "fly",
+    "notebook"
+   ],
+   "desc": "the fly is near the red spiral notebook",
+   "question": "Is the fly near the red spiral notebook?"
+  },
+  {
+   "id": "plant_corner_relation",
+   "type": "state",
+   "of": "plant",
+   "desc": "the plant is in the corner of the room",
+   "question": "Is the plant in the corner of the room?"
+  },
+  {
+   "id": "notebook_torn",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the notebook has a page torn by a line of ink, revealing a faded image beneath",
+   "question": "Does the notebook have a page torn by a line of ink, revealing a faded image beneath?"
+  },
+  {
+   "id": "clock_ripple_effect",
+   "type": "action",
+   "of": [
+    "clock",
+    "mug"
+   ],
+   "desc": "the hanging clock sends ripples that shift the position of the coffee mug",
+   "question": "Does the hanging clock send ripples that shift the position of the coffee mug?"
+  },
+  {
+   "id": "clock_ripple_receipt",
+   "type": "action",
+   "of": [
+    "clock",
+    "receipt"
+   ],
+   "desc": "the hanging clock sends ripples that make the receipt twitch",
+   "question": "Does the hanging clock send ripples that make the receipt twitch?"
+  },
+  {
+   "id": "clock_ripple_shadow",
+   "type": "action",
+   "of": [
+    "clock",
+    "window"
+   ],
+   "desc": "the hanging clock sends ripples that move the window's shadow backward across the floor",
+   "question": "Does the hanging clock send ripples that move the window's shadow backward across the floor?"
+  },
+  {
+   "id": "plant_reflection",
+   "type": "relation",
+   "of": [
+    "plant",
+    "table"
+   ],
+   "desc": "the plant casts fractured reflections on the wooden table surface",
+   "question": "Does the plant cast fractured reflections on the wooden table surface?"
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "notebook_on_table",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "table"
+   ],
+   "desc": "the red spiral notebook is on the wooden table",
+   "question": "Is the red spiral notebook on the wooden table?"
+  },
+  {
+   "id": "mug_on_table",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "the coffee mug is on the wooden table",
+   "question": "Is the coffee mug on the wooden table?"
+  },
+  {
+   "id": "laptop_on_table",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "table"
+   ],
+   "desc": "the laptop is on the wooden table",
+   "question": "Is the laptop on the wooden table?"
+  },
+  {
+   "id": "clock_on_wall",
+   "type": "state",
+   "of": "clock",
+   "desc": "the hanging clock is on the wall",
+   "question": "Is the hanging clock on the wall?"
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the window's shadow on the floor",
+   "question": "Is there a shadow of the window on the floor?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pencil_trails",
+   "type": "attribute",
+   "of": "pencil",
+   "desc": "the pencil leaves trails on the paper that dissolve into the fibers",
+   "question": "Does the pencil leave trails on the paper that dissolve into the fibers?"
+  },
+  {
+   "id": "postit_text",
+   "type": "attribute",
+   "of": "postit",
+   "desc": "the markered words on the yellow sticky note read 'Remember the sequence, not the shape'",
+   "question": "Do the markered words on the yellow sticky note read text?"
+  },
+  {
+   "id": "table_glow",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the wooden table surface has faint glowing etchings",
+   "question": "Does the wooden table surface have faint glowing etchings?"
+  },
+  {
+   "id": "mug_steam_halo",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee mug emits steam creating a shimmering halo",
+   "question": "Does the coffee mug emit steam creating a shimmering halo?"
+  },
+  {
+   "id": "laptop_screen_text",
+   "type": "attribute",
+   "of": "laptop",
+   "desc": "the laptop screen displays shifting text in English, binary, and ancient symbols",
+   "question": "Does the laptop screen display shifting text in English, binary, and ancient symbols?"
+  },
+  {
+   "id": "postit_words",
+   "type": "attribute",
+   "of": "postit",
+   "desc": "the sticky note has smudged, overlapping markered words reading 'Remember the sequence, not the shape'",
+   "question": "Do the markered words on the yellow sticky note read 'Remember the sequence, not the shape' and appear smudged and overlapping?"
+  },
+  {
+   "id": "receipt_list",
+   "type": "attribute",
+   "of": "receipt",
+   "desc": "the receipt bears a cryptic list of numbers and symbols",
+   "question": "Does the receipt bear a cryptic list of numbers and symbols?"
+  },
+  {
+   "id": "receipt_rigid_corner",
+   "type": "state",
+   "of": "receipt",
+   "desc": "one corner of the receipt is rigid",
+   "question": "Is one corner of the receipt rigid?"
+  },
+  {
+   "id": "pencil_tip_color",
+   "type": "attribute",
+   "of": "pencil",
+   "desc": "the pencil tip shifts color from graphite to liquid silver to living light",
+   "question": "Does the pencil tip shift color from graphite to liquid silver to living light?"
+  },
+  {
+   "id": "notebook_equations",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the notebook pages are full of tangled equations",
+   "question": "Are the notebook pages full of tangled equations?"
+  },
+  {
+   "id": "notebook_torn_blueprint",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the notebook has a torn page revealing a faded blueprint",
+   "question": "Does the notebook have a torn page revealing a faded blueprint?"
+  },
+  {
+   "id": "plant_leaves",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "the plant has leaves shaped like open eyes",
+   "question": "Does the plant have leaves shaped like open eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "window",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plant",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "laptop",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0422",
+ "prompt": "The morning light slices through the frosted kitchen window, catching the edge of a red spiral notebook splayed open like an open wound of ideas, its once-pristine pages now bristling with tangled equations that seem to shift subtly under the gaze of the viewer, as if alive. A single line of ink, drawn too forcefully, has torn the page slightly, revealing a ghostly image beneath—perhaps a blueprint or an earlier draft, faded and blurred as though buried by time and obsession. To the left, a half-empty coffee mug steams gently, its warmth creating a shimmering halo that warps the air, bending the light in ways that make the nearby windowpane appear rippled and fluid, as though the outside world is melting slightly at the edges. The laptop beside it flickers, its screen dominated by a half-written script that flickers between languages, its text shifting between English, binary, and something older, something that seems to pulse with the same rhythm as the steam curling above the coffee. A yellow Post-it note, partially obscured by a crumpled receipt bearing a cryptic list of numbers and symbols, clings precariously to the laptop’s edge, its markered words smudged and overlapping—*Remember the sequence, not the shape*—but the meaning has already been altered by the hand that wrote it, the letters bending unnaturally as if the very act of writing them caused a distortion in the space around them. The receipt, though crumpled, remains stubbornly rigid in one corner, as if resisting the pull of gravity or some unseen force. A pencil lies across the receipt, but it is no ordinary pencil—its tip is a shifting color, morphing from graphite to liquid silver to something like living light, leaving trails on the paper that dissolve into the fibers as quickly as they form. In the background, a hanging clock ticks in reverse, each second sending a ripple through the air that momentarily alters the positions of objects: the coffee mug shifts slightly to the left, the receipt twitches as if breathing, and the window’s shadow creeps backward across the floor like an advancing tide. A plant in the corner, with leaves shaped like open eyes, shivers subtly in response, each tremor casting fractured reflections on the wooden table’s surface. The wood itself is marred by faint etchings that seem to glow faintly in the dimming light, patterns that mirror the equations in the notebook but in a reversed orientation, as if the table is both a canvas and a cipher, responding to the mind’s output with its own hidden script. Above the table, the ceiling seems to slope at an impossible angle, curving inward as if the room is being gently folded into a sphere, and yet the light still reaches every corner, as though the room itself has learned to breathe with the moment. A single fly hovers near the notebook, not flying but suspended in the air as if caught in a magnetic field, its wings beating silently in a slow-motion dance with the equations below. Every object is both itself and something more—tethered to a narrative thread that pulls them into a fragile but mesmerizing coherence, a place where time and form are mutable, and yet the rules of this impossible world remain absolute and beautiful.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node notebook: entity question is long (22 words); should only ask presence + identifying look",
+   "node receipt: entity question is long (17 words); should only ask presence + identifying look",
+   "node pencil: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 44,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,322 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image show a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a center table",
+   "question": "Is there a table?",
+   "box": [
+    300,
+    500,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "cage",
+   "type": "entity",
+   "class": "wire cage",
+   "plural": "wire cages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wire cage",
+   "question": "Is there a small wire cage?",
+   "box": [
+    650,
+    800,
+    850,
+    980
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a blue dress",
+   "question": "Is there a girl in a blue dress?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green shirt",
+   "question": "Is there a boy in a green shirt?",
+   "box": [
+    400,
+    220,
+    600,
+    820
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "adult",
+   "plural": "adults",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a gray suit",
+   "question": "Is there an adult in a gray suit?",
+   "box": [
+    750,
+    180,
+    950,
+    780
+   ]
+  },
+  {
+   "id": "volcano",
+   "type": "entity",
+   "class": "model",
+   "plural": "models",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass volcano model",
+   "question": "Is there a glass volcano model?",
+   "box": [
+    450,
+    400,
+    574,
+    600
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    680,
+    850,
+    820,
+    950
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in the blue dress holds a clipboard",
+   "question": "Is the girl in the blue dress holding a clipboard?"
+  },
+  {
+   "id": "pen",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in the blue dress holds a pen",
+   "question": "Is the girl in the blue dress holding a pen?"
+  },
+  {
+   "id": "volcano_erupting",
+   "type": "state",
+   "of": "volcano",
+   "desc": "the glass volcano model is erupting with red foam",
+   "question": "Is the glass volcano model erupting with red foam?"
+  },
+  {
+   "id": "lava_bubbling",
+   "type": "state",
+   "of": "volcano",
+   "desc": "the lava on the volcano model is bubbling",
+   "question": "Is the lava on the volcano model bubbling?"
+  },
+  {
+   "id": "rabbit_resting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit is resting",
+   "question": "Is the small white rabbit resting?"
+  },
+  {
+   "id": "teacher_interested",
+   "type": "state",
+   "of": "teacher",
+   "desc": "the teacher in the gray suit looks interested",
+   "question": "Does the teacher in the gray suit have an interested expression?"
+  },
+  {
+   "id": "girl_left",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl in the blue dress is to the left of the boy in the green shirt",
+   "question": "Is the girl in the blue dress to the left of the boy in the green shirt?"
+  },
+  {
+   "id": "volcano_on_table",
+   "type": "relation",
+   "of": [
+    "volcano",
+    "table"
+   ],
+   "desc": "the glass volcano model sits on the table",
+   "question": "Is the glass volcano model sitting on the table?"
+  },
+  {
+   "id": "boy_beside_table",
+   "type": "relation",
+   "of": [
+    "boy",
+    "table"
+   ],
+   "desc": "the boy in the green shirt stands beside the table",
+   "question": "Is the boy in the green shirt standing beside the table?"
+  },
+  {
+   "id": "boy_points_volcano",
+   "type": "action",
+   "of": [
+    "boy",
+    "volcano"
+   ],
+   "desc": "the boy in the green shirt points at the glass volcano model",
+   "question": "Is the boy in the green shirt pointing at the glass volcano model?"
+  },
+  {
+   "id": "teacher_right",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "boy"
+   ],
+   "desc": "the teacher in the gray suit is to the right of the boy in the green shirt",
+   "question": "Is the teacher in the gray suit to the right of the boy in the green shirt?"
+  },
+  {
+   "id": "teacher_looks_experiment",
+   "type": "action",
+   "of": [
+    "teacher",
+    "volcano"
+   ],
+   "desc": "the teacher in the gray suit looks at the volcano experiment",
+   "question": "Is the teacher in the gray suit looking at the volcano experiment?"
+  },
+  {
+   "id": "rabbit_in_cage",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "cage"
+   ],
+   "desc": "the small white rabbit is in the wire cage",
+   "question": "Is the small white rabbit inside the wire cage?"
+  },
+  {
+   "id": "cage_on_floor",
+   "type": "state",
+   "of": "cage",
+   "desc": "the wire cage is on the floor",
+   "question": "Is the wire cage on the floor?"
+  },
+  {
+   "id": "girl_hands_pen",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl in the blue dress hands a pen to the boy in the green shirt",
+   "question": "Is the girl in the blue dress handing a pen to the boy in the green shirt?"
+  },
+  {
+   "id": "teacher_next_cage",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "cage"
+   ],
+   "desc": "the teacher in the gray suit stands next to the wire cage",
+   "question": "Is the teacher in the gray suit standing next to the wire cage?"
+  },
+  {
+   "id": "no_ceiling",
+   "type": "absent",
+   "desc": "ceiling",
+   "question": "Is there a ceiling visible in the image?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in the blue dress is standing",
+   "question": "Is the girl in the blue dress standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the green shirt is standing",
+   "question": "Is the boy in the green shirt standing?"
+  },
+  {
+   "id": "teacher_standing",
+   "type": "state",
+   "of": "teacher",
+   "desc": "the teacher in the gray suit is standing",
+   "question": "Is the teacher in the gray suit standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "volcano",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cage",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0050",
+ "prompt": "In a photorealistic photo of a school science fair, a girl in a blue dress stands on the left holding a clipboard. Next to her on the center table sits a glass volcano model erupting with red foam. A boy in a green shirt points at the bubbling lava while standing beside the table. On the right, a teacher in a gray suit looks at the experiment with interest. Behind them, a small white rabbit rests in a wire cage on the floor. The girl in the blue dress hands a pen to the boy in the green shirt. The teacher in the gray suit stands next to the small white rabbit's cage. There is no ceiling visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

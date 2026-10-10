@@ -1,0 +1,127 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit botanical greenhouse",
+   "question": "Does the image show a sunlit botanical greenhouse?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench in the image?",
+   "box": [
+    300,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow raincoat",
+   "question": "Is there a woman in a yellow raincoat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "terracotta pot",
+   "plural": "terracotta pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a terracotta pot",
+   "question": "Is there a terracotta pot?",
+   "box": [
+    450,
+    500,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "woman_trowel",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat holds a small trowel",
+   "question": "Is the woman in the yellow raincoat holding a small trowel?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "pot"
+   ],
+   "desc": "the woman in the yellow raincoat looks at the terracotta pot",
+   "question": "Is the woman in the yellow raincoat looking at the terracotta pot?"
+  },
+  {
+   "id": "pot_on_bench",
+   "type": "relation",
+   "of": [
+    "pot",
+    "bench"
+   ],
+   "desc": "the terracotta pot rests on the wooden bench",
+   "question": "Is the terracotta pot resting on the wooden bench?"
+  },
+  {
+   "id": "no_reflection",
+   "type": "absent",
+   "desc": "glass reflection",
+   "question": "Are there any glass reflections in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat is standing",
+   "question": "Is the woman in the yellow raincoat standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "pot",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0070",
+ "prompt": "A cinematic film still captures a sunlit botanical greenhouse. On the left, a woman in a yellow raincoat stands holding a small trowel. In the center, a terracotta pot rests on a wooden bench. The woman looks at the terracotta pot. There is no glass reflection.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

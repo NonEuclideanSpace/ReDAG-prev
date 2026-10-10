@@ -1,0 +1,522 @@
+{
+ "style": "surreal fantasy, atmospheric, misty, cinematic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a foggy hillside with damp air and thickening mist",
+   "question": "Does the image show a foggy hillside with damp air and thickening mist?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "carriage",
+   "type": "entity",
+   "class": "carriage",
+   "plural": "carriages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden carriage",
+   "question": "Is there a weathered wooden carriage?",
+   "box": [
+    200,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted lantern",
+   "question": "Is there a rusted lantern?",
+   "box": [
+    750,
+    400,
+    820,
+    500
+   ]
+  },
+  {
+   "id": "wildflowers",
+   "type": "entity",
+   "class": "wildflower",
+   "plural": "wildflowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a cluster of wildflowers",
+   "question": "Is there a cluster of wildflowers?",
+   "box": [
+    400,
+    600,
+    500,
+    680
+   ]
+  },
+  {
+   "id": "boots",
+   "type": "entity",
+   "class": "boot",
+   "plural": "boots",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of old leather boots",
+   "question": "Is there a pair of old leather boots?",
+   "box": [
+    220,
+    650,
+    300,
+    720
+   ]
+  },
+  {
+   "id": "flag",
+   "type": "entity",
+   "class": "flag",
+   "plural": "flags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tattered flag",
+   "question": "Is there a tattered flag?",
+   "box": [
+    400,
+    100,
+    500,
+    250
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled thorny vine",
+   "question": "Is there a coiled thorny vine?",
+   "box": [
+    700,
+    300,
+    780,
+    600
+   ]
+  },
+  {
+   "id": "rope",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a length of rope",
+   "question": "Is there a length of rope?",
+   "box": [
+    200,
+    500,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "post",
+   "type": "entity",
+   "class": "hitching post",
+   "plural": "hitching posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted hitching post",
+   "question": "Is there a rusted hitching post?",
+   "box": [
+    150,
+    600,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shattered mirror framed in tarnished silver",
+   "question": "Is there a shattered mirror framed in tarnished silver?",
+   "box": [
+    320,
+    700,
+    400,
+    780
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crow",
+   "question": "Is there a crow?",
+   "box": [
+    500,
+    280,
+    550,
+    330
+   ]
+  },
+  {
+   "id": "bridge",
+   "type": "entity",
+   "class": "bridge",
+   "plural": "bridges",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dark metal bridge arching into nothingness",
+   "question": "Is there a dark metal bridge arching into nothingness?",
+   "box": [
+    800,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    450,
+    350,
+    500,
+    400
+   ]
+  },
+  {
+   "id": "carriage_wheel_buried",
+   "type": "state",
+   "of": "carriage",
+   "desc": "one wheel of the carriage is half-buried in grass",
+   "question": "Is one wheel of the carriage half-buried in grass?"
+  },
+  {
+   "id": "carriage_wheel_dangling",
+   "type": "state",
+   "of": "carriage",
+   "desc": "the other wheel of the carriage dangles over a drop",
+   "question": "Does the other wheel of the carriage dangle over a drop?"
+  },
+  {
+   "id": "lantern_lit",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the rusted lantern casts light",
+   "question": "Is the rusted lantern casting light?"
+  },
+  {
+   "id": "wildflowers_through_floor",
+   "type": "relation",
+   "of": [
+    "wildflowers",
+    "carriage"
+   ],
+   "desc": "the wildflowers take root through the carriage floor",
+   "question": "Do the wildflowers take root through the carriage floor?"
+  },
+  {
+   "id": "boots_at_front",
+   "type": "relation",
+   "of": [
+    "boots",
+    "carriage"
+   ],
+   "desc": "the boots lie at the front of the carriage",
+   "question": "Do the boots lie at the front of the carriage?"
+  },
+  {
+   "id": "flag_on_carriage",
+   "type": "relation",
+   "of": [
+    "flag",
+    "carriage"
+   ],
+   "desc": "the flag is attached to the carriage",
+   "question": "Is the flag attached to the carriage?"
+  },
+  {
+   "id": "vine_climbs_carriage",
+   "type": "relation",
+   "of": [
+    "vine",
+    "carriage"
+   ],
+   "desc": "the vine climbs up the side of the carriage",
+   "question": "Does the vine climb up the side of the carriage?"
+  },
+  {
+   "id": "vine_entwines_lantern",
+   "type": "relation",
+   "of": [
+    "vine",
+    "lantern"
+   ],
+   "desc": "the vine entwines the lantern’s chain",
+   "question": "Does the vine entwine the lantern’s chain?"
+  },
+  {
+   "id": "rope_hangs_carriage",
+   "type": "relation",
+   "of": [
+    "rope",
+    "carriage"
+   ],
+   "desc": "the rope hangs from the rear of the carriage",
+   "question": "Does the rope hang from the rear of the carriage?"
+  },
+  {
+   "id": "rope_tied_post",
+   "type": "relation",
+   "of": [
+    "rope",
+    "post"
+   ],
+   "desc": "the rope is tied to the hitching post",
+   "question": "Is the rope tied to the hitching post?"
+  },
+  {
+   "id": "mirror_near_boot",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "boots"
+   ],
+   "desc": "the mirror lies near the boots",
+   "question": "Does the mirror lie near the boots?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "carriage"
+   ],
+   "desc": "the mirror reflects a sunlit meadow with the same carriage",
+   "question": "Does the mirror reflect a sunlit meadow with the same carriage?"
+  },
+  {
+   "id": "crow_on_roof",
+   "type": "relation",
+   "of": [
+    "crow",
+    "carriage"
+   ],
+   "desc": "the crow perches on the carriage’s roof",
+   "question": "Does the crow perch on the carriage’s roof?"
+  },
+  {
+   "id": "clock_suspended",
+   "type": "relation",
+   "of": [
+    "clock",
+    "carriage"
+   ],
+   "desc": "the clock is suspended from the carriage’s ceiling by the vine",
+   "question": "Is the clock suspended from the carriage’s ceiling by the vine?"
+  },
+  {
+   "id": "bridge_beyond_mist",
+   "type": "state",
+   "of": "bridge",
+   "desc": "the bridge is at the edge of the fog",
+   "question": "Is the bridge at the edge of the fog?"
+  },
+  {
+   "id": "crow_eyes",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow has gleaming eyes",
+   "question": "Does the crow have gleaming eyes?"
+  },
+  {
+   "id": "mirror_carriage_stationary_moving",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects a carriage that is stationary yet moving",
+   "question": "Does the mirror reflect a carriage that appears both stationary and moving?"
+  },
+  {
+   "id": "second_crow_in_mirror",
+   "type": "relation",
+   "of": [
+    "crow",
+    "mirror"
+   ],
+   "desc": "a second crow appears in the mirror's reflection mimicking the real crow",
+   "question": "Is there a second crow visible in the mirror's reflection, mimicking the real crow?"
+  },
+  {
+   "id": "clock_ticks_backwards",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock ticks backwards",
+   "question": "Is the clock ticking backwards?"
+  },
+  {
+   "id": "wildflowers_bloom_reverse",
+   "type": "state",
+   "of": "wildflowers",
+   "desc": "the wildflowers bloom in reverse with petals curling inward",
+   "question": "Are the wildflowers blooming in reverse with petals curling inward?"
+  },
+  {
+   "id": "boots_inch_forward",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boots inch slightly forward",
+   "question": "Are the boots inching slightly forward?"
+  },
+  {
+   "id": "post_grown",
+   "type": "state",
+   "of": "post",
+   "desc": "the rusted hitching post has grown into the ground like a twisted metal tree",
+   "question": "Does the rusted hitching post appear to have grown into the ground like a twisted metal tree?"
+  },
+  {
+   "id": "post_roots_entangled",
+   "type": "relation",
+   "of": [
+    "post",
+    "wildflowers"
+   ],
+   "desc": "the roots of the rusted hitching post are entangled with the roots of the wildflowers",
+   "question": "Are the roots of the rusted hitching post entangled with the roots of the wildflowers?"
+  },
+  {
+   "id": "mirror_embedded",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the shattered mirror is partially embedded in the grass",
+   "question": "Is the shattered mirror partially embedded in the grass?"
+  },
+  {
+   "id": "vine_leaves",
+   "type": "attribute",
+   "of": "vine",
+   "desc": "the vine has leaves unfurling",
+   "question": "Does the vine have leaves?"
+  },
+  {
+   "id": "rope_loose",
+   "type": "state",
+   "of": "rope",
+   "desc": "the rope hangs loose",
+   "question": "Is the rope hanging loose?"
+  },
+  {
+   "id": "boots_scuffed",
+   "type": "attribute",
+   "of": "boots",
+   "desc": "the boots are scuffed",
+   "question": "Are the boots scuffed?"
+  },
+  {
+   "id": "boots_waterlogged",
+   "type": "attribute",
+   "of": "boots",
+   "desc": "the boots are waterlogged",
+   "question": "Are the boots waterlogged?"
+  },
+  {
+   "id": "flag_symbols",
+   "type": "attribute",
+   "of": "flag",
+   "desc": "the flag is stitched with cryptic symbols",
+   "question": "Is the flag stitched with cryptic symbols?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "carriage",
+   "to": "lantern",
+   "kind": "support"
+  },
+  {
+   "from": "carriage",
+   "to": "wildflowers",
+   "kind": "support"
+  },
+  {
+   "from": "carriage",
+   "to": "boots",
+   "kind": "support"
+  },
+  {
+   "from": "carriage",
+   "to": "flag",
+   "kind": "support"
+  },
+  {
+   "from": "carriage",
+   "to": "crow",
+   "kind": "support"
+  },
+  {
+   "from": "carriage",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "post",
+   "to": "rope",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0433",
+ "prompt": "The weathered wooden carriage creaks in the damp air, its timbers groaning as though whispering of the countless miles it has endured. Resting at the edge of a foggy hillside, it seems poised between realms—one wheel half-buried in the dewy grass, the other dangling perilously over the unseen drop beyond. A rusted lantern sways from its side, the light it casts shifting with each breeze, flickering in the thickening mist to illuminate a strange cluster of wildflowers that have taken root through the carriage floor, their roots threading into the very planks that once carried someone away. At the front of the carriage lie a pair of old leather boots, scuffed and waterlogged, as if their wearer paused to admire the valley below—only to be stopped short by something unseen. Above, a tattered flag flutters against the sky, stitched with cryptic symbols that seem to shift when glimpsed from the corner of the eye. A vine, coiled and thorny, climbs up the side of the carriage, entwining the lantern’s chain, its leaves unfurling in time with the lantern’s pulse of light. From the rear, a length of rope hangs loose, tied loosely to a rusted hitching post that has somehow grown into the ground like a twisted metal tree, its roots entangled with the roots of the wildflowers. A mirror, shattered and framed in tarnished silver, lies partially embedded in the grass near the boot, reflecting not the fog but a glimpse of a distant, sunlit meadow, where the same carriage appears—stationary, yet moving, in an impossible loop. A crow perches on the carriage’s roof, its eyes gleaming with an uncanny awareness, as it watches a second crow appear in the mirror’s reflected world, mimicking its every move. At the edge of the fog, just beyond the mist, a bridge begins to form, constructed from the same dark metal as the hitching post, arching into nothingness. It is unclear whether the bridge connects to another hillside or another version of the same. A clock, suspended from the carriage’s ceiling by the same vine, ticks backwards in a rhythm that matches the crow’s heartbeat. As the mist thickens, the wildflowers begin to bloom in reverse, petals curling inward as though retreating from a future they never wanted to arrive at. The fog carries a faint hum, a sound like a song caught in the throat of time, and with each note, the boots at the front of the carriage inch slightly forward, as if their unseen owner is beginning to return.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 44,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

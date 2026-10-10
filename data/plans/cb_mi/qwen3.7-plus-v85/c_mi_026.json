@@ -1,0 +1,414 @@
+{
+ "style": "photorealistic, high-detail, bustling atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a central train station interior with polished marble floors and departure platforms",
+   "question": "Does the image show the interior of a central train station with polished marble floors?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "passenger_1",
+   "type": "entity",
+   "class": "passenger",
+   "plural": "passengers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a passenger",
+   "question": "Is there a passenger?",
+   "box": [
+    100,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "passenger_2",
+   "type": "entity",
+   "class": "passenger",
+   "plural": "passengers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second passenger",
+   "question": "Is there a second passenger?",
+   "box": [
+    350,
+    420,
+    550,
+    920
+   ]
+  },
+  {
+   "id": "display_boards",
+   "type": "entity",
+   "class": "digital display board",
+   "plural": "digital display boards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "digital display boards marking departure platforms",
+   "question": "Are there digital display boards marking departure platforms?",
+   "box": [
+    600,
+    50,
+    900,
+    200
+   ]
+  },
+  {
+   "id": "ticket_booth",
+   "type": "entity",
+   "class": "ticket booth",
+   "plural": "ticket booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ticket booth",
+   "question": "Is there a ticket booth?",
+   "box": [
+    50,
+    300,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "conductor",
+   "type": "entity",
+   "class": "conductor",
+   "plural": "conductors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conductor in an official uniform",
+   "question": "Is there a conductor in an official uniform?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "train",
+   "type": "entity",
+   "class": "train",
+   "plural": "trains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an idling train",
+   "question": "Is there an idling train?",
+   "box": [
+    600,
+    200,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "benches",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of metal benches",
+   "question": "Are there rows of metal benches?",
+   "box": [
+    100,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "traveler_1",
+   "type": "entity",
+   "class": "traveler",
+   "plural": "travelers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a traveler",
+   "question": "Is there a traveler?",
+   "box": [
+    150,
+    550,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "security_guard",
+   "type": "entity",
+   "class": "security personnel",
+   "plural": "security personnel",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard",
+   "question": "Is there a security guard?",
+   "box": [
+    800,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "surveillance_camera",
+   "type": "entity",
+   "class": "surveillance camera",
+   "plural": "surveillance cameras",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a surveillance camera",
+   "question": "Is there a surveillance camera?",
+   "box": [
+    500,
+    0,
+    600,
+    100
+   ]
+  },
+  {
+   "id": "kiosk",
+   "type": "entity",
+   "class": "information kiosk",
+   "plural": "information kiosks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an information kiosk",
+   "question": "Is there an information kiosk?",
+   "box": [
+    400,
+    400,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "vending_machine",
+   "type": "entity",
+   "class": "vending machine",
+   "plural": "vending machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vending machine",
+   "question": "Is there a vending machine?",
+   "box": [
+    20,
+    400,
+    150,
+    700
+   ]
+  },
+  {
+   "id": "turnstile",
+   "type": "entity",
+   "class": "automated turnstile",
+   "plural": "automated turnstiles",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an automated turnstile",
+   "question": "Is there an automated turnstile?",
+   "box": [
+    550,
+    500,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "passenger_hurrying",
+   "type": "state",
+   "of": "passenger_1",
+   "desc": "the passenger with a rolling suitcase is hurrying",
+   "question": "Is the passenger with a rolling suitcase hurrying?"
+  },
+  {
+   "id": "conductor_checking_watch",
+   "type": "state",
+   "of": "conductor",
+   "desc": "the conductor checks a watch",
+   "question": "Is the conductor checking a watch?"
+  },
+  {
+   "id": "conductor_holding_clipboard",
+   "type": "attribute",
+   "of": "conductor",
+   "desc": "the conductor holds a clipboard",
+   "question": "Is the conductor holding a clipboard?"
+  },
+  {
+   "id": "train_steam",
+   "type": "state",
+   "of": "train",
+   "desc": "the train releases steam from its engine",
+   "question": "Is the train releasing steam from its engine?"
+  },
+  {
+   "id": "traveler_sitting",
+   "type": "state",
+   "of": "traveler_1",
+   "desc": "the traveler is sitting",
+   "question": "Is the traveler sitting?"
+  },
+  {
+   "id": "traveler_on_bench",
+   "type": "relation",
+   "of": [
+    "traveler_1",
+    "benches"
+   ],
+   "desc": "the traveler is on a metal bench",
+   "question": "Is the traveler on a metal bench?"
+  },
+  {
+   "id": "traveler_consulting_phone",
+   "type": "state",
+   "of": "traveler_1",
+   "desc": "the traveler consults a smartphone app",
+   "question": "Is the traveler consulting a smartphone app?"
+  },
+  {
+   "id": "traveler_holding_schedule",
+   "type": "attribute",
+   "of": "traveler_1",
+   "desc": "the traveler holds a paper schedule",
+   "question": "Is the traveler holding a paper schedule?"
+  },
+  {
+   "id": "traveler_sipping",
+   "type": "state",
+   "of": "traveler_1",
+   "desc": "the traveler sips coffee from a disposable cup",
+   "question": "Is the traveler sipping coffee from a disposable cup?"
+  },
+  {
+   "id": "security_patrolling",
+   "type": "state",
+   "of": "security_guard",
+   "desc": "the security guard is patrolling",
+   "question": "Is the security guard patrolling?"
+  },
+  {
+   "id": "security_walkie_talkie",
+   "type": "attribute",
+   "of": "security_guard",
+   "desc": "the security guard has a walkie-talkie",
+   "question": "Does the security guard have a walkie-talkie?"
+  },
+  {
+   "id": "no_pool_equipment",
+   "type": "absent",
+   "desc": "swimming pool equipment like diving boards or pool noodles",
+   "question": "Are there any swimming pool equipment like diving boards or pool noodles in the image?"
+  },
+  {
+   "id": "no_gardening_supplies",
+   "type": "absent",
+   "desc": "gardening supplies such as fertilizer or pruning shears",
+   "question": "Are there any gardening supplies such as fertilizer or pruning shears in the image?"
+  },
+  {
+   "id": "passenger_2_hurrying",
+   "type": "state",
+   "of": "passenger_2",
+   "desc": "the second passenger with a travel bag is hurrying",
+   "question": "Is the second passenger with a travel bag hurrying?"
+  },
+  {
+   "id": "conductor_near_train",
+   "type": "relation",
+   "of": [
+    "conductor",
+    "train"
+   ],
+   "desc": "the conductor in an official uniform is near the idling train",
+   "question": "Is the conductor in an official uniform near the idling train?"
+  },
+  {
+   "id": "traveler_drinking",
+   "type": "attribute",
+   "of": "traveler_1",
+   "desc": "the traveler holds a disposable cup",
+   "question": "Is the traveler holding a disposable cup?"
+  },
+  {
+   "id": "passenger_1_suitcase",
+   "type": "attribute",
+   "of": "passenger_1",
+   "desc": "the passenger has a rolling suitcase",
+   "question": "Does the passenger have a rolling suitcase?"
+  },
+  {
+   "id": "passenger_2_bag",
+   "type": "attribute",
+   "of": "passenger_2",
+   "desc": "the second passenger has a travel bag",
+   "question": "Does the second passenger have a travel bag?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "benches",
+   "to": "traveler_1",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_026",
+ "prompt": "A bustling central train station during rush hour commute, where passengers with rolling suitcases and travel bags hurry across polished marble floors toward departure platforms marked with digital display boards. Ticket booths process transactions while conductors in official uniforms check watches and clipboards near idling trains releasing steam from their engines. Waiting areas feature rows of metal benches where travelers consult smartphone apps and paper schedules while sipping coffee from disposable cups. However, this transportation hub contains no swimming pool equipment like diving boards or pool noodles, keeping the facility focused on rail travel rather than aquatic recreation. You won't spot any gardening supplies such as fertilizer or pruning shears either, maintaining the station's urban character designed for passenger movement rather than botanical activities. Security personnel patrol with walkie-talkies while surveillance cameras monitor crowd flow, and information kiosks provide maps and timetables. Vending machines dispense snacks and beverages, while automated turnstiles control platform access ensuring only ticketed passengers board departing trains bound for destinations throughout the metropolitan transportation network.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "security_guard_entity",
+     "security_guard"
+    ],
+    [
+     "surveillance_camera_entity",
+     "surveillance_camera"
+    ],
+    [
+     "kiosk_entity",
+     "kiosk"
+    ],
+    [
+     "vending_machine_entity",
+     "vending_machine"
+    ],
+    [
+     "turnstile_entity",
+     "turnstile"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

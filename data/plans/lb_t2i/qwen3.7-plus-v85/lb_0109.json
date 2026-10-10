@@ -1,0 +1,684 @@
+{
+ "style": "cinematic noir, rainy atmosphere, moody lighting, photorealistic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked cobblestone street square with a narrow alley, rusted fire escapes, and a floating staircase silhouette in the background",
+   "question": "Does the image show a cracked cobblestone street square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overturned wooden crate labeled \"PEPPER\" with shattered sides",
+   "question": "Is there an overturned wooden crate?",
+   "box": [
+    350,
+    600,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "peppercorns",
+   "type": "entity",
+   "class": "peppercorn",
+   "plural": "peppercorns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shiny black peppercorns",
+   "question": "Are there shiny black peppercorns?",
+   "box": [
+    400,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small puddle with prismatic ripples",
+   "question": "Is there a small puddle?",
+   "box": [
+    500,
+    800,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a curious tabby cat with fur the color of rusted copper and eyes like smudged amber",
+   "question": "Is there a tabby cat?",
+   "box": [
+    200,
+    650,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "entity",
+   "class": "red umbrella",
+   "plural": "red umbrellas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red umbrella bent at an angle",
+   "question": "Is there a red umbrella bent at an angle?",
+   "box": [
+    750,
+    300,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "lamppost",
+   "type": "entity",
+   "class": "lamppost",
+   "plural": "lampposts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lamppost",
+   "question": "Is there a lamppost?",
+   "box": [
+    780,
+    100,
+    850,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a vibrant yellow raincoat",
+   "question": "Is there a woman in a vibrant yellow raincoat?",
+   "box": [
+    100,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "billboard",
+   "type": "entity",
+   "class": "billboard",
+   "plural": "billboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered billboard showing a faded 1950s pepper ad with peeling strips",
+   "question": "Is there a weathered billboard showing a faded 1950s pepper ad with peeling strips?",
+   "box": [
+    100,
+    50,
+    400,
+    250
+   ]
+  },
+  {
+   "id": "tv",
+   "type": "entity",
+   "class": "television",
+   "plural": "televisions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flickering television playing a black and white movie",
+   "question": "Is there a television?",
+   "box": [
+    700,
+    50,
+    900,
+    200
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "entity",
+   "class": "red balloon",
+   "plural": "red balloons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s red balloon",
+   "question": "Is there a child’s red balloon?",
+   "box": [
+    150,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "pigeon",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pigeon",
+   "question": "Is there a pigeon?",
+   "box": [
+    760,
+    320,
+    820,
+    380
+   ]
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow of a man in a trench coat",
+   "question": "Is there a shadow of a man in a trench coat?",
+   "box": [
+    450,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "peppercorns_on_stones",
+   "type": "state",
+   "of": "peppercorns",
+   "desc": "the peppercorns are scattered on the wet stones",
+   "question": "Are the peppercorns scattered on the wet stones?"
+  },
+  {
+   "id": "tv_on_wall",
+   "type": "state",
+   "of": "tv",
+   "desc": "the television is mounted on a wall",
+   "question": "Is the television mounted on a wall?"
+  },
+  {
+   "id": "shadow_on_wall",
+   "type": "state",
+   "of": "shadow",
+   "desc": "the shadow is on a nearby wall",
+   "question": "Is the shadow on a nearby wall?"
+  },
+  {
+   "id": "cat_licking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is licking a peppercorn",
+   "question": "Is the tabby cat licking a peppercorn?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat has a half-smile",
+   "question": "Does the woman in the yellow raincoat have a half-smile?"
+  },
+  {
+   "id": "woman_watching_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the yellow raincoat watches the tabby cat",
+   "question": "Is the woman in the yellow raincoat watching the tabby cat?"
+  },
+  {
+   "id": "umbrella_leaning_lamppost",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "lamppost"
+   ],
+   "desc": "the red umbrella leans against the lamppost",
+   "question": "Does the red umbrella lean against the lamppost?"
+  },
+  {
+   "id": "umbrella_dripping_puddle",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "puddle"
+   ],
+   "desc": "the tip of the red umbrella drips into the puddle",
+   "question": "Does the tip of the red umbrella drip into the puddle?"
+  },
+  {
+   "id": "peppercorns_near_puddle",
+   "type": "relation",
+   "of": [
+    "peppercorns",
+    "puddle"
+   ],
+   "desc": "the peppercorns scatter toward the puddle",
+   "question": "Do the peppercorns scatter toward the puddle?"
+  },
+  {
+   "id": "balloon_tethered_woman",
+   "type": "relation",
+   "of": [
+    "balloon",
+    "woman"
+   ],
+   "desc": "the red balloon is tethered to the woman in the yellow raincoat",
+   "question": "Is the red balloon tethered to the woman in the yellow raincoat?"
+  },
+  {
+   "id": "pigeon_on_umbrella",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "umbrella"
+   ],
+   "desc": "the pigeon alights on the red umbrella",
+   "question": "Is the pigeon alighting on the red umbrella?"
+  },
+  {
+   "id": "tv_above_lamppost",
+   "type": "relation",
+   "of": [
+    "tv",
+    "lamppost"
+   ],
+   "desc": "the television is mounted above the lamppost",
+   "question": "Is the television mounted above the lamppost?"
+  },
+  {
+   "id": "billboard_above_woman",
+   "type": "relation",
+   "of": [
+    "billboard",
+    "woman"
+   ],
+   "desc": "the billboard is above the woman in the yellow raincoat",
+   "question": "Is the billboard above the woman in the yellow raincoat?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the scene?"
+  },
+  {
+   "id": "crate_overturned",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate lies overturned",
+   "question": "Is the wooden crate lying overturned?"
+  },
+  {
+   "id": "cat_stretching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat stretches",
+   "question": "Is the tabby cat stretching?"
+  },
+  {
+   "id": "woman_pausing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat pauses mid-step",
+   "question": "Is the woman in the yellow raincoat pausing mid-step?"
+  },
+  {
+   "id": "balloon_drifting",
+   "type": "state",
+   "of": "balloon",
+   "desc": "the red balloon drifts",
+   "question": "Is the red balloon drifting?"
+  },
+  {
+   "id": "pigeon_pecking",
+   "type": "action",
+   "of": [
+    "pigeon",
+    "umbrella"
+   ],
+   "desc": "the pigeon pecks at raindrops on the red umbrella",
+   "question": "Is the pigeon pecking at raindrops on the red umbrella?"
+  },
+  {
+   "id": "woman_hand_zipper",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman's hand brushes the zipper of her raincoat",
+   "question": "Is the woman's hand brushing the zipper of her raincoat?"
+  },
+  {
+   "id": "crate_corner",
+   "type": "state",
+   "of": "crate",
+   "desc": "the crate is in the corner of the square",
+   "question": "Is the crate in the corner of the square?"
+  },
+  {
+   "id": "alley",
+   "type": "entity",
+   "class": "alley",
+   "plural": "alleys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a narrow alley",
+   "question": "Is there a narrow alley?",
+   "box": [
+    800,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "fire_escapes",
+   "type": "entity",
+   "class": "fire escape",
+   "plural": "fire escapes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rusted fire escapes",
+   "question": "Are there rusted fire escapes?",
+   "box": [
+    820,
+    100,
+    1000,
+    600
+   ]
+  },
+  {
+   "id": "staircase",
+   "type": "entity",
+   "class": "staircase",
+   "plural": "staircases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating staircase silhouette",
+   "question": "Is there a floating staircase silhouette?",
+   "box": [
+    850,
+    50,
+    980,
+    300
+   ]
+  },
+  {
+   "id": "musician",
+   "type": "entity",
+   "class": "street musician",
+   "plural": "street musicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street musician playing a harmonica",
+   "question": "Is there a street musician playing a harmonica?",
+   "box": [
+    50,
+    300,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "harmonica",
+   "type": "attribute",
+   "of": "musician",
+   "desc": "the street musician holds a harmonica",
+   "question": "Is the street musician holding a harmonica?"
+  },
+  {
+   "id": "shadow_shape",
+   "type": "attribute",
+   "of": "shadow",
+   "desc": "the shadow has the shape of a man in a trench coat",
+   "question": "Does the shadow have the shape of a man in a trench coat?"
+  },
+  {
+   "id": "tv_content_pepper_jar",
+   "type": "attribute",
+   "of": "tv",
+   "desc": "the television shows a spice jar labeled 'PEPPER'",
+   "question": "Does the television show a spice jar labeled 'PEPPER'?"
+  },
+  {
+   "id": "balloon_string_coat",
+   "type": "relation",
+   "of": [
+    "balloon",
+    "woman"
+   ],
+   "desc": "the balloon's string disappears into the folds of the woman's coat",
+   "question": "Does the balloon's string disappear into the folds of the woman's coat?"
+  },
+  {
+   "id": "crate_leaking_puddle",
+   "type": "relation",
+   "of": [
+    "crate",
+    "puddle"
+   ],
+   "desc": "the crate leaks peppercorns into the puddle",
+   "question": "Is the crate leaking peppercorns into the puddle?"
+  },
+  {
+   "id": "billboard_ad_text",
+   "type": "attribute",
+   "of": "billboard",
+   "desc": "the billboard shows an ad for 'The Perfect Pepper—Pepper for the Perfect Life'",
+   "question": "Does the billboard show an ad for 'The Perfect Pepper—Pepper for the Perfect Life'?"
+  },
+  {
+   "id": "umbrella_tip_drips",
+   "type": "state",
+   "of": "umbrella",
+   "desc": "the tip of the red umbrella drips rhythmically",
+   "question": "Is the tip of the red umbrella dripping rhythmically?"
+  },
+  {
+   "id": "woman_boots_splashing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman's boots are splashing gently",
+   "question": "Are the woman's boots splashing gently?"
+  },
+  {
+   "id": "cat_shadow_ripple",
+   "type": "action",
+   "of": [
+    "cat",
+    "shadow"
+   ],
+   "desc": "the cat's movements cause the shadow to ripple",
+   "question": "Do the cat's movements cause the shadow to ripple?"
+  },
+  {
+   "id": "fire_escapes_frame_alley",
+   "type": "relation",
+   "of": [
+    "fire_escapes",
+    "alley"
+   ],
+   "desc": "the fire escapes frame the mouth of the alley",
+   "question": "Do the fire escapes frame the mouth of the alley?"
+  },
+  {
+   "id": "staircase_in_alley",
+   "type": "relation",
+   "of": [
+    "staircase",
+    "alley"
+   ],
+   "desc": "the staircase is in the alley",
+   "question": "Is the staircase in the alley?"
+  },
+  {
+   "id": "neon_signs",
+   "type": "entity",
+   "class": "neon sign",
+   "plural": "neon signs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "distant neon signs",
+   "question": "Are there distant neon signs visible?",
+   "box": [
+    100,
+    50,
+    924,
+    200
+   ]
+  },
+  {
+   "id": "tv_content_laughing",
+   "type": "attribute",
+   "of": "tv",
+   "desc": "the television shows characters laughing and dancing in a kitchen",
+   "question": "Does the television screen show characters laughing and dancing in a kitchen?"
+  },
+  {
+   "id": "shadow_not_cat",
+   "type": "state",
+   "of": "shadow",
+   "desc": "the shadow is not cast by the cat",
+   "question": "Is the shadow distinct from the cat's own shadow (i.e., not directly under/attached to the cat in a way that suggests it is the cat's shadow)?"
+  },
+  {
+   "id": "sky",
+   "type": "entity",
+   "class": "sky",
+   "plural": "skies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sky streaked with bruised purple",
+   "question": "Is there a sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "sky_purple",
+   "type": "attribute",
+   "of": "sky",
+   "desc": "the sky is streaked with bruised purple",
+   "question": "Is the sky streaked with bruised purple?"
+  },
+  {
+   "id": "crate_label",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the wooden crate is labeled \"PEPPER\"",
+   "question": "Is the wooden crate labeled \"PEPPER\"?"
+  },
+  {
+   "id": "crate_shattered",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate has shattered sides",
+   "question": "Does the wooden crate have shattered sides?"
+  },
+  {
+   "id": "puddle_ripples",
+   "type": "state",
+   "of": "puddle",
+   "desc": "the puddle has prismatic ripples",
+   "question": "Does the puddle have prismatic ripples?"
+  },
+  {
+   "id": "cat_fur_color",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat has fur the color of rusted copper",
+   "question": "Does the tabby cat have fur the color of rusted copper?"
+  },
+  {
+   "id": "cat_eye_color",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat has eyes like smudged amber",
+   "question": "Does the tabby cat have eyes like smudged amber?"
+  },
+  {
+   "id": "tv_content",
+   "type": "attribute",
+   "of": "tv",
+   "desc": "the television plays an old home movie in black and white showing characters laughing and dancing in a kitchen with a spice jar labeled \"PEPPER\"",
+   "question": "Does the television play an old home movie in black and white showing characters laughing and dancing in a kitchen with a spice jar labeled \"PEPPER\"?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "lamppost",
+   "to": "umbrella",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0109",
+ "prompt": "Rain taps like a staccato heartbeat against the cracked cobblestone street, where a wooden crate labeled \"PEPPER\" lies overturned in the center of the square, its rough edges gashed by time and the fall. From its shattered sides, shiny black peppercorns tumble like ink-stained marbles, scattering toward a small puddle where the light reflects in prismatic ripples. A curious tabby cat, with fur the color of rusted copper and eyes like smudged amber, licks one peppercorn from a rain-slicked stone, its tongue flicking in deliberate satisfaction. A red umbrella, bent at an impossible angle, leans diagonally against a lamppost that hums faintly with the low-frequency buzz of a phantom current. Its tip drips rhythmically into the puddle, each drop merging with the reflections of a sky streaked with bruised purple and the glow of distant neon signs that flicker in and out like memories. A woman in a vibrant yellow raincoat, the color of a canary's wing, pauses mid-step, her boots splashing gently as she watches the cat with a half-smile, her expression caught between amusement and something sadder, like recognition. Her hand brushes the raincoat’s zipper, the metal catching the light in a way that makes it seem more like a blade than a fastener. Above her, a weathered billboard sways, its faded face showing a 1950s ad for \"The Perfect Pepper—Pepper for the Perfect Life,\" though the words have begun to peel away in wet, curling strips. Behind her, a narrow alley yawns open, its mouth framed by rusted fire escapes and the silhouette of a staircase that seems to lead nowhere, its steps floating as if suspended in air. A street musician, invisible in the downpour, plays a melancholic melody on a harmonica, the sound threading through the scene like an unspoken thought. The cat, now having finished its peppercorn, stretches with feline elegance, its movements causing a small shadow to ripple across the wall of a nearby building. The shadow is not the cat’s, but something else—perhaps the shape of a man in a trench coat, or maybe just the city dreaming itself. A pigeon alights on the red umbrella’s frame, pecking at the raindrops that collect like tiny pearls. Meanwhile, a flickering television mounted on the wall above the lamppost plays an old home movie in black and white, its characters laughing and dancing in a kitchen filled with spice jars, one of which is labeled \"PEPPER\" in the same hand as the crate. The sound from the TV mingles with the harmonica and the rain, creating a strange, layered harmony. In the corner of the square, a child’s red balloon drifts just above the puddle, tethered to a string that disappears into the folds of the woman’s coat. She watches it carefully, her smile deepening as the balloon wavers in the breeze, its surface shimmering like a soap bubble. The crate, forgotten now in the corner of the scene, continues to leak its peppercorns into the puddle, where each one seems to dissolve into the water with a soft, aromatic sigh, leaving behind the scent of something both comforting and uncanny.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 72,
+   "n_uncovered": 3,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "tv_above_lamppost_relation",
+     "tv_above_lamppost"
+    ]
+   ]
+  }
+ }
+}

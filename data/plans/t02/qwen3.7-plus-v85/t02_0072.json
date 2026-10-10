@@ -1,0 +1,139 @@
+{
+ "style": "oil painting with thick brushstrokes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a weathered shipyard dock with wooden planks",
+   "question": "Does the image show a weathered shipyard dock with wooden planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue coat",
+   "question": "Is there a man in a blue coat?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "barrel",
+   "type": "entity",
+   "class": "barrel",
+   "plural": "barrels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal barrel",
+   "question": "Is there a rusted metal barrel?",
+   "box": [
+    600,
+    400,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "man_wrench",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a blue coat holds a heavy iron wrench in his right hand",
+   "question": "Is the man in a blue coat holding a heavy iron wrench in his right hand?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue coat is standing",
+   "question": "Is the man in a blue coat standing?"
+  },
+  {
+   "id": "barrel_sitting",
+   "type": "state",
+   "of": "barrel",
+   "desc": "the rusted metal barrel is sitting on the dock",
+   "question": "Is the rusted metal barrel sitting on the dock?"
+  },
+  {
+   "id": "man_looking_barrel",
+   "type": "action",
+   "of": [
+    "man",
+    "barrel"
+   ],
+   "desc": "the man in a blue coat looks directly at the rusted metal barrel",
+   "question": "Is the man in a blue coat looking directly at the rusted metal barrel?"
+  },
+  {
+   "id": "barrel_next_to_man",
+   "type": "relation",
+   "of": [
+    "barrel",
+    "man"
+   ],
+   "desc": "the rusted metal barrel is next to the man in a blue coat",
+   "question": "Is the rusted metal barrel next to the man in a blue coat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "barrel_paint",
+   "type": "attribute",
+   "of": "barrel",
+   "desc": "the rusted metal barrel has peeling paint",
+   "question": "Does the rusted metal barrel have peeling paint?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "barrel",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0072",
+ "prompt": "In this oil painting, a man in a blue coat stands on the left side of a weathered shipyard dock. He holds a heavy iron wrench firmly in his right hand. Next to him on the center right sits a rusted metal barrel with peeling paint. The man looks directly at the barrel while standing still. There is no water visible in the background or foreground of the scene. The thick brushstrokes capture the texture of the wooden planks beneath their feet. The composition focuses strictly on these two figures and their immediate surroundings without any additional distractions or elements present in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

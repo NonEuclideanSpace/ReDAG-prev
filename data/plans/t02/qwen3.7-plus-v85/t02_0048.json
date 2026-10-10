@@ -1,0 +1,129 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop scene",
+   "question": "Does the image show a rooftop scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    600,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the silver dress holds a glass of champagne",
+   "question": "Is the woman in the silver dress holding a glass of champagne?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the silver dress is looking at the man",
+   "question": "Is the woman in the silver dress looking towards the man?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is sitting",
+   "question": "Is the man in the blue suit sitting?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the silver dress is standing",
+   "question": "Is the woman in the silver dress standing?"
+  },
+  {
+   "id": "sky",
+   "type": "entity",
+   "class": "sky",
+   "plural": "skies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the sky above the rooftop",
+   "question": "Is there sky visible above the rooftop?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t02_0048",
+ "prompt": "In this oil painting, a woman in a silver dress stands on the left side of the rooftop. A man in a blue suit sits on the right side. The woman is holding a glass of champagne. She is looking at the man. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

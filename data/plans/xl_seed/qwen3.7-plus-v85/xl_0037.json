@@ -1,0 +1,416 @@
+{
+ "style": "watercolor illustration, soft transitions, warm lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered bicycle repair shop with shelves and a back wall",
+   "question": "Does the image depict a cluttered bicycle repair shop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic with rolled-up sleeves",
+   "question": "Is there a mechanic with rolled-up sleeves?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "blue_bike",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage blue bicycle",
+   "question": "Is there a vintage blue bicycle?",
+   "box": [
+    300,
+    300,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "stand",
+   "type": "entity",
+   "class": "repair stand",
+   "plural": "repair stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle repair stand",
+   "question": "Is there a bicycle repair stand?",
+   "box": [
+    400,
+    400,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a raincoat",
+   "question": "Is there a customer in a raincoat?",
+   "box": [
+    50,
+    250,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "helmet_hand",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a helmet",
+   "question": "Is there a helmet?",
+   "box": [
+    150,
+    450,
+    250,
+    550
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "display rack",
+   "plural": "display racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a display rack",
+   "question": "Is there a display rack?",
+   "box": [
+    800,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "rack_helmets",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 3,
+   "count_exact": true,
+   "desc": "colorful helmets in red, yellow, and black",
+   "question": "Are there colorful helmets?",
+   "box": [
+    820,
+    350,
+    980,
+    500
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier dog",
+   "question": "Is there a small terrier dog?",
+   "box": [
+    100,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "tires",
+   "type": "entity",
+   "class": "tire",
+   "plural": "tires",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of old tires",
+   "question": "Is there a pile of old tires?",
+   "box": [
+    80,
+    750,
+    320,
+    980
+   ]
+  },
+  {
+   "id": "tube",
+   "type": "entity",
+   "class": "rubber tube",
+   "plural": "rubber tubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rubber tube",
+   "question": "Is there a rubber tube?",
+   "box": [
+    150,
+    850,
+    250,
+    920
+   ]
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "shelves lined with cans, boxes, and wheels",
+   "question": "Are there shelves lined with cans, boxes, and wheels?",
+   "box": [
+    200,
+    100,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "orange_bike",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright orange bicycle",
+   "question": "Is there a bright orange bicycle?",
+   "box": [
+    750,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench with scattered tools",
+   "question": "Is there a workbench with scattered tools?",
+   "box": [
+    50,
+    800,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "mechanic_adjusting",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "blue_bike"
+   ],
+   "desc": "the mechanic adjusts the chain of the blue bicycle",
+   "question": "Is the mechanic adjusting the chain of the blue bicycle?"
+  },
+  {
+   "id": "bike_on_stand",
+   "type": "relation",
+   "of": [
+    "blue_bike",
+    "stand"
+   ],
+   "desc": "the blue bicycle is mounted on the repair stand",
+   "question": "Is the blue bicycle mounted on the repair stand?"
+  },
+  {
+   "id": "customer_holding",
+   "type": "action",
+   "of": [
+    "customer",
+    "helmet_hand"
+   ],
+   "desc": "the customer holds the helmet",
+   "question": "Is the customer holding the helmet?"
+  },
+  {
+   "id": "customer_looking",
+   "type": "action",
+   "of": [
+    "customer",
+    "blue_bike"
+   ],
+   "desc": "the customer looks at the blue bicycle",
+   "question": "Is the customer looking at the blue bicycle?"
+  },
+  {
+   "id": "rack_right",
+   "type": "relation",
+   "of": [
+    "rack",
+    "mechanic"
+   ],
+   "desc": "the display rack is to the right of the mechanic",
+   "question": "Is the display rack to the right of the mechanic?"
+  },
+  {
+   "id": "helmets_on_rack",
+   "type": "relation",
+   "of": [
+    "rack_helmets",
+    "rack"
+   ],
+   "desc": "the colorful helmets are on the display rack",
+   "question": "Are the colorful helmets on the display rack?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the terrier dog is sitting",
+   "question": "Is the terrier dog sitting?"
+  },
+  {
+   "id": "dog_on_tires",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tires"
+   ],
+   "desc": "the dog sits on the pile of tires",
+   "question": "Is the dog sitting on the pile of tires?"
+  },
+  {
+   "id": "dog_chewing",
+   "type": "action",
+   "of": [
+    "dog",
+    "tube"
+   ],
+   "desc": "the dog chews on the rubber tube",
+   "question": "Is the dog chewing on the rubber tube?"
+  },
+  {
+   "id": "bike_leaning",
+   "type": "state",
+   "of": "orange_bike",
+   "desc": "the orange bicycle leans against the back wall",
+   "question": "Does the orange bicycle lean against the back wall?"
+  },
+  {
+   "id": "tools_scattered",
+   "type": "state",
+   "of": "workbench",
+   "desc": "wrenches and pliers are scattered on the workbench",
+   "question": "Are wrenches scattered on the workbench?"
+  },
+  {
+   "id": "shelves_behind",
+   "type": "relation",
+   "of": [
+    "shelves",
+    "mechanic"
+   ],
+   "desc": "the shelves are behind the mechanic",
+   "question": "Are the shelves behind the mechanic?"
+  },
+  {
+   "id": "mechanic_standing",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic with rolled-up sleeves is standing",
+   "question": "Is the mechanic standing?"
+  },
+  {
+   "id": "customer_anticipation",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer in a raincoat has an expression of anticipation",
+   "question": "Does the customer in a raincoat have an expression of anticipation?"
+  },
+  {
+   "id": "helmets_red",
+   "type": "attribute",
+   "of": "rack_helmets",
+   "desc": "one helmet is red",
+   "question": "Is one of the colorful helmets red?"
+  },
+  {
+   "id": "helmets_yellow",
+   "type": "attribute",
+   "of": "rack_helmets",
+   "desc": "one helmet is yellow",
+   "question": "Is one of the colorful helmets yellow?"
+  },
+  {
+   "id": "helmets_black",
+   "type": "attribute",
+   "of": "rack_helmets",
+   "desc": "one helmet is black",
+   "question": "Is one of the colorful helmets black?"
+  },
+  {
+   "id": "pliers_scattered",
+   "type": "state",
+   "of": "workbench",
+   "desc": "pliers are scattered on the workbench",
+   "question": "Are pliers scattered on the workbench?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stand",
+   "to": "blue_bike",
+   "kind": "support"
+  },
+  {
+   "from": "tires",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0037",
+ "prompt": "This watercolor illustration depicts a cluttered yet charming bicycle repair shop filled with tools and parts. In the center, a mechanic with rolled-up sleeves adjusts the chain of a vintage blue bicycle mounted on a repair stand. To the left, a customer in a raincoat holds a helmet, looking at the bike with anticipation. On the right, a rack displays colorful helmets in red, yellow, and black. A small terrier dog sits on a pile of old tires in the foreground, chewing on a rubber tube. Behind the mechanic, shelves are lined with cans of lubricant, boxes of screws, and spare wheels. A hanging light fixture casts a warm glow over the workspace, highlighting the metallic sheen of wrenches and pliers scattered on the workbench. Another bicycle leans against the back wall, its frame painted bright orange. The watercolor technique allows for soft transitions between the mechanical details and the human figures, creating a lively yet relaxed mood. The interaction between the mechanic and the customer suggests a friendly service exchange, while the dog adds a playful element to the industrial setting. The composition balances the vertical lines of the bikes with the horizontal shelves, creating a dynamic yet cohesive scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room interior",
+   "question": "Does the image show a library reading room interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    250,
+    300,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    600,
+    250,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds an open book",
+   "question": "Is the woman in a blue dress holding an open book?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green shirt is standing",
+   "question": "Is the man in a green shirt standing?"
+  },
+  {
+   "id": "woman_left_table",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in a blue dress is on the left side of the wooden table",
+   "question": "Is the woman in a blue dress positioned on the left side of the wooden table?"
+  },
+  {
+   "id": "man_right_table",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in a green shirt is on the right side of the wooden table",
+   "question": "Is the man in a green shirt positioned on the right side of the wooden table?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress looks at the man in a green shirt",
+   "question": "Is the woman in a blue dress looking at the man in a green shirt?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0016",
+ "prompt": "In a flat vector illustration of a library reading room, a woman in a blue dress sits on the left side of a wooden table. A man in a green shirt stands on the right side of the same table. The woman is holding an open book. She is looking at the man. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

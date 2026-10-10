@@ -1,0 +1,389 @@
+{
+ "style": "photorealistic macro photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background with no flowers",
+   "question": "Is the background neutral and free of flowers?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bee",
+   "type": "entity",
+   "class": "mechanical honeybee",
+   "plural": "mechanical honeybees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large mechanical honeybee",
+   "question": "Is there a large mechanical honeybee?",
+   "box": [
+    212,
+    212,
+    812,
+    812
+   ]
+  },
+  {
+   "id": "wings",
+   "type": "entity",
+   "class": "wing",
+   "plural": "wings",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two wings made of intricate metal filigree",
+   "question": "Are there two wings made of intricate metal filigree?",
+   "box": [
+    300,
+    150,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "eyes",
+   "type": "entity",
+   "class": "eye",
+   "plural": "eyes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two large, multifaceted eyes",
+   "question": "Are there two large, multifaceted eyes?",
+   "box": [
+    400,
+    250,
+    624,
+    350
+   ]
+  },
+  {
+   "id": "legs",
+   "type": "entity",
+   "class": "leg",
+   "plural": "legs",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six segmented legs",
+   "question": "Are there six segmented legs?",
+   "box": [
+    250,
+    500,
+    774,
+    800
+   ]
+  },
+  {
+   "id": "smoke",
+   "type": "entity",
+   "class": "smoke trail",
+   "plural": "smoke trails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin trail of oily smoke",
+   "question": "Is there a thin trail of oily smoke?",
+   "box": [
+    450,
+    100,
+    574,
+    250
+   ]
+  },
+  {
+   "id": "stinger",
+   "type": "entity",
+   "class": "stinger",
+   "plural": "stingers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spiral-shaped glass needle stinger",
+   "question": "Is there a spiral-shaped glass needle stinger?",
+   "box": [
+    480,
+    750,
+    544,
+    850
+   ]
+  },
+  {
+   "id": "panel",
+   "type": "entity",
+   "class": "access panel",
+   "plural": "access panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a circular access panel",
+   "question": "Is there a circular access panel?",
+   "box": [
+    460,
+    300,
+    564,
+    400
+   ]
+  },
+  {
+   "id": "gears",
+   "type": "entity",
+   "class": "gear",
+   "plural": "gears",
+   "count": 2,
+   "count_exact": false,
+   "desc": "internal gears",
+   "question": "Are internal gears visible?",
+   "box": [
+    480,
+    320,
+    544,
+    380
+   ]
+  },
+  {
+   "id": "bee_hovering",
+   "type": "state",
+   "of": "bee",
+   "desc": "the mechanical honeybee is in a hovering pose",
+   "question": "Is the mechanical honeybee in a hovering pose?"
+  },
+  {
+   "id": "bee_dusty",
+   "type": "attribute",
+   "of": "bee",
+   "desc": "the mechanical honeybee has a dusty texture",
+   "question": "Does the mechanical honeybee have a dusty texture?"
+  },
+  {
+   "id": "brass_dented",
+   "type": "attribute",
+   "of": "bee",
+   "desc": "the brass sections of the mechanical honeybee are visibly dented",
+   "question": "Are the brass sections of the mechanical honeybee visibly dented?"
+  },
+  {
+   "id": "plastic_scratched",
+   "type": "attribute",
+   "of": "bee",
+   "desc": "the black plastic stripes of the mechanical honeybee are scratched",
+   "question": "Are the black plastic stripes of the mechanical honeybee scratched?"
+  },
+  {
+   "id": "wing_chipped",
+   "type": "attribute",
+   "of": "wings",
+   "desc": "one of the metal filigree wings is slightly chipped",
+   "question": "Is one of the metal filigree wings slightly chipped?"
+  },
+  {
+   "id": "leg_sparking",
+   "type": "state",
+   "of": "legs",
+   "desc": "one of the segmented legs is visibly sparking",
+   "question": "Is one of the segmented legs visibly sparking?"
+  },
+  {
+   "id": "abdomen_glow",
+   "type": "state",
+   "of": "bee",
+   "desc": "the abdomen of the mechanical honeybee glows",
+   "question": "Does the abdomen of the mechanical honeybee glow?"
+  },
+  {
+   "id": "panel_on_back",
+   "type": "relation",
+   "of": [
+    "panel",
+    "bee"
+   ],
+   "desc": "the circular access panel is on the back of the mechanical honeybee",
+   "question": "Is the circular access panel on the back of the mechanical honeybee?"
+  },
+  {
+   "id": "panel_ajar",
+   "type": "state",
+   "of": "panel",
+   "desc": "the circular access panel is slightly ajar",
+   "question": "Is the circular access panel slightly ajar?"
+  },
+  {
+   "id": "no_flower",
+   "type": "absent",
+   "desc": "a flower",
+   "question": "Is there a flower in the image?"
+  },
+  {
+   "id": "no_feathers",
+   "type": "absent",
+   "desc": "feathery wings",
+   "question": "Are the wings feathery?"
+  },
+  {
+   "id": "no_uniform_color",
+   "type": "absent",
+   "desc": "a uniformly colored body",
+   "question": "Is the body of the bee uniformly colored?"
+  },
+  {
+   "id": "smoke_from_bee",
+   "type": "relation",
+   "of": [
+    "smoke",
+    "bee"
+   ],
+   "desc": "the thin trail of oily smoke comes from the exhaust vent on the back of the mechanical honeybee",
+   "question": "Does the thin trail of oily smoke come from the mechanical honeybee?"
+  },
+  {
+   "id": "stinger_on_bee",
+   "type": "relation",
+   "of": [
+    "stinger",
+    "bee"
+   ],
+   "desc": "the glowing spiral-shaped glass needle stinger is part of the mechanical honeybee",
+   "question": "Is the glowing spiral-shaped glass needle stinger attached to the mechanical honeybee?"
+  },
+  {
+   "id": "gears_in_panel",
+   "type": "relation",
+   "of": [
+    "gears",
+    "panel"
+   ],
+   "desc": "the internal gears are visible inside the circular access panel",
+   "question": "Are the internal gears visible inside the circular access panel?"
+  },
+  {
+   "id": "wings_on_bee",
+   "type": "relation",
+   "of": [
+    "wings",
+    "bee"
+   ],
+   "desc": "the two metal filigree wings are attached to the mechanical honeybee",
+   "question": "Are the two metal filigree wings attached to the mechanical honeybee?"
+  },
+  {
+   "id": "eyes_on_bee",
+   "type": "relation",
+   "of": [
+    "eyes",
+    "bee"
+   ],
+   "desc": "the two large multifaceted eyes are part of the mechanical honeybee",
+   "question": "Are the two large multifaceted eyes part of the mechanical honeybee?"
+  },
+  {
+   "id": "legs_on_bee",
+   "type": "relation",
+   "of": [
+    "legs",
+    "bee"
+   ],
+   "desc": "the six segmented legs are attached to the mechanical honeybee",
+   "question": "Are the six segmented legs attached to the mechanical honeybee?"
+  },
+  {
+   "id": "bee_brass_plastic",
+   "type": "attribute",
+   "of": "bee",
+   "desc": "the mechanical honeybee is constructed from polished brass and black striped plastic panels",
+   "question": "Is the mechanical honeybee constructed from polished brass and black striped plastic panels?"
+  },
+  {
+   "id": "wings_translucent_iridescent",
+   "type": "attribute",
+   "of": "wings",
+   "desc": "the wings are translucent and iridescent",
+   "question": "Are the wings translucent and iridescent?"
+  },
+  {
+   "id": "eyes_green_glowing",
+   "type": "attribute",
+   "of": "eyes",
+   "desc": "the eyes are made of glowing green lenses",
+   "question": "Are the eyes made of glowing green lenses?"
+  },
+  {
+   "id": "stinger_glowing",
+   "type": "state",
+   "of": "stinger",
+   "desc": "the stinger is glowing",
+   "question": "Is the stinger glowing?"
+  },
+  {
+   "id": "panel_small",
+   "type": "attribute",
+   "of": "panel",
+   "desc": "the access panel is small",
+   "question": "Is the access panel small?"
+  },
+  {
+   "id": "abdomen_orange_warm",
+   "type": "attribute",
+   "of": "bee",
+   "desc": "the abdomen glows with a warm, orange light",
+   "question": "Does the abdomen glow with a warm, orange light?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bee",
+   "to": "wings",
+   "kind": "support"
+  },
+  {
+   "from": "bee",
+   "to": "eyes",
+   "kind": "support"
+  },
+  {
+   "from": "bee",
+   "to": "legs",
+   "kind": "support"
+  },
+  {
+   "from": "bee",
+   "to": "stinger",
+   "kind": "support"
+  },
+  {
+   "from": "bee",
+   "to": "panel",
+   "kind": "support"
+  },
+  {
+   "from": "panel",
+   "to": "gears",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_032",
+ "prompt": "A single, large, mechanical honeybee in a hovering pose. Its body is constructed from polished brass and black striped plastic panels. The brass sections are visibly dented, and the plastic stripes are scratched. Its two wings are not insect-like, but are made of intricate, translucent, iridescent metal filigree; one wing is slightly chipped. Its large, multifaceted eyes are made of two glowing green lenses. The bee has six segmented legs, and one of them is visibly sparking. A thin trail of oily smoke is coming from a single exhaust vent on its back. Its abdomen glows with a warm, orange light. The stinger is a glowing, spiral-shaped glass needle. A small, circular access panel on its back is slightly ajar, revealing some internal gears. The entire bee has a dusty texture. Importantly, this is not a real insect, its wings are not feathery, it is not on a flower, and its body is not uniformly colored.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

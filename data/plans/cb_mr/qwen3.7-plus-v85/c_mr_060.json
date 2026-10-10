@@ -1,0 +1,380 @@
+{
+ "style": "fantasy digital art, luminous magical atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a luminous magical swamp",
+   "question": "Does the image show a luminous magical swamp?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "witch",
+   "type": "entity",
+   "class": "witch",
+   "plural": "witches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a powerful swamp witch",
+   "question": "Is there a powerful swamp witch?",
+   "box": [
+    350,
+    200,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cauldron",
+   "type": "entity",
+   "class": "cauldron",
+   "plural": "cauldrons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large cauldron",
+   "question": "Is there a large cauldron?",
+   "box": [
+    250,
+    500,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "stones",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of enchanted glowing stones",
+   "question": "Is there a pile of enchanted glowing stones?",
+   "box": [
+    200,
+    700,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "staff",
+   "type": "entity",
+   "class": "staff",
+   "plural": "staves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall gnarled wooden staff",
+   "question": "Is there a tall gnarled wooden staff?",
+   "box": [
+    550,
+    100,
+    620,
+    950
+   ]
+  },
+  {
+   "id": "golem",
+   "type": "entity",
+   "class": "mud golem",
+   "plural": "mud golems",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large lumbering mud golem",
+   "question": "Is there a large lumbering mud golem?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "frog",
+   "type": "entity",
+   "class": "frog",
+   "plural": "frogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small three-eyed frog",
+   "question": "Is there a small three-eyed frog?",
+   "box": [
+    480,
+    180,
+    540,
+    240
+   ]
+  },
+  {
+   "id": "mushrooms",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five glowing mushrooms",
+   "question": "Are there exactly five glowing mushrooms?",
+   "box": [
+    300,
+    450,
+    380,
+    520
+   ]
+  },
+  {
+   "id": "heads",
+   "type": "entity",
+   "class": "shrunken head",
+   "plural": "shrunken heads",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six shrunken heads",
+   "question": "Are there exactly six shrunken heads?",
+   "box": [
+    100,
+    100,
+    300,
+    300
+   ]
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "tree branch",
+   "plural": "tree branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a twisted tree branch",
+   "question": "Is there a twisted tree branch?",
+   "box": [
+    50,
+    50,
+    350,
+    200
+   ]
+  },
+  {
+   "id": "witch_standing",
+   "type": "state",
+   "of": "witch",
+   "desc": "the swamp witch is standing",
+   "question": "Is the swamp witch standing?"
+  },
+  {
+   "id": "witch_holding_staff",
+   "type": "attribute",
+   "of": "witch",
+   "desc": "the swamp witch holds the gnarled wooden staff",
+   "question": "Is the swamp witch holding the gnarled wooden staff?"
+  },
+  {
+   "id": "witch_dropping_mushrooms",
+   "type": "action",
+   "of": [
+    "witch",
+    "mushrooms"
+   ],
+   "desc": "the swamp witch is dropping the glowing mushrooms",
+   "question": "Is the swamp witch dropping the glowing mushrooms?"
+  },
+  {
+   "id": "witch_looking_cauldron",
+   "type": "relation",
+   "of": [
+    "witch",
+    "cauldron"
+   ],
+   "desc": "the swamp witch is looking into the cauldron",
+   "question": "Is the swamp witch looking into the cauldron?"
+  },
+  {
+   "id": "witch_pointing_golem",
+   "type": "action",
+   "of": [
+    "witch",
+    "golem"
+   ],
+   "desc": "the swamp witch is pointing the staff at the mud golem",
+   "question": "Is the swamp witch pointing the staff at the mud golem?"
+  },
+  {
+   "id": "cauldron_on_stones",
+   "type": "relation",
+   "of": [
+    "cauldron",
+    "stones"
+   ],
+   "desc": "the cauldron rests on the pile of stones",
+   "question": "Is the cauldron resting on the pile of stones?"
+  },
+  {
+   "id": "golem_right_of_witch",
+   "type": "relation",
+   "of": [
+    "golem",
+    "witch"
+   ],
+   "desc": "the mud golem stands to the right of the swamp witch",
+   "question": "Is the mud golem standing to the right of the swamp witch?"
+  },
+  {
+   "id": "frog_on_hat",
+   "type": "relation",
+   "of": [
+    "frog",
+    "witch"
+   ],
+   "desc": "the three-eyed frog sits on the pointed hat of the swamp witch",
+   "question": "Is the three-eyed frog sitting on the pointed hat of the swamp witch?"
+  },
+  {
+   "id": "frog_facing_golem",
+   "type": "relation",
+   "of": [
+    "frog",
+    "golem"
+   ],
+   "desc": "the three-eyed frog faces the mud golem",
+   "question": "Is the three-eyed frog facing the mud golem?"
+  },
+  {
+   "id": "mushrooms_into_cauldron",
+   "type": "relation",
+   "of": [
+    "mushrooms",
+    "cauldron"
+   ],
+   "desc": "the glowing mushrooms are falling into the cauldron",
+   "question": "Are the glowing mushrooms falling into the cauldron?"
+  },
+  {
+   "id": "cauldron_between",
+   "type": "relation",
+   "of": [
+    "cauldron",
+    "witch"
+   ],
+   "desc": "the cauldron is between the swamp witch and the pool of water",
+   "question": "Is the cauldron positioned between the swamp witch and the pool of water?"
+  },
+  {
+   "id": "heads_on_branch",
+   "type": "relation",
+   "of": [
+    "heads",
+    "branch"
+   ],
+   "desc": "the shrunken heads hang from the twisted tree branch",
+   "question": "Do the shrunken heads hang from the twisted tree branch?"
+  },
+  {
+   "id": "branch_behind_witch",
+   "type": "relation",
+   "of": [
+    "branch",
+    "witch"
+   ],
+   "desc": "the twisted tree branch is behind the swamp witch",
+   "question": "Is the twisted tree branch behind the swamp witch?"
+  },
+  {
+   "id": "staff_taller",
+   "type": "attribute",
+   "of": "staff",
+   "desc": "the gnarled wooden staff is taller than the swamp witch",
+   "question": "Is the gnarled wooden staff taller than the swamp witch?"
+  },
+  {
+   "id": "cauldron_brighter",
+   "type": "relation",
+   "of": [
+    "cauldron",
+    "stones"
+   ],
+   "desc": "the light from the cauldron is brighter than the glow from the stones",
+   "question": "Is the light from the cauldron brighter than the glow from the stones?"
+  },
+  {
+   "id": "frog_smaller",
+   "type": "attribute",
+   "of": "frog",
+   "desc": "the three-eyed frog is smaller than the hand of the swamp witch",
+   "question": "Is the three-eyed frog smaller than the hand of the swamp witch?"
+  },
+  {
+   "id": "witch_in_front_cauldron",
+   "type": "relation",
+   "of": [
+    "witch",
+    "cauldron"
+   ],
+   "desc": "the swamp witch stands in front of the cauldron",
+   "question": "Is the swamp witch standing in front of the cauldron?"
+  },
+  {
+   "id": "pool",
+   "type": "entity",
+   "class": "pool",
+   "plural": "pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pool of bubbling green water",
+   "question": "Is there a pool of bubbling green water?",
+   "box": [
+    700,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "witch_hat",
+   "type": "attribute",
+   "of": "witch",
+   "desc": "the witch wears a pointed hat",
+   "question": "Is the witch wearing a pointed hat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stones",
+   "to": "cauldron",
+   "kind": "support"
+  },
+  {
+   "from": "branch",
+   "to": "heads",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_060",
+ "prompt": "In a luminous, magical swamp, a powerful swamp witch stands in front of her cauldron, which is resting on a pile of enchanted, glowing stones. The witch is holding a gnarled wooden staff and pointing it at a large, lumbering mud golem that stands to her right. The staff the witch holds is taller than the witch. A small, three-eyed frog is sitting on top of the witch's pointed hat, facing the golem. The witch is dropping a handful of glowing mushrooms into the cauldron; their number is two more than the number of eyes on the frog. The cauldron is between the witch and a pool of bubbling green water. Behind the witch, a collection of shrunken heads hangs from a twisted tree branch; their number is twice the number of eyes on the frog. The witch is looking into her cauldron. The light from the cauldron is brighter than the glow from the enchanted stones. The frog is smaller than the witch's hand.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

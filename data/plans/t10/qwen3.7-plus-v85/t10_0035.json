@@ -1,0 +1,382 @@
+{
+ "style": "vibrant anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station",
+   "question": "Does the image show the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    280,
+    500,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic wearing blue overalls?",
+   "box": [
+    400,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny red fire truck",
+   "question": "Is there a shiny red fire truck?",
+   "box": [
+    350,
+    100,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "captain",
+   "type": "entity",
+   "class": "captain",
+   "plural": "captains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a captain in a formal uniform",
+   "question": "Is there a captain wearing a formal uniform?",
+   "box": [
+    700,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "rookie",
+   "type": "entity",
+   "class": "rookie",
+   "plural": "rookies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rookie in a grey shirt",
+   "question": "Is there a rookie wearing a grey shirt?",
+   "box": [
+    850,
+    250,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tabby cat",
+   "question": "Is there a small tabby cat?",
+   "box": [
+    800,
+    600,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden desk",
+   "question": "Is there a wooden desk?",
+   "box": [
+    750,
+    650,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_expression",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter has a determined expression",
+   "question": "Does the firefighter have a determined expression?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dalmatian_looking",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots looks up",
+   "question": "Is the dalmatian with black spots looking up?"
+  },
+  {
+   "id": "mechanic_leaning",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is leaning",
+   "question": "Is the mechanic leaning?"
+  },
+  {
+   "id": "captain_pointing",
+   "type": "relation",
+   "of": [
+    "captain",
+    "map"
+   ],
+   "desc": "the captain points toward the large wall map",
+   "question": "Is the captain pointing toward the large wall map?"
+  },
+  {
+   "id": "captain_discussing",
+   "type": "action",
+   "of": [
+    "captain",
+    "rookie"
+   ],
+   "desc": "the captain discusses strategy with the rookie",
+   "question": "Is the captain discussing strategy with the rookie?"
+  },
+  {
+   "id": "rookie_nodding",
+   "type": "state",
+   "of": "rookie",
+   "desc": "the rookie is nodding earnestly",
+   "question": "Is the rookie nodding earnestly?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sleeping peacefully curled into a tight ball",
+   "question": "Is the cat sleeping peacefully curled into a tight ball?"
+  },
+  {
+   "id": "dalmatian_next_to_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian is next to the firefighter",
+   "question": "Is the dalmatian next to the firefighter?"
+  },
+  {
+   "id": "mechanic_against_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic leans against the fire truck",
+   "question": "Is the mechanic leaning against the fire truck?"
+  },
+  {
+   "id": "rookie_beside_captain",
+   "type": "relation",
+   "of": [
+    "rookie",
+    "captain"
+   ],
+   "desc": "the rookie stands beside the captain",
+   "question": "Is the rookie standing beside the captain?"
+  },
+  {
+   "id": "cat_on_desk",
+   "type": "relation",
+   "of": [
+    "cat",
+    "desk"
+   ],
+   "desc": "the cat is on top of the wooden desk",
+   "question": "Is the cat on top of the wooden desk?"
+  },
+  {
+   "id": "no_smoke_fire",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the station?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in a yellow helmet stands",
+   "question": "Is the firefighter in a yellow helmet standing?"
+  },
+  {
+   "id": "dalmatian_looking_at_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian with black spots looks at the firefighter in a yellow helmet",
+   "question": "Is the dalmatian with black spots looking at the firefighter in a yellow helmet?"
+  },
+  {
+   "id": "captain_pointing_at_map",
+   "type": "relation",
+   "of": [
+    "captain",
+    "map"
+   ],
+   "desc": "the captain in a formal uniform points toward the large wall map",
+   "question": "Is the captain in a formal uniform pointing toward the large wall map?"
+  },
+  {
+   "id": "dalmatian_attentive",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots has attentive eyes",
+   "question": "Does the dalmatian with black spots have attentive eyes?"
+  },
+  {
+   "id": "rag",
+   "type": "entity",
+   "class": "rag",
+   "plural": "rags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rag",
+   "question": "Is there a rag?",
+   "box": [
+    500,
+    600,
+    580,
+    680
+   ]
+  },
+  {
+   "id": "mechanic_grease",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the mechanic has grease on his hands",
+   "question": "Does the mechanic have grease on his hands?"
+  },
+  {
+   "id": "mechanic_wiping",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "rag"
+   ],
+   "desc": "the mechanic wipes his hands with a rag",
+   "question": "Is the mechanic wiping his hands with a rag?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the station?"
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "wall map",
+   "plural": "wall maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large wall map",
+   "question": "Is there a large wall map?",
+   "box": [
+    750,
+    100,
+    980,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0035",
+ "prompt": "In a vibrant anime style illustration set inside a bustling fire station, a firefighter in a yellow helmet stands on the left, holding a coiled hose with a determined expression. Next to him, a dalmatian with black spots sits calmly, looking up at the firefighter with attentive eyes. In the center of the room, a mechanic in blue overalls leans against a shiny red fire truck, wiping grease from his hands with a rag. To the right, a captain in a formal uniform points toward a large wall map, discussing strategy with a rookie in a grey shirt who stands beside her, nodding earnestly. A small tabby cat sleeps peacefully on top of a wooden desk in the background, curled into a tight ball. The scene captures the daily routine and camaraderie of the station crew. There is no smoke or fire visible in the station.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "style": "soft watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty construction site without additional clutter or background details",
+   "question": "Does the image show a dusty construction site without additional clutter or background details?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "supervisor",
+   "type": "entity",
+   "class": "supervisor",
+   "plural": "supervisors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a supervisor in an orange vest",
+   "question": "Is there a supervisor in an orange vest?",
+   "box": [
+    380,
+    180,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "excavator",
+   "type": "entity",
+   "class": "excavator",
+   "plural": "excavators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty excavator",
+   "question": "Is there a rusty excavator?",
+   "box": [
+    700,
+    300,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "dirt_pile",
+   "type": "entity",
+   "class": "pile of dirt",
+   "plural": "piles of dirt",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pile of dirt",
+   "question": "Is there a pile of dirt?",
+   "box": [
+    850,
+    600,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in a yellow hard hat holds blueprints firmly",
+   "question": "Is the worker in a yellow hard hat holding blueprints firmly?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in a yellow hard hat is standing",
+   "question": "Is the worker in a yellow hard hat standing?"
+  },
+  {
+   "id": "supervisor_pointing",
+   "type": "action",
+   "of": [
+    "supervisor",
+    "worker"
+   ],
+   "desc": "the supervisor in an orange vest points at the plans held by the worker",
+   "question": "Is the supervisor in an orange vest pointing at the plans held by the worker?"
+  },
+  {
+   "id": "supervisor_looking",
+   "type": "relation",
+   "of": [
+    "supervisor",
+    "worker"
+   ],
+   "desc": "the supervisor in an orange vest looks directly at the worker",
+   "question": "Is the supervisor in an orange vest looking directly at the worker?"
+  },
+  {
+   "id": "excavator_idle",
+   "type": "state",
+   "of": "excavator",
+   "desc": "the rusty excavator sits idle",
+   "question": "Is the rusty excavator sitting idle?"
+  },
+  {
+   "id": "excavator_near_dirt",
+   "type": "relation",
+   "of": [
+    "excavator",
+    "dirt_pile"
+   ],
+   "desc": "the rusty excavator is near the pile of dirt",
+   "question": "Is the rusty excavator near the pile of dirt?"
+  },
+  {
+   "id": "no_fencing",
+   "type": "absent",
+   "desc": "safety fencing",
+   "question": "Is there any safety fencing visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0020",
+ "prompt": "In a soft watercolor illustration, a worker in a yellow hard hat stands on the left, holding blueprints firmly. In the center, a supervisor in an orange vest points at the plans with authority. To the right, a rusty excavator sits idle near a pile of dirt. The supervisor looks directly at the worker while gesturing. There is no safety fencing visible in the background. The scene captures a moment of coordination amidst the dusty construction site, focusing strictly on these three figures and their immediate surroundings without additional clutter or background details.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

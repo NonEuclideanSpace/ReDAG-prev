@@ -1,0 +1,138 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm harvest scene",
+   "question": "Does the image show a farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer",
+   "question": "Is there a farmer?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hat",
+   "question": "Is there a woman in a yellow hat?",
+   "box": [
+    450,
+    220,
+    800,
+    920
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer in a blue shirt holds a basket of corn",
+   "question": "Is the farmer in a blue shirt holding a basket of corn?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a blue shirt is standing",
+   "question": "Is the farmer in a blue shirt standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a yellow hat is standing",
+   "question": "Is the woman in a yellow hat standing?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "farmer"
+   ],
+   "desc": "the woman in a yellow hat looks at the farmer in a blue shirt",
+   "question": "Is the woman in a yellow hat looking at the farmer in a blue shirt?"
+  },
+  {
+   "id": "woman_next_to_farmer",
+   "type": "relation",
+   "of": [
+    "woman",
+    "farmer"
+   ],
+   "desc": "the woman in a yellow hat stands next to the farmer in a blue shirt",
+   "question": "Is the woman in a yellow hat standing next to the farmer in a blue shirt?"
+  },
+  {
+   "id": "handover_corn",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the farmer in a blue shirt hands a single ear of corn to the woman in a yellow hat",
+   "question": "Is the farmer in a blue shirt handing a single ear of corn to the woman in a yellow hat?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the background?"
+  },
+  {
+   "id": "farmer_blue_shirt",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer wears a blue shirt",
+   "question": "Does the farmer wear a blue shirt?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0098",
+ "prompt": "A photorealistic photo captures a farm harvest scene. On the left, a farmer in a blue shirt stands holding a basket of corn. In the center, a woman in a yellow hat looks at the farmer while standing next to him. The farmer is handing a single ear of corn to the woman. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

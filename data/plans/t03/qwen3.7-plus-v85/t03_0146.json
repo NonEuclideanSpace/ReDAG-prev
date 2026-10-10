@@ -1,0 +1,191 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image depict a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a blue cap",
+   "question": "Is there a boy wearing a blue cap?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl wearing pink glasses",
+   "question": "Is there a girl wearing pink glasses?",
+   "box": [
+    400,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver robot",
+   "question": "Is there a silver robot?",
+   "box": [
+    550,
+    500,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with orange fur",
+   "question": "Is there a cat with orange fur?",
+   "box": [
+    750,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "poster",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds a green poster board upright",
+   "question": "Is the boy holding a green poster board upright?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy is standing",
+   "question": "Is the boy standing?"
+  },
+  {
+   "id": "girl_pointing",
+   "type": "action",
+   "of": [
+    "girl",
+    "robot"
+   ],
+   "desc": "the girl points at the silver robot",
+   "question": "Is the girl pointing at the silver robot?"
+  },
+  {
+   "id": "robot_sitting",
+   "type": "state",
+   "of": "robot",
+   "desc": "the silver robot sits still",
+   "question": "Is the silver robot sitting still?"
+  },
+  {
+   "id": "robot_next_to_hand",
+   "type": "relation",
+   "of": [
+    "robot",
+    "girl"
+   ],
+   "desc": "the silver robot is next to the girl's hand",
+   "question": "Is the silver robot positioned next to the girl's hand?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat watches the scene closely",
+   "question": "Is the cat watching the scene closely?"
+  },
+  {
+   "id": "boy_looking_at_girl",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy looks at the girl",
+   "question": "Is the boy looking at the girl?"
+  },
+  {
+   "id": "girl_gesturing",
+   "type": "action",
+   "of": [
+    "girl",
+    "robot"
+   ],
+   "desc": "the girl gestures toward the robot",
+   "question": "Is the girl gesturing toward the robot?"
+  },
+  {
+   "id": "no_text",
+   "type": "absent",
+   "desc": "text on the poster",
+   "question": "Is there any text visible on the green poster board?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "robot",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0146",
+ "prompt": "In a flat vector illustration of a school science fair, a boy in a blue cap stands on the left. He holds a green poster board upright. In the center, a girl with pink glasses points at a silver robot on the table. The robot sits still next to her hand. On the right, a cat with orange fur watches the scene closely. There is no text on the poster. The boy looks at the girl. The girl gestures toward the robot. The cat observes from the side.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

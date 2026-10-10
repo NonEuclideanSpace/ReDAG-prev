@@ -1,0 +1,462 @@
+{
+ "style": "photorealistic photo, natural lighting, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a carpenter's workshop with a large window in the background and a shelf",
+   "question": "Does the image show a carpenter's workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "carpenter",
+   "type": "entity",
+   "class": "carpenter",
+   "plural": "carpenters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carpenter wearing a plaid shirt",
+   "question": "Is there a carpenter wearing a plaid shirt?",
+   "box": [
+    350,
+    200,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    400,
+    500,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "oak workbench",
+   "plural": "oak workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sturdy oak workbench",
+   "question": "Is there a sturdy oak workbench?",
+   "box": [
+    100,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "hammer",
+   "type": "entity",
+   "class": "hammer",
+   "plural": "hammers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hammer",
+   "question": "Is there a hammer?",
+   "box": [
+    150,
+    420,
+    200,
+    480
+   ]
+  },
+  {
+   "id": "chisel",
+   "type": "entity",
+   "class": "chisel",
+   "plural": "chisels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chisel",
+   "question": "Is there a chisel?",
+   "box": [
+    220,
+    420,
+    270,
+    480
+   ]
+  },
+  {
+   "id": "tape",
+   "type": "entity",
+   "class": "measuring tape",
+   "plural": "measuring tapes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a measuring tape",
+   "question": "Is there a measuring tape?",
+   "box": [
+    290,
+    420,
+    340,
+    480
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    750,
+    500,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "lumber_stack",
+   "type": "entity",
+   "class": "stack of lumber",
+   "plural": "stacks of lumber",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of lumber",
+   "question": "Is there a stack of lumber?",
+   "box": [
+    700,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "apprentice",
+   "type": "entity",
+   "class": "young man",
+   "plural": "young men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man",
+   "question": "Is there a young man?",
+   "box": [
+    50,
+    250,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "plank",
+   "type": "entity",
+   "class": "pine plank",
+   "plural": "pine planks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy pine plank",
+   "question": "Is there a heavy pine plank?",
+   "box": [
+    20,
+    400,
+    200,
+    600
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee mug",
+   "question": "Is there a coffee mug?",
+   "box": [
+    850,
+    200,
+    900,
+    280
+   ]
+  },
+  {
+   "id": "radio",
+   "type": "entity",
+   "class": "radio",
+   "plural": "radios",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a radio",
+   "question": "Is there a radio?",
+   "box": [
+    920,
+    200,
+    980,
+    280
+   ]
+  },
+  {
+   "id": "carpenter_sanding",
+   "type": "action",
+   "of": [
+    "carpenter",
+    "chair"
+   ],
+   "desc": "the man wearing a plaid shirt sands the wooden chair leg",
+   "question": "Is the man wearing a plaid shirt sanding the wooden chair leg?"
+  },
+  {
+   "id": "sawdust",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "sawdust flies around the hands of the man wearing a plaid shirt",
+   "question": "Is sawdust flying around the hands of the man wearing a plaid shirt?"
+  },
+  {
+   "id": "tools_on_bench",
+   "type": "relation",
+   "of": [
+    "hammer",
+    "workbench"
+   ],
+   "desc": "the hammer is on the oak workbench",
+   "question": "Is the hammer on the oak workbench?"
+  },
+  {
+   "id": "chisel_on_bench",
+   "type": "relation",
+   "of": [
+    "chisel",
+    "workbench"
+   ],
+   "desc": "the chisel is on the oak workbench",
+   "question": "Is the chisel on the oak workbench?"
+  },
+  {
+   "id": "tape_on_bench",
+   "type": "relation",
+   "of": [
+    "tape",
+    "workbench"
+   ],
+   "desc": "the measuring tape is on the oak workbench",
+   "question": "Is the measuring tape on the oak workbench?"
+  },
+  {
+   "id": "cat_on_lumber",
+   "type": "relation",
+   "of": [
+    "cat",
+    "lumber_stack"
+   ],
+   "desc": "the tabby cat sits on the stack of lumber",
+   "question": "Is the tabby cat sitting on the stack of lumber?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is grooming its paw",
+   "question": "Is the tabby cat grooming its paw?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "relation",
+   "of": [
+    "cat",
+    "carpenter"
+   ],
+   "desc": "the tabby cat is observing the activity",
+   "question": "Is the tabby cat looking towards the man sanding the chair?"
+  },
+  {
+   "id": "apprentice_carrying",
+   "type": "action",
+   "of": [
+    "apprentice",
+    "plank"
+   ],
+   "desc": "the young man carries the heavy pine plank",
+   "question": "Is the young man carrying the heavy pine plank?"
+  },
+  {
+   "id": "apprentice_walking",
+   "type": "relation",
+   "of": [
+    "apprentice",
+    "workbench"
+   ],
+   "desc": "the young man is walking toward the workbench",
+   "question": "Is the young man walking toward the oak workbench?"
+  },
+  {
+   "id": "radio_next_to_mug",
+   "type": "relation",
+   "of": [
+    "radio",
+    "mug"
+   ],
+   "desc": "the radio is next to the coffee mug",
+   "question": "Is the radio next to the coffee mug?"
+  },
+  {
+   "id": "belt_hanging",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the tool belt hangs on a hook nearby",
+   "question": "Is the tool belt hanging on a hook nearby?"
+  },
+  {
+   "id": "hook",
+   "type": "entity",
+   "class": "hook",
+   "plural": "hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hook",
+   "question": "Is there a hook?",
+   "box": [
+    800,
+    300,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "carpenter_standing",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the man wearing a plaid shirt and a tool belt is standing",
+   "question": "Is the man wearing a plaid shirt and a tool belt standing?"
+  },
+  {
+   "id": "belt_on_hook",
+   "type": "relation",
+   "of": [
+    "carpenter",
+    "hook"
+   ],
+   "desc": "the tool belt of the man wearing a plaid shirt hangs on the hook",
+   "question": "Does the tool belt of the man wearing a plaid shirt hang on the hook?"
+  },
+  {
+   "id": "apprentice_walking_state",
+   "type": "state",
+   "of": "apprentice",
+   "desc": "the young man is walking",
+   "question": "Is the young man walking?"
+  },
+  {
+   "id": "window_bg",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window",
+   "question": "Is there a large window?",
+   "box": [
+    300,
+    50,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "shelf_bg",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf",
+   "question": "Is there a shelf?",
+   "box": [
+    800,
+    200,
+    980,
+    350
+   ]
+  },
+  {
+   "id": "carpenter_belt",
+   "type": "attribute",
+   "of": "carpenter",
+   "desc": "the carpenter wears a tool belt",
+   "question": "Is the carpenter wearing a tool belt?"
+  },
+  {
+   "id": "mug_on_shelf",
+   "type": "relation",
+   "of": [
+    "mug",
+    "shelf_bg"
+   ],
+   "desc": "the coffee mug sits on the shelf",
+   "question": "Is the coffee mug sitting on the shelf?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "hammer",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "chisel",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "tape",
+   "kind": "support"
+  },
+  {
+   "from": "lumber_stack",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "shelf_bg",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0014",
+ "prompt": "This photorealistic photo captures a sunlit carpenter's workshop filled with intricate details and natural textures. In the center foreground, a carpenter wearing a plaid shirt sands a wooden chair leg, sawdust flying around his hands. To his left, a sturdy oak workbench holds a hammer, a chisel, and a measuring tape, all arranged neatly. A tabby cat sits on a stack of lumber to the right, grooming its paw while observing the activity. Behind the carpenter, a large window lets in bright daylight, illuminating floating dust particles and highlighting the grain of the wood. On the far left, a younger apprentice carries a heavy plank of pine, walking toward the workbench. A coffee mug sits on a shelf in the background, next to a radio playing softly. The carpenter’s tool belt hangs on a hook nearby, filled with various implements. The lighting is natural and directional, creating realistic shadows and highlights on the surfaces. Every object, from the rough bark on the logs to the smooth finish of the chair, is rendered with extreme clarity. The scene conveys a sense of craftsmanship and dedication, with each element contributing to the authentic atmosphere of a working woodshop environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

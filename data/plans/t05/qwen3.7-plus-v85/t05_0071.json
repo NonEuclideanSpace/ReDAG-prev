@@ -1,0 +1,251 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station with brick walls and concrete floor",
+   "question": "Does the image show the interior of a fire station with brick walls and a concrete floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    50,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    80,
+    300,
+    320,
+    750
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "silver ladder",
+   "plural": "silver ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall silver ladder",
+   "question": "Is there a tall silver ladder?",
+   "box": [
+    400,
+    100,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "brown dog",
+   "plural": "brown dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    600,
+    700,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    760,
+    350,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    850,
+    300,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a clipboard",
+   "question": "Is the woman in a blue coat holding a clipboard?"
+  },
+  {
+   "id": "firefighter_sitting",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear is sitting",
+   "question": "Is the firefighter in yellow gear sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is resting",
+   "question": "Is the small brown dog resting?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing upright",
+   "question": "Is the woman in a blue coat standing upright?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf points toward the ceiling",
+   "question": "Is the man in a red scarf pointing toward the ceiling?"
+  },
+  {
+   "id": "firefighter_looking",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "man"
+   ],
+   "desc": "the firefighter in yellow gear looks at the man in a red scarf",
+   "question": "Is the firefighter in yellow gear looking at the man in a red scarf?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the small brown dog is next to the woman in a blue coat",
+   "question": "Is the small brown dog next to the woman in a blue coat?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf is beside the woman in a blue coat",
+   "question": "Is the man in a red scarf beside the woman in a blue coat?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog rests on the concrete floor",
+   "question": "Is the small brown dog resting on the concrete floor?"
+  },
+  {
+   "id": "firefighter_legs_crossed",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear has legs crossed",
+   "question": "Does the firefighter in yellow gear have their legs crossed?"
+  },
+  {
+   "id": "dog_head_lifted",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog has its head lifted",
+   "question": "Is the small brown dog's head lifted?"
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the tall silver ladder leans against the brick wall",
+   "question": "Does the tall silver ladder lean against the brick wall?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "firefighter",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0071",
+ "prompt": "Rendered in a pencil sketch with light color wash, the scene captures a quiet moment inside a fire station. On the left, a firefighter in yellow gear sits on a wooden bench, legs crossed casually. In the center, a tall silver ladder leans against the brick wall, its rungs clearly defined by graphite lines. To the right of the ladder, a small brown dog rests on the concrete floor, head lifted attentively. Next to the dog, a woman in a blue coat stands holding a clipboard, her posture upright and professional. Beside her, a man in a red scarf points toward the ceiling, drawing attention to an unseen detail above. The firefighter in yellow gear looks at the man in the red scarf, creating a subtle connection across the room. The woman in the blue coat stands next to the small brown dog, anchoring the right side of the composition. There is no fire or smoke visible in the station, ensuring the atmosphere remains calm and orderly. The interplay of soft watercolor hues against the stark pencil lines highlights the textures of the uniform, the fur, and the metal ladder without overwhelming the delicate structure of the drawing.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

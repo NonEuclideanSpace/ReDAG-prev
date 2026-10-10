@@ -1,0 +1,224 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop at night with a dark sky",
+   "question": "Does the image depict a rooftop scene at night with a dark sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    400,
+    400,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    700,
+    630,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    650,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "lamp_post",
+   "type": "entity",
+   "class": "lamp post",
+   "plural": "lamp posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall lamp post",
+   "question": "Is there a tall lamp post?",
+   "box": [
+    550,
+    100,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green potted plant",
+   "question": "Is there a green potted plant?",
+   "box": [
+    660,
+    500,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a glass",
+   "question": "Is the woman in the blue dress holding a glass?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is resting",
+   "question": "Is the brown dog resting?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the red scarf sits on the wooden crate",
+   "question": "Is the man in the red scarf sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_on_gravel",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog rests on the gravel",
+   "question": "Is the brown dog resting on gravel?"
+  },
+  {
+   "id": "lamp_behind_man",
+   "type": "relation",
+   "of": [
+    "lamp_post",
+    "man"
+   ],
+   "desc": "the tall lamp post is behind the man in the red scarf",
+   "question": "Is the tall lamp post behind the man in the red scarf?"
+  },
+  {
+   "id": "plant_next_to_lamp",
+   "type": "relation",
+   "of": [
+    "plant",
+    "lamp_post"
+   ],
+   "desc": "the green potted plant is next to the tall lamp post",
+   "question": "Is the green potted plant next to the tall lamp post?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is looking at the man in the red scarf",
+   "question": "Is the woman in the blue dress looking at the man in the red scarf?"
+  },
+  {
+   "id": "man_pointing_at_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in the red scarf is pointing at the brown dog",
+   "question": "Is the man in the red scarf pointing at the brown dog?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0048",
+ "prompt": "This oil painting depicts a rooftop party at night. On the left, a woman in a blue dress stands holding a glass. In the center, a man in a red scarf sits on a wooden crate. To his right, a brown dog rests on the gravel. Behind the man, a tall lamp post rises into the dark sky. Next to the lamp post, a green potted plant adds foliage. The woman in the blue dress is looking at the man in the red scarf. The man in the red scarf is pointing at the brown dog. The woman in the blue dress is standing. The man in the red scarf is sitting. The brown dog is resting. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with white walls and polished linoleum floor reflecting overhead lights",
+   "question": "Does the image show a sterile hospital corridor with white walls and a polished linoleum floor reflecting overhead lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "plastic bench",
+   "plural": "plastic benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic bench",
+   "question": "Is there a plastic bench in the image?",
+   "box": [
+    512,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    100,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    550,
+    300,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard firmly against her chest",
+   "question": "Is the nurse holding a clipboard firmly against her chest?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting slumped",
+   "question": "Is the elderly man sitting slumped?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse looks directly at the seated elderly man",
+   "question": "Is the nurse looking directly at the seated elderly man?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the plastic bench",
+   "question": "Is the elderly man sitting on the plastic bench?"
+  },
+  {
+   "id": "nurse_left_of_man",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse stands to the left of the elderly man",
+   "question": "Is the nurse standing to the left of the elderly man?"
+  },
+  {
+   "id": "no_equipment",
+   "type": "absent",
+   "desc": "medical equipment in the background",
+   "question": "Is there any medical equipment visible in the background?"
+  },
+  {
+   "id": "no_other_people",
+   "type": "absent",
+   "desc": "other patients or staff members",
+   "question": "Are there any other patients in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "no_other_staff",
+   "type": "absent",
+   "desc": "other staff members",
+   "question": "Are there any other staff members in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0053",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left stands a nurse in blue scrubs holding a clipboard firmly against her chest. To her right, an elderly man in a gray coat sits slumped on a plastic bench. The nurse is looking directly at the seated man, creating a moment of quiet consultation. The floor is polished linoleum reflecting the overhead lights. There is no medical equipment visible in the background. The scene is devoid of any other patients or staff members, focusing entirely on the two figures and their subtle interaction within the clean, white-walled space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,321 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene with no windows visible",
+   "question": "Is the background free of any visible windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "booth",
+   "type": "entity",
+   "class": "booth",
+   "plural": "booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush velvet booth",
+   "question": "Is there a plush velvet booth?",
+   "box": [
+    0,
+    300,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    200,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    250,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman wearing a blue dress?",
+   "box": [
+    350,
+    250,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter wearing a black vest?",
+   "box": [
+    750,
+    250,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    450,
+    750,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    550,
+    480,
+    650,
+    580
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open menu",
+   "question": "Is there an open menu?",
+   "box": [
+    400,
+    480,
+    500,
+    550
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "teapot"
+   ],
+   "desc": "the man in the red scarf is looking at the teapot",
+   "question": "Is the man in the red scarf looking towards the silver teapot?"
+  },
+  {
+   "id": "woman_holding_cup",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a white porcelain cup",
+   "question": "Is the woman in the blue dress holding a white porcelain cup?"
+  },
+  {
+   "id": "waiter_pointing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the black vest is pointing",
+   "question": "Is the waiter in the black vest pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_on_booth",
+   "type": "relation",
+   "of": [
+    "man",
+    "booth"
+   ],
+   "desc": "the man in the red scarf sits on the plush velvet booth",
+   "question": "Is the man in the red scarf sitting on the plush velvet booth?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is next to the man",
+   "question": "Is the woman in the blue dress next to the man in the red scarf?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "waiter"
+   ],
+   "desc": "the woman hands the cup to the waiter",
+   "question": "Is the woman in the blue dress handing the white porcelain cup to the waiter in the black vest?"
+  },
+  {
+   "id": "waiter_right",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter stands on the right relative to the woman",
+   "question": "Is the waiter in the black vest standing on the right side of the woman in the blue dress?"
+  },
+  {
+   "id": "waiter_pointing_menu",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "menu"
+   ],
+   "desc": "the waiter points at the menu",
+   "question": "Is the waiter in the black vest pointing at the open menu?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the silver teapot rests on the table",
+   "question": "Is the silver teapot resting on the table?"
+  },
+  {
+   "id": "menu_on_table",
+   "type": "relation",
+   "of": [
+    "menu",
+    "table"
+   ],
+   "desc": "the menu lies on the table",
+   "question": "Is the open menu lying on the table?"
+  },
+  {
+   "id": "dog_under_table",
+   "type": "relation",
+   "of": [
+    "dog",
+    "table"
+   ],
+   "desc": "the brown dog sits beneath the table",
+   "question": "Is the brown dog sitting beneath the table?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the image?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the black vest is standing",
+   "question": "Is the waiter in the black vest standing?"
+  },
+  {
+   "id": "man_left_side",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is positioned on the left side",
+   "question": "Is the man in the red scarf positioned on the left side of the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "menu",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0131",
+ "prompt": "In the style of an oil painting, a man in a red scarf sits on the left side of a plush velvet booth. He is looking at a silver teapot resting on the table. Next to him, a woman in a blue dress holds a white porcelain cup. She is handing the cup to a waiter in a black vest standing on the right. The waiter is pointing at a menu lying open on the table. In the center, a brown dog sits quietly on the floor beneath the table. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

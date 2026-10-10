@@ -1,0 +1,353 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a car repair garage with walls and floor",
+   "question": "Does the image show a car repair garage interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "car",
+   "type": "entity",
+   "class": "vintage car",
+   "plural": "vintage cars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage car",
+   "question": "Is there a vintage car?",
+   "box": [
+    300,
+    200,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "tool cabinet",
+   "plural": "tool cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open tool cabinet",
+   "question": "Is there an open tool cabinet?",
+   "box": [
+    750,
+    100,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in work clothes",
+   "question": "Is there a mechanic?",
+   "box": [
+    400,
+    600,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toolbox",
+   "question": "Is there a toolbox?",
+   "box": [
+    650,
+    700,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "tires",
+   "type": "entity",
+   "class": "tire",
+   "plural": "tires",
+   "count": 4,
+   "count_exact": true,
+   "desc": "a stack of four new unused tires",
+   "question": "Is there a stack of four new unused tires?",
+   "box": [
+    100,
+    400,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "sockets",
+   "type": "entity",
+   "class": "socket",
+   "plural": "sockets",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a row of six sockets",
+   "question": "Are there six sockets in a row?",
+   "box": [
+    780,
+    300,
+    920,
+    350
+   ]
+  },
+  {
+   "id": "oil_can",
+   "type": "entity",
+   "class": "oil can",
+   "plural": "oil cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oil can",
+   "question": "Is there an oil can?",
+   "box": [
+    256,
+    650,
+    304,
+    720
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "hose",
+   "plural": "hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled hose",
+   "question": "Is there a coiled hose?",
+   "box": [
+    150,
+    750,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "light",
+   "type": "entity",
+   "class": "overhead light",
+   "plural": "overhead lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overhead light",
+   "question": "Is there an overhead light?",
+   "box": [
+    450,
+    0,
+    550,
+    100
+   ]
+  },
+  {
+   "id": "wrench",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the mechanic holds a wrench",
+   "question": "Is the mechanic holding a wrench?"
+  },
+  {
+   "id": "mechanic_lying",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is lying down",
+   "question": "Is the mechanic lying down?"
+  },
+  {
+   "id": "car_jacked",
+   "type": "state",
+   "of": "car",
+   "desc": "the vintage car is jacked up",
+   "question": "Is the vintage car jacked up?"
+  },
+  {
+   "id": "cabinet_open",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the tool cabinet is open",
+   "question": "Is the tool cabinet open?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose",
+   "desc": "the hose is coiled",
+   "question": "Is the hose coiled?"
+  },
+  {
+   "id": "car_next_to_cabinet",
+   "type": "relation",
+   "of": [
+    "car",
+    "cabinet"
+   ],
+   "desc": "the vintage car is next to the tool cabinet",
+   "question": "Is the vintage car next to the tool cabinet?"
+  },
+  {
+   "id": "cabinet_taller_than_car",
+   "type": "relation",
+   "of": [
+    "cabinet",
+    "car"
+   ],
+   "desc": "the tool cabinet is taller than the vintage car",
+   "question": "Is the tool cabinet taller than the vintage car?"
+  },
+  {
+   "id": "mechanic_under_car",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "car"
+   ],
+   "desc": "the mechanic is under the vintage car",
+   "question": "Is the mechanic under the vintage car?"
+  },
+  {
+   "id": "toolbox_on_floor",
+   "type": "state",
+   "of": "toolbox",
+   "desc": "the toolbox is on the floor",
+   "question": "Is the toolbox on the floor?"
+  },
+  {
+   "id": "toolbox_beside_mechanic",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "mechanic"
+   ],
+   "desc": "the toolbox is beside the mechanic",
+   "question": "Is the toolbox beside the mechanic?"
+  },
+  {
+   "id": "tires_against_wall",
+   "type": "state",
+   "of": "tires",
+   "desc": "the stack of tires is leaning against the wall",
+   "question": "Is the stack of tires leaning against the wall?"
+  },
+  {
+   "id": "sockets_in_cabinet",
+   "type": "relation",
+   "of": [
+    "sockets",
+    "cabinet"
+   ],
+   "desc": "the sockets are on a shelf in the tool cabinet",
+   "question": "Are the sockets on a shelf in the tool cabinet?"
+  },
+  {
+   "id": "oil_can_next_to_tires",
+   "type": "relation",
+   "of": [
+    "oil_can",
+    "tires"
+   ],
+   "desc": "the oil can stands next to the tires",
+   "question": "Is the oil can standing next to the tires?"
+  },
+  {
+   "id": "oil_can_shorter_than_wrench",
+   "type": "relation",
+   "of": [
+    "oil_can",
+    "mechanic"
+   ],
+   "desc": "the oil can is shorter than the wrench held by the mechanic",
+   "question": "Is the oil can shorter than the wrench held by the mechanic?"
+  },
+  {
+   "id": "light_shines_on_mechanic",
+   "type": "action",
+   "of": [
+    "light",
+    "mechanic"
+   ],
+   "desc": "the overhead light shines onto the mechanic",
+   "question": "Does the overhead light shine onto the mechanic?"
+  },
+  {
+   "id": "hose_near_tires",
+   "type": "relation",
+   "of": [
+    "hose",
+    "tires"
+   ],
+   "desc": "the hose is near the tires",
+   "question": "Is the hose near the tires?"
+  },
+  {
+   "id": "mechanic_closer_to_car",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "car",
+    "cabinet"
+   ],
+   "desc": "the mechanic is closer to the car than to the tool cabinet",
+   "question": "Is the mechanic closer to the car than to the tool cabinet?"
+  },
+  {
+   "id": "toolbox_between",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "mechanic",
+    "cabinet"
+   ],
+   "desc": "the toolbox is between the mechanic and the tool cabinet",
+   "question": "Is the toolbox between the mechanic and the tool cabinet?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cabinet",
+   "to": "sockets",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_089",
+ "prompt": "A car repair garage with a vintage car jacked up next to an open tool cabinet. The tool cabinet is taller than the jacked-up car. A mechanic is lying under the car holding a wrench. A toolbox is placed on the floor beside the mechanic. A stack of four new, unused tires is leaning against the wall. On a shelf in the tool cabinet, a row of sockets is visible, and their number is two more than the number of tires. An oil can, which is shorter than the wrench the mechanic is holding, stands next to the tires. An overhead light shines onto the mechanic. A hose is coiled on the floor near the tires. The mechanic is closer to the car than to the tool cabinet. The toolbox is between the mechanic and the tool cabinet.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

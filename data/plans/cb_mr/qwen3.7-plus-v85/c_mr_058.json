@@ -1,0 +1,380 @@
+{
+ "style": "fairy tale illustration, whimsical, detailed",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fairy tale forest",
+   "question": "Does the image depict a fairy tale forest setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cottage",
+   "type": "entity",
+   "class": "cottage",
+   "plural": "cottages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small, crooked cottage with a thatched roof",
+   "question": "Is there a small, crooked cottage with a thatched roof?",
+   "box": [
+    300,
+    300,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large, gnarled tree",
+   "question": "Is there a large, gnarled tree?",
+   "box": [
+    750,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woodsman",
+   "type": "entity",
+   "class": "woodsman",
+   "plural": "woodsmen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woodsman",
+   "question": "Is there a young woodsman?",
+   "box": [
+    100,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "witch",
+   "type": "entity",
+   "class": "witch",
+   "plural": "witches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older witch wearing a pointy hat",
+   "question": "Is there an older witch wearing a pointy hat?",
+   "box": [
+    600,
+    550,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    450,
+    280,
+    550,
+    350
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three birds",
+   "question": "Are there exactly three birds?",
+   "box": [
+    800,
+    150,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "mushrooms",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three mushrooms",
+   "question": "Are there exactly three mushrooms?",
+   "box": [
+    350,
+    500,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "axe",
+   "type": "attribute",
+   "of": "woodsman",
+   "desc": "the woodsman holds a large axe over his shoulder",
+   "question": "Is the woodsman holding a large axe over his shoulder?"
+  },
+  {
+   "id": "potion",
+   "type": "attribute",
+   "of": "witch",
+   "desc": "the witch holds one bubbling potion in a vial",
+   "question": "Is the witch holding one bubbling potion in a vial?"
+  },
+  {
+   "id": "witch_peeking",
+   "type": "relation",
+   "of": [
+    "witch",
+    "cottage"
+   ],
+   "desc": "the witch is peeking from behind the cottage door",
+   "question": "Is the witch peeking from behind the cottage door?"
+  },
+  {
+   "id": "witch_looking",
+   "type": "relation",
+   "of": [
+    "witch",
+    "woodsman"
+   ],
+   "desc": "the witch is looking at the woodsman",
+   "question": "Is the witch looking at the woodsman?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_arching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is arching its back",
+   "question": "Is the black cat arching its back?"
+  },
+  {
+   "id": "cat_hissing",
+   "type": "action",
+   "of": [
+    "cat",
+    "woodsman"
+   ],
+   "desc": "the black cat is hissing at the woodsman",
+   "question": "Is the black cat hissing at the woodsman?"
+  },
+  {
+   "id": "woodsman_front_cottage",
+   "type": "relation",
+   "of": [
+    "woodsman",
+    "cottage"
+   ],
+   "desc": "the woodsman stands in front of the cottage",
+   "question": "Is the woodsman standing in front of the cottage?"
+  },
+  {
+   "id": "cat_on_roof",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cottage"
+   ],
+   "desc": "the black cat is on the cottage's thatched roof",
+   "question": "Is the black cat on the cottage's thatched roof?"
+  },
+  {
+   "id": "tree_next_to_cottage",
+   "type": "relation",
+   "of": [
+    "tree",
+    "cottage"
+   ],
+   "desc": "the large gnarled tree is growing next to the cottage",
+   "question": "Is the large gnarled tree growing next to the cottage?"
+  },
+  {
+   "id": "birds_on_branch",
+   "type": "relation",
+   "of": [
+    "birds",
+    "tree"
+   ],
+   "desc": "the birds are perched on a branch of the tree",
+   "question": "Are the birds perched on a branch of the tree?"
+  },
+  {
+   "id": "birds_above_cat",
+   "type": "relation",
+   "of": [
+    "birds",
+    "cat"
+   ],
+   "desc": "the birds are above the black cat",
+   "question": "Are the birds positioned above the black cat?"
+  },
+  {
+   "id": "mushrooms_on_windowsill",
+   "type": "relation",
+   "of": [
+    "mushrooms",
+    "cottage"
+   ],
+   "desc": "the mushrooms are on the windowsill of the cottage",
+   "question": "Are the mushrooms on the windowsill of the cottage?"
+  },
+  {
+   "id": "cat_between",
+   "type": "relation",
+   "of": [
+    "cat",
+    "birds",
+    "witch"
+   ],
+   "desc": "the black cat is between the birds and the witch",
+   "question": "Is the black cat positioned between the birds and the witch?"
+  },
+  {
+   "id": "woodsman_standing",
+   "type": "state",
+   "of": "woodsman",
+   "desc": "the young, strong woodsman is standing",
+   "question": "Is the young, strong woodsman standing?"
+  },
+  {
+   "id": "cottage_door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the cottage door",
+   "question": "Is there a cottage door?",
+   "box": [
+    450,
+    500,
+    574,
+    800
+   ]
+  },
+  {
+   "id": "witch_behind_door",
+   "type": "relation",
+   "of": [
+    "witch",
+    "cottage_door"
+   ],
+   "desc": "the older, frail witch wearing a pointy hat is behind the cottage door",
+   "question": "Is the older, frail witch wearing a pointy hat behind the cottage door?"
+  },
+  {
+   "id": "woodsman_taller_door",
+   "type": "relation",
+   "of": [
+    "woodsman",
+    "cottage_door"
+   ],
+   "desc": "the young, strong woodsman is taller than the cottage door",
+   "question": "Is the young, strong woodsman taller than the cottage door?"
+  },
+  {
+   "id": "cottage_smaller_tree",
+   "type": "relation",
+   "of": [
+    "cottage",
+    "tree"
+   ],
+   "desc": "the small, crooked cottage with a thatched roof and two windows is smaller than the large, gnarled tree",
+   "question": "Is the small, crooked cottage with a thatched roof and two windows smaller than the large, gnarled tree?"
+  },
+  {
+   "id": "cottage_windows",
+   "type": "attribute",
+   "of": "cottage",
+   "desc": "the cottage has two windows",
+   "question": "Does the cottage have two windows?"
+  },
+  {
+   "id": "woodsman_older_witch",
+   "type": "relation",
+   "of": [
+    "woodsman",
+    "witch"
+   ],
+   "desc": "the woodsman appears younger and stronger than the witch",
+   "question": "Does the woodsman appear younger and stronger than the witch?"
+  },
+  {
+   "id": "woodsman_strong",
+   "type": "attribute",
+   "of": "woodsman",
+   "desc": "the woodsman appears strong",
+   "question": "Does the woodsman appear strong?"
+  },
+  {
+   "id": "witch_frail",
+   "type": "attribute",
+   "of": "witch",
+   "desc": "the witch appears frail",
+   "question": "Does the witch appear frail?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cottage",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "birds",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_058",
+ "prompt": "In a fairy tale forest, a woodsman with a large axe is standing in front of a small, crooked cottage that has two windows. A witch with a pointy hat is peeking from behind the cottage door, looking at the woodsman. The woodsman, who appears younger and stronger, is holding the axe over his shoulder. The witch appears older and more frail than the woodsman. A black cat is sitting on the cottage's thatched roof, arching its back at the woodsman. The woodsman is taller than the cottage door. The cottage is smaller than a large, gnarled tree growing next to it. On a branch of the tree, a small group of birds is perched above the cat; the number of birds is one more than the number of windows on the cottage. The witch is holding one bubbling potion in a vial. On the windowsill of the cottage, there are several mushrooms; their number is three times the number of potions the witch is holding. The cat is between the birds and the witch. The cat is hissing at the woodsman.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 1,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

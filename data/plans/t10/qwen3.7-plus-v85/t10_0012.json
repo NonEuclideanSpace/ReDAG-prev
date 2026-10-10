@@ -1,0 +1,414 @@
+{
+ "style": "photorealistic photo, night scene, warm string lighting, blurred city background",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party at night with a concrete floor and blurred city lights in the distance",
+   "question": "Does the image show a rooftop party at night with a concrete floor and blurred city lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_silver",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    280,
+    600,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    270,
+    650,
+    410,
+    850
+   ]
+  },
+  {
+   "id": "man_blue",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    400,
+    180,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a railing",
+   "question": "Is there a railing?",
+   "box": [
+    380,
+    400,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "woman_green",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green jacket",
+   "question": "Is there a woman in a green jacket?",
+   "box": [
+    580,
+    220,
+    780,
+    900
+   ]
+  },
+  {
+   "id": "palm",
+   "type": "entity",
+   "class": "potted palm tree",
+   "plural": "potted palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted palm tree",
+   "question": "Is there a large potted palm tree?",
+   "box": [
+    750,
+    100,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a hoodie",
+   "question": "Is there a teenager in a hoodie?",
+   "box": [
+    800,
+    500,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "low wall",
+   "plural": "low walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low wall",
+   "question": "Is there a low wall?",
+   "box": [
+    780,
+    700,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    650,
+    250,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "phone",
+   "type": "entity",
+   "class": "phone",
+   "plural": "phones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a phone",
+   "question": "Is there a phone?",
+   "box": [
+    850,
+    650,
+    900,
+    720
+   ]
+  },
+  {
+   "id": "woman_silver_gaze",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress is looking toward the center",
+   "question": "Is the woman in the silver dress looking toward the center of the image?"
+  },
+  {
+   "id": "woman_silver_holding",
+   "type": "attribute",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress holds a champagne flute",
+   "question": "Is the woman in the silver dress holding a champagne flute?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_blue",
+   "desc": "the man in the blue suit is leaning",
+   "question": "Is the man in the blue suit leaning?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_blue",
+   "desc": "the man in the blue suit points at the distant skyline",
+   "question": "Is the man in the blue suit pointing at the distant skyline?"
+  },
+  {
+   "id": "man_talking",
+   "type": "action",
+   "of": [
+    "man_blue",
+    "woman_green"
+   ],
+   "desc": "the man in the blue suit talks to the woman in the green jacket",
+   "question": "Is the man in the blue suit talking to the woman in the green jacket?"
+  },
+  {
+   "id": "woman_green_looking",
+   "type": "action",
+   "of": [
+    "woman_green",
+    "man_blue"
+   ],
+   "desc": "the woman in the green jacket looks at the man in the blue suit",
+   "question": "Is the woman in the green jacket looking at the man in the blue suit?"
+  },
+  {
+   "id": "woman_green_amused",
+   "type": "state",
+   "of": "woman_green",
+   "desc": "the woman in the green jacket has an amused expression",
+   "question": "Does the woman in the green jacket have an amused expression?"
+  },
+  {
+   "id": "teenager_sitting",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in the hoodie is sitting",
+   "question": "Is the teenager in the hoodie sitting?"
+  },
+  {
+   "id": "teenager_scrolling",
+   "type": "action",
+   "of": [
+    "teenager",
+    "phone"
+   ],
+   "desc": "the teenager in the hoodie scrolls through the phone",
+   "question": "Is the teenager in the hoodie scrolling through the phone?"
+  },
+  {
+   "id": "waiter_walking",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the white apron is walking",
+   "question": "Is the waiter in the white apron walking?"
+  },
+  {
+   "id": "waiter_carrying",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the white apron carries a tray of appetizers",
+   "question": "Is the waiter in the white apron carrying a tray of appetizers?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat is on the wooden crate",
+   "question": "Is the black cat on the wooden crate?"
+  },
+  {
+   "id": "woman_silver_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman_silver",
+    "cat"
+   ],
+   "desc": "the woman in the silver dress is next to the black cat",
+   "question": "Is the woman in the silver dress next to the black cat?"
+  },
+  {
+   "id": "man_against_railing",
+   "type": "relation",
+   "of": [
+    "man_blue",
+    "railing"
+   ],
+   "desc": "the man in the blue suit leans against the railing",
+   "question": "Is the man in the blue suit leaning against the railing?"
+  },
+  {
+   "id": "palm_right",
+   "type": "relation",
+   "of": [
+    "palm",
+    "man_blue"
+   ],
+   "desc": "the potted palm tree is to the right of the man in the blue suit",
+   "question": "Is the potted palm tree to the right of the man in the blue suit?"
+  },
+  {
+   "id": "teenager_beside_palm",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "palm"
+   ],
+   "desc": "the teenager in the hoodie is beside the potted palm tree",
+   "question": "Is the teenager in the hoodie beside the potted palm tree?"
+  },
+  {
+   "id": "teenager_on_wall",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "wall"
+   ],
+   "desc": "the teenager in the hoodie sits on the low wall",
+   "question": "Is the teenager in the hoodie sitting on the low wall?"
+  },
+  {
+   "id": "waiter_behind_group",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "woman_green"
+   ],
+   "desc": "the waiter in the white apron is behind the woman in the green jacket",
+   "question": "Is the waiter in the white apron behind the woman in the green jacket?"
+  },
+  {
+   "id": "no_pool",
+   "type": "absent",
+   "desc": "a swimming pool",
+   "question": "Is there a swimming pool visible in the image?"
+  },
+  {
+   "id": "woman_silver_standing",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress is standing",
+   "question": "Is the woman in the silver dress standing?"
+  },
+  {
+   "id": "waiter_balancing",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the white apron balances the tray with one hand",
+   "question": "Is the waiter in the white apron balancing the tray with one hand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "wall",
+   "to": "teenager",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0012",
+ "prompt": "A photorealistic photo captures a vibrant rooftop party under the night sky. On the left, a woman in a silver dress stands holding a champagne flute, her posture relaxed as she gazes toward the center. Next to her sits a black cat on a wooden crate, its eyes reflecting the ambient city lights. In the center, a man in a blue suit leans against a railing, pointing excitedly at the distant skyline while talking to a woman in a green jacket who is looking at him with amusement. To the right, a large potted palm tree sways slightly in the breeze, its fronds casting shadows on the concrete floor. Beside the plant, a teenager in a hoodie sits on a low wall, scrolling through a phone with intense focus. Behind them, a waiter in a white apron walks past carrying a tray of appetizers, balancing it carefully with one hand. The scene is illuminated by string lights overhead, creating a warm glow on the faces of the guests. There is no swimming pool visible in the frame. The composition emphasizes the casual elegance of the gathering, with each individual engaged in their own moment yet connected by the shared space. The city lights blur softly in the background, providing depth without distracting from the foreground subjects. The textures of the clothing, the fur of the cat, and the leaves of the plant are rendered with high fidelity, showcasing the realism of the image.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

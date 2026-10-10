@@ -1,0 +1,633 @@
+{
+ "style": "surreal, atmospheric, photorealistic, sun-dappled lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty attic corner with warped wooden floorboards and a cracked window",
+   "question": "Does the image show a dusty attic corner with warped wooden floorboards and a cracked window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "rocking chair",
+   "plural": "rocking chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient wooden rocking chair",
+   "question": "Is there an ancient wooden rocking chair?",
+   "box": [
+    100,
+    300,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "acorn",
+   "type": "entity",
+   "class": "acorn",
+   "plural": "acorns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single acorn",
+   "question": "Is there a single acorn?",
+   "box": [
+    176,
+    346,
+    224,
+    394
+   ]
+  },
+  {
+   "id": "yarn_spool",
+   "type": "entity",
+   "class": "spool of yarn",
+   "plural": "spools of yarn",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spool of red yarn",
+   "question": "Is there a spool of red yarn?",
+   "box": [
+    520,
+    600,
+    580,
+    660
+   ]
+  },
+  {
+   "id": "oil_puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small puddle of spilled motor oil",
+   "question": "Is there a small puddle of spilled motor oil?",
+   "box": [
+    600,
+    700,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "nail",
+   "type": "entity",
+   "class": "rusted nail",
+   "plural": "rusted nails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted nail",
+   "question": "Is there a rusted nail?",
+   "box": [
+    786,
+    400,
+    834,
+    450
+   ]
+  },
+  {
+   "id": "cans",
+   "type": "entity",
+   "class": "coffee can",
+   "plural": "coffee cans",
+   "count": 2,
+   "count_exact": false,
+   "desc": "empty coffee cans",
+   "question": "Are there empty coffee cans?",
+   "box": [
+    750,
+    500,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "sketchbook",
+   "type": "entity",
+   "class": "sketchbook",
+   "plural": "sketchbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered sketchbook open to a drawing",
+   "question": "Is there a weathered sketchbook open to a drawing?",
+   "box": [
+    400,
+    750,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch",
+   "question": "Is there a pocket watch?",
+   "box": [
+    500,
+    50,
+    550,
+    150
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "mechanical bird",
+   "plural": "mechanical birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mechanical bird",
+   "question": "Is there a small mechanical bird?",
+   "box": [
+    600,
+    200,
+    650,
+    250
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    521,
+    611,
+    569,
+    659
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teapot",
+   "question": "Is there a teapot?",
+   "box": [
+    300,
+    800,
+    380,
+    880
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "cracked mirror",
+   "plural": "cracked mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked mirror",
+   "question": "Is there a cracked mirror?",
+   "box": [
+    800,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "acorn_in_chair",
+   "type": "relation",
+   "of": [
+    "acorn",
+    "chair"
+   ],
+   "desc": "the acorn is wedged into the crook of the chair's left arm",
+   "question": "Is the acorn wedged into the crook of the rocking chair's left arm?"
+  },
+  {
+   "id": "yarn_unrolling",
+   "type": "state",
+   "of": "yarn_spool",
+   "desc": "the red yarn is unrolling from the spool",
+   "question": "Is the red yarn unrolling from the spool?"
+  },
+  {
+   "id": "yarn_on_floor",
+   "type": "state",
+   "of": "yarn_spool",
+   "desc": "the yarn snakes across the floorboards",
+   "question": "Does the yarn snake across the floorboards?"
+  },
+  {
+   "id": "yarn_past_oil",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "oil_puddle"
+   ],
+   "desc": "the yarn weaves past the puddle of motor oil",
+   "question": "Does the yarn weave past the puddle of motor oil?"
+  },
+  {
+   "id": "yarn_on_nail",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "nail"
+   ],
+   "desc": "the yarn is snagged on the rusted nail",
+   "question": "Is the yarn snagged on the rusted nail?"
+  },
+  {
+   "id": "cans_behind_yarn",
+   "type": "relation",
+   "of": [
+    "cans",
+    "yarn_spool"
+   ],
+   "desc": "the stack of coffee cans is behind the spool of yarn",
+   "question": "Is the stack of coffee cans behind the spool of yarn?"
+  },
+  {
+   "id": "sketchbook_open",
+   "type": "state",
+   "of": "sketchbook",
+   "desc": "the sketchbook is open to a drawing of the scene",
+   "question": "Is the sketchbook open to a drawing of the scene?"
+  },
+  {
+   "id": "watch_hanging",
+   "type": "state",
+   "of": "watch",
+   "desc": "the pocket watch hangs from the ceiling",
+   "question": "Does the pocket watch hang from the ceiling?"
+  },
+  {
+   "id": "bird_perched",
+   "type": "state",
+   "of": "bird",
+   "desc": "the mechanical bird is perched on a shelf",
+   "question": "Is the mechanical bird perched on a shelf?"
+  },
+  {
+   "id": "bird_beak_open",
+   "type": "state",
+   "of": "bird",
+   "desc": "the mechanical bird has its beak open",
+   "question": "Does the mechanical bird have its beak open?"
+  },
+  {
+   "id": "moth_near_yarn",
+   "type": "relation",
+   "of": [
+    "moth",
+    "yarn_spool"
+   ],
+   "desc": "the moth circles near the spool of yarn",
+   "question": "Is the moth circling near the spool of yarn?"
+  },
+  {
+   "id": "yarn_around_chair_leg",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "chair"
+   ],
+   "desc": "the yarn loops around the leg of the rocking chair",
+   "question": "Does the yarn loop around the leg of the rocking chair?"
+  },
+  {
+   "id": "yarn_around_teapot",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "teapot"
+   ],
+   "desc": "the yarn loops around the spout of the teapot",
+   "question": "Does the yarn loop around the spout of the teapot?"
+  },
+  {
+   "id": "yarn_through_sketchbook",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "sketchbook"
+   ],
+   "desc": "the yarn weaves through the pages of the sketchbook",
+   "question": "Does the yarn weave through the pages of the sketchbook?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "acorn"
+   ],
+   "desc": "the mirror reflects a surreal scene with a tree growing from the acorn",
+   "question": "Does the mirror reflect a surreal scene with a tree growing from the acorn?"
+  },
+  {
+   "id": "nail_on_wall",
+   "type": "state",
+   "of": "nail",
+   "desc": "the rusted nail juts from the wall",
+   "question": "Does the rusted nail jut from the wall?"
+  },
+  {
+   "id": "mirror_on_wall",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the cracked mirror is on the wall",
+   "question": "Is the cracked mirror on the wall?"
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf in the attic",
+   "question": "Is there a shelf in the attic?",
+   "box": [
+    700,
+    300,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "yarn_smooth",
+   "type": "attribute",
+   "of": "yarn_spool",
+   "desc": "the red yarn is smooth and gleaming",
+   "question": "Is the red yarn smooth?"
+  },
+  {
+   "id": "oil_glistening",
+   "type": "state",
+   "of": "oil_puddle",
+   "desc": "the puddle of motor oil glistens",
+   "question": "Does the puddle of motor oil glisten?"
+  },
+  {
+   "id": "cans_empty",
+   "type": "attribute",
+   "of": "cans",
+   "desc": "the coffee cans are empty",
+   "question": "Are the coffee cans empty?"
+  },
+  {
+   "id": "watch_silver_chain",
+   "type": "attribute",
+   "of": "watch",
+   "desc": "the pocket watch hangs by a silver chain",
+   "question": "Does the pocket watch hang by a silver chain?"
+  },
+  {
+   "id": "teapot_murky",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot is filled with murky water",
+   "question": "Is the teapot filled with murky water?"
+  },
+  {
+   "id": "bird_perched_on_shelf",
+   "type": "relation",
+   "of": [
+    "bird",
+    "shelf"
+   ],
+   "desc": "the mechanical bird is perched on the shelf",
+   "question": "Is the mechanical bird perched on the shelf?"
+  },
+  {
+   "id": "watch_ticking_reverse",
+   "type": "state",
+   "of": "watch",
+   "desc": "the pocket watch is ticking in reverse",
+   "question": "Is the pocket watch ticking in reverse?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked window",
+   "question": "Is there a cracked window?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "yarn_snaking_floorboards",
+   "type": "state",
+   "of": "yarn_spool",
+   "desc": "the red yarn snakes between the warped floorboards",
+   "question": "Does the red yarn snake between the warped floorboards?"
+  },
+  {
+   "id": "sketchbook_drawing_scene",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the drawing in the sketchbook depicts the scene unfolding around it",
+   "question": "Does the drawing in the sketchbook depict the scene unfolding around it?"
+  },
+  {
+   "id": "mirror_reflection_tree",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects an acorn rooted into the floor growing into a full tree",
+   "question": "Does the mirror reflect an acorn rooted into the floor growing into a full tree?"
+  },
+  {
+   "id": "mirror_reflection_empty_sketchbook",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects the sketchbook as empty",
+   "question": "Does the mirror reflect the sketchbook as empty?"
+  },
+  {
+   "id": "mirror_reflection_rewound_yarn",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects the yarn as neatly rewound",
+   "question": "Does the mirror reflect the yarn as neatly rewound?"
+  },
+  {
+   "id": "mirror_reflection_motionless_chair",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects the chair as motionless and untouched by time",
+   "question": "Does the mirror reflect the chair as motionless?"
+  },
+  {
+   "id": "oil_rippling",
+   "type": "state",
+   "of": "oil_puddle",
+   "desc": "the puddle of motor oil is rippling",
+   "question": "Is the puddle of motor oil rippling?"
+  },
+  {
+   "id": "sketchbook_pages_turning",
+   "type": "state",
+   "of": "sketchbook",
+   "desc": "the pages of the sketchbook are turning",
+   "question": "Are the pages of the sketchbook turning?"
+  },
+  {
+   "id": "acorn_cap_tilted",
+   "type": "attribute",
+   "of": "acorn",
+   "desc": "the acorn's cap is tilted",
+   "question": "Is the cap of the acorn tilted?"
+  },
+  {
+   "id": "yarn_snag_nail",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "nail"
+   ],
+   "desc": "the yarn is snagged on the rusted nail",
+   "question": "Is the red yarn snagged on the rusted nail?"
+  },
+  {
+   "id": "yarn_beside_chair",
+   "type": "relation",
+   "of": [
+    "yarn_spool",
+    "chair"
+   ],
+   "desc": "the spool of red yarn is beside the ancient wooden rocking chair",
+   "question": "Is the spool of red yarn beside the ancient wooden rocking chair?"
+  },
+  {
+   "id": "cans_behind_nail",
+   "type": "relation",
+   "of": [
+    "cans",
+    "nail"
+   ],
+   "desc": "the stack of empty coffee cans is behind the rusted nail",
+   "question": "Is the stack of empty coffee cans behind the rusted nail?"
+  },
+  {
+   "id": "chair_gnarled_arms",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the rocking chair has gnarled arms",
+   "question": "Does the rocking chair have gnarled arms?"
+  },
+  {
+   "id": "chair_warped_seat",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the rocking chair has a warped seat",
+   "question": "Does the rocking chair have a warped seat?"
+  },
+  {
+   "id": "cans_symbols",
+   "type": "attribute",
+   "of": "cans",
+   "desc": "the coffee can lids are etched with cryptic symbols",
+   "question": "Are the coffee can lids etched with cryptic symbols?"
+  },
+  {
+   "id": "yarn_gleaming",
+   "type": "attribute",
+   "of": "yarn_spool",
+   "desc": "the red yarn is gleaming",
+   "question": "Is the red yarn gleaming?"
+  },
+  {
+   "id": "mirror_reflection_untouched_chair",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects the chair as untouched by time",
+   "question": "Does the mirror reflect the chair as untouched by time?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "acorn",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "yarn_spool",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "oil_puddle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "sketchbook",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "teapot",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "bird",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0110",
+ "prompt": "In the hushed, sun-dappled corner of a long-forgotten attic, time seems to fold in on itself. An ancient wooden rocking chair, its arms gnarled with age and its seat warped by seasons of motion, creaks faintly as if still remembering the weight of someone who once sat there. Wedged into the crook of its left arm is a single acorn, nestled in the crevice as though it had always belonged there. The acorn’s cap tilts slightly, catching the light just so—suggesting it might be listening, waiting for something, or perhaps dreaming of becoming an oak in a forest that exists only in the spaces between memories. Beside it, a spool of red yarn, smooth and gleaming, begins to unroll across the floor. It snakes lazily between the warped floorboards, weaving past a small puddle of spilled motor oil that glistens like spilled ink. The yarn pauses briefly, snagging on a rusted nail jutting from the wall. For a moment, it trembles as if considering its next move before unraveling forward again, drawing attention to the stack of empty coffee cans behind it—each lid etched with cryptic symbols, some resembling the patterns of a heartbeat, others like tangled knots or constellations. A loose breeze, curling through a cracked window, sends a shiver through the attic, fluttering the pages of a weathered sketchbook open to a drawing of the very scene unfolding around it—lines that shift and smudge slightly, as if the drawing is adjusting itself in real time. In the distance, a pocket watch hangs by a silver chain from the ceiling, ticking in reverse while a small, mechanical bird, perched on a nearby shelf, opens its beak in time with the watch’s backward rhythm, emitting notes that sound like wind chimes but somehow also like distant laughter. A moth, drawn by the light filtering through the window, circles the spool of yarn as if trying to follow its trail, though the yarn continues its unspooling beyond the moth’s reach, looping around the leg of the chair, the spout of a teapot filled with murky water, and then weaving through the pages of the sketchbook, where it appears to dissolve into ink that reshapes the drawing on the page. On the wall opposite the window, a cracked mirror reflects the scene not as it is, but as it could be—showing the acorn rooted into the floor, growing into a full tree with branches that pass through the walls and into the sky, while the sketchbook in the reflection is empty, the yarn neatly rewound, and the chair motionless, untouched by time. Somewhere beneath the floorboards, a faint humming sound rises and falls, vibrating through the air like a distant lullaby, and it causes the motor oil to ripple, the rusted nail to rattle, and the sketchbook pages to turn just once more before coming to rest with a sigh.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 59,
+   "n_uncovered": 3,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "style": "cinematic film still, soft even lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush botanical greenhouse with glass walls reflecting dense foliage",
+   "question": "Does the image show a lush botanical greenhouse with glass walls reflecting dense foliage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow raincoat",
+   "question": "Is there a woman in a yellow raincoat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue apron",
+   "question": "Is there a man in a blue apron?",
+   "box": [
+    380,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern",
+   "question": "Is there a large fern?",
+   "box": [
+    550,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a green hat",
+   "question": "Is there a child in a green hat?",
+   "box": [
+    750,
+    450,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    720,
+    600,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat holds a silver watering can",
+   "question": "Is the woman in the yellow raincoat holding a silver watering can?"
+  },
+  {
+   "id": "shears",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the blue apron holds small shears",
+   "question": "Is the man in the blue apron holding small shears?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat is standing",
+   "question": "Is the woman in the yellow raincoat standing?"
+  },
+  {
+   "id": "man_kneeling",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue apron is kneeling",
+   "question": "Is the man in the blue apron kneeling?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the green hat is sitting",
+   "question": "Is the child in the green hat sitting?"
+  },
+  {
+   "id": "child_watching",
+   "type": "action",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in the green hat watches the man in the blue apron",
+   "question": "Is the child in the green hat watching the man in the blue apron?"
+  },
+  {
+   "id": "man_pruning",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the blue apron prunes the large fern",
+   "question": "Is the man in the blue apron pruning the large fern?"
+  },
+  {
+   "id": "woman_pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow raincoat pours water from her can toward the man's hand",
+   "question": "Is the woman in the yellow raincoat pouring water from her can toward the man's hand?"
+  },
+  {
+   "id": "man_beside_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the blue apron is beside the large fern",
+   "question": "Is the man in the blue apron beside the large fern?"
+  },
+  {
+   "id": "child_on_bench",
+   "type": "relation",
+   "of": [
+    "child",
+    "bench"
+   ],
+   "desc": "the child in the green hat sits on the wooden bench",
+   "question": "Is the child in the green hat sitting on the wooden bench?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through the roof",
+   "question": "Is there sunlight streaming through the roof?"
+  },
+  {
+   "id": "woman_eyes",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the green hat has wide eyes",
+   "question": "Does the child in the green hat have wide eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0081",
+ "prompt": "In a cinematic film still set within a lush botanical greenhouse, a woman in a yellow raincoat stands on the left holding a silver watering can. In the center, a man in a blue apron kneels beside a large fern, carefully pruning its fronds with small shears. On the right, a child in a green hat sits on a wooden bench, watching the man work with wide eyes. The woman pours water from her can onto the soil near the man’s hand, creating a gentle stream that connects their actions. The glass walls reflect the dense foliage surrounding them. There is no sunlight streaming through the roof, keeping the scene evenly lit and soft. The three figures remain distinct in their positions, focused on the shared task of tending to the plants in this quiet, enclosed garden space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

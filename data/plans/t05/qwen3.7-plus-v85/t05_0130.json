@@ -1,0 +1,310 @@
+{
+ "style": "anime style, soft lines, pastel colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room with shelves of old volumes",
+   "question": "Does the image show a library reading room with shelves of old volumes?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with pink hair",
+   "question": "Is there a girl?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with glasses",
+   "question": "Is there a boy?",
+   "box": [
+    380,
+    320,
+    650,
+    820
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with orange fur",
+   "question": "Is there a cat?",
+   "box": [
+    750,
+    450,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    720,
+    500,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green dress",
+   "question": "Is there a woman in a green dress?",
+   "box": [
+    450,
+    150,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall shelf filled with old volumes",
+   "question": "Is there a tall shelf filled with old volumes?",
+   "box": [
+    400,
+    50,
+    750,
+    500
+   ]
+  },
+  {
+   "id": "pen",
+   "type": "entity",
+   "class": "pen",
+   "plural": "pens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver pen",
+   "question": "Is there a silver pen?",
+   "box": [
+    400,
+    850,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "notes",
+   "type": "entity",
+   "class": "note",
+   "plural": "notes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a scattered pile of notes",
+   "question": "Is there a scattered pile of notes?",
+   "box": [
+    350,
+    820,
+    650,
+    980
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the book held by the girl with pink hair is thick",
+   "question": "Is the book held by the girl with pink hair thick?"
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl sits",
+   "question": "Is the girl sitting?"
+  },
+  {
+   "id": "girl_reading",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with pink hair is reading intently",
+   "question": "Is the girl with pink hair reading intently?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy with glasses points at a paragraph in the book held by the girl with pink hair",
+   "question": "Is the boy with glasses pointing at a paragraph in the book held by the girl with pink hair?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat sleeps",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "cat_on_chair",
+   "type": "relation",
+   "of": [
+    "cat",
+    "chair"
+   ],
+   "desc": "the cat with orange fur is on the wooden chair",
+   "question": "Is the cat with orange fur on the wooden chair?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy with glasses is next to the girl with pink hair",
+   "question": "Is the boy with glasses next to the girl with pink hair?"
+  },
+  {
+   "id": "woman_behind_boy",
+   "type": "relation",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman in a green dress is behind the boy with glasses",
+   "question": "Is the woman in a green dress behind the boy with glasses?"
+  },
+  {
+   "id": "woman_looking_at_shelf",
+   "type": "relation",
+   "of": [
+    "woman",
+    "shelf"
+   ],
+   "desc": "the woman in a green dress looks at the tall shelf",
+   "question": "Is the woman in a green dress looking at the tall shelf?"
+  },
+  {
+   "id": "pen_on_notes",
+   "type": "relation",
+   "of": [
+    "pen",
+    "notes"
+   ],
+   "desc": "the silver pen rests on the scattered pile of notes",
+   "question": "Is the silver pen resting on the scattered pile of notes?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices",
+   "question": "Are there any electronic devices visible in the image?"
+  },
+  {
+   "id": "book_blue",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the book held by the girl with pink hair is blue",
+   "question": "Is the book held by the girl with pink hair blue?"
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "girl",
+   "desc": "the book held by the girl with pink hair is open",
+   "question": "Is the book held by the girl with pink hair open?"
+  },
+  {
+   "id": "girl_pink_hair",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has pink hair",
+   "question": "Does the girl have pink hair?"
+  },
+  {
+   "id": "boy_glasses",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wears glasses",
+   "question": "Does the boy wear glasses?"
+  },
+  {
+   "id": "cat_orange_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has orange fur",
+   "question": "Does the cat have orange fur?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "notes",
+   "to": "pen",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0130",
+ "prompt": "In an anime style library reading room, a girl with pink hair sits on the left, holding a thick blue book open. Next to her in the center, a boy with glasses points at a specific paragraph on the page she holds. On the right, a cat with orange fur sleeps peacefully on a wooden chair. Behind the boy, a woman in a green dress looks at a tall shelf filled with old volumes. In the foreground, a silver pen rests on a scattered pile of notes. The girl is reading intently while the boy gestures toward the text, creating a quiet moment of shared study. The cat remains undisturbed by their presence. There is no electronic device visible in the scene. The warm atmosphere is defined by the soft lines and pastel colors typical of the genre, focusing entirely on these five distinct elements and their simple spatial relationships within the quiet academic space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

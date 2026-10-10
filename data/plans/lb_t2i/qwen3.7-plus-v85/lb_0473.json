@@ -1,0 +1,643 @@
+{
+ "style": "surreal photorealistic, high contrast, heat haze effects",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a parched horizon with a lonely farm road curving into the distance under a blazing sun",
+   "question": "Does the image show a parched horizon with a lonely farm road under a blazing sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "truck",
+   "plural": "trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy truck",
+   "question": "Is there a heavy truck?",
+   "box": [
+    200,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence",
+   "plural": "fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weather-worn fence with metal posts bowed and caked in red clay",
+   "question": "Is there a weather-worn fence with metal posts bowed and caked in red clay?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "gas_can",
+   "type": "entity",
+   "class": "gas can",
+   "plural": "gas cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red gas can",
+   "question": "Is there a red gas can?",
+   "box": [
+    450,
+    320,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black crow with bristling feathers",
+   "question": "Is there a black crow with bristling feathers?",
+   "box": [
+    480,
+    280,
+    540,
+    330
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a procession of ants",
+   "question": "Is there a procession of ants?",
+   "box": [
+    300,
+    641,
+    700,
+    689
+   ]
+  },
+  {
+   "id": "boots",
+   "type": "entity",
+   "class": "work boot",
+   "plural": "work boots",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of worn work boots",
+   "question": "Is there a pair of worn work boots?",
+   "box": [
+    250,
+    650,
+    350,
+    720
+   ]
+  },
+  {
+   "id": "tarps",
+   "type": "entity",
+   "class": "tarp",
+   "plural": "tarps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "patchwork tarps covering the back of the truck",
+   "question": "Are there patchwork tarps covering the back of the truck?",
+   "box": [
+    600,
+    350,
+    800,
+    500
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "farming tools",
+   "plural": "farming tools",
+   "count": 3,
+   "count_exact": true,
+   "desc": "a scythe, a shovel, and a wheelbarrow",
+   "question": "Are there a scythe, a shovel, and a wheelbarrow?",
+   "box": [
+    650,
+    450,
+    780,
+    550
+   ]
+  },
+  {
+   "id": "vegetables",
+   "type": "entity",
+   "class": "vegetable",
+   "plural": "vegetables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "withered vegetables",
+   "question": "Are there withered vegetables?",
+   "box": [
+    0,
+    500,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "windsock",
+   "type": "entity",
+   "class": "windsock",
+   "plural": "windsocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a windsock",
+   "question": "Is there a windsock?",
+   "box": [
+    850,
+    200,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small silhouette of a person",
+   "question": "Is there a small silhouette of a person?",
+   "box": [
+    100,
+    150,
+    150,
+    250
+   ]
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single blue butterfly",
+   "question": "Is there a single blue butterfly?",
+   "box": [
+    476,
+    296,
+    524,
+    344
+   ]
+  },
+  {
+   "id": "truck_idling",
+   "type": "state",
+   "of": "truck",
+   "desc": "the truck is idling",
+   "question": "Does the truck appear to be idling (e.g., vibration or exhaust)?"
+  },
+  {
+   "id": "bumper_scraping_fence",
+   "type": "relation",
+   "of": [
+    "truck",
+    "fence"
+   ],
+   "desc": "the front bumper of the truck scrapes against the fence",
+   "question": "Is the front bumper of the truck scraping against the fence?"
+  },
+  {
+   "id": "gas_can_on_hood",
+   "type": "relation",
+   "of": [
+    "gas_can",
+    "truck"
+   ],
+   "desc": "the red gas can rests on the hood of the truck",
+   "question": "Is the red gas can resting on the hood of the truck?"
+  },
+  {
+   "id": "crow_on_roof",
+   "type": "relation",
+   "of": [
+    "crow",
+    "truck"
+   ],
+   "desc": "the crow perches on the roof of the truck",
+   "question": "Is the crow perching on the roof of the truck?"
+  },
+  {
+   "id": "crow_looking_at_ants",
+   "type": "relation",
+   "of": [
+    "crow",
+    "ants"
+   ],
+   "desc": "the crow looks at the ants",
+   "question": "Is the crow looking at the ants?"
+  },
+  {
+   "id": "ants_on_asphalt",
+   "type": "state",
+   "of": "ants",
+   "desc": "the ants meander across the cracked asphalt",
+   "question": "Are the ants meandering across the cracked asphalt?"
+  },
+  {
+   "id": "boots_near_wheel",
+   "type": "relation",
+   "of": [
+    "boots",
+    "truck"
+   ],
+   "desc": "the work boots lie near the driver’s side wheel of the truck",
+   "question": "Do the work boots lie near the driver’s side wheel of the truck?"
+  },
+  {
+   "id": "tools_under_tarps",
+   "type": "relation",
+   "of": [
+    "tools",
+    "tarps"
+   ],
+   "desc": "the farming tools are revealed under one of the tarps",
+   "question": "Are the farming tools revealed under one of the tarps?"
+  },
+  {
+   "id": "vegetables_through_fence",
+   "type": "relation",
+   "of": [
+    "vegetables",
+    "fence"
+   ],
+   "desc": "the withered vegetables stretch through the chain links of the fence toward the truck",
+   "question": "Do the withered vegetables stretch through the chain links of the fence toward the truck?"
+  },
+  {
+   "id": "butterfly_on_gas_can",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "gas_can"
+   ],
+   "desc": "the blue butterfly alights on the handle of the gas can",
+   "question": "Is the blue butterfly alighting on the handle of the gas can?"
+  },
+  {
+   "id": "window_rolled_down",
+   "type": "state",
+   "of": "truck",
+   "desc": "the truck has a half-rolled window",
+   "question": "Does the truck have a half-rolled window?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the truck’s side mirror reflects a forest of floating lanterns",
+   "question": "Does the truck’s side mirror reflect a forest of floating lanterns?"
+  },
+  {
+   "id": "shadow_stretching",
+   "type": "relation",
+   "of": [
+    "truck",
+    "tarps"
+   ],
+   "desc": "a long thin shadow stretches from the truck",
+   "question": "Does a long thin shadow stretch from the truck?"
+  },
+  {
+   "id": "figure_holding_object",
+   "type": "attribute",
+   "of": "figure",
+   "desc": "the small silhouette holds a glinting object",
+   "question": "Is the small silhouette holding a glinting object?"
+  },
+  {
+   "id": "radio",
+   "type": "entity",
+   "class": "radio",
+   "plural": "radios",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked radio inside the truck cab",
+   "question": "Is there a cracked radio inside the truck cab?",
+   "box": [
+    450,
+    350,
+    550,
+    420
+   ]
+  },
+  {
+   "id": "lanterns",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating lanterns in the sky",
+   "question": "Are there floating lanterns in the sky?",
+   "box": [
+    100,
+    50,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "scythe_mud",
+   "type": "state",
+   "of": "tools",
+   "desc": "the scythe is half-buried in mud",
+   "question": "Is the scythe half-buried in mud?"
+  },
+  {
+   "id": "shovel_cracked",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the shovel is cracked down the middle",
+   "question": "Is the shovel cracked down the middle?"
+  },
+  {
+   "id": "roses_blackened",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the dead roses have blackened spirals",
+   "question": "Do the dead roses have blackened spirals?"
+  },
+  {
+   "id": "tarps_fluttering",
+   "type": "state",
+   "of": "tarps",
+   "desc": "one tarp is fluttering in the wind",
+   "question": "Is one of the tarps fluttering in the wind?"
+  },
+  {
+   "id": "windsock_spinning",
+   "type": "state",
+   "of": "windsock",
+   "desc": "the windsock is spinning",
+   "question": "Is the windsock spinning?"
+  },
+  {
+   "id": "figure_walking",
+   "type": "state",
+   "of": "figure",
+   "desc": "the small silhouette is moving across the fields",
+   "question": "Is the small silhouette moving across the fields?"
+  },
+  {
+   "id": "shadow_from_truck",
+   "type": "relation",
+   "of": [
+    "truck",
+    "tarps"
+   ],
+   "desc": "a long thin shadow stretches from the truck toward the sky",
+   "question": "Does a long thin shadow stretch from the truck toward the sky?"
+  },
+  {
+   "id": "radio_cracked",
+   "type": "attribute",
+   "of": "radio",
+   "desc": "the radio is cracked",
+   "question": "Is the radio cracked?"
+  },
+  {
+   "id": "melody_from_radio",
+   "type": "state",
+   "of": "radio",
+   "desc": "the radio emits a faint distorted melody",
+   "question": "Does the radio appear to be emitting sound (e.g. visual representation of music notes or vibration)?"
+  },
+  {
+   "id": "lanterns_floating",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the lanterns are floating in the sky",
+   "question": "Are the lanterns floating in the sky?"
+  },
+  {
+   "id": "shadow_direction",
+   "type": "relation",
+   "of": [
+    "truck",
+    "tarps"
+   ],
+   "desc": "a long thin shadow stretches from the truck toward the sky",
+   "question": "Does a long thin shadow stretch from the truck upward into the sky?"
+  },
+  {
+   "id": "fence_posts_clay",
+   "type": "attribute",
+   "of": "fence",
+   "desc": "the fence posts are caked in red clay",
+   "question": "Are the fence posts caked in red clay?"
+  },
+  {
+   "id": "fence_sunken",
+   "type": "state",
+   "of": "fence",
+   "desc": "the fence is half-sunken into the earth",
+   "question": "Is the fence half-sunken into the earth?"
+  },
+  {
+   "id": "truck_hood",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the truck has a hood",
+   "question": "Does the truck have a hood?"
+  },
+  {
+   "id": "ants_slow",
+   "type": "state",
+   "of": "ants",
+   "desc": "the ants are slow-moving",
+   "question": "Are the ants slow-moving?"
+  },
+  {
+   "id": "boots_crossed",
+   "type": "state",
+   "of": "boots",
+   "desc": "the work boots are crossed",
+   "question": "Are the work boots crossed?"
+  },
+  {
+   "id": "tarps_patchwork",
+   "type": "attribute",
+   "of": "tarps",
+   "desc": "the tarps are patchwork",
+   "question": "Are the tarps patchwork?"
+  },
+  {
+   "id": "wheelbarrow_filled",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the wheelbarrow is filled with dead roses",
+   "question": "Is the wheelbarrow filled with dead roses?"
+  },
+  {
+   "id": "roses_stems_brittle",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the rose stems are brittle",
+   "question": "Are the rose stems brittle?"
+  },
+  {
+   "id": "vegetables_garden",
+   "type": "attribute",
+   "of": "vegetables",
+   "desc": "the vegetables form a garden",
+   "question": "Do the vegetables form a garden?"
+  },
+  {
+   "id": "windsock_post",
+   "type": "relation",
+   "of": [
+    "windsock",
+    "fence"
+   ],
+   "desc": "the windsock hangs from a post",
+   "question": "Does the windsock hang from a post?"
+  },
+  {
+   "id": "mirror_distorted",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the truck’s side mirror shows a distorted reflection",
+   "question": "Does the truck’s side mirror show a distorted reflection?"
+  },
+  {
+   "id": "lanterns_forest",
+   "type": "attribute",
+   "of": "lanterns",
+   "desc": "the lanterns form a forest",
+   "question": "Do the lanterns form a forest?"
+  },
+  {
+   "id": "butterfly_wings_vibrating",
+   "type": "state",
+   "of": "butterfly",
+   "desc": "the butterfly’s wings are vibrating",
+   "question": "Are the butterfly’s wings vibrating?"
+  },
+  {
+   "id": "figure_horizon",
+   "type": "state",
+   "of": "figure",
+   "desc": "the figure is against the horizon",
+   "question": "Is the figure against the horizon?"
+  },
+  {
+   "id": "object_glinting",
+   "type": "attribute",
+   "of": "figure",
+   "desc": "the object held by the figure glints in the sun",
+   "question": "Does the object held by the figure glint in the sun?"
+  },
+  {
+   "id": "truck_rusted",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the truck has a rusted frame",
+   "question": "Does the truck have a rusted frame?"
+  },
+  {
+   "id": "vegetables_twisting",
+   "type": "attribute",
+   "of": "vegetables",
+   "desc": "the vegetable stems are twisting",
+   "question": "Are the vegetable stems twisting?"
+  },
+  {
+   "id": "windsock_bleached",
+   "type": "attribute",
+   "of": "windsock",
+   "desc": "the windsock is bleached and faded",
+   "question": "Is the windsock bleached and faded?"
+  },
+  {
+   "id": "lanterns_bobbing",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the lanterns are bobbing in the sky",
+   "question": "Are the lanterns bobbing in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "gas_can",
+   "kind": "support"
+  },
+  {
+   "from": "truck",
+   "to": "crow",
+   "kind": "support"
+  },
+  {
+   "from": "truck",
+   "to": "tarps",
+   "kind": "support"
+  },
+  {
+   "from": "tarps",
+   "to": "tools",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0473",
+ "prompt": "The sun blazes over the parched horizon, its light refracting in shimmering waves above the cracked blacktop of the lonely farm road. A heavy truck, its rusted frame like the ribcage of a long-dead beast, idles with a low, mournful growl. The front bumper scrapes gently against a weather-worn fence, its metal posts bowed with age and caked in red clay from the storm that passed days ago. The fence, half-sunken into the earth, frames the scene like a warped boundary between the wild and the domestic, while a red gas can rests on the truck’s hood, gleaming like a sardonic smile under the unrelenting sun. A crow, black feathers bristling in the heat, perches on the roof of the truck, its beady eyes fixed on a slow-moving procession of ants that meander across the cracked asphalt like a single-threaded river. Nearby, a pair of worn work boots lies crossed near the driver’s side wheel, as if the driver had just stepped out for a moment, but time has stilled. The air hums with a strange tension—halfway between a moment of departure and a long pause in the story. From the cab, a half-rolled window lets out a faint, distorted melody from a cracked radio, as though the truck itself is trying to remember how to be alive. The back of the truck is covered in a patchwork of tarps, one of which is fluttering like a tongue in the wind, revealing a tangle of farming tools: a scythe half-buried in mud, a shovel cracked down the middle, and a wheelbarrow filled with dead roses, their stems brittle and their petals curled into blackened spirals. The road curves away into the distance, but it seems to loop in on itself, a subtle impossibility that makes the viewer question the geometry of the world. On the opposite side of the fence, a garden of withered vegetables stretches toward the truck like fingers, their stems twisting through the chain links, as if nature is trying to reclaim the machine’s presence. A windsock, once white, now bleached and faded, hangs from a post nearby, spinning in a rhythm that doesn’t match the breeze. In the truck’s side mirror, a distorted reflection shows not the road behind, but a forest of floating lanterns that drift and bob in the sky like memories. A single butterfly, blue and fragile, alights on the gas can’s handle, its wings vibrating in the heat, as though the can is both an oasis and a danger. In the distance, a small figure—maybe the driver—moves across the fields, a silhouette against the horizon, holding something that glints in the sun. It is impossible to tell whether they are walking toward the truck or away from it, as the landscape itself seems to fold and stretch in response to the moment. A shadow, long and thin, stretches from the truck toward the sky, as if it is reaching for something beyond the world’s edge. The scene is a quiet war between stillness and motion, between the organic and the mechanical, between the real and the unreal, all held in perfect, impossible balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v83+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 18,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "scythe_buried",
+     "scythe_mud"
+    ]
+   ]
+  }
+ }
+}

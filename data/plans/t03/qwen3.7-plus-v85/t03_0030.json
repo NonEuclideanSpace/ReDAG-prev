@@ -1,0 +1,200 @@
+{
+ "style": "oil painting, sunlit, lush foliage",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse interior with lush foliage",
+   "question": "Does the image depict the interior of a botanical greenhouse with lush foliage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green apron",
+   "question": "Is there a man in a green apron?",
+   "box": [
+    400,
+    180,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall fern",
+   "question": "Is there a tall fern?",
+   "box": [
+    700,
+    100,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white cat",
+   "question": "Is there a white cat?",
+   "box": [
+    750,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    700,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "woman_trowel",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small trowel",
+   "question": "Is the woman in a blue dress holding a small trowel?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green apron is pointing",
+   "question": "Is the man in a green apron pointing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the white cat is sitting",
+   "question": "Is the white cat sitting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress looks at the man in a green apron",
+   "question": "Is the woman in a blue dress looking at the man in a green apron?"
+  },
+  {
+   "id": "man_gesturing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green apron is gesturing",
+   "question": "Is the man in a green apron gesturing?"
+  },
+  {
+   "id": "man_points_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a green apron points toward the tall fern",
+   "question": "Is the man in a green apron pointing toward the tall fern?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the white cat sits on the wooden bench",
+   "question": "Is the white cat sitting on the wooden bench?"
+  },
+  {
+   "id": "bench_next_to_man",
+   "type": "relation",
+   "of": [
+    "bench",
+    "man"
+   ],
+   "desc": "the wooden bench is next to the man in a green apron",
+   "question": "Is the wooden bench next to the man in a green apron?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "glass roof",
+   "question": "Is a glass roof visible in the frame?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0030",
+ "prompt": "This oil painting depicts a sunlit botanical greenhouse. On the left stands a woman in a blue dress holding a small trowel. In the center, a man in a green apron points toward a tall fern. To the right, a white cat sits calmly on a wooden bench next to the man. The woman looks at the man while he gestures. There is no glass roof visible in the frame. The scene captures a quiet moment among the lush foliage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

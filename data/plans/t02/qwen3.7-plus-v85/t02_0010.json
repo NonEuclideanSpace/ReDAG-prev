@@ -1,0 +1,151 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an outdoor rural setting",
+   "question": "Does the image show an outdoor rural setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a straw hat",
+   "question": "Is there a farmer in a straw hat?",
+   "box": [
+    50,
+    150,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in blue overalls",
+   "question": "Is there a child in blue overalls?",
+   "box": [
+    600,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large orange cat",
+   "question": "Is there a large orange cat?",
+   "box": [
+    750,
+    700,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "farmer_wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a golden sheaf of wheat",
+   "question": "Is the farmer holding a golden sheaf of wheat?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer is standing",
+   "question": "Is the farmer standing?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in blue overalls reaches out with both hands",
+   "question": "Is the child in blue overalls reaching out?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting calmly",
+   "question": "Is the cat sitting calmly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "child"
+   ],
+   "desc": "the farmer is handing the wheat to the child",
+   "question": "Is the farmer handing the wheat to the child?"
+  },
+  {
+   "id": "cat_next_to_child",
+   "type": "relation",
+   "of": [
+    "cat",
+    "child"
+   ],
+   "desc": "the cat sits next to the child's feet",
+   "question": "Is the cat sitting next to the child's feet?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "machinery in the background",
+   "question": "Is there any machinery visible in the background?"
+  },
+  {
+   "id": "child_hands",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in blue overalls uses both hands",
+   "question": "Is the child in blue overalls using both hands?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0010",
+ "prompt": "In an anime style scene, a farmer in a straw hat stands on the left holding a golden sheaf of wheat. To the right, a child in blue overalls reaches out with both hands. The farmer is handing the wheat to the child. A large orange cat sits calmly next to the child's feet. There is no machinery visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

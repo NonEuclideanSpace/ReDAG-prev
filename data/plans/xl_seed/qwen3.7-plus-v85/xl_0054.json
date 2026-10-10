@@ -1,0 +1,406 @@
+{
+ "style": "photorealistic photo, natural lighting, sharp focus",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush backyard garden with a white fence in the background and a stone fountain with a small pool",
+   "question": "Does the image show a lush backyard garden?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "gardener",
+   "type": "entity",
+   "class": "gardener",
+   "plural": "gardeners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gardener wearing a straw hat",
+   "question": "Is there a gardener wearing a straw hat?",
+   "box": [
+    380,
+    400,
+    640,
+    750
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young girl in a pink dress",
+   "question": "Is there a young girl in a pink dress?",
+   "box": [
+    100,
+    350,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in blue shorts",
+   "question": "Is there a boy in blue shorts?",
+   "box": [
+    250,
+    400,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a butterfly",
+   "question": "Is there a butterfly?",
+   "box": [
+    400,
+    300,
+    480,
+    380
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    750,
+    500,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man wearing reading glasses",
+   "question": "Is there an older man wearing reading glasses?",
+   "box": [
+    780,
+    350,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "wicker basket",
+   "plural": "wicker baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open wicker picnic basket with a red checkered cloth",
+   "question": "Is there an open wicker picnic basket with a red checkered cloth?",
+   "box": [
+    350,
+    750,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled garden hose",
+   "question": "Is there a coiled garden hose?",
+   "box": [
+    800,
+    700,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "tulips",
+   "type": "entity",
+   "class": "tulip",
+   "plural": "tulips",
+   "count": 2,
+   "count_exact": false,
+   "desc": "purple tulips",
+   "question": "Are there purple tulips?",
+   "box": [
+    450,
+    650,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "sunflowers",
+   "type": "entity",
+   "class": "sunflower",
+   "plural": "sunflowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a row of sunflowers",
+   "question": "Are there sunflowers?",
+   "box": [
+    50,
+    200,
+    200,
+    600
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large oak tree",
+   "question": "Is there a large oak tree?",
+   "box": [
+    700,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "gardener_kneeling",
+   "type": "state",
+   "of": "gardener",
+   "desc": "the gardener is kneeling",
+   "question": "Is the gardener kneeling?"
+  },
+  {
+   "id": "gardener_trowel",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the gardener holds a small trowel",
+   "question": "Is the gardener holding a small trowel?"
+  },
+  {
+   "id": "girl_watering_can",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the young girl holds a green watering can",
+   "question": "Is the young girl holding a green watering can?"
+  },
+  {
+   "id": "man_newspaper",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the older man holds a newspaper",
+   "question": "Is the older man holding a newspaper?"
+  },
+  {
+   "id": "basket_contents",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the wicker basket contains apples and sandwiches",
+   "question": "Does the wicker basket contain apples?"
+  },
+  {
+   "id": "planting",
+   "type": "action",
+   "of": [
+    "gardener",
+    "tulips"
+   ],
+   "desc": "the gardener plants the purple tulips into the soil",
+   "question": "Is the gardener planting the purple tulips into the soil?"
+  },
+  {
+   "id": "watering",
+   "type": "action",
+   "of": [
+    "girl",
+    "sunflowers"
+   ],
+   "desc": "the young girl waters the sunflowers",
+   "question": "Is the young girl watering the sunflowers?"
+  },
+  {
+   "id": "chasing",
+   "type": "action",
+   "of": [
+    "boy",
+    "butterfly"
+   ],
+   "desc": "the boy chases the butterfly",
+   "question": "Is the boy chasing the butterfly?"
+  },
+  {
+   "id": "reading",
+   "type": "state",
+   "of": "man",
+   "desc": "the older man is reading",
+   "question": "Is the older man reading?"
+  },
+  {
+   "id": "bench_under_tree",
+   "type": "relation",
+   "of": [
+    "bench",
+    "oak_tree"
+   ],
+   "desc": "the wooden bench sits under the large oak tree",
+   "question": "Is the wooden bench under the large oak tree?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the older man sits on the wooden bench",
+   "question": "Is the older man sitting on the wooden bench?"
+  },
+  {
+   "id": "basket_on_grass",
+   "type": "state",
+   "of": "basket",
+   "desc": "the wicker basket lying on the grass in the foreground",
+   "question": "Is the wicker picnic basket lying on the grass?"
+  },
+  {
+   "id": "hose_near_fountain",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose coiled near the stone fountain",
+   "question": "Is the garden hose coiled?"
+  },
+  {
+   "id": "gardener_trowel_fix",
+   "type": "attribute",
+   "of": "gardener",
+   "desc": "the gardener holds a small trowel",
+   "question": "Is the gardener holding a small trowel?"
+  },
+  {
+   "id": "basket_on_grass_fix",
+   "type": "state",
+   "of": "basket",
+   "desc": "the wicker picnic basket lies on the grass",
+   "question": "Does the wicker picnic basket lie on the grass?"
+  },
+  {
+   "id": "hose_near_fountain_fix",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose is near the stone fountain",
+   "question": "Is the garden hose near the stone fountain?"
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence",
+   "plural": "fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white fence",
+   "question": "Is there a white fence?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "stone fountain",
+   "plural": "stone fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fountain with a small pool",
+   "question": "Is there a stone fountain with a small pool?",
+   "box": [
+    800,
+    400,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "basket_sandwiches",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the wicker basket contains sandwiches",
+   "question": "Does the wicker basket contain sandwiches?"
+  },
+  {
+   "id": "hose_location",
+   "type": "relation",
+   "of": [
+    "hose",
+    "fountain"
+   ],
+   "desc": "the garden hose is near the stone fountain",
+   "question": "Is the garden hose near the stone fountain?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "oak_tree",
+   "to": "bench",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "basket",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0054",
+ "prompt": "A photorealistic photo shows a lush backyard garden on a sunny afternoon, with vivid greens and bright floral colors dominating the frame. In the center, a gardener in a straw hat kneels on the grass, planting purple tulips into the soil with a small trowel. To the left, a young girl in a pink dress waters a row of sunflowers using a green watering can, while her brother in blue shorts chases a butterfly nearby. A wooden bench sits under a large oak tree on the right, where an older man reads a newspaper, wearing reading glasses. A wicker picnic basket with a red checkered cloth lies open on the grass in the foreground, containing apples and sandwiches. A white fence borders the background, separating the garden from a neighbor's yard. A hose coils neatly near a stone fountain that trickles water into a small pool. The interactions include planting, watering, chasing, reading, and lying, depicting a peaceful family day. Sharp focus captures the dew drops on leaves, the texture of the bark, and the fabric of the clothes. Natural lighting enhances the depth and realism, making each element distinct and visually engaging within the square format.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

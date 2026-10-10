@@ -1,0 +1,120 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    574,
+    150,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "chef_holding_tray",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef in a white hat holds a silver tray",
+   "question": "Is the chef in a white hat holding a silver tray?"
+  },
+  {
+   "id": "waiter_reaching",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a blue apron is reaching out",
+   "question": "Is the waiter in a blue apron reaching out?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef hands the tray to the waiter",
+   "question": "Is the chef handing the tray to the waiter?"
+  },
+  {
+   "id": "no_cat",
+   "type": "absent",
+   "desc": "a cat",
+   "question": "Is there a cat visible in the image?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in a white hat is standing",
+   "question": "Is the chef in a white hat standing?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a blue apron is standing",
+   "question": "Is the waiter in a blue apron standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0095",
+ "prompt": "In an anime style busy restaurant kitchen, a chef in a white hat stands on the left side holding a silver tray. A waiter in a blue apron stands on the right side reaching out to take the tray. The chef is handing the tray to the waiter. There is no cat visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

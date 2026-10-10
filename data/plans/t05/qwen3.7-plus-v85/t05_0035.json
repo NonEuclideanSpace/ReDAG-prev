@@ -1,0 +1,288 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station interior",
+   "question": "Does the image show a fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench in the image?",
+   "box": [
+    300,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck in the image?",
+   "box": [
+    650,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in a yellow helmet",
+   "question": "Is there a tall firefighter in a yellow helmet?",
+   "box": [
+    50,
+    100,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    400,
+    550,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic in blue overalls?",
+   "box": [
+    600,
+    300,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "dispatcher",
+   "type": "entity",
+   "class": "dispatcher",
+   "plural": "dispatchers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dispatcher in a white shirt",
+   "question": "Is there a dispatcher in a white shirt?",
+   "box": [
+    350,
+    400,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "axe",
+   "type": "entity",
+   "class": "axe",
+   "plural": "axes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver axe",
+   "question": "Is there a silver axe?",
+   "box": [
+    700,
+    850,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "firefighter_pointing",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "truck"
+   ],
+   "desc": "the tall firefighter in the yellow helmet points toward the red fire truck",
+   "question": "Is the tall firefighter in the yellow helmet pointing toward the red fire truck?"
+  },
+  {
+   "id": "dog_looking",
+   "type": "action",
+   "of": [
+    "dog",
+    "axe"
+   ],
+   "desc": "the small brown dog looks at the silver axe",
+   "question": "Is the small brown dog looking at the silver axe?"
+  },
+  {
+   "id": "mechanic_handing",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "dispatcher"
+   ],
+   "desc": "the mechanic in blue overalls hands a wrench to the dispatcher in a white shirt",
+   "question": "Is the mechanic in blue overalls handing a wrench to the dispatcher in a white shirt?"
+  },
+  {
+   "id": "dispatcher_holding",
+   "type": "attribute",
+   "of": "dispatcher",
+   "desc": "the dispatcher in a white shirt holds a black telephone receiver",
+   "question": "Is the dispatcher in a white shirt holding a black telephone receiver?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "mechanic_leaning",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic in blue overalls is leaning",
+   "question": "Is the mechanic in blue overalls leaning?"
+  },
+  {
+   "id": "dispatcher_sitting",
+   "type": "state",
+   "of": "dispatcher",
+   "desc": "the dispatcher in a white shirt is sitting",
+   "question": "Is the dispatcher in a white shirt sitting?"
+  },
+  {
+   "id": "mechanic_against_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic in blue overalls leans against the red fire truck",
+   "question": "Is the mechanic in blue overalls leaning against the red fire truck?"
+  },
+  {
+   "id": "dispatcher_behind_others",
+   "type": "relation",
+   "of": [
+    "dispatcher",
+    "firefighter"
+   ],
+   "desc": "the dispatcher in a white shirt is behind the other entities",
+   "question": "Is the dispatcher in a white shirt positioned behind the other entities?"
+  },
+  {
+   "id": "axe_next_to_truck",
+   "type": "relation",
+   "of": [
+    "axe",
+    "truck"
+   ],
+   "desc": "the silver axe rests next to the red fire truck",
+   "question": "Is the silver axe resting next to the red fire truck?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the small brown dog sits on the wooden bench",
+   "question": "Is the small brown dog sitting on the wooden bench?"
+  },
+  {
+   "id": "dispatcher_on_bench",
+   "type": "relation",
+   "of": [
+    "dispatcher",
+    "bench"
+   ],
+   "desc": "the dispatcher in a white shirt sits on the wooden bench",
+   "question": "Is the dispatcher in a white shirt sitting on the wooden bench?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "visible smoke",
+   "question": "Is there any visible smoke in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the tall firefighter in the yellow helmet is standing",
+   "question": "Is the tall firefighter in the yellow helmet standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "dispatcher",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0035",
+ "prompt": "In an anime style illustration, a fire station interior features five distinct entities. On the left stands a tall firefighter in a yellow helmet. In the center sits a small brown dog on a wooden bench. To the right leans a mechanic in blue overalls against a red fire truck. Behind them, a dispatcher in a white shirt holds a black telephone receiver. Next to the truck rests a silver axe on the floor. The tall firefighter in the yellow helmet is pointing toward the red fire truck. The small brown dog is looking at the silver axe. The mechanic in blue overalls is handing a wrench to the dispatcher in the white shirt. The dispatcher in the white shirt is sitting on the wooden bench. There is no visible smoke in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 4,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

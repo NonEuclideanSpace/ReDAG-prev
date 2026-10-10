@@ -1,0 +1,194 @@
+{
+ "style": "photorealistic, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "sand",
+   "question": "Is the background composed of sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chest",
+   "type": "entity",
+   "class": "treasure chest",
+   "plural": "treasure chests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered rectangular treasure chest",
+   "question": "Is there a weathered rectangular treasure chest?",
+   "box": [
+    200,
+    300,
+    824,
+    750
+   ]
+  },
+  {
+   "id": "gems",
+   "type": "entity",
+   "class": "gem",
+   "plural": "gems",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five square-cut green gems",
+   "question": "Are there five square-cut green gems?",
+   "box": [
+    350,
+    320,
+    674,
+    380
+   ]
+  },
+  {
+   "id": "chest_cracked",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is cracked",
+   "question": "Is the chest cracked?"
+  },
+  {
+   "id": "chest_straps",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is bound by two thick iron straps",
+   "question": "Is the chest bound by two thick iron straps?"
+  },
+  {
+   "id": "chest_lid_open",
+   "type": "state",
+   "of": "chest",
+   "desc": "the lid of the chest is partially open",
+   "question": "Is the lid of the chest partially open?"
+  },
+  {
+   "id": "chest_light",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "bright golden light glows from within the chest",
+   "question": "Does bright golden light glow from within the chest?"
+  },
+  {
+   "id": "chest_lock",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the front of the chest has a large skull-shaped lock",
+   "question": "Does the front of the chest have a large skull-shaped lock?"
+  },
+  {
+   "id": "chest_barnacles",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is covered with barnacles",
+   "question": "Is the chest covered with barnacles?"
+  },
+  {
+   "id": "gems_on_lid",
+   "type": "relation",
+   "of": [
+    "gems",
+    "chest"
+   ],
+   "desc": "the gems are embedded in a row on the lid of the chest",
+   "question": "Are the gems embedded in a row on the lid of the chest?"
+  },
+  {
+   "id": "gems_cracked",
+   "type": "attribute",
+   "of": "gems",
+   "desc": "two of the gems are visibly cracked",
+   "question": "Are two of the gems visibly cracked?"
+  },
+  {
+   "id": "chest_handle",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "a single frayed rope handle is visible on one side of the chest",
+   "question": "Is a single frayed rope handle visible on one side of the chest?"
+  },
+  {
+   "id": "chest_half_buried",
+   "type": "state",
+   "of": "chest",
+   "desc": "the chest is half-buried in the sand",
+   "question": "Is the chest half-buried in the sand?"
+  },
+  {
+   "id": "no_metal_chest",
+   "type": "absent",
+   "desc": "a chest made entirely of metal",
+   "question": "Is the chest made entirely of metal?"
+  },
+  {
+   "id": "no_blue_light",
+   "type": "absent",
+   "desc": "blue glowing light",
+   "question": "Is the glowing light blue?"
+  },
+  {
+   "id": "chest_wood",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is made of dark wood",
+   "question": "Is the chest made of dark wood?"
+  },
+  {
+   "id": "straps_rusted",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the iron straps on the chest are rusted",
+   "question": "Are the iron straps on the chest rusted?"
+  },
+  {
+   "id": "lock_keyhole",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the skull-shaped lock has an empty keyhole",
+   "question": "Does the skull-shaped lock have an empty keyhole?"
+  },
+  {
+   "id": "chest_seaweed",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is covered with strands of seaweed",
+   "question": "Is the chest covered with strands of seaweed?"
+  },
+  {
+   "id": "chest_splintered",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is splintered",
+   "question": "Is the chest splintered?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_034",
+ "prompt": "A single, weathered, rectangular treasure chest, half-buried in sand. The chest is made of dark wood that is cracked and splintered. It is bound by two thick, rusted iron straps. The lid is partially open, and a bright, golden light is glowing from within. The front has a single, large, skull-shaped lock with an empty keyhole. The entire chest is covered with some barnacles and a few strands of seaweed. On the lid, exactly five square-cut green gems are embedded in a row, but two of them are visibly cracked. A single, frayed rope handle is visible on one side. The chest is not new, it is not fully closed, it is not made entirely of metal, and the glowing light is not blue.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "sandy ground textured with fine graphite lines and faint watercolor tints",
+   "question": "Does the background show sandy ground textured with fine graphite lines and faint watercolor tints?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue visor",
+   "question": "Is there a woman in a blue visor?",
+   "box": [
+    380,
+    400,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    750,
+    150,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is leaning forward",
+   "question": "Is the man in a red scarf leaning forward?"
+  },
+  {
+   "id": "man_focused",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf has an expression of intense focus",
+   "question": "Does the man in a red scarf have an expression of intense focus?"
+  },
+  {
+   "id": "woman_crouching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue visor is crouching low",
+   "question": "Is the woman in a blue visor crouching low?"
+  },
+  {
+   "id": "volleyball_blurred",
+   "type": "state",
+   "of": "volleyball",
+   "desc": "the yellow volleyball is slightly blurred by motion",
+   "question": "Is the yellow volleyball slightly blurred by motion?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "volleyball"
+   ],
+   "desc": "the woman in a blue visor looks at the yellow volleyball",
+   "question": "Is the woman in a blue visor looking at the yellow volleyball?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf stands next to the woman in a blue visor",
+   "question": "Is the man in a red scarf standing next to the woman in a blue visor?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a net",
+   "question": "Is there a net visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf stands",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "woman_knees_bent",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue visor has her knees bent",
+   "question": "Does the woman in a blue visor have her knees bent?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0141",
+ "prompt": "In a pencil sketch with light color wash, a man in a red scarf stands on the left, leaning forward with intense focus. Center stage, a woman in a blue visor crouches low, her knees bent and ready to spring. To the right, a yellow volleyball hovers mid-air, slightly blurred by motion. The woman in the blue visor looks at the yellow volleyball, anticipating its descent. The man in a red scarf stands next to the woman in a blue visor, forming a defensive line. There is no net visible in the scene. The sandy ground stretches beneath them, textured with fine graphite lines and faint watercolor tints. The composition captures the tension of the match without extra distractions. Only these three entities exist within the frame, defined by their distinct appearances and positions. The interaction remains simple yet dynamic, focusing entirely on the imminent play.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

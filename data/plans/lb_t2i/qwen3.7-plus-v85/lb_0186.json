@@ -1,0 +1,471 @@
+{
+ "style": "surreal dark fantasy, cinematic lighting, high contrast, eerie atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim room with a wooden bedframe and a wall with a small hole revealing faint shadows of gears and levers",
+   "question": "Does the image show a dim room with a wooden bedframe and a wall containing a small hole with visible gear-like shadows inside?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bed",
+   "type": "entity",
+   "class": "bed",
+   "plural": "beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bedframe",
+   "question": "Is there a wooden bedframe?",
+   "box": [
+    100,
+    400,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "flashlight",
+   "type": "entity",
+   "class": "flashlight",
+   "plural": "flashlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flashlight emitting a sickly yellow light",
+   "question": "Is there a flashlight emitting yellow light?",
+   "box": [
+    850,
+    300,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty ceramic coffee mug",
+   "question": "Is there a half-empty ceramic coffee mug?",
+   "box": [
+    300,
+    650,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled notebook",
+   "question": "Is there a crumpled notebook?",
+   "box": [
+    420,
+    680,
+    550,
+    780
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with hands frozen just before midnight",
+   "question": "Is there a clock with hands positioned just before midnight?",
+   "box": [
+    100,
+    100,
+    250,
+    250
+   ]
+  },
+  {
+   "id": "sneaker",
+   "type": "entity",
+   "class": "sneaker",
+   "plural": "sneakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single worn and dusty sneaker",
+   "question": "Is there a single worn sneaker?",
+   "box": [
+    200,
+    850,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "shoebox",
+   "type": "entity",
+   "class": "shoebox",
+   "plural": "shoeboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shoebox labeled 'Not Found'",
+   "question": "Is there a shoebox labeled 'Not Found'?",
+   "box": [
+    360,
+    850,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "keys",
+   "type": "entity",
+   "class": "keys",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a pendulum of keys dangling from the ceiling",
+   "question": "Are there keys dangling from the ceiling?",
+   "box": [
+    500,
+    0,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped mirror",
+   "question": "Is there a warped mirror?",
+   "box": [
+    700,
+    100,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small moth",
+   "question": "Is there a small moth?",
+   "box": [
+    750,
+    350,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating pencil",
+   "question": "Is there a pencil floating in the air?",
+   "box": [
+    800,
+    400,
+    850,
+    450
+   ]
+  },
+  {
+   "id": "mug_liquid",
+   "type": "state",
+   "of": "mug",
+   "desc": "dark liquid oozing down the side of the mug",
+   "question": "Is dark liquid oozing down the side of the mug?"
+  },
+  {
+   "id": "notebook_stain",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the notebook is stained with liquid",
+   "question": "Is the notebook stained with liquid?"
+  },
+  {
+   "id": "clock_frozen",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock hands are frozen",
+   "question": "Are the hands of the clock stationary?"
+  },
+  {
+   "id": "shoebox_content",
+   "type": "attribute",
+   "of": "shoebox",
+   "desc": "mismatched doorknobs inside the shoebox",
+   "question": "Are there mismatched doorknobs visible inside the shoebox?"
+  },
+  {
+   "id": "mirror_distortion",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror shows a distorted reflection",
+   "question": "Does the mirror show a distorted reflection?"
+  },
+  {
+   "id": "moth_on_pencil",
+   "type": "relation",
+   "of": [
+    "moth",
+    "pencil"
+   ],
+   "desc": "the moth is landing on the floating pencil",
+   "question": "Is the moth touching or landing on the floating pencil?"
+  },
+  {
+   "id": "keys_above_bed",
+   "type": "relation",
+   "of": [
+    "keys",
+    "bed"
+   ],
+   "desc": "the keys hang above the bed",
+   "question": "Are the keys hanging above the bed?"
+  },
+  {
+   "id": "sneaker_under_bed",
+   "type": "relation",
+   "of": [
+    "sneaker",
+    "bed"
+   ],
+   "desc": "the sneaker rests beneath the bed",
+   "question": "Is the sneaker located beneath the bed?"
+  },
+  {
+   "id": "sneaker_next_to_shoebox",
+   "type": "relation",
+   "of": [
+    "sneaker",
+    "shoebox"
+   ],
+   "desc": "the sneaker leans against the shoebox",
+   "question": "Is the sneaker leaning against the shoebox?"
+  },
+  {
+   "id": "notebook_next_to_mug",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "mug"
+   ],
+   "desc": "the notebook rests beside the mug",
+   "question": "Is the notebook resting beside the mug?"
+  },
+  {
+   "id": "flashlight_illuminates_hole",
+   "type": "state",
+   "of": "flashlight",
+   "desc": "the flashlight illuminates the hole in the wall",
+   "question": "Is the beam of the flashlight directed at the hole in the wall?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the room?"
+  },
+  {
+   "id": "loose_page",
+   "type": "entity",
+   "class": "page",
+   "plural": "pages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose page floating from the notebook",
+   "question": "Is there a loose page floating from the notebook?",
+   "box": [
+    300,
+    700,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "keys_swinging",
+   "type": "state",
+   "of": "keys",
+   "desc": "the pendulum of keys is swinging",
+   "question": "Is the pendulum of keys swinging?"
+  },
+  {
+   "id": "moth_drifting",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth is drifting through the air",
+   "question": "Is the moth drifting through the air?"
+  },
+  {
+   "id": "pencil_hovering",
+   "type": "state",
+   "of": "pencil",
+   "desc": "the pencil is hovering in the air",
+   "question": "Is the pencil hovering in the air?"
+  },
+  {
+   "id": "page_to_sneaker",
+   "type": "action",
+   "of": [
+    "loose_page",
+    "sneaker"
+   ],
+   "desc": "the loose page drifts toward the sneaker",
+   "question": "Is the loose page drifting toward the sneaker?"
+  },
+  {
+   "id": "pencil_between",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "bed",
+    "flashlight"
+   ],
+   "desc": "the pencil hovers between the bedpost and the flashlight",
+   "question": "Is the pencil hovering between the bedpost and the flashlight?"
+  },
+  {
+   "id": "ceiling",
+   "type": "entity",
+   "class": "ceiling",
+   "plural": "ceilings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the ceiling",
+   "question": "Is there a ceiling visible in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    100
+   ]
+  },
+  {
+   "id": "keys_from_ceiling",
+   "type": "relation",
+   "of": [
+    "keys",
+    "ceiling"
+   ],
+   "desc": "the pendulum of keys dangles from the ceiling",
+   "question": "Do the keys dangle from the ceiling?"
+  },
+  {
+   "id": "mug_chipped",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the ceramic rim of the mug is chipped",
+   "question": "Is the ceramic rim of the mug chipped?"
+  },
+  {
+   "id": "notebook_symbols",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "loose_page"
+   ],
+   "desc": "cryptic symbols or reverse writing visible on the notebook pages beneath the stain",
+   "question": "Are cryptic symbols or reverse writing visible on the notebook pages beneath the stain?"
+  },
+  {
+   "id": "shoebox_lid",
+   "type": "state",
+   "of": "shoebox",
+   "desc": "the lid of the shoebox is slightly ajar",
+   "question": "Is the lid of the shoebox slightly ajar?"
+  },
+  {
+   "id": "liquid_pooling",
+   "type": "state",
+   "of": "mug",
+   "desc": "dark liquid pooling around the base of the mug",
+   "question": "Is dark liquid pooling around the base of the mug?"
+  },
+  {
+   "id": "notebook_warped",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the edges of the notebook are warped",
+   "question": "Are the edges of the notebook warped?"
+  },
+  {
+   "id": "mirror_impossible_geometry",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror reflects an impossible geometry where angles fold",
+   "question": "Does the mirror reflect an impossible geometry where angles fold?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bed",
+   "to": "sneaker",
+   "kind": "support"
+  },
+  {
+   "from": "bed",
+   "to": "shoebox",
+   "kind": "support"
+  },
+  {
+   "from": "ceiling",
+   "to": "keys",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0186",
+ "prompt": "The dim glow of the flashlight, flickering with the faint tremor of the wooden bedframe, illuminates the small hole in the wall with a sickly yellow light, revealing the outlines of something just beyond reach—faint shadows of gears and levers hidden within the drywall, as if the house itself is breathing in secret. The half-empty coffee mug, its ceramic chipped near the rim, sits askew, a long curl of dark liquid slowly oozing down its side and pooling around the base, where it begins to warp the edges of the crumpled notebook resting beside it. The pages of the notebook flutter subtly, not from air but from the silent pulse of a nearby clock whose hands are stuck in a paradoxical state, frozen just before midnight yet ticking forward in the quiet clicks that echo through the room like a metronome counting the end of time. A single sneaker, worn and dusty, rests beneath the bed as if dropped there mid-stride, leaning awkwardly against a shoebox labeled *“Not Found”* in jagged block letters, the lid slightly ajar to reveal not shoes but a collection of mismatched doorknobs, each glinting as if freshly polished. A string, invisible in the gloom, tugs gently from the ceiling down to a pendulum of keys dangling above the bed, swinging in slow, deliberate arcs that cast flickering reflections onto the warped mirror on the wall, which, in turn, distorts the room into an impossible geometry where angles fold into themselves and furniture shifts position with every glance. A small moth, drawn to the flashlight, drifts through the air in a slow spiral, its wings catching the light as it brushes past a floating pencil that has somehow hovered between the bedpost and the flashlight, suspended by an unseen current or the weight of an unsolved equation. The wall itself seems to ripple at the edges, especially near the hole, where faint light leaks in from a source that doesn’t exist—a window, perhaps, or a sky, or just a glimpse of something that is not yet real. The ticking of the clock grows louder with each second, as if the timepiece is aware of the stillness it interrupts, its frozen hands casting a silent demand for resolution. The crumpled notebook, slowly absorbing the spilled coffee, reveals cryptic symbols beneath the stain—words written in reverse or perhaps in a language yet to be spoken, each line bending and warping as if responding to the ticking. A loose page floats from the notebook, drifting toward the sneaker, where it slips into the gap between the toes and vanishes, leaving only the faint scent of old ink in its wake. Above the bed, the pendulum of keys begins to swing faster, each swing sending a pulse through the bedframe, which creaks in reply, the sound echoing into the hole in the wall, where the gears inside seem to shift ever so slightly. The moth lands on the pencil, now trembling as if it too senses the growing tension in the room, and the flashlight flickers, momentarily revealing a shadow not of the wall, but of the entire room mirrored in reverse, a doppelgänger scene that vanishes as quickly as it appears. The shoebox groans under its own weight, the doorknobs pressing against its sides like living things trying to escape, and the single sneaker trembles slightly, as if expecting the other to arrive from nowhere. Time, it seems, is no longer linear but recursive, folding in on itself like the warped mirror, where past, present, and something else hover in a fragile, breathing balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 37,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 1,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 4,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

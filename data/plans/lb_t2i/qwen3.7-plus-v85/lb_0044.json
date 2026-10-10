@@ -1,0 +1,299 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, bioluminescent lighting, iridescent steam, recursive reflections",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen room with floating furniture and surreal atmospheric effects",
+   "question": "Does the image depict a kitchen room with surreal, dreamlike atmospheric effects?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "kitchen table",
+   "plural": "kitchen tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden kitchen table",
+   "question": "Is there a wooden kitchen table?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek black laptop",
+   "question": "Is there a sleek black laptop?",
+   "box": [
+    350,
+    550,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porcelain coffee mug",
+   "question": "Is there a porcelain coffee mug?",
+   "box": [
+    280,
+    580,
+    380,
+    700
+   ]
+  },
+  {
+   "id": "light",
+   "type": "entity",
+   "class": "pendant light",
+   "plural": "pendant lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging pendant light",
+   "question": "Is there a hanging pendant light?",
+   "box": [
+    450,
+    50,
+    574,
+    300
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    50,
+    600,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "table_floating",
+   "type": "state",
+   "of": "table",
+   "desc": "the wooden table is floating above the floor",
+   "question": "Is the wooden table floating above the floor?"
+  },
+  {
+   "id": "laptop_open",
+   "type": "state",
+   "of": "laptop",
+   "desc": "the black laptop is open",
+   "question": "Is the black laptop open?"
+  },
+  {
+   "id": "laptop_screen_content",
+   "type": "attribute",
+   "of": "laptop",
+   "desc": "the laptop screen displays a twisting city skyline",
+   "question": "Does the laptop screen display a twisting city skyline?"
+  },
+  {
+   "id": "laptop_screen_ripple",
+   "type": "state",
+   "of": "laptop",
+   "desc": "the image on the laptop screen is rippling",
+   "question": "Is the image on the laptop screen rippling?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "iridescent steam rises from the coffee mug in intricate shapes",
+   "question": "Is iridescent steam rising from the coffee mug in intricate shapes?"
+  },
+  {
+   "id": "mug_coffee_color",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee in the mug is liquid black",
+   "question": "Is the coffee in the mug liquid black?"
+  },
+  {
+   "id": "mug_handle_shape",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug handle is elongated and curled like a question mark",
+   "question": "Is the mug handle elongated and curled like a question mark?"
+  },
+  {
+   "id": "light_glow",
+   "type": "state",
+   "of": "light",
+   "desc": "the pendant light casts an amber glow",
+   "question": "Does the pendant light cast an amber glow?"
+  },
+  {
+   "id": "light_swinging",
+   "type": "state",
+   "of": "light",
+   "desc": "the pendant light is swinging slightly",
+   "question": "Is the pendant light swinging slightly?"
+  },
+  {
+   "id": "dog_pawing",
+   "type": "action",
+   "of": [
+    "dog",
+    "table"
+   ],
+   "desc": "the golden retriever paws at the edge of the table",
+   "question": "Is the golden retriever pawing at the edge of the table?"
+  },
+  {
+   "id": "dog_nose_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever's nose is tilted upward",
+   "question": "Is the golden retriever's nose tilted upward?"
+  },
+  {
+   "id": "mug_left_of_laptop",
+   "type": "relation",
+   "of": [
+    "mug",
+    "laptop"
+   ],
+   "desc": "the coffee mug is to the left of the laptop",
+   "question": "Is the coffee mug to the left of the laptop?"
+  },
+  {
+   "id": "laptop_on_table",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "table"
+   ],
+   "desc": "the laptop sits on the table",
+   "question": "Is the laptop sitting on the table?"
+  },
+  {
+   "id": "mug_on_table",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "the coffee mug sits on the table",
+   "question": "Is the coffee mug sitting on the table?"
+  },
+  {
+   "id": "light_above_table",
+   "type": "relation",
+   "of": [
+    "light",
+    "table"
+   ],
+   "desc": "the pendant light hangs above the table",
+   "question": "Does the pendant light hang above the table?"
+  },
+  {
+   "id": "steam_toward_bulb",
+   "type": "relation",
+   "of": [
+    "mug",
+    "light"
+   ],
+   "desc": "the steam from the mug drifts toward the pendant light bulb",
+   "question": "Does the steam from the mug drift toward the pendant light bulb?"
+  },
+  {
+   "id": "table_grain",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table has worn smooth grain",
+   "question": "Does the wooden kitchen table have worn smooth grain?"
+  },
+  {
+   "id": "mug_pattern",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug is etched with a fern leaf pattern",
+   "question": "Is the porcelain coffee mug etched with a fern leaf pattern?"
+  },
+  {
+   "id": "light_shade",
+   "type": "attribute",
+   "of": "light",
+   "desc": "the pendant light has a crystal shade",
+   "question": "Does the hanging pendant light have a crystal shade?"
+  },
+  {
+   "id": "dog_glow",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the golden retriever has faintly glowing fur",
+   "question": "Does the golden retriever have faintly glowing fur?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0044",
+ "prompt": "In the stillness of a morning suspended between dream and wakefulness, the wooden kitchen table creaks beneath the weight of time, its grain worn smooth by countless hands and spilled coffees. A sleek black laptop sits open at the center, its glowing screen casting an eerie blue luminescence that merges with the warm amber glow of a hanging pendant light, its crystal shade refracting the light into a thousand tiny stars that shimmer across the room like scattered constellations. A steaming mug of coffee, its porcelain etched with the delicate curve of an old fern leaf, sits to the left of the keyboard, where the rising vapor curls upward in slow spirals, bending light and shadow as it drifters toward the bulb, distorting the scene like heat on tarmac. From the corner of the table, a golden retriever paws gently at the edge, its paws making soft thuds that echo through the room like distant thunder in a world where sound moves in waves. Its nose tilts upward, caught in the scent of the morning brew, a scent so rich and layered it seems to pull the room in, folding it in on itself as if the aroma alone could stretch the air thin enough to let other worlds slip through. Above the table, the pendant light begins to flicker, and as it does, the coffee’s steam takes on an iridescent sheen, reflecting the screen’s glow in a mirror within a mirror. The dog’s fur ripples as though stirred by an invisible current, each strand glowing faintly with a bioluminescent tinge, while the coffee in the mug slowly shifts color—first to gold, then to a deep violet, and finally to a liquid black so dense it seems to swallow the light rather than reflect it. The laptop screen displays not a spreadsheet or a document, but a live feed of a city skyline viewed from a height that defies logic, its towers twisting like smoke in a glass of water. As the dog’s paw makes contact with the edge of the table, the screen wobbles, the image rippling as if disturbed by a wave, and for a moment, the skyline morphs into a reflection of the kitchen, the real and the virtual colliding in a loop of infinite recursion. The pendant light now swings slightly, though no wind moves in the room, and the steam from the coffee has taken on a mind of its own, weaving itself into intricate shapes—first a cat, then a key, then a doorway—each dissolving into the next as if the vapor were alive, responding to the energy in the air. The wooden table groans, its legs no longer resting on the floor but floating just above, as if the room itself has become a stage suspended between dimensions, held in place by the tension of unseen forces. The dog, sensing the shift, barks—a sound that rings like a bell in a cathedral—its voice echoing not just through the kitchen but through the layers of the image on the screen, triggering a shift in the city skyline, where buildings now tilt and bend as if bowing to the sound. The coffee mug, once a simple object, now seems to be part of the scene’s architecture, its shape subtly altering as it interacts with the shifting light and the digital world it reflects, its handle elongating and curling into the air like a question mark. The room is no longer a room, but a nexus of converging realities, each element feeding into the next in a chain of surreal causality—coffee to steam to light to sound to thought—each step blurring the line between the tangible and the imagined. And yet, it remains a single, impossible yet coherent world, a place where time and space are mere suggestions, and the morning has not yet decided whether it is real or a memory being rewritten.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 43,
+   "n_uncovered": 3,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

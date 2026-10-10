@@ -1,0 +1,671 @@
+{
+ "style": "photorealistic, detailed interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a messy artist's studio with brick walls, wooden floor covered by plastic tarps, track lighting, and large north-facing windows",
+   "question": "Does the image show a messy artist's studio with brick walls, a wooden floor partially covered by plastic tarps, track lighting, and large windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "canvases",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several canvases displaying works in various stages of completion",
+   "question": "Are there several canvases?",
+   "box": [
+    50,
+    100,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "easel",
+   "type": "entity",
+   "class": "easel",
+   "plural": "easels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an easel",
+   "question": "Is there an easel?",
+   "box": [
+    400,
+    200,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "work table",
+   "plural": "work tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cluttered work table",
+   "question": "Is there a cluttered work table?",
+   "box": [
+    100,
+    600,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "sketch_pads",
+   "type": "entity",
+   "class": "sketch pad",
+   "plural": "sketch pads",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several sketch pads",
+   "question": "Are there several sketch pads?",
+   "box": [
+    150,
+    650,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "charcoal_sticks",
+   "type": "entity",
+   "class": "charcoal stick",
+   "plural": "charcoal sticks",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several charcoal sticks",
+   "question": "Are there several charcoal sticks?",
+   "box": [
+    420,
+    700,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "erasers",
+   "type": "entity",
+   "class": "eraser",
+   "plural": "erasers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several erasers",
+   "question": "Are there several erasers?",
+   "box": [
+    510,
+    710,
+    580,
+    760
+   ]
+  },
+  {
+   "id": "sharpeners",
+   "type": "entity",
+   "class": "pencil sharpener",
+   "plural": "pencil sharpeners",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several pencil sharpeners",
+   "question": "Are there several pencil sharpeners?",
+   "box": [
+    590,
+    720,
+    650,
+    780
+   ]
+  },
+  {
+   "id": "coffee_cups",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several empty coffee cups",
+   "question": "Are there several empty coffee cups?",
+   "box": [
+    660,
+    680,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "palettes",
+   "type": "entity",
+   "class": "palette",
+   "plural": "palettes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glass palettes with colorful oils",
+   "question": "Are there glass palettes?",
+   "box": [
+    200,
+    620,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "jars",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glass jars filled with liquid containing brushes",
+   "question": "Are there glass jars?",
+   "box": [
+    360,
+    630,
+    450,
+    720
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "storage cabinet",
+   "plural": "storage cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a storage cabinet holding supplies",
+   "question": "Is there a storage cabinet?",
+   "box": [
+    800,
+    200,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "fan",
+   "type": "entity",
+   "class": "floor fan",
+   "plural": "floor fans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floor fan",
+   "question": "Is there a floor fan?",
+   "box": [
+    50,
+    800,
+    150,
+    950
+   ]
+  },
+  {
+   "id": "color_wheels",
+   "type": "entity",
+   "class": "color wheel",
+   "plural": "color wheels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "color wheels",
+   "question": "Are there color wheels?",
+   "box": [
+    320,
+    150,
+    400,
+    250
+   ]
+  },
+  {
+   "id": "photos",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 3,
+   "count_exact": false,
+   "desc": "inspirational photographs",
+   "question": "Are there photographs?",
+   "box": [
+    420,
+    120,
+    550,
+    220
+   ]
+  },
+  {
+   "id": "canvases_lean",
+   "type": "state",
+   "of": "canvases",
+   "desc": "the canvases are leaning",
+   "question": "Are the canvases leaning against the wall?"
+  },
+  {
+   "id": "brushes_soak",
+   "type": "state",
+   "of": "jars",
+   "desc": "brushes soaking in the jars",
+   "question": "Are there brushes soaking in the jars?"
+  },
+  {
+   "id": "easel_holds",
+   "type": "attribute",
+   "of": "easel",
+   "desc": "the easel holds a masterpiece",
+   "question": "Is the easel holding a painting?"
+  },
+  {
+   "id": "cabinet_holds",
+   "type": "attribute",
+   "of": "cabinet",
+   "desc": "the cabinet contains visible supplies like paper rolls or rags",
+   "question": "Does the cabinet contain visible supplies?"
+  },
+  {
+   "id": "canvases_against_wall",
+   "type": "state",
+   "of": "canvases",
+   "desc": "the canvases lean against the brick walls",
+   "question": "Are the canvases leaning against the brick walls?"
+  },
+  {
+   "id": "sketch_pads_on_table",
+   "type": "relation",
+   "of": [
+    "sketch_pads",
+    "table"
+   ],
+   "desc": "the sketch pads scatter across the work table",
+   "question": "Are the sketch pads on the work table?"
+  },
+  {
+   "id": "charcoal_on_table",
+   "type": "relation",
+   "of": [
+    "charcoal_sticks",
+    "table"
+   ],
+   "desc": "the charcoal sticks are on the work table",
+   "question": "Are the charcoal sticks on the work table?"
+  },
+  {
+   "id": "erasers_on_table",
+   "type": "relation",
+   "of": [
+    "erasers",
+    "table"
+   ],
+   "desc": "the erasers are on the work table",
+   "question": "Are the erasers on the work table?"
+  },
+  {
+   "id": "sharpeners_on_table",
+   "type": "relation",
+   "of": [
+    "sharpeners",
+    "table"
+   ],
+   "desc": "the pencil sharpeners are on the work table",
+   "question": "Are the pencil sharpeners on the work table?"
+  },
+  {
+   "id": "cups_on_table",
+   "type": "relation",
+   "of": [
+    "coffee_cups",
+    "table"
+   ],
+   "desc": "the empty coffee cups are on the work table",
+   "question": "Are the empty coffee cups on the work table?"
+  },
+  {
+   "id": "palettes_on_table",
+   "type": "relation",
+   "of": [
+    "palettes",
+    "table"
+   ],
+   "desc": "the glass palettes are on the work table",
+   "question": "Are the glass palettes on the work table?"
+  },
+  {
+   "id": "jars_on_table",
+   "type": "relation",
+   "of": [
+    "jars",
+    "table"
+   ],
+   "desc": "the glass jars are on the work table",
+   "question": "Are the glass jars on the work table?"
+  },
+  {
+   "id": "wheels_near_photos",
+   "type": "relation",
+   "of": [
+    "color_wheels",
+    "photos"
+   ],
+   "desc": "the color wheels hang near the inspirational photographs",
+   "question": "Are the color wheels hanging near the photographs?"
+  },
+  {
+   "id": "no_digital",
+   "type": "absent",
+   "desc": "digital devices like computers or printers",
+   "question": "Are there any digital devices like computers in the image?"
+  },
+  {
+   "id": "no_instruments",
+   "type": "absent",
+   "desc": "musical instruments such as violins or pianos",
+   "question": "Are there any musical instruments such as violins in the image?"
+  },
+  {
+   "id": "paint_tubes",
+   "type": "entity",
+   "class": "paint tube",
+   "plural": "paint tubes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "paint tubes squeezing colorful oils",
+   "question": "Are there paint tubes squeezing colorful oils?",
+   "box": [
+    100,
+    650,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "brushes",
+   "type": "entity",
+   "class": "brush",
+   "plural": "brushes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "brushes of different sizes",
+   "question": "Are there brushes of different sizes?",
+   "box": [
+    400,
+    600,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "masterpiece",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a canvas displaying the current masterpiece",
+   "question": "Is there a canvas displaying the current masterpiece?",
+   "box": [
+    500,
+    200,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "paper_rolls",
+   "type": "entity",
+   "class": "paper roll",
+   "plural": "paper rolls",
+   "count": 2,
+   "count_exact": false,
+   "desc": "paper rolls",
+   "question": "Are there paper rolls?",
+   "box": [
+    850,
+    400,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "fixative_spray",
+   "type": "entity",
+   "class": "spray can",
+   "plural": "spray cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fixative spray can",
+   "question": "Is there a fixative spray can?",
+   "box": [
+    860,
+    350,
+    940,
+    450
+   ]
+  },
+  {
+   "id": "cleaning_rags",
+   "type": "entity",
+   "class": "rag",
+   "plural": "rags",
+   "count": 2,
+   "count_exact": false,
+   "desc": "cleaning rags",
+   "question": "Are there cleaning rags?",
+   "box": [
+    840,
+    450,
+    960,
+    550
+   ]
+  },
+  {
+   "id": "tubes_on_palettes",
+   "type": "action",
+   "of": [
+    "paint_tubes",
+    "palettes"
+   ],
+   "desc": "paint tubes squeeze colorful oils onto glass palettes",
+   "question": "Are paint tubes squeezing colorful oils onto glass palettes?"
+  },
+  {
+   "id": "brushes_in_jars",
+   "type": "relation",
+   "of": [
+    "brushes",
+    "jars"
+   ],
+   "desc": "brushes soak in glass jars filled with turpentine",
+   "question": "Do brushes soak in glass jars filled with turpentine?"
+  },
+  {
+   "id": "masterpiece_on_easel",
+   "type": "relation",
+   "of": [
+    "masterpiece",
+    "easel"
+   ],
+   "desc": "the easel holds the current masterpiece",
+   "question": "Does the easel hold the current masterpiece?"
+  },
+  {
+   "id": "wheels_on_wall",
+   "type": "state",
+   "of": "color_wheels",
+   "desc": "color wheels hang on the walls",
+   "question": "Do color wheels hang on the walls?"
+  },
+  {
+   "id": "photos_on_wall",
+   "type": "state",
+   "of": "photos",
+   "desc": "inspirational photographs hang on the walls",
+   "question": "Do inspirational photographs hang on the walls?"
+  },
+  {
+   "id": "cabinet_holds_supplies",
+   "type": "relation",
+   "of": [
+    "cabinet",
+    "paper_rolls"
+   ],
+   "desc": "the storage cabinet holds paper rolls",
+   "question": "Does the storage cabinet hold paper rolls?"
+  },
+  {
+   "id": "cabinet_holds_spray",
+   "type": "relation",
+   "of": [
+    "cabinet",
+    "fixative_spray"
+   ],
+   "desc": "the storage cabinet holds fixative spray",
+   "question": "Does the storage cabinet hold fixative spray?"
+  },
+  {
+   "id": "cabinet_holds_rags",
+   "type": "relation",
+   "of": [
+    "cabinet",
+    "cleaning_rags"
+   ],
+   "desc": "the storage cabinet holds cleaning rags",
+   "question": "Does the storage cabinet hold cleaning rags?"
+  },
+  {
+   "id": "fan_circulates",
+   "type": "state",
+   "of": "fan",
+   "desc": "the floor fan circulates air",
+   "question": "Is the floor fan circulating air?"
+  },
+  {
+   "id": "canvases_completion",
+   "type": "attribute",
+   "of": "canvases",
+   "desc": "the canvases display works in various stages of completion",
+   "question": "Do the canvases display works in various stages of completion?"
+  },
+  {
+   "id": "palettes_oils",
+   "type": "attribute",
+   "of": "palettes",
+   "desc": "the glass palettes have colorful oils on them",
+   "question": "Do the glass palettes have colorful oils on them?"
+  },
+  {
+   "id": "jars_liquid",
+   "type": "attribute",
+   "of": "jars",
+   "desc": "the glass jars are filled with liquid",
+   "question": "Are the glass jars filled with liquid?"
+  },
+  {
+   "id": "no_printers",
+   "type": "absent",
+   "desc": "printers",
+   "question": "Are there any printers in the image?"
+  },
+  {
+   "id": "no_pianos",
+   "type": "absent",
+   "desc": "pianos",
+   "question": "Are there any pianos in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "sketch_pads",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "charcoal_sticks",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "erasers",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "sharpeners",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "coffee_cups",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "palettes",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "jars",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "paint_tubes",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "brushes",
+   "kind": "support"
+  },
+  {
+   "from": "easel",
+   "to": "masterpiece",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "paper_rolls",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "fixative_spray",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "cleaning_rags",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_008",
+ "prompt": "A messy artist's studio during an intensive creative session, where canvases lean against brick walls displaying works in various stages of completion. Paint tubes squeeze colorful oils onto glass palettes while brushes of different sizes soak in glass jars filled with turpentine. An easel holds the current masterpiece beneath track lighting that illuminates every brushstroke, while plastic tarps protect the wooden floor from paint splatters. Sketch pads scatter across a cluttered work table alongside charcoal sticks, erasers, and pencil sharpeners, with empty coffee cups marking long hours of focused work. However, this creative sanctuary contains no digital devices like computers or printers, as the artist embraces traditional analog techniques exclusively. You won't find any musical instruments such as violins or pianos either, keeping the space dedicated purely to visual arts rather than musical expression. Color wheels hang on the walls near inspirational photographs, while a storage cabinet holds additional supplies including paper rolls, fixative spray, and cleaning rags. A floor fan circulates air to help paintings dry, and natural light streams through large windows facing north.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 15,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

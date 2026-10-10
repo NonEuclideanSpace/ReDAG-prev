@@ -1,0 +1,368 @@
+{
+ "style": "cinematic film still, dusk lighting, blue tones, shallow depth of field",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snow-laden town square at dusk with blurred storefronts and heavy gray clouds",
+   "question": "Does the image show a snow-laden town square at dusk with blurred storefronts and heavy gray clouds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a bright yellow raincoat",
+   "question": "Is there a small child in a bright yellow raincoat?",
+   "box": [
+    250,
+    500,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "fountain",
+   "plural": "fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large stone fountain with intricate carvings",
+   "question": "Is there a large stone fountain with intricate carvings?",
+   "box": [
+    380,
+    200,
+    640,
+    800
+   ]
+  },
+  {
+   "id": "raven",
+   "type": "entity",
+   "class": "raven",
+   "plural": "ravens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a raven",
+   "question": "Is there a raven?",
+   "box": [
+    480,
+    180,
+    580,
+    280
+   ]
+  },
+  {
+   "id": "musician",
+   "type": "entity",
+   "class": "street musician",
+   "plural": "street musicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street musician in a battered hat",
+   "question": "Is there a street musician in a battered hat?",
+   "box": [
+    700,
+    350,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "amplifier",
+   "type": "entity",
+   "class": "amplifier",
+   "plural": "amplifiers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal amplifier box",
+   "question": "Is there a metal amplifier box?",
+   "box": [
+    680,
+    600,
+    780,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    650,
+    700,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the elderly woman holds a steaming paper cup",
+   "question": "Is the elderly woman holding a steaming paper cup?"
+  },
+  {
+   "id": "guitar",
+   "type": "attribute",
+   "of": "musician",
+   "desc": "the street musician holds an acoustic guitar",
+   "question": "Is the street musician holding an acoustic guitar?"
+  },
+  {
+   "id": "woman_breath",
+   "type": "state",
+   "of": "woman",
+   "desc": "visible breath from the elderly woman",
+   "question": "Is visible breath coming from the elderly woman?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman is smiling gently",
+   "question": "Is the elderly woman smiling gently?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is reaching up eagerly",
+   "question": "Is the small child reaching up eagerly?"
+  },
+  {
+   "id": "child_gazing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is gazing up in anticipation",
+   "question": "Is the small child gazing up in anticipation?"
+  },
+  {
+   "id": "raven_tilting",
+   "type": "state",
+   "of": "raven",
+   "desc": "the raven is tilting its head curiously",
+   "question": "Is the raven tilting its head curiously?"
+  },
+  {
+   "id": "musician_eyes_closed",
+   "type": "state",
+   "of": "musician",
+   "desc": "the street musician has his eyes closed in concentration",
+   "question": "Does the street musician have his eyes closed in concentration?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting patiently",
+   "question": "Is the golden retriever sitting patiently?"
+  },
+  {
+   "id": "dog_tail_thumping",
+   "type": "relation",
+   "of": [
+    "dog",
+    "amplifier"
+   ],
+   "desc": "the golden retriever's tail is thumping against the amplifier",
+   "question": "Is the golden retriever's tail thumping against the amplifier?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the elderly woman is beside the small child",
+   "question": "Is the elderly woman beside the small child?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the elderly woman is handing the hot beverage to the small child",
+   "question": "Is the elderly woman handing the hot beverage to the small child?"
+  },
+  {
+   "id": "raven_on_fountain",
+   "type": "relation",
+   "of": [
+    "raven",
+    "fountain"
+   ],
+   "desc": "the raven is perched atop the frozen fountain",
+   "question": "Is the raven perched atop the frozen fountain?"
+  },
+  {
+   "id": "raven_watching",
+   "type": "relation",
+   "of": [
+    "raven",
+    "woman"
+   ],
+   "desc": "the raven is watching the exchange between the woman and the child",
+   "question": "Is the raven watching the exchange between the woman and the child?"
+  },
+  {
+   "id": "dog_against_amp",
+   "type": "relation",
+   "of": [
+    "dog",
+    "amplifier"
+   ],
+   "desc": "the golden retriever is leaning against the amplifier",
+   "question": "Is the golden retriever leaning against the amplifier?"
+  },
+  {
+   "id": "amp_near_musician",
+   "type": "relation",
+   "of": [
+    "amplifier",
+    "musician"
+   ],
+   "desc": "the amplifier is next to the street musician",
+   "question": "Is the amplifier next to the street musician?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight breaking through the clouds",
+   "question": "Is there any sunlight breaking through the heavy gray clouds?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman in a thick wool coat stands",
+   "question": "Is the elderly woman in a thick wool coat standing?"
+  },
+  {
+   "id": "child_mittens",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the small child in a bright yellow raincoat wears mittens",
+   "question": "Is the small child in a bright yellow raincoat wearing mittens?"
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone",
+   "plural": "cobblestones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "snow-covered cobblestones",
+   "question": "Are there snow-covered cobblestones?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windows",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "storefront windows glowing with warm interior light",
+   "question": "Are there storefront windows glowing with warm interior light?",
+   "box": [
+    50,
+    100,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "fountain_frozen",
+   "type": "state",
+   "of": "fountain",
+   "desc": "the fountain is frozen solid and dusted with snow",
+   "question": "Is the fountain frozen solid and dusted with snow?"
+  },
+  {
+   "id": "woman_coat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the elderly woman wears a thick wool coat",
+   "question": "Does the elderly woman wear a thick wool coat?"
+  },
+  {
+   "id": "raven_feathers",
+   "type": "attribute",
+   "of": "raven",
+   "desc": "the raven has glossy black feathers",
+   "question": "Does the raven have glossy black feathers?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "amplifier",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0066",
+ "prompt": "A cinematic film still captures a quiet, snow-laden town square at dusk. On the left stands an elderly woman in a thick wool coat, her breath visible in the cold air as she holds a steaming paper cup. Beside her, a small child in a bright yellow raincoat reaches up eagerly, their mittened hands grasping for the warmth. In the center of the frame, a large stone fountain is frozen solid, its intricate carvings dusted with fresh powder. Perched atop the icy rim sits a raven with glossy black feathers, tilting its head curiously toward the pair. To the right, a street musician in a battered hat strums an acoustic guitar, his eyes closed in concentration. Leaning against the musician’s amplifier is a golden retriever, sitting patiently with its tail thumping softly against the metal box. The woman looks down at the child with a gentle smile, handing them the hot beverage while the child gazes up in anticipation. The raven watches the exchange intently from its high vantage point. Snowflakes drift lazily through the dim light, settling on the cobblestones and the shoulders of the figures. There is no sunlight breaking through the heavy gray clouds above. The scene is framed by blurred storefronts in the background, their windows glowing with warm interior light that contrasts sharply with the blue tones of the evening snow. The composition balances the human connection on the left with the solitary musician on the right, anchored by the static fountain in the middle.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

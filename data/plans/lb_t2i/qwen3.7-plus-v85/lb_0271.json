@@ -1,0 +1,537 @@
+{
+ "style": "cinematic realism, diffused afternoon light, earthy tones",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a muddy riverbank",
+   "question": "Does the image show a muddy riverbank?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overturned wooden crate",
+   "question": "Is there an overturned wooden crate?",
+   "box": [
+    300,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "seeds_nuts",
+   "type": "entity",
+   "class": "debris",
+   "plural": "debris",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a spill of sunflower seeds and broken nuts",
+   "question": "Is there a spill of sunflower seeds and broken nuts?",
+   "box": [
+    350,
+    550,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "lid",
+   "type": "entity",
+   "class": "crate lid",
+   "plural": "crate lids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate lid half-buried in mud",
+   "question": "Is there a wooden crate lid half-buried in mud?",
+   "box": [
+    250,
+    650,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose coiled on the ground",
+   "question": "Is there a red garden hose?",
+   "box": [
+    600,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "clover",
+   "type": "entity",
+   "class": "patch of clover",
+   "plural": "patches of clover",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of clover",
+   "question": "Is there a patch of clover?",
+   "box": [
+    700,
+    750,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "duck",
+   "type": "entity",
+   "class": "duck",
+   "plural": "ducks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a duck",
+   "question": "Is there a duck?",
+   "box": [
+    200,
+    500,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "sapling",
+   "type": "entity",
+   "class": "sapling",
+   "plural": "saplings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sapling",
+   "question": "Is there a sapling?",
+   "box": [
+    800,
+    200,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "entity",
+   "class": "weather balloon",
+   "plural": "weather balloons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deflated weather balloon dangling from a branch",
+   "question": "Is there a deflated weather balloon?",
+   "box": [
+    820,
+    100,
+    920,
+    250
+   ]
+  },
+  {
+   "id": "toy",
+   "type": "entity",
+   "class": "wind-up toy",
+   "plural": "wind-up toys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted tin wind-up toy",
+   "question": "Is there a rusted tin wind-up toy?",
+   "box": [
+    50,
+    800,
+    150,
+    900
+   ]
+  },
+  {
+   "id": "web",
+   "type": "entity",
+   "class": "spider web",
+   "plural": "spider webs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spider web",
+   "question": "Is there a spider web?",
+   "box": [
+    450,
+    500,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "crate_askew",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate sits askew",
+   "question": "Is the wooden crate sitting askew?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose is coiled",
+   "question": "Is the red garden hose coiled?"
+  },
+  {
+   "id": "hose_sputtering",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose nozzle is sputtering drops of water",
+   "question": "Is the red garden hose nozzle sputtering drops of water?"
+  },
+  {
+   "id": "sapling_leaning",
+   "type": "state",
+   "of": "sapling",
+   "desc": "the sapling is leaning",
+   "question": "Is the sapling leaning?"
+  },
+  {
+   "id": "toy_buried",
+   "type": "state",
+   "of": "toy",
+   "desc": "the wind-up toy is half-buried",
+   "question": "Is the wind-up toy half-buried?"
+  },
+  {
+   "id": "duck_pecking",
+   "type": "action",
+   "of": [
+    "duck",
+    "seeds_nuts"
+   ],
+   "desc": "the duck pecks at the scattered seeds and nuts",
+   "question": "Is the duck pecking at the scattered seeds and nuts?"
+  },
+  {
+   "id": "seeds_in_crate",
+   "type": "relation",
+   "of": [
+    "seeds_nuts",
+    "crate"
+   ],
+   "desc": "the spill of seeds and nuts is inside the overturned crate",
+   "question": "Is the spill of seeds and nuts inside the overturned crate?"
+  },
+  {
+   "id": "lid_near_crate",
+   "type": "relation",
+   "of": [
+    "lid",
+    "crate"
+   ],
+   "desc": "the crate lid is beside the overturned crate",
+   "question": "Is the crate lid beside the overturned crate?"
+  },
+  {
+   "id": "hose_beside_crate",
+   "type": "relation",
+   "of": [
+    "hose",
+    "crate"
+   ],
+   "desc": "the red garden hose is beside the overturned crate",
+   "question": "Is the red garden hose beside the overturned crate?"
+  },
+  {
+   "id": "drops_on_clover",
+   "type": "relation",
+   "of": [
+    "hose",
+    "clover"
+   ],
+   "desc": "water drops from the hose fall onto the clover patch",
+   "question": "Do water drops from the hose fall onto the clover patch?"
+  },
+  {
+   "id": "duck_around_crate",
+   "type": "relation",
+   "of": [
+    "duck",
+    "crate"
+   ],
+   "desc": "the duck is moving around the overturned crate",
+   "question": "Is the duck moving around the overturned crate?"
+  },
+  {
+   "id": "grass_behind_duck",
+   "type": "state",
+   "of": "duck",
+   "desc": "tall grasses are behind the duck",
+   "question": "Are tall grasses visible behind the duck?"
+  },
+  {
+   "id": "balloon_on_sapling",
+   "type": "relation",
+   "of": [
+    "balloon",
+    "sapling"
+   ],
+   "desc": "the deflated weather balloon is caught on the sapling",
+   "question": "Is the deflated weather balloon caught on the sapling?"
+  },
+  {
+   "id": "toy_near_river",
+   "type": "relation",
+   "of": [
+    "toy",
+    "bg_river"
+   ],
+   "desc": "the wind-up toy is near the river's edge",
+   "question": "Is the wind-up toy near the river's edge?"
+  },
+  {
+   "id": "web_between",
+   "type": "relation",
+   "of": [
+    "web",
+    "crate",
+    "hose"
+   ],
+   "desc": "the spider web spans between the crate and the hose",
+   "question": "Does the spider web span between the crate and the hose?"
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "branch",
+   "plural": "branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a branch of the sapling",
+   "question": "Is there a branch of the sapling?",
+   "box": [
+    700,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "duck_waddling",
+   "type": "state",
+   "of": "duck",
+   "desc": "the duck is waddling",
+   "question": "Is the duck waddling?"
+  },
+  {
+   "id": "balloon_dangling",
+   "type": "state",
+   "of": "balloon",
+   "desc": "the deflated weather balloon is dangling",
+   "question": "Is the deflated weather balloon dangling?"
+  },
+  {
+   "id": "roots",
+   "type": "entity",
+   "class": "roots",
+   "plural": "roots",
+   "count": 1,
+   "count_exact": false,
+   "desc": "roots",
+   "question": "Are there roots?",
+   "box": [
+    100,
+    650,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "nozzle",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "the red garden hose has a nozzle",
+   "question": "Does the red garden hose have a nozzle?"
+  },
+  {
+   "id": "duck_beak_clicking",
+   "type": "state",
+   "of": "duck",
+   "desc": "the duck's beak is clicking",
+   "question": "Is the duck's beak clicking?"
+  },
+  {
+   "id": "toy_legs_worn",
+   "type": "attribute",
+   "of": "toy",
+   "desc": "the wind-up toy has legs worn smooth",
+   "question": "Does the wind-up toy have legs worn smooth?"
+  },
+  {
+   "id": "roots_curling",
+   "type": "state",
+   "of": "roots",
+   "desc": "the roots are curling upward",
+   "question": "Are the roots threading through the lid curling upward?"
+  },
+  {
+   "id": "duck_tilting_head",
+   "type": "state",
+   "of": "duck",
+   "desc": "the duck is tilting its head",
+   "question": "Is the duck tilting its head?"
+  },
+  {
+   "id": "bg_grasses",
+   "type": "entity",
+   "class": "tall grasses",
+   "plural": "tall grasses",
+   "count": 1,
+   "count_exact": false,
+   "desc": "tall grasses",
+   "question": "Are there tall grasses?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "bg_river",
+   "type": "entity",
+   "class": "river",
+   "plural": "rivers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a river",
+   "question": "Is there a river?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate_splintered",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the wooden crate has splintered sides",
+   "question": "Does the wooden crate have splintered sides?"
+  },
+  {
+   "id": "lid_roots",
+   "type": "relation",
+   "of": [
+    "roots",
+    "lid"
+   ],
+   "desc": "roots grow through the cracks of the crate lid",
+   "question": "Do roots grow through the cracks of the crate lid?"
+  },
+  {
+   "id": "clover_blossoms",
+   "type": "attribute",
+   "of": "clover",
+   "desc": "the patch of clover has tiny blossoms",
+   "question": "Does the patch of clover have tiny blossoms?"
+  },
+  {
+   "id": "duck_speckled",
+   "type": "attribute",
+   "of": "duck",
+   "desc": "the duck has feathers speckled with silt and pollen",
+   "question": "Does the duck have feathers speckled with silt and pollen?"
+  },
+  {
+   "id": "web_dew_flecks",
+   "type": "attribute",
+   "of": "web",
+   "desc": "the spider web has dew and red flecks",
+   "question": "Does the spider web have dew and red flecks?"
+  },
+  {
+   "id": "roots_threading",
+   "type": "relation",
+   "of": [
+    "roots",
+    "lid"
+   ],
+   "desc": "the roots thread through the crate lid cracks",
+   "question": "Do the roots thread through the crate lid cracks?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "seeds_nuts",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hose",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clover",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "toy",
+   "kind": "support"
+  },
+  {
+   "from": "sapling",
+   "to": "branch",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0271",
+ "prompt": "The overturned wooden crate, its splintered sides cradling a haphazard spill of sunflower seeds and broken nuts, sits askew on a slick, muddy riverbank where the earth seems to pulse faintly with the breath of the water below. The lid, half-buried in the mire, has fused with the soil in a strange alchemy of decay and growth—roots now thread through its cracks, curling upward like fingers grasping for the surface. Beside it, a red garden hose lies coiled in a slow, sinuous arc, its plastic glinting under the diffused afternoon light, the nozzle still sputtering drops that fall in rhythmic succession onto a patch of clover, each one making the tiny blossoms shiver as if in quiet delight. A duck, its feathers speckled with flecks of river silt and sunflower pollen, waddles in deliberate, slow circles around the crate, pecking at the scattered offerings, its beak clicking rhythmically against seeds and earth. Behind it, the tall grasses sway in the wind, their swaying creating a soft, undulating motion that seems to ripple outward like a second tide, mirroring the water’s pull. The river itself is an unpredictable ribbon, its surface half mirror, half illusion, reflecting not just the sky but the duck’s own image in a way that suggests it is both there and not there at once. Above, a weather balloon, long deflated, dangles from a branch like a deflated moon, its tether caught on a sapling that leans precariously toward the water, as if the tree, too, dreams of crossing. The wind carries a faint scent of wet metal and wild mint, mingling with the earthy tang of overturned soil and spilled seeds, creating an aroma that seems to hang in the air like a memory of another time. In the distance, a child’s wind-up toy, its tin body rusted and legs worn smooth, lies half-buried near the river’s edge, its spring long frozen, yet still humming with the ghost of a motion it will never make again. A spider has built its web across the space between the crate and the hose, each strand glistening with dew and flecks of red from the hose’s surface, as if the web itself is woven from the very elements of the scene. The duck pauses now, tilting its head toward a small shadow that flickers over the grass—perhaps a falling leaf, perhaps a bird of another kind—but the illusion is fleeting, swallowed by the next ripple in the water. The river seems to speak in whispers to the crate, the roots, the duck, and even the toy, binding them in a silent dialogue of decay and rebirth. The light shifts, and for a moment, the crate seems to tilt slightly, as if on the verge of rolling back into place, but the wind catches the hose, tugging it gently forward like a hand offering something unseen. And then the duck walks forward, the clover drinks, the roots breathe, and the scene holds its breath in a perfect, suspended moment of impossible coherence.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 46,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 7,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

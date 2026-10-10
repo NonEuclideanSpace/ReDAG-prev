@@ -1,0 +1,396 @@
+{
+ "style": "photorealistic photo, high fidelity textures, artificial lighting with dust motes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling theatre backstage scene with bare bulbs overhead",
+   "question": "Does the image show a bustling theatre backstage scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a velvet dress",
+   "question": "Is there a woman in a velvet dress?",
+   "box": [
+    50,
+    150,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    320,
+    350,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    340,
+    600,
+    530,
+    900
+   ]
+  },
+  {
+   "id": "trunk",
+   "type": "entity",
+   "class": "trunk",
+   "plural": "trunks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large trunk with brass latches",
+   "question": "Is there a large trunk with brass latches?",
+   "box": [
+    400,
+    550,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "actor",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in a tuxedo",
+   "question": "Is there a young man in a tuxedo?",
+   "box": [
+    650,
+    200,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "stagehand",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stagehand in blue overalls",
+   "question": "Is there a stagehand in blue overalls?",
+   "box": [
+    850,
+    250,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "pulley",
+   "type": "entity",
+   "class": "rope pulley system",
+   "plural": "rope pulley systems",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging rope pulley system",
+   "question": "Is there a hanging rope pulley system?",
+   "box": [
+    880,
+    0,
+    980,
+    300
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grey cat",
+   "question": "Is there a grey cat?",
+   "box": [
+    880,
+    400,
+    980,
+    550
+   ]
+  },
+  {
+   "id": "scripts",
+   "type": "entity",
+   "class": "script",
+   "plural": "scripts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of scripts",
+   "question": "Is there a stack of scripts?",
+   "box": [
+    870,
+    500,
+    990,
+    600
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the velvet dress holds a clipboard",
+   "question": "Is the woman in the velvet dress holding a clipboard?"
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress has a rigid posture",
+   "question": "Does the woman in the velvet dress have a rigid posture?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "man_tying",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is tying his shoelaces",
+   "question": "Is the man in the red scarf tying his shoelaces?"
+  },
+  {
+   "id": "actor_leaning",
+   "type": "state",
+   "of": "actor",
+   "desc": "the young man in the tuxedo is leaning",
+   "question": "Is the young man in the tuxedo leaning?"
+  },
+  {
+   "id": "actor_adjusting",
+   "type": "state",
+   "of": "actor",
+   "desc": "the young man in the tuxedo is adjusting his bowtie",
+   "question": "Is the young man in the tuxedo adjusting his bowtie?"
+  },
+  {
+   "id": "woman_gesturing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress gestures with her free hand",
+   "question": "Is the woman in the velvet dress gesturing with her free hand?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is next to the woman in the velvet dress",
+   "question": "Is the man in the red scarf next to the woman in the velvet dress?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the red scarf sits on the wooden crate",
+   "question": "Is the man in the red scarf sitting on the wooden crate?"
+  },
+  {
+   "id": "trunk_on_floor",
+   "type": "state",
+   "of": "trunk",
+   "desc": "the large trunk rests on the floor",
+   "question": "Does the large trunk rest on the floor?"
+  },
+  {
+   "id": "actor_against_trunk",
+   "type": "relation",
+   "of": [
+    "actor",
+    "trunk"
+   ],
+   "desc": "the young man in the tuxedo leans against the large trunk",
+   "question": "Is the young man in the tuxedo leaning against the large trunk?"
+  },
+  {
+   "id": "actor_looking_woman",
+   "type": "relation",
+   "of": [
+    "actor",
+    "woman"
+   ],
+   "desc": "the young man in the tuxedo looks intently at the woman in the velvet dress",
+   "question": "Is the young man in the tuxedo looking intently at the woman in the velvet dress?"
+  },
+  {
+   "id": "stagehand_pointing_pulley",
+   "type": "action",
+   "of": [
+    "stagehand",
+    "pulley"
+   ],
+   "desc": "the stagehand in blue overalls points toward the hanging rope pulley system",
+   "question": "Is the stagehand in blue overalls pointing toward the hanging rope pulley system?"
+  },
+  {
+   "id": "cat_on_scripts",
+   "type": "relation",
+   "of": [
+    "cat",
+    "scripts"
+   ],
+   "desc": "the grey cat is perched atop the stack of scripts",
+   "question": "Is the grey cat perched atop the stack of scripts?"
+  },
+  {
+   "id": "cat_staring_stagehand",
+   "type": "relation",
+   "of": [
+    "cat",
+    "stagehand"
+   ],
+   "desc": "the grey cat stares at the stagehand in blue overalls",
+   "question": "Is the grey cat staring at the stagehand in blue overalls?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "natural sunlight",
+   "question": "Is there any natural sunlight visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress stands",
+   "question": "Is the woman in the velvet dress standing?"
+  },
+  {
+   "id": "man_focused_shoes",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf looks at his shoes",
+   "question": "Is the man in the red scarf looking at his shoes?"
+  },
+  {
+   "id": "bulbs",
+   "type": "entity",
+   "class": "bare bulb",
+   "plural": "bare bulbs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bare light bulbs hanging overhead",
+   "question": "Are there bare light bulbs hanging overhead?",
+   "box": [
+    100,
+    0,
+    924,
+    150
+   ]
+  },
+  {
+   "id": "trunk_scratched",
+   "type": "attribute",
+   "of": "trunk",
+   "desc": "the large trunk has a scratched surface",
+   "question": "Does the large trunk have a scratched surface?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the grey cat has bright green eyes",
+   "question": "Does the grey cat have bright green eyes?"
+  },
+  {
+   "id": "woman_attentive",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress has an attentive expression",
+   "question": "Does the woman in the velvet dress have an attentive expression?"
+  },
+  {
+   "id": "man_legs_crossed",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf has his legs crossed",
+   "question": "Does the man in the red scarf have his legs crossed?"
+  },
+  {
+   "id": "man_focused_state",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is focused on his shoes",
+   "question": "Is the man in the red scarf focused on his shoes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "scripts",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0080",
+ "prompt": "This photorealistic photo captures a bustling theatre backstage scene. On the left, a woman in a velvet dress stands holding a clipboard, her posture rigid and attentive. Next to her, a man in a red scarf sits on a wooden crate, his legs crossed casually as he ties his shoelaces. In the center, a large trunk with brass latches rests heavily on the floor, its surface scratched from years of travel. A young actor in a tuxedo leans against this trunk, looking intently at the woman in the velvet dress while adjusting his bowtie. To the right, a stagehand in blue overalls points toward a hanging rope pulley system, directing the attention of a grey cat perched atop a stack of scripts. The cat, with bright green eyes, stares back at the stagehand, seemingly unimpressed by the urgency. The interaction between the stagehand and the cat creates a moment of quiet contrast amidst the chaos. Meanwhile, the actor in the tuxedo continues to look at the woman, who now gestures with her free hand toward the exit. The man in the red scarf remains focused on his shoes, oblivious to the surrounding activity. There is no natural sunlight visible in this enclosed space, only the artificial glow of bare bulbs overhead illuminating the dust motes dancing in the air. The textures of the velvet, the rough wood of the crate, and the smooth metal of the trunk are rendered with high fidelity, grounding the viewer in the tangible reality of the behind-the-scenes environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

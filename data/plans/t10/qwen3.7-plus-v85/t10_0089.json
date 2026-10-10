@@ -1,0 +1,414 @@
+{
+ "style": "photorealistic photo, sharp focus, natural lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with clear skies, rocky ground, scattered pine needles and rugged terrain",
+   "question": "Does the image show a mountain campsite with clear skies, rocky ground, scattered pine needles and rugged terrain?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "folding chair",
+   "plural": "folding chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding chair",
+   "question": "Is there a folding chair?",
+   "box": [
+    60,
+    450,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    250,
+    500,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "man_flannel",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green flannel shirt",
+   "question": "Is there a man in a green flannel shirt?",
+   "box": [
+    400,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "kettle",
+   "type": "entity",
+   "class": "kettle",
+   "plural": "kettles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver kettle",
+   "question": "Is there a silver kettle?",
+   "box": [
+    580,
+    550,
+    680,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    620,
+    350,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "man_vest",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a gray vest",
+   "question": "Is there an older man in a gray vest?",
+   "box": [
+    800,
+    200,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large pine tree",
+   "question": "Is there a large pine tree?",
+   "box": [
+    850,
+    0,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "wooden mug",
+   "plural": "wooden mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden mug",
+   "question": "Is there a wooden mug?",
+   "box": [
+    860,
+    450,
+    920,
+    550
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black backpack",
+   "question": "Is there a black backpack?",
+   "box": [
+    750,
+    600,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "sleeping_bag",
+   "type": "entity",
+   "class": "sleeping bag",
+   "plural": "sleeping bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolled-up sleeping bag",
+   "question": "Is there a rolled-up sleeping bag?",
+   "box": [
+    770,
+    620,
+    830,
+    730
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue beanie is sitting",
+   "question": "Is the woman in a blue beanie sitting?"
+  },
+  {
+   "id": "woman_gazing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue beanie is gazing toward the center",
+   "question": "Is the woman in a blue beanie gazing toward the center of the image?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is watching activity nearby",
+   "question": "Is the golden retriever looking attentively at the scene?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_flannel",
+   "desc": "the man in a green flannel shirt is standing",
+   "question": "Is the man in a green flannel shirt standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man_flannel",
+    "kettle"
+   ],
+   "desc": "the man in a green flannel shirt points at the silver kettle",
+   "question": "Is the man in a green flannel shirt pointing at the silver kettle?"
+  },
+  {
+   "id": "water_boiling",
+   "type": "state",
+   "of": "kettle",
+   "desc": "steam rises from the spout of the silver kettle",
+   "question": "Is steam rising from the spout of the silver kettle?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow raincoat is standing",
+   "question": "Is the child in a yellow raincoat standing?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "relation",
+   "of": [
+    "child",
+    "kettle"
+   ],
+   "desc": "the child in a yellow raincoat looks up at the steam",
+   "question": "Is the child in a yellow raincoat looking up at the steam from the kettle?"
+  },
+  {
+   "id": "man_vest_leaning",
+   "type": "relation",
+   "of": [
+    "man_vest",
+    "tree"
+   ],
+   "desc": "the older man in a gray vest is leaning",
+   "question": "Is the older man in a gray vest leaning against the pine tree?"
+  },
+  {
+   "id": "man_vest_holding",
+   "type": "attribute",
+   "of": "man_vest",
+   "desc": "the older man in a gray vest holds a wooden mug",
+   "question": "Is the older man in a gray vest holding a wooden mug?"
+  },
+  {
+   "id": "backpack_unzipped",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the black backpack is partially unzipped",
+   "question": "Is the black backpack partially unzipped?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman",
+    "chair"
+   ],
+   "desc": "the woman in a blue beanie sits on the folding chair",
+   "question": "Is the woman in a blue beanie sitting on the folding chair?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever is next to the woman in a blue beanie",
+   "question": "Is the golden retriever next to the woman in a blue beanie?"
+  },
+  {
+   "id": "man_beside_kettle",
+   "type": "relation",
+   "of": [
+    "man_flannel",
+    "kettle"
+   ],
+   "desc": "the man in a green flannel shirt stands beside the silver kettle",
+   "question": "Is the man in a green flannel shirt standing beside the silver kettle?"
+  },
+  {
+   "id": "child_opposite_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "man_flannel"
+   ],
+   "desc": "the child in a yellow raincoat stands directly opposite the man in a green flannel shirt",
+   "question": "Is the child in a yellow raincoat standing directly opposite the man in a green flannel shirt?"
+  },
+  {
+   "id": "man_vest_against_tree",
+   "type": "relation",
+   "of": [
+    "man_vest",
+    "tree"
+   ],
+   "desc": "the older man in a gray vest leans against the large pine tree",
+   "question": "Is the older man in a gray vest leaning against the large pine tree?"
+  },
+  {
+   "id": "backpack_beside_man_vest",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "man_vest"
+   ],
+   "desc": "the black backpack is beside the older man in a gray vest",
+   "question": "Is the black backpack beside the older man in a gray vest?"
+  },
+  {
+   "id": "no_tent",
+   "type": "absent",
+   "desc": "a tent in the immediate foreground",
+   "question": "Is there a tent visible in the immediate foreground?"
+  },
+  {
+   "id": "sleeping_bag_in_backpack",
+   "type": "relation",
+   "of": [
+    "sleeping_bag",
+    "backpack"
+   ],
+   "desc": "the rolled-up sleeping bag is inside the black backpack",
+   "question": "Is the rolled-up sleeping bag inside the black backpack?"
+  },
+  {
+   "id": "dog_head_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever's head rests on its paws",
+   "question": "Is the golden retriever's head resting on its paws?"
+  },
+  {
+   "id": "man_vest_hands",
+   "type": "attribute",
+   "of": "man_vest",
+   "desc": "the older man in a gray vest uses both hands to hold the mug",
+   "question": "Is the older man in a gray vest using both hands to hold the mug?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "man_vest",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0089",
+ "prompt": "In this photorealistic photo, a crisp mountain campsite unfolds under clear skies. On the left side of the frame, a woman in a blue beanie sits on a folding chair, her posture relaxed as she gazes toward the center. Next to her, a golden retriever lies calmly on the grass, its head resting on its paws while watching the activity nearby. In the center, a man in a green flannel shirt stands beside a silver kettle, pointing firmly at the boiling water with his right hand. He interacts with a child in a yellow raincoat who stands directly opposite him, looking up attentively at the steam rising from the spout. To the right, an older man in a gray vest leans against a large pine tree, holding a wooden mug with both hands as he observes the group. Beside him, a black backpack rests on the ground, partially unzipped to reveal a rolled-up sleeping bag inside. The scene captures a moment of quiet camaraderie amidst the rugged terrain. There is no visible tent in the immediate foreground, allowing an unobstructed view of the rocky ground and scattered pine needles. The composition balances the human elements with the natural surroundings, ensuring each figure and object remains distinct and clearly identifiable within the sharp focus of the lens. The lighting highlights the textures of the clothing and the fur of the dog, enhancing the realism of the outdoor setting without introducing any artificial or staged elements that might detract from the authentic atmosphere of the high-altitude retreat.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

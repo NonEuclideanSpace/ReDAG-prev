@@ -1,0 +1,359 @@
+{
+ "style": "flat vector illustration with bold outlines and solid colors, no realistic shading",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark night sky with simplified geometric buildings in shades of navy and indigo",
+   "question": "Does the background show a dark night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "string_lights",
+   "type": "entity",
+   "class": "string lights",
+   "plural": "string lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "string lights stretching across the sky",
+   "question": "Are there string lights stretching across the sky?",
+   "box": [
+    0,
+    50,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooftop railing",
+   "question": "Is there a rooftop railing?",
+   "box": [
+    300,
+    600,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low stool",
+   "question": "Is there a low stool?",
+   "box": [
+    150,
+    750,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    400,
+    200,
+    900
+   ]
+  },
+  {
+   "id": "cat_black",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    160,
+    700,
+    240,
+    800
+   ]
+  },
+  {
+   "id": "man_green",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    400,
+    350,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "dog_golden",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    550,
+    650,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "person_yellow",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a person in a yellow jacket",
+   "question": "Is there a person in a yellow jacket?",
+   "box": [
+    750,
+    400,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "person_purple",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a companion wearing a purple hat",
+   "question": "Is there a companion wearing a purple hat?",
+   "box": [
+    850,
+    420,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_holding_glass",
+   "type": "attribute",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress holds a champagne flute",
+   "question": "Is the woman in a blue dress holding a champagne flute?"
+  },
+  {
+   "id": "woman_gazing_center",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress gazes toward the center",
+   "question": "Is the woman in a blue dress gazing toward the center of the image?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat_black",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_on_stool",
+   "type": "relation",
+   "of": [
+    "cat_black",
+    "stool"
+   ],
+   "desc": "the black cat sits on the low stool",
+   "question": "Is the black cat sitting on the low stool?"
+  },
+  {
+   "id": "cat_next_to_woman",
+   "type": "relation",
+   "of": [
+    "cat_black",
+    "woman_blue"
+   ],
+   "desc": "the black cat is next to the woman in a blue dress",
+   "question": "Is the black cat next to the woman in a blue dress?"
+  },
+  {
+   "id": "man_leaning_railing",
+   "type": "relation",
+   "of": [
+    "man_green",
+    "railing"
+   ],
+   "desc": "the man in a green shirt leans against the railing",
+   "question": "Is the man in a green shirt leaning against the railing?"
+  },
+  {
+   "id": "man_pointing_skyline",
+   "type": "state",
+   "of": "man_green",
+   "desc": "the man in a green shirt points at the distant city skyline",
+   "question": "Is the man in a green shirt pointing at the distant city skyline?"
+  },
+  {
+   "id": "man_holding_plate",
+   "type": "attribute",
+   "of": "man_green",
+   "desc": "the man in a green shirt balances a plate of snacks",
+   "question": "Is the man in a green shirt balancing a plate of snacks?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog_golden",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_beside_man",
+   "type": "relation",
+   "of": [
+    "dog_golden",
+    "man_green"
+   ],
+   "desc": "the golden retriever is beside the man in a green shirt",
+   "question": "Is the golden retriever beside the man in a green shirt?"
+  },
+  {
+   "id": "dog_looking_at_man",
+   "type": "relation",
+   "of": [
+    "dog_golden",
+    "man_green"
+   ],
+   "desc": "the golden retriever looks up at the man in a green shirt",
+   "question": "Is the golden retriever looking up at the man in a green shirt?"
+  },
+  {
+   "id": "person_yellow_handing_pizza",
+   "type": "action",
+   "of": [
+    "person_yellow",
+    "person_purple"
+   ],
+   "desc": "the person in a yellow jacket hands a slice of pizza to the companion wearing a purple hat",
+   "question": "Is the person in a yellow jacket handing a slice of pizza to the companion wearing a purple hat?"
+  },
+  {
+   "id": "person_purple_smiling",
+   "type": "state",
+   "of": "person_purple",
+   "desc": "the companion wearing a purple hat is smiling",
+   "question": "Is the companion wearing a purple hat smiling?"
+  },
+  {
+   "id": "person_purple_near_edge",
+   "type": "state",
+   "of": "person_purple",
+   "desc": "the companion wearing a purple hat stands close to the edge of the roof",
+   "question": "Is the companion wearing a purple hat standing close to the edge of the roof?"
+  },
+  {
+   "id": "no_smoke_fire",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "person_purple_standing",
+   "type": "state",
+   "of": "person_purple",
+   "desc": "the companion wearing a purple hat is standing",
+   "question": "Is the companion wearing a purple hat standing?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat_black",
+   "desc": "the black cat has bright yellow eyes",
+   "question": "Does the black cat have bright yellow eyes?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the scene?"
+  },
+  {
+   "id": "buildings",
+   "type": "entity",
+   "class": "building",
+   "plural": "buildings",
+   "count": 2,
+   "count_exact": false,
+   "desc": "simplified geometric buildings in shades of navy and indigo",
+   "question": "Are there simplified geometric buildings in shades of navy and indigo?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "cat_black",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0004",
+ "prompt": "This flat vector illustration depicts a lively rooftop party at night. On the left, a woman in a blue dress stands holding a champagne flute, her posture relaxed as she gazes toward the center. Next to her sits a black cat with bright yellow eyes, calmly observing the scene from a low stool. In the center, a man in a green shirt leans against a railing, pointing enthusiastically at the distant city skyline while balancing a plate of snacks. Beside him, a golden retriever sits patiently, looking up at the man with an expectant expression. To the right, a couple shares a quiet moment; a person in a yellow jacket is handing a slice of pizza to a companion wearing a purple hat. The companion accepts the food with a smile, standing close to the edge of the roof. Above them, string lights stretch across the dark sky, providing a warm glow without realistic shading. The background features simplified geometric buildings in shades of navy and indigo. There is no smoke or fire visible in the scene. The composition remains clean and uncluttered, focusing on the distinct characters and their simple interactions. The woman in the blue dress appears confident, while the man in the green shirt seems animated. The black cat remains still, contrasting with the active humans. The golden retriever adds a touch of warmth to the urban setting. The exchange of pizza highlights the social nature of the gathering. All elements are rendered with bold outlines and solid colors, typical of the style.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

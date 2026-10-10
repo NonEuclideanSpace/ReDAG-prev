@@ -1,0 +1,206 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image depict a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a blue dress",
+   "question": "Is there a girl in a blue dress?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "project",
+   "type": "entity",
+   "class": "science project",
+   "plural": "science projects",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a science project display",
+   "question": "Is there a science project display?",
+   "box": [
+    260,
+    500,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with glasses",
+   "question": "Is there a boy with glasses?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "model",
+   "type": "entity",
+   "class": "volcano model",
+   "plural": "volcano models",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volcano model",
+   "question": "Is there a volcano model?",
+   "box": [
+    450,
+    550,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "teacher",
+   "plural": "teachers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a gray suit",
+   "question": "Is there a teacher in a gray suit?",
+   "box": [
+    750,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in the blue dress is standing",
+   "question": "Is the girl in the blue dress standing?"
+  },
+  {
+   "id": "girl_beside_project",
+   "type": "relation",
+   "of": [
+    "girl",
+    "project"
+   ],
+   "desc": "the girl in the blue dress stands beside her project",
+   "question": "Is the girl in the blue dress standing beside the science project display?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "model"
+   ],
+   "desc": "the boy with glasses points at the volcano model",
+   "question": "Is the boy with glasses pointing at the volcano model?"
+  },
+  {
+   "id": "model_on_table",
+   "type": "relation",
+   "of": [
+    "model",
+    "table"
+   ],
+   "desc": "the volcano model sits on the table",
+   "question": "Is the volcano model sitting on the table?"
+  },
+  {
+   "id": "teacher_looking",
+   "type": "action",
+   "of": [
+    "teacher",
+    "boy"
+   ],
+   "desc": "the teacher in the gray suit looks at the boy with glasses",
+   "question": "Is the teacher in the gray suit looking at the boy with glasses?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "a crowd in the background",
+   "question": "Is there a crowd in the background?"
+  },
+  {
+   "id": "model_dripping",
+   "type": "attribute",
+   "of": "model",
+   "desc": "the volcano model has red paint dripping down its side",
+   "question": "Does the volcano model have red paint dripping down its side?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "model",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0076",
+ "prompt": "This watercolor illustration depicts a school science fair. On the left, a girl in a blue dress stands beside her project. In the center, a boy with glasses points at a volcano model. The model sits on a table, displaying red paint dripping down its side. On the right, a teacher in a gray suit looks at the boy. The boy is pointing at the model. There is no crowd in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

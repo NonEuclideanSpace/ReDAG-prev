@@ -1,0 +1,134 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image depict a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "patient",
+   "type": "entity",
+   "class": "patient",
+   "plural": "patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patient in a striped gown",
+   "question": "Is there a patient in a striped gown?",
+   "box": [
+    550,
+    250,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wheeled chair",
+   "plural": "wheeled chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheeled chair",
+   "question": "Is there a wheeled chair?",
+   "box": [
+    580,
+    500,
+    880,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "patient"
+   ],
+   "desc": "the nurse in blue scrubs is looking at the patient in a striped gown",
+   "question": "Is the nurse in blue scrubs looking at the patient in a striped gown?"
+  },
+  {
+   "id": "patient_sitting",
+   "type": "state",
+   "of": "patient",
+   "desc": "the patient in a striped gown is sitting",
+   "question": "Is the patient in a striped gown sitting?"
+  },
+  {
+   "id": "patient_on_chair",
+   "type": "relation",
+   "of": [
+    "patient",
+    "chair"
+   ],
+   "desc": "the patient in a striped gown sits on the wheeled chair",
+   "question": "Is the patient in a striped gown sitting on the wheeled chair?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "patient",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0029",
+ "prompt": "In an oil painting of a sterile hospital corridor, a nurse in blue scrubs stands on the left holding a clipboard. To her right, a patient in a striped gown sits on a wheeled chair. The nurse is looking at the patient. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

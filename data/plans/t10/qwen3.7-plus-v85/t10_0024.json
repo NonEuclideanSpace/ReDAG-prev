@@ -1,0 +1,363 @@
+{
+ "style": "cinematic film still, harsh midday sun, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand and a net",
+   "question": "Does the image show a beach volleyball court with sand and a net?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a neon yellow bikini",
+   "question": "Is there a woman in a neon yellow bikini?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue cap",
+   "question": "Is there a man in a blue cap?",
+   "box": [
+    300,
+    350,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white volleyball",
+   "question": "Is there a white volleyball?",
+   "box": [
+    550,
+    200,
+    650,
+    300
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a black polo shirt",
+   "question": "Is there a referee in a black polo shirt?",
+   "box": [
+    450,
+    300,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a wide-brimmed hat",
+   "question": "Is there a spectator in a wide-brimmed hat?",
+   "box": [
+    750,
+    450,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "folding chair",
+   "plural": "folding chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding chair",
+   "question": "Is there a folding chair?",
+   "box": [
+    760,
+    550,
+    940,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    850,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red water bottle",
+   "question": "Is there a red water bottle?",
+   "box": [
+    100,
+    850,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "woman_crouching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the neon yellow bikini is crouching low",
+   "question": "Is the woman in the neon yellow bikini crouching low?"
+  },
+  {
+   "id": "woman_focused",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the neon yellow bikini has an expression of intense focus",
+   "question": "Does the woman in the neon yellow bikini have an expression of intense focus?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue cap is standing",
+   "question": "Is the man in the blue cap standing?"
+  },
+  {
+   "id": "man_arm_raised",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue cap has one arm raised high",
+   "question": "Does the man in the blue cap have one arm raised high?"
+  },
+  {
+   "id": "referee_arms_crossed",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the black polo shirt has arms crossed tightly over his chest",
+   "question": "Does the referee in the black polo shirt have arms crossed tightly over his chest?"
+  },
+  {
+   "id": "referee_stern",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the black polo shirt has a stern expression",
+   "question": "Does the referee in the black polo shirt have a stern expression?"
+  },
+  {
+   "id": "spectator_sitting",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in the wide-brimmed hat is sitting",
+   "question": "Is the spectator in the wide-brimmed hat sitting?"
+  },
+  {
+   "id": "spectator_shielding",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in the wide-brimmed hat is shielding their eyes",
+   "question": "Is the spectator in the wide-brimmed hat shielding their eyes?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "dog_tongue_out",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever has its tongue lolling out",
+   "question": "Does the golden retriever have its tongue lolling out?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the neon yellow bikini is looking at the man in the blue cap",
+   "question": "Is the woman in the neon yellow bikini looking at the man in the blue cap?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the blue cap is next to the woman in the neon yellow bikini",
+   "question": "Is the man in the blue cap next to the woman in the neon yellow bikini?"
+  },
+  {
+   "id": "ball_above_net",
+   "type": "state",
+   "of": "ball",
+   "desc": "the white volleyball is hovering just above the net",
+   "question": "Is the white volleyball hovering just above the net?"
+  },
+  {
+   "id": "spectator_on_chair",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "chair"
+   ],
+   "desc": "the spectator in the wide-brimmed hat sits on the folding chair",
+   "question": "Is the spectator in the wide-brimmed hat sitting on the folding chair?"
+  },
+  {
+   "id": "dog_beside_spectator",
+   "type": "relation",
+   "of": [
+    "dog",
+    "spectator"
+   ],
+   "desc": "the golden retriever is beside the spectator in the wide-brimmed hat",
+   "question": "Is the golden retriever beside the spectator in the wide-brimmed hat?"
+  },
+  {
+   "id": "bottle_on_ground",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the red water bottle rests on the ground",
+   "question": "Is the red water bottle resting on the ground?"
+  },
+  {
+   "id": "no_scoreboard",
+   "type": "absent",
+   "desc": "a scoreboard",
+   "question": "Is there a scoreboard visible in the image?"
+  },
+  {
+   "id": "man_spike_prep",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue cap prepares to spike",
+   "question": "Is the man in the blue cap preparing to spike?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the black polo shirt watches the play",
+   "question": "Is the referee in the black polo shirt watching the play?"
+  },
+  {
+   "id": "spectator_observing",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in the wide-brimmed hat observes the match",
+   "question": "Is the spectator in the wide-brimmed hat observing the match?"
+  },
+  {
+   "id": "bottle_buried",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the red water bottle is partially buried in the sand",
+   "question": "Is the red water bottle partially buried in the sand?"
+  },
+  {
+   "id": "woman_anticipating",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the neon yellow bikini anticipates the man's move",
+   "question": "Is the woman in the neon yellow bikini anticipating the man's move?"
+  },
+  {
+   "id": "man_signaling",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue cap signals his strategy",
+   "question": "Is the man in the blue cap signaling his strategy?"
+  },
+  {
+   "id": "sand_kicking_up",
+   "type": "state",
+   "of": "man",
+   "desc": "sand kicks up around the feet of the man in the blue cap",
+   "question": "Does sand kick up around the feet of the man in the blue cap?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue cap points toward the opposing court",
+   "question": "Is the man in the blue cap pointing toward the opposing court?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "spectator",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0024",
+ "prompt": "A cinematic film still captures a tense moment at a beach volleyball tournament under the harsh midday sun. On the left, a woman in a neon yellow bikini crouches low, her eyes locked on the incoming ball with intense focus. Next to her, a man in a blue cap stands ready, his arm raised high as he prepares to spike the white volleyball hovering just above the net. In the center, the referee, a stern figure in a black polo shirt, watches the play unfold with arms crossed tightly over his chest. To the right, a spectator in a wide-brimmed hat sits on a folding chair, shielding their eyes from the glare while observing the match. Beside this seated viewer, a golden retriever lies patiently on the sand, its tongue lolling out in the heat. Near the sideline, a discarded red water bottle rests on the ground, partially buried in the grains. The woman in the neon bikini is looking at the man in the blue cap, anticipating his move. The man in the blue cap is pointing toward the opposing court, signaling his strategy. There is no scoreboard visible in the background, keeping the attention strictly on the athletes and their immediate surroundings. The scene is frozen in time, highlighting the physical exertion and strategic communication between the players. The sand kicks up slightly around the feet of the standing man, emphasizing the dynamic nature of the sport. The contrast between the bright swimwear and the muted tones of the spectators creates a visual hierarchy that draws the eye naturally across the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  }
+ }
+}

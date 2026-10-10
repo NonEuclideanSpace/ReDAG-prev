@@ -1,0 +1,153 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse with glass panels",
+   "question": "Does the image show a botanical greenhouse with glass panels?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow raincoat",
+   "question": "Is there a woman in a yellow raincoat?",
+   "box": [
+    50,
+    150,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue cap",
+   "question": "Is there a man in a blue cap?",
+   "box": [
+    550,
+    150,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted fern",
+   "question": "Is there a small potted fern?",
+   "box": [
+    380,
+    450,
+    520,
+    650
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat is standing",
+   "question": "Is the woman in the yellow raincoat standing?"
+  },
+  {
+   "id": "woman_holding_fern",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat holds the small potted fern",
+   "question": "Is the woman in the yellow raincoat holding the small potted fern?"
+  },
+  {
+   "id": "woman_arm_extended",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow raincoat has her arm extended",
+   "question": "Does the woman in the yellow raincoat have her arm extended?"
+  },
+  {
+   "id": "man_looking_at_fern",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the blue cap looks at the small potted fern",
+   "question": "Is the man in the blue cap looking at the small potted fern?"
+  },
+  {
+   "id": "man_right_of_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the blue cap is to the right of the woman in the yellow raincoat",
+   "question": "Is the man in the blue cap to the right of the woman in the yellow raincoat?"
+  },
+  {
+   "id": "no_furniture",
+   "type": "absent",
+   "desc": "furniture",
+   "question": "Is there any furniture visible in the image?"
+  },
+  {
+   "id": "foliage",
+   "type": "entity",
+   "class": "foliage",
+   "plural": "foliage",
+   "count": 1,
+   "count_exact": false,
+   "desc": "dense lush greenery",
+   "question": "Is there dense lush greenery?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t02_0081",
+ "prompt": "A cinematic film still captures a woman in a yellow raincoat standing on the left, holding a small potted fern. To her right, a man in a blue cap looks at the plant she offers. The lush greenery of the botanical greenhouse surrounds them, with glass panels reflecting soft light. There is no furniture visible in the scene. The woman extends her arm slightly to present the fern, creating a direct line of sight between the two figures amidst the dense foliage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

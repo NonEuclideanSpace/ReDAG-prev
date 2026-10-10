@@ -1,0 +1,270 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm harvest scene",
+   "question": "Does the image show a farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a basket",
+   "question": "Is the woman in a blue apron holding a basket?"
+  },
+  {
+   "id": "wheat_sheaf",
+   "type": "entity",
+   "class": "wheat sheaf",
+   "plural": "wheat sheaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden wheat sheaf",
+   "question": "Is there a golden wheat sheaf?",
+   "box": [
+    280,
+    850,
+    400,
+    980
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a straw hat",
+   "question": "Is there a man in a straw hat?",
+   "box": [
+    400,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    620,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow overalls",
+   "question": "Is there a child in yellow overalls?",
+   "box": [
+    800,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black crow",
+   "question": "Is there a black crow?",
+   "box": [
+    900,
+    300,
+    980,
+    450
+   ]
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    920,
+    450,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "wheat_next_to_woman",
+   "type": "relation",
+   "of": [
+    "wheat_sheaf",
+    "woman"
+   ],
+   "desc": "the golden wheat sheaf is next to the woman's feet",
+   "question": "Is the golden wheat sheaf next to the woman's feet?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a straw hat points toward the horizon",
+   "question": "Is the man in a straw hat pointing toward the horizon?"
+  },
+  {
+   "id": "dog_beside_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog sits beside the man in a straw hat",
+   "question": "Is the brown dog sitting beside the man in a straw hat?"
+  },
+  {
+   "id": "dog_gazing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog gazes forward",
+   "question": "Is the brown dog gazing forward?"
+  },
+  {
+   "id": "child_hands_apple",
+   "type": "action",
+   "of": [
+    "child",
+    "crow"
+   ],
+   "desc": "the child in yellow overalls hands a red apple to the black crow",
+   "question": "Is the child in yellow overalls handing a red apple to the black crow?"
+  },
+  {
+   "id": "crow_perched",
+   "type": "relation",
+   "of": [
+    "crow",
+    "fence_post"
+   ],
+   "desc": "the black crow is perched on the wooden fence post",
+   "question": "Is the black crow perched on the wooden fence post?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Are there any modern machinery items in the image?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron stands",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "wheat_on_ground",
+   "type": "state",
+   "of": "wheat_sheaf",
+   "desc": "the golden wheat sheaf rests on the ground",
+   "question": "Is the golden wheat sheaf resting on the ground?"
+  },
+  {
+   "id": "man_pointing_state",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a straw hat points with his right hand",
+   "question": "Is the man in a straw hat pointing with his right hand?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_right_hand",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a straw hat uses his right hand to point",
+   "question": "Is the man in a straw hat using his right hand to point?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fence_post",
+   "to": "crow",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0065",
+ "prompt": "In a flat vector illustration of a farm harvest, a woman in a blue apron stands on the left holding a basket. A golden wheat sheaf rests on the ground next to her feet. In the center, a man in a straw hat points toward the horizon with his right hand. To his immediate right, a brown dog sits calmly beside him, gazing forward. On the far right, a child in yellow overalls hands a red apple to a black crow perched on a wooden fence post. The scene captures the essence of rural labor without any modern machinery present. There is no tractor visible in the background or foreground. The composition remains simple and clean, focusing strictly on the specified figures and their minimal actions within the agricultural setting. Each element is distinct and easily identifiable by its color or form, ensuring clarity in the visual narrative. The interaction between the child and the bird adds a touch of whimsy to the otherwise straightforward depiction of harvest time activities.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

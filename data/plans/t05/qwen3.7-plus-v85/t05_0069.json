@@ -1,0 +1,295 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite scene",
+   "question": "Does the image show a mountain campsite scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray log",
+   "question": "Is there a gray log?",
+   "box": [
+    50,
+    700,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    100,
+    500,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black backpack",
+   "question": "Is there a black backpack?",
+   "box": [
+    260,
+    750,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green tent",
+   "question": "Is there a green tent?",
+   "box": [
+    400,
+    550,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    450,
+    450,
+    580,
+    800
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal pot",
+   "question": "Is there a metal pot?",
+   "box": [
+    520,
+    600,
+    580,
+    680
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow rain boots",
+   "question": "Is there a child in yellow rain boots?",
+   "box": [
+    700,
+    550,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "bear",
+   "type": "entity",
+   "class": "bear",
+   "plural": "bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown bear",
+   "question": "Is there a brown bear?",
+   "box": [
+    850,
+    500,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is sitting",
+   "question": "Is the woman in the blue beanie sitting?"
+  },
+  {
+   "id": "woman_gazing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is gazing toward the center",
+   "question": "Is the woman in the blue beanie gazing toward the center of the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "man_holding_pot",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a metal pot",
+   "question": "Is the man in the red scarf holding a metal pot?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in yellow rain boots is pointing",
+   "question": "Is the child in yellow rain boots pointing?"
+  },
+  {
+   "id": "bear_standing",
+   "type": "state",
+   "of": "bear",
+   "desc": "the brown bear is standing",
+   "question": "Is the brown bear standing?"
+  },
+  {
+   "id": "woman_on_log",
+   "type": "relation",
+   "of": [
+    "woman",
+    "log"
+   ],
+   "desc": "the woman in the blue beanie sits on the gray log",
+   "question": "Is the woman in the blue beanie sitting on the gray log?"
+  },
+  {
+   "id": "backpack_next_to_woman",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "woman"
+   ],
+   "desc": "the black backpack is next to the woman in the blue beanie",
+   "question": "Is the black backpack next to the woman in the blue beanie?"
+  },
+  {
+   "id": "man_beside_tent",
+   "type": "relation",
+   "of": [
+    "man",
+    "tent"
+   ],
+   "desc": "the man in the red scarf stands beside the green tent",
+   "question": "Is the man in the red scarf standing beside the green tent?"
+  },
+  {
+   "id": "child_points_at_bear",
+   "type": "action",
+   "of": [
+    "child",
+    "bear"
+   ],
+   "desc": "the child in yellow rain boots points at the brown bear",
+   "question": "Is the child in yellow rain boots pointing at the brown bear?"
+  },
+  {
+   "id": "bear_looks_at_child",
+   "type": "action",
+   "of": [
+    "bear",
+    "child"
+   ],
+   "desc": "the brown bear looks at the child in yellow rain boots",
+   "question": "Is the brown bear looking at the child in yellow rain boots?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "tree_line",
+   "type": "entity",
+   "class": "tree line",
+   "plural": "tree lines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree line",
+   "question": "Is there a tree line?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "backpack",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0069",
+ "prompt": "In a flat vector illustration, a mountain campsite scene unfolds with five distinct elements. On the left, a woman in a blue beanie sits on a gray log, her posture relaxed as she gazes toward the center. In the center, a man in a red scarf stands beside a green tent, holding a metal pot. To his right, a child in yellow rain boots points excitedly at a brown bear standing near the tree line. The bear looks back at the child, creating a tense yet curious moment. Next to the woman on the left, a black backpack rests on the ground, untouched. There is no fire in the scene. The woman in the blue beanie is positioned on the left side of the composition. The man in the red scarf occupies the center space. The child in yellow rain boots stands on the right. The man in the red scarf is handing the metal pot to no one, but holds it firmly. The child in yellow rain boots is pointing at the brown bear. The brown bear is looking at the child in yellow rain boots. The woman in the blue beanie is sitting on the gray log. The black backpack is next to the woman in the blue beanie.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

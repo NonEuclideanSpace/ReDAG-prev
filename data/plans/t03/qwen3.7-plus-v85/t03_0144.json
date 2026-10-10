@@ -1,0 +1,268 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery studio interior",
+   "question": "Does the image show a pottery studio interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    400,
+    150,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pottery wheel",
+   "question": "Is there a pottery wheel?",
+   "box": [
+    420,
+    600,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall clay vase",
+   "question": "Is there a tall clay vase?",
+   "box": [
+    500,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wet clay bowl",
+   "question": "Is there a wet clay bowl?",
+   "box": [
+    150,
+    500,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stool",
+   "question": "Is there a wooden stool?",
+   "box": [
+    800,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf",
+   "question": "Is there a shelf?",
+   "box": [
+    850,
+    200,
+    1024,
+    550
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "woman_holding_bowl",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a wet clay bowl",
+   "question": "Is the woman in the blue apron holding a wet clay bowl?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green shirt is sitting",
+   "question": "Is the man in the green shirt sitting?"
+  },
+  {
+   "id": "man_shaping_vase",
+   "type": "action",
+   "of": [
+    "man",
+    "vase"
+   ],
+   "desc": "the man in the green shirt shapes the tall clay vase",
+   "question": "Is the man in the green shirt shaping the tall clay vase?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue apron looks at the man's hands",
+   "question": "Is the woman in the blue apron looking at the man's hands?"
+  },
+  {
+   "id": "man_at_wheel",
+   "type": "relation",
+   "of": [
+    "man",
+    "wheel"
+   ],
+   "desc": "the man in the green shirt sits at the pottery wheel",
+   "question": "Is the man in the green shirt sitting at the pottery wheel?"
+  },
+  {
+   "id": "vase_on_wheel",
+   "type": "relation",
+   "of": [
+    "vase",
+    "wheel"
+   ],
+   "desc": "the tall clay vase is on the pottery wheel",
+   "question": "Is the tall clay vase on the pottery wheel?"
+  },
+  {
+   "id": "stool_near_shelf",
+   "type": "relation",
+   "of": [
+    "stool",
+    "shelf"
+   ],
+   "desc": "the wooden stool is near the shelf of finished pots",
+   "question": "Is the wooden stool near the shelf of finished pots?"
+  },
+  {
+   "id": "no_electricity",
+   "type": "absent",
+   "desc": "visible electricity sources like cords or outlets",
+   "question": "Are there any visible electricity sources like cords or outlets in the image?"
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "finished pots",
+   "question": "Are there finished pots?",
+   "box": [
+    820,
+    250,
+    960,
+    550
+   ]
+  },
+  {
+   "id": "pots_on_shelf",
+   "type": "relation",
+   "of": [
+    "pots",
+    "shelf"
+   ],
+   "desc": "the finished pots are on the shelf",
+   "question": "Are the finished pots on the shelf?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wheel",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "pots",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0144",
+ "prompt": "In a photorealistic photo, a woman in a blue apron stands on the left holding a wet clay bowl. A man in a green shirt sits at the center wheel shaping a tall vase. A wooden stool rests on the right near a shelf of finished pots. The woman looks at the man's hands as he works. There is no electricity visible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

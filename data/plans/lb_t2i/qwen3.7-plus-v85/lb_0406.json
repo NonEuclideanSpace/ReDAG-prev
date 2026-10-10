@@ -1,0 +1,599 @@
+{
+ "style": "surreal photorealistic, eerie atmospheric lighting, distorted reflections",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a forgotten industrial warehouse with a faded blue wall and cracked concrete floor",
+   "question": "Does the image show the interior of a forgotten industrial warehouse with a faded blue wall and cracked concrete floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hurdle",
+   "type": "entity",
+   "class": "hurdle",
+   "plural": "hurdles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small red hurdle",
+   "question": "Is there a small red hurdle?",
+   "box": [
+    300,
+    400,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "shoe",
+   "type": "entity",
+   "class": "track shoe",
+   "plural": "track shoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn-out track shoe",
+   "question": "Is there a worn-out track shoe?",
+   "box": [
+    200,
+    700,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "roller",
+   "type": "entity",
+   "class": "foam roller",
+   "plural": "foam rollers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white foam roller",
+   "question": "Is there a white foam roller?",
+   "box": [
+    450,
+    700,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin metallic chain",
+   "question": "Is there a thin metallic chain?",
+   "box": [
+    250,
+    650,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "bell",
+   "type": "entity",
+   "class": "brass bell",
+   "plural": "brass bells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brass bell mounted on the wall",
+   "question": "Is there a small brass bell?",
+   "box": [
+    400,
+    200,
+    450,
+    250
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty mirror with curved edges",
+   "question": "Is there a dusty mirror with curved edges?",
+   "box": [
+    700,
+    100,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal water bottle with a dented side",
+   "question": "Is there a metal water bottle with a dented side?",
+   "box": [
+    600,
+    750,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "chalk_line",
+   "type": "entity",
+   "class": "chalk writing",
+   "plural": "chalk writings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "faded chalk line reading 'push harder', with blurred edges",
+   "question": "Is there faded chalk writing reading 'push harder' with blurred edges?",
+   "box": [
+    750,
+    550,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "treadmill",
+   "type": "entity",
+   "class": "treadmill",
+   "plural": "treadmills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old wooden treadmill",
+   "question": "Is there an old wooden treadmill?",
+   "box": [
+    50,
+    300,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "duffel_bag",
+   "type": "entity",
+   "class": "duffel bag",
+   "plural": "duffel bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a duffel bag filled with loose gear",
+   "question": "Is there a duffel bag filled with loose gear?",
+   "box": [
+    260,
+    250,
+    350,
+    400
+   ]
+  },
+  {
+   "id": "hurdle_leaning",
+   "type": "state",
+   "of": "hurdle",
+   "desc": "the small red hurdle leans diagonally",
+   "question": "Does the small red hurdle lean diagonally?"
+  },
+  {
+   "id": "shadow_hurdle",
+   "type": "attribute",
+   "of": "hurdle",
+   "desc": "the small red hurdle casts a long, sharp, precise, slightly elongated shadow that bends and twists around cracks",
+   "question": "Does the small red hurdle cast a long, sharp, precise, slightly elongated shadow that bends and twists around cracks?"
+  },
+  {
+   "id": "chain_on_floor",
+   "type": "state",
+   "of": "chain",
+   "desc": "the thin metallic chain snakes across the floor",
+   "question": "Does the thin metallic chain snake across the floor?"
+  },
+  {
+   "id": "chain_loop_bell",
+   "type": "relation",
+   "of": [
+    "chain",
+    "bell"
+   ],
+   "desc": "the loop of the metallic chain slips through the eye of the small brass bell",
+   "question": "Does the loop of the metallic chain slip through the eye of the small brass bell?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the dusty mirror captures a warped reflection of the hurdle, foam roller, shoe, and floor",
+   "question": "Does the dusty mirror capture a warped reflection of the hurdle, foam roller, shoe, and floor?"
+  },
+  {
+   "id": "hurdle_behind_mirror",
+   "type": "relation",
+   "of": [
+    "hurdle",
+    "mirror"
+   ],
+   "desc": "the small red hurdle is behind the dusty mirror",
+   "question": "Is the small red hurdle positioned behind the dusty mirror?"
+  },
+  {
+   "id": "shoe_next_to_roller",
+   "type": "relation",
+   "of": [
+    "shoe",
+    "roller"
+   ],
+   "desc": "the worn-out track shoe is beside the white foam roller",
+   "question": "Is the worn-out track shoe beside the white foam roller?"
+  },
+  {
+   "id": "chain_between_shoe_roller",
+   "type": "relation",
+   "of": [
+    "chain",
+    "shoe",
+    "roller"
+   ],
+   "desc": "the thin metallic chain is between the worn-out track shoe and the white foam roller",
+   "question": "Is the thin metallic chain positioned between the worn-out track shoe and the white foam roller?"
+  },
+  {
+   "id": "bell_above_hurdle",
+   "type": "relation",
+   "of": [
+    "bell",
+    "hurdle"
+   ],
+   "desc": "the small brass bell is mounted on the wall above the small red hurdle",
+   "question": "Is the small brass bell mounted on the wall above the small red hurdle?"
+  },
+  {
+   "id": "bottle_below_bulb",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "beams"
+   ],
+   "desc": "the metal water bottle rests on the floor below the single overhead bulb",
+   "question": "Is the metal water bottle resting on the floor below the single overhead bulb?"
+  },
+  {
+   "id": "chalk_on_wall",
+   "type": "relation",
+   "of": [
+    "chalk_line",
+    "bell"
+   ],
+   "desc": "the faded chalk line is on the wall",
+   "question": "Is the faded chalk line on the wall?"
+  },
+  {
+   "id": "chalk_behind_mirror",
+   "type": "relation",
+   "of": [
+    "chalk_line",
+    "mirror"
+   ],
+   "desc": "the faded chalk line is behind the dusty mirror",
+   "question": "Is the faded chalk line behind the dusty mirror?"
+  },
+  {
+   "id": "duffel_next_to_treadmill",
+   "type": "relation",
+   "of": [
+    "duffel_bag",
+    "treadmill"
+   ],
+   "desc": "the duffel bag is beside the old wooden treadmill",
+   "question": "Is the duffel bag beside the old wooden treadmill?"
+  },
+  {
+   "id": "shoe_upside_down",
+   "type": "state",
+   "of": "shoe",
+   "desc": "the worn-out track shoe lies upside down",
+   "question": "Is the worn-out track shoe lying upside down?"
+  },
+  {
+   "id": "bottle_on_floor",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the metal water bottle rests on the floor",
+   "question": "Is the metal water bottle resting on the floor?"
+  },
+  {
+   "id": "duffel_hanging",
+   "type": "state",
+   "of": "duffel_bag",
+   "desc": "the duffel bag hangs from a rusted hook",
+   "question": "Is the duffel bag hanging from a rusted hook?"
+  },
+  {
+   "id": "hook_entity",
+   "type": "entity",
+   "class": "hook",
+   "plural": "hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted hook",
+   "question": "Is there a rusted hook?",
+   "box": [
+    850,
+    400,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "duffel_on_hook",
+   "type": "relation",
+   "of": [
+    "duffel_bag",
+    "hook_entity"
+   ],
+   "desc": "the duffel bag hangs from the rusted hook",
+   "question": "Is the duffel bag hanging from the rusted hook?"
+  },
+  {
+   "id": "bell_on_wall",
+   "type": "state",
+   "of": "bell",
+   "desc": "the small brass bell is mounted on the wall",
+   "question": "Is the small brass bell mounted on the wall?"
+  },
+  {
+   "id": "mirror_angle",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the dusty mirror is mounted at a sharp angle",
+   "question": "Is the dusty mirror mounted at a sharp angle?"
+  },
+  {
+   "id": "treadmill_belt",
+   "type": "attribute",
+   "of": "treadmill",
+   "desc": "the old wooden treadmill has a torn belt hanging loose",
+   "question": "Does the old wooden treadmill have a torn belt hanging loose?"
+  },
+  {
+   "id": "duffel_contents",
+   "type": "attribute",
+   "of": "duffel_bag",
+   "desc": "the duffel bag contains spare shoelaces",
+   "question": "Does the duffel bag contain spare shoelaces?"
+  },
+  {
+   "id": "chalk_text",
+   "type": "attribute",
+   "of": "chalk_line",
+   "desc": "the faded chalk line reads 'push harder'",
+   "question": "Does the faded chalk line read 'push harder'?"
+  },
+  {
+   "id": "screen_readout",
+   "type": "attribute",
+   "of": "treadmill",
+   "desc": "the treadmill screen displays '0:03:17'",
+   "question": "Does the treadmill screen display '0:03:17'?"
+  },
+  {
+   "id": "bottle_water_level",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the metal water bottle is half-full of murky water",
+   "question": "Is the metal water bottle half-full of murky water?"
+  },
+  {
+   "id": "shoe_sole_condition",
+   "type": "attribute",
+   "of": "shoe",
+   "desc": "the worn-out track shoe has a scuffed and peeling rubber sole revealing white beneath",
+   "question": "Does the worn-out track shoe have a scuffed and peeling rubber sole revealing white beneath?"
+  },
+  {
+   "id": "roller_condition",
+   "type": "attribute",
+   "of": "roller",
+   "desc": "the white foam roller is slightly flattened and dusty",
+   "question": "Is the white foam roller slightly flattened and dusty?"
+  },
+  {
+   "id": "chain_glow",
+   "type": "attribute",
+   "of": "chain",
+   "desc": "the thin metallic chain has links that glow faintly",
+   "question": "Do the links of the thin metallic chain glow faintly?"
+  },
+  {
+   "id": "duffel_spilling",
+   "type": "state",
+   "of": "duffel_bag",
+   "desc": "the duffel bag spills out its contents",
+   "question": "Does the duffel bag spill out its contents?"
+  },
+  {
+   "id": "beams",
+   "type": "entity",
+   "class": "support beam",
+   "plural": "support beams",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rusted support beams overhead",
+   "question": "Are there rusted support beams overhead?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "bulb",
+   "type": "entity",
+   "class": "light bulb",
+   "plural": "light bulbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single overhead bulb",
+   "question": "Is there a single overhead bulb?",
+   "box": [
+    480,
+    50,
+    544,
+    114
+   ]
+  },
+  {
+   "id": "hurdle_condition",
+   "type": "attribute",
+   "of": "hurdle",
+   "desc": "the small red hurdle is dusty and used",
+   "question": "Is the small red hurdle dusty and used?"
+  },
+  {
+   "id": "duffel_bottle",
+   "type": "attribute",
+   "of": "duffel_bag",
+   "desc": "the duffel bag contains a crumpled water bottle",
+   "question": "Does the duffel bag contain a crumpled water bottle?"
+  },
+  {
+   "id": "duffel_gloves",
+   "type": "attribute",
+   "of": "duffel_bag",
+   "desc": "the duffel bag contains sweat-stained gloves",
+   "question": "Does the duffel bag contain sweat-stained gloves?"
+  },
+  {
+   "id": "roller_condition_2",
+   "type": "attribute",
+   "of": "roller",
+   "desc": "the white foam roller is slightly flattened, dusty, and rolled tightly",
+   "question": "Is the white foam roller slightly flattened, dusty, and rolled tightly?"
+  },
+  {
+   "id": "mirror_angle_2",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the dusty mirror is mounted crookedly at a sharp angle",
+   "question": "Is the dusty mirror mounted crookedly at a sharp angle?"
+  },
+  {
+   "id": "bottle_steam",
+   "type": "state",
+   "of": "bottle",
+   "desc": "steam curls from the opening of the metal water bottle",
+   "question": "Does steam curl from the opening of the metal water bottle?"
+  },
+  {
+   "id": "duffel_open",
+   "type": "state",
+   "of": "duffel_bag",
+   "desc": "the duffel bag is slightly open",
+   "question": "Is the duffel bag slightly open?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "hurdle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "shoe",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "roller",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "chain",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "treadmill",
+   "kind": "support"
+  },
+  {
+   "from": "hook_entity",
+   "to": "duffel_bag",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "beams",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bulb",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0406",
+ "prompt": "In the heart of a forgotten industrial quarter, a weathered warehouse breathes with the hush of abandoned ambition. The faded blue wall leans slightly forward, as if yearning to step out of the static frame of its existence. A small red hurdle, its once-pristine surface marred by dust and use, leans diagonally against it, casting a long, sharp shadow that stretches across the cracked concrete floor like an unseen figure lingering at the edge of a memory. This shadow, impossibly precise and slightly elongated, bends and twists around the irregular cracks in the floor, each fissure a secret path through which the light seems to leak. The light itself appears to emanate from an impossible direction—simultaneously from above, the side, and below—as if the very air in the room is alive with the ghosts of unseen sources.\n\nNearby, a worn-out track shoe, one of a pair long lost to time or misadventure, lies upside down on the ground. Its rubber sole is scuffed and peeling, revealing glimpses of the original white beneath. Beside it, a white foam roller, once supple, is now slightly flattened and dusty, rolled tightly like a coiled spring. Between the shoe and the roller, a thin, metallic chain snakes across the floor, seemingly unconnected yet mysteriously interwoven with both—its links glowing faintly as if infused with the memory of past exertions. The chain ends in a loop that slips through the eye of a small brass bell mounted on the wall above the hurdle. Each breath the warehouse takes seems to make the bell chime faintly, its sound echoing into the vast hollows beyond the rusted support beams overhead.\n\nA dusty mirror, crookedly mounted at a sharp angle, captures the entire tableau in a warped, slightly surreal reflection. The edges of the mirror curve and distort the image, bending the red hurdle into a spiraling helix and stretching the foam roller into a ribbed cylinder that appears to stretch into infinity. In the reflection, the shoe looks like it’s moving slightly—its heel twitching as if caught mid-stride in a ghostly repetition of an unseen sprint. The floor, cracked and uneven, reflects the same pattern of distortion, making the entire room feel like a living, breathing illusion. Shadows stretch in multiple directions at once, overlapping and intersecting in a recursive dance of light and void.\n\nThe air is thick with the scent of old rubber and dust, but also with the faint, almost imperceptible trace of lavender—like the memory of a post-workout shower long since gone. A single overhead bulb flickers intermittently, its dim glow adding to the dreamlike quality of the scene. Below it, a metal water bottle with a dented side rests on the floor, half-full of murky water. A thin wisp of steam curls from its opening, suggesting that someone, somewhere, just recently poured the water from a kettle and left it in haste. A faded chalk line on the wall behind the mirror reads “push harder,” its edges blurred and half-erased, as if it too has been worn down by time and repetition.\n\nFrom the far end of the room, an old wooden treadmill, its belt torn and hanging loose, creaks softly as if caught in the memory of a long-forgotten run. Its screen flickers with a pixelated ghost of a digital readout—“0:03:17”—a moment frozen mid-pace, as if the runner vanished just as the finish line was in sight. Beside it, a duffel bag filled with loose gear—spare shoelaces, a crumpled water bottle, a pair of sweat-stained gloves—hangs from a rusted hook. The bag is slightly open, spilling out its contents like a reluctant confidant of a story that no longer has a narrator.\n\nThe room is suffused with an eerie stillness, broken only by the occasional soft creak of the wooden treadmill and the distant echo of the bell. Every object seems to watch, waiting for a return that may never come, each imbued with the residue of ambition, effort, and an inexplicable sense of unresolved tension. The shadows move with a slow, deliberate grace, as if they too are training for something beyond the grasp of the visible world. In this impossible yet internally coherent space, time folds in on itself, creating a moment suspended between past and potential, a frozen breath in the heart of a forgotten dream.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [
+   "node bottle: entity question is long (20 words); should only ask presence + identifying look",
+   "node treadmill: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 11,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 103,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 2,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 9,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "shoe_beside_roller",
+     "shoe_next_to_roller"
+    ],
+    [
+     "bell_mount",
+     "bell_on_wall"
+    ]
+   ]
+  }
+ }
+}

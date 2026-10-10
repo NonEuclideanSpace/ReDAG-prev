@@ -1,0 +1,514 @@
+{
+ "style": "cinematic realism, waning afternoon light, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park scene with a tree and blue sky",
+   "question": "Does the image show a park scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked wooden park bench painted in muted sunset hues",
+   "question": "Is there a cracked wooden park bench?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree with tangled branches and roots curling around the bench legs",
+   "question": "Is there a tree with tangled branches and roots curling around the bench legs?",
+   "box": [
+    0,
+    0,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered leather backpack",
+   "question": "Is there a weathered leather backpack?",
+   "box": [
+    200,
+    650,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "pomegranate",
+   "type": "entity",
+   "class": "pomegranate",
+   "plural": "pomegranates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten pomegranate with scattered crimson seeds",
+   "question": "Is there a half-eaten pomegranate with scattered crimson seeds?",
+   "box": [
+    250,
+    700,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellowed folded map smudged with ink",
+   "question": "Is there a yellowed folded map smudged with ink?",
+   "box": [
+    500,
+    750,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek black cat",
+   "question": "Is there a sleek black cat?",
+   "box": [
+    450,
+    600,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "airplane",
+   "type": "entity",
+   "class": "airplane",
+   "plural": "airplanes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an airplane in the sky",
+   "question": "Is there an airplane in the sky?",
+   "box": [
+    600,
+    50,
+    900,
+    200
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "binoculars hanging from the backpack by a leather strap",
+   "question": "Are there binoculars hanging from the backpack?",
+   "box": [
+    420,
+    800,
+    480,
+    880
+   ]
+  },
+  {
+   "id": "roots_curling",
+   "type": "relation",
+   "of": [
+    "tree",
+    "bench"
+   ],
+   "desc": "the tree roots curl around the legs of the bench",
+   "question": "Do the tree roots curl around the legs of the bench?"
+  },
+  {
+   "id": "seeds_on_bench",
+   "type": "relation",
+   "of": [
+    "pomegranate",
+    "bench"
+   ],
+   "desc": "pomegranate seeds are scattered on the bench",
+   "question": "Are pomegranate seeds scattered on the bench?"
+  },
+  {
+   "id": "seed_in_crevice",
+   "type": "relation",
+   "of": [
+    "pomegranate",
+    "bench"
+   ],
+   "desc": "one pomegranate seed is lodged in a crevice of the bench wood",
+   "question": "Is one pomegranate seed lodged in a crevice of the bench wood?"
+  },
+  {
+   "id": "map_on_bench",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the map lies on the bench",
+   "question": "Does the map lie on the bench?"
+  },
+  {
+   "id": "seed_on_map",
+   "type": "relation",
+   "of": [
+    "pomegranate",
+    "map"
+   ],
+   "desc": "one pomegranate seed rests on the map",
+   "question": "Does one pomegranate seed rest on the map?"
+  },
+  {
+   "id": "cat_near_backpack",
+   "type": "relation",
+   "of": [
+    "cat",
+    "backpack"
+   ],
+   "desc": "the black cat is next to the backpack",
+   "question": "Is the black cat next to the backpack?"
+  },
+  {
+   "id": "cat_shadow",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat casts a shadow",
+   "question": "Does the black cat cast a shadow?"
+  },
+  {
+   "id": "map_fluttering",
+   "type": "state",
+   "of": "map",
+   "desc": "the map edges are lifted by wind",
+   "question": "Are the edges of the map lifted by wind?"
+  },
+  {
+   "id": "map_rolled",
+   "type": "state",
+   "of": "map",
+   "desc": "part of the map is curled into a tight roll",
+   "question": "Is part of the map curled into a tight roll?"
+  },
+  {
+   "id": "rolled_map_position",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the rolled part of the map falls between the bench and the backpack",
+   "question": "Does the rolled part of the map fall between the bench and the backpack?"
+  },
+  {
+   "id": "binoculars_swinging",
+   "type": "state",
+   "of": "binoculars",
+   "desc": "the binoculars are swinging gently",
+   "question": "Are the binoculars swinging gently?"
+  },
+  {
+   "id": "juice_drying",
+   "type": "state",
+   "of": "pomegranate",
+   "desc": "pomegranate juice on the bench is drying into crystalline pools",
+   "question": "Is pomegranate juice on the bench drying into crystalline pools?"
+  },
+  {
+   "id": "vapor_shapes",
+   "type": "state",
+   "of": "airplane",
+   "desc": "the airplane vapor trail forms ephemeral shapes near the bench",
+   "question": "Does the airplane vapor trail form ephemeral shapes near the bench?"
+  },
+  {
+   "id": "backpack_open",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack is open",
+   "question": "Is the backpack open?"
+  },
+  {
+   "id": "bench_sitting",
+   "type": "state",
+   "of": "bench",
+   "desc": "the cracked wooden park bench sits beneath the tree",
+   "question": "Is the cracked wooden park bench sitting beneath the tree?"
+  },
+  {
+   "id": "cat_pads",
+   "type": "state",
+   "of": "cat",
+   "desc": "the sleek black cat pads past",
+   "question": "Is the sleek black cat padding past?"
+  },
+  {
+   "id": "cat_brushes_backpack",
+   "type": "action",
+   "of": [
+    "cat",
+    "backpack"
+   ],
+   "desc": "the black cat brushes against the weathered leather backpack",
+   "question": "Is the black cat brushing against the weathered leather backpack?"
+  },
+  {
+   "id": "seeds_skitter",
+   "type": "action",
+   "of": [
+    "pomegranate",
+    "bench"
+   ],
+   "desc": "pomegranate seeds skitter across the bench",
+   "question": "Are pomegranate seeds skittering across the bench?"
+  },
+  {
+   "id": "seed_rolls_to_map",
+   "type": "relation",
+   "of": [
+    "pomegranate",
+    "map"
+   ],
+   "desc": "a pomegranate seed rolls toward the corner of the map",
+   "question": "Is a pomegranate seed rolling toward the corner of the map?"
+  },
+  {
+   "id": "root_pushes_up",
+   "type": "state",
+   "of": "tree",
+   "desc": "a sliver of root pushes up from beneath the bench",
+   "question": "Is a sliver of root pushing up from beneath the bench?"
+  },
+  {
+   "id": "cat_halts",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat halts to observe",
+   "question": "Has the black cat halted?"
+  },
+  {
+   "id": "cat_observes_seed",
+   "type": "relation",
+   "of": [
+    "cat",
+    "pomegranate"
+   ],
+   "desc": "the black cat observes the descending pomegranate seed",
+   "question": "Is the black cat observing the descending pomegranate seed?"
+  },
+  {
+   "id": "cat_tail_flicks",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat's tail flicks once",
+   "question": "Does the black cat's tail flick once?"
+  },
+  {
+   "id": "tail_ripples_map",
+   "type": "action",
+   "of": [
+    "cat",
+    "map"
+   ],
+   "desc": "the cat's tail sends a ripple through the map",
+   "question": "Does the cat's tail send a ripple through the map?"
+  },
+  {
+   "id": "map_folds",
+   "type": "state",
+   "of": "map",
+   "desc": "the map folds itself inward",
+   "question": "Is the map folding itself inward?"
+  },
+  {
+   "id": "map_curls",
+   "type": "state",
+   "of": "map",
+   "desc": "the map curls into a tight roll",
+   "question": "Is the map curling into a tight roll?"
+  },
+  {
+   "id": "map_falls",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the rolled map falls between the bench and the backpack",
+   "question": "Does the rolled map fall between the bench and the backpack?"
+  },
+  {
+   "id": "binoculars_lens_aligns_cat",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "cat"
+   ],
+   "desc": "one binocular lens aligns with the eye of the cat",
+   "question": "Does one binocular lens align with the eye of the cat?"
+  },
+  {
+   "id": "cat_blinks",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat blinks slowly",
+   "question": "Is the black cat blinking slowly?"
+  },
+  {
+   "id": "seed_tumbles_crevice",
+   "type": "action",
+   "of": [
+    "pomegranate",
+    "bench"
+   ],
+   "desc": "a pomegranate seed tumbles into a crevice in the wood",
+   "question": "Is a pomegranate seed tumbling into a crevice in the wood?"
+  },
+  {
+   "id": "map_annotation_latin",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map shows an annotation containing Latin text",
+   "question": "Does the map show an annotation containing Latin text?"
+  },
+  {
+   "id": "sky",
+   "type": "entity",
+   "class": "sky",
+   "plural": "skies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue sky",
+   "question": "Is there a blue sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "bench_color",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench is painted in muted sunset hues",
+   "question": "Is the bench painted in muted sunset hues?"
+  },
+  {
+   "id": "backpack_zipper",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack zipper hangs loose",
+   "question": "Does the backpack zipper hang loose?"
+  },
+  {
+   "id": "vapor_trail",
+   "type": "attribute",
+   "of": "airplane",
+   "desc": "the airplane leaves a silver vapor trail",
+   "question": "Does the airplane leave a silver vapor trail?"
+  },
+  {
+   "id": "binoculars_strap",
+   "type": "attribute",
+   "of": "binoculars",
+   "desc": "the binoculars hang by a leather strap",
+   "question": "Do the binoculars hang by a leather strap?"
+  },
+  {
+   "id": "map_lines",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map shows topographical lines",
+   "question": "Does the map show topographical lines?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "backpack",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "map",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "pomegranate",
+   "kind": "support"
+  },
+  {
+   "from": "backpack",
+   "to": "binoculars",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0351",
+ "prompt": "The park bench, cracked with age and painted in the muted hues of forgotten sunsets, sits beneath a tree whose branches have grown into tangled, whispering sentinels, their roots curling around the legs of the bench like grasping fingers. A weathered leather backpack rests open, its surface scarred by time and travel, the zipper hanging loose as if caught mid-sentence. From within, a half-eaten pomegranate spills its crimson jewels onto the worn wood grain, each ruby seed a frozen burst of juice waiting for a breeze. A folded map, yellowed and smudged with ink from both storms and tears, trembles as a gust of wind lifts its edges, revealing topographical lines that pulse faintly with the rhythm of a distant heartbeat. A black cat, sleek and silent, pads past, its shadow flickering under the shifting light of the passing airplane that slices across the sky, leaving a silver scar in the blue. As the cat brushes against the backpack, a cascade of pomegranate seeds skitter across the bench, rolling toward the map's corner, where one lodges itself in a contour line, momentarily distorting the terrain into something unfamiliar. The binoculars, hanging off the side of the pack, swing gently, their lenses catching glimmers of the sun and casting tiny, kaleidoscopic shadows that dance across the bench. The wind, now steadying into a rhythmic whisper, pulls at the binoculars' leather strap, tugging it forward so that one lens aligns with the eye of the cat, which blinks slowly in response. The map, fluttering wildly now, reveals a hidden annotation that flickers between languages—Latin, Mandarin, and something unrecognizable—before settling into a phrase that glows faintly: *“The way lies in the seeds.”* A pomegranate seed, rolling toward the edge of the bench, pauses as if deciding between gravity and curiosity, then tumbles into a crevice in the wood, where a sliver of root pushes up from beneath, as though the bench itself is growing in response. The cat, having completed its slow circuit, halts to observe the seed’s descent, its tail flicking once, sending a ripple through the map that folds itself inward, curling into a tight roll that falls between the bench and the backpack. The airplane overhead, now dimming in the waning afternoon light, leaves behind a trail of vapor that seems to condense around the bench, forming ephemeral shapes—figures of explorers, birds, and floating cities—that drift before dissolving into mist. In the distance, the pomegranate’s juice begins to dry, forming a mosaic of tiny crystalline pools that catch and refract the light, each one containing a different sky, each one hinting at a world just beyond the threshold of the bench. The backpack remains open, as if waiting for someone to return, to gather the scattered pieces of this moment and carry them forward into the next winding path of the map—or perhaps to let them be.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 16,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 85,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 2,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

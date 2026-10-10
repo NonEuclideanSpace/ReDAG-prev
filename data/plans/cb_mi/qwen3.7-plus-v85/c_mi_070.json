@@ -1,0 +1,376 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a modern art museum gallery with white walls",
+   "question": "Does the image show a modern art museum gallery with white walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "paintings",
+   "type": "entity",
+   "class": "canvas painting",
+   "plural": "canvas paintings",
+   "count": 10,
+   "count_exact": true,
+   "desc": "ten canvas paintings",
+   "question": "Are there ten canvas paintings?",
+   "box": [
+    50,
+    100,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "spotlights",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 10,
+   "count_exact": true,
+   "desc": "ten spotlights",
+   "question": "Are there ten spotlights?",
+   "box": [
+    50,
+    20,
+    974,
+    80
+   ]
+  },
+  {
+   "id": "visitors",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several visitors",
+   "question": "Are there several visitors?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "sculptures",
+   "type": "entity",
+   "class": "sculpture",
+   "plural": "sculptures",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six sculptural pieces",
+   "question": "Are there six sculptural pieces?",
+   "box": [
+    50,
+    500,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "pedestals",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six raised pedestals",
+   "question": "Are there six raised pedestals?",
+   "box": [
+    50,
+    600,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "display_case",
+   "type": "entity",
+   "class": "glass display case",
+   "plural": "glass display cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass display case",
+   "question": "Is there a glass display case?",
+   "box": [
+    600,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "ceramics",
+   "type": "entity",
+   "class": "ceramic",
+   "plural": "ceramics",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a collection of ceramics",
+   "question": "Is there a collection of ceramics?",
+   "box": [
+    620,
+    550,
+    880,
+    750
+   ]
+  },
+  {
+   "id": "benches",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a row of benches",
+   "question": "Is there a row of benches?",
+   "box": [
+    50,
+    850,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "kiosk",
+   "type": "entity",
+   "class": "touchscreen kiosk",
+   "plural": "touchscreen kiosks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall-mounted touchscreen kiosk",
+   "question": "Is there a wall-mounted touchscreen kiosk?",
+   "box": [
+    100,
+    300,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "brochure_rack",
+   "type": "entity",
+   "class": "brochure rack",
+   "plural": "brochure racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brochure rack",
+   "question": "Is there a brochure rack?",
+   "box": [
+    320,
+    350,
+    450,
+    500
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "security camera",
+   "plural": "security cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security camera",
+   "question": "Is there a security camera?",
+   "box": [
+    400,
+    20,
+    500,
+    100
+   ]
+  },
+  {
+   "id": "exit_sign",
+   "type": "entity",
+   "class": "emergency exit sign",
+   "plural": "emergency exit signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an emergency exit sign",
+   "question": "Is there an emergency exit sign?",
+   "box": [
+    520,
+    20,
+    620,
+    100
+   ]
+  },
+  {
+   "id": "paintings_hung",
+   "type": "state",
+   "of": "paintings",
+   "desc": "the ten canvas paintings hang on the walls",
+   "question": "Do the ten canvas paintings hang on the walls?"
+  },
+  {
+   "id": "paintings_spaced",
+   "type": "attribute",
+   "of": "paintings",
+   "desc": "the ten canvas paintings are evenly spaced",
+   "question": "Are the ten canvas paintings evenly spaced?"
+  },
+  {
+   "id": "spotlights_illuminate",
+   "type": "action",
+   "of": [
+    "spotlights",
+    "paintings"
+   ],
+   "desc": "each spotlight illuminates its own painting",
+   "question": "Does each spotlight illuminate its own painting?"
+  },
+  {
+   "id": "visitors_stroll",
+   "type": "state",
+   "of": "visitors",
+   "desc": "the visitors stroll beneath the paintings",
+   "question": "Are the visitors strolling beneath the paintings?"
+  },
+  {
+   "id": "sculptures_stand",
+   "type": "relation",
+   "of": [
+    "sculptures",
+    "pedestals"
+   ],
+   "desc": "the six sculptural pieces stand on the pedestals",
+   "question": "Do the six sculptural pieces stand on the pedestals?"
+  },
+  {
+   "id": "ceramics_in_case",
+   "type": "relation",
+   "of": [
+    "ceramics",
+    "display_case"
+   ],
+   "desc": "the ceramics are inside the glass display case",
+   "question": "Are the ceramics inside the glass display case?"
+  },
+  {
+   "id": "kiosk_next_to_rack",
+   "type": "relation",
+   "of": [
+    "kiosk",
+    "brochure_rack"
+   ],
+   "desc": "the touchscreen kiosk is next to the brochure rack",
+   "question": "Is the touchscreen kiosk next to the brochure rack?"
+  },
+  {
+   "id": "camera_above",
+   "type": "state",
+   "of": "camera",
+   "desc": "the security camera is visible above",
+   "question": "Is the security camera visible above?"
+  },
+  {
+   "id": "sign_above",
+   "type": "state",
+   "of": "exit_sign",
+   "desc": "the emergency exit sign is visible above",
+   "question": "Is the emergency exit sign visible above?"
+  },
+  {
+   "id": "no_graffiti",
+   "type": "absent",
+   "desc": "graffiti",
+   "question": "Is there any graffiti in the image?"
+  },
+  {
+   "id": "no_toy",
+   "type": "absent",
+   "desc": "plastic toy",
+   "question": "Is there any plastic toy in the image?"
+  },
+  {
+   "id": "no_map",
+   "type": "absent",
+   "desc": "paper map",
+   "question": "Is there any paper map in the image?"
+  },
+  {
+   "id": "no_box",
+   "type": "absent",
+   "desc": "cardboard box",
+   "question": "Is there any cardboard box in the image?"
+  },
+  {
+   "id": "no_neon",
+   "type": "absent",
+   "desc": "neon sign",
+   "question": "Is there any neon sign in the image?"
+  },
+  {
+   "id": "visitors_sit",
+   "type": "relation",
+   "of": [
+    "visitors",
+    "benches"
+   ],
+   "desc": "the visitors sit on the benches",
+   "question": "Are the visitors sitting on the benches?"
+  },
+  {
+   "id": "sculpture_materials",
+   "type": "attribute",
+   "of": "sculptures",
+   "desc": "the six sculptural pieces include marble busts, bronze statues, and wooden totems",
+   "question": "Do the six sculptural pieces include marble busts, bronze statues, and wooden totems?"
+  },
+  {
+   "id": "rack_pamphlets",
+   "type": "attribute",
+   "of": "brochure_rack",
+   "desc": "the brochure rack is filled with pamphlets",
+   "question": "Is the brochure rack filled with pamphlets?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pedestals",
+   "to": "sculptures",
+   "kind": "support"
+  },
+  {
+   "from": "display_case",
+   "to": "ceramics",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_070",
+ "prompt": "Inside a modern art museum gallery, ten canvas paintings hang evenly spaced on white walls. Each painting is illuminated by its own spotlight as visitors stroll beneath. Six sculptural pieces—marble busts, bronze statues, and wooden totems—stand on raised pedestals. A glass display case holds a collection of ceramics, while a row of benches invites guests to sit. A wall-mounted touchscreen kiosk shows exhibition information next to a brochure rack filled with pamphlets. A security camera and an emergency exit sign are visible above. There is no graffiti, no plastic toy, no paper map, no cardboard box, and no neon sign.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

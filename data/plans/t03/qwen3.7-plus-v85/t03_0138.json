@@ -1,0 +1,240 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop interior",
+   "question": "Does the image depict a pottery workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    320,
+    200,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    350,
+    600,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "clay vase",
+   "plural": "clay vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall clay vase",
+   "question": "Is there a tall clay vase?",
+   "box": [
+    480,
+    300,
+    580,
+    650
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stool",
+   "question": "Is there a stool?",
+   "box": [
+    750,
+    650,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man with gray hair",
+   "question": "Is there a man with gray hair?",
+   "box": [
+    720,
+    250,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "woman_clay",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds wet clay",
+   "question": "Is the woman in the blue apron holding wet clay?"
+  },
+  {
+   "id": "vase_surface",
+   "type": "attribute",
+   "of": "vase",
+   "desc": "the tall clay vase has a smooth surface",
+   "question": "Does the tall clay vase have a smooth surface?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair is sitting",
+   "question": "Is the man with gray hair sitting?"
+  },
+  {
+   "id": "woman_shaping",
+   "type": "action",
+   "of": [
+    "woman",
+    "wheel"
+   ],
+   "desc": "the woman in the blue apron shapes clay on the spinning pottery wheel",
+   "question": "Is the woman in the blue apron shaping clay on the spinning pottery wheel?"
+  },
+  {
+   "id": "woman_beside_wheel",
+   "type": "relation",
+   "of": [
+    "woman",
+    "wheel"
+   ],
+   "desc": "the woman in the blue apron stands beside the spinning pottery wheel",
+   "question": "Is the woman in the blue apron standing beside the spinning pottery wheel?"
+  },
+  {
+   "id": "vase_on_table",
+   "type": "relation",
+   "of": [
+    "vase",
+    "table"
+   ],
+   "desc": "the tall clay vase rests on the wooden table",
+   "question": "Is the tall clay vase resting on the wooden table?"
+  },
+  {
+   "id": "man_on_stool",
+   "type": "relation",
+   "of": [
+    "man",
+    "stool"
+   ],
+   "desc": "the man with gray hair sits on the stool",
+   "question": "Is the man with gray hair sitting on the stool?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man with gray hair looks intently at the woman in the blue apron",
+   "question": "Is the man with gray hair looking intently at the woman in the blue apron?"
+  },
+  {
+   "id": "no_electricity",
+   "type": "absent",
+   "desc": "visible electricity sources like cords or plugs",
+   "question": "Are there any visible electricity sources like cords or plugs in the image?"
+  },
+  {
+   "id": "vase_glossy",
+   "type": "attribute",
+   "of": "vase",
+   "desc": "the tall clay vase has a glossy surface",
+   "question": "Does the tall clay vase have a glossy surface?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0138",
+ "prompt": "This flat vector illustration depicts a pottery workshop. On the left, a woman in a blue apron stands beside a spinning wheel. In the center, a tall clay vase rests on a wooden table. On the right, a man with gray hair sits on a stool. The woman is shaping wet clay with her hands. The tall clay vase has a smooth, glossy surface. The man with gray hair looks intently at the woman in the blue apron. There is no electricity visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

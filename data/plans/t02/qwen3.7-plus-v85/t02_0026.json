@@ -1,0 +1,137 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with faint outlines of snow-covered buildings",
+   "question": "Does the background show a snowy town square with faint outlines of snow-covered buildings?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    600,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_package",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small white package",
+   "question": "Is the woman in a blue coat holding a small white package?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green hat is looking at the woman",
+   "question": "Is the man in a green hat looking at the woman in a blue coat?"
+  },
+  {
+   "id": "man_extending",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green hat is extending his hand",
+   "question": "Is the man in a green hat extending his hand?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue coat is handing the package to the man in a green hat",
+   "question": "Is the woman in a blue coat handing the package to the man in a green hat?"
+  },
+  {
+   "id": "no_dog",
+   "type": "absent",
+   "desc": "a dog",
+   "question": "Is there a dog visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "woman_blue_coat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue coat",
+   "question": "Does the woman wear a blue coat?"
+  },
+  {
+   "id": "man_green_hat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a green hat",
+   "question": "Does the man wear a green hat?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0026",
+ "prompt": "A pencil sketch with light color wash depicts a snowy town square. On the left, a woman in a blue coat stands holding a small white package. In the center, a man in a green hat looks at her while extending his hand. The woman is handing the package to the man. There is no dog visible in the scene. The background features faint outlines of snow-covered buildings, but the focus remains strictly on the two figures and their exchange in the cold air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

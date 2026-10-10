@@ -1,0 +1,158 @@
+{
+ "style": "photorealistic photo, night scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party at night with a dark sky",
+   "question": "Does the image show a rooftop party at night with a dark sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    700,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black suit",
+   "question": "Is there a man in a black suit?",
+   "box": [
+    380,
+    180,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    750,
+    400,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a champagne flute",
+   "question": "Is the woman in the blue dress holding a champagne flute?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black suit is standing",
+   "question": "Is the man in the black suit standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the black suit stands next to the woman in the blue dress",
+   "question": "Is the man in the black suit standing next to the woman in the blue dress?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the black suit looks at the woman in the blue dress",
+   "question": "Is the man in the black suit looking at the woman in the blue dress?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the golden retriever sits on the wooden bench",
+   "question": "Is the golden retriever sitting on the wooden bench?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon in the sky",
+   "question": "Is there a moon visible in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0012",
+ "prompt": "A photorealistic photo captures a rooftop party at night. On the left, a woman in a blue dress holds a champagne flute. In the center, a man in a black suit stands next to her. On the right, a golden retriever sits on a wooden bench. The man in the black suit is looking at the woman in the blue dress. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

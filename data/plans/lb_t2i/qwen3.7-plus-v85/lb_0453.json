@@ -1,0 +1,511 @@
+{
+ "style": "surreal hyperrealistic photography, dramatic lighting, distorted perspective, eerie atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with warped floorboards and unnatural shadows",
+   "question": "Does the image show a room with warped floorboards and unnatural, distorting shadows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked cosmetics mirror",
+   "question": "Is there a cracked cosmetics mirror?",
+   "box": [
+    300,
+    200,
+    724,
+    800
+   ]
+  },
+  {
+   "id": "novels",
+   "type": "entity",
+   "class": "novel",
+   "plural": "novels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a sagging stack of yellowed novels",
+   "question": "Is there a sagging stack of yellowed novels?",
+   "box": [
+    650,
+    300,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a desk lamp",
+   "question": "Is there a desk lamp?",
+   "box": [
+    100,
+    100,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "perfume bottle",
+   "plural": "perfume bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty perfume bottle leaking amber liquid",
+   "question": "Is there a half-empty perfume bottle leaking amber liquid?",
+   "box": [
+    750,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "handkerchief",
+   "type": "entity",
+   "class": "handkerchief",
+   "plural": "handkerchiefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded linen handkerchief",
+   "question": "Is there a folded linen handkerchief?",
+   "box": [
+    700,
+    850,
+    980,
+    980
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth with a faint phosphorescent trail",
+   "question": "Is there a moth with a faint phosphorescent trail?",
+   "box": [
+    500,
+    400,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "hair",
+   "type": "entity",
+   "class": "strand of hair",
+   "plural": "strands of hair",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose strand of hair",
+   "question": "Is there a loose strand of hair?",
+   "box": [
+    450,
+    780,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "drop",
+   "type": "entity",
+   "class": "drop of perfume",
+   "plural": "drops of perfume",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single drop of perfume",
+   "question": "Is there a single drop of perfume?",
+   "box": [
+    516,
+    746,
+    564,
+    794
+   ]
+  },
+  {
+   "id": "portrait",
+   "type": "entity",
+   "class": "portrait",
+   "plural": "portraits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a portrait of a woman",
+   "question": "Is there a portrait of a woman?",
+   "box": [
+    400,
+    300,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "mirror_leaning",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the cracked cosmetics mirror is leaning at a precarious angle",
+   "question": "Is the cracked cosmetics mirror leaning at a precarious angle?"
+  },
+  {
+   "id": "novels_teetering",
+   "type": "state",
+   "of": "novels",
+   "desc": "the stack of yellowed novels is teetering on the edge of collapse",
+   "question": "Is the stack of yellowed novels teetering on the edge of collapse?"
+  },
+  {
+   "id": "page_turning",
+   "type": "state",
+   "of": "novels",
+   "desc": "one page of the novels is turning on its own",
+   "question": "Is one page of the novels turning on its own?"
+  },
+  {
+   "id": "lamp_flickering",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the desk lamp's bulb is flickering",
+   "question": "Is the desk lamp's bulb flickering?"
+  },
+  {
+   "id": "bottle_hovering",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "handkerchief"
+   ],
+   "desc": "the perfume bottle is hovering just above the handkerchief",
+   "question": "Is the perfume bottle hovering just above the handkerchief?"
+  },
+  {
+   "id": "handkerchief_breathing",
+   "type": "state",
+   "of": "handkerchief",
+   "desc": "the handkerchief appears to be breathing",
+   "question": "Does the handkerchief appear to be breathing?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror shows a layered reflection with a ghostly dresser and a missing book",
+   "question": "Does the mirror show a layered reflection with a ghostly dresser?"
+  },
+  {
+   "id": "mirror_glints",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror surface has fractured glints of light",
+   "question": "Does the mirror surface have fractured glints of light?"
+  },
+  {
+   "id": "moth_trail",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth leaves a phosphorescent trail adhering to the glass",
+   "question": "Does the moth leave a phosphorescent trail adhering to the glass?"
+  },
+  {
+   "id": "hair_glistening",
+   "type": "attribute",
+   "of": "hair",
+   "desc": "the strand of hair is glistening in the warm glow",
+   "question": "Is the strand of hair glistening in the warm glow?"
+  },
+  {
+   "id": "drop_suspended",
+   "type": "relation",
+   "of": [
+    "drop",
+    "mirror"
+   ],
+   "desc": "the drop is suspended in mid-air above the mirror",
+   "question": "Is the drop suspended in mid-air above the mirror?"
+  },
+  {
+   "id": "mirror_novels_relation",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "novels"
+   ],
+   "desc": "the mirror leans against the stack of novels",
+   "question": "Is the mirror leaning against the stack of novels?"
+  },
+  {
+   "id": "bottle_beside_mirror",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "mirror"
+   ],
+   "desc": "the perfume bottle is beside the mirror",
+   "question": "Is the perfume bottle beside the mirror?"
+  },
+  {
+   "id": "moth_descent",
+   "type": "action",
+   "of": [
+    "moth",
+    "drop"
+   ],
+   "desc": "the moth descends toward the suspended drop",
+   "question": "Is the moth descending toward the suspended drop?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "a visible clock",
+   "question": "Is there a visible clock in the image?"
+  },
+  {
+   "id": "dresser",
+   "type": "entity",
+   "class": "dresser",
+   "plural": "dressers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dresser",
+   "question": "Is there a dresser in the image?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mirror_on_dresser",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "dresser"
+   ],
+   "desc": "the cracked cosmetics mirror is on the dresser",
+   "question": "Is the cracked cosmetics mirror on the dresser?"
+  },
+  {
+   "id": "novels_on_dresser",
+   "type": "relation",
+   "of": [
+    "novels",
+    "dresser"
+   ],
+   "desc": "the stack of yellowed novels is on the dresser",
+   "question": "Is the stack of yellowed novels on the dresser?"
+  },
+  {
+   "id": "bottle_on_dresser",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "dresser"
+   ],
+   "desc": "the perfume bottle is on the dresser",
+   "question": "Is the perfume bottle on the dresser?"
+  },
+  {
+   "id": "handkerchief_on_dresser",
+   "type": "relation",
+   "of": [
+    "handkerchief",
+    "dresser"
+   ],
+   "desc": "the handkerchief is on the dresser",
+   "question": "Is the handkerchief on the dresser?"
+  },
+  {
+   "id": "lamp_on_dresser",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "dresser"
+   ],
+   "desc": "the desk lamp is on the dresser",
+   "question": "Is the desk lamp on the dresser?"
+  },
+  {
+   "id": "hair_on_mirror",
+   "type": "relation",
+   "of": [
+    "hair",
+    "mirror"
+   ],
+   "desc": "the strand of hair lies across the mirror's base",
+   "question": "Does the strand of hair lie across the base of the cracked cosmetics mirror?"
+  },
+  {
+   "id": "drop_on_mirror",
+   "type": "relation",
+   "of": [
+    "drop",
+    "mirror"
+   ],
+   "desc": "the drop of perfume is on the surface of the mirror",
+   "question": "Is the single drop of perfume on the surface of the cracked cosmetics mirror?"
+  },
+  {
+   "id": "portrait_in_reflection",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "portrait"
+   ],
+   "desc": "the portrait of a woman with a dissolving face is visible in the reflection of the cracked cosmetics mirror",
+   "question": "Is the portrait of a woman with a dissolving face visible in the reflection of the cracked cosmetics mirror?"
+  },
+  {
+   "id": "novels_spines",
+   "type": "attribute",
+   "of": "novels",
+   "desc": "the spines of the yellowed novels are cracked open like wounds",
+   "question": "Are the spines of the yellowed novels cracked open?"
+  },
+  {
+   "id": "hair_coiled",
+   "type": "state",
+   "of": "hair",
+   "desc": "the loose strand of hair is coiled like a question mark",
+   "question": "Is the loose strand of hair coiled like a question mark?"
+  },
+  {
+   "id": "handkerchief_under_bottle",
+   "type": "relation",
+   "of": [
+    "handkerchief",
+    "bottle"
+   ],
+   "desc": "the handkerchief is positioned under the perfume bottle",
+   "question": "Is the handkerchief positioned under the perfume bottle?"
+  },
+  {
+   "id": "novels_behind_mirror",
+   "type": "relation",
+   "of": [
+    "novels",
+    "mirror"
+   ],
+   "desc": "the novels are behind the mirror",
+   "question": "Are the novels behind the mirror?"
+  },
+  {
+   "id": "lamp_bulb_color_shifting",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the lamp's bulb shifts between gold, blue, and red",
+   "question": "Does the lamp's bulb shift between gold, blue, and red?"
+  },
+  {
+   "id": "portrait_face_dissolving",
+   "type": "state",
+   "of": "portrait",
+   "desc": "the woman's face in the portrait seems to dissolve and reform",
+   "question": "Does the woman's face in the portrait seem to dissolve and reform?"
+  },
+  {
+   "id": "reflection_book_missing",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "one book is missing from the reflected version of the dresser",
+   "question": "Is one book missing from the reflected version of the dresser?"
+  },
+  {
+   "id": "lamp_color_shifting",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the lamp's bulb changes color",
+   "question": "Does the lamp's bulb change color?"
+  },
+  {
+   "id": "handkerchief_fibers_shifting",
+   "type": "state",
+   "of": "handkerchief",
+   "desc": "the handkerchief's fibers are shifting",
+   "question": "Are the handkerchief's fibers shifting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "novels",
+   "to": "mirror",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "mirror",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "novels",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "handkerchief",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "lamp",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0453",
+ "prompt": "The cracked cosmetics mirror, leaning at a precarious angle against a sagging stack of yellowed novels, catches the flickering light of the desk lamp and warps it into a thousand fractured glints that dance across the surface of the half-empty perfume bottle beside it. The bottle, still leaking its amber-scented tears, hovers just above the handkerchief—a folded linen relic from another time, now carefully positioned to catch the descent of its perfume as if waiting for the last breath of a long-forgotten lover. Around the mirror, shadows stretch and bend unnaturally, not just reflecting the room but *distorting* it, as though the very architecture of space has been folded inward to conform to the mirror’s warped logic. A moth, drawn to the light and the scent of the perfume, flutters in slow, hypnotic circles, leaving behind a faint, phosphorescent trail that seems to adhere to the glass and pulse in time with the lamp’s waver. Behind the mirror, the novels teeter on the edge of collapse, their spines cracked open like wounds; one page is slowly turning on its own, driven by an unseen current of air that carries the scent of lavender and decay. The handkerchief, though flat and still, appears to be breathing, its fibers shifting ever so slightly as if it, too, is caught in the act of holding time in its grasp. A loose strand of hair, glistening in the warm glow, lies coiled across the mirror’s base like a question mark left behind by someone who has not yet decided what to ask. The floorboards beneath the dresser warp slightly toward the mirror’s center, as though the room is curving inward toward the focus of this strange still-life, creating a subtle illusion of a funneling perspective that makes the edges of the scene seem to dissolve into an unseen vortex. The lamp’s bulb is not just flickering but subtly changing color—shifting between gold, blue, and a deep, pulsing red—each hue altering the emotional tone of the objects it touches, as if the light itself is trying to tell a story that cannot be spoken. In the reflection of the mirror, the room is not only visible but *layered*, showing a ghostly second version of the dresser stacked with the same books, though one book is missing from this reflected version, and in its place hangs a portrait of a woman whose face seems to dissolve and reform as you watch. The perfume bottle, dripping at just the right angle, sends a single drop to fall not into the handkerchief, but onto the surface of the mirror, where it hovers mid-fall, suspended in time like a secret waiting to be told. The moth continues its slow descent toward this frozen drop, as if pulled by a force it cannot resist, creating a moment of suspended collision between organic life and mirrored stillness. In the distance, a faint ticking echoes—perhaps from a clock not visible in the scene, or perhaps from the slow, inevitable passage of time within the mirror itself. The room breathes in this strange rhythm, its elements entangled in a delicate balance of cause and consequence, light and shadow, presence and absence, forming a world that feels impossible, yet undeniably real in the way it insists on being *seen*.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 31,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

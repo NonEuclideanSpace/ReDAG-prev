@@ -1,0 +1,305 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station with a polished floor",
+   "question": "Does the image show the interior of a fire station with a polished floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    320,
+    500,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue uniform",
+   "question": "Is there a woman in a blue uniform?",
+   "box": [
+    450,
+    180,
+    650,
+    880
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red fire truck",
+   "question": "Is there a large red fire truck?",
+   "box": [
+    200,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green shirt",
+   "question": "Is there a boy in a green shirt?",
+   "box": [
+    700,
+    400,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a gray coat",
+   "question": "Is there an old man in a gray coat?",
+   "box": [
+    850,
+    200,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_helmet",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a helmet",
+   "question": "Is the firefighter holding a helmet?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting calmly",
+   "question": "Is the dalmatian sitting calmly?"
+  },
+  {
+   "id": "dalmatian_ears",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian has perked ears",
+   "question": "Does the dalmatian have perked ears?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "truck"
+   ],
+   "desc": "the woman points at the fire truck",
+   "question": "Is the woman pointing at the fire truck?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "action",
+   "of": [
+    "boy",
+    "dalmatian"
+   ],
+   "desc": "the boy looks at the dog with curiosity",
+   "question": "Is the boy looking at the dog with curiosity?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "old_man",
+    "woman"
+   ],
+   "desc": "the old man hands a clipboard to the woman",
+   "question": "Is the old man handing a clipboard to the woman?"
+  },
+  {
+   "id": "dalmatian_next_to_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian is next to the firefighter on the right",
+   "question": "Is the dalmatian next to the firefighter on the right?"
+  },
+  {
+   "id": "boy_near_tire",
+   "type": "relation",
+   "of": [
+    "boy",
+    "truck"
+   ],
+   "desc": "the boy stands near the vehicle's front tire",
+   "question": "Is the boy standing near the front tire of the fire truck?"
+  },
+  {
+   "id": "truck_behind_figures",
+   "type": "relation",
+   "of": [
+    "truck",
+    "firefighter"
+   ],
+   "desc": "the fire truck is parked behind the firefighter",
+   "question": "Is the fire truck parked behind the firefighter?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the scene?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear stands",
+   "question": "Is the firefighter in yellow gear standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue uniform stands",
+   "question": "Is the woman in a blue uniform standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a green shirt stands",
+   "question": "Is the boy in a green shirt standing?"
+  },
+  {
+   "id": "truck_behind_woman",
+   "type": "relation",
+   "of": [
+    "truck",
+    "woman"
+   ],
+   "desc": "the fire truck is parked behind the woman in blue",
+   "question": "Is the fire truck parked behind the woman in blue?"
+  },
+  {
+   "id": "firefighter_boots",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter wears sturdy boots",
+   "question": "Does the firefighter wear sturdy boots?"
+  },
+  {
+   "id": "truck_chrome",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the fire truck displays shiny chrome details",
+   "question": "Does the fire truck display shiny chrome details?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian sits on the polished floor",
+   "question": "Is the dalmatian sitting on the polished floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "firefighter",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dalmatian",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "boy",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "old_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0017",
+ "prompt": "In an anime style illustration set inside a fire station, a firefighter in yellow gear stands on the left holding a helmet. Next to him on the right, a dalmatian with black spots sits calmly on the polished floor. In the center, a woman in a blue uniform points at a large red fire truck parked behind them. A boy in a green shirt looks at the dog with curiosity while standing near the vehicle's front tire. On the far right, an old man in a gray coat hands a clipboard to the woman in blue. The firefighter wears sturdy boots. The dog has perked ears. The fire truck displays shiny chrome details. There is no smoke visible in the scene. The firefighter is positioned on the left side of the frame. The dalmatian is located on the right side relative to the firefighter. The woman in blue stands in the center area between the other figures.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

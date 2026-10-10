@@ -1,0 +1,404 @@
+{
+ "style": "photorealistic photo, warm lighting, dust motes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a grand library reading room with tall windows and polished oak tables",
+   "question": "Does the image show a grand library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "student",
+   "type": "entity",
+   "class": "student",
+   "plural": "students",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a student in a blue hoodie",
+   "question": "Is there a student in a blue hoodie?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "textbook",
+   "type": "entity",
+   "class": "textbook",
+   "plural": "textbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open textbook",
+   "question": "Is there an open textbook?",
+   "box": [
+    150,
+    650,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "stack_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of leather-bound books",
+   "question": "Is there a stack of leather-bound books?",
+   "box": [
+    360,
+    600,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral blouse",
+   "question": "Is there an elderly woman in a floral blouse?",
+   "box": [
+    400,
+    350,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a map spread across the table surface",
+   "question": "Is there a map spread across the table surface?",
+   "box": [
+    450,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "young_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in glasses",
+   "question": "Is there a young man in glasses?",
+   "box": [
+    660,
+    350,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    850,
+    500,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "armchair",
+   "type": "entity",
+   "class": "armchair",
+   "plural": "armchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet armchair",
+   "question": "Is there a velvet armchair?",
+   "box": [
+    820,
+    450,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern in a ceramic pot",
+   "question": "Is there a potted fern in a ceramic pot?",
+   "box": [
+    900,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "attribute",
+   "of": "student",
+   "desc": "the student in the blue hoodie holds a pencil",
+   "question": "Is the student in the blue hoodie holding a pencil?"
+  },
+  {
+   "id": "student_hunched",
+   "type": "state",
+   "of": "student",
+   "desc": "the student in the blue hoodie is hunched over",
+   "question": "Is the student in the blue hoodie hunched over?"
+  },
+  {
+   "id": "student_left",
+   "type": "relation",
+   "of": [
+    "student",
+    "stack_books"
+   ],
+   "desc": "the student in the blue hoodie is to the left of the stack of books",
+   "question": "Is the student in the blue hoodie to the left of the stack of books?"
+  },
+  {
+   "id": "books_on_table",
+   "type": "relation",
+   "of": [
+    "stack_books",
+    "tables_bg"
+   ],
+   "desc": "the stack of books rests on the table edge",
+   "question": "Does the stack of books rest on the table edge?"
+  },
+  {
+   "id": "woman_points_map",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "map"
+   ],
+   "desc": "the elderly woman in the floral blouse points at the map",
+   "question": "Is the elderly woman in the floral blouse pointing at the map?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in the floral blouse is smiling",
+   "question": "Is the elderly woman in the floral blouse smiling?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "young_man",
+    "elderly_woman"
+   ],
+   "desc": "the young man in glasses is beside the elderly woman in the floral blouse",
+   "question": "Is the young man in glasses beside the elderly woman in the floral blouse?"
+  },
+  {
+   "id": "man_looks_map",
+   "type": "action",
+   "of": [
+    "young_man",
+    "map"
+   ],
+   "desc": "the young man in glasses looks at the map",
+   "question": "Is the young man in glasses looking at the map?"
+  },
+  {
+   "id": "man_furrowed",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in glasses has a furrowed brow",
+   "question": "Does the young man in glasses have a furrowed brow?"
+  },
+  {
+   "id": "cat_on_armchair",
+   "type": "relation",
+   "of": [
+    "cat",
+    "armchair"
+   ],
+   "desc": "the tabby cat is on the velvet armchair",
+   "question": "Is the tabby cat on the velvet armchair?"
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is curled into a tight ball",
+   "question": "Is the tabby cat curled into a tight ball?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sleeping",
+   "question": "Is the tabby cat sleeping?"
+  },
+  {
+   "id": "fern_near_cat",
+   "type": "relation",
+   "of": [
+    "fern",
+    "cat"
+   ],
+   "desc": "the potted fern is near the tabby cat",
+   "question": "Is the potted fern near the tabby cat?"
+  },
+  {
+   "id": "handover_pencil",
+   "type": "action",
+   "of": [
+    "student",
+    "elderly_woman"
+   ],
+   "desc": "the student in the blue hoodie hands the pencil to the elderly woman in the floral blouse",
+   "question": "Is the student in the blue hoodie handing a pencil to the elderly woman in the floral blouse?"
+  },
+  {
+   "id": "no_screen",
+   "type": "absent",
+   "desc": "digital screen",
+   "question": "Are there any digital screens visible in the image?"
+  },
+  {
+   "id": "student_sitting",
+   "type": "state",
+   "of": "student",
+   "desc": "the student in the blue hoodie is sitting",
+   "question": "Is the student in the blue hoodie sitting?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in the floral blouse reaches out",
+   "question": "Is the elderly woman in the floral blouse reaching out?"
+  },
+  {
+   "id": "windows_bg",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tall windows",
+   "question": "Are there tall windows?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "tables_bg",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "polished oak tables",
+   "question": "Are there polished oak tables?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "books_cracked_spines",
+   "type": "attribute",
+   "of": "stack_books",
+   "desc": "the spines of the stack of books are cracked and faded",
+   "question": "Are the spines of the stack of books cracked and faded?"
+  },
+  {
+   "id": "cat_stripes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat has orange and black stripes",
+   "question": "Does the tabby cat have orange and black stripes?"
+  },
+  {
+   "id": "fern_fronds",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the fern has cascading green fronds",
+   "question": "Does the fern have cascading green fronds?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "armchair",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "tables_bg",
+   "to": "student",
+   "kind": "support"
+  },
+  {
+   "from": "tables_bg",
+   "to": "stack_books",
+   "kind": "support"
+  },
+  {
+   "from": "tables_bg",
+   "to": "map",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0067",
+ "prompt": "In a photorealistic photo of a grand library reading room, sunlight filters through tall windows onto polished oak tables. On the left, a student in a blue hoodie sits hunched over an open textbook, their posture rigid with concentration. Next to them, a stack of leather-bound books rests precariously on the table edge, their spines cracked and faded from age. In the center, an elderly woman in a floral blouse points gently at a map spread across the surface, her finger tracing a specific route. Beside her, a young man in glasses looks intently at the same map, his brow furrowed in curiosity as he absorbs the information. To the right, a tabby cat sleeps soundly on a velvet armchair, its body curled into a tight ball of orange and black stripes. Near the cat, a potted fern stands tall in a ceramic pot, its fronds cascading down toward the floor in lush green waves. The student in the blue hoodie is handing a pencil to the elderly woman in the floral blouse, who reaches out to accept it with a grateful smile. There is no digital screen visible anywhere in the scene, preserving the timeless analog atmosphere of the space. The warm light highlights the dust motes dancing in the air, adding texture to the quiet moment of shared learning and rest.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,629 @@
+{
+ "style": "surreal dreamlike photography, golden hour lighting, high detail, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park with grass and dirt under a golden midday sun",
+   "question": "Does the image show a park with grass and dirt under a golden midday sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    100,
+    500,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "pigeon",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grey pigeon",
+   "question": "Is there a grey pigeon?",
+   "box": [
+    200,
+    450,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "wrapper",
+   "type": "entity",
+   "class": "wrapper",
+   "plural": "wrappers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grease-stained fast-food wrapper",
+   "question": "Is there a grease-stained fast-food wrapper?",
+   "box": [
+    220,
+    576,
+    320,
+    624
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a backpack with its zipper half-open",
+   "question": "Is there a backpack with its zipper half-open?",
+   "box": [
+    520,
+    600,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    700,
+    400,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree",
+   "question": "Is there a tree?",
+   "box": [
+    800,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child no older than five",
+   "question": "Is there a child no older than five?",
+   "box": [
+    150,
+    750,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "stick",
+   "type": "entity",
+   "class": "stick",
+   "plural": "sticks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stick",
+   "question": "Is there a stick?",
+   "box": [
+    250,
+    850,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle",
+   "question": "Is there a puddle?",
+   "box": [
+    50,
+    900,
+    400,
+    1024
+   ]
+  },
+  {
+   "id": "doors",
+   "type": "entity",
+   "class": "doorway",
+   "plural": "doorways",
+   "count": 2,
+   "count_exact": false,
+   "desc": "two slightly ajar doorways appearing at the base of the tree, showing a city skyline and a rainy desert",
+   "question": "Are there two slightly ajar doorways appearing at the base of the tree, showing a city skyline and a rainy desert?",
+   "box": [
+    820,
+    550,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "sand_ring",
+   "type": "entity",
+   "class": "ring",
+   "plural": "rings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing ring of sand",
+   "question": "Is there a glowing ring of sand?",
+   "box": [
+    550,
+    750,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "dirt",
+   "type": "entity",
+   "class": "dirt",
+   "plural": "dirt patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of malleable dirt",
+   "question": "Is there a patch of malleable dirt?",
+   "box": [
+    100,
+    850,
+    400,
+    1000
+   ]
+  },
+  {
+   "id": "pigeon_wing",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon has one wing half-lifted",
+   "question": "Does the pigeon have one wing half-lifted?"
+  },
+  {
+   "id": "pigeon_pecking",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "wrapper"
+   ],
+   "desc": "the pigeon is pecking at the wrapper",
+   "question": "Is the pigeon pecking at the wrapper?"
+  },
+  {
+   "id": "wrapper_fluttering",
+   "type": "state",
+   "of": "wrapper",
+   "desc": "the wrapper edges are fluttering",
+   "question": "Are the wrapper edges fluttering?"
+  },
+  {
+   "id": "backpack_rolling",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack is rolling forward on the grass",
+   "question": "Is the backpack rolling forward on the grass?"
+  },
+  {
+   "id": "bicycle_wobbling",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle is wobbling but not falling",
+   "question": "Is the bicycle wobbling but not falling?"
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle is leaning at an impossible angle",
+   "question": "Is the bicycle leaning at an impossible angle?"
+  },
+  {
+   "id": "child_kneeling",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is kneeling in the dirt",
+   "question": "Is the child kneeling in the dirt?"
+  },
+  {
+   "id": "child_hood_lifted",
+   "type": "state",
+   "of": "child",
+   "desc": "the child's hood is lifted by a gust of wind",
+   "question": "Is the child's hood lifted by a gust of wind?"
+  },
+  {
+   "id": "child_smiling",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is laughing softly",
+   "question": "Is the child laughing softly?"
+  },
+  {
+   "id": "sand_ring_on_grass",
+   "type": "state",
+   "of": "sand_ring",
+   "desc": "the sand ring is on the grass",
+   "question": "Is the sand ring on the grass?"
+  },
+  {
+   "id": "stick_drawing",
+   "type": "action",
+   "of": [
+    "child",
+    "dirt"
+   ],
+   "desc": "the child draws a crooked smiley face in the dirt with the stick",
+   "question": "Is the child drawing a crooked smiley face in the dirt with the stick?"
+  },
+  {
+   "id": "pigeon_on_bench",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "bench"
+   ],
+   "desc": "the pigeon is on the bench",
+   "question": "Is the pigeon on the bench?"
+  },
+  {
+   "id": "wrapper_under_pigeon",
+   "type": "relation",
+   "of": [
+    "wrapper",
+    "pigeon"
+   ],
+   "desc": "the wrapper is under the pigeon",
+   "question": "Is the wrapper under the pigeon?"
+  },
+  {
+   "id": "bench_under_pigeon",
+   "type": "relation",
+   "of": [
+    "bench",
+    "pigeon"
+   ],
+   "desc": "the bench is beneath the pigeon",
+   "question": "Is the bench beneath the pigeon?"
+  },
+  {
+   "id": "backpack_beside_bench",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "bench"
+   ],
+   "desc": "the backpack is beside the bench",
+   "question": "Is the backpack beside the bench?"
+  },
+  {
+   "id": "backpack_toward_bicycle",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "bicycle"
+   ],
+   "desc": "the backpack is moving toward the bicycle",
+   "question": "Is the backpack moving toward the bicycle?"
+  },
+  {
+   "id": "bicycle_against_tree",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "tree"
+   ],
+   "desc": "the bicycle leans against the tree",
+   "question": "Does the bicycle lean against the tree?"
+  },
+  {
+   "id": "child_near_puddle",
+   "type": "relation",
+   "of": [
+    "child",
+    "puddle"
+   ],
+   "desc": "the puddle lies just beyond the child's knee",
+   "question": "Does the puddle lie just beyond the child's knee?"
+  },
+  {
+   "id": "doors_at_tree_base",
+   "type": "relation",
+   "of": [
+    "doors",
+    "tree"
+   ],
+   "desc": "the doorways appear at the base of the tree",
+   "question": "Do the doorways appear at the base of the tree?"
+  },
+  {
+   "id": "light_trails_connecting",
+   "type": "relation",
+   "of": [
+    "stick",
+    "pigeon",
+    "backpack",
+    "bicycle",
+    "puddle"
+   ],
+   "desc": "trails of light from the stick connect the pigeon, backpack, bicycle, and puddle",
+   "question": "Do trails of light from the stick connect the pigeon, backpack, bicycle, and puddle?"
+  },
+  {
+   "id": "pigeon_looking_at_backpack",
+   "type": "action",
+   "of": [
+    "pigeon",
+    "backpack"
+   ],
+   "desc": "the pigeon glances at the backpack",
+   "question": "Is the pigeon glancing at the backpack?"
+  },
+  {
+   "id": "reflection_bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second version of the bicycle in the puddle reflection that is upright and stationary",
+   "question": "Is there a second version of the bicycle in the puddle reflection that is upright and stationary?",
+   "box": [
+    700,
+    850,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "clock_hands",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the clock spilling from the backpack has hands spiraling backward",
+   "question": "Does the clock spilling from the backpack have hands spiraling backward?"
+  },
+  {
+   "id": "grass_stillness",
+   "type": "state",
+   "of": "sand_ring",
+   "desc": "the grass within the sand ring is petrified in stillness",
+   "question": "Is the grass within the sand ring petrified in stillness?"
+  },
+  {
+   "id": "door_city",
+   "type": "attribute",
+   "of": "doors",
+   "desc": "one doorway reveals a bustling city skyline at night",
+   "question": "Does one of the doorways reveal a bustling city skyline at night?"
+  },
+  {
+   "id": "door_desert",
+   "type": "attribute",
+   "of": "doors",
+   "desc": "another doorway shows a desert drenched in perpetual rain",
+   "question": "Does another doorway show a desert drenched in perpetual rain?"
+  },
+  {
+   "id": "reflection_bike_in_puddle",
+   "type": "relation",
+   "of": [
+    "puddle",
+    "reflection_bicycle"
+   ],
+   "desc": "the puddle reflects the second version of the bicycle",
+   "question": "Does the puddle reflect the second version of the bicycle?"
+  },
+  {
+   "id": "reflection_bike_upright",
+   "type": "state",
+   "of": "reflection_bicycle",
+   "desc": "the reflected bicycle is upright and stationary",
+   "question": "Is the reflected bicycle upright and stationary?"
+  },
+  {
+   "id": "reflection_scene_bleeding",
+   "type": "state",
+   "of": "puddle",
+   "desc": "the two versions in the puddle bleed at the edges with water distorting one world into the next",
+   "question": "Do the two versions in the puddle bleed at the edges with water distorting one world into the next?"
+  },
+  {
+   "id": "backpack_on_grass",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack is on the grass",
+   "question": "Is the backpack on the grass?"
+  },
+  {
+   "id": "bicycle_near_backpack",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "backpack"
+   ],
+   "desc": "the bicycle is near the backpack",
+   "question": "Is the bicycle near the backpack?"
+  },
+  {
+   "id": "child_face_revealed",
+   "type": "state",
+   "of": "child",
+   "desc": "the child's face is revealed",
+   "question": "Is the child's face revealed?"
+  },
+  {
+   "id": "sand_spiral",
+   "type": "attribute",
+   "of": "backpack",
+   "desc": "the sand spilling from the backpack falls in a spiral pattern",
+   "question": "Does the sand spilling from the backpack fall in a spiral pattern?"
+  },
+  {
+   "id": "bench_symbols",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench is carved with cryptic symbols",
+   "question": "Is the bench carved with cryptic symbols?"
+  },
+  {
+   "id": "wrapper_symbols",
+   "type": "attribute",
+   "of": "wrapper",
+   "desc": "the wrapper shows shifting unreadable symbols",
+   "question": "Does the wrapper show shifting unreadable symbols?"
+  },
+  {
+   "id": "backpack_contents",
+   "type": "attribute",
+   "of": "backpack",
+   "desc": "the backpack spills sand, film reels, and a clock",
+   "question": "Does the backpack spill sand, film reels, and a clock?"
+  },
+  {
+   "id": "bicycle_wheels",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle's wheels are turning backward",
+   "question": "Are the bicycle's wheels turning backward?"
+  },
+  {
+   "id": "tree_trunk",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree trunk twists like a Möbius strip",
+   "question": "Does the tree trunk twist like a Möbius strip?"
+  },
+  {
+   "id": "tree_roots",
+   "type": "relation",
+   "of": [
+    "tree",
+    "bench"
+   ],
+   "desc": "the tree's roots are burrowed into the bench",
+   "question": "Are the tree's roots burrowed into the bench?"
+  },
+  {
+   "id": "stick_appearance",
+   "type": "state",
+   "of": "stick",
+   "desc": "the stick flickers between solidity and translucence",
+   "question": "Does the stick flicker between solidity and translucence?"
+  },
+  {
+   "id": "stick_trails",
+   "type": "attribute",
+   "of": "stick",
+   "desc": "the stick leaves behind trails of light",
+   "question": "Does the stick leave behind trails of light?"
+  },
+  {
+   "id": "puddle_reflection_content",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects a second version of the scene with a red balloon and upright bicycle",
+   "question": "Does the puddle reflect a second version of the scene with a red balloon and upright bicycle?"
+  },
+  {
+   "id": "dirt_drawing",
+   "type": "attribute",
+   "of": "dirt",
+   "desc": "the dirt has a crooked smiley face drawn in it",
+   "question": "Does the dirt have a crooked smiley face drawn in it?"
+  },
+  {
+   "id": "child_hood",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears a hood",
+   "question": "Does the child wear a hood?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "pigeon",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "wrapper",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0358",
+ "prompt": "In the golden haze of a midday sun that seems to hang impossibly still, the park is a tableau of delicate absurdity and subtle motion. A pigeon, one wing half-lifted as if in flight yet rooted to the spot, pecks rhythmically at a fast-food wrapper, its grease-stained edges fluttering as if stirred by a phantom breeze. The bench beneath it is carved with cryptic symbols that seem to shift when the sun glints off them, though no one but a passing cloud appears to notice. Beside the bench, a backpack slowly rolls forward on the grass—not pulled or pushed, but gliding in a slow arc toward a bicycle that leans at an impossible angle against a tree whose trunk twists like a Möbius strip. The bicycle wobbles, yet never falls, its wheels turning backward in a silent loop as if caught in a loop of time.\n\nNearby, a child, no older than five, kneels in the dirt, drawing a crooked smiley face with a stick that flickers between solidity and translucence, its shadow trailing slightly behind like a thought half-formed. The dirt itself feels malleable and slightly sentient, as if it’s cooperating in the sketch, shifting and coiling into new patterns each time the stick strikes the ground. Just beyond the child’s knee lies a puddle that should not exist in this heat, but it does, and in it reflects not just the hazy blue sky, but a second version of the scene—except here, the child is holding a red balloon instead of a stick, and the bicycle is upright and stationary. The two versions bleed at the edges, the water distorting one world into the next, the reflection growing clearer and more real with every second.\n\nA gust of wind that never came brushes the edge of the child’s hood, lifting it just enough to reveal a face that is both familiar and unknown—perhaps a self the child might have been, or will be. The wrapper under the pigeon now shows a message in a shifting, unreadable language, the symbols rearranging with each peck until it becomes a new sentence in a language that feels almost comprehensible. The backpack rolls faster now, its zipper half-open, spilling a mix of sand, old film reels, and a clock that ticks in reverse, its hands spiraling backward in time. The sand falls in a spiral pattern around the grass, forming a ring that glows faintly, and within that ring, the grass stops growing—petrified in a loop of green stillness.\n\nThe tree’s roots have burrowed into the bench, and from its base, a series of doors appear—each slightly ajar, leading to spaces that are clearly not there. One reveals a bustling city skyline at night; another shows a desert drenched in perpetual rain. These doorways flicker, their contents changing as the observer shifts their gaze, as if the scene itself is aware of being watched. The stick the child uses leaves behind trails of light that connect the pigeon, the backpack, the bicycle, and the puddle, forming a constellation of causality in the dirt that pulses gently with a rhythm like a heartbeat.\n\nThe air is thick with a kind of dream-logic, where time loops and space folds, yet everything feels grounded in a reality just slightly askew. The pigeon occasionally lifts its head to glance at the backpack as it rolls closer, and in that glance, it seems to recognize something—itself perhaps, or a memory that isn’t its own. The child laughs softly, not at anything specific, but at the strange harmony of the scene, their voice catching on the wind that never blows. The sun still hovers overhead, unmoved and yet deeply engaged in this silent dance of paradox and wonder, and for a moment, the world feels both infinite and intimate, stitched together by invisible threads of meaning that no one understands, yet all feel.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [
+   "node tree: entity question is long (18 words); should only ask presence + identifying look",
+   "node puddle: entity question is long (18 words); should only ask presence + identifying look",
+   "node doors: entity question is long (21 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 51,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 1,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

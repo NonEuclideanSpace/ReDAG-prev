@@ -1,0 +1,388 @@
+{
+ "style": "cinematic, atmospheric, night lighting, photorealistic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a vast library interior at night with tall bookshelves and aisles",
+   "question": "Does the image show a vast library interior at night with tall bookshelves?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "rolling ladder",
+   "plural": "rolling ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling library ladder",
+   "question": "Is there a rolling library ladder?",
+   "box": [
+    350,
+    400,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "librarian",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young male librarian",
+   "question": "Is there a young male librarian?",
+   "box": [
+    380,
+    250,
+    520,
+    600
+   ]
+  },
+  {
+   "id": "high_shelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a very high bookshelf",
+   "question": "Is there a very high bookshelf?",
+   "box": [
+    100,
+    50,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "target_book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a book",
+   "question": "Is there a book?",
+   "box": [
+    400,
+    100,
+    450,
+    150
+   ]
+  },
+  {
+   "id": "ghost",
+   "type": "entity",
+   "class": "figure",
+   "plural": "figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a translucent female figure",
+   "question": "Is there a translucent female figure?",
+   "box": [
+    200,
+    300,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "glowing_book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing book",
+   "question": "Is there a glowing book?",
+   "box": [
+    600,
+    500,
+    650,
+    550
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "reading table",
+   "plural": "reading tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reading table",
+   "question": "Is there a reading table?",
+   "box": [
+    600,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two chairs",
+   "question": "Are there exactly two chairs?",
+   "box": [
+    650,
+    750,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "stack_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a stack of six books",
+   "question": "Is there a stack of exactly six books?",
+   "box": [
+    700,
+    720,
+    780,
+    780
+   ]
+  },
+  {
+   "id": "open_book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    800,
+    721,
+    880,
+    769
+   ]
+  },
+  {
+   "id": "librarian_standing",
+   "type": "state",
+   "of": "librarian",
+   "desc": "the young male librarian is standing",
+   "question": "Is the young male librarian standing?"
+  },
+  {
+   "id": "librarian_looking_up",
+   "type": "state",
+   "of": "librarian",
+   "desc": "the young male librarian is looking up",
+   "question": "Is the young male librarian looking up?"
+  },
+  {
+   "id": "ghost_floating",
+   "type": "state",
+   "of": "ghost",
+   "desc": "the ghostly female figure is floating",
+   "question": "Is the ghostly female figure floating?"
+  },
+  {
+   "id": "ghost_pointing",
+   "type": "state",
+   "of": "ghost",
+   "desc": "the ghostly female figure is pointing a finger",
+   "question": "Is the ghostly female figure pointing a finger?"
+  },
+  {
+   "id": "ghost_facing_back",
+   "type": "state",
+   "of": "ghost",
+   "desc": "the ghostly female figure is facing the back of the young male librarian",
+   "question": "Is the ghostly female figure facing the back of the young male librarian?"
+  },
+  {
+   "id": "librarian_on_ladder",
+   "type": "relation",
+   "of": [
+    "librarian",
+    "ladder"
+   ],
+   "desc": "the young male librarian is on the rolling ladder",
+   "question": "Is the young male librarian on the rolling ladder?"
+  },
+  {
+   "id": "target_book_on_shelf",
+   "type": "relation",
+   "of": [
+    "target_book",
+    "high_shelf"
+   ],
+   "desc": "the book is on the very high bookshelf",
+   "question": "Is the book on the very high bookshelf?"
+  },
+  {
+   "id": "librarian_reaching_book",
+   "type": "action",
+   "of": [
+    "librarian",
+    "target_book"
+   ],
+   "desc": "the young male librarian is reaching for the book",
+   "question": "Is the young male librarian reaching for the book?"
+  },
+  {
+   "id": "ghost_behind_librarian",
+   "type": "relation",
+   "of": [
+    "ghost",
+    "librarian"
+   ],
+   "desc": "the ghostly female figure is behind the young male librarian",
+   "question": "Is the ghostly female figure behind the young male librarian?"
+  },
+  {
+   "id": "glowing_book_on_shelf",
+   "type": "relation",
+   "of": [
+    "glowing_book",
+    "high_shelf"
+   ],
+   "desc": "the glowing book is on a lower part of the bookshelf",
+   "question": "Is the glowing book on a lower part of the bookshelf?"
+  },
+  {
+   "id": "ghost_pointing_at_glowing_book",
+   "type": "action",
+   "of": [
+    "ghost",
+    "glowing_book"
+   ],
+   "desc": "the ghostly female figure is pointing at the glowing book",
+   "question": "Is the ghostly female figure pointing at the glowing book?"
+  },
+  {
+   "id": "ghost_between",
+   "type": "relation",
+   "of": [
+    "ghost",
+    "librarian",
+    "table"
+   ],
+   "desc": "the ghostly female figure is between the young male librarian and the reading table",
+   "question": "Is the ghostly female figure positioned between the young male librarian and the reading table?"
+  },
+  {
+   "id": "table_next_to_ladder",
+   "type": "relation",
+   "of": [
+    "table",
+    "ladder"
+   ],
+   "desc": "the reading table is next to the rolling ladder",
+   "question": "Is the reading table next to the rolling ladder?"
+  },
+  {
+   "id": "chairs_on_table",
+   "type": "relation",
+   "of": [
+    "chairs",
+    "table"
+   ],
+   "desc": "the two chairs are at the reading table",
+   "question": "Are the two chairs at the reading table?"
+  },
+  {
+   "id": "stack_on_table",
+   "type": "relation",
+   "of": [
+    "stack_books",
+    "table"
+   ],
+   "desc": "the stack of books is on the reading table",
+   "question": "Is the stack of books on the reading table?"
+  },
+  {
+   "id": "open_book_beside_stack",
+   "type": "relation",
+   "of": [
+    "open_book",
+    "stack_books"
+   ],
+   "desc": "the open book is beside the stack of books",
+   "question": "Is the open book beside the stack of books?"
+  },
+  {
+   "id": "shelf_taller_than_librarian",
+   "type": "relation",
+   "of": [
+    "high_shelf",
+    "librarian"
+   ],
+   "desc": "the bookshelf is much taller than the young male librarian on the ladder",
+   "question": "Is the bookshelf much taller than the young male librarian on the ladder?"
+  },
+  {
+   "id": "glowing_book_brightest",
+   "type": "attribute",
+   "of": "glowing_book",
+   "desc": "the glowing book is the brightest object in the scene",
+   "question": "Is the glowing book the brightest object in the scene?"
+  },
+  {
+   "id": "ghost_ghostly",
+   "type": "attribute",
+   "of": "ghost",
+   "desc": "the translucent female figure is ghostly",
+   "question": "Does the translucent female figure appear ghostly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "ladder",
+   "to": "librarian",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "stack_books",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "open_book",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_048",
+ "prompt": "In a vast, silent library at night, a young male librarian is standing on a rolling ladder, reaching for a book on a very high shelf. A ghostly, translucent female figure is floating in the aisle behind him, pointing a finger at a different, glowing book on a lower shelf. The bookshelf is much taller than the librarian, even when he is on the ladder. The librarian is looking up at the book he is reaching for. The ghostly figure is facing the librarian's back. On a reading table next to the ladder, there are two chairs and a stack of books. The number of books in the stack is three times the number of chairs. An open book, separate from the stack, is lying beside it. The glowing book is the brightest object in the scene. The ghost is floating between the librarian and the reading table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

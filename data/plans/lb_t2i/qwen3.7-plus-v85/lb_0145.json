@@ -1,0 +1,502 @@
+{
+ "style": "surreal digital painting, dreamlike, ethereal lighting, bioluminescent hues",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lake under a sky of woolen clouds with twisting trees behind the dock",
+   "question": "Does the image show a lake under a sky of woolen clouds with twisting trees in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dock",
+   "type": "entity",
+   "class": "dock",
+   "plural": "docks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old dock made of tangled planks and weathered rope",
+   "question": "Is there an old dock made of tangled planks?",
+   "box": [
+    0,
+    600,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "swan",
+   "type": "entity",
+   "class": "swan",
+   "plural": "swans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white swan",
+   "question": "Is there a white swan?",
+   "box": [
+    450,
+    550,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "lanterns",
+   "type": "entity",
+   "class": "paper lantern",
+   "plural": "paper lanterns",
+   "count": 12,
+   "count_exact": false,
+   "desc": "a dozen paper lanterns",
+   "question": "Are there about a dozen paper lanterns?",
+   "box": [
+    200,
+    100,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating books with unfurling pages",
+   "question": "Are there floating books?",
+   "box": [
+    300,
+    750,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "rowboat",
+   "type": "entity",
+   "class": "rowboat",
+   "plural": "rowboats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted rowboat",
+   "question": "Is there a rusted rowboat?",
+   "box": [
+    600,
+    650,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a living clock with a swaying pendulum",
+   "question": "Is there a clock?",
+   "box": [
+    700,
+    700,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nearby tree with a glowing flower",
+   "question": "Is there a nearby tree with a glowing flower?",
+   "box": [
+    850,
+    400,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "boot",
+   "type": "entity",
+   "class": "rainboot",
+   "plural": "rainboots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red rainboot",
+   "question": "Is there a red rainboot?",
+   "box": [
+    150,
+    750,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bench melting into the shape of a key",
+   "question": "Is there a rusted bench?",
+   "box": [
+    50,
+    700,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "fog",
+   "type": "entity",
+   "class": "fog",
+   "plural": "fogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "rising fog etched with faint forms",
+   "question": "Is there rising fog etched with faint forms?",
+   "box": [
+    0,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "reflection_world",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down world in the water with a flying swan and sinking lanterns",
+   "question": "Does the water reflect an upside-down world?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "swan_gliding",
+   "type": "state",
+   "of": "swan",
+   "desc": "the white swan is gliding effortlessly",
+   "question": "Is the white swan gliding effortlessly?"
+  },
+  {
+   "id": "lanterns_drifting",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the paper lanterns are drifting above the water",
+   "question": "Are the paper lanterns drifting above the water?"
+  },
+  {
+   "id": "lantern_flames",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the candles in the paper lanterns have guttering flames",
+   "question": "Do the candles in the paper lanterns have guttering flames?"
+  },
+  {
+   "id": "books_spiral",
+   "type": "state",
+   "of": "books",
+   "desc": "the floating books are arranged in a spiral pattern",
+   "question": "Are the floating books arranged in a spiral pattern?"
+  },
+  {
+   "id": "clock_pendulum",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock's pendulum is swaying",
+   "question": "Is the clock's pendulum swaying?"
+  },
+  {
+   "id": "flower_glowing",
+   "type": "state",
+   "of": "tree",
+   "desc": "the flower on the tree is glowing with bioluminescent hues",
+   "question": "Is the flower on the tree glowing?"
+  },
+  {
+   "id": "boot_contents",
+   "type": "attribute",
+   "of": "boot",
+   "desc": "the red rainboot contains flickering scenes of liquid memory",
+   "question": "Does the red rainboot contain flickering scenes of liquid memory?"
+  },
+  {
+   "id": "tree_faces",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the trees have bark forming faces",
+   "question": "Do the trees have bark forming faces?"
+  },
+  {
+   "id": "swan_head_dip",
+   "type": "action",
+   "of": [
+    "swan",
+    "boot"
+   ],
+   "desc": "the white swan dips its head toward the reflection of the red rainboot",
+   "question": "Is the white swan dipping its head toward the reflection of the red rainboot?"
+  },
+  {
+   "id": "clock_emits_light",
+   "type": "action",
+   "of": [
+    "clock",
+    "tree"
+   ],
+   "desc": "the clock emits light that causes the tree to bloom",
+   "question": "Does the clock emit light that causes the tree to bloom?"
+  },
+  {
+   "id": "books_align_lanterns",
+   "type": "relation",
+   "of": [
+    "books",
+    "lanterns"
+   ],
+   "desc": "each floating book aligns with a paper lantern in the sky",
+   "question": "Does each floating book align with a paper lantern in the sky?"
+  },
+  {
+   "id": "lanterns_above_water",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the paper lanterns are above the lake surface",
+   "question": "Are the paper lanterns above the lake surface?"
+  },
+  {
+   "id": "dock_meets_water",
+   "type": "state",
+   "of": "dock",
+   "desc": "the dock meets the water where it appears to dissolve",
+   "question": "Does the dock meet the water where it appears to dissolve into books?"
+  },
+  {
+   "id": "boat_on_water",
+   "type": "state",
+   "of": "rowboat",
+   "desc": "the rusted rowboat is on the lake",
+   "question": "Is the rusted rowboat on the lake?"
+  },
+  {
+   "id": "clock_in_boat",
+   "type": "relation",
+   "of": [
+    "clock",
+    "rowboat"
+   ],
+   "desc": "the living clock is inside the rusted rowboat",
+   "question": "Is the living clock inside the rusted rowboat?"
+  },
+  {
+   "id": "boot_on_bench",
+   "type": "relation",
+   "of": [
+    "boot",
+    "bench"
+   ],
+   "desc": "the red rainboot is on the rusted bench",
+   "question": "Is the red rainboot on the rusted bench?"
+  },
+  {
+   "id": "no_people",
+   "type": "absent",
+   "desc": "visible people walking on the dock",
+   "question": "Are there any visible people walking on the dock?"
+  },
+  {
+   "id": "swan_paused",
+   "type": "state",
+   "of": "swan",
+   "desc": "the white swan is paused",
+   "question": "Is the white swan paused?"
+  },
+  {
+   "id": "boat_drifting",
+   "type": "state",
+   "of": "rowboat",
+   "desc": "the rusted rowboat is drifting toward the center of the lake",
+   "question": "Is the rusted rowboat drifting toward the center of the lake?"
+  },
+  {
+   "id": "bench_melting",
+   "type": "state",
+   "of": "bench",
+   "desc": "the rusted bench is melting into the shape of a key",
+   "question": "Is the rusted bench melting into the shape of a key?"
+  },
+  {
+   "id": "reflection_passersby",
+   "type": "attribute",
+   "of": "fog",
+   "desc": "the rising fog shows reflections of passersby visible only in reflections",
+   "question": "Does the rising fog show reflections of passersby?"
+  },
+  {
+   "id": "candle_wax",
+   "type": "attribute",
+   "of": "lanterns",
+   "desc": "the candles in the paper lanterns are made of melted beeswax",
+   "question": "Are the candles in the paper lanterns made of beeswax?"
+  },
+  {
+   "id": "light_ripples_swan",
+   "type": "relation",
+   "of": [
+    "lanterns",
+    "swan"
+   ],
+   "desc": "golden light from the lanterns dances across the swan’s feathers",
+   "question": "Does golden light from the lanterns dance across the swan’s feathers?"
+  },
+  {
+   "id": "light_ripples_lake",
+   "type": "relation",
+   "of": [
+    "lanterns",
+    "reflection_world"
+   ],
+   "desc": "golden light from the lanterns dances across the lake surface",
+   "question": "Does golden light from the lanterns dance across the lake surface?"
+  },
+  {
+   "id": "dock_dissolves_books",
+   "type": "relation",
+   "of": [
+    "dock",
+    "books"
+   ],
+   "desc": "the dock appears to dissolve into the field of floating books",
+   "question": "Does the dock appear to dissolve into the field of floating books?"
+  },
+  {
+   "id": "boat_moves_self",
+   "type": "state",
+   "of": "rowboat",
+   "desc": "the rusted rowboat moves of its own accord",
+   "question": "Is the rusted rowboat moving of its own accord?"
+  },
+  {
+   "id": "no_people_around",
+   "type": "absent",
+   "desc": "people around to solve the puzzle",
+   "question": "Are there any people visible in the scene who could solve a puzzle?"
+  },
+  {
+   "id": "dock_rope",
+   "type": "attribute",
+   "of": "dock",
+   "desc": "the dock has weathered rope",
+   "question": "Does the dock have weathered rope?"
+  },
+  {
+   "id": "books_unfurling",
+   "type": "state",
+   "of": "books",
+   "desc": "the pages of the floating books are unfurling like petals",
+   "question": "Are the pages of the floating books unfurling like petals?"
+  },
+  {
+   "id": "reflection_swan_flying",
+   "type": "state",
+   "of": "reflection_world",
+   "desc": "the swan in the reflection is flying",
+   "question": "Is the swan in the reflection flying?"
+  },
+  {
+   "id": "reflection_lanterns_sinking",
+   "type": "state",
+   "of": "reflection_world",
+   "desc": "the lanterns in the reflection are sinking",
+   "question": "Are the lanterns in the reflection sinking?"
+  },
+  {
+   "id": "flower_biolum_hues",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the flower has bioluminescent hues",
+   "question": "Does the flower have bioluminescent hues?"
+  },
+  {
+   "id": "candle_melted",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the beeswax candles are melted",
+   "question": "Are the beeswax candles melted?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "dock",
+   "to": "boot",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "boot",
+   "kind": "support"
+  },
+  {
+   "from": "rowboat",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "dock",
+   "to": "books",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0145",
+ "prompt": "Beneath a sky of woolen clouds, the stillness of the lake is shattered not by the white swan’s effortless glide but by the flickering shadows of a dozen paper lanterns that drift like spectral jellyfish above the water. Each lantern holds a candle of melted beeswax, its flame guttering in an invisible breeze, casting ripples of golden light that dance across the swan’s pristine feathers and the mirror-like surface of the lake. The dock is an old tangle of planks and weathered rope, but where it meets the water, it appears to dissolve into a field of floating books, their pages unfurling like petals in slow motion, each one releasing a faint hum that seems to vibrate the air with a language of forgotten songs. The rowboat, though rusted and abandoned, is cradling a living clock—its pendulum swaying with the rhythm of the swan’s motion, though it never ticks. Instead, it emits soft clicks of soundless light, each one causing a nearby tree to bloom a single new flower, its petals glowing faintly with bioluminescent hues that mirror the lanterns above. The child’s red rainboot, sitting abandoned on the dock, is not merely filled with rainwater but with liquid memory—tiny, moving scenes flicker within its depths, each one a fragment of a life that was never lived but could have been. As the swan passes by, it seems to pause at the boot’s reflection, dipping its head as if in silent acknowledgment, while a small ripple spreads outward, causing the floating books to rearrange themselves into a spiral pattern, each one aligning precisely with a lantern in the sky. Behind the dock, the trees are twisting their branches into intricate knots, their bark forming faces that whisper to one another in overlapping echoes, as if time itself is folding in on itself in this place. A fog begins to rise, but instead of obscuring the scene, it becomes a canvas, etching in real-time the thoughts of passersby—some of whom are visible only in reflections, their forms flickering between existence and abstraction. The boat, though still and unrowed, begins to move of its own accord, drifting toward the center of the lake where the water turns translucent, revealing an upside-down world beneath the surface, a mirror world in which the swan flies and the lanterns sink. The dock trembles with the sound of footsteps, though no one is walking it—each footfall echoes with a different voice, a different accent, a different time. The rusted bench, still holding the rainboot, slowly begins to melt into the shape of a key, as if the entire scene is locked in a puzzle waiting to be solved, though no one is around to do so. In this moment, the boundaries between dream and reality blur, and the scene becomes a living poem, written in light, sound, and memory, where every element is both cause and effect, beginning and end, seen and unseen.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 51,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

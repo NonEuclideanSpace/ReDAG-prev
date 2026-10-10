@@ -1,0 +1,406 @@
+{
+ "style": "watercolor illustration, night scene, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party at night with an urban skyline and stars",
+   "question": "Does the image depict a rooftop party at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooftop railing",
+   "question": "Is there a rooftop railing?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    400,
+    550,
+    624,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow dress",
+   "question": "Is there a woman in a yellow dress?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    260,
+    220,
+    460,
+    800
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing lantern",
+   "question": "Is there a glowing lantern?",
+   "box": [
+    480,
+    500,
+    544,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with orange fur",
+   "question": "Is there a cat with orange fur?",
+   "box": [
+    650,
+    600,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a pink skirt",
+   "question": "Is there a girl in a pink skirt?",
+   "box": [
+    810,
+    300,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green shirt",
+   "question": "Is there a boy in a green shirt?",
+   "box": [
+    900,
+    320,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "lights",
+   "type": "entity",
+   "class": "fairy lights",
+   "plural": "fairy lights",
+   "count": 1,
+   "count_exact": false,
+   "desc": "strings of fairy lights",
+   "question": "Are there strings of fairy lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "woman_holding",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow dress holds a champagne flute",
+   "question": "Is the woman in the yellow dress holding a champagne flute?"
+  },
+  {
+   "id": "woman_head_tilted",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow dress has her head tilted back in laughter",
+   "question": "Is the woman in the yellow dress tilting her head back in laughter?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is leaning",
+   "question": "Is the man in the blue suit leaning?"
+  },
+  {
+   "id": "man_looking_out",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is looking out",
+   "question": "Is the man in the blue suit looking out towards the city?"
+  },
+  {
+   "id": "man_smiling",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is smiling",
+   "question": "Is the man in the blue suit smiling?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with orange fur is sitting calmly",
+   "question": "Is the cat with orange fur sitting calmly?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with orange fur has wide eyes and is watching",
+   "question": "Is the cat with orange fur watching with wide eyes?"
+  },
+  {
+   "id": "girl_pointing",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl in the pink skirt points toward the horizon, drawing the attention of the boy",
+   "question": "Is the girl in the pink skirt pointing toward the horizon while the boy looks on?"
+  },
+  {
+   "id": "boy_hand_on_hip",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the green shirt has his hand resting on his hip",
+   "question": "Is the boy in the green shirt resting his hand on his hip?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the green shirt looks in the direction indicated by the girl",
+   "question": "Is the boy in the green shirt looking in the direction the girl is pointing?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow dress is next to the man in the blue suit",
+   "question": "Is the woman in the yellow dress next to the man in the blue suit?"
+  },
+  {
+   "id": "man_against_railing",
+   "type": "relation",
+   "of": [
+    "man",
+    "railing"
+   ],
+   "desc": "the man in the blue suit leans against the railing",
+   "question": "Is the man in the blue suit leaning against the railing?"
+  },
+  {
+   "id": "lantern_on_table",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "table"
+   ],
+   "desc": "the lantern is on the table",
+   "question": "Is the lantern on the table?"
+  },
+  {
+   "id": "cat_right_of_lantern",
+   "type": "relation",
+   "of": [
+    "cat",
+    "lantern"
+   ],
+   "desc": "the cat is to the right of the lantern",
+   "question": "Is the cat to the right of the lantern?"
+  },
+  {
+   "id": "girl_beside_cat",
+   "type": "relation",
+   "of": [
+    "girl",
+    "cat"
+   ],
+   "desc": "the girl is beside the cat",
+   "question": "Is the girl beside the cat?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy stands next to the girl",
+   "question": "Is the boy standing next to the girl?"
+  },
+  {
+   "id": "woman_gesturing_to_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman gestures toward the man",
+   "question": "Is the woman gesturing toward the man?"
+  },
+  {
+   "id": "lights_above",
+   "type": "relation",
+   "of": [
+    "lights",
+    "woman"
+   ],
+   "desc": "the fairy lights are above the people",
+   "question": "Are the fairy lights draped above the people?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow dress stands",
+   "question": "Is the woman in the yellow dress standing?"
+  },
+  {
+   "id": "man_relaxed",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit has a relaxed posture",
+   "question": "Does the man in the blue suit have a relaxed posture?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the green shirt stands",
+   "question": "Is the boy in the green shirt standing?"
+  },
+  {
+   "id": "skyline",
+   "type": "entity",
+   "class": "urban skyline",
+   "plural": "urban skylines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an urban skyline",
+   "question": "Is there an urban skyline?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "stars",
+   "type": "entity",
+   "class": "star",
+   "plural": "stars",
+   "count": 2,
+   "count_exact": false,
+   "desc": "twinkling stars",
+   "question": "Are there twinkling stars in the sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "lantern",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0100",
+ "prompt": "A watercolor illustration depicts a lively rooftop party at night. On the left, a woman in a yellow dress stands holding a champagne flute, her head tilted back in laughter. Next to her, a man in a blue suit leans against the railing, looking out at the city lights with a relaxed posture. In the center, a small table holds a glowing lantern that casts soft shadows on the concrete floor. To the right of the lantern, a cat with orange fur sits calmly, watching the scene with wide eyes. Beside the cat, a girl in a pink skirt points toward the horizon, drawing the attention of a boy in a green shirt who stands next to her. The boy looks in the direction she indicates, his hand resting on his hip. Above them, strings of fairy lights drape across the sky, adding warmth to the cool night air. There is no moon visible in the sky, leaving the stars to twinkle alone above the urban skyline. The woman in the yellow dress gestures toward the man in the blue suit, sharing a joke that makes him smile. The cat remains still, unperturbed by the celebration around it. The girl in the pink skirt and the boy in the green shirt share a moment of wonder as they observe the distant buildings. The lantern flickers gently, providing a focal point amidst the gathering. The scene captures a fleeting moment of joy and connection among friends under the night sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

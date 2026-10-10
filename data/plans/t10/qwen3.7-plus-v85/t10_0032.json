@@ -1,0 +1,370 @@
+{
+ "style": "pencil sketch with light color wash, soft pale yellow and gray tones, no harsh shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform with tiled floors and walls with peeling paint",
+   "question": "Does the image show a subway platform with tiled floors and walls with peeling paint?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral coat",
+   "question": "Is there an elderly woman in a floral coat?",
+   "box": [
+    50,
+    200,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier with floppy ears",
+   "question": "Is there a small terrier with floppy ears?",
+   "box": [
+    260,
+    700,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "businessman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a businessman in a gray suit",
+   "question": "Is there a businessman in a gray suit?",
+   "box": [
+    420,
+    180,
+    620,
+    900
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a battered leather suitcase",
+   "question": "Is there a battered leather suitcase?",
+   "box": [
+    630,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a blue hoodie",
+   "question": "Is there a teenager in a blue hoodie?",
+   "box": [
+    760,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "musician",
+   "type": "entity",
+   "class": "musician",
+   "plural": "musicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street musician",
+   "question": "Is there a street musician?",
+   "box": [
+    910,
+    300,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "guitar_case",
+   "type": "entity",
+   "class": "guitar case",
+   "plural": "guitar cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open guitar case",
+   "question": "Is there an open guitar case?",
+   "box": [
+    920,
+    800,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    750,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "train_lights",
+   "type": "entity",
+   "class": "train lights",
+   "plural": "train lights",
+   "count": 1,
+   "count_exact": false,
+   "desc": "approaching train lights",
+   "question": "Are there approaching train lights visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "woman_upright",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman stands with upright posture",
+   "question": "Is the elderly woman standing with an upright posture?"
+  },
+  {
+   "id": "terrier_sitting",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier sits calmly",
+   "question": "Is the small terrier sitting calmly?"
+  },
+  {
+   "id": "businessman_focused",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman has a focused and hurried expression",
+   "question": "Does the businessman have a focused and hurried expression?"
+  },
+  {
+   "id": "businessman_checking_watch",
+   "type": "attribute",
+   "of": "businessman",
+   "desc": "the businessman checks his wristwatch",
+   "question": "Is the businessman checking his wristwatch?"
+  },
+  {
+   "id": "teenager_leaning",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager leans with one foot propped up",
+   "question": "Is the teenager leaning with one foot propped up?"
+  },
+  {
+   "id": "musician_eyes_closed",
+   "type": "state",
+   "of": "musician",
+   "desc": "the street musician has eyes closed in concentration",
+   "question": "Does the street musician have their eyes closed in concentration?"
+  },
+  {
+   "id": "musician_strumming",
+   "type": "state",
+   "of": "musician",
+   "desc": "the street musician strums a silent tune",
+   "question": "Is the street musician strumming a silent tune?"
+  },
+  {
+   "id": "woman_next_to_terrier",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "terrier"
+   ],
+   "desc": "the small terrier is next to the elderly woman",
+   "question": "Is the small terrier next to the elderly woman?"
+  },
+  {
+   "id": "woman_looking_at_terrier",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "terrier"
+   ],
+   "desc": "the elderly woman looks at the small terrier",
+   "question": "Is the elderly woman looking at the small terrier?"
+  },
+  {
+   "id": "businessman_near_suitcase",
+   "type": "relation",
+   "of": [
+    "businessman",
+    "suitcase"
+   ],
+   "desc": "the businessman stands near the battered leather suitcase",
+   "question": "Is the businessman standing near the battered leather suitcase?"
+  },
+  {
+   "id": "teenager_near_musician",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "musician"
+   ],
+   "desc": "the street musician is beside the teenager",
+   "question": "Is the street musician beside the teenager?"
+  },
+  {
+   "id": "guitar_case_at_musician_feet",
+   "type": "relation",
+   "of": [
+    "guitar_case",
+    "musician"
+   ],
+   "desc": "the open guitar case is at the street musician's feet",
+   "question": "Is the open guitar case at the street musician's feet?"
+  },
+  {
+   "id": "teenager_on_bench",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "bench"
+   ],
+   "desc": "the teenager sits on the metal bench",
+   "question": "Is the teenager sitting on the metal bench?"
+  },
+  {
+   "id": "businessman_points_lights",
+   "type": "action",
+   "of": [
+    "businessman",
+    "train_lights"
+   ],
+   "desc": "the businessman points toward the approaching train lights",
+   "question": "Is the businessman pointing toward the approaching train lights?"
+  },
+  {
+   "id": "no_ads",
+   "type": "absent",
+   "desc": "digital advertising screen",
+   "question": "Are there any digital advertising screens visible in the background?"
+  },
+  {
+   "id": "elderly_woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral coat stands",
+   "question": "Is the elderly woman in a floral coat standing?"
+  },
+  {
+   "id": "terrier_leash",
+   "type": "attribute",
+   "of": "terrier",
+   "desc": "the small terrier with floppy ears has a leash held loosely",
+   "question": "Does the small terrier with floppy ears have a leash held loosely?"
+  },
+  {
+   "id": "businessman_standing",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman in a gray suit stands",
+   "question": "Is the businessman in a gray suit standing?"
+  },
+  {
+   "id": "teenager_sitting",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in a blue hoodie sits",
+   "question": "Is the teenager in a blue hoodie sitting?"
+  },
+  {
+   "id": "pillar",
+   "type": "entity",
+   "class": "pillar",
+   "plural": "pillars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiled pillar",
+   "question": "Is there a tiled pillar?",
+   "box": [
+    850,
+    100,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "suitcase_against_wall",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the battered leather suitcase rests against the wall",
+   "question": "Does the battered leather suitcase rest against the wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "teenager",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0032",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet moment on a subway platform. On the left, an elderly woman in a floral coat stands patiently, her posture upright and dignified. Next to her, a small terrier with floppy ears sits calmly on the cold tiles, its leash held loosely. In the center, a businessman in a gray suit checks his wristwatch, his expression focused and hurried. He stands near a battered leather suitcase that rests against the wall, showing signs of heavy travel. To the right, a teenager in a blue hoodie leans against a tiled pillar, one foot propped up casually. Beside the teen, a street musician with a guitar case open at their feet strums a silent tune, eyes closed in concentration. The elderly woman looks at the small terrier, ensuring it remains safe amidst the rush. The businessman points toward the approaching train lights, signaling urgency to no one in particular. The teenager sits on a metal bench, observing the scene with detached interest. There is no digital advertising screen visible in the background, preserving the timeless, analog feel of the commute. The soft washes of pale yellow and gray highlight the textures of the worn floor and the peeling paint on the walls, while the pencil lines define the distinct forms of the six subjects without harsh shadows or stark contrasts.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

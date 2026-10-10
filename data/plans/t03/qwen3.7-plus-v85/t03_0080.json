@@ -1,0 +1,203 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stage setting",
+   "question": "Does the image show a stage setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a velvet dress",
+   "question": "Is there a woman in a velvet dress?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tuxedo",
+   "question": "Is there a man in a tuxedo?",
+   "box": [
+    400,
+    300,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    600,
+    680,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    550,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "ropes",
+   "type": "entity",
+   "class": "stack of ropes",
+   "plural": "stacks of ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of ropes",
+   "question": "Is there a stack of ropes?",
+   "box": [
+    760,
+    650,
+    940,
+    850
+   ]
+  },
+  {
+   "id": "woman_holding_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the velvet dress holds a script",
+   "question": "Is the woman in the velvet dress holding a script?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress is standing",
+   "question": "Is the woman in the velvet dress standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo is sitting",
+   "question": "Is the man in the tuxedo sitting?"
+  },
+  {
+   "id": "man_tired",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo looks tired",
+   "question": "Does the man in the tuxedo look tired?"
+  },
+  {
+   "id": "cat_perching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is perching",
+   "question": "Is the black cat perching?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the velvet dress hands the script to the man in the tuxedo",
+   "question": "Is the woman in the velvet dress handing the script to the man in the tuxedo?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the tuxedo sits on the wooden crate",
+   "question": "Is the man in the tuxedo sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_on_ropes",
+   "type": "relation",
+   "of": [
+    "cat",
+    "ropes"
+   ],
+   "desc": "the black cat perches atop the stack of ropes",
+   "question": "Is the black cat perching atop the stack of ropes?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the black cat is next to the man in the tuxedo",
+   "question": "Is the black cat next to the man in the tuxedo?"
+  },
+  {
+   "id": "no_spotlight",
+   "type": "absent",
+   "desc": "a spotlight",
+   "question": "Is there a spotlight visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "ropes",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0080",
+ "prompt": "In a photorealistic photo, a woman in a velvet dress stands on the left holding a script. A man in a tuxedo sits center stage on a wooden crate, looking tired. To the right, a black cat perches atop a stack of ropes. The woman is handing the script to the man. The black cat is sitting next to the man. There is no spotlight visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

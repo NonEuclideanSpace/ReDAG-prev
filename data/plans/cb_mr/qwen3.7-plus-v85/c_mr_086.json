@@ -1,0 +1,363 @@
+{
+ "style": "photorealistic sci-fi space art",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a deep-space scene with stars",
+   "question": "Does the image show a deep-space scene with stars?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "earth",
+   "type": "entity",
+   "class": "planet",
+   "plural": "planets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "planet Earth",
+   "question": "Is planet Earth visible in the image?",
+   "box": [
+    100,
+    100,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "station",
+   "type": "entity",
+   "class": "space station",
+   "plural": "space stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large space station",
+   "question": "Is there a large space station?",
+   "box": [
+    300,
+    200,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "spaceship",
+   "type": "entity",
+   "class": "spaceship",
+   "plural": "spaceships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek spaceship",
+   "question": "Is there a sleek spaceship?",
+   "box": [
+    750,
+    350,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "astronaut",
+   "type": "entity",
+   "class": "astronaut",
+   "plural": "astronauts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an astronaut in a spacesuit",
+   "question": "Is there an astronaut in a spacesuit?",
+   "box": [
+    600,
+    150,
+    680,
+    250
+   ]
+  },
+  {
+   "id": "asteroids",
+   "type": "entity",
+   "class": "asteroid",
+   "plural": "asteroids",
+   "count": 4,
+   "count_exact": true,
+   "desc": "a cluster of four asteroids",
+   "question": "Are there exactly four asteroids in a cluster?",
+   "box": [
+    50,
+    500,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "debris",
+   "type": "entity",
+   "class": "debris fragment",
+   "plural": "debris fragments",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two debris fragments",
+   "question": "Are there exactly two debris fragments?",
+   "box": [
+    100,
+    750,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "satellite",
+   "type": "entity",
+   "class": "satellite",
+   "plural": "satellites",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a satellite",
+   "question": "Is there a satellite?",
+   "box": [
+    150,
+    150,
+    250,
+    250
+   ]
+  },
+  {
+   "id": "comet",
+   "type": "entity",
+   "class": "comet",
+   "plural": "comets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a comet",
+   "question": "Is there a comet?",
+   "box": [
+    400,
+    0,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "solar_panels",
+   "type": "entity",
+   "class": "solar panel array",
+   "plural": "solar panel arrays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a solar panel array",
+   "question": "Is there a solar panel array?",
+   "box": [
+    800,
+    100,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "antenna",
+   "type": "entity",
+   "class": "communication antenna",
+   "plural": "communication antennas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a communication antenna",
+   "question": "Is there a communication antenna?",
+   "box": [
+    500,
+    180,
+    550,
+    230
+   ]
+  },
+  {
+   "id": "earth_behind_station",
+   "type": "relation",
+   "of": [
+    "earth",
+    "station"
+   ],
+   "desc": "planet Earth is visible behind the space station",
+   "question": "Is planet Earth visible behind the space station?"
+  },
+  {
+   "id": "spaceship_docked",
+   "type": "relation",
+   "of": [
+    "spaceship",
+    "station"
+   ],
+   "desc": "the sleek spaceship is docked to the space station's port",
+   "question": "Is the sleek spaceship docked to the space station's port?"
+  },
+  {
+   "id": "station_larger",
+   "type": "relation",
+   "of": [
+    "station",
+    "spaceship"
+   ],
+   "desc": "the space station is much larger than the spaceship",
+   "question": "Is the space station much larger than the spaceship?"
+  },
+  {
+   "id": "astronaut_tethered",
+   "type": "relation",
+   "of": [
+    "astronaut",
+    "station"
+   ],
+   "desc": "the astronaut is tethered to the space station",
+   "question": "Is the astronaut tethered to the space station?"
+  },
+  {
+   "id": "asteroids_near_station",
+   "type": "relation",
+   "of": [
+    "asteroids",
+    "station"
+   ],
+   "desc": "the cluster of asteroids is near the space station",
+   "question": "Is the cluster of asteroids near the space station?"
+  },
+  {
+   "id": "satellite_behind_earth",
+   "type": "relation",
+   "of": [
+    "satellite",
+    "earth"
+   ],
+   "desc": "the satellite orbits behind planet Earth",
+   "question": "Is the satellite positioned behind planet Earth?"
+  },
+  {
+   "id": "comet_past_spaceship",
+   "type": "action",
+   "of": [
+    "comet",
+    "spaceship"
+   ],
+   "desc": "the comet streaks past the spaceship",
+   "question": "Is the comet streaking past the spaceship?"
+  },
+  {
+   "id": "spaceship_closer_to_station",
+   "type": "relation",
+   "of": [
+    "spaceship",
+    "station",
+    "satellite"
+   ],
+   "desc": "the spaceship is closer to the station than to the satellite",
+   "question": "Is the spaceship closer to the station than to the satellite?"
+  },
+  {
+   "id": "comet_between",
+   "type": "relation",
+   "of": [
+    "comet",
+    "spaceship",
+    "solar_panels"
+   ],
+   "desc": "the comet is passing between the spaceship and the solar panels",
+   "question": "Is the comet passing between the spaceship and the solar panels?"
+  },
+  {
+   "id": "antenna_above_panels",
+   "type": "relation",
+   "of": [
+    "antenna",
+    "solar_panels"
+   ],
+   "desc": "the antenna is positioned above the solar panels",
+   "question": "Is the antenna positioned above the solar panels?"
+  },
+  {
+   "id": "antenna_on_station",
+   "type": "relation",
+   "of": [
+    "antenna",
+    "station"
+   ],
+   "desc": "the communication antenna is mounted on the station",
+   "question": "Is the communication antenna mounted on the station?"
+  },
+  {
+   "id": "astronaut_floating",
+   "type": "state",
+   "of": "astronaut",
+   "desc": "the astronaut is floating",
+   "question": "Is the astronaut floating?"
+  },
+  {
+   "id": "station_modular",
+   "type": "attribute",
+   "of": "station",
+   "desc": "the space station is modular",
+   "question": "Is the space station modular?"
+  },
+  {
+   "id": "comet_tail",
+   "type": "attribute",
+   "of": "comet",
+   "desc": "the comet has a long tail",
+   "question": "Does the comet have a long tail?"
+  },
+  {
+   "id": "panels_extending",
+   "type": "relation",
+   "of": [
+    "solar_panels",
+    "station"
+   ],
+   "desc": "the solar panel array extends from the station",
+   "question": "Does the solar panel array extend from the station?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "station",
+   "to": "solar_panels",
+   "kind": "support"
+  },
+  {
+   "from": "station",
+   "to": "antenna",
+   "kind": "support"
+  },
+  {
+   "from": "station",
+   "to": "spaceship",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_086",
+ "prompt": "A deep-space scene with planet Earth visible behind a large, modular space station. A sleek spaceship is docked to the station’s port, and the space station is much larger than the spaceship. An astronaut is floating tethered to the station. Near the station, a small cluster of four asteroids is visible. A smaller group of debris fragments is also present, and their number is two less than the number of asteroids. A satellite orbits behind the planet. A comet with a long tail streaks past the spaceship. A solar panel array extends from the station, and a communication antenna is mounted on the station’s roof. The spaceship is closer to the station than to the satellite. The comet is passing between the spaceship and the solar panels. The antenna is positioned above the solar panels.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

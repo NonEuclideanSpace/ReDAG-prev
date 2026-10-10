@@ -1,0 +1,492 @@
+{
+ "style": "surreal photorealism, high contrast, warm sunset lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunbaked cornfield with a narrow footpath under a late afternoon sky",
+   "question": "Does the image show a sunbaked cornfield with a narrow footpath under a late afternoon sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "pickup truck",
+   "plural": "pickup trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty red pickup truck",
+   "question": "Is there a rusty red pickup truck?",
+   "box": [
+    100,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "driver",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a driver with sunburned skin and a face of sunspots and shadow",
+   "question": "Is there a driver with sunburned skin and a face of sunspots and shadow?",
+   "box": [
+    350,
+    450,
+    500,
+    650
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crow",
+   "question": "Is there a crow?",
+   "box": [
+    750,
+    300,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "dead tree",
+   "plural": "dead trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dead tree at the field's edge",
+   "question": "Is there a dead tree at the field's edge?",
+   "box": [
+    850,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "chimes",
+   "type": "entity",
+   "class": "wind chime",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wind chimes shaped like miniature trucks",
+   "question": "Are there wind chimes shaped like miniature trucks?",
+   "box": [
+    880,
+    150,
+    980,
+    250
+   ]
+  },
+  {
+   "id": "shadow_figure",
+   "type": "entity",
+   "class": "shadow figure",
+   "plural": "shadow figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elongated distorted shadow figure detached from the cab",
+   "question": "Is there an elongated distorted shadow figure detached from the cab?",
+   "box": [
+    200,
+    600,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "mirage_truck",
+   "type": "entity",
+   "class": "pickup truck",
+   "plural": "pickup trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shimmering violet and silver pickup truck",
+   "question": "Is there a shimmering violet and silver pickup truck?",
+   "box": [
+    100,
+    100,
+    400,
+    300
+   ]
+  },
+  {
+   "id": "smoke",
+   "type": "relation",
+   "of": [
+    "truck",
+    "puddle"
+   ],
+   "desc": "a thin wisp of smoke exhaling from the truck's engine",
+   "question": "Is a thin wisp of smoke exhaling from the truck's engine?"
+  },
+  {
+   "id": "cab_open",
+   "type": "state",
+   "of": "truck",
+   "desc": "the truck's cab is half-open",
+   "question": "Is the truck's cab half-open?"
+  },
+  {
+   "id": "driver_slumped",
+   "type": "state",
+   "of": "driver",
+   "desc": "the driver is slumped in the seat",
+   "question": "Is the driver slumped in the seat?"
+  },
+  {
+   "id": "driver_hand_gearshift",
+   "type": "state",
+   "of": "driver",
+   "desc": "the driver's sunburned hand rests on the gearshift",
+   "question": "Does the driver's sunburned hand rest on the gearshift?"
+  },
+  {
+   "id": "driver_hand_harmonica",
+   "type": "state",
+   "of": "driver",
+   "desc": "the driver's other hand strokes a harmonica dangling from the mirror",
+   "question": "Does the driver's other hand stroke a harmonica dangling from the mirror?"
+  },
+  {
+   "id": "driver_smiling",
+   "type": "state",
+   "of": "driver",
+   "desc": "the driver smiles faintly",
+   "question": "Does the driver smile faintly?"
+  },
+  {
+   "id": "bed_sacks",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the truck's bed is crammed with burlap sacks of dried corn with frayed seams spilling kernels",
+   "question": "Is the truck's bed crammed with burlap sacks of dried corn with frayed seams spilling kernels?"
+  },
+  {
+   "id": "sack_wheel_well",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "one burlap sack is caught in the truck's wheel well, half-dismantled",
+   "question": "Is one burlap sack caught in the truck's wheel well, half-dismantled?"
+  },
+  {
+   "id": "kernels_dirt",
+   "type": "state",
+   "of": "truck",
+   "desc": "corn kernels from the sacks scatter onto the cracked dirt",
+   "question": "Do corn kernels from the sacks scatter onto the cracked dirt?"
+  },
+  {
+   "id": "crow_near_tire",
+   "type": "relation",
+   "of": [
+    "crow",
+    "truck"
+   ],
+   "desc": "the crow is near the truck's rear tire",
+   "question": "Is the crow near the truck's rear tire?"
+  },
+  {
+   "id": "crow_eyes_chimes",
+   "type": "relation",
+   "of": [
+    "crow",
+    "chimes"
+   ],
+   "desc": "the crow's eyes are fixed on the wind chimes",
+   "question": "Are the crow's eyes fixed on the wind chimes?"
+  },
+  {
+   "id": "crow_on_chimes",
+   "type": "relation",
+   "of": [
+    "crow",
+    "chimes"
+   ],
+   "desc": "the crow is perched on the wind chimes",
+   "question": "Is the crow perched on the wind chimes?"
+  },
+  {
+   "id": "crow_pecking_bottle",
+   "type": "state",
+   "of": "crow",
+   "desc": "the crow pecks at a glass bottle on the path",
+   "question": "Is the crow pecking at a glass bottle on the path?"
+  },
+  {
+   "id": "shadow_reaches_chimes",
+   "type": "action",
+   "of": [
+    "shadow_figure",
+    "chimes"
+   ],
+   "desc": "the shadow figure reaches and plucks the wind chimes",
+   "question": "Does the shadow figure reach and pluck the wind chimes?"
+  },
+  {
+   "id": "chime_reflection_city",
+   "type": "state",
+   "of": "chimes",
+   "desc": "one chime reflects a bustling neon-lit city",
+   "question": "Does one chime reflect a bustling neon-lit city?"
+  },
+  {
+   "id": "mirage_emerges_puddle",
+   "type": "state",
+   "of": "mirage_truck",
+   "desc": "the mirage truck steps out of its reflection in a rain puddle",
+   "question": "Does the mirage truck step out of its reflection in a rain puddle?"
+  },
+  {
+   "id": "mirage_sacks_glowing",
+   "type": "attribute",
+   "of": "mirage_truck",
+   "desc": "the mirage truck's burlap sacks glow with bioluminescent corn",
+   "question": "Do the mirage truck's burlap sacks glow with bioluminescent corn?"
+  },
+  {
+   "id": "crow_leaps_truck",
+   "type": "action",
+   "of": [
+    "crow",
+    "mirage_truck"
+   ],
+   "desc": "the crow leaps toward the mirage truck, trailing sparks",
+   "question": "Does the crow leap toward the mirage truck, trailing sparks?"
+  },
+  {
+   "id": "mirage_merges_field",
+   "type": "state",
+   "of": "mirage_truck",
+   "desc": "the mirage truck merges with the ground, becoming part of the field with colorful stalks rising from its frame",
+   "question": "Does the mirage truck merge with the ground, becoming part of the field with colorful stalks rising from its frame?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows in the background scenery",
+   "question": "Are there any windows in the background scenery?"
+  },
+  {
+   "id": "truck_idling",
+   "type": "state",
+   "of": "truck",
+   "desc": "the rusty red pickup truck is idling",
+   "question": "Is the rusty red pickup truck idling?"
+  },
+  {
+   "id": "driver_seat_cracked",
+   "type": "attribute",
+   "of": "driver",
+   "desc": "the driver sits in a cracked leather seat",
+   "question": "Is the driver sitting in a cracked leather seat?"
+  },
+  {
+   "id": "harmonica_dangling",
+   "type": "relation",
+   "of": [
+    "truck",
+    "puddle"
+   ],
+   "desc": "a harmonica dangles from the truck's mirror",
+   "question": "Does a harmonica dangle from the truck's mirror?"
+  },
+  {
+   "id": "shadow_mimics_truck",
+   "type": "state",
+   "of": "shadow_figure",
+   "desc": "the shadow figure mimics the truck's idle movement",
+   "question": "Does the shadow figure mimic the truck's idle movement?"
+  },
+  {
+   "id": "chime_ripple_space",
+   "type": "state",
+   "of": "chimes",
+   "desc": "plucking the chime causes a ripple in the space around it",
+   "question": "Does plucking the chime cause a ripple in the space around it?"
+  },
+  {
+   "id": "bottles",
+   "type": "entity",
+   "class": "glass bottle",
+   "plural": "glass bottles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glass bottles lining the footpath",
+   "question": "Are there glass bottles lining the footpath?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "rain puddle",
+   "plural": "rain puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rain puddle reflecting the mirage truck",
+   "question": "Is there a rain puddle?",
+   "box": [
+    700,
+    850,
+    950,
+    980
+   ]
+  },
+  {
+   "id": "driver_head_turned",
+   "type": "state",
+   "of": "driver",
+   "desc": "the driver turns their head",
+   "question": "Does the driver turn their head?"
+  },
+  {
+   "id": "shadow_walks",
+   "type": "state",
+   "of": "shadow_figure",
+   "desc": "the shadow figure walks in slow deliberate steps",
+   "question": "Is the shadow figure walking in slow deliberate steps?"
+  },
+  {
+   "id": "truck_on_dirt",
+   "type": "relation",
+   "of": [
+    "truck",
+    "tree"
+   ],
+   "desc": "the rusty red pickup truck sits on the cracked dirt at the edge of the cornfield",
+   "question": "Is the rusty red pickup truck sitting on the cracked dirt at the edge of the cornfield?"
+  },
+  {
+   "id": "tree_at_edge",
+   "type": "state",
+   "of": "tree",
+   "desc": "the dead tree is at the field's edge",
+   "question": "Is the dead tree at the field's edge?"
+  },
+  {
+   "id": "bottles_on_path",
+   "type": "state",
+   "of": "bottles",
+   "desc": "the glass bottles line the narrow footpath",
+   "question": "Do the glass bottles line the narrow footpath?"
+  },
+  {
+   "id": "chimes_on_tree",
+   "type": "relation",
+   "of": [
+    "chimes",
+    "tree"
+   ],
+   "desc": "the wind chimes hang from the branch of the dead tree",
+   "question": "Do the wind chimes hang from the branch of the dead tree?"
+  },
+  {
+   "id": "mirage_from_puddle",
+   "type": "relation",
+   "of": [
+    "mirage_truck",
+    "puddle"
+   ],
+   "desc": "the mirage truck emerges from the rain puddle",
+   "question": "Does the mirage truck emerge from the rain puddle?"
+  },
+  {
+   "id": "kernels_on_dirt",
+   "type": "relation",
+   "of": [
+    "truck",
+    "puddle"
+   ],
+   "desc": "corn kernels from the truck's sacks scatter onto the cracked dirt",
+   "question": "Do corn kernels from the truck's sacks scatter onto the cracked dirt?"
+  },
+  {
+   "id": "cornfield_beyond_truck",
+   "type": "state",
+   "of": "truck",
+   "desc": "the cornfield extends beyond the truck",
+   "question": "Does the cornfield extend beyond the truck?"
+  },
+  {
+   "id": "crow_copper_feathers",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow has copper feathers",
+   "question": "Does the crow have copper feathers?"
+  },
+  {
+   "id": "crow_wrench_beak",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow has a wrench for a beak",
+   "question": "Does the crow have a wrench for a beak?"
+  },
+  {
+   "id": "crow_glowing_eyes",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow has glowing engine-like eyes",
+   "question": "Does the crow have glowing engine-like eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "driver",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0330",
+ "prompt": "The rusty red pickup truck sits idling at the edge of a sunbaked cornfield, its engine a wheezing beast exhaling a thin wisp of smoke that curls into the late afternoon haze. The cab is half-open, revealing a driver slumped in the cracked leather seat, their sunburned hand resting on the gearshift like a lifeline, while the other absently strokes a harmonica dangling from the mirror. The truck’s bed is crammed with burlap sacks of dried corn, their frayed seams spilling kernels that scatter like forgotten secrets onto the cracked dirt. One sack is caught in the wheel well, half-dismantled by the wind, as if the very earth is reclaiming the bounty. A crow perches near the truck’s rear tire, pecking at the loose grains, but its beady eyes flick upward, fixed on a string of wind chimes that hang from the branch of a dead tree at the field’s edge. The chimes—shaped like miniature versions of the truck—sway gently, producing a low, metallic hum that vibrates through the air like a ghostly echo of the engine’s idle. Beyond the truck, the cornfield sways in uneven rhythms, stalks leaning and arching toward the west as if drawn by the pull of a silent, unseen tide. In the distance, a mirage flickers—a shimmering version of the truck, identical in form but painted in hues of violet and silver, gliding over a surface that seems to be both liquid and land, dissolving and reforming with each step. Between the real and the illusory, a narrow footpath curves through the field, lined with glass bottles that catch the sunlight and refract it into prismatic patterns that dance over the truck’s rusted fenders. The crow hops forward, pecking at one of the bottles and sending a cascade of light scattering across the dirt. A shadow detaches from the cab—elongated and distorted, as if stretched by the angle of the sun—walking in slow, deliberate steps, mimicking the truck’s idle movement with a surreal grace. It reaches the wind chimes and plucks one gently, causing a ripple in the space around it, where the chime briefly transforms into a mirror reflecting not the field, but a bustling, neon-lit city that dissolves as quickly as it appears. At the far end of the field, the truck’s twin seems to step out of its own reflection in a rain puddle, the liquid stretching unnaturally as it drags itself forward, its burlap sacks now glowing with bioluminescent corn that hums in harmonic resonance with the chimes. The driver in the original truck turns their head, their face a patchwork of sunspots and shadow, and smiles faintly, as if they have seen this all before. A breeze, warm and tinged with the scent of earth and exhaust, carries a whisper—part mechanical, part organic—blending the engine’s groan with the rustle of corn and the caw of the crow, as though the entire scene is breathing in unison. The crow, now perched on the wind chime, begins to transform—its feathers turning to copper, its beak becoming a wrench, its eyes glowing like tiny engines—before it leaps into the air, spiraling toward the truck’s mirror twin, its flight path trailing sparks that melt into the light refractions. In the distance, the truck’s mirrored version merges with the ground, becoming part of the field, stalks rising from its frame like a mechanical harvest, each blade a different color, each swaying to the rhythm of a heartbeat neither human nor machine. The scene holds in this fragile balance—between decay and rebirth, reality and illusion, silence and song—until the last kernel of spilled corn is swallowed by the earth, and the smoke from the truck’s engine rises to meet the sky, now streaked with the faint, iridescent hue of something new and unknowable.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 63,
+   "n_uncovered": 4,
+   "proposed": 2,
+   "ungrounded": 1,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 3,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

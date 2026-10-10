@@ -1,0 +1,174 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "golden wheat fields stretching into the background under a clear sky",
+   "question": "Does the image show golden wheat fields stretching into the background under a clear sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "wooden fence",
+   "plural": "wooden fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence",
+   "question": "Is there a wooden fence?",
+   "box": [
+    750,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    380,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    780,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the straw hat holds a basket",
+   "question": "Is the woman in the straw hat holding a basket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the straw hat is standing",
+   "question": "Is the woman in the straw hat standing?"
+  },
+  {
+   "id": "man_bending",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with blue overalls bends forward",
+   "question": "Is the man with blue overalls bending forward?"
+  },
+  {
+   "id": "rabbit_sitting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit sits calmly",
+   "question": "Is the small white rabbit sitting calmly?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the straw hat looks directly at the man with blue overalls",
+   "question": "Is the woman in the straw hat looking directly at the man with blue overalls?"
+  },
+  {
+   "id": "rabbit_beside_fence",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "fence"
+   ],
+   "desc": "the small white rabbit sits beside the wooden fence",
+   "question": "Is the small white rabbit sitting beside the wooden fence?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "woman_straw_hat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a straw hat",
+   "question": "Does the woman wear a straw hat?"
+  },
+  {
+   "id": "man_blue_overalls",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears blue overalls",
+   "question": "Does the man wear blue overalls?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0002",
+ "prompt": "In a vibrant anime style scene set on a golden farm during harvest, a woman in a straw hat stands on the left holding a basket. In the center, a man with blue overalls bends forward to pick wheat stalks. On the right, a small white rabbit sits calmly beside a wooden fence. The woman in the straw hat looks directly at the man with blue overalls as he works. The golden wheat fields stretch into the background under a clear sky. There is no tractor visible in the field. The composition focuses strictly on these three figures and their immediate surroundings without additional distractions or machinery.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,543 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a grocery store interior",
+   "question": "Does the image show a grocery store interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "register",
+   "type": "entity",
+   "class": "cash register",
+   "plural": "cash registers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cash register",
+   "question": "Is there a cash register?",
+   "box": [
+    100,
+    600,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "cart_customer",
+   "type": "entity",
+   "class": "shopping cart",
+   "plural": "shopping carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shopping cart",
+   "question": "Is there a shopping cart?",
+   "box": [
+    50,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "stepladder",
+   "plural": "stepladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stepladder",
+   "question": "Is there a stepladder?",
+   "box": [
+    700,
+    500,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "shelves_stock",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "tall shelves",
+   "question": "Are there tall shelves?",
+   "box": [
+    650,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "deli_counter",
+   "type": "entity",
+   "class": "deli counter",
+   "plural": "deli counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deli counter",
+   "question": "Is there a deli counter?",
+   "box": [
+    300,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "empty_shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "empty shelves",
+   "question": "Are there empty shelves?",
+   "box": [
+    800,
+    200,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "cart_child",
+   "type": "entity",
+   "class": "shopping cart",
+   "plural": "shopping carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second shopping cart",
+   "question": "Is there a second shopping cart?",
+   "box": [
+    500,
+    750,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "cashier",
+   "type": "entity",
+   "class": "cashier",
+   "plural": "cashiers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cashier",
+   "question": "Is there a cashier?",
+   "box": [
+    200,
+    400,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "shopper",
+   "plural": "shoppers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shopper",
+   "question": "Is there a shopper?",
+   "box": [
+    50,
+    400,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "clerk",
+   "type": "entity",
+   "class": "stock clerk",
+   "plural": "stock clerks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stock clerk",
+   "question": "Is there a stock clerk?",
+   "box": [
+    720,
+    300,
+    830,
+    600
+   ]
+  },
+  {
+   "id": "deli_worker",
+   "type": "entity",
+   "class": "deli worker",
+   "plural": "deli workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deli worker",
+   "question": "Is there a deli worker?",
+   "box": [
+    350,
+    400,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "manager",
+   "type": "entity",
+   "class": "manager",
+   "plural": "managers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a manager",
+   "question": "Is there a manager?",
+   "box": [
+    850,
+    400,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "shopper_cereal",
+   "type": "entity",
+   "class": "shopper",
+   "plural": "shoppers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second shopper",
+   "question": "Is there a second shopper?",
+   "box": [
+    550,
+    400,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child",
+   "question": "Is there a child?",
+   "box": [
+    580,
+    650,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "cashier_standing",
+   "type": "state",
+   "of": "cashier",
+   "desc": "the cashier is standing",
+   "question": "Is the cashier standing?"
+  },
+  {
+   "id": "cashier_scanning",
+   "type": "action",
+   "of": [
+    "cashier",
+    "register"
+   ],
+   "desc": "the cashier is scanning barcodes at the register",
+   "question": "Is the cashier scanning barcodes at the register?"
+  },
+  {
+   "id": "customer_unloading",
+   "type": "action",
+   "of": [
+    "customer",
+    "cart_customer"
+   ],
+   "desc": "the shopper is unloading groceries from the cart onto the conveyor belt",
+   "question": "Is the shopper unloading groceries from the cart onto the conveyor belt?"
+  },
+  {
+   "id": "clerk_standing",
+   "type": "relation",
+   "of": [
+    "clerk",
+    "ladder"
+   ],
+   "desc": "the stock clerk is standing on the stepladder",
+   "question": "Is the stock clerk standing on the stepladder?"
+  },
+  {
+   "id": "clerk_stocking",
+   "type": "action",
+   "of": [
+    "clerk",
+    "shelves_stock"
+   ],
+   "desc": "the stock clerk is stocking the shelves with canned goods",
+   "question": "Is the stock clerk stocking the shelves with canned goods?"
+  },
+  {
+   "id": "deli_slicing",
+   "type": "action",
+   "of": [
+    "deli_worker",
+    "deli_counter"
+   ],
+   "desc": "the deli worker is slicing meat at the deli counter",
+   "question": "Is the deli worker slicing meat at the deli counter?"
+  },
+  {
+   "id": "manager_holding",
+   "type": "attribute",
+   "of": "manager",
+   "desc": "the manager holds a clipboard",
+   "question": "Is the manager holding a clipboard?"
+  },
+  {
+   "id": "manager_pointing",
+   "type": "action",
+   "of": [
+    "manager",
+    "empty_shelves"
+   ],
+   "desc": "the manager is pointing at the empty shelves",
+   "question": "Is the manager pointing at the empty shelves?"
+  },
+  {
+   "id": "shopper_holding",
+   "type": "attribute",
+   "of": "shopper_cereal",
+   "desc": "the second shopper holds two cereal boxes",
+   "question": "Is the second shopper holding two cereal boxes?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is sitting in the shopping cart",
+   "question": "Is the child sitting in the shopping cart?"
+  },
+  {
+   "id": "clerk_on_ladder",
+   "type": "relation",
+   "of": [
+    "clerk",
+    "ladder"
+   ],
+   "desc": "the stock clerk is on the stepladder",
+   "question": "Is the stock clerk on the stepladder?"
+  },
+  {
+   "id": "shelves_taller_clerk",
+   "type": "relation",
+   "of": [
+    "shelves_stock",
+    "clerk"
+   ],
+   "desc": "the shelves are taller than the stock clerk",
+   "question": "Are the shelves taller than the stock clerk?"
+  },
+  {
+   "id": "blade_shinier",
+   "type": "attribute",
+   "of": "deli_counter",
+   "desc": "the meat slicer blade is shinier than the counter surface",
+   "question": "Is the meat slicer blade shinier than the counter surface?"
+  },
+  {
+   "id": "cereal_size",
+   "type": "attribute",
+   "of": "shopper_cereal",
+   "desc": "one cereal box held by the shopper is larger than the other",
+   "question": "Is one of the cereal boxes held by the shopper larger than the other?"
+  },
+  {
+   "id": "customer_standing",
+   "type": "state",
+   "of": "customer",
+   "desc": "the shopper is standing",
+   "question": "Is the shopper standing?"
+  },
+  {
+   "id": "clerk_standing_state",
+   "type": "state",
+   "of": "clerk",
+   "desc": "the stock clerk is standing",
+   "question": "Is the stock clerk standing?"
+  },
+  {
+   "id": "manager_standing",
+   "type": "state",
+   "of": "manager",
+   "desc": "the manager is standing",
+   "question": "Is the manager standing?"
+  },
+  {
+   "id": "shopper_cereal_standing",
+   "type": "state",
+   "of": "shopper_cereal",
+   "desc": "the second shopper is standing",
+   "question": "Is the second shopper standing?"
+  },
+  {
+   "id": "cart_fruit_count",
+   "type": "attribute",
+   "of": "cart_customer",
+   "desc": "the shopping cart contains three types of fruit",
+   "question": "Does the shopping cart contain three types of fruit?"
+  },
+  {
+   "id": "cart_vegetable_count",
+   "type": "attribute",
+   "of": "cart_customer",
+   "desc": "the shopping cart contains five types of vegetables",
+   "question": "Does the shopping cart contain five types of vegetables?"
+  },
+  {
+   "id": "clerk_corn_count",
+   "type": "attribute",
+   "of": "clerk",
+   "desc": "the stock clerk is stocking two cans of corn",
+   "question": "Is the stock clerk stocking two cans of corn?"
+  },
+  {
+   "id": "clerk_beans_count",
+   "type": "attribute",
+   "of": "clerk",
+   "desc": "the stock clerk is stocking six cans of green beans",
+   "question": "Is the stock clerk stocking six cans of green beans?"
+  },
+  {
+   "id": "deli_worker_gloves",
+   "type": "attribute",
+   "of": "deli_worker",
+   "desc": "the deli worker is wearing gloves",
+   "question": "Is the deli worker wearing gloves?"
+  },
+  {
+   "id": "deli_worker_apron",
+   "type": "attribute",
+   "of": "deli_worker",
+   "desc": "the deli worker is wearing an apron",
+   "question": "Is the deli worker wearing an apron?"
+  },
+  {
+   "id": "blade_sharp",
+   "type": "attribute",
+   "of": "deli_counter",
+   "desc": "the meat slicer has a very sharp blade",
+   "question": "Does the meat slicer have a very sharp blade?"
+  },
+  {
+   "id": "child_in_cart",
+   "type": "relation",
+   "of": [
+    "child",
+    "cart_child"
+   ],
+   "desc": "the child is sitting in the second shopping cart",
+   "question": "Is the child sitting in the second shopping cart?"
+  },
+  {
+   "id": "shelves_bg",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "grocery store shelves",
+   "question": "Are there grocery store shelves?",
+   "box": [
+    50,
+    50,
+    974,
+    600
+   ]
+  },
+  {
+   "id": "conveyor_belt",
+   "type": "entity",
+   "class": "conveyor belt",
+   "plural": "conveyor belts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conveyor belt at the register",
+   "question": "Is there a conveyor belt at the register?",
+   "box": [
+    350,
+    650,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "meat_slicer",
+   "type": "entity",
+   "class": "meat slicer",
+   "plural": "meat slicers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a meat slicer with a sharp blade",
+   "question": "Is there a meat slicer with a sharp blade?",
+   "box": [
+    150,
+    650,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "blade_shiny",
+   "type": "attribute",
+   "of": "meat_slicer",
+   "desc": "the meat slicer blade is shinier than the counter surface",
+   "question": "Is the meat slicer blade shinier than the counter surface?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "ladder",
+   "to": "clerk",
+   "kind": "support"
+  },
+  {
+   "from": "cart_child",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_010",
+ "prompt": "A grocery store with shoppers and employees. A cashier is standing behind a register, scanning barcodes. A customer is unloading groceries from a cart onto the conveyor belt. The cart contains three types of fruit, and the number of vegetable types is two more than the number of fruit types. A stock clerk is standing on a stepladder, stocking shelves with canned goods. The shelves are taller than the clerk. He is stocking two cans of corn, and the number of cans of green beans is three times the number of corn cans. A deli worker is slicing meat at a deli counter while wearing gloves and an apron. The meat slicer has a very sharp blade, which is shinier than the counter's surface. A manager is holding a clipboard and pointing at empty shelves. A shopper is holding two different cereal boxes, one of which is larger than the other, and her child is sitting in the shopping cart.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 12,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sandy volleyball court with white boundary lines under a sky",
+   "question": "Does the image show a sandy volleyball court with white boundary lines under a sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    300,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    800,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue visor",
+   "question": "Is there a woman in a blue visor?",
+   "box": [
+    50,
+    100,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in striped shorts",
+   "question": "Is there a man in striped shorts?",
+   "box": [
+    350,
+    500,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    450,
+    200,
+    574,
+    324
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a black shirt",
+   "question": "Is there a referee in a black shirt?",
+   "box": [
+    650,
+    250,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a green hat",
+   "question": "Is there a spectator in a green hat?",
+   "box": [
+    820,
+    550,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "woman_arm_raised",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue visor has her arm raised high",
+   "question": "Does the woman in a blue visor have her arm raised high?"
+  },
+  {
+   "id": "man_crouching",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in striped shorts is crouching low",
+   "question": "Is the man in striped shorts crouching low?"
+  },
+  {
+   "id": "man_looking_at_ball",
+   "type": "action",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in striped shorts looks intently at the yellow volleyball",
+   "question": "Is the man in striped shorts looking intently at the yellow volleyball?"
+  },
+  {
+   "id": "referee_pointing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a black shirt points firmly toward the sideline",
+   "question": "Is the referee in a black shirt pointing firmly toward the sideline?"
+  },
+  {
+   "id": "spectator_sitting",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a green hat sits quietly",
+   "question": "Is the spectator in a green hat sitting?"
+  },
+  {
+   "id": "spectator_watching",
+   "type": "action",
+   "of": [
+    "spectator",
+    "woman"
+   ],
+   "desc": "the spectator in a green hat watches the scene",
+   "question": "Is the spectator in a green hat watching the scene?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue visor is next to the man in striped shorts",
+   "question": "Is the woman in a blue visor next to the man in striped shorts?"
+  },
+  {
+   "id": "referee_behind_net",
+   "type": "relation",
+   "of": [
+    "referee",
+    "net"
+   ],
+   "desc": "the referee in a black shirt is behind the net",
+   "question": "Is the referee in a black shirt behind the net?"
+  },
+  {
+   "id": "spectator_on_bench",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "bench"
+   ],
+   "desc": "the spectator in a green hat is on the bench",
+   "question": "Is the spectator in a green hat on the bench?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "a crowd in the background",
+   "question": "Is there a crowd visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue visor stands",
+   "question": "Is the woman in a blue visor standing?"
+  },
+  {
+   "id": "referee_directing",
+   "type": "action",
+   "of": [
+    "referee",
+    "spectator"
+   ],
+   "desc": "the referee in a black shirt directs attention away from the play toward the sideline where the spectator sits",
+   "question": "Is the referee in a black shirt pointing or directing attention toward the sideline area?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "spectator",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0024",
+ "prompt": "In this cinematic film still, a woman in a blue visor stands on the left, her arm raised high in a serving motion. Next to her on the right, a man in striped shorts crouches low, his eyes fixed intently on the yellow volleyball hovering in the center air. The ball itself is suspended mid-flight, bright against the sky. Behind the net, a referee in a black shirt points firmly toward the sideline, directing attention away from the play. On the far right bench, a spectator in a green hat sits quietly, watching the scene unfold with detached interest. The sandy court stretches beneath them, marked by white boundary lines. There is no crowd visible in the background, keeping the focus tight on these five distinct figures and the single object in motion. The composition captures the tension of the match through their specific postures and gazes, freezing the moment just before impact. The interplay between the server's height and the receiver's low stance creates dynamic visual balance across the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

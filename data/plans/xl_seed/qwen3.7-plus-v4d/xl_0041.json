@@ -1,0 +1,328 @@
+{
+ "style": "photorealistic photo, warm afternoon light, dappled shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic outdoor farm scene with dirt ground, leafy branches above, and hanging laundry lines with white sheets in the background left",
+   "question": "Does the image show a rustic outdoor farm scene with dirt ground, leafy branches above, and hanging laundry lines with white sheets?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "wooden fence",
+   "plural": "wooden fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rustic wooden fence",
+   "question": "Is there a rustic wooden fence running horizontally across the middle of the image?",
+   "box": [
+    0,
+    450,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in denim overalls and a plaid shirt",
+   "question": "Is there a farmer wearing denim overalls and a plaid shirt?",
+   "box": [
+    350,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "metal bucket",
+   "plural": "metal buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bucket",
+   "question": "Is there a metal bucket?",
+   "box": [
+    450,
+    550,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "trough",
+   "type": "entity",
+   "class": "trough",
+   "plural": "troughs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a trough",
+   "question": "Is there a trough?",
+   "box": [
+    200,
+    700,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "hen",
+   "type": "entity",
+   "class": "hen",
+   "plural": "hens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a speckled hen",
+   "question": "Is there a speckled hen?",
+   "box": [
+    150,
+    750,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "goat",
+   "type": "entity",
+   "class": "goat",
+   "plural": "goats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown goat with curved horns",
+   "question": "Is there a brown goat with curved horns?",
+   "box": [
+    700,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a red dress",
+   "question": "Is there a child wearing a red dress?",
+   "box": [
+    550,
+    350,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overturned crate",
+   "question": "Is there an overturned crate?",
+   "box": [
+    580,
+    550,
+    720,
+    650
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white rabbit",
+   "question": "Is there a white rabbit?",
+   "box": [
+    600,
+    500,
+    700,
+    580
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "border collie",
+   "plural": "border collies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black and white border collie",
+   "question": "Is there a black and white border collie?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old rusty tractor with large rear tires",
+   "question": "Is there an old rusty tractor with large rear tires?",
+   "box": [
+    50,
+    300,
+    300,
+    550
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarecrow wearing a straw hat",
+   "question": "Is there a scarecrow wearing a straw hat?",
+   "box": [
+    450,
+    150,
+    550,
+    350
+   ]
+  },
+  {
+   "id": "farmer_holding_bucket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a metal bucket",
+   "question": "Is the farmer holding a metal bucket?"
+  },
+  {
+   "id": "farmer_pouring",
+   "type": "action",
+   "of": [
+    "farmer",
+    "trough"
+   ],
+   "desc": "the farmer pours grain into the trough",
+   "question": "Is the farmer pouring grain into the trough?"
+  },
+  {
+   "id": "hen_pecking",
+   "type": "action",
+   "of": [
+    "hen",
+    "farmer"
+   ],
+   "desc": "the speckled hen pecks at spilled grain near the farmer's boots",
+   "question": "Is the speckled hen pecking at grain on the ground near the farmer?"
+  },
+  {
+   "id": "goat_eating",
+   "type": "action",
+   "of": [
+    "goat",
+    "farmer"
+   ],
+   "desc": "the brown goat eats from the farmer's hand",
+   "question": "Is the brown goat eating from the farmer's hand?"
+  },
+  {
+   "id": "goat_over_fence",
+   "type": "relation",
+   "of": [
+    "goat",
+    "fence"
+   ],
+   "desc": "the brown goat leans its head over the fence",
+   "question": "Is the brown goat leaning its head over the wooden fence?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is sitting",
+   "question": "Is the child sitting?"
+  },
+  {
+   "id": "child_on_crate",
+   "type": "relation",
+   "of": [
+    "child",
+    "crate"
+   ],
+   "desc": "the child sits on the overturned crate",
+   "question": "Is the child sitting on the overturned crate?"
+  },
+  {
+   "id": "child_holding_rabbit",
+   "type": "action",
+   "of": [
+    "child",
+    "rabbit"
+   ],
+   "desc": "the child holds the white rabbit in their lap",
+   "question": "Is the child holding the white rabbit in their lap?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the border collie lies on the grass",
+   "question": "Is the border collie lying on the ground?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "action",
+   "of": [
+    "dog",
+    "goat"
+   ],
+   "desc": "the border collie watches the goat",
+   "question": "Is the border collie watching the goat?"
+  },
+  {
+   "id": "tractor_behind_fence",
+   "type": "relation",
+   "of": [
+    "tractor",
+    "fence"
+   ],
+   "desc": "the tractor is behind the fence",
+   "question": "Is the tractor positioned behind the wooden fence?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0041",
+ "prompt": "A rustic wooden fence runs horizontally across the middle ground, separating the viewer from the main activity. In the center foreground, a farmer in denim overalls and a plaid shirt holds a metal bucket, pouring grain into a trough. A speckled hen pecks at the spilled grain near his muddy boots on the left. To the right, a brown goat with curved horns leans its head over the fence, eating from the farmer's other hand. Behind the fence, a child in a red dress sits on an overturned crate, holding a white rabbit gently in their lap. A black and white border collie lies on the dry grass in the lower right, watching the goat intently. An old rusty tractor with large rear tires occupies the background left, partially obscured by hanging laundry lines with white sheets fluttering in the breeze. A scarecrow wearing a straw hat stands sentinel in the far background center. Sunlight filters through leafy branches above, casting dappled shadows on the dirt ground. The scene is bathed in warm afternoon light, highlighting dust motes in the air. The style is a photorealistic photo.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 2,
+  "warnings": []
+ }
+}

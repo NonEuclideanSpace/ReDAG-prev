@@ -1,0 +1,187 @@
+{
+ "style": "photorealistic product photography, high detail, macro lens",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for product photography",
+   "question": "Is the background neutral and suitable for product photography?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "envelope",
+   "type": "entity",
+   "class": "envelope",
+   "plural": "envelopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cream vellum envelope",
+   "question": "Is there a cream vellum envelope?",
+   "box": [
+    200,
+    300,
+    824,
+    724
+   ]
+  },
+  {
+   "id": "pen",
+   "type": "entity",
+   "class": "fountain pen",
+   "plural": "fountain pens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sapphire-lacquer fountain pen",
+   "question": "Is there a sapphire-lacquer fountain pen?",
+   "box": [
+    300,
+    400,
+    724,
+    624
+   ]
+  },
+  {
+   "id": "pen_diagonal",
+   "type": "state",
+   "of": "pen",
+   "desc": "the fountain pen is resting diagonally",
+   "question": "Is the fountain pen resting diagonally?"
+  },
+  {
+   "id": "pen_clip",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "a rhodium-plated clip in the form of a feather on the cap",
+   "question": "Does the fountain pen have a rhodium-plated clip in the form of a feather on the cap?"
+  },
+  {
+   "id": "pen_window",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "a transparent ink window on the cap",
+   "question": "Does the fountain pen have a transparent ink window on the cap?"
+  },
+  {
+   "id": "ink_color",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "cobalt-blue ink visible through the transparent ink window",
+   "question": "Is cobalt-blue ink visible through the transparent ink window of the fountain pen?"
+  },
+  {
+   "id": "pen_grip",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "a brushed stainless steel grip section",
+   "question": "Does the fountain pen have a brushed stainless steel grip section?"
+  },
+  {
+   "id": "pen_nib",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "a two-tone 18-karat gold nib",
+   "question": "Does the fountain pen have a two-tone 18-karat gold nib?"
+  },
+  {
+   "id": "nib_engraving",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "scrolling vines engraved on the nib",
+   "question": "Are scrolling vines engraved on the nib of the fountain pen?"
+  },
+  {
+   "id": "serial_number",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "a laser-etched serial number at the finial",
+   "question": "Is there a laser-etched serial number at the finial of the fountain pen?"
+  },
+  {
+   "id": "no_dents",
+   "type": "absent",
+   "desc": "dents on the fountain pen",
+   "question": "Are there any dents on the fountain pen?"
+  },
+  {
+   "id": "no_leaks",
+   "type": "absent",
+   "desc": "ink leaks from the fountain pen",
+   "question": "Are there any ink leaks from the fountain pen?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic body parts on the fountain pen",
+   "question": "Are there any plastic body parts on the fountain pen?"
+  },
+  {
+   "id": "pen_on_envelope",
+   "type": "relation",
+   "of": [
+    "pen",
+    "envelope"
+   ],
+   "desc": "the fountain pen rests on the cream vellum envelope",
+   "question": "Is the fountain pen resting on the cream vellum envelope?"
+  },
+  {
+   "id": "pen_material",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "the fountain pen barrel is aluminium",
+   "question": "Is the fountain pen barrel made of aluminium?"
+  },
+  {
+   "id": "pen_barrel_color",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "the barrel is coated in deep sapphire blue with a subtle metallic shimmer",
+   "question": "Is the barrel of the fountain pen coated in deep sapphire blue with a subtle metallic shimmer?"
+  },
+  {
+   "id": "pen_pinstripes",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "fine silver pinstripes run the length of the barrel",
+   "question": "Do fine silver pinstripes run the length of the fountain pen's barrel?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "envelope",
+   "to": "pen",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_085",
+ "prompt": "Visualise a single sapphire-lacquer fountain pen resting diagonally on a cream vellum envelope. The barrel is aluminium, coated in deep sapphire blue with a subtle metallic shimmer. Fine silver pinstripes run its length. The cap sports a rhodium-plated clip in the form of a feather and a transparent ink window showing cobalt-blue ink. The grip section is brushed stainless steel, leading to a two-tone 18-karat gold nib engraved with scrolling vines. A serial number is laser-etched at the finial. The pen shows no dents, no ink leaks, and includes no plastic body parts.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

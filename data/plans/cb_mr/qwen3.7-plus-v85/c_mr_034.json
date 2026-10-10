@@ -1,0 +1,427 @@
+{
+ "style": "photorealistic underwater sci-fi",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an underwater environment with deep blue water",
+   "question": "Is the scene set in an underwater environment?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "coral",
+   "type": "entity",
+   "class": "coral",
+   "plural": "corals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive piece of glowing coral",
+   "question": "Is there a massive piece of glowing coral?",
+   "box": [
+    300,
+    800,
+    724,
+    1024
+   ]
+  },
+  {
+   "id": "station",
+   "type": "entity",
+   "class": "research station",
+   "plural": "research stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large research station",
+   "question": "Is there a large research station?",
+   "box": [
+    500,
+    200,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "submarine",
+   "type": "entity",
+   "class": "submarine",
+   "plural": "submarines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small yellow submarine",
+   "question": "Is there a small yellow submarine?",
+   "box": [
+    100,
+    300,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "octopus",
+   "type": "entity",
+   "class": "octopus",
+   "plural": "octopuses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a giant octopus",
+   "question": "Is there a giant octopus?",
+   "box": [
+    200,
+    100,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long robotic arm",
+   "question": "Is there a long robotic arm?",
+   "box": [
+    600,
+    400,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "container",
+   "type": "entity",
+   "class": "sample container",
+   "plural": "sample containers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing sample container",
+   "question": "Is there a glowing sample container?",
+   "box": [
+    820,
+    650,
+    880,
+    710
+   ]
+  },
+  {
+   "id": "fish",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a group of six fish",
+   "question": "Are there exactly six fish?",
+   "box": [
+    350,
+    450,
+    550,
+    550
+   ]
+  },
+  {
+   "id": "rocks",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three loose rocks",
+   "question": "Are there exactly three loose rocks?",
+   "box": [
+    700,
+    750,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "diver",
+   "type": "entity",
+   "class": "diver",
+   "plural": "divers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a diver in a modern wetsuit",
+   "question": "Is there a diver in a modern wetsuit?",
+   "box": [
+    550,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camera",
+   "question": "Is there a camera?",
+   "box": [
+    616,
+    746,
+    664,
+    794
+   ]
+  },
+  {
+   "id": "tube",
+   "type": "entity",
+   "class": "flexible tube",
+   "plural": "flexible tubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flexible tube",
+   "question": "Is there a flexible tube?",
+   "box": [
+    450,
+    400,
+    500,
+    450
+   ]
+  },
+  {
+   "id": "sub_docked",
+   "type": "relation",
+   "of": [
+    "submarine",
+    "station"
+   ],
+   "desc": "the submarine is docked next to the research station",
+   "question": "Is the submarine docked next to the research station?"
+  },
+  {
+   "id": "octopus_wrapping",
+   "type": "action",
+   "of": [
+    "octopus",
+    "submarine"
+   ],
+   "desc": "the octopus is wrapping one of its tentacles around the submarine",
+   "question": "Is the octopus wrapping one of its tentacles around the submarine?"
+  },
+  {
+   "id": "arm_extending",
+   "type": "relation",
+   "of": [
+    "arm",
+    "octopus"
+   ],
+   "desc": "the robotic arm is extending towards the octopus",
+   "question": "Is the robotic arm extending towards the octopus?"
+  },
+  {
+   "id": "arm_holding",
+   "type": "action",
+   "of": [
+    "arm",
+    "container"
+   ],
+   "desc": "the robotic arm is holding the glowing sample container",
+   "question": "Is the robotic arm holding the glowing sample container?"
+  },
+  {
+   "id": "octopus_touching",
+   "type": "relation",
+   "of": [
+    "octopus",
+    "station"
+   ],
+   "desc": "two tentacles of the octopus are touching the station's dome",
+   "question": "Are two tentacles of the octopus touching the station's dome?"
+  },
+  {
+   "id": "fish_between",
+   "type": "relation",
+   "of": [
+    "fish",
+    "octopus",
+    "submarine"
+   ],
+   "desc": "the fish are swimming between the octopus and the submarine",
+   "question": "Are the fish swimming between the octopus and the submarine?"
+  },
+  {
+   "id": "station_on_coral",
+   "type": "relation",
+   "of": [
+    "station",
+    "coral"
+   ],
+   "desc": "the research station is built on top of the glowing coral",
+   "question": "Is the research station built on top of the glowing coral?"
+  },
+  {
+   "id": "octopus_facing",
+   "type": "state",
+   "of": "octopus",
+   "desc": "the octopus is facing the research station",
+   "question": "Is the octopus facing the research station?"
+  },
+  {
+   "id": "sub_viewport",
+   "type": "relation",
+   "of": [
+    "submarine",
+    "tube"
+   ],
+   "desc": "the submarine's front viewport is facing away from the station",
+   "question": "Is the submarine's front viewport facing away from the station?"
+  },
+  {
+   "id": "arm_pushing",
+   "type": "action",
+   "of": [
+    "arm",
+    "rocks"
+   ],
+   "desc": "the robotic arm is pushing the loose rocks away",
+   "question": "Is the robotic arm pushing the loose rocks away?"
+  },
+  {
+   "id": "diver_under_arm",
+   "type": "relation",
+   "of": [
+    "diver",
+    "arm"
+   ],
+   "desc": "the diver is swimming under the robotic arm",
+   "question": "Is the diver swimming under the robotic arm?"
+  },
+  {
+   "id": "diver_holding",
+   "type": "action",
+   "of": [
+    "diver",
+    "camera"
+   ],
+   "desc": "the diver is holding the camera",
+   "question": "Is the diver holding the camera?"
+  },
+  {
+   "id": "diver_pointing",
+   "type": "action",
+   "of": [
+    "diver",
+    "octopus"
+   ],
+   "desc": "the diver is pointing the camera at the octopus",
+   "question": "Is the diver pointing the camera at the octopus?"
+  },
+  {
+   "id": "viewport_scratched",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the submarine has a slightly scratched viewport",
+   "question": "Does the submarine have a slightly scratched viewport?"
+  },
+  {
+   "id": "sub_viewport_away",
+   "type": "relation",
+   "of": [
+    "submarine",
+    "tube"
+   ],
+   "desc": "the submarine's front viewport is facing away from the station",
+   "question": "Is the submarine's front viewport facing away from the research station?"
+  },
+  {
+   "id": "sub_hull",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the submarine has a smooth metallic hull",
+   "question": "Does the submarine have a smooth metallic hull?"
+  },
+  {
+   "id": "sub_propeller",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the submarine has a propeller on its back",
+   "question": "Does the submarine have a propeller on its back?"
+  },
+  {
+   "id": "octopus_skin",
+   "type": "attribute",
+   "of": "octopus",
+   "desc": "the octopus has soft organic skin",
+   "question": "Does the octopus have soft organic skin?"
+  },
+  {
+   "id": "arm_claw",
+   "type": "attribute",
+   "of": "arm",
+   "desc": "the robotic arm has a claw at its end",
+   "question": "Does the robotic arm have a claw at its end?"
+  },
+  {
+   "id": "wetsuit_newer",
+   "type": "relation",
+   "of": [
+    "diver",
+    "submarine"
+   ],
+   "desc": "the diver's wetsuit appears newer than the submarine's viewport",
+   "question": "Does the diver's wetsuit appear newer than the submarine's viewport?"
+  },
+  {
+   "id": "station_dome",
+   "type": "attribute",
+   "of": "station",
+   "desc": "the research station has a glass dome",
+   "question": "Does the research station have a glass dome?"
+  },
+  {
+   "id": "tube_connection",
+   "type": "relation",
+   "of": [
+    "tube",
+    "submarine",
+    "station"
+   ],
+   "desc": "the flexible tube connects the submarine and the station",
+   "question": "Does the flexible tube connect the submarine and the station?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "coral",
+   "to": "station",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_034",
+ "prompt": "In an underwater laboratory, a small yellow submarine is docked next to a large, glass-domed research station. A giant octopus is wrapping one of its tentacles around the submarine. The smooth, metallic hull of the submarine contrasts with the soft, organic skin of the octopus. The submarine has a propeller on its back. A long robotic arm, which is a component of the research station, is extending towards the octopus, holding a glowing sample container. The octopus has two tentacles touching the station's dome. A group of fish is swimming between the octopus and the submarine, and their number is three times the number of tentacles touching the dome. The research station is built on top of a massive piece of glowing coral. The octopus is facing the research station. The submarine's front viewport is facing away from the station. The robotic arm is pushing some loose rocks away; the number of rocks is one more than the number of tentacles touching the dome. The glowing coral is the brightest light source. A diver in a wetsuit is swimming under the robotic arm, holding a camera and pointing it at the octopus. The diver's modern wetsuit appears newer than the slightly scratched viewport of the submarine. The robotic arm has a claw at its end. The submarine is connected to the station with a flexible tube.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 1,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

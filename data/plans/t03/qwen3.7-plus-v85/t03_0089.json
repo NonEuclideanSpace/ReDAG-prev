@@ -1,0 +1,218 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a log",
+   "question": "Is there a log?",
+   "box": [
+    50,
+    600,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    100,
+    400,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    320,
+    650,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue jacket",
+   "question": "Is there a woman in a blue jacket?",
+   "box": [
+    450,
+    300,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green tent",
+   "question": "Is there a green tent?",
+   "box": [
+    750,
+    400,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue jacket is standing",
+   "question": "Is the woman in the blue jacket standing?"
+  },
+  {
+   "id": "woman_mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue jacket holds a metal mug",
+   "question": "Is the woman in the blue jacket holding a metal mug?"
+  },
+  {
+   "id": "man_on_log",
+   "type": "relation",
+   "of": [
+    "man",
+    "log"
+   ],
+   "desc": "the man in the red scarf sits on the log",
+   "question": "Is the man in the red scarf sitting on the log?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog lies next to the man in the red scarf",
+   "question": "Is the brown dog lying next to the man in the red scarf?"
+  },
+  {
+   "id": "woman_looks_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue jacket looks at the man in the red scarf",
+   "question": "Is the woman in the blue jacket looking at the man in the red scarf?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "trees",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "some pine trees",
+   "question": "Are there some pine trees?",
+   "box": [
+    750,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "tent_near_trees",
+   "type": "relation",
+   "of": [
+    "tent",
+    "trees"
+   ],
+   "desc": "the green tent is near the pine trees",
+   "question": "Is the green tent near the pine trees?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0089",
+ "prompt": "In a photorealistic photo, a man in a red scarf sits on the left side of a mountain campsite. A brown dog lies calmly next to him on the ground. In the center, a woman in a blue jacket stands holding a metal mug. On the right, a green tent is pitched near some pine trees. The woman in the blue jacket looks at the man in the red scarf. The man in the red scarf is sitting on a log. The brown dog is lying down. There is no fire visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

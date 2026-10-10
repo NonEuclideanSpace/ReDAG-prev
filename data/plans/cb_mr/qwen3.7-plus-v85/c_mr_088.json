@@ -1,0 +1,380 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a conference room",
+   "question": "Does the image show a conference room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long rectangular table",
+   "question": "Is there a long rectangular table?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six chairs arranged around the table",
+   "question": "Are there six chairs arranged around the table?",
+   "box": [
+    150,
+    450,
+    874,
+    950
+   ]
+  },
+  {
+   "id": "whiteboard",
+   "type": "entity",
+   "class": "whiteboard",
+   "plural": "whiteboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a whiteboard",
+   "question": "Is there a whiteboard?",
+   "box": [
+    300,
+    100,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "presenter",
+   "type": "entity",
+   "class": "presenter",
+   "plural": "presenters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a presenter",
+   "question": "Is there a presenter?",
+   "box": [
+    450,
+    250,
+    574,
+    600
+   ]
+  },
+  {
+   "id": "diagrams",
+   "type": "relation",
+   "of": [
+    "whiteboard",
+    "screen"
+   ],
+   "desc": "several hand-drawn diagrams on the whiteboard",
+   "question": "Are there several hand-drawn diagrams on the whiteboard?"
+  },
+  {
+   "id": "marker",
+   "type": "attribute",
+   "of": "presenter",
+   "desc": "the presenter holds a marker",
+   "question": "Is the presenter holding a marker?"
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "projection screen",
+   "plural": "projection screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a projection screen narrower than the whiteboard",
+   "question": "Is there a projection screen narrower than the whiteboard?",
+   "box": [
+    350,
+    120,
+    674,
+    380
+   ]
+  },
+  {
+   "id": "chart",
+   "type": "attribute",
+   "of": "screen",
+   "desc": "a bar chart displayed on the projection screen",
+   "question": "Is there a bar chart displayed on the projection screen?"
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a laptop",
+   "question": "Is there a laptop?",
+   "box": [
+    480,
+    650,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "glass",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass of water",
+   "question": "Is there a glass of water?",
+   "box": [
+    610,
+    660,
+    660,
+    740
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "cup",
+   "plural": "cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cup",
+   "question": "Is there a cup?",
+   "box": [
+    670,
+    660,
+    720,
+    740
+   ]
+  },
+  {
+   "id": "pens",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "three pens in the cup",
+   "question": "Are there three pens in the cup?"
+  },
+  {
+   "id": "phone",
+   "type": "entity",
+   "class": "conference phone",
+   "plural": "conference phones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conference phone",
+   "question": "Is there a conference phone?",
+   "box": [
+    500,
+    676,
+    560,
+    724
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    480,
+    50,
+    544,
+    110
+   ]
+  },
+  {
+   "id": "presenter_pointing",
+   "type": "action",
+   "of": [
+    "presenter",
+    "whiteboard"
+   ],
+   "desc": "the presenter points at the whiteboard",
+   "question": "Is the presenter pointing at the whiteboard?"
+  },
+  {
+   "id": "screen_behind_presenter",
+   "type": "relation",
+   "of": [
+    "screen",
+    "presenter"
+   ],
+   "desc": "the projection screen is behind the presenter",
+   "question": "Is the projection screen behind the presenter?"
+  },
+  {
+   "id": "clock_above_screen",
+   "type": "relation",
+   "of": [
+    "clock",
+    "screen"
+   ],
+   "desc": "the clock is above the projection screen",
+   "question": "Is the clock above the projection screen?"
+  },
+  {
+   "id": "laptop_in_front_of_presenter",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "presenter"
+   ],
+   "desc": "the laptop is in front of the presenter",
+   "question": "Is the laptop in front of the presenter?"
+  },
+  {
+   "id": "glass_next_to_laptop",
+   "type": "relation",
+   "of": [
+    "glass",
+    "laptop"
+   ],
+   "desc": "the glass of water is next to the laptop",
+   "question": "Is the glass of water next to the laptop?"
+  },
+  {
+   "id": "cup_next_to_laptop",
+   "type": "relation",
+   "of": [
+    "cup",
+    "laptop"
+   ],
+   "desc": "the cup is next to the laptop",
+   "question": "Is the cup next to the laptop?"
+  },
+  {
+   "id": "phone_at_center",
+   "type": "relation",
+   "of": [
+    "phone",
+    "table"
+   ],
+   "desc": "the conference phone is at the center of the table",
+   "question": "Is the conference phone at the center of the table?"
+  },
+  {
+   "id": "diagrams_more_than_bars",
+   "type": "relation",
+   "of": [
+    "whiteboard",
+    "screen"
+   ],
+   "desc": "the number of diagrams on the whiteboard is greater than the number of bars in the chart",
+   "question": "Is the number of diagrams on the whiteboard greater than the number of bars in the chart?"
+  },
+  {
+   "id": "presenter_standing",
+   "type": "state",
+   "of": "presenter",
+   "desc": "the presenter stands",
+   "question": "Is the presenter standing?"
+  },
+  {
+   "id": "laptop_closer_to_presenter",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "presenter",
+    "phone"
+   ],
+   "desc": "the laptop is closer to the presenter than to the phone",
+   "question": "Is the laptop closer to the presenter than to the conference phone?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a wall with a projection screen and a clock",
+   "question": "Is there a wall with a projection screen and a clock?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "whiteboard_position",
+   "type": "relation",
+   "of": [
+    "whiteboard",
+    "table"
+   ],
+   "desc": "the whiteboard is at the head of the table",
+   "question": "Is the whiteboard at the head of the table?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "glass",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "phone",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_088",
+ "prompt": "A conference room with a long rectangular table in the center, around which are arranged six chairs. A presenter stands at a whiteboard at the head of the table. On the whiteboard are several hand-drawn diagrams. The presenter holds a marker. A projection screen, which is narrower than the whiteboard, is mounted on the wall behind the presenter, displaying a bar chart. The number of diagrams on the whiteboard is greater than the number of bars in the chart. A laptop is placed on the table in front of the presenter. Next to the laptop is a glass of water and a cup containing some pens; the number of pens is half the number of chairs. A conference phone is positioned at the table’s center. A clock is mounted above the projection screen. The presenter is pointing at the whiteboard. The laptop is closer to the presenter than to the phone.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "style": "photorealistic, gritty, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for a parked vehicle",
+   "question": "Is the image set against a neutral background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "motorcycle",
+   "type": "entity",
+   "class": "motorcycle",
+   "plural": "motorcycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a battle-worn motorcycle with rusted black metal frame, armor plates, and mismatched wheels",
+   "question": "Is there a single battle-worn motorcycle?",
+   "box": [
+    100,
+    200,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "frame_material",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the motorcycle frame is made of rusted, black metal",
+   "question": "Is the motorcycle frame made of black metal?"
+  },
+  {
+   "id": "armor_plates",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "additional armor plates welded on the motorcycle",
+   "question": "Are there additional armor plates welded on the motorcycle?"
+  },
+  {
+   "id": "camouflage_plates",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "some armor plates are painted with a yellow camouflage pattern",
+   "question": "Are some of the armor plates painted with a yellow camouflage pattern?"
+  },
+  {
+   "id": "bare_plates",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "some armor plates are bare, rusted metal",
+   "question": "Are some of the armor plates bare, rusted metal?"
+  },
+  {
+   "id": "headlight_cracked",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the single round headlight has a cracked glass lens",
+   "question": "Does the single round headlight have a cracked glass lens?"
+  },
+  {
+   "id": "tank_dented",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the fuel tank is dented",
+   "question": "Is the fuel tank dented?"
+  },
+  {
+   "id": "tank_skull",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the fuel tank has a hand-painted white skull",
+   "question": "Does the fuel tank have a hand-painted white skull?"
+  },
+  {
+   "id": "seat_torn",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the leather seat is torn, exposing the stuffing inside",
+   "question": "Is the leather seat torn?"
+  },
+  {
+   "id": "front_wheel_spoked",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the front wheel is spoked",
+   "question": "Is the front wheel spoked?"
+  },
+  {
+   "id": "rear_wheel_disk",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the rear wheel is a solid disk",
+   "question": "Is the rear wheel a solid disk?"
+  },
+  {
+   "id": "wires_exposed",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "electrical wires are exposed and secured with tape to the frame",
+   "question": "Are electrical wires exposed and secured with tape to the frame?"
+  },
+  {
+   "id": "fluid_leaking",
+   "type": "state",
+   "of": "motorcycle",
+   "desc": "dark fluid is visibly leaking from the engine block",
+   "question": "Is dark fluid visibly leaking from the engine block?"
+  },
+  {
+   "id": "motorcycle_stationary",
+   "type": "state",
+   "of": "motorcycle",
+   "desc": "the motorcycle is parked and stationary",
+   "question": "Is the motorcycle parked?"
+  },
+  {
+   "id": "motorcycle_not_clean",
+   "type": "absent",
+   "desc": "a clean motorcycle",
+   "question": "Is the motorcycle clean?"
+  },
+  {
+   "id": "motorcycle_not_brand_new",
+   "type": "absent",
+   "desc": "a brand new motorcycle",
+   "question": "Is the motorcycle brand new?"
+  },
+  {
+   "id": "motorcycle_not_in_motion",
+   "type": "absent",
+   "desc": "a motorcycle in motion",
+   "question": "Is the motorcycle in motion?"
+  },
+  {
+   "id": "frame_rusted",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the motorcycle frame is rusted",
+   "question": "Is the motorcycle frame rusted?"
+  },
+  {
+   "id": "seat_stuffing_exposed",
+   "type": "attribute",
+   "of": "motorcycle",
+   "desc": "the stuffing inside the leather seat is exposed",
+   "question": "Is the stuffing inside the leather seat exposed?"
+  },
+  {
+   "id": "motorcycle_is_stationary",
+   "type": "state",
+   "of": "motorcycle",
+   "desc": "the motorcycle is stationary",
+   "question": "Is the motorcycle stationary?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_056",
+ "prompt": "A single, battle-worn motorcycle, parked and stationary. Its frame is made of rusted, black metal. It has additional armor plates welded on, some of which are painted with a yellow camouflage pattern while others are just bare, rusted metal. The single round headlight has a cracked glass lens. The fuel tank is dented and has a hand-painted white skull on it. The leather seat is torn, exposing the stuffing inside. It has two mismatched wheels; the front wheel is spoked, and the rear wheel is a solid disk. Some electrical wires are exposed and secured with tape to the frame. A dark fluid is visibly leaking from the engine block. The motorcycle is not clean, it is not brand new, it is not in motion.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

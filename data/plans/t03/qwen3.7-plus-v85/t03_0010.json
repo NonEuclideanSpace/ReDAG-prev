@@ -1,0 +1,178 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden farm during harvest with background fields and a dirt path",
+   "question": "Does the image show a golden farm during harvest?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    750,
+    300,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    100,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a straw hat",
+   "question": "Is there a man in a straw hat?",
+   "box": [
+    650,
+    250,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    400,
+    600,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a woven basket",
+   "question": "Is the woman in the blue apron holding a woven basket?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the straw hat is sitting down",
+   "question": "Is the man in the straw hat sitting down?"
+  },
+  {
+   "id": "man_against_post",
+   "type": "relation",
+   "of": [
+    "man",
+    "fence_post"
+   ],
+   "desc": "the man in the straw hat rests against the wooden fence post",
+   "question": "Is the man in the straw hat resting against the wooden fence post?"
+  },
+  {
+   "id": "woman_looking_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue apron looks at the black cat",
+   "question": "Is the woman in the blue apron looking at the black cat?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the background fields?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron stands",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "cat_walking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat walks",
+   "question": "Is the black cat walking?"
+  },
+  {
+   "id": "dirt_path",
+   "type": "entity",
+   "class": "dirt path",
+   "plural": "dirt paths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dirt path",
+   "question": "Is there a dirt path?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t03_0010",
+ "prompt": "In an anime style scene set on a golden farm during harvest, a woman in a blue apron stands on the left holding a woven basket. A man in a straw hat sits on the right resting against a wooden fence post. Between them in the center, a black cat walks across the dirt path. The woman in the blue apron is looking at the black cat. The man in the straw hat is sitting down. There is no tractor visible in the background fields.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

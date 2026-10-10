@@ -1,0 +1,146 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site",
+   "question": "Does the image depict a construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker wearing a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "steel beam",
+   "plural": "steel beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steel beam",
+   "question": "Is there a steel beam?",
+   "box": [
+    300,
+    600,
+    724,
+    750
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman",
+   "question": "Is there a foreman?",
+   "box": [
+    674,
+    300,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "worker_pointing",
+   "type": "action",
+   "of": [
+    "worker",
+    "beam"
+   ],
+   "desc": "the worker in the yellow hard hat is pointing at the steel beam",
+   "question": "Is the worker in the yellow hard hat pointing at the steel beam?"
+  },
+  {
+   "id": "foreman_looking",
+   "type": "action",
+   "of": [
+    "foreman",
+    "worker"
+   ],
+   "desc": "the foreman with the blue clipboard is looking at the worker in the yellow hard hat",
+   "question": "Is the foreman with the blue clipboard looking at the worker in the yellow hard hat?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery",
+   "question": "Is there any heavy machinery visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is standing",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "beam_horizontal",
+   "type": "state",
+   "of": "beam",
+   "desc": "the steel beam lies horizontally",
+   "question": "Is the steel beam lying horizontally?"
+  },
+  {
+   "id": "foreman_standing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman with the blue clipboard is standing",
+   "question": "Is the foreman with the blue clipboard standing?"
+  },
+  {
+   "id": "foreman_clipboard",
+   "type": "attribute",
+   "of": "foreman",
+   "desc": "the foreman holds a blue clipboard",
+   "question": "Is the foreman holding a blue clipboard?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0059",
+ "prompt": "In a watercolor illustration of a construction site, a worker in a yellow hard hat stands on the left. A steel beam lies horizontally in the center. A foreman with a blue clipboard stands on the right. The worker in the yellow hard hat is pointing at the steel beam. The foreman with the blue clipboard is looking at the worker in the yellow hard hat. There is no heavy machinery.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

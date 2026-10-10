@@ -1,0 +1,127 @@
+{
+ "style": "photorealistic photo, quiet village market at dawn, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market scene",
+   "question": "Does the image show a quiet village market scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "young_boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy",
+   "question": "Is there a young boy?",
+   "box": [
+    600,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman holds a woven basket",
+   "question": "Is the elderly woman holding a woven basket?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "young_boy",
+   "desc": "the young boy looks intently",
+   "question": "Is the young boy looking intently?"
+  },
+  {
+   "id": "boy_looks_at_basket",
+   "type": "relation",
+   "of": [
+    "young_boy",
+    "elderly_woman"
+   ],
+   "desc": "the young boy looks at the basket held by the elderly woman",
+   "question": "Is the young boy looking at the basket held by the elderly woman?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through clouds",
+   "question": "Is there sunlight streaming through clouds in the image?"
+  },
+  {
+   "id": "elderly_woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a blue shawl is standing",
+   "question": "Is the elderly woman in a blue shawl standing?"
+  },
+  {
+   "id": "elderly_woman_shawl",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman wears a blue shawl",
+   "question": "Does the elderly woman wear a blue shawl?"
+  },
+  {
+   "id": "young_boy_cap",
+   "type": "attribute",
+   "of": "young_boy",
+   "desc": "the young boy wears a yellow cap",
+   "question": "Does the young boy wear a yellow cap?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0078",
+ "prompt": "A photorealistic photo captures a quiet village market at dawn. On the left, an elderly woman in a blue shawl stands holding a woven basket. In the center, a young boy in a yellow cap looks intently at the basket she holds. The two figures are engaged in the simple interaction of looking at the object between them. There is no sunlight streaming through the clouds. The scene remains still and focused on these two distinct individuals and their shared moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

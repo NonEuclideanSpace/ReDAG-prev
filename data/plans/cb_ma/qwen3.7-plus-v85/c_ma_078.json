@@ -1,0 +1,159 @@
+{
+ "style": "photorealistic studio photography, high detail, macro",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for a studio shot of an artifact",
+   "question": "Is the background neutral and suitable for a studio shot?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cloth",
+   "type": "entity",
+   "class": "linen cloth",
+   "plural": "linen cloths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sand-coloured linen cloth",
+   "question": "Is there a sand-coloured linen cloth?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "idol",
+   "type": "entity",
+   "class": "idol",
+   "plural": "idols",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single squat basalt idol",
+   "question": "Is there a single squat basalt idol?",
+   "box": [
+    350,
+    250,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "idol_seated",
+   "type": "state",
+   "of": "idol",
+   "desc": "the basalt idol is seated",
+   "question": "Is the basalt idol in a seated position?"
+  },
+  {
+   "id": "idol_on_cloth",
+   "type": "relation",
+   "of": [
+    "idol",
+    "cloth"
+   ],
+   "desc": "the basalt idol is seated on the sand-coloured linen cloth",
+   "question": "Is the basalt idol seated on the sand-coloured linen cloth?"
+  },
+  {
+   "id": "eye_sockets",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "large circular eye sockets inlaid with polished jade discs",
+   "question": "Does the idol have large circular eye sockets inlaid with polished jade discs?"
+  },
+  {
+   "id": "copper_rune",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "a continuous copper-wire rune spiraling about the torso",
+   "question": "Is there a continuous copper-wire rune spiraling about the torso of the idol?"
+  },
+  {
+   "id": "base_glyphs",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "shallow glyphs covering the square base",
+   "question": "Are there shallow glyphs covering the square base of the basalt idol?"
+  },
+  {
+   "id": "dust_in_grooves",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "fine desert dust settling in the grooves of the glyphs",
+   "question": "Is fine desert dust visible settling in the grooves of the glyphs on the basalt idol?"
+  },
+  {
+   "id": "no_fractures",
+   "type": "absent",
+   "desc": "fractures in the stone",
+   "question": "Are there any fractures in the stone of the basalt idol?"
+  },
+  {
+   "id": "no_moss",
+   "type": "absent",
+   "desc": "moss on the stone",
+   "question": "Is there any moss on the stone of the basalt idol?"
+  },
+  {
+   "id": "no_corrosion",
+   "type": "absent",
+   "desc": "corrosion on the copper wire",
+   "question": "Is there any corrosion on the copper wire of the basalt idol?"
+  },
+  {
+   "id": "idol_material",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "the idol is carved from dark grey volcanic stone speckled with tiny glittering pyrite",
+   "question": "Is the idol carved from dark grey volcanic stone speckled with tiny glittering pyrite?"
+  },
+  {
+   "id": "rune_glow",
+   "type": "attribute",
+   "of": "idol",
+   "desc": "the copper-wire rune glows pale green",
+   "question": "Does the copper-wire rune on the idol glow pale green?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cloth",
+   "to": "idol",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_078",
+ "prompt": "Show a single squat basalt idol seated on a sand-coloured linen cloth. The idol is carved from dark grey volcanic stone speckled with tiny glittering pyrite. Large circular eye sockets are inlaid with polished jade discs. A continuous copper-wire rune spirals about the torso, glowing pale green. Shallow glyphs cover the square base, and fine desert dust settles in the grooves. The stone exhibits no fractures, no moss, and the copper shows no corrosion.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node idol: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

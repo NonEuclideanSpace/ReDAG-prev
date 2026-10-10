@@ -1,0 +1,105 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "server",
+   "type": "entity",
+   "class": "server",
+   "plural": "servers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a server in a blue apron",
+   "question": "Is there a server in a blue apron?",
+   "box": [
+    574,
+    150,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "chef_holding_tray",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef in a white hat holds a silver tray",
+   "question": "Is the chef in a white hat holding a silver tray?"
+  },
+  {
+   "id": "server_looking_chef",
+   "type": "action",
+   "of": [
+    "server",
+    "chef"
+   ],
+   "desc": "the server in a blue apron looks at the chef in a white hat",
+   "question": "Is the server in a blue apron looking at the chef in a white hat?"
+  },
+  {
+   "id": "chef_handing_server",
+   "type": "action",
+   "of": [
+    "chef",
+    "server"
+   ],
+   "desc": "the chef in a white hat hands the silver tray to the server in a blue apron",
+   "question": "Is the chef in a white hat handing the silver tray to the server in a blue apron?"
+  },
+  {
+   "id": "no_cat",
+   "type": "absent",
+   "desc": "a cat",
+   "question": "Is there a cat visible in the image?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in a white hat is standing",
+   "question": "Is the chef in a white hat standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0073",
+ "prompt": "In a cinematic film still, a chef in a white hat stands on the left side of a busy restaurant kitchen. A server in a blue apron is positioned on the right. The chef is holding a silver tray. The server is looking at the chef. The chef is handing the tray to the server. There is no cat visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

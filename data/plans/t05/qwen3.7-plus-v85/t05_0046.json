@@ -1,0 +1,295 @@
+{
+ "style": "soft watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court under a pale sky",
+   "question": "Does the image show a beach volleyball court under a pale sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall player in blue shorts",
+   "question": "Is there a tall player in blue shorts?",
+   "box": [
+    50,
+    100,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    400,
+    200,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "high chair",
+   "plural": "high chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a high chair",
+   "question": "Is there a high chair?",
+   "box": [
+    420,
+    400,
+    580,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    620,
+    600,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a yellow hat",
+   "question": "Is there a spectator in a yellow hat?",
+   "box": [
+    750,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red cooler",
+   "question": "Is there a red cooler?",
+   "box": [
+    850,
+    700,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball",
+   "question": "Is there a volleyball?",
+   "box": [
+    250,
+    50,
+    350,
+    150
+   ]
+  },
+  {
+   "id": "player_midair",
+   "type": "state",
+   "of": "player",
+   "desc": "the tall player in blue shorts is mid-air",
+   "question": "Is the tall player in blue shorts mid-air?"
+  },
+  {
+   "id": "player_arm_raised",
+   "type": "state",
+   "of": "player",
+   "desc": "the tall player in blue shorts has one arm raised high",
+   "question": "Does the tall player in blue shorts have one arm raised high?"
+  },
+  {
+   "id": "referee_sitting",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt is sitting",
+   "question": "Is the referee in a striped shirt sitting?"
+  },
+  {
+   "id": "referee_pointing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt is pointing firmly toward the right",
+   "question": "Is the referee in a striped shirt pointing firmly toward the right?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting calmly",
+   "question": "Is the small brown dog sitting calmly?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is looking up",
+   "question": "Is the small brown dog looking up?"
+  },
+  {
+   "id": "spectator_leaning",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a yellow hat is leaning forward",
+   "question": "Is the spectator in a yellow hat leaning forward?"
+  },
+  {
+   "id": "spectator_watching",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a yellow hat is watching with focused eyes",
+   "question": "Is the spectator in a yellow hat watching with focused eyes?"
+  },
+  {
+   "id": "cooler_lid_ajar",
+   "type": "attribute",
+   "of": "cooler",
+   "desc": "the red cooler has its lid slightly ajar",
+   "question": "Is the lid of the red cooler slightly ajar?"
+  },
+  {
+   "id": "player_spiking",
+   "type": "action",
+   "of": [
+    "player",
+    "ball"
+   ],
+   "desc": "the tall player in blue shorts spikes the volleyball",
+   "question": "Is the tall player in blue shorts spiking the volleyball?"
+  },
+  {
+   "id": "referee_on_chair",
+   "type": "relation",
+   "of": [
+    "referee",
+    "chair"
+   ],
+   "desc": "the referee in a striped shirt sits on the high chair",
+   "question": "Is the referee in a striped shirt sitting on the high chair?"
+  },
+  {
+   "id": "dog_next_to_referee",
+   "type": "relation",
+   "of": [
+    "dog",
+    "referee"
+   ],
+   "desc": "the small brown dog is next to the referee in a striped shirt",
+   "question": "Is the small brown dog next to the referee in a striped shirt?"
+  },
+  {
+   "id": "spectator_beside_cooler",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "cooler"
+   ],
+   "desc": "the red cooler lies beside the spectator in a yellow hat",
+   "question": "Does the red cooler lie beside the spectator in a yellow hat?"
+  },
+  {
+   "id": "player_opposite_spectator",
+   "type": "relation",
+   "of": [
+    "player",
+    "spectator"
+   ],
+   "desc": "the tall player in blue shorts is positioned opposite the spectator in a yellow hat across the net",
+   "question": "Is the tall player in blue shorts positioned opposite the spectator in a yellow hat across the net?"
+  },
+  {
+   "id": "no_scoreboard",
+   "type": "absent",
+   "desc": "a scoreboard",
+   "question": "Is there a visible scoreboard in the background?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    300,
+    400,
+    724,
+    800
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "referee",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0046",
+ "prompt": "In a soft watercolor illustration, a beach volleyball tournament unfolds under a pale sky. On the left stands a tall player in blue shorts, mid-air with one arm raised high to spike the ball. In the center, a referee in a striped shirt sits on a high chair, pointing firmly toward the right side of the court. Next to the referee, a small brown dog sits calmly on the sand, looking up at the official. On the right, a spectator in a yellow hat leans forward, watching the intense play with focused eyes. Beside this spectator lies a red cooler, its lid slightly ajar. The tall player in blue shorts is positioned directly opposite the spectator in the yellow hat across the net. The small brown dog is situated immediately next to the referee in the striped shirt. There is no visible scoreboard in the background. The scene captures the dynamic motion and casual atmosphere of the match through fluid washes of color, highlighting the distinct figures and their specific actions without clutter or distraction.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,648 @@
+{
+ "style": "surreal digital art, magical realism, dramatic lighting, stroboscopic shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered office room with a wall and an open window",
+   "question": "Does the image show a cluttered office room with a wall and an open window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cluttered desk",
+   "question": "Is there a cluttered desk?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overhead desk lamp",
+   "question": "Is there an overhead desk lamp?",
+   "box": [
+    400,
+    50,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee cup resting upside-down",
+   "question": "Is there a coffee cup resting upside-down?",
+   "box": [
+    200,
+    650,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "steam",
+   "type": "entity",
+   "class": "steam",
+   "plural": "steams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "curling steam rising from the upside-down coffee cup",
+   "question": "Is there curling steam rising from the upside-down coffee cup?",
+   "box": [
+    220,
+    550,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "papers",
+   "type": "entity",
+   "class": "loose papers",
+   "plural": "loose papers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a precarious stack of loose papers inscribed with text",
+   "question": "Is there a precarious stack of loose papers inscribed with text?",
+   "box": [
+    600,
+    620,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "filing cabinet",
+   "plural": "filing cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted filing cabinet",
+   "question": "Is there a rusted filing cabinet?",
+   "box": [
+    50,
+    400,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    100,
+    350,
+    300,
+    450
+   ]
+  },
+  {
+   "id": "pen",
+   "type": "entity",
+   "class": "pen",
+   "plural": "pens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pen with a rubber grip",
+   "question": "Is there a pen with a rubber grip?",
+   "box": [
+    700,
+    700,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted plant",
+   "question": "Is there a potted plant?",
+   "box": [
+    650,
+    750,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "mouse",
+   "type": "entity",
+   "class": "mouse",
+   "plural": "mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mouse clinging to a loose thread",
+   "question": "Is there a mouse clinging to a loose thread?",
+   "box": [
+    850,
+    300,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "tapestry",
+   "type": "entity",
+   "class": "tapestry",
+   "plural": "tapestries",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-unraveled tapestry",
+   "question": "Is there a half-unraveled tapestry?",
+   "box": [
+    800,
+    100,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "alcove",
+   "type": "entity",
+   "class": "alcove",
+   "plural": "alcoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hidden alcove",
+   "question": "Is there a hidden alcove?",
+   "box": [
+    300,
+    450,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open book",
+   "question": "Is there a half-open book?",
+   "box": [
+    400,
+    650,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "cup_upside_down",
+   "type": "state",
+   "of": "cup",
+   "desc": "the coffee cup is upside-down",
+   "question": "Is the coffee cup upside-down?"
+  },
+  {
+   "id": "cat_arched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat has an arched back",
+   "question": "Does the cat have an arched back?"
+  },
+  {
+   "id": "plant_glowing",
+   "type": "state",
+   "of": "plant",
+   "desc": "the potted plant is glowing faintly",
+   "question": "Is the potted plant glowing faintly?"
+  },
+  {
+   "id": "cabinet_rotating",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the filing cabinet is rotating",
+   "question": "Is the filing cabinet rotating?"
+  },
+  {
+   "id": "book_turning",
+   "type": "state",
+   "of": "book",
+   "desc": "the book's pages are turning by themselves",
+   "question": "Are the book's pages turning by themselves?"
+  },
+  {
+   "id": "steam_rising",
+   "type": "action",
+   "of": [
+    "steam",
+    "lamp"
+   ],
+   "desc": "steam curls from the cup toward the lamp",
+   "question": "Does steam curl from the cup toward the lamp?"
+  },
+  {
+   "id": "papers_rustling",
+   "type": "state",
+   "of": "papers",
+   "desc": "the loose papers are fluttering",
+   "question": "Are the loose papers fluttering?"
+  },
+  {
+   "id": "cat_on_cabinet",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cabinet"
+   ],
+   "desc": "the cat perches on the edge of the filing cabinet",
+   "question": "Is the cat perching on the edge of the filing cabinet?"
+  },
+  {
+   "id": "pen_in_plant",
+   "type": "relation",
+   "of": [
+    "pen",
+    "plant"
+   ],
+   "desc": "the pen is lodged in the soil of the potted plant",
+   "question": "Is the pen lodged in the soil of the potted plant?"
+  },
+  {
+   "id": "mouse_on_tapestry",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "tapestry"
+   ],
+   "desc": "the mouse clings to a thread of the tapestry",
+   "question": "Is the mouse clinging to a thread of the tapestry?"
+  },
+  {
+   "id": "cup_on_desk",
+   "type": "relation",
+   "of": [
+    "cup",
+    "desk"
+   ],
+   "desc": "the coffee cup rests on the desk",
+   "question": "Does the coffee cup rest on the desk?"
+  },
+  {
+   "id": "papers_on_desk",
+   "type": "relation",
+   "of": [
+    "papers",
+    "desk"
+   ],
+   "desc": "the loose papers are on the desk",
+   "question": "Are the loose papers on the desk?"
+  },
+  {
+   "id": "book_on_desk",
+   "type": "relation",
+   "of": [
+    "book",
+    "desk"
+   ],
+   "desc": "the book lies on the desk",
+   "question": "Does the book lie on the desk?"
+  },
+  {
+   "id": "plant_on_desk",
+   "type": "relation",
+   "of": [
+    "plant",
+    "desk"
+   ],
+   "desc": "the potted plant is on the desk",
+   "question": "Is the potted plant on the desk?"
+  },
+  {
+   "id": "lamp_above_desk",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "desk"
+   ],
+   "desc": "the lamp is above the desk",
+   "question": "Is the lamp above the desk?"
+  },
+  {
+   "id": "tapestry_on_wall",
+   "type": "state",
+   "of": "tapestry",
+   "desc": "the tapestry is on the wall",
+   "question": "Is the tapestry on the wall?"
+  },
+  {
+   "id": "alcove_on_wall",
+   "type": "state",
+   "of": "alcove",
+   "desc": "the hidden alcove is in the wall",
+   "question": "Is the hidden alcove located in the wall?"
+  },
+  {
+   "id": "thread",
+   "type": "entity",
+   "class": "thread",
+   "plural": "threads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose thread dangling from the tapestry",
+   "question": "Is there a loose thread dangling from the tapestry?",
+   "box": [
+    850,
+    400,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "mouse_clinging",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "thread"
+   ],
+   "desc": "the mouse is clinging to the thread",
+   "question": "Is the mouse clinging to the thread?"
+  },
+  {
+   "id": "pen_dripping",
+   "type": "attribute",
+   "of": "pen",
+   "desc": "the pen drips black ink into the soil",
+   "question": "Does the pen drip black ink into the soil?"
+  },
+  {
+   "id": "cat_fascinated",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat shows fascination (arched back, fixed eyes)",
+   "question": "Does the cat show fascination with arched back and fixed eyes?"
+  },
+  {
+   "id": "alcove_contains_clocks",
+   "type": "attribute",
+   "of": "alcove",
+   "desc": "the alcove contains multiple clocks running backward",
+   "question": "Does the alcove contain multiple clocks running backward?"
+  },
+  {
+   "id": "book_sketch_transforms",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the book page shows a sketch transforming from cup to cat to pen",
+   "question": "Does the book page show a sketch transforming from a cup to a cat to a pen?"
+  },
+  {
+   "id": "lamp_pulsing",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "book"
+   ],
+   "desc": "the lamp pulses in time with the book",
+   "question": "Does the lamp pulse in time with the book?"
+  },
+  {
+   "id": "objects_frozen",
+   "type": "state",
+   "of": "cup",
+   "desc": "the coffee cup is frozen mid-motion",
+   "question": "Is the coffee cup frozen mid-motion?"
+  },
+  {
+   "id": "cup_handle_curled",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "the coffee cup has a handle curled like a question mark",
+   "question": "Is the handle of the upside-down coffee cup curled?"
+  },
+  {
+   "id": "cabinet_above_desk",
+   "type": "relation",
+   "of": [
+    "cabinet",
+    "desk"
+   ],
+   "desc": "the rusted filing cabinet is above the desk",
+   "question": "Is the rusted filing cabinet positioned above the desk?"
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bookshelf",
+   "question": "Is there a bookshelf in the image?",
+   "box": [
+    800,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "pen_rolling_off_bookshelf",
+   "type": "action",
+   "of": [
+    "pen",
+    "bookshelf"
+   ],
+   "desc": "the pen rolls off the bookshelf",
+   "question": "Is the pen rolling off the bookshelf?"
+  },
+  {
+   "id": "mouse_in_plant",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "plant"
+   ],
+   "desc": "the mouse is in the potted plant",
+   "question": "Is the mouse located in the potted plant?"
+  },
+  {
+   "id": "alcove_revealed",
+   "type": "relation",
+   "of": [
+    "alcove",
+    "cabinet"
+   ],
+   "desc": "the hidden alcove is revealed by the angle of the cabinet and wall",
+   "question": "Is the hidden alcove visible due to the positioning of the cabinet and wall?"
+  },
+  {
+   "id": "book_ink_visible",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the book pages have ink rearranging into new words",
+   "question": "Are there visible words or ink on the pages of the half-open book?"
+  },
+  {
+   "id": "plant_near_bookshelf",
+   "type": "relation",
+   "of": [
+    "plant",
+    "bookshelf"
+   ],
+   "desc": "the potted plant is near the bookshelf",
+   "question": "Is the potted plant near the bookshelf?"
+  },
+  {
+   "id": "plant_glowing_veins",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "the potted plant has glowing bioluminescent veins",
+   "question": "Does the potted plant have glowing bioluminescent veins?"
+  },
+  {
+   "id": "alcove_clocks",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "multiple clocks",
+   "question": "Are there multiple clocks in the alcove?",
+   "box": [
+    650,
+    150,
+    850,
+    250
+   ]
+  },
+  {
+   "id": "clocks_backward",
+   "type": "attribute",
+   "of": "alcove_clocks",
+   "desc": "the clocks in the alcove run backward",
+   "question": "Do the clocks in the alcove run backward?"
+  },
+  {
+   "id": "cabinet_warping",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the filing cabinet sides are warping",
+   "question": "Are the filing cabinet sides warping?"
+  },
+  {
+   "id": "cat_frozen",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is frozen mid-motion",
+   "question": "Is the cat frozen mid-motion?"
+  },
+  {
+   "id": "pen_frozen",
+   "type": "state",
+   "of": "pen",
+   "desc": "the pen is frozen mid-motion",
+   "question": "Is the pen frozen mid-motion?"
+  },
+  {
+   "id": "mouse_frozen",
+   "type": "state",
+   "of": "mouse",
+   "desc": "the mouse is frozen mid-motion",
+   "question": "Is the mouse frozen mid-motion?"
+  },
+  {
+   "id": "cabinet_frozen",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the filing cabinet is frozen mid-motion",
+   "question": "Is the filing cabinet frozen mid-motion?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "papers",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "plant",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0096",
+ "prompt": "The cluttered desk is a chaotic altar of creation and entropy, where the coffee cup rests upside-down, its handle curled like a question mark, steam curling lazily toward the overhead desk lamp that flickers like a dying star, casting stroboscopic shadows over a room thick with the musk of old paper and machine oil. The breeze from the open window—cool, insistent, and oddly musical—sweeps through the office, rustling a precarious stack of loose papers that flutter like startled birds, each sheet inscribed with fragments of a half-finished screenplay, equations in invisible ink, and the looping, frantic script of a person sleepwalking in their thoughts. Above the desk, the cat perches on the edge of a rusted filing cabinet, tail flicking with the kind of silent amusement only felines know, eyes fixed on a pen rolling across the desk like a demented marionette—its rubber grip tapping rhythmically on the surface until it tumbles off the bookshelf into the arms of a potted plant that sways in protest, uprooting a nap-taking mouse that clings desperately to a loose thread dangling from a half-unraveled tapestry on the wall. The pen, now lodged in the soil, drips ink into the earth, coloring the soil black, and in response, the plant begins to glow faintly, its veins pulsing like bioluminescent rivers, causing the cat to arch its back in sudden fascination. Below, the filing cabinet, sensing the shift in attention, begins to creak and rotate on its axis, its metal sides warping slightly, as if trying to fold itself into the wall it faces, creating a flickering, impossible angle where the wall and cabinet become one—space bending just enough to reveal a hidden alcove filled with clocks, each one running backward at different speeds, their ticking harmonizing into a strange, inverted lullaby. A single book lies half-open on the desk, its pages turning by themselves, though no wind touches them—ink rearranging into new words as if rewritten by the room itself, and on one page, a sketch of the coffee cup transforms into a drawing of the cat, which in turn morphs into the rolling pen, as though the room were drafting its own surreal blueprint. The flickering lamp begins to pulse in time with the shifting book, and for a moment, all the objects—coffee cup, cat, pen, mouse, filing cabinet—freeze mid-motion, suspended in a shared breath of stillness before the world snaps back into motion, as though caught in a loop of recursive storytelling.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 69,
+   "n_uncovered": 11,
+   "proposed": 11,
+   "ungrounded": 3,
+   "added": 8,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

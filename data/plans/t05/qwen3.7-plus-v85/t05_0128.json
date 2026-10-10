@@ -1,0 +1,241 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image depict a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    550,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "lamppost",
+   "type": "entity",
+   "class": "lamppost",
+   "plural": "lampposts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall lamppost",
+   "question": "Is there a tall lamppost?",
+   "box": [
+    450,
+    50,
+    574,
+    600
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black suitcase",
+   "question": "Is there a black suitcase?",
+   "box": [
+    750,
+    800,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "man_lantern",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a lantern",
+   "question": "Is the man in the red scarf holding a lantern?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "man_looking_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is looking at the woman in the blue coat",
+   "question": "Is the man in the red scarf looking at the woman in the blue coat?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the brown dog is on the wooden bench",
+   "question": "Is the brown dog on the wooden bench?"
+  },
+  {
+   "id": "lamppost_behind_bench",
+   "type": "relation",
+   "of": [
+    "lamppost",
+    "bench"
+   ],
+   "desc": "the tall lamppost is behind the wooden bench",
+   "question": "Is the tall lamppost behind the wooden bench?"
+  },
+  {
+   "id": "suitcase_next_to_woman",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "woman"
+   ],
+   "desc": "the black suitcase is next to the woman in the blue coat",
+   "question": "Is the black suitcase next to the woman in the blue coat?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "woman_waiting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is waiting",
+   "question": "Is the woman in the blue coat waiting?"
+  },
+  {
+   "id": "woman_hands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat has her hands in her pockets",
+   "question": "Does the woman in the blue coat have her hands in her pockets?"
+  },
+  {
+   "id": "lamppost_glow",
+   "type": "state",
+   "of": "lamppost",
+   "desc": "the tall lamppost casts a soft glow",
+   "question": "Is the tall lamppost casting a soft glow?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0128",
+ "prompt": "This watercolor illustration depicts a snowy town square. On the left stands a man in a red scarf holding a lantern. In the center sits a brown dog on a wooden bench. To the right waits a woman in a blue coat with her hands in her pockets. Behind the bench leans a tall lamppost casting a soft glow. Next to the woman rests a black suitcase on the snow. The man in the red scarf is looking at the woman in the blue coat. The brown dog is sitting on the wooden bench. The woman in the blue coat is standing next to the black suitcase. The tall lamppost is positioned behind the wooden bench. The man in the red scarf is located on the left side of the scene. The brown dog is located in the center of the scene. The woman in the blue coat is located on the right side of the scene. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

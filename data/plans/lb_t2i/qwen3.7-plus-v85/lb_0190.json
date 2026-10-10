@@ -1,0 +1,375 @@
+{
+ "style": "surreal photorealistic, high contrast, dramatic lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen with a cracked and warped floor tilting to the right, a wall with a small fogged window showing a street scene with cars moving in reverse and a tree shedding blossoms backward",
+   "question": "Does the image show a kitchen interior with a cracked floor, a wall, and a small fogged window revealing a surreal street scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "countertop",
+   "type": "entity",
+   "class": "countertop",
+   "plural": "countertops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished stainless steel countertop",
+   "question": "Is there a polished stainless steel countertop?",
+   "box": [
+    0,
+    400,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "candy",
+   "type": "entity",
+   "class": "candy",
+   "plural": "candies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-melted red Lifesaver candy",
+   "question": "Is there a half-melted red Lifesaver candy?",
+   "box": [
+    100,
+    380,
+    200,
+    450
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow ceramic bowl",
+   "question": "Is there a shallow ceramic bowl?",
+   "box": [
+    300,
+    500,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn smooth wooden spoon",
+   "question": "Is there a worn smooth wooden spoon?",
+   "box": [
+    350,
+    520,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "newspaper",
+   "type": "entity",
+   "class": "newspaper",
+   "plural": "newspapers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolled-up newspaper with a peeling corner",
+   "question": "Is there a rolled-up newspaper with a peeling corner?",
+   "box": [
+    650,
+    550,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green ceramic mug with a cracked handle",
+   "question": "Is there a green ceramic mug with a cracked handle?",
+   "box": [
+    800,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "lights",
+   "type": "entity",
+   "class": "christmas lights",
+   "plural": "christmas lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a string of Christmas lights",
+   "question": "Is there a string of Christmas lights?",
+   "box": [
+    400,
+    100,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly",
+   "question": "Is there a fly?",
+   "box": [
+    176,
+    346,
+    224,
+    394
+   ]
+  },
+  {
+   "id": "soup_hovering",
+   "type": "state",
+   "of": "bowl",
+   "desc": "a spoonful of soup from the bowl is hovering in the air above the bowl",
+   "question": "Is a spoonful of soup hovering in the air above the bowl?"
+  },
+  {
+   "id": "steam_soup",
+   "type": "state",
+   "of": "bowl",
+   "desc": "wisps of steam rising from the tomato soup in the bowl",
+   "question": "Are wisps of steam rising from the tomato soup in the bowl?"
+  },
+  {
+   "id": "steam_mug",
+   "type": "state",
+   "of": "mug",
+   "desc": "faint steam rising from the green mug",
+   "question": "Is faint steam rising from the green mug?"
+  },
+  {
+   "id": "candy_on_countertop",
+   "type": "relation",
+   "of": [
+    "candy",
+    "countertop"
+   ],
+   "desc": "the red candy clings to the edge of the stainless steel countertop",
+   "question": "Is the red candy clinging to the edge of the stainless steel countertop?"
+  },
+  {
+   "id": "spoon_in_bowl",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "bowl"
+   ],
+   "desc": "the wooden spoon lies diagonally across the shallow ceramic bowl",
+   "question": "Is the wooden spoon lying diagonally across the shallow ceramic bowl?"
+  },
+  {
+   "id": "newspaper_next_to_mug",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "mug"
+   ],
+   "desc": "the rolled-up newspaper is wedged against the green ceramic mug",
+   "question": "Is the rolled-up newspaper wedged against the green ceramic mug?"
+  },
+  {
+   "id": "lights_above_bowl",
+   "type": "relation",
+   "of": [
+    "lights",
+    "bowl"
+   ],
+   "desc": "the string of Christmas lights hangs above the bowl",
+   "question": "Do the Christmas lights hang above the bowl?"
+  },
+  {
+   "id": "fly_near_candy",
+   "type": "relation",
+   "of": [
+    "fly",
+    "candy"
+   ],
+   "desc": "the fly is hovering near the red candy",
+   "question": "Is the fly hovering near the red candy?"
+  },
+  {
+   "id": "soup_bubbling",
+   "type": "state",
+   "of": "bowl",
+   "desc": "the tomato soup in the bowl is bubbling faintly",
+   "question": "Is the tomato soup in the bowl bubbling faintly?"
+  },
+  {
+   "id": "spoon_stirring",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the wooden spoon is stirring on its own",
+   "question": "Is the wooden spoon stirring on its own?"
+  },
+  {
+   "id": "soup_suspended",
+   "type": "state",
+   "of": "bowl",
+   "desc": "a spoonful of soup lifted by the spoon is suspended in the air",
+   "question": "Is a spoonful of soup suspended in the air above the bowl?"
+  },
+  {
+   "id": "newspaper_photo",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the newspaper displays a photograph of the kitchen",
+   "question": "Does the newspaper display a photograph of the kitchen?"
+  },
+  {
+   "id": "spoon_beside_candy",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "candy"
+   ],
+   "desc": "the wooden spoon lies beside the red Lifesaver candy",
+   "question": "Is the wooden spoon lying beside the red Lifesaver candy?"
+  },
+  {
+   "id": "newspaper_photo_soup",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "bowl"
+   ],
+   "desc": "the photograph on the newspaper shows untouched soup",
+   "question": "Does the photograph on the newspaper show untouched soup?"
+  },
+  {
+   "id": "soup_in_bowl",
+   "type": "attribute",
+   "of": "bowl",
+   "desc": "the bowl contains tomato soup",
+   "question": "Does the bowl contain tomato soup?"
+  },
+  {
+   "id": "photo_candy_whole",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the photograph on the newspaper shows a whole Lifesaver",
+   "question": "Does the photograph on the newspaper show a whole Lifesaver?"
+  },
+  {
+   "id": "photo_soup_untouched",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the photograph on the newspaper shows untouched soup",
+   "question": "Does the photograph on the newspaper show untouched soup?"
+  },
+  {
+   "id": "photo_fly_present",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "fly"
+   ],
+   "desc": "the photograph on the newspaper shows the fly present",
+   "question": "Does the photograph on the newspaper show the fly present?"
+  },
+  {
+   "id": "photo_spoon_stirring",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "spoon"
+   ],
+   "desc": "the photograph on the newspaper shows the spoon stirring",
+   "question": "Does the photograph on the newspaper show the spoon stirring?"
+  },
+  {
+   "id": "newspaper_text",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the newspaper bears visible text and cryptic symbols",
+   "question": "Does the newspaper bear visible text and cryptic symbols?"
+  },
+  {
+   "id": "lights_dangling",
+   "type": "state",
+   "of": "lights",
+   "desc": "the Christmas lights are dangling from the wall",
+   "question": "Are the Christmas lights dangling from the wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "countertop",
+   "to": "candy",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "bowl",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "newspaper",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0190",
+ "prompt": "A half-melted red \"Lifesaver\" clings to the edge of a polished stainless steel countertop, its candy surface catching the stark, unflinching glare of a single overhead kitchen light, as if it were the only source of truth in a room suspended between reality and delusion. Beside it, a wooden spoon, worn smooth by countless stirs, lies diagonally across a shallow ceramic bowl, its tines still catching wisps of lukewarm tomato soup that bubble faintly in defiance of stillness, while delicate tendrils of steam twist lazily into the still air, ghosting over the edges of a rolled-up newspaper wedged against a green ceramic mug, its handle cracked but enduring. The newspaper, its top corner peeling as if someone’s hand had paused in the act of turning a page, bears headlines in a language that shifts slightly with each glance, morphing between readable words and cryptic symbols, as if the room itself is uncertain whether to inform or confuse. The mug, steaming faintly from the warmth of a now-absent drink, seems to echo the spoon’s motion—its green glaze shimmering like a living thing as it reflects the red candy’s glow, not with clarity, but with distortion, as though the reflection is caught between dimensions. Above the bowl, a string of Christmas lights dangles from a phantom nail in the wall, each bulb flickering in time with the spoon’s gentle tremor, suggesting that the entire kitchen is humming to an unheard rhythm, an unseen pulse guiding the objects’ slow dance of transformation. The floor, cracked and warped with age, tilts imperceptibly to the right, bending the light’s path and making shadows stretch like sentient things, while a shadow of the spoon doubles back on itself, overlapping with the newspaper’s shifting script and the candy’s trembling glow in a tangle of occlusion and recursion. A small window, its pane fogged and distorted, shows a view of a street where cars move in reverse, their headlights casting forward into the past, while a tree outside the glass blooms backward, shedding blossoms that return to its roots in slow motion. The air carries the faint scent of burnt toast and something else—something sweet and unplaceable, like memory turned to vapor—hinting at a presence lingering just beyond the scene’s edges, watching, waiting. A fly hovers near the Lifesaver, its wings catching the overhead light in a shimmer of impossible clarity, before vanishing in a flicker that seems to ripple through the spoon, the mug, and the newspaper, as if the act of vanishing is contagious. The spoon begins to stir on its own, lifting a spoonful of soup into the air, which does not fall but instead hovers, suspended by the same logic that allows the floor to tilt and the window to see time in reverse. The newspaper turns the page of its own accord, revealing a photograph of the kitchen itself, frozen in a moment just before this one, where the Lifesaver is whole, the soup is untouched, and the fly is still present—except now, in the reflected version, the spoon has already begun to stir. It is a scene of quiet, impossible coherence, a place where time and space blur into a tapestry of recursive moments, where every object is both cause and effect, and every shadow tells a different story.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 39,
+   "n_uncovered": 5,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

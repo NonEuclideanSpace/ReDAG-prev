@@ -1,0 +1,151 @@
+{
+ "style": "photorealistic studio photography, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a royal-purple curtain",
+   "question": "Is there a royal-purple curtain in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cushion",
+   "type": "entity",
+   "class": "cushion",
+   "plural": "cushions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black velvet cushion",
+   "question": "Is there a black velvet cushion?",
+   "box": [
+    256,
+    600,
+    768,
+    950
+   ]
+  },
+  {
+   "id": "crown",
+   "type": "entity",
+   "class": "crown",
+   "plural": "crowns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate golden crown",
+   "question": "Is there an ornate golden crown?",
+   "box": [
+    350,
+    450,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "crown_baroque",
+   "type": "attribute",
+   "of": "crown",
+   "desc": "the crown exhibits a baroque design with eight arched prongs",
+   "question": "Does the crown exhibit a baroque design with eight arched prongs?"
+  },
+  {
+   "id": "crown_sapphires",
+   "type": "attribute",
+   "of": "crown",
+   "desc": "each prong of the crown is capped by a deep-blue oval sapphire",
+   "question": "Is each prong of the crown capped by a deep-blue oval sapphire?"
+  },
+  {
+   "id": "crown_engravings",
+   "type": "attribute",
+   "of": "crown",
+   "desc": "intricate floral engravings wind around the solid-gold band of the crown",
+   "question": "Do intricate floral engravings wind around the solid-gold band of the crown?"
+  },
+  {
+   "id": "crown_lining",
+   "type": "attribute",
+   "of": "crown",
+   "desc": "a plush red-velvet lining is visible inside the ring of the crown",
+   "question": "Is a plush red-velvet lining visible inside the ring of the crown?"
+  },
+  {
+   "id": "crown_on_cushion",
+   "type": "relation",
+   "of": [
+    "crown",
+    "cushion"
+   ],
+   "desc": "the crown rests upon the cushion",
+   "question": "Is the crown resting upon the cushion?"
+  },
+  {
+   "id": "cushion_before_curtain",
+   "type": "state",
+   "of": "cushion",
+   "desc": "the cushion is before the curtain",
+   "question": "Is the cushion positioned in front of the royal-purple curtain?"
+  },
+  {
+   "id": "spotlight",
+   "type": "state",
+   "of": "crown",
+   "desc": "the crown is struck by a focused white spotlight creating bright highlights",
+   "question": "Is the crown struck by a focused white spotlight creating bright highlights on the metal and gems?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the crown",
+   "question": "Is there any rust on the crown?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic components in the crown",
+   "question": "Are there any plastic components in the crown?"
+  },
+  {
+   "id": "cushion_trim",
+   "type": "attribute",
+   "of": "cushion",
+   "desc": "the cushion features a gleaming gold-braided trim",
+   "question": "Does the cushion feature a gleaming gold-braided trim?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cushion",
+   "to": "crown",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_066",
+ "prompt": "Visualise an ornate golden crown resting upon a black velvet cushion before a royal-purple curtain. The crown exhibits a baroque design with eight arched prongs, each prong capped by a deep-blue oval sapphire. Intricate floral engravings wind around the solid-gold band, and a plush red-velvet lining is visible inside the ring. The cushion features a gleaming gold-braided trim. A focused white spotlight strikes the crown, creating bright highlights on metal and gems. Although historic, the crown bears no rust and contains no plastic components anywhere.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

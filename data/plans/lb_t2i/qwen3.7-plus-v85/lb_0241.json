@@ -1,0 +1,583 @@
+{
+ "style": "cinematic surrealism, dramatic lighting, dust motes, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior with a window and a table",
+   "question": "Does the image show a kitchen interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table surface",
+   "question": "Is there a wooden table surface?",
+   "box": [
+    0,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "game_board",
+   "type": "entity",
+   "class": "game board",
+   "plural": "game boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cardboard game board",
+   "question": "Is there a cardboard game board?",
+   "box": [
+    300,
+    550,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mug of coffee",
+   "question": "Is there a mug of coffee?",
+   "box": [
+    820,
+    520,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "card_stack",
+   "type": "entity",
+   "class": "playing card",
+   "plural": "playing cards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of playing cards",
+   "question": "Is there a stack of playing cards?",
+   "box": [
+    750,
+    600,
+    850,
+    680
+   ]
+  },
+  {
+   "id": "loose_card",
+   "type": "entity",
+   "class": "playing card",
+   "plural": "playing cards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single glossy playing card",
+   "question": "Is there a single glossy playing card?",
+   "box": [
+    600,
+    650,
+    700,
+    720
+   ]
+  },
+  {
+   "id": "action_figure",
+   "type": "entity",
+   "class": "action figure",
+   "plural": "action figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red plastic action figure",
+   "question": "Is there a red plastic action figure?",
+   "box": [
+    620,
+    700,
+    720,
+    800
+   ]
+  },
+  {
+   "id": "child_hand",
+   "type": "entity",
+   "class": "hand",
+   "plural": "hands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small paint-streaked child’s hand",
+   "question": "Is there a small paint-streaked child’s hand?",
+   "box": [
+    0,
+    400,
+    150,
+    600
+   ]
+  },
+  {
+   "id": "die",
+   "type": "entity",
+   "class": "die",
+   "plural": "dice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sharp plastic die",
+   "question": "Is there a sharp plastic die?",
+   "box": [
+    450,
+    480,
+    520,
+    550
+   ]
+  },
+  {
+   "id": "blocks",
+   "type": "entity",
+   "class": "building block",
+   "plural": "building blocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of colorful building blocks",
+   "question": "Is there a stack of colorful building blocks?",
+   "box": [
+    850,
+    550,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open dog-eared book",
+   "question": "Is there a half-open dog-eared book?",
+   "box": [
+    100,
+    900,
+    300,
+    1024
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "framed photograph",
+   "plural": "framed photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a framed photograph",
+   "question": "Is there a framed photograph?",
+   "box": [
+    400,
+    50,
+    600,
+    250
+   ]
+  },
+  {
+   "id": "floor_debris",
+   "type": "entity",
+   "class": "debris",
+   "plural": "debris",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stickers, stamps, and puzzle pieces",
+   "question": "Are there stickers, stamps, and puzzle pieces?",
+   "box": [
+    0,
+    900,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "feather",
+   "type": "entity",
+   "class": "feather",
+   "plural": "feathers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single feather floating in the air",
+   "question": "Is there a single feather floating in the air?",
+   "box": [
+    200,
+    300,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "mug_shadow",
+   "type": "relation",
+   "of": [
+    "mug",
+    "card_stack"
+   ],
+   "desc": "the shadow of the mug stretches over the stack of playing cards",
+   "question": "Does the shadow of the mug stretch over the stack of playing cards?"
+  },
+  {
+   "id": "loose_card_on_figure",
+   "type": "relation",
+   "of": [
+    "loose_card",
+    "action_figure"
+   ],
+   "desc": "the loose playing card rests on top of the action figure",
+   "question": "Does the loose playing card rest on top of the action figure?"
+  },
+  {
+   "id": "figure_in_debris",
+   "type": "state",
+   "of": "action_figure",
+   "desc": "the action figure is half-buried in debris",
+   "question": "Is the action figure half-buried in debris?"
+  },
+  {
+   "id": "hand_holding_die",
+   "type": "action",
+   "of": [
+    "child_hand",
+    "die"
+   ],
+   "desc": "the child’s hand holds the die hovering above the game board",
+   "question": "Is the child’s hand holding the die hovering above the game board?"
+  },
+  {
+   "id": "blocks_on_table_edge",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "table"
+   ],
+   "desc": "the stack of building blocks teeters on the edge of the table",
+   "question": "Does the stack of building blocks teeter on the edge of the table?"
+  },
+  {
+   "id": "book_on_floor",
+   "type": "state",
+   "of": "book",
+   "desc": "the book lies on the floor",
+   "question": "Does the book lie on the floor?"
+  },
+  {
+   "id": "photo_on_wall",
+   "type": "state",
+   "of": "photo",
+   "desc": "the framed photograph hangs on the wall",
+   "question": "Does the framed photograph hang on the wall?"
+  },
+  {
+   "id": "debris_on_floor",
+   "type": "state",
+   "of": "floor_debris",
+   "desc": "the stickers, stamps, and puzzle pieces are on the floor",
+   "question": "Are the stickers, stamps, and puzzle pieces on the floor?"
+  },
+  {
+   "id": "game_board_on_table",
+   "type": "relation",
+   "of": [
+    "game_board",
+    "table"
+   ],
+   "desc": "the game board lies on the table",
+   "question": "Is the game board lying on the table?"
+  },
+  {
+   "id": "mug_on_table",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "the mug of coffee sits on the table",
+   "question": "Is the mug of coffee sitting on the table?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open window",
+   "question": "Is there a half-open window?",
+   "box": [
+    0,
+    0,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "game_board_state",
+   "type": "state",
+   "of": "game_board",
+   "desc": "the game board lies in quiet decay",
+   "question": "Does the game board appear abandoned or in decay?"
+  },
+  {
+   "id": "mug_cooling",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug of coffee appears to be cooling",
+   "question": "Does the mug of coffee appear to be cooling (no steam)?"
+  },
+  {
+   "id": "figure_arm_splayed",
+   "type": "state",
+   "of": "action_figure",
+   "desc": "the action figure has one arm splayed out",
+   "question": "Does the action figure have one arm splayed out?"
+  },
+  {
+   "id": "die_motion",
+   "type": "state",
+   "of": "die",
+   "desc": "the die appears to be in motion",
+   "question": "Does the die appear to be in motion (blurred)?"
+  },
+  {
+   "id": "blocks_teetering",
+   "type": "state",
+   "of": "blocks",
+   "desc": "the stack of building blocks teeters precariously",
+   "question": "Does the stack of building blocks appear to be teetering precariously?"
+  },
+  {
+   "id": "photo_askew",
+   "type": "state",
+   "of": "photo",
+   "desc": "the framed photograph hangs slightly askew",
+   "question": "Is the framed photograph hanging slightly askew?"
+  },
+  {
+   "id": "feather_drifting",
+   "type": "state",
+   "of": "feather",
+   "desc": "the feather drifts slowly",
+   "question": "Does the feather appear to be drifting slowly?"
+  },
+  {
+   "id": "hand_emerges",
+   "type": "state",
+   "of": "child_hand",
+   "desc": "the child’s hand emerges from the edge of the frame",
+   "question": "Does the child’s hand emerge from the edge of the image frame?"
+  },
+  {
+   "id": "die_above_board",
+   "type": "relation",
+   "of": [
+    "die",
+    "game_board"
+   ],
+   "desc": "the die hovers just above the game board",
+   "question": "Is the die hovering just above the game board?"
+  },
+  {
+   "id": "blocks_half_sun_half_shadow",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "window"
+   ],
+   "desc": "the building blocks are half in sunlight and half in shadow from the window",
+   "question": "Are the building blocks half in sunlight and half in shadow?"
+  },
+  {
+   "id": "blocks_behind_figure",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "action_figure"
+   ],
+   "desc": "the stack of colorful building blocks is behind the action figure",
+   "question": "Is the stack of colorful building blocks behind the action figure?"
+  },
+  {
+   "id": "hand_near_board",
+   "type": "relation",
+   "of": [
+    "child_hand",
+    "game_board"
+   ],
+   "desc": "the child’s hand is near the game board",
+   "question": "Is the child’s hand near the game board?"
+  },
+  {
+   "id": "blocks_numbers_match_die",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "die"
+   ],
+   "desc": "the numbers on the building blocks match the symbols on the die",
+   "question": "Do the numbers on the building blocks match the symbols on the die?"
+  },
+  {
+   "id": "game_board_frayed",
+   "type": "attribute",
+   "of": "game_board",
+   "desc": "the game board has frayed edges",
+   "question": "Does the game board have frayed edges?"
+  },
+  {
+   "id": "game_board_scores",
+   "type": "attribute",
+   "of": "game_board",
+   "desc": "the game board has faded pencil scores",
+   "question": "Does the game board have faded pencil scores?"
+  },
+  {
+   "id": "cards_insignias",
+   "type": "attribute",
+   "of": "card_stack",
+   "desc": "the playing cards bear strange insignias",
+   "question": "Do the playing cards bear strange insignias?"
+  },
+  {
+   "id": "loose_card_symbols",
+   "type": "attribute",
+   "of": "loose_card",
+   "desc": "the loose playing card has strange symbols",
+   "question": "Does the loose playing card have strange symbols?"
+  },
+  {
+   "id": "figure_weathered",
+   "type": "attribute",
+   "of": "action_figure",
+   "desc": "the action figure is weathered, scuffed and marked by gouges",
+   "question": "Is the action figure weathered, scuffed and marked by gouges?"
+  },
+  {
+   "id": "die_icons",
+   "type": "attribute",
+   "of": "die",
+   "desc": "the die has pips showing animal, celestial and tool icons",
+   "question": "Does the die have pips showing animal, celestial and tool icons?"
+  },
+  {
+   "id": "blocks_numbers",
+   "type": "attribute",
+   "of": "blocks",
+   "desc": "the building blocks are etched with numbers",
+   "question": "Are the building blocks etched with numbers?"
+  },
+  {
+   "id": "book_diagrams",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the book pages depict elaborate diagrams of game mechanics",
+   "question": "Do the book pages depict elaborate diagrams of game mechanics?"
+  },
+  {
+   "id": "photo_content",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the photograph depicts a family gathered around a similar game board",
+   "question": "Does the photograph depict a family gathered around a similar game board?"
+  },
+  {
+   "id": "mug_condensation",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug has condensation",
+   "question": "Does the mug have condensation?"
+  },
+  {
+   "id": "die_suspended",
+   "type": "state",
+   "of": "die",
+   "desc": "the die is suspended in the air",
+   "question": "Is the die suspended in the air?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "game_board",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "card_stack",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "action_figure",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "blocks",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0241",
+ "prompt": "Sunlight slices through the kitchen window like a blade of gold, cutting through the dust-laden air and casting jagged patterns across the surface of the table, where a game board—its cardboard edges frayed and pencil scores faded with time—lies in quiet decay, as if abandoned mid-play. A single, cooling mug of coffee sits nearby, its shadow stretching long and dark over a stack of playing cards, each bearing the strange insignias of a forgotten civilization or a made-up mythology, as if the game itself is an ancient prophecy. One card has slipped free, its glossy surface catching the light as it rests on top of a red plastic action figure, half-buried in the debris, its arm splayed out like a fallen hero, as if frozen mid-defeat. A small, paint-streaked child’s hand emerges from the edge of the frame, its tiny fingers curled around a die—sharp, plastic, and still in motion—hovering just above the game board like a suspended fate, the moment before it lands. The die’s pips glint with strange symbols, not just dots but tiny icons of animals, celestial bodies, and tools, as if each number holds a secret power or a consequence. Around the table, the air is thick with suspended motes of dust and the faint scent of coffee and acrylic paint, a hint of the creative chaos that preceded this frozen moment. The action figure, though plastic, seems oddly weathered—its face scuffed and its body marked by faint gouges, as if it had seen battles in another dimension or a child’s vivid imagination. Behind it, a stack of colorful building blocks teeters precariously on the edge of the table, half in the sunlight and half in shadow, each one etched with numbers that match the die in the child’s hand, as if they were part of the same game—or a system beyond it. A book, half-open and dog-eared, lies open on the floor, its pages depicting elaborate diagrams of game mechanics that seem to loop into themselves, suggesting that the game is not just being played but evolving, rewriting its own rules as it goes. In the background, a framed photograph hangs slightly askew, depicting a family gathered around a similar game board years ago, their faces frozen in time but their eyes alight with the same anticipation that now fills the air in this surreal present. The floor beneath the table is covered in a mosaic of stickers, stamps, and puzzle pieces, all seemingly arranged in a pattern that hints at a hidden meaning, as if the game extends beyond the table and into the very architecture of the room. A single feather, caught in a breeze from a half-open window, drifts slowly toward the table, as if drawn to the scene like a ghost of the past or a herald of what’s to come. Every object seems to relate to the next in a chain of dependencies—cards influencing the figure, the figure anchoring the story, the die deciding the outcome, and the die’s symbols echoing in the block patterns and the book’s diagrams. The space is not just filled with objects but with meaning, with cause and effect, with the weight of choices and the possibility of new ones. It is a moment suspended between play and history, between reality and imagination, between the known and the unknown, a scene that is at once ordinary and utterly impossible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 11,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 52,
+   "n_uncovered": 4,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "figure_half_buried",
+     "figure_in_debris"
+    ]
+   ]
+  }
+ }
+}

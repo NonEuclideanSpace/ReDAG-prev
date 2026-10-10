@@ -1,0 +1,299 @@
+{
+ "style": "anime style, clear lines, vibrant colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception hall",
+   "question": "Does the image show a wedding reception hall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    400,
+    150,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    250,
+    180,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "guest_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    700,
+    300,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    720,
+    400,
+    880,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    750,
+    550,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    50,
+    200,
+    220,
+    900
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a bouquet",
+   "question": "Is the bride holding a bouquet?"
+  },
+  {
+   "id": "groom_smile",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom has a gentle smile",
+   "question": "Does the groom have a gentle smile?"
+  },
+  {
+   "id": "groom_looks_bride",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom looks at the bride",
+   "question": "Is the groom looking at the bride?"
+  },
+  {
+   "id": "guest_sits",
+   "type": "state",
+   "of": "guest_woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "guest_points",
+   "type": "action",
+   "of": [
+    "guest_woman",
+    "bride",
+    "groom"
+   ],
+   "desc": "the woman in the blue dress points at the bride and groom",
+   "question": "Is the woman in the blue dress pointing at the bride and groom?"
+  },
+  {
+   "id": "dog_rests",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bride"
+   ],
+   "desc": "the small brown dog rests its head on the woman's lap",
+   "question": "Does the small brown dog rest its head on the woman's lap?"
+  },
+  {
+   "id": "waiter_hands",
+   "type": "action",
+   "of": [
+    "waiter",
+    "groom"
+   ],
+   "desc": "the waiter hands a glass to the groom",
+   "question": "Is the waiter handing a glass to the groom?"
+  },
+  {
+   "id": "groom_left_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom is to the left of the bride",
+   "question": "Is the groom to the left of the bride?"
+  },
+  {
+   "id": "guest_right_couple",
+   "type": "relation",
+   "of": [
+    "guest_woman",
+    "bride"
+   ],
+   "desc": "the woman in the blue dress is to the right of the couple",
+   "question": "Is the woman in the blue dress to the right of the couple?"
+  },
+  {
+   "id": "dog_on_guest",
+   "type": "relation",
+   "of": [
+    "dog",
+    "guest_woman"
+   ],
+   "desc": "the dog is on the lap of the woman in the blue dress",
+   "question": "Is the dog on the lap of the woman in the blue dress?"
+  },
+  {
+   "id": "waiter_far_left",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "groom"
+   ],
+   "desc": "the waiter is to the far left of the groom",
+   "question": "Is the waiter to the far left of the groom?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake",
+   "question": "Is there a cake visible in the image?"
+  },
+  {
+   "id": "bride_stands",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown stands",
+   "question": "Is the bride in a white gown standing?"
+  },
+  {
+   "id": "waiter_extends_arm",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a white apron extends his arm",
+   "question": "Is the waiter in a white apron extending his arm?"
+  },
+  {
+   "id": "dog_still",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is still",
+   "question": "Is the small brown dog still?"
+  },
+  {
+   "id": "bride_grip",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride holds the bouquet tightly",
+   "question": "Is the bride holding the bouquet tightly?"
+  },
+  {
+   "id": "groom_eye_contact",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom maintains eye contact with the bride",
+   "question": "Does the groom maintain eye contact with the bride?"
+  },
+  {
+   "id": "waiter_champagne",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter holds a glass of champagne",
+   "question": "Is the glass held by the waiter filled with champagne?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "guest_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0148",
+ "prompt": "In an anime style wedding reception, a bride in a white gown stands center, holding a bouquet. To her left, a groom in a black tuxedo looks at her with a gentle smile. A woman in a blue dress sits on a chair to the right, pointing at the couple. Next to the seated woman, a small brown dog rests its head on her lap. On the far left, a waiter in a white apron is handing a glass of champagne to the groom. The scene captures the moment of celebration with clear lines and vibrant colors typical of the genre. There is no cake visible on any table. The bride holds the bouquet tightly. The groom maintains eye contact with the bride. The woman in blue points directly at the newlyweds. The dog remains still on the woman's lap. The waiter extends his arm to offer the drink. The spatial arrangement places the couple centrally, flanked by the guest and the staff member, creating a balanced composition focused on the exchange of vows and congratulations.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

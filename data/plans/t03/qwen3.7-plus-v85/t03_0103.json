@@ -1,0 +1,210 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop",
+   "question": "Does the image show a pottery workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    320,
+    150,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    450,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "clay bowl",
+   "plural": "clay bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wet clay bowl",
+   "question": "Is there a wet clay bowl?",
+   "box": [
+    500,
+    450,
+    600,
+    550
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat",
+   "question": "Is there a small white cat?",
+   "box": [
+    750,
+    550,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "wooden stool",
+   "plural": "wooden stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stool",
+   "question": "Is there a wooden stool?",
+   "box": [
+    720,
+    650,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue apron is looking at the man",
+   "question": "Is the woman in the blue apron looking towards the man?"
+  },
+  {
+   "id": "man_holding",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man with glasses holds the wet clay bowl",
+   "question": "Is the man with glasses holding the wet clay bowl?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat is sitting",
+   "question": "Is the small white cat sitting?"
+  },
+  {
+   "id": "woman_beside_wheel",
+   "type": "relation",
+   "of": [
+    "woman",
+    "wheel"
+   ],
+   "desc": "the woman in the blue apron stands beside the spinning pottery wheel",
+   "question": "Is the woman in the blue apron standing beside the spinning pottery wheel?"
+  },
+  {
+   "id": "cat_on_stool",
+   "type": "relation",
+   "of": [
+    "cat",
+    "stool"
+   ],
+   "desc": "the small white cat sits on the wooden stool",
+   "question": "Is the small white cat sitting on the wooden stool?"
+  },
+  {
+   "id": "no_kiln",
+   "type": "absent",
+   "desc": "an electric kiln",
+   "question": "Is there an electric kiln visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_glasses",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears glasses",
+   "question": "Does the man wear glasses?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0103",
+ "prompt": "A photorealistic photo captures a pottery workshop scene. On the left, a woman in a blue apron stands beside a spinning wheel. In the center, a man with glasses holds a wet clay bowl. On the right, a small white cat sits on a wooden stool. The woman is looking at the man. The man is holding the clay bowl. The cat is sitting on the stool. There is no electric kiln visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

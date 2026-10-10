@@ -1,0 +1,304 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station with neutral walls",
+   "question": "Does the image show the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter_yellow",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in yellow gear",
+   "question": "Is there a tall firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    280,
+    500,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red fire truck",
+   "question": "Is there a large red fire truck?",
+   "box": [
+    350,
+    200,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older mechanic in blue overalls",
+   "question": "Is there an older mechanic in blue overalls?",
+   "box": [
+    760,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "recruit",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young recruit",
+   "question": "Is there a young recruit?",
+   "box": [
+    880,
+    350,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    850,
+    750,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "helmet",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forgotten helmet",
+   "question": "Is there a helmet?",
+   "box": [
+    900,
+    780,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter_yellow",
+   "desc": "the firefighter in yellow gear holds a coiled hose loosely at his side",
+   "question": "Is the firefighter in yellow gear holding a coiled hose loosely at his side?"
+  },
+  {
+   "id": "dalmatian_head_tilted",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian has its head tilted curiously upward",
+   "question": "Is the dalmatian's head tilted curiously upward?"
+  },
+  {
+   "id": "dalmatian_looking_firefighter",
+   "type": "action",
+   "of": [
+    "dalmatian",
+    "firefighter_yellow"
+   ],
+   "desc": "the dalmatian is looking at the firefighter in yellow gear",
+   "question": "Is the dalmatian looking at the firefighter in yellow gear?"
+  },
+  {
+   "id": "mechanic_leaning_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic in blue overalls leans against the tire of the fire truck",
+   "question": "Is the mechanic in blue overalls leaning against the tire of the fire truck?"
+  },
+  {
+   "id": "mechanic_wiping_hands",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic in blue overalls wipes his hands with a rag",
+   "question": "Is the mechanic in blue overalls wiping his hands with a rag?"
+  },
+  {
+   "id": "mechanic_pointing_engine",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "recruit"
+   ],
+   "desc": "the mechanic in blue overalls is pointing at the engine block while explaining to the recruit",
+   "question": "Is the mechanic in blue overalls pointing at the engine block while interacting with the recruit?"
+  },
+  {
+   "id": "recruit_listening",
+   "type": "state",
+   "of": "recruit",
+   "desc": "the young recruit listens intently",
+   "question": "Is the young recruit listening intently?"
+  },
+  {
+   "id": "recruit_holding_clipboard",
+   "type": "attribute",
+   "of": "recruit",
+   "desc": "the young recruit holds a clipboard tight against his chest",
+   "question": "Is the young recruit holding a clipboard tight against his chest?"
+  },
+  {
+   "id": "helmet_on_bench",
+   "type": "relation",
+   "of": [
+    "helmet",
+    "bench"
+   ],
+   "desc": "the helmet rests on the wooden bench",
+   "question": "Is the helmet resting on the wooden bench?"
+  },
+  {
+   "id": "firefighter_next_to_dog",
+   "type": "relation",
+   "of": [
+    "firefighter_yellow",
+    "dalmatian"
+   ],
+   "desc": "the firefighter in yellow gear stands next to the dalmatian",
+   "question": "Is the firefighter in yellow gear standing next to the dalmatian?"
+  },
+  {
+   "id": "no_flame_smoke",
+   "type": "absent",
+   "desc": "visible flame",
+   "question": "Are there any visible flames in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter_yellow",
+   "desc": "the firefighter in yellow gear stands",
+   "question": "Is the firefighter in yellow gear standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian sits",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "mechanic_pointing_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic in blue overalls points at the fire truck",
+   "question": "Is the mechanic in blue overalls pointing at the fire truck?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  },
+  {
+   "id": "recruit_shirt",
+   "type": "attribute",
+   "of": "recruit",
+   "desc": "the young recruit wears a crisp white shirt",
+   "question": "Does the young recruit wear a crisp white shirt?"
+  },
+  {
+   "id": "mechanic_grease",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "there is grease on the mechanic's hands",
+   "question": "Is there grease on the mechanic's hands?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "visible smoke",
+   "question": "Is there any visible smoke in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "helmet",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0071",
+ "prompt": "Rendered in a pencil sketch with light color wash, the interior of a fire station bustles with quiet activity. On the left stands a tall firefighter in yellow gear, holding a coiled hose loosely at his side. Next to him, near the center, sits a dalmatian with black spots, its head tilted curiously upward. The dog is looking at the firefighter, creating a gentle bond between man and beast. In the center background, a large red fire truck dominates the space, its chrome bumper gleaming faintly under the sketched shadows. To the right of the truck, an older mechanic in blue overalls leans against the tire, wiping grease from his hands with a rag. He is pointing at the engine block, explaining something to the young recruit beside him. This recruit, wearing a crisp white shirt, listens intently while holding a clipboard tight against his chest. In the foreground on the far right, a wooden bench holds a forgotten helmet, resting alone. The firefighter in yellow gear is standing next to the dalmatian, anchoring the left side of the composition. The mechanic in blue overalls is interacting with the recruit by pointing, drawing attention to the mechanical details. There is no visible flame or smoke in the scene, keeping the atmosphere calm and preparatory rather than chaotic. The lines are soft yet distinct, capturing the texture of the rubber hose and the fabric of the uniforms without heavy shading. The color wash adds subtle warmth to the red truck and the yellow gear, contrasting with the cool blues of the mechanic's attire and the neutral tones of the station walls.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

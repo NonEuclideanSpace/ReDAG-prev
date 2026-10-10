@@ -1,0 +1,200 @@
+{
+ "style": "dark fantasy, photorealistic, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark, cavernous space",
+   "question": "Is the background a dark, cavernous space?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal chain",
+   "question": "Is there a metal chain?",
+   "box": [
+    480,
+    0,
+    544,
+    300
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate magical lantern",
+   "question": "Is there an ornate magical lantern?",
+   "box": [
+    360,
+    300,
+    664,
+    700
+   ]
+  },
+  {
+   "id": "light_source",
+   "type": "entity",
+   "class": "ball of light",
+   "plural": "balls of light",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single small spherical ball of white light",
+   "question": "Is there a single small spherical ball of white light?",
+   "box": [
+    480,
+    450,
+    544,
+    514
+   ]
+  },
+  {
+   "id": "lantern_hanging",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "chain"
+   ],
+   "desc": "the lantern hangs from the chain",
+   "question": "Does the lantern hang from the chain?"
+  },
+  {
+   "id": "frame_material",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern's frame is made of rusted, black, wrought metal with elaborate swirling patterns",
+   "question": "Is the lantern's frame made of rusted, black, wrought metal with elaborate swirling patterns?"
+  },
+  {
+   "id": "panels_count",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern has four main panels made of stained glass",
+   "question": "Does the lantern have four main panels made of stained glass?"
+  },
+  {
+   "id": "panel_scenes",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "each panel depicts a different scene with a different dominant color",
+   "question": "Does each panel depict a different scene with a different dominant color?"
+  },
+  {
+   "id": "glass_condition",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the glass panels are dusty",
+   "question": "Are the glass panels dusty?"
+  },
+  {
+   "id": "handle_condition",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the curved wooden handle is weathered and splintered",
+   "question": "Is the curved wooden handle weathered and splintered?"
+  },
+  {
+   "id": "light_floating",
+   "type": "state",
+   "of": "light_source",
+   "desc": "the ball of white light is floating inside the lantern",
+   "question": "Is the ball of white light floating inside the lantern?"
+  },
+  {
+   "id": "no_candle_bulb",
+   "type": "absent",
+   "desc": "a candle acting as the light source",
+   "question": "Is there a candle acting as the light source?"
+  },
+  {
+   "id": "no_polished_metal",
+   "type": "absent",
+   "desc": "polished metal on the lantern frame",
+   "question": "Is the metal on the lantern frame polished?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows in the background",
+   "question": "Are there any windows in the background?"
+  },
+  {
+   "id": "lantern_old",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern is old-looking",
+   "question": "Does the lantern look old?"
+  },
+  {
+   "id": "light_source_inside",
+   "type": "relation",
+   "of": [
+    "light_source",
+    "lantern"
+   ],
+   "desc": "the ball of white light is inside the lantern",
+   "question": "Is the ball of white light inside the lantern?"
+  },
+  {
+   "id": "panels_cracked",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "some of the glass panels are cracked",
+   "question": "Are some of the glass panels cracked?"
+  },
+  {
+   "id": "no_bulb",
+   "type": "absent",
+   "desc": "a bulb acting as the light source",
+   "question": "Is there a bulb acting as the light source?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chain",
+   "to": "lantern",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_050",
+ "prompt": "A single, ornate, old-looking magical lantern, hanging from a chain in a dark, cavernous space. Its frame is made of rusted, black, wrought metal with elaborate, swirling patterns. The lantern has four main panels made of stained glass, and each panel depicts a different scene with a different dominant color. The glass is dusty and some of the panels are cracked. Inside, the light source is a single, small, spherical ball of white light that is floating. The lantern has a curved wooden handle at the top which is weathered and splintered. The metal frame is very detailed and intricate. The lantern is not modern, its light source is not a candle or bulb and its metal is not polished.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node lantern: entity question is long (22 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

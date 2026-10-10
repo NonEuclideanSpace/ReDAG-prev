@@ -1,0 +1,133 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a vintage train dining car interior with tables",
+   "question": "Does the image show the interior of a vintage train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in an emerald velvet dress",
+   "question": "Is there a woman in an emerald velvet dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a crisp white apron",
+   "question": "Is there a waiter in a crisp white apron?",
+   "box": [
+    380,
+    180,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tweed cap",
+   "question": "Is there a man in a tweed cap?",
+   "box": [
+    670,
+    220,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the emerald velvet dress is sitting rigidly upright",
+   "question": "Is the woman in the emerald velvet dress sitting rigidly upright?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the crisp white apron is standing",
+   "question": "Is the waiter in the crisp white apron standing?"
+  },
+  {
+   "id": "waiter_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the crisp white apron holds a silver tray",
+   "question": "Is the waiter in the crisp white apron holding a silver tray?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tweed cap leans forward eagerly",
+   "question": "Is the man in the tweed cap leaning forward eagerly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "waiter",
+    "man"
+   ],
+   "desc": "the waiter hands a small glass of amber liquid to the man in the tweed cap",
+   "question": "Is the waiter handing a small glass of amber liquid to the man in the tweed cap?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the emerald velvet dress looks at the man in the tweed cap",
+   "question": "Is the woman in the emerald velvet dress looking at the man in the tweed cap?"
+  },
+  {
+   "id": "no_food",
+   "type": "absent",
+   "desc": "food on the table",
+   "question": "Is there any food on the table?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0051",
+ "prompt": "A cinematic film still captures a tense moment in a vintage train dining car. On the left, a woman in a emerald velvet dress sits rigidly upright. In the center, a waiter in a crisp white apron stands holding a silver tray. To the right, a man in a tweed cap leans forward eagerly. The waiter is handing a small glass of amber liquid to the man in the tweed cap. The woman in the emerald velvet dress is looking at the man in the tweed cap. There is no food on the table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,331 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling wedding reception hall with tables and decorations",
+   "question": "Does the image depict a bustling wedding reception hall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white lace gown",
+   "question": "Is there a bride in a white lace gown?",
+   "box": [
+    50,
+    150,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    320,
+    150,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a blue suit",
+   "question": "Is there a small child in a blue suit?",
+   "box": [
+    400,
+    600,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    420,
+    650,
+    580,
+    980
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever with a red collar",
+   "question": "Is there a golden retriever with a red collar?",
+   "box": [
+    620,
+    650,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    200,
+    200,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a purple dress",
+   "question": "Is there an elderly woman in a purple dress?",
+   "box": [
+    850,
+    200,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "wedding cake",
+   "plural": "wedding cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wedding cake",
+   "question": "Is there a wedding cake?",
+   "box": [
+    900,
+    700,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a bouquet of pink roses",
+   "question": "Is the bride holding a bouquet of pink roses?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom is smiling",
+   "question": "Is the groom smiling?"
+  },
+  {
+   "id": "groom_adjusting",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom is adjusting his bowtie",
+   "question": "Is the groom adjusting his bowtie?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is sitting",
+   "question": "Is the child sitting?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is reaching out eagerly",
+   "question": "Is the child reaching out eagerly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting calmly",
+   "question": "Is the golden retriever sitting calmly?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is looking up",
+   "question": "Is the golden retriever looking up?"
+  },
+  {
+   "id": "waiter_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter carries a silver tray with champagne glasses",
+   "question": "Is the waiter carrying a silver tray with champagne glasses?"
+  },
+  {
+   "id": "elderly_woman_pointing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is pointing excitedly",
+   "question": "Is the elderly woman pointing excitedly?"
+  },
+  {
+   "id": "bride_next_to_groom",
+   "type": "relation",
+   "of": [
+    "bride",
+    "groom"
+   ],
+   "desc": "the bride is next to the groom",
+   "question": "Is the bride next to the groom?"
+  },
+  {
+   "id": "child_on_chair",
+   "type": "relation",
+   "of": [
+    "child",
+    "chair"
+   ],
+   "desc": "the child sits on the wooden chair",
+   "question": "Is the child sitting on the wooden chair?"
+  },
+  {
+   "id": "dog_beside_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the golden retriever sits beside the child",
+   "question": "Is the golden retriever sitting beside the child?"
+  },
+  {
+   "id": "waiter_behind_group",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "bride"
+   ],
+   "desc": "the waiter is behind the bride and groom",
+   "question": "Is the waiter positioned behind the bride and groom?"
+  },
+  {
+   "id": "waiter_moving_toward_table",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is moving toward a table in the background",
+   "question": "Is the waiter moving toward a table in the background?"
+  },
+  {
+   "id": "elderly_woman_right",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "cake"
+   ],
+   "desc": "the elderly woman is on the far right near the cake",
+   "question": "Is the elderly woman on the far right near the cake?"
+  },
+  {
+   "id": "bride_handing_flower",
+   "type": "action",
+   "of": [
+    "bride",
+    "child"
+   ],
+   "desc": "the bride is handing a flower to the child",
+   "question": "Is the bride handing a flower to the child?"
+  },
+  {
+   "id": "groom_looking_at_bride",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom is looking at the bride",
+   "question": "Is the groom looking at the bride?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white lace gown stands",
+   "question": "Is the bride in a white lace gown standing?"
+  },
+  {
+   "id": "dog_looking_at_couple",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bride",
+    "groom"
+   ],
+   "desc": "the golden retriever looks up at the bride and groom",
+   "question": "Is the golden retriever looking up at the bride and groom?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0082",
+ "prompt": "In an anime style scene at a bustling wedding reception, a bride in a white lace gown stands on the left, holding a bouquet of pink roses. Next to her on the right, a groom in a black tuxedo smiles warmly while adjusting his bowtie. Centered in the foreground, a small child in a blue suit sits on a wooden chair, reaching out eagerly. A golden retriever with a red collar sits calmly beside the child, looking up at the couple. Behind them, a waiter in a white apron carries a silver tray with champagne glasses, moving toward the table. On the far right, an elderly woman in a purple dress points excitedly at the cake. The bride is handing a flower to the child. The groom is looking at the bride. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

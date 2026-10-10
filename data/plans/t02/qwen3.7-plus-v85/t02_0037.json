@@ -1,0 +1,86 @@
+{
+ "style": "anime style, night scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop at night",
+   "question": "Does the image show a rooftop at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black suit",
+   "question": "Is there a man in a black suit?",
+   "box": [
+    574,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a champagne flute",
+   "question": "Is the woman in a blue dress holding a champagne flute?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black suit looks at the woman in a blue dress",
+   "question": "Is the man in a black suit looking at the woman in a blue dress?"
+  },
+  {
+   "id": "no_music_equipment",
+   "type": "absent",
+   "desc": "music equipment",
+   "question": "Is there any music equipment visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0037",
+ "prompt": "In anime style, a rooftop party at night features a woman in a blue dress on the left and a man in a black suit on the right. The woman in a blue dress is holding a champagne flute. The man in a black suit is looking at the woman in a blue dress. There is no music equipment visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

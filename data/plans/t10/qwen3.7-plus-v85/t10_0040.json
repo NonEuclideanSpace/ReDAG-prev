@@ -1,0 +1,334 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station with brick walls",
+   "question": "Does the image show the interior of a fire station with brick walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow boots",
+   "question": "Is there a firefighter wearing yellow boots?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "helmet",
+   "type": "entity",
+   "class": "red helmet",
+   "plural": "red helmets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny red helmet",
+   "question": "Is there a shiny red helmet?",
+   "box": [
+    450,
+    550,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    460,
+    500,
+    540,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "older woman",
+   "plural": "older women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a blue coat",
+   "question": "Is there an older woman wearing a blue coat?",
+   "box": [
+    700,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "wall map",
+   "plural": "wall maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large wall map",
+   "question": "Is there a large wall map?",
+   "box": [
+    850,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "young boy",
+   "plural": "young boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy wearing a striped shirt?",
+   "box": [
+    800,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver fire truck",
+   "question": "Is there a silver fire truck?",
+   "box": [
+    100,
+    100,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose against his chest",
+   "question": "Is the firefighter holding a coiled hose against his chest?"
+  },
+  {
+   "id": "helmet_on_bench",
+   "type": "relation",
+   "of": [
+    "helmet",
+    "bench"
+   ],
+   "desc": "the shiny red helmet rests on the wooden bench",
+   "question": "Is the shiny red helmet resting on the wooden bench?"
+  },
+  {
+   "id": "cat_on_helmet",
+   "type": "relation",
+   "of": [
+    "cat",
+    "helmet"
+   ],
+   "desc": "the tabby cat sits atop the shiny red helmet",
+   "question": "Is the tabby cat sitting atop the shiny red helmet?"
+  },
+  {
+   "id": "woman_points_map",
+   "type": "action",
+   "of": [
+    "woman",
+    "map"
+   ],
+   "desc": "the older woman points toward the large wall map",
+   "question": "Is the older woman pointing toward the large wall map?"
+  },
+  {
+   "id": "boy_looks_map",
+   "type": "action",
+   "of": [
+    "boy",
+    "map"
+   ],
+   "desc": "the young boy looks up at the large wall map",
+   "question": "Is the young boy looking up at the large wall map?"
+  },
+  {
+   "id": "boy_mimics_woman",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy mimics the pointing gesture",
+   "question": "Is the young boy mimicking a pointing gesture?"
+  },
+  {
+   "id": "firefighter_glances_woman",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "woman"
+   ],
+   "desc": "the firefighter glances over at the older woman",
+   "question": "Is the firefighter glancing over at the older woman?"
+  },
+  {
+   "id": "cat_looks_boy",
+   "type": "action",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the tabby cat looks at the young boy",
+   "question": "Is the tabby cat looking at the young boy?"
+  },
+  {
+   "id": "cat_head_tilt",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat tilts its head curiously",
+   "question": "Is the tabby cat tilting its head?"
+  },
+  {
+   "id": "no_flame_smoke",
+   "type": "absent",
+   "desc": "visible flame",
+   "question": "Are there any visible flames in the image?"
+  },
+  {
+   "id": "firefighter_stands",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow boots stands tall",
+   "question": "Is the firefighter in yellow boots standing tall?"
+  },
+  {
+   "id": "cat_grooms",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat grooms its paw",
+   "question": "Is the tabby cat grooming its paw?"
+  },
+  {
+   "id": "woman_traces",
+   "type": "action",
+   "of": [
+    "woman",
+    "map"
+   ],
+   "desc": "the older woman traces a specific route on the large wall map with her finger",
+   "question": "Is the older woman tracing a specific route on the large wall map with her finger?"
+  },
+  {
+   "id": "boy_mimics_gesture",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the young boy mimics the older woman's gesture",
+   "question": "Is the young boy mimicking the older woman's gesture?"
+  },
+  {
+   "id": "boy_beside_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the young boy is next to the older woman",
+   "question": "Is the young boy next to the older woman?"
+  },
+  {
+   "id": "truck_background",
+   "type": "state",
+   "of": "truck",
+   "desc": "the silver fire truck is in the background",
+   "question": "Is the silver fire truck in the background of the scene?"
+  },
+  {
+   "id": "truck_ladder_extended",
+   "type": "state",
+   "of": "truck",
+   "desc": "the ladder of the silver fire truck is extended slightly upward",
+   "question": "Is the ladder of the silver fire truck extended slightly upward?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "visible smoke",
+   "question": "Is there any visible smoke in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "helmet",
+   "kind": "support"
+  },
+  {
+   "from": "helmet",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0040",
+ "prompt": "Rendered in a pencil sketch with light color wash, the interior of a fire station bustles with quiet activity. On the left, a firefighter in yellow boots stands tall, holding a coiled hose tightly against his chest. Beside him, near the center, a shiny red helmet rests on a wooden bench, its brim catching the faint light. A tabby cat sits atop the helmet, grooming its paw with deliberate calm. To the right, an older woman in a blue coat points toward a large wall map, her finger tracing a specific route. Next to her, a young boy in a striped shirt looks up at the map with wide eyes, mimicking her gesture. In the background, a silver fire truck is parked, its ladder extended slightly upward. The firefighter in yellow boots glances over at the woman in the blue coat, acknowledging her direction. The tabby cat pauses its grooming to look at the boy in the striped shirt, tilting its head curiously. There is no visible flame or smoke in the scene, keeping the atmosphere serene and preparatory rather than chaotic. The sketch lines are loose yet precise, capturing the texture of the brick walls and the smooth metal of the truck. The light wash adds subtle warmth to the otherwise monochromatic pencils, highlighting the red of the helmet and the blue of the coat without overwhelming the detailed linework. Each figure is distinct, their postures relaxed but attentive, suggesting a moment of training or community engagement within the sturdy halls of the station.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn with sparse background",
+   "question": "Does the image show a quiet village market scene at dawn with a sparse background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue shawl",
+   "question": "Is there an old woman wearing a blue shawl?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy wearing a striped shirt?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    650,
+    400,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    640,
+    600,
+    860,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a brown coat",
+   "question": "Is there a tall man wearing a brown coat?",
+   "box": [
+    450,
+    150,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "donkey",
+   "type": "entity",
+   "class": "donkey",
+   "plural": "donkeys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grey donkey",
+   "question": "Is there a grey donkey?",
+   "box": [
+    700,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "woman_hunched",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman is hunched",
+   "question": "Is the old woman hunched?"
+  },
+  {
+   "id": "woman_holding_basket",
+   "type": "attribute",
+   "of": "old_woman",
+   "desc": "the old woman holds a woven basket",
+   "question": "Is the old woman holding a woven basket?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat is sitting",
+   "question": "Is the spotted cat sitting?"
+  },
+  {
+   "id": "cat_tail_wrapped",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat has its tail wrapped around its paws",
+   "question": "Is the spotted cat's tail wrapped around its paws?"
+  },
+  {
+   "id": "donkey_standing",
+   "type": "state",
+   "of": "donkey",
+   "desc": "the grey donkey is standing",
+   "question": "Is the grey donkey standing?"
+  },
+  {
+   "id": "exchange",
+   "type": "action",
+   "of": [
+    "old_woman",
+    "boy"
+   ],
+   "desc": "the old woman hands the woven basket to the young boy",
+   "question": "Is the old woman handing the woven basket to the young boy?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "action",
+   "of": [
+    "boy",
+    "old_woman"
+   ],
+   "desc": "the young boy reaches for the woven basket held by the old woman",
+   "question": "Is the young boy reaching for the woven basket held by the old woman?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the spotted cat sits on the wooden crate",
+   "question": "Is the spotted cat sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_beside_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the spotted cat is beside the young boy",
+   "question": "Is the spotted cat beside the young boy?"
+  },
+  {
+   "id": "man_behind_boy",
+   "type": "relation",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the tall man is behind the young boy",
+   "question": "Is the tall man behind the young boy?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the tall man points toward the horizon",
+   "question": "Is the tall man pointing toward the horizon?"
+  },
+  {
+   "id": "donkey_next_to_man",
+   "type": "relation",
+   "of": [
+    "donkey",
+    "man"
+   ],
+   "desc": "the grey donkey is next to the tall man",
+   "question": "Is the grey donkey next to the tall man?"
+  },
+  {
+   "id": "donkey_looking_at_boy",
+   "type": "action",
+   "of": [
+    "donkey",
+    "boy"
+   ],
+   "desc": "the grey donkey looks at the young boy",
+   "question": "Is the grey donkey looking at the young boy?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "modern technology",
+   "question": "Is there any modern technology visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0055",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet village market at dawn. On the left stands an old woman in a blue shawl, her posture slightly hunched as she holds out a woven basket. In the center, a young boy in a striped shirt reaches eagerly to accept the basket from her hands, marking their first interaction of exchange. Beside him on the right, a spotted cat sits calmly on a wooden crate, its tail wrapped neatly around its paws, displaying a pose of relaxed stillness. Behind the boy, a tall man in a brown coat points toward the horizon, directing attention away from the immediate transaction. Next to the man, a grey donkey stands patiently, looking directly at the boy with gentle eyes, creating a second interaction of observation. The background remains sparse to emphasize these figures. There is no modern technology visible in this timeless setting. The soft lines and faint hues suggest the early morning chill without explicit description. The composition relies entirely on the distinct appearances and simple actions of these five entities to convey the narrative of the moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "man_pointing_horizon",
+     "man_pointing"
+    ]
+   ]
+  }
+ }
+}

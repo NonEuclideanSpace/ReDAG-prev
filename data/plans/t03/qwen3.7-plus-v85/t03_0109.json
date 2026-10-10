@@ -1,0 +1,166 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a weathered shipyard dock with sparse industrial surroundings",
+   "question": "Does the image show a weathered shipyard dock with sparse industrial surroundings?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in blue overalls",
+   "question": "Is there a worker in blue overalls?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall rusted metal crane",
+   "question": "Is there a tall rusted metal crane?",
+   "box": [
+    350,
+    50,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "supervisor",
+   "type": "entity",
+   "class": "supervisor",
+   "plural": "supervisors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a supervisor in a yellow hard hat",
+   "question": "Is there a supervisor in a yellow hard hat?",
+   "box": [
+    700,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "worker_holding",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in blue overalls holds a clipboard",
+   "question": "Is the worker in blue overalls holding a clipboard?"
+  },
+  {
+   "id": "crane_hook",
+   "type": "state",
+   "of": "crane",
+   "desc": "the crane's hook is dangling loosely",
+   "question": "Is the hook of the rusted metal crane dangling loosely?"
+  },
+  {
+   "id": "supervisor_pointing",
+   "type": "action",
+   "of": [
+    "supervisor",
+    "crane"
+   ],
+   "desc": "the supervisor in the yellow hard hat points toward the crane",
+   "question": "Is the supervisor in the yellow hard hat pointing toward the crane?"
+  },
+  {
+   "id": "worker_looking",
+   "type": "action",
+   "of": [
+    "worker",
+    "supervisor"
+   ],
+   "desc": "the worker in blue overalls looks at the supervisor in the yellow hard hat",
+   "question": "Is the worker in blue overalls looking at the supervisor in the yellow hard hat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in blue overalls stands",
+   "question": "Is the worker in blue overalls standing?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden planks of the dock",
+   "question": "Are there wooden planks forming the dock surface?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "planks",
+   "to": "worker",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "supervisor",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0109",
+ "prompt": "In a pencil sketch with light color wash, a weathered shipyard dock unfolds. On the left, a worker in blue overalls stands holding a clipboard. In the center, a rusted metal crane looms tall, its hook dangling loosely above the planks. To the right, a supervisor in a yellow hard hat points toward the machinery. The worker in blue overalls looks at the supervisor in the yellow hard hat, acknowledging the direction indicated. There is no water visible in the scene. The composition remains sparse, focusing strictly on these three figures and their immediate industrial surroundings without additional clutter or background details.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,477 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen",
+   "question": "Does the image show a kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "countertop",
+   "type": "entity",
+   "class": "countertop",
+   "plural": "countertops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a granite countertop",
+   "question": "Is there a granite countertop?",
+   "box": [
+    0,
+    500,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "stove",
+   "plural": "stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless-steel stove",
+   "question": "Is there a stainless-steel stove?",
+   "box": [
+    50,
+    500,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pot",
+   "question": "Is there a pot?",
+   "box": [
+    100,
+    450,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in uniform",
+   "question": "Is there a chef in uniform?",
+   "box": [
+    300,
+    150,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "spatula",
+   "type": "entity",
+   "class": "spatula",
+   "plural": "spatulas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden spatula",
+   "question": "Is there a wooden spatula?",
+   "box": [
+    350,
+    400,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "cutting_board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cutting board",
+   "question": "Is there a cutting board?",
+   "box": [
+    600,
+    550,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "entity",
+   "class": "knife",
+   "plural": "knives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knife",
+   "question": "Is there a knife?",
+   "box": [
+    650,
+    580,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bowl",
+   "question": "Is there a bowl?",
+   "box": [
+    400,
+    550,
+    550,
+    680
+   ]
+  },
+  {
+   "id": "carrots",
+   "type": "entity",
+   "class": "carrot piece",
+   "plural": "carrot pieces",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three chopped carrots",
+   "question": "Are there exactly three chopped carrots?",
+   "box": [
+    420,
+    570,
+    530,
+    650
+   ]
+  },
+  {
+   "id": "onions",
+   "type": "entity",
+   "class": "onion piece",
+   "plural": "onion pieces",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two chopped onions",
+   "question": "Are there exactly two chopped onions?",
+   "box": [
+    420,
+    570,
+    530,
+    650
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spoon",
+   "question": "Is there a spoon?",
+   "box": [
+    560,
+    580,
+    620,
+    660
+   ]
+  },
+  {
+   "id": "refrigerator",
+   "type": "entity",
+   "class": "refrigerator",
+   "plural": "refrigerators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a refrigerator",
+   "question": "Is there a refrigerator?",
+   "box": [
+    700,
+    100,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "toaster",
+   "type": "entity",
+   "class": "toaster",
+   "plural": "toasters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toaster",
+   "question": "Is there a toaster?",
+   "box": [
+    750,
+    80,
+    900,
+    150
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall clock",
+   "question": "Is there a wall clock?",
+   "box": [
+    750,
+    20,
+    900,
+    100
+   ]
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "pot",
+   "desc": "steam rising from the pot",
+   "question": "Is steam rising from the pot?"
+  },
+  {
+   "id": "pot_boiling",
+   "type": "state",
+   "of": "pot",
+   "desc": "the pot is boiling",
+   "question": "Is the content of the pot boiling?"
+  },
+  {
+   "id": "chef_stirring",
+   "type": "action",
+   "of": [
+    "chef",
+    "pot"
+   ],
+   "desc": "the chef stirs the pot with the wooden spatula",
+   "question": "Is the chef stirring the pot with the wooden spatula?"
+  },
+  {
+   "id": "spatula_longer",
+   "type": "relation",
+   "of": [
+    "spatula",
+    "knife"
+   ],
+   "desc": "the wooden spatula is longer than the knife",
+   "question": "Is the wooden spatula visibly longer than the knife?"
+  },
+  {
+   "id": "bowl_next_to_pot",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "pot"
+   ],
+   "desc": "the bowl is next to the pot on the countertop",
+   "question": "Is the bowl next to the pot on the countertop?"
+  },
+  {
+   "id": "carrots_in_bowl",
+   "type": "relation",
+   "of": [
+    "carrots",
+    "bowl"
+   ],
+   "desc": "the chopped carrots are in the bowl",
+   "question": "Are the chopped carrots inside the bowl?"
+  },
+  {
+   "id": "onions_in_bowl",
+   "type": "relation",
+   "of": [
+    "onions",
+    "bowl"
+   ],
+   "desc": "the chopped onions are in the bowl",
+   "question": "Are the chopped onions inside the bowl?"
+  },
+  {
+   "id": "cutting_board_on_countertop",
+   "type": "relation",
+   "of": [
+    "cutting_board",
+    "countertop"
+   ],
+   "desc": "the cutting board is on the countertop",
+   "question": "Is the cutting board on the countertop?"
+  },
+  {
+   "id": "knife_on_board",
+   "type": "relation",
+   "of": [
+    "knife",
+    "cutting_board"
+   ],
+   "desc": "the knife is lying on the cutting board",
+   "question": "Is the knife lying on the cutting board?"
+  },
+  {
+   "id": "spoon_beside_bowl",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "bowl"
+   ],
+   "desc": "the spoon rests beside the bowl",
+   "question": "Is the spoon resting beside the bowl?"
+  },
+  {
+   "id": "fridge_behind_counter",
+   "type": "relation",
+   "of": [
+    "refrigerator",
+    "countertop"
+   ],
+   "desc": "the refrigerator stands behind the countertop",
+   "question": "Is the refrigerator standing behind the countertop?"
+  },
+  {
+   "id": "toaster_on_fridge",
+   "type": "relation",
+   "of": [
+    "toaster",
+    "refrigerator"
+   ],
+   "desc": "the toaster is on top of the refrigerator",
+   "question": "Is the toaster on top of the refrigerator?"
+  },
+  {
+   "id": "clock_above_fridge",
+   "type": "relation",
+   "of": [
+    "clock",
+    "refrigerator"
+   ],
+   "desc": "the clock hangs above the refrigerator",
+   "question": "Is the clock hanging above the refrigerator?"
+  },
+  {
+   "id": "chef_between",
+   "type": "relation",
+   "of": [
+    "chef",
+    "stove",
+    "countertop"
+   ],
+   "desc": "the chef stands between the stove and the countertop",
+   "question": "Is the chef standing between the stove and the countertop?"
+  },
+  {
+   "id": "spoon_closer",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "bowl",
+    "cutting_board"
+   ],
+   "desc": "the spoon is closer to the bowl than to the cutting board",
+   "question": "Is the spoon closer to the bowl than to the cutting board?"
+  },
+  {
+   "id": "fridge_taller",
+   "type": "relation",
+   "of": [
+    "refrigerator",
+    "chef"
+   ],
+   "desc": "the refrigerator is taller than the chef",
+   "question": "Is the refrigerator taller than the chef?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "stove_adjacent_countertop",
+   "type": "relation",
+   "of": [
+    "stove",
+    "countertop"
+   ],
+   "desc": "the stainless-steel stove is adjacent to the granite countertop",
+   "question": "Is the stainless-steel stove adjacent to the granite countertop?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "countertop",
+   "to": "stove",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "cutting_board",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "bowl",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "cutting_board",
+   "to": "knife",
+   "kind": "support"
+  },
+  {
+   "from": "refrigerator",
+   "to": "toaster",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_085",
+ "prompt": "A kitchen with a stainless-steel stove adjacent to a granite countertop. A pot is boiling on the stove, and a chef is stirring the pot with a wooden spatula. The spatula is longer than the knife on the cutting board. Steam rises above the pot. A bowl containing three chopped carrots is placed next to the pot on the countertop. Also in the bowl are some chopped onions, and their number is one less than the number of carrots. A cutting board is positioned on the countertop, with a knife lying on it. A spoon rests beside the bowl. A refrigerator, which is taller than the chef, stands behind the countertop, with a toaster on top of it. A clock hangs above the refrigerator. The chef is standing between the stove and the countertop. The spoon is closer to the bowl than to the cutting board.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

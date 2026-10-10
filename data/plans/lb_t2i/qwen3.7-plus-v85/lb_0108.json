@@ -1,0 +1,588 @@
+{
+ "style": "surreal photorealistic, dim amber lighting, high contrast shadows, macro detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior with a window showing rain-streaked glass and a blurred silhouette of a figure outside",
+   "question": "Does the image show a kitchen interior with a window featuring rain streaks and a blurred silhouette of a figure outside?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "kitchen counter",
+   "plural": "kitchen counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden kitchen counter",
+   "question": "Is there a weathered wooden kitchen counter?",
+   "box": [
+    0,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "ketchup_bottle",
+   "type": "entity",
+   "class": "ketchup bottle",
+   "plural": "ketchup bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red ketchup bottle",
+   "question": "Is there a red ketchup bottle?",
+   "box": [
+    200,
+    300,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped white plate",
+   "question": "Is there a chipped white plate?",
+   "box": [
+    400,
+    550,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "avocado",
+   "type": "entity",
+   "class": "avocado",
+   "plural": "avocados",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten avocado",
+   "question": "Is there a half-eaten avocado?",
+   "box": [
+    450,
+    580,
+    650,
+    720
+   ]
+  },
+  {
+   "id": "ant",
+   "type": "entity",
+   "class": "black ant",
+   "plural": "black ants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single black ant",
+   "question": "Is there a single black ant?",
+   "box": [
+    486,
+    586,
+    534,
+    634
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "entity",
+   "class": "silver fork",
+   "plural": "silver forks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver fork",
+   "question": "Is there a silver fork?",
+   "box": [
+    750,
+    500,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacup half-full of tea",
+   "question": "Is there a teacup half-full of tea?",
+   "box": [
+    100,
+    550,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "lights",
+   "type": "entity",
+   "class": "christmas lights",
+   "plural": "christmas lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a string of unplugged dormant Christmas lights",
+   "question": "Is there a string of unplugged dormant Christmas lights?",
+   "box": [
+    0,
+    480,
+    1024,
+    550
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a photograph in a cracked frame",
+   "question": "Is there a photograph in a cracked frame?",
+   "box": [
+    300,
+    200,
+    500,
+    400
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book with a missing cover",
+   "question": "Is there an open book with a missing cover?",
+   "box": [
+    800,
+    600,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "entity",
+   "class": "knife",
+   "plural": "knives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knife with a twine-wrapped hilt",
+   "question": "Is there a knife with a twine-wrapped hilt?",
+   "box": [
+    420,
+    650,
+    680,
+    700
+   ]
+  },
+  {
+   "id": "hummingbird",
+   "type": "entity",
+   "class": "hummingbird",
+   "plural": "hummingbirds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hummingbird suspended in air",
+   "question": "Is there a hummingbird suspended in air?",
+   "box": [
+    220,
+    150,
+    330,
+    250
+   ]
+  },
+  {
+   "id": "bottle_leaning",
+   "type": "state",
+   "of": "ketchup_bottle",
+   "desc": "the cracked red ketchup bottle is leaning precariously",
+   "question": "Is the cracked red ketchup bottle leaning precariously?"
+  },
+  {
+   "id": "drop_clinging",
+   "type": "state",
+   "of": "ketchup_bottle",
+   "desc": "a single drop of ketchup clings to the lip of the cracked red ketchup bottle",
+   "question": "Does a single drop of ketchup cling to the lip of the cracked red ketchup bottle?"
+  },
+  {
+   "id": "trail_snaking",
+   "type": "attribute",
+   "of": "ketchup_bottle",
+   "desc": "a thick crimson trail of ketchup snakes down the side of the cracked red ketchup bottle",
+   "question": "Does a thick crimson trail of ketchup snake down the side of the cracked red ketchup bottle?"
+  },
+  {
+   "id": "ant_inching",
+   "type": "state",
+   "of": "ant",
+   "desc": "the single black ant is inching along the avocado's side",
+   "question": "Is the single black ant inching along the avocado's side?"
+  },
+  {
+   "id": "pages_fluttering",
+   "type": "state",
+   "of": "book",
+   "desc": "the pages of the open book are fluttering gently",
+   "question": "Are the pages of the open book fluttering gently?"
+  },
+  {
+   "id": "bottle_on_counter",
+   "type": "relation",
+   "of": [
+    "ketchup_bottle",
+    "counter"
+   ],
+   "desc": "the cracked red ketchup bottle leans on the weathered wooden kitchen counter",
+   "question": "Is the cracked red ketchup bottle leaning on the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "trail_pooling_near_plate",
+   "type": "relation",
+   "of": [
+    "ketchup_bottle",
+    "plate"
+   ],
+   "desc": "the ketchup trail from the bottle pools near the edge of the chipped white plate",
+   "question": "Does the ketchup trail from the bottle pool near the edge of the chipped white plate?"
+  },
+  {
+   "id": "avocado_on_plate",
+   "type": "relation",
+   "of": [
+    "avocado",
+    "plate"
+   ],
+   "desc": "the half-eaten avocado rests on the chipped white plate",
+   "question": "Is the half-eaten avocado resting on the chipped white plate?"
+  },
+  {
+   "id": "ant_on_avocado",
+   "type": "relation",
+   "of": [
+    "ant",
+    "avocado"
+   ],
+   "desc": "the single black ant is on the sloping side of the half-eaten avocado",
+   "question": "Is the single black ant on the sloping side of the half-eaten avocado?"
+  },
+  {
+   "id": "fork_on_counter",
+   "type": "relation",
+   "of": [
+    "fork",
+    "counter"
+   ],
+   "desc": "the silver fork lies on the weathered wooden kitchen counter",
+   "question": "Is the silver fork lying on the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "teacup_on_counter",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "counter"
+   ],
+   "desc": "the teacup sits on the weathered wooden kitchen counter",
+   "question": "Is the teacup sitting on the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "lights_on_counter",
+   "type": "relation",
+   "of": [
+    "lights",
+    "counter"
+   ],
+   "desc": "the string of Christmas lights weaves around the edge of the weathered wooden kitchen counter",
+   "question": "Does the string of Christmas lights weave around the edge of the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "photo_behind_plate",
+   "type": "relation",
+   "of": [
+    "photo",
+    "plate"
+   ],
+   "desc": "the framed photograph is behind the chipped white plate",
+   "question": "Is the framed photograph behind the chipped white plate?"
+  },
+  {
+   "id": "photo_leaning_wall",
+   "type": "relation",
+   "of": [
+    "photo",
+    "wall"
+   ],
+   "desc": "the framed photograph leans against the wall",
+   "question": "Is the framed photograph leaning against the wall?"
+  },
+  {
+   "id": "book_on_counter",
+   "type": "relation",
+   "of": [
+    "book",
+    "counter"
+   ],
+   "desc": "the open book rests on the weathered wooden kitchen counter",
+   "question": "Is the open book resting on the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "knife_on_plate",
+   "type": "relation",
+   "of": [
+    "knife",
+    "plate"
+   ],
+   "desc": "the knife lies across the mossy edge of the chipped white plate",
+   "question": "Is the knife lying across the mossy edge of the chipped white plate?"
+  },
+  {
+   "id": "hummingbird_above_bottle",
+   "type": "relation",
+   "of": [
+    "hummingbird",
+    "ketchup_bottle"
+   ],
+   "desc": "the hummingbird hangs in the air above the cracked red ketchup bottle",
+   "question": "Is the hummingbird hanging in the air above the cracked red ketchup bottle?"
+  },
+  {
+   "id": "sunlight_streak",
+   "type": "attribute",
+   "of": "counter",
+   "desc": "a shadowy streak of sunlight slants diagonally across the weathered wooden kitchen counter",
+   "question": "Does a shadowy streak of sunlight slant diagonally across the weathered wooden kitchen counter?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall",
+   "question": "Is there a wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window with rain-streaked glass",
+   "question": "Is there a window with rain-streaked glass?",
+   "box": [
+    700,
+    50,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blurred silhouette of a person",
+   "question": "Is there a blurred silhouette of a person?",
+   "box": [
+    750,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "figure_behind_window",
+   "type": "relation",
+   "of": [
+    "figure",
+    "window"
+   ],
+   "desc": "the blurred silhouette of a person is visible through the window",
+   "question": "Is the blurred silhouette of a person visible through the window?"
+  },
+  {
+   "id": "shadow_overlap",
+   "type": "relation",
+   "of": [
+    "photo",
+    "ketchup_bottle"
+   ],
+   "desc": "the shadow of the framed photograph overlaps the ketchup's trail/stain",
+   "question": "Does the shadow cast by the framed photograph overlap the ketchup stain or trail?"
+  },
+  {
+   "id": "bottle_cracked",
+   "type": "attribute",
+   "of": "ketchup_bottle",
+   "desc": "the red ketchup bottle is cracked",
+   "question": "Is the red ketchup bottle cracked?"
+  },
+  {
+   "id": "bottle_dulled",
+   "type": "attribute",
+   "of": "ketchup_bottle",
+   "desc": "the red ketchup bottle has a dulled hue",
+   "question": "Does the red ketchup bottle have a dulled hue?"
+  },
+  {
+   "id": "avocado_browning",
+   "type": "attribute",
+   "of": "avocado",
+   "desc": "the half-eaten avocado has browning green flesh",
+   "question": "Does the half-eaten avocado have browning green flesh?"
+  },
+  {
+   "id": "avocado_firm_curve",
+   "type": "attribute",
+   "of": "avocado",
+   "desc": "the half-eaten avocado has one firm glistening curve",
+   "question": "Does the half-eaten avocado have one firm glistening curve?"
+  },
+  {
+   "id": "teacup_mossy_rim",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup has a mossy rim",
+   "question": "Does the teacup have a mossy rim?"
+  },
+  {
+   "id": "teacup_shoots",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup has tiny green shoots inside",
+   "question": "Are there tiny green shoots inside the teacup?"
+  },
+  {
+   "id": "photo_curling",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the paper of the photograph is curling inward",
+   "question": "Is the paper of the photograph curling inward?"
+  },
+  {
+   "id": "photo_faded",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the image inside the photograph is faded into a blue haze",
+   "question": "Is the image inside the photograph faded into a blue haze?"
+  },
+  {
+   "id": "book_glyphs",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the pages of the open book show unreadable glyphs",
+   "question": "Do the pages of the open book show unreadable glyphs?"
+  },
+  {
+   "id": "knife_glistening",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the blade of the knife is glistening",
+   "question": "Is the blade of the knife glistening?"
+  },
+  {
+   "id": "hummingbird_wings",
+   "type": "state",
+   "of": "hummingbird",
+   "desc": "the hummingbird has wings frozen in a beat",
+   "question": "Are the wings of the hummingbird frozen in a beat?"
+  },
+  {
+   "id": "hummingbird_beak",
+   "type": "state",
+   "of": "hummingbird",
+   "desc": "the hummingbird has its beak open",
+   "question": "Is the beak of the hummingbird open?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "ketchup_bottle",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "plate",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "fork",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "teacup",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "plate",
+   "to": "avocado",
+   "kind": "support"
+  },
+  {
+   "from": "plate",
+   "to": "knife",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0108",
+ "prompt": "In the dim amber glow of a midday slant, a cracked red ketchup bottle leans precariously on a weathered wooden kitchen counter, its once-vibrant hue dulled by time and neglect. A single drop of ketchup clings to the bottle’s lip, poised to fall, suspended in a moment of tension between gravity and stillness. The condiment’s viscous trail, thick and crimson, snakes down the side of the bottle, pooling near the edge of a chipped white plate. Resting on that plate is a half-eaten avocado, its green flesh browning in uneven patches, one smooth curve still firm and glistening in the sunlight. A single black ant inches along the avocado’s sloping side, navigating ridges of pulp and skin with slow, deliberate precision, as if reading a topographic map written in edible terrain. A shadowy streak of sunlight slants diagonally across the counter, carving the space into two worlds—one bathed in gold, the other lost in shadow—highlighting the ketchup’s trail like a scar or a secret path. This streak of light also catches the edge of a silver fork, lying abandoned but poised, as if frozen mid-motion after a final bite. Nearby, a teacup half-full of cold tea has begun to sprout a mossy rim, the tea leaves inside blooming into tiny green shoots that curl upward toward the fractured light. A string of Christmas lights, unplugged and dormant, weaves lazily around the counter’s edge, each bulb dimly reflecting the ketchup’s trail, creating the illusion of a faint, pulsing heartbeat. Behind the plate, a photograph in a cracked frame leans against the wall, the paper curling inward as the image inside slowly fades into a translucent blue haze, though the shadow it casts on the counter is vivid and clear, overlapping the ketchup’s stain in a ghostly echo. A window is visible in the background, its pane streaked with rain that has frozen into jagged patterns of glass and memory. Through it, the silhouette of a figure appears—motionless, blurred, caught in a paradox of distance and intimacy, as if watching the scene unfold through a window that no longer exists in reality. A book with a missing cover rests open on the counter, its pages fluttering gently from a draft that doesn’t come from any identifiable source, the text on each page rearranging itself in looping spirals before settling into unreadable glyphs. A single knife, its blade still glistening with a thin layer of avocado oil, lies across the mossy edge of the plate, its hilt wrapped in twine that seems to pull itself tighter in response to the shifting shadows. In the air above the ketchup bottle, a hummingbird hangs suspended in a shimmering aura of heat distortion, wings frozen in a single beat, its tiny beak open as if whispering a secret the room cannot yet understand. Every element—condiment, fruit, light, insect, furniture, and the unseen figure beyond the glass—exists in a state of delicate, impossible balance, each action or inaction threading through the others like strands in a spider’s web, where one shift could unravel everything, yet everything remains precisely as it must be, caught in a moment both mundane and surreal, real and impossible, where time has paused to savor the story the objects are slowly, silently, writing in their own strange language.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node teacup: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 12,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

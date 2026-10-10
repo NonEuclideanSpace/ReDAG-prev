@@ -1,0 +1,205 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand",
+   "question": "Does the image show a beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "net_post",
+   "type": "entity",
+   "class": "net post",
+   "plural": "net posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net post",
+   "question": "Is there a volleyball net post?",
+   "box": [
+    850,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in black shorts",
+   "question": "Is there a man in black shorts?",
+   "box": [
+    400,
+    100,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    750,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball",
+   "question": "Is there a volleyball?",
+   "box": [
+    550,
+    150,
+    620,
+    220
+   ]
+  },
+  {
+   "id": "woman_ready",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue bikini is standing ready",
+   "question": "Is the woman in the blue bikini standing in a ready stance?"
+  },
+  {
+   "id": "man_jumping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in black shorts is jumping high",
+   "question": "Is the man in black shorts jumping high?"
+  },
+  {
+   "id": "man_spiking",
+   "type": "action",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in black shorts spikes the volleyball",
+   "question": "Is the man in black shorts spiking the volleyball?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt watches intently",
+   "question": "Is the referee in the striped shirt watching intently?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue bikini looks at the man in black shorts",
+   "question": "Is the woman in the blue bikini looking at the man in black shorts?"
+  },
+  {
+   "id": "man_above_net",
+   "type": "relation",
+   "of": [
+    "man",
+    "net"
+   ],
+   "desc": "the man in black shorts is mid-air above the net",
+   "question": "Is the man in black shorts positioned mid-air above the net?"
+  },
+  {
+   "id": "referee_next_to_post",
+   "type": "relation",
+   "of": [
+    "referee",
+    "net_post"
+   ],
+   "desc": "the referee in the striped shirt stands next to the net post",
+   "question": "Is the referee in the striped shirt standing next to the net post?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members in the background?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t03_0087",
+ "prompt": "A photorealistic photo captures a beach volleyball tournament scene. On the left, a woman in a blue bikini stands ready. In the center, a man in black shorts jumps high to spike the ball. On the right, a referee in a striped shirt watches intently. The woman in the blue bikini looks at the jumping man. The man in black shorts is mid-air above the net. The referee in the striped shirt stands next to the net post. There is no audience in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

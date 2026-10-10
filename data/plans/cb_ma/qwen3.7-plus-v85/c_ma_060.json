@@ -1,0 +1,116 @@
+{
+ "style": "dark atmospheric horror photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark, dusty room corner",
+   "question": "Is the scene set in a dark, dusty room corner?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "grandfather clock",
+   "plural": "grandfather clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall grandfather clock made of warped, dark wood with detailed but worn carvings and cobwebs",
+   "question": "Is there a tall grandfather clock made of warped, dark wood with detailed but worn carvings and cobwebs?",
+   "box": [
+    650,
+    50,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "clock_face",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock face is round and yellowed",
+   "question": "Is the clock face round and yellowed?"
+  },
+  {
+   "id": "pendulum",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has a single large pendulum made of rusted brass",
+   "question": "Does the clock have a single large pendulum made of rusted brass?"
+  },
+  {
+   "id": "green_light",
+   "type": "state",
+   "of": "clock",
+   "desc": "a faint ghostly green light emanates from within the clock's body",
+   "question": "Is a faint ghostly green light emanating from within the clock's body?"
+  },
+  {
+   "id": "clock_glass",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock face has a cracked glass cover",
+   "question": "Does the clock face have a cracked glass cover?"
+  },
+  {
+   "id": "clock_hands",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has two black hands that are frozen",
+   "question": "Does the clock have two black hands that are frozen?"
+  },
+  {
+   "id": "clock_numerals",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the Roman numerals on the clock face are faded",
+   "question": "Are the Roman numerals on the clock face faded?"
+  },
+  {
+   "id": "clock_expression",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock face has carved features that form a sad expression",
+   "question": "Does the clock face have carved features that form a sad expression?"
+  },
+  {
+   "id": "pendulum_state",
+   "type": "state",
+   "of": "clock",
+   "desc": "the pendulum is hanging motionless inside the pendulum case",
+   "question": "Is the pendulum hanging motionless inside the pendulum case?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_060",
+ "prompt": "A single, tall grandfather clock with eerie features in the corner of a dark, dusty room. Its tall case is made of warped, dark wood which is covered in cobwebs. The wood has detailed carvings, but the carvings are worn down. The clock face is round, yellowed, and has a cracked glass cover. Its two hands are black and are frozen. The Roman numerals are faded. The clock face has carved features that form a sad expression. The single, large pendulum, made of rusted brass, is hanging motionless inside the pendulum case. A faint, ghostly green light emanates from within the clock's body. The clock is not new, its wood is not straight, it is not showing the correct time, and its pendulum is not swinging.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node clock: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

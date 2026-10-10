@@ -1,0 +1,166 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for a pencil sketch",
+   "question": "Is the image rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray cap",
+   "question": "Is there a man wearing a gray cap?",
+   "box": [
+    670,
+    150,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    750,
+    960,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    400,
+    800,
+    620,
+    980
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds a basket",
+   "question": "Is the woman holding a basket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman is standing",
+   "question": "Is the woman standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is sitting",
+   "question": "Is the man sitting?"
+  },
+  {
+   "id": "cat_lying",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is lying down",
+   "question": "Is the cat lying down?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman looks at the man",
+   "question": "Is the woman looking at the man?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man sits on the crate",
+   "question": "Is the man sitting on the crate?"
+  },
+  {
+   "id": "cat_near_feet",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman",
+    "man"
+   ],
+   "desc": "the cat is near the feet of the woman and the man",
+   "question": "Is the cat near the feet of the woman and the man?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0021",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue apron stands on the left holding a basket. A man in a gray cap sits on the right resting on a crate. A spotted cat lies in the center near their feet. The woman looks at the man. There is no sun visible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

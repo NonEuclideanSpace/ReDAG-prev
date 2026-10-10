@@ -1,0 +1,340 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with a large window showing the tarmac",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall potted plant",
+   "question": "Is there a tall potted plant?",
+   "box": [
+    800,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow hat",
+   "question": "Is there a small child in a yellow hat?",
+   "box": [
+    250,
+    400,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray suit",
+   "question": "Is there an elderly man in a gray suit?",
+   "box": [
+    400,
+    250,
+    620,
+    850
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn leather suitcase",
+   "question": "Is there a worn leather suitcase?",
+   "box": [
+    630,
+    700,
+    780,
+    880
+   ]
+  },
+  {
+   "id": "agent",
+   "type": "entity",
+   "class": "gate agent",
+   "plural": "gate agents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a uniformed gate agent",
+   "question": "Is there a uniformed gate agent?",
+   "box": [
+    700,
+    200,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "woman_boarding_pass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a boarding pass",
+   "question": "Is the woman in the blue coat holding a boarding pass?"
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat has a relaxed yet attentive posture",
+   "question": "Does the woman in the blue coat have a relaxed yet attentive posture?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in the yellow hat points excitedly",
+   "question": "Is the small child in the yellow hat pointing excitedly?"
+  },
+  {
+   "id": "man_sleeping",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in the gray suit is sleeping",
+   "question": "Is the elderly man in the gray suit sleeping?"
+  },
+  {
+   "id": "man_legs_crossed",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in the gray suit has his legs crossed",
+   "question": "Does the elderly man in the gray suit have his legs crossed?"
+  },
+  {
+   "id": "agent_tablet",
+   "type": "attribute",
+   "of": "agent",
+   "desc": "the uniformed gate agent holds a tablet device",
+   "question": "Is the uniformed gate agent holding a tablet device?"
+  },
+  {
+   "id": "agent_looking_down",
+   "type": "state",
+   "of": "agent",
+   "desc": "the uniformed gate agent looks down at the tablet",
+   "question": "Is the uniformed gate agent looking down at the tablet?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child is next to the woman",
+   "question": "Is the small child next to the woman?"
+  },
+  {
+   "id": "child_points_window",
+   "type": "relation",
+   "of": [
+    "child",
+    "window"
+   ],
+   "desc": "the small child points toward the large window",
+   "question": "Is the small child pointing toward the large window?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the metal bench",
+   "question": "Is the elderly man sitting on the metal bench?"
+  },
+  {
+   "id": "suitcase_beside_man",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "man"
+   ],
+   "desc": "the worn leather suitcase rests beside the elderly man",
+   "question": "Is the worn leather suitcase resting beside the elderly man?"
+  },
+  {
+   "id": "agent_near_plant",
+   "type": "relation",
+   "of": [
+    "agent",
+    "plant"
+   ],
+   "desc": "the uniformed gate agent stands near the tall potted plant",
+   "question": "Is the uniformed gate agent standing near the tall potted plant?"
+  },
+  {
+   "id": "woman_hands_child",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman hands a small toy to the child",
+   "question": "Is the woman handing a small toy to the child?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "a digital clock on the wall",
+   "question": "Is there a digital clock visible on the wall?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat stands",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "agent_standing",
+   "type": "state",
+   "of": "agent",
+   "desc": "the uniformed gate agent with short hair stands",
+   "question": "Is the uniformed gate agent with short hair standing?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window showing the tarmac",
+   "question": "Is there a large window showing the tarmac?",
+   "box": [
+    300,
+    50,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "plant_leaves",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "the tall potted plant has broad green leaves",
+   "question": "Does the tall potted plant have broad green leaves?"
+  },
+  {
+   "id": "suitcase_handle",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the worn leather suitcase has a slightly frayed handle",
+   "question": "Does the worn leather suitcase have a slightly frayed handle?"
+  },
+  {
+   "id": "agent_hair",
+   "type": "attribute",
+   "of": "agent",
+   "desc": "the uniformed gate agent has short hair",
+   "question": "Does the uniformed gate agent have short hair?"
+  },
+  {
+   "id": "man_head_tilted",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in the gray suit has his head tilted back",
+   "question": "Does the elderly man in the gray suit have his head tilted back?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "suitcase",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0077",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet moment at an airport gate. On the left, a woman in a blue coat stands holding a boarding pass, her posture relaxed yet attentive. Next to her, a small child in a yellow hat points excitedly toward the large window, drawing attention to the tarmac outside. In the center, an elderly man in a gray suit sits on a metal bench, his head tilted back in sleep, oblivious to the surrounding activity. Beside him rests a worn leather suitcase, its handle slightly frayed from years of travel. To the right, a uniformed gate agent with short hair looks down at a tablet device, checking flight details with focused precision. Standing near the agent is a tall potted plant with broad green leaves, adding a touch of nature to the sterile environment. The woman in the blue coat is handing a small toy to the child in the yellow hat, creating a tender connection between them. Meanwhile, the elderly man in the gray suit is sitting on the metal bench, his legs crossed comfortably. There is no digital clock visible on the wall, leaving the sense of time ambiguous and reliant on the urgency of the travelers. The soft washes of pale blue and beige highlight the contours of the figures without overwhelming the delicate pencil lines that define their forms. The composition balances the stillness of the sleeping traveler with the gentle motion of the mother and child, while the gate agent remains a static anchor on the right side of the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,593 @@
+{
+ "style": "surreal cinematic photography, dramatic chiaroscuro lighting, golden hour sunbeams through blinds, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen with a sink, a wall with a cracked window, and half-drawn blinds casting striped shadows",
+   "question": "Does the image show a kitchen with a sink, a cracked window, and half-drawn blinds casting striped shadows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn wooden table",
+   "question": "Is there a worn wooden table?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "ceramic plate",
+   "plural": "ceramic plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped ceramic plate",
+   "question": "Is there a chipped ceramic plate?",
+   "box": [
+    300,
+    650,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "radish",
+   "type": "entity",
+   "class": "radish",
+   "plural": "radishes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single pale radish",
+   "question": "Is there a single pale radish?",
+   "box": [
+    350,
+    660,
+    450,
+    780
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "wooden spoon",
+   "plural": "wooden spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden spoon",
+   "question": "Is there a wooden spoon?",
+   "box": [
+    520,
+    620,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "napkin",
+   "type": "entity",
+   "class": "napkin",
+   "plural": "napkins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled napkin stained with rust-colored liquid",
+   "question": "Is there a crumpled napkin stained with rust-colored liquid?",
+   "box": [
+    550,
+    680,
+    650,
+    740
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "laundry basket",
+   "plural": "laundry baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woven wicker laundry basket",
+   "question": "Is there a woven wicker laundry basket?",
+   "box": [
+    750,
+    550,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "drawer",
+   "type": "entity",
+   "class": "drawer",
+   "plural": "drawers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open drawer",
+   "question": "Is there a half-open drawer?",
+   "box": [
+    400,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "entity",
+   "class": "knife",
+   "plural": "knives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knife blade",
+   "question": "Is there a knife blade?",
+   "box": [
+    420,
+    870,
+    500,
+    920
+   ]
+  },
+  {
+   "id": "cloth",
+   "type": "entity",
+   "class": "linen cloth",
+   "plural": "linen cloths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded linen cloth",
+   "question": "Is there a folded linen cloth?",
+   "box": [
+    510,
+    870,
+    580,
+    920
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a photograph",
+   "question": "Is there a photograph?",
+   "box": [
+    100,
+    200,
+    250,
+    350
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    850,
+    100,
+    980,
+    300
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single fly",
+   "question": "Is there a single fly?",
+   "box": [
+    376,
+    636,
+    424,
+    684
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mechanical music box",
+   "question": "Is there a small mechanical music box?",
+   "box": [
+    450,
+    900,
+    550,
+    980
+   ]
+  },
+  {
+   "id": "radish_root_dangling",
+   "type": "relation",
+   "of": [
+    "radish",
+    "plate"
+   ],
+   "desc": "the radish's root dangles over the edge of the plate",
+   "question": "Does the radish's root dangle over the edge of the plate?"
+  },
+  {
+   "id": "radish_shimmering",
+   "type": "attribute",
+   "of": "radish",
+   "desc": "the radish emits a faint silvery shimmer",
+   "question": "Does the radish emit a faint silvery shimmer?"
+  },
+  {
+   "id": "spoon_leaning",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the wooden spoon leans at an odd angle",
+   "question": "Does the wooden spoon lean at an odd angle?"
+  },
+  {
+   "id": "napkin_rippling",
+   "type": "state",
+   "of": "napkin",
+   "desc": "the napkin appears to ripple or move in the air",
+   "question": "Does the napkin appear to ripple or move in the air?"
+  },
+  {
+   "id": "basket_glowing",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the laundry basket has threads that glow softly",
+   "question": "Does the laundry basket have threads that glow softly?"
+  },
+  {
+   "id": "plate_on_table",
+   "type": "relation",
+   "of": [
+    "plate",
+    "table"
+   ],
+   "desc": "the chipped ceramic plate sits on the wooden table",
+   "question": "Is the chipped ceramic plate sitting on the wooden table?"
+  },
+  {
+   "id": "spoon_beside_plate",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "plate"
+   ],
+   "desc": "the wooden spoon is beside the chipped ceramic plate",
+   "question": "Is the wooden spoon beside the chipped ceramic plate?"
+  },
+  {
+   "id": "spoon_on_napkin",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "napkin"
+   ],
+   "desc": "one prong of the wooden spoon is lodged in the crumpled napkin",
+   "question": "Is one prong of the wooden spoon lodged in the crumpled napkin?"
+  },
+  {
+   "id": "basket_beside_table",
+   "type": "relation",
+   "of": [
+    "basket",
+    "table"
+   ],
+   "desc": "the laundry basket is folded beside the wooden table",
+   "question": "Is the laundry basket folded beside the wooden table?"
+  },
+  {
+   "id": "drawer_under_table",
+   "type": "relation",
+   "of": [
+    "drawer",
+    "table"
+   ],
+   "desc": "the half-open drawer is beneath the wooden table",
+   "question": "Is the half-open drawer beneath the wooden table?"
+  },
+  {
+   "id": "knife_in_drawer",
+   "type": "relation",
+   "of": [
+    "knife",
+    "drawer"
+   ],
+   "desc": "the knife blade is visible in the drawer",
+   "question": "Is the knife blade visible in the drawer?"
+  },
+  {
+   "id": "cloth_in_drawer",
+   "type": "relation",
+   "of": [
+    "cloth",
+    "drawer"
+   ],
+   "desc": "the folded linen cloth is in the drawer",
+   "question": "Is the folded linen cloth in the drawer?"
+  },
+  {
+   "id": "photo_above_sink",
+   "type": "state",
+   "of": "photo",
+   "desc": "the photograph is pinned to the wall above the sink",
+   "question": "Is the photograph pinned to the wall above the sink?"
+  },
+  {
+   "id": "fly_near_radish",
+   "type": "relation",
+   "of": [
+    "fly",
+    "radish"
+   ],
+   "desc": "the fly hovers near the radish",
+   "question": "Is the fly hovering near the radish?"
+  },
+  {
+   "id": "music_box_under_table",
+   "type": "relation",
+   "of": [
+    "music_box",
+    "table"
+   ],
+   "desc": "the music box is hidden beneath the table",
+   "question": "Is the music box hidden beneath the table?"
+  },
+  {
+   "id": "shadow_radish",
+   "type": "attribute",
+   "of": "radish",
+   "desc": "the radish casts a long angular shadow across the table",
+   "question": "Does the radish cast a long angular shadow across the table?"
+  },
+  {
+   "id": "man_in_photo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in the photograph",
+   "question": "Is there a man in the photograph?",
+   "box": [
+    800,
+    200,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "woman_in_photo",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in the photograph",
+   "question": "Is there a woman in the photograph?",
+   "box": [
+    900,
+    200,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "photo_blurred_faces",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the faces of the people in the photograph are blurred",
+   "question": "Are the faces of the people in the photograph blurred?"
+  },
+  {
+   "id": "man_hand_lifted",
+   "type": "state",
+   "of": "man_in_photo",
+   "desc": "the man's hand in the photograph is lifted",
+   "question": "Is the man's hand in the photograph lifted?"
+  },
+  {
+   "id": "woman_dress_swaying",
+   "type": "state",
+   "of": "woman_in_photo",
+   "desc": "the woman's dress in the photograph is swaying",
+   "question": "Is the woman's dress in the photograph swaying?"
+  },
+  {
+   "id": "clock_pendulum_glass",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has a pendulum made of glass",
+   "question": "Does the clock have a pendulum made of glass?"
+  },
+  {
+   "id": "pendulum_reflects_radish",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the glass pendulum reflects the radish",
+   "question": "Does the glass pendulum reflect the radish?"
+  },
+  {
+   "id": "pendulum_reflects_spoon",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the glass pendulum reflects the spoon",
+   "question": "Does the glass pendulum reflect the spoon?"
+  },
+  {
+   "id": "pendulum_reflects_basket",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the glass pendulum reflects the laundry basket",
+   "question": "Does the glass pendulum reflect the laundry basket?"
+  },
+  {
+   "id": "fly_wings_humming",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly's wings are humming",
+   "question": "Are the fly's wings humming?"
+  },
+  {
+   "id": "radish_root_residue",
+   "type": "relation",
+   "of": [
+    "radish",
+    "table"
+   ],
+   "desc": "the radish's root leaves a faint trail of silvery residue on the table",
+   "question": "Does the radish's root leave a faint trail of silvery residue on the table?"
+  },
+  {
+   "id": "spoon_vibrating",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the wooden spoon vibrates",
+   "question": "Is the wooden spoon vibrating?"
+  },
+  {
+   "id": "shadow_merging",
+   "type": "relation",
+   "of": [
+    "radish",
+    "spoon"
+   ],
+   "desc": "the shadow of the radish intersects with the shadow of the spoon",
+   "question": "Does the shadow of the radish intersect with the shadow of the spoon?"
+  },
+  {
+   "id": "shadow_basket_shape",
+   "type": "relation",
+   "of": [
+    "radish",
+    "basket"
+   ],
+   "desc": "the merged shadow forms the dark shape of the laundry basket",
+   "question": "Do the merged shadows form the dark shape of the laundry basket?"
+  },
+  {
+   "id": "photo_man_waltz",
+   "type": "attribute",
+   "of": "man_in_photo",
+   "desc": "the man in the photograph is in an old-fashioned waltz pose",
+   "question": "Is the man in the photograph in an old-fashioned waltz pose?"
+  },
+  {
+   "id": "photo_woman_waltz",
+   "type": "attribute",
+   "of": "woman_in_photo",
+   "desc": "the woman in the photograph is in an old-fashioned waltz pose",
+   "question": "Is the woman in the photograph in an old-fashioned waltz pose?"
+  },
+  {
+   "id": "radish_root_touching_table",
+   "type": "relation",
+   "of": [
+    "radish",
+    "table"
+   ],
+   "desc": "the radish's root touches the wooden table",
+   "question": "Does the radish's root touch the wooden table?"
+  },
+  {
+   "id": "cloth_soaked",
+   "type": "attribute",
+   "of": "cloth",
+   "desc": "the folded linen cloth is soaked in liquid",
+   "question": "Is the folded linen cloth soaked in liquid?"
+  },
+  {
+   "id": "radish_root_long",
+   "type": "attribute",
+   "of": "radish",
+   "desc": "the radish has a long thin root",
+   "question": "Does the radish have a long thin root?"
+  },
+  {
+   "id": "photo_content",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the photograph depicts a man and a woman",
+   "question": "Does the photograph depict a man and a woman?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "plate",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "napkin",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "basket",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0168",
+ "prompt": "The sun hung low and blood-tinged behind the half-drawn blinds, spilling through narrow slats that cut the kitchen into alternating slices of gold and shadow, each strip catching a different object in the scene like a stage lighting cue for a forgotten play. The chipped ceramic plate, once white and now marred by years of clumsy handling and forgotten meals, cradled a single, pale radish whose bulb seemed to pulse faintly, as if it were not a vegetable at all but the heart of some dormant creature waiting to breathe again. Its root, long and thin like a spindly leg, dangled over the edge, where it brushed against the worn wooden table, leaving a faint trail of silvery residue that shimmered as if made of liquid starlight. Beside the plate, a wooden spoon leaned at an odd angle, one prong lodged in the crumpled edge of a napkin stained with a deep rust-colored spill—was it beet juice, wine, or something more unsettling? The napkin itself seemed to ripple in the air, as though caught in an invisible breeze, or perhaps reacting to the slow, rhythmic hum that vibrated from the base of the spoon. \n\nA faint current of warmth rose from the table’s surface, curling around the laundry basket folded beside it. This was no ordinary basket—its woven wicker strands were knotted with tiny, delicate threads that glowed softly in the dimness, and every time the basket shifted slightly, the threads unspooled and rewove themselves into new patterns, like the memory of a thousand different rooms being rearranged in real time. The sunlight, now slanting more sharply, struck the edge of a half-open drawer beneath the table, revealing the gleam of a knife blade and a folded linen cloth that had been soaked in a tea of crushed lavender and silver thistle. But the most arresting detail was the shadow—the long, angular shadow of the radish stretching across the table like a bridge, intersecting with the spoon’s own shadow and merging into the dark shape of the laundry basket. The overlapping forms suggested an impossible geometry: as if the shadow was not merely a reflection of light but a separate entity, capable of moving independently. It seemed to whisper to the napkin, curling it gently into a tighter ball, then dissolving like smoke into the air.\n\nA cracked window on the opposite wall let in a breath of cool night, stirring the hair of a photograph pinned to the wall above the sink. The photo depicted a man and a woman in an old-fashioned waltz, their faces blurred by time and the weight of something unsaid. But as the air shifted, the man’s hand in the image lifted subtly, and the woman’s dress began to sway as if they were dancing in a place that had forgotten the laws of gravity. This movement, though slight, sent a shiver through the spoon, which in turn made the radish tremble and the napkin twitch. A small, mechanical music box hidden beneath the table chimed in with a single, mournful note, as if to confirm that the world in this kitchen was alive, shifting between states like a clock whose hands moved backward, forward, and sideways all at once.\n\nIn the corner, a clock ticked not in seconds but in pulses, its pendulum made of glass that reflected the radish, the spoon, and the shifting laundry basket in distorted, infinite repetition. A single fly, the only living creature visible, hovered near the radish, its wings humming in sync with the spoon’s vibration. It hovered not out of hunger but curiosity, as if drawn by the faint shimmer that pulsed from the radish’s core. The fly was a tiny guardian of the scene, balancing between stillness and motion, just as the kitchen itself seemed caught between moments—a half-finished meal, a paused conversation, a life suspended in the space between memory and dream. Everything in the room existed in a delicate, recursive harmony: the spoon stirring an unseen liquid, the radish whispering to the napkin, the shadow bridging past and present. It was a place where the boundaries between object and intention blurred, where time and space folded in on themselves like the wicker threads of the laundry basket. And yet, despite its surreal complexity, the scene felt deeply grounded in its own logic—a dreamworld with rules only the dreamer could understand.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 44,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

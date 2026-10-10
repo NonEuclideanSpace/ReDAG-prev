@@ -1,0 +1,268 @@
+{
+ "style": "flat vector illustration, clean and minimalistic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "plant",
+   "plural": "plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green potted plant",
+   "question": "Is there a green potted plant?",
+   "box": [
+    360,
+    400,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    450,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    660,
+    350,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an orange cat",
+   "question": "Is there an orange cat?",
+   "box": [
+    880,
+    500,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "book_stack",
+   "type": "entity",
+   "class": "stack of books",
+   "plural": "stacks of books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of hardcover books",
+   "question": "Is there a stack of hardcover books?",
+   "box": [
+    890,
+    650,
+    990,
+    750
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_holding_book",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a grey suit holds an open book",
+   "question": "Is the man in a grey suit holding an open book?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress looks directly at the man in a grey suit",
+   "question": "Is the woman in a blue dress looking directly at the man in a grey suit?"
+  },
+  {
+   "id": "plant_next_to_woman",
+   "type": "relation",
+   "of": [
+    "plant",
+    "woman"
+   ],
+   "desc": "the green potted plant is next to the woman in a blue dress on her right",
+   "question": "Is the green potted plant next to the woman in a blue dress on her right?"
+  },
+  {
+   "id": "child_pointing_at_book",
+   "type": "action",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in a yellow shirt points at the open book held by the man in a grey suit",
+   "question": "Is the child in a yellow shirt pointing at the open book held by the man in a grey suit?"
+  },
+  {
+   "id": "man_handing_bookmark",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the man in a grey suit hands a small bookmark to the child in a yellow shirt",
+   "question": "Is the man in a grey suit handing a small bookmark to the child in a yellow shirt?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the orange cat is sleeping",
+   "question": "Is the orange cat sleeping?"
+  },
+  {
+   "id": "cat_on_books",
+   "type": "relation",
+   "of": [
+    "cat",
+    "book_stack"
+   ],
+   "desc": "the orange cat is on the stack of hardcover books",
+   "question": "Is the orange cat on the stack of hardcover books?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "computer or electronic device",
+   "question": "Are there any computers or electronic devices visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a grey suit stands",
+   "question": "Is the man in a grey suit standing?"
+  },
+  {
+   "id": "book_stack_on_table",
+   "type": "relation",
+   "of": [
+    "book_stack",
+    "table"
+   ],
+   "desc": "the stack of hardcover books is on the long wooden table",
+   "question": "Is the stack of hardcover books on the long wooden table?"
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long wooden table",
+   "question": "Is there a long wooden table?",
+   "box": [
+    0,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "plant_leaves",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "the green potted plant has broad leaves",
+   "question": "Does the green potted plant have broad leaves?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "book_stack",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "book_stack",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0120",
+ "prompt": "In a flat vector illustration of a library reading room, a woman in a blue dress sits on the left side of a long wooden table. Next to her on the right rests a green potted plant with broad leaves. In the center stands a man in a grey suit holding an open book. To his right, a child in a yellow shirt points at a specific page within that open book. On the far right edge of the scene, an orange cat sleeps peacefully on a stack of hardcover books. The woman in the blue dress is looking directly at the man in the grey suit. The man in the grey suit is handing a small bookmark to the child in the yellow shirt. The scene is clean and minimalistic. There is no computer or electronic device visible anywhere in the room. The composition focuses strictly on these five distinct entities and their simple interactions within the quiet space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

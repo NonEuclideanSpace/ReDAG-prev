@@ -1,0 +1,387 @@
+{
+ "style": "photorealistic wide-angle museum photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a grand natural history museum hall with high ceilings and walls",
+   "question": "Does the image show a grand natural history museum hall with high ceilings and walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "t_rex",
+   "type": "entity",
+   "class": "skeleton",
+   "plural": "skeletons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive T-Rex skeleton",
+   "question": "Is there a massive T-Rex skeleton?",
+   "box": [
+    350,
+    200,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "velociraptor",
+   "type": "entity",
+   "class": "skeleton",
+   "plural": "skeletons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smaller velociraptor skeleton",
+   "question": "Is there a smaller velociraptor skeleton?",
+   "box": [
+    760,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "pterodactyl",
+   "type": "entity",
+   "class": "skeleton",
+   "plural": "skeletons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a Pterodactyl skeleton",
+   "question": "Is there a Pterodactyl skeleton?",
+   "box": [
+    400,
+    50,
+    700,
+    250
+   ]
+  },
+  {
+   "id": "guard_older",
+   "type": "entity",
+   "class": "museum guard",
+   "plural": "museum guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older museum guard in uniform",
+   "question": "Is there an older museum guard in uniform?",
+   "box": [
+    100,
+    400,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "guard_younger",
+   "type": "entity",
+   "class": "museum guard",
+   "plural": "museum guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a younger museum guard in uniform",
+   "question": "Is there a younger museum guard in uniform?",
+   "box": [
+    280,
+    420,
+    380,
+    820
+   ]
+  },
+  {
+   "id": "cases",
+   "type": "entity",
+   "class": "display case",
+   "plural": "display cases",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two glass display cases",
+   "question": "Are there two glass display cases?",
+   "box": [
+    50,
+    500,
+    320,
+    900
+   ]
+  },
+  {
+   "id": "ammonite",
+   "type": "entity",
+   "class": "fossil",
+   "plural": "fossils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ammonite fossil",
+   "question": "Is there an ammonite fossil?",
+   "box": [
+    80,
+    600,
+    180,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "school child",
+   "plural": "school children",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four school children",
+   "question": "Are there four school children?",
+   "box": [
+    150,
+    650,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "banner",
+   "type": "entity",
+   "class": "museum banner",
+   "plural": "museum banners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large museum banner",
+   "question": "Is there a large museum banner?",
+   "box": [
+    300,
+    100,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "placard",
+   "type": "entity",
+   "class": "display placard",
+   "plural": "display placards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small display placard",
+   "question": "Is there a small display placard?",
+   "box": [
+    800,
+    850,
+    900,
+    920
+   ]
+  },
+  {
+   "id": "flashlight",
+   "type": "attribute",
+   "of": "guard_older",
+   "desc": "the older museum guard holds a flashlight",
+   "question": "Is the older museum guard holding a flashlight?"
+  },
+  {
+   "id": "toy_dino",
+   "type": "attribute",
+   "of": "child",
+   "desc": "one school child holds a toy dinosaur",
+   "question": "Is one of the school children holding a toy dinosaur?"
+  },
+  {
+   "id": "t_rex_facing_velo",
+   "type": "state",
+   "of": "t_rex",
+   "desc": "the T-Rex skeleton is posed facing the velociraptor skeleton",
+   "question": "Is the T-Rex skeleton posed facing the velociraptor skeleton?"
+  },
+  {
+   "id": "velo_lunging",
+   "type": "state",
+   "of": "velociraptor",
+   "desc": "the velociraptor skeleton is posed as if lunging",
+   "question": "Is the velociraptor skeleton posed as if lunging?"
+  },
+  {
+   "id": "velo_claw_breaking",
+   "type": "action",
+   "of": [
+    "velociraptor",
+    "placard"
+   ],
+   "desc": "the velociraptor skeleton's claw is breaking the small display placard",
+   "question": "Is the velociraptor skeleton's claw breaking the small display placard?"
+  },
+  {
+   "id": "guard_older_pointing",
+   "type": "state",
+   "of": "guard_older",
+   "desc": "the older museum guard points a flashlight beam at the floor",
+   "question": "Is the older museum guard pointing a flashlight beam at the floor?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "t_rex"
+   ],
+   "desc": "the school child points the toy dinosaur at the T-Rex skeleton",
+   "question": "Is the school child pointing the toy dinosaur at the T-Rex skeleton?"
+  },
+  {
+   "id": "guard_younger_looking",
+   "type": "action",
+   "of": [
+    "guard_younger",
+    "child"
+   ],
+   "desc": "the younger museum guard looks at a school child",
+   "question": "Is the younger museum guard looking at a school child?"
+  },
+  {
+   "id": "t_rex_between",
+   "type": "relation",
+   "of": [
+    "t_rex",
+    "guard_older",
+    "velociraptor"
+   ],
+   "desc": "the T-Rex skeleton is positioned between the older museum guard and the velociraptor skeleton",
+   "question": "Is the T-Rex skeleton positioned between the older museum guard and the velociraptor skeleton?"
+  },
+  {
+   "id": "pterodactyl_above_trex",
+   "type": "relation",
+   "of": [
+    "pterodactyl",
+    "t_rex"
+   ],
+   "desc": "the Pterodactyl skeleton is suspended above the T-Rex skeleton",
+   "question": "Is the Pterodactyl skeleton suspended above the T-Rex skeleton?"
+  },
+  {
+   "id": "cases_left_trex",
+   "type": "relation",
+   "of": [
+    "cases",
+    "t_rex"
+   ],
+   "desc": "the two glass display cases stand to the left of the T-Rex skeleton",
+   "question": "Do the two glass display cases stand to the left of the T-Rex skeleton?"
+  },
+  {
+   "id": "guard_younger_front_case",
+   "type": "relation",
+   "of": [
+    "guard_younger",
+    "cases"
+   ],
+   "desc": "the younger museum guard stands in front of one of the display cases",
+   "question": "Is the younger museum guard standing in front of one of the display cases?"
+  },
+  {
+   "id": "banner_behind_trex",
+   "type": "relation",
+   "of": [
+    "banner",
+    "t_rex"
+   ],
+   "desc": "the large museum banner hangs on the wall behind the T-Rex skeleton",
+   "question": "Does the large museum banner hang on the wall behind the T-Rex skeleton?"
+  },
+  {
+   "id": "trex_tail_over_case",
+   "type": "relation",
+   "of": [
+    "t_rex",
+    "cases"
+   ],
+   "desc": "the T-Rex skeleton's tail extends over one of the display cases",
+   "question": "Does the T-Rex skeleton's tail extend over one of the display cases?"
+  },
+  {
+   "id": "guard_older_standing",
+   "type": "state",
+   "of": "guard_older",
+   "desc": "the older museum guard is standing",
+   "question": "Is the older museum guard standing?"
+  },
+  {
+   "id": "child_shorter",
+   "type": "relation",
+   "of": [
+    "child",
+    "guard_older"
+   ],
+   "desc": "the school child is shorter than the older museum guard",
+   "question": "Is the school child shorter than the older museum guard?"
+  },
+  {
+   "id": "placard_on_floor",
+   "type": "state",
+   "of": "placard",
+   "desc": "the small display placard is on the floor",
+   "question": "Is the small display placard on the floor?"
+  },
+  {
+   "id": "ammonite_in_case",
+   "type": "relation",
+   "of": [
+    "ammonite",
+    "cases"
+   ],
+   "desc": "the ammonite fossil is inside one of the glass display cases",
+   "question": "Is the ammonite fossil inside one of the glass display cases?"
+  },
+  {
+   "id": "guard_older_than_younger",
+   "type": "relation",
+   "of": [
+    "guard_older",
+    "guard_younger"
+   ],
+   "desc": "the older museum guard is older than the younger museum guard",
+   "question": "Is the older museum guard older than the younger museum guard?"
+  },
+  {
+   "id": "t_rex_thick_ribs",
+   "type": "attribute",
+   "of": "t_rex",
+   "desc": "the T-Rex skeleton has thick ribs",
+   "question": "Does the T-Rex skeleton have thick ribs?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cases",
+   "to": "ammonite",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_055",
+ "prompt": "In a grand natural history museum hall, a massive T-Rex skeleton is positioned between a museum guard and a smaller velociraptor skeleton. The T-Rex is posed facing the velociraptor, which is posed as if lunging towards the T-Rex. Hanging from the high ceiling, a Pterodactyl skeleton is suspended above the T-Rex. The T-Rex skeleton has thicker ribs than the velociraptor skeleton. To the left of the T-Rex stand two glass display cases, one containing an ammonite fossil. The number of museum guards in the hall is one more than the number of display cases. One guard, who is older than the other, is standing in front of a display case, looking at a school child. The number of children is twice the number of display cases. The child is shorter than the guard and is holding a toy dinosaur, pointing it at the T-Rex. The older guard is pointing a flashlight's beam at the floor. The velociraptor skeleton has its claw breaking a small display placard on the floor. A large museum banner hangs on the wall behind the T-Rex. The T-Rex's tail extends over one of the display cases.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 1,
+   "set_count": 3,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

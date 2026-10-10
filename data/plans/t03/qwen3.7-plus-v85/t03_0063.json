@@ -1,0 +1,206 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a simple background suitable for a pencil sketch",
+   "question": "Is the image rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    300,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green apron",
+   "question": "Is there a woman wearing a green apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue shirt",
+   "question": "Is there a man wearing a blue shirt?",
+   "box": [
+    450,
+    300,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern",
+   "question": "Is there a large fern?",
+   "box": [
+    750,
+    100,
+    1000,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    800,
+    650,
+    950,
+    820
+   ]
+  },
+  {
+   "id": "woman_pot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a green apron holds a small terracotta pot",
+   "question": "Is the woman in a green apron holding a small terracotta pot?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a green apron is standing",
+   "question": "Is the woman in a green apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue shirt is sitting",
+   "question": "Is the man in a blue shirt sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a blue shirt is looking at the fern",
+   "question": "Is the man in a blue shirt looking at the large fern?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is resting",
+   "question": "Is the tabby cat resting?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a green apron is handing the pot toward the man in a blue shirt",
+   "question": "Is the woman in a green apron handing the pot toward the man in a blue shirt?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in a blue shirt sits on the wooden bench",
+   "question": "Is the man in a blue shirt sitting on the wooden bench?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the tabby cat rests on the wooden bench",
+   "question": "Is the tabby cat resting on the wooden bench?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the tabby cat is next to the man in a blue shirt",
+   "question": "Is the tabby cat next to the man in a blue shirt?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "a glass roof",
+   "question": "Is there a glass roof visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0063",
+ "prompt": "In a pencil sketch with light color wash, a woman in a green apron stands on the left holding a small terracotta pot. A man in a blue shirt sits on a wooden bench in the center looking at a large fern. A tabby cat rests on the right side of the bench next to the man. The woman is handing the pot toward the man. There is no glass roof visible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

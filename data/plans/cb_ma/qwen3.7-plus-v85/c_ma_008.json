@@ -1,0 +1,163 @@
+{
+ "style": "dramatic cinematic photography, dark stormy atmosphere, high contrast lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gothic cathedral spire during a thunderstorm with rain and lightning",
+   "question": "Does the image show a gothic cathedral spire during a thunderstorm with rain and lightning?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "gargoyle",
+   "type": "entity",
+   "class": "gargoyle",
+   "plural": "gargoyles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old stone gargoyle carved from dark gray stone",
+   "question": "Is there an old stone gargoyle carved from dark gray stone?",
+   "box": [
+    312,
+    100,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "gargoyle_eyes",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has glowing red eyes",
+   "question": "Does the gargoyle have glowing red eyes?"
+  },
+  {
+   "id": "gargoyle_fangs",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has sharp stone fangs",
+   "question": "Does the gargoyle have sharp stone fangs?"
+  },
+  {
+   "id": "gargoyle_ears",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has pointed ears extending outward",
+   "question": "Does the gargoyle have pointed ears extending outward?"
+  },
+  {
+   "id": "gargoyle_wings",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "large bat-like wings spread wide",
+   "question": "Does the gargoyle have large bat-like wings spread wide?"
+  },
+  {
+   "id": "gargoyle_texture",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has a textured surface with carved lines and is not smooth",
+   "question": "Does the gargoyle have a textured surface with carved lines and appear not smooth?"
+  },
+  {
+   "id": "gargoyle_horns",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has two curved horns protruding from its forehead",
+   "question": "Does the gargoyle have two curved horns protruding from its forehead?"
+  },
+  {
+   "id": "gargoyle_claws",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has sharp extended claws",
+   "question": "Does the gargoyle have sharp extended claws?"
+  },
+  {
+   "id": "gargoyle_tail",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "the gargoyle has a long tail coiled around the spire",
+   "question": "Does the gargoyle have a long tail coiled around the spire?"
+  },
+  {
+   "id": "gargoyle_wet",
+   "type": "state",
+   "of": "gargoyle",
+   "desc": "the gargoyle has dark wet streaks from rain on its surface",
+   "question": "Does the gargoyle have dark wet streaks from rain on its surface?"
+  },
+  {
+   "id": "gargoyle_mouth",
+   "type": "state",
+   "of": "gargoyle",
+   "desc": "the gargoyle's mouth is open revealing a carved stone tongue",
+   "question": "Is the gargoyle's mouth open revealing a carved stone tongue?"
+  },
+  {
+   "id": "gargoyle_perched",
+   "type": "state",
+   "of": "gargoyle",
+   "desc": "the gargoyle is perched atop the gothic cathedral spire",
+   "question": "Is the gargoyle perched atop the gothic cathedral spire?"
+  },
+  {
+   "id": "no_restoration",
+   "type": "absent",
+   "desc": "signs of modern restoration",
+   "question": "Are there any signs of modern restoration on the gargoyle?"
+  },
+  {
+   "id": "gargoyle_worn",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "worn surfaces and moss growth in the crevices",
+   "question": "Does the gargoyle have worn surfaces and moss growth in the crevices?"
+  },
+  {
+   "id": "gargoyle_wing_pattern",
+   "type": "attribute",
+   "of": "gargoyle",
+   "desc": "detailed feather-like stone carving patterns on the wings",
+   "question": "Do the gargoyle's wings display detailed feather-like stone carving patterns?"
+  },
+  {
+   "id": "no_metal",
+   "type": "absent",
+   "desc": "metal reinforcements",
+   "question": "Are there any metal reinforcements on the gargoyle?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_008",
+ "prompt": "A single old stone gargoyle perched atop a gothic cathedral spire during a thunderstorm. The gargoyle is carved from dark gray stone with detailed features showing worn surfaces and moss growth in the crevices. Its face has glowing red eyes, sharp stone fangs, and pointed ears that extend outward. The gargoyle has large bat-like wings spread wide, displaying detailed feather-like stone carving patterns. It is not smooth, showing textured surface and carved lines throughout. Two curved horns protrude from its forehead, and its claws are sharp and extended as if gripping the stone ledge. The gargoyle's body is broad and humanoid, with a long tail that coils around the cathedral's spire. Rain streams down its surface, creating dark wet streaks against the stone. The gargoyle's mouth is open in a permanent roar, revealing a carved stone tongue. Lightning occasionally illuminates the figure, casting dramatic shadows. The gargoyle shows no signs of modern restoration and contains no metal reinforcements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node gargoyle: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

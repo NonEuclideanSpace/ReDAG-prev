@@ -1,0 +1,132 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    600,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    620,
+    600,
+    930,
+    850
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard against her chest",
+   "question": "Is the nurse holding a clipboard against her chest?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is standing",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "nurse_looking_at_man",
+   "type": "action",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse looks directly at the elderly man",
+   "question": "Is the nurse looking directly at the elderly man?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the wooden bench",
+   "question": "Is the elderly man sitting on the wooden bench?"
+  },
+  {
+   "id": "no_medical_equipment",
+   "type": "absent",
+   "desc": "medical equipment",
+   "question": "Is there any medical equipment visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0013",
+ "prompt": "In a pencil sketch with light color wash, a nurse in blue scrubs stands on the left side of a sterile hospital corridor. She is holding a clipboard firmly against her chest. On the right, an elderly man in a gray coat sits on a wooden bench. The nurse is looking directly at the seated man. There is no medical equipment visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

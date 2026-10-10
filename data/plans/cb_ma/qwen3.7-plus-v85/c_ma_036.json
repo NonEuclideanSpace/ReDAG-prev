@@ -1,0 +1,298 @@
+{
+ "style": "photorealistic, dimly lit, dusty atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of an old, abandoned spaceship cockpit with metallic walls showing rust, a checkered metal floor, and visible damage",
+   "question": "Does the image show the interior of an old, abandoned spaceship cockpit with metallic rusted walls, a checkered metal floor, and visible damage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "seat",
+   "type": "entity",
+   "class": "pilot seat",
+   "plural": "pilot seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single pilot's seat",
+   "question": "Is there a single pilot's seat?",
+   "box": [
+    350,
+    400,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "consoles",
+   "type": "entity",
+   "class": "console",
+   "plural": "consoles",
+   "count": 1,
+   "count_exact": false,
+   "desc": "cockpit consoles",
+   "question": "Are there cockpit consoles?",
+   "box": [
+    100,
+    500,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "screens",
+   "type": "entity",
+   "class": "computer screen",
+   "plural": "computer screens",
+   "count": 2,
+   "count_exact": false,
+   "desc": "cracked computer screens",
+   "question": "Are there cracked computer screens?",
+   "box": [
+    200,
+    300,
+    824,
+    500
+   ]
+  },
+  {
+   "id": "wires",
+   "type": "entity",
+   "class": "wire",
+   "plural": "wires",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wires hanging from the ceiling",
+   "question": "Are there wires hanging from the ceiling?",
+   "box": [
+    100,
+    0,
+    924,
+    200
+   ]
+  },
+  {
+   "id": "lights",
+   "type": "entity",
+   "class": "warning light",
+   "plural": "warning lights",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several red warning lights",
+   "question": "Are there several red warning lights?",
+   "box": [
+    150,
+    100,
+    874,
+    300
+   ]
+  },
+  {
+   "id": "viewport",
+   "type": "entity",
+   "class": "viewport",
+   "plural": "viewports",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty main viewport",
+   "question": "Is there a dusty main viewport?",
+   "box": [
+    200,
+    50,
+    824,
+    350
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "ceramic cup",
+   "plural": "ceramic cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single ceramic cup",
+   "question": "Is there a single ceramic cup?",
+   "box": [
+    480,
+    650,
+    544,
+    714
+   ]
+  },
+  {
+   "id": "yoke",
+   "type": "entity",
+   "class": "steering yoke",
+   "plural": "steering yokes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single circular steering yoke",
+   "question": "Is there a single circular steering yoke?",
+   "box": [
+    400,
+    700,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "viewport_stars",
+   "type": "state",
+   "of": "viewport",
+   "desc": "the viewport looks out onto a field of stars",
+   "question": "Does the viewport look out onto a field of stars?"
+  },
+  {
+   "id": "lights_blinking",
+   "type": "state",
+   "of": "lights",
+   "desc": "some of the red warning lights are blinking",
+   "question": "Are some of the red warning lights blinking?"
+  },
+  {
+   "id": "cup_on_dashboard",
+   "type": "relation",
+   "of": [
+    "cup",
+    "consoles"
+   ],
+   "desc": "the ceramic cup sits on the dashboard",
+   "question": "Is the ceramic cup sitting on the dashboard?"
+  },
+  {
+   "id": "no_people",
+   "type": "absent",
+   "desc": "people inside the cockpit",
+   "question": "Are there any people inside the cockpit?"
+  },
+  {
+   "id": "no_info_screens",
+   "type": "absent",
+   "desc": "screens displaying information",
+   "question": "Are there any screens displaying information?"
+  },
+  {
+   "id": "not_all_lights_on",
+   "type": "absent",
+   "desc": "all warning lights being on",
+   "question": "Are all the warning lights on?"
+  },
+  {
+   "id": "seat_on_floor",
+   "type": "state",
+   "of": "seat",
+   "desc": "the pilot's seat is on the floor",
+   "question": "Is the pilot's seat on the floor?"
+  },
+  {
+   "id": "consoles_placement",
+   "type": "state",
+   "of": "consoles",
+   "desc": "the consoles are in the cockpit",
+   "question": "Are the consoles in the cockpit?"
+  },
+  {
+   "id": "screens_placement",
+   "type": "relation",
+   "of": [
+    "screens",
+    "consoles"
+   ],
+   "desc": "the computer screens are on the consoles",
+   "question": "Are the computer screens on the consoles?"
+  },
+  {
+   "id": "wires_from_ceiling",
+   "type": "state",
+   "of": "wires",
+   "desc": "the wires hang from the ceiling",
+   "question": "Do the wires hang from the ceiling?"
+  },
+  {
+   "id": "yoke_placement",
+   "type": "relation",
+   "of": [
+    "yoke",
+    "consoles"
+   ],
+   "desc": "the steering yoke is on the dashboard",
+   "question": "Is the steering yoke on the dashboard?"
+  },
+  {
+   "id": "no_bright_lighting",
+   "type": "absent",
+   "desc": "bright lighting",
+   "question": "Is the lighting bright?"
+  },
+  {
+   "id": "seat_upholstery",
+   "type": "attribute",
+   "of": "seat",
+   "desc": "torn upholstery on the pilot's seat",
+   "question": "Does the pilot's seat have torn upholstery?"
+  },
+  {
+   "id": "buttons_switches",
+   "type": "attribute",
+   "of": "consoles",
+   "desc": "many buttons and switches covering the consoles",
+   "question": "Do many buttons and switches cover the consoles?"
+  },
+  {
+   "id": "yoke_grime",
+   "type": "attribute",
+   "of": "yoke",
+   "desc": "grime covering the steering yoke",
+   "question": "Is the steering yoke covered in grime?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "consoles",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "consoles",
+   "to": "screens",
+   "kind": "support"
+  },
+  {
+   "from": "consoles",
+   "to": "yoke",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_036",
+ "prompt": "The interior of a single, old, abandoned spaceship cockpit showing visible damage. It is dimly lit, and the air is visibly dusty. The cockpit has a single pilot's seat with torn upholstery. The interior is metallic, with many surfaces showing rust. The floor has a checkered metal pattern. Many buttons and switches cover the consoles, and all computer screens are cracked. Some wires are hanging from the ceiling. There are several red warning lights, and some of these lights are blinking. The main viewport is dusty and looks out onto a field of stars. On the dashboard sits a single, forgotten ceramic cup. The steering mechanism is a single, circular yoke covered in grime. Importantly, the cockpit is not pristine, no screens are displaying information, there are no people inside, the lighting is not bright, and not all of the warning lights are on.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

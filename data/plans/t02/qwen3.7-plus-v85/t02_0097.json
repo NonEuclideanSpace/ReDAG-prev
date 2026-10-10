@@ -1,0 +1,208 @@
+{
+ "style": "pencil sketch with light color wash, soft graphite strokes, subtle watercolor tints",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with faint outlines of pine trees and distant peaks",
+   "question": "Does the background show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a simple tent",
+   "question": "Is there a simple tent in the image?",
+   "box": [
+    650,
+    400,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue jacket",
+   "question": "Is there a man in a blue jacket?",
+   "box": [
+    100,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hat",
+   "question": "Is there a woman in a yellow hat?",
+   "box": [
+    500,
+    250,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue jacket is sitting",
+   "question": "Is the man in the blue jacket sitting?"
+  },
+  {
+   "id": "man_holding_mug",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the blue jacket holds a steaming mug",
+   "question": "Is the man in the blue jacket holding a steaming mug?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow hat is looking directly at the man",
+   "question": "Is the woman in the yellow hat looking directly at the man in the blue jacket?"
+  },
+  {
+   "id": "woman_extending_hand",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow hat extends her hand toward the man",
+   "question": "Is the woman in the yellow hat extending her hand toward the man in the blue jacket?"
+  },
+  {
+   "id": "woman_offering_bread",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow hat offers a small loaf of bread to the man in the blue jacket",
+   "question": "Is the woman in the yellow hat offering a small loaf of bread to the man in the blue jacket?"
+  },
+  {
+   "id": "man_left_of_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the blue jacket is to the left of the woman in the yellow hat",
+   "question": "Is the man in the blue jacket to the left of the woman in the yellow hat?"
+  },
+  {
+   "id": "figures_near_tent",
+   "type": "relation",
+   "of": [
+    "man",
+    "tent"
+   ],
+   "desc": "the man and the woman are near the tent",
+   "question": "Are the man in the blue jacket and the woman in the yellow hat near the tent?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hat is standing",
+   "question": "Is the woman in the yellow hat standing?"
+  },
+  {
+   "id": "pine_trees",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "faint outlines of pine trees",
+   "question": "Are there faint outlines of pine trees?",
+   "box": [
+    50,
+    50,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "distant_peaks",
+   "type": "entity",
+   "class": "mountain peak",
+   "plural": "mountain peaks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "distant peaks",
+   "question": "Are there distant peaks?",
+   "box": [
+    100,
+    100,
+    924,
+    350
+   ]
+  },
+  {
+   "id": "man_holding_mug_both_hands",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue jacket holds the mug firmly in both hands",
+   "question": "Is the man in the blue jacket holding the mug firmly in both hands?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0097",
+ "prompt": "In a pencil sketch with light color wash, a man in a blue jacket sits on the left side of a mountain campsite. He holds a steaming mug firmly in both hands. To his right stands a woman in a yellow hat, looking directly at him. She extends her hand toward him, offering a small loaf of bread. The two figures share a quiet moment near the tent. There is no fire visible in the scene. The background features faint outlines of pine trees and distant peaks, rendered with soft graphite strokes and subtle watercolor tints to suggest the chilly alpine air surrounding the simple camp.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

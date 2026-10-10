@@ -1,0 +1,258 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party scene under the night sky",
+   "question": "Does the image show a rooftop party scene under the night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_blue_dress",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tuxedo",
+   "question": "Is there a man in a tuxedo?",
+   "box": [
+    260,
+    300,
+    460,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    380,
+    500,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "blanket",
+   "type": "entity",
+   "class": "picnic blanket",
+   "plural": "picnic blankets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a picnic blanket",
+   "question": "Is there a picnic blanket?",
+   "box": [
+    350,
+    600,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a hoodie",
+   "question": "Is there a teenager in a hoodie?",
+   "box": [
+    500,
+    350,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "girl_yellow_skirt",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow skirt",
+   "question": "Is there a girl in a yellow skirt?",
+   "box": [
+    800,
+    350,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman_blue_dress",
+   "desc": "the woman in a blue dress holds a champagne flute",
+   "question": "Is the woman in a blue dress holding a champagne flute?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the man in a tuxedo is pointing",
+   "question": "Is the man in a tuxedo pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "teenager_looking",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in a hoodie is looking at a smartphone screen",
+   "question": "Is the teenager in a hoodie looking at a smartphone screen?"
+  },
+  {
+   "id": "teenager_phone",
+   "type": "attribute",
+   "of": "teenager",
+   "desc": "the teenager in a hoodie holds a smartphone",
+   "question": "Is the teenager in a hoodie holding a smartphone?"
+  },
+  {
+   "id": "girl_cake",
+   "type": "attribute",
+   "of": "girl_yellow_skirt",
+   "desc": "the girl in a yellow skirt holds a slice of cake",
+   "question": "Is the girl in a yellow skirt holding a slice of cake?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_tuxedo",
+    "woman_blue_dress"
+   ],
+   "desc": "the man in a tuxedo is next to the woman in a blue dress",
+   "question": "Is the man in a tuxedo next to the woman in a blue dress?"
+  },
+  {
+   "id": "dog_on_blanket",
+   "type": "relation",
+   "of": [
+    "dog",
+    "blanket"
+   ],
+   "desc": "the golden retriever is on the picnic blanket",
+   "question": "Is the golden retriever on the picnic blanket?"
+  },
+  {
+   "id": "teenager_behind_dog",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "dog"
+   ],
+   "desc": "the teenager in a hoodie is behind the golden retriever",
+   "question": "Is the teenager in a hoodie behind the golden retriever?"
+  },
+  {
+   "id": "girl_handing_cake",
+   "type": "action",
+   "of": [
+    "girl_yellow_skirt",
+    "man_tuxedo"
+   ],
+   "desc": "the girl in a yellow skirt is handing a slice of cake to the man in a tuxedo",
+   "question": "Is the girl in a yellow skirt handing a slice of cake to the man in a tuxedo?"
+  },
+  {
+   "id": "woman_next_to_dog",
+   "type": "relation",
+   "of": [
+    "woman_blue_dress",
+    "dog"
+   ],
+   "desc": "the woman in a blue dress is standing next to the golden retriever",
+   "question": "Is the woman in a blue dress standing next to the golden retriever?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_blue_dress",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "man_pointing_horizon",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the man in a tuxedo is pointing toward the horizon",
+   "question": "Is the man in a tuxedo pointing toward the horizon?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "blanket",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0037",
+ "prompt": "In this anime style illustration, a lively rooftop party unfolds under the night sky. On the left stands a woman in a blue dress holding a champagne flute. Next to her on the right is a man in a tuxedo who is pointing toward the horizon. In the center sits a golden retriever resting calmly on a picnic blanket. Behind the dog, a teenager in a hoodie is looking at a smartphone screen. To the far right, a girl in a yellow skirt is handing a slice of cake to the man in the tuxedo. The woman in the blue dress is standing next to the golden retriever. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

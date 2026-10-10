@@ -1,0 +1,385 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock under a clear sky with distant water in the background",
+   "question": "Does the image show a shipyard dock under a clear sky with distant water in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "metal railing",
+   "plural": "metal railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal railing",
+   "question": "Is there a rusted metal railing?",
+   "box": [
+    50,
+    400,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "hull_section",
+   "type": "entity",
+   "class": "steel hull section",
+   "plural": "steel hull sections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large steel hull section",
+   "question": "Is there a large steel hull section?",
+   "box": [
+    350,
+    300,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden crate",
+   "question": "Is there a weathered wooden crate?",
+   "box": [
+    750,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "wrench_entity",
+   "type": "entity",
+   "class": "wrench",
+   "plural": "wrenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy wrench",
+   "question": "Is there a heavy wrench?",
+   "box": [
+    700,
+    800,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "operator",
+   "type": "entity",
+   "class": "crane operator",
+   "plural": "crane operators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall crane operator in blue overalls",
+   "question": "Is there a tall crane operator in blue overalls?",
+   "box": [
+    80,
+    100,
+    280,
+    750
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "engineer",
+   "plural": "engineers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young engineer",
+   "question": "Is there a young engineer?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray tabby cat",
+   "question": "Is there a stray tabby cat?",
+   "box": [
+    780,
+    550,
+    920,
+    700
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in a white shirt",
+   "question": "Is there a foreman in a white shirt?",
+   "box": [
+    650,
+    200,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "dockworker",
+   "type": "entity",
+   "class": "dockworker",
+   "plural": "dockworkers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dockworker wearing orange gloves",
+   "question": "Is there a dockworker wearing orange gloves?",
+   "box": [
+    800,
+    220,
+    950,
+    780
+   ]
+  },
+  {
+   "id": "operator_leaning",
+   "type": "relation",
+   "of": [
+    "operator",
+    "railing"
+   ],
+   "desc": "the crane operator is leaning against the railing with one foot propped up",
+   "question": "Is the crane operator leaning against the railing with one foot propped up?"
+  },
+  {
+   "id": "operator_glancing",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator is glancing down",
+   "question": "Is the crane operator glancing down?"
+  },
+  {
+   "id": "engineer_holding_blueprint",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer holds a rolled-up blueprint tightly",
+   "question": "Is the engineer holding a rolled-up blueprint tightly?"
+  },
+  {
+   "id": "engineer_looking",
+   "type": "state",
+   "of": "engineer",
+   "desc": "the engineer is looking intently",
+   "question": "Is the engineer looking intently?"
+  },
+  {
+   "id": "engineer_shifting",
+   "type": "state",
+   "of": "engineer",
+   "desc": "the engineer is shifting weight slightly",
+   "question": "Is the engineer shifting weight slightly?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sitting calmly",
+   "question": "Is the tabby cat sitting calmly?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is watching with narrowed eyes",
+   "question": "Is the tabby cat watching with narrowed eyes?"
+  },
+  {
+   "id": "cat_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is twitching its tail",
+   "question": "Is the tabby cat twitching its tail?"
+  },
+  {
+   "id": "wrench_on_ground",
+   "type": "state",
+   "of": "wrench_entity",
+   "desc": "the heavy wrench lies on the dusty ground",
+   "question": "Is the heavy wrench lying on the dusty ground?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "action",
+   "of": [
+    "foreman",
+    "dockworker"
+   ],
+   "desc": "the foreman points decisively toward the distant water, directing the dockworker",
+   "question": "Is the foreman pointing decisively toward the distant water, directing the dockworker?"
+  },
+  {
+   "id": "dockworker_listening",
+   "type": "state",
+   "of": "dockworker",
+   "desc": "the dockworker is listening attentively",
+   "question": "Is the dockworker listening attentively?"
+  },
+  {
+   "id": "dockworker_holding_clipboard",
+   "type": "attribute",
+   "of": "dockworker",
+   "desc": "the dockworker holds a clipboard firmly",
+   "question": "Is the dockworker holding a clipboard firmly?"
+  },
+  {
+   "id": "operator_next_to_railing",
+   "type": "relation",
+   "of": [
+    "operator",
+    "railing"
+   ],
+   "desc": "the crane operator is next to the rusted metal railing",
+   "question": "Is the crane operator next to the rusted metal railing?"
+  },
+  {
+   "id": "engineer_near_hull",
+   "type": "relation",
+   "of": [
+    "engineer",
+    "hull_section"
+   ],
+   "desc": "the engineer is near the large steel hull section",
+   "question": "Is the engineer near the large steel hull section?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the tabby cat sits on the wooden crate",
+   "question": "Is the tabby cat sitting on the wooden crate?"
+  },
+  {
+   "id": "wrench_next_to_cat",
+   "type": "relation",
+   "of": [
+    "wrench_entity",
+    "cat"
+   ],
+   "desc": "the heavy wrench is next to the tabby cat",
+   "question": "Is the heavy wrench next to the tabby cat?"
+  },
+  {
+   "id": "dockworker_beside_foreman",
+   "type": "relation",
+   "of": [
+    "dockworker",
+    "foreman"
+   ],
+   "desc": "the dockworker stands beside the foreman",
+   "question": "Is the dockworker standing beside the foreman?"
+  },
+  {
+   "id": "operator_looks_at_engineer",
+   "type": "relation",
+   "of": [
+    "operator",
+    "engineer"
+   ],
+   "desc": "the crane operator looks at the engineer",
+   "question": "Is the crane operator looking at the engineer?"
+  },
+  {
+   "id": "no_water_foreground",
+   "type": "absent",
+   "desc": "water in the immediate foreground",
+   "question": "Is there any water visible in the immediate foreground?"
+  },
+  {
+   "id": "operator_standing",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator in blue overalls stands",
+   "question": "Is the crane operator in blue overalls standing?"
+  },
+  {
+   "id": "dockworker_standing",
+   "type": "state",
+   "of": "dockworker",
+   "desc": "the dockworker wearing orange gloves stands",
+   "question": "Is the dockworker wearing orange gloves standing?"
+  },
+  {
+   "id": "wrench_metallic",
+   "type": "attribute",
+   "of": "wrench_entity",
+   "desc": "the heavy wrench has a metallic surface",
+   "question": "Does the heavy wrench have a metallic surface?"
+  },
+  {
+   "id": "cat_green_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the stray tabby cat has green eyes",
+   "question": "Does the stray tabby cat have green eyes?"
+  },
+  {
+   "id": "engineer_hard_hat",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the young engineer wears a yellow hard hat",
+   "question": "Does the young engineer wear a yellow hard hat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0006",
+ "prompt": "In a vibrant anime style, the scene unfolds at a bustling shipyard dock under a clear sky. On the left stands a tall crane operator in blue overalls, leaning casually against a rusted metal railing with one foot propped up. In the center, a young engineer in a yellow hard hat holds a rolled-up blueprint tightly, looking intently at a large steel hull section nearby. To the right, a stray tabby cat sits calmly on a wooden crate, watching the activity with narrowed green eyes. Next to the cat, a heavy wrench lies abandoned on the dusty ground, its metallic surface gleaming faintly. A foreman in a white shirt points decisively toward the distant water, directing the attention of a dockworker in orange gloves who stands beside him, listening attentively. The dockworker holds a clipboard, ready to note instructions. There is no water visible in the immediate foreground, keeping the focus strictly on the industrial elements and characters. The crane operator glances down at the engineer, creating a subtle line of sight across the frame. The engineer shifts weight slightly, emphasizing anticipation. The tabby cat twitches its tail, adding a touch of life to the static machinery. The rusted railing shows signs of wear, contrasting with the new steel hull. The wooden crate appears weathered, hinting at long-term use. The heavy wrench remains untouched, suggesting a recent pause in work. The clipboard is held firmly, indicating professionalism amidst the chaos. The distant water provides a serene backdrop to the industrial foreground. The clear sky offers ample light, highlighting the vivid colors of the clothing and machinery. The overall composition balances human activity with mechanical presence, capturing a moment of coordinated effort in the shipyard.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

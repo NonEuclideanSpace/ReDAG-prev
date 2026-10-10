@@ -1,0 +1,351 @@
+{
+ "style": "photorealistic, dim and moody lighting, stormy atmosphere, raindrops on lens",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rugged pirate ship deck under a stormy sky with lightning and crashing waves visible through railing gaps",
+   "question": "Does the image show a rugged pirate ship deck under a stormy sky with lightning and crashing waves visible through railing gaps?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "ship's wheel",
+   "plural": "ship's wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden ship's wheel",
+   "question": "Is there a wooden ship's wheel?",
+   "box": [
+    50,
+    300,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "captain",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bearded man in a tattered coat",
+   "question": "Is there a bearded man in a tattered coat?",
+   "box": [
+    100,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a parrot with bright green feathers",
+   "question": "Is there a parrot with bright green feathers?",
+   "box": [
+    280,
+    400,
+    380,
+    550
+   ]
+  },
+  {
+   "id": "rope_perch",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick rope hanging vertically",
+   "question": "Is there a thick rope hanging vertically?",
+   "box": [
+    296,
+    100,
+    344,
+    900
+   ]
+  },
+  {
+   "id": "sailor_striped",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a striped shirt",
+   "question": "Is there a man wearing a striped shirt?",
+   "box": [
+    400,
+    300,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "sailor_shirtless",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shirtless man with arm tattoos",
+   "question": "Is there a shirtless man with arm tattoos?",
+   "box": [
+    520,
+    300,
+    670,
+    850
+   ]
+  },
+  {
+   "id": "anchor_chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy metal anchor chain",
+   "question": "Is there a heavy metal anchor chain?",
+   "box": [
+    450,
+    600,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cabin_boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy",
+   "question": "Is there a young boy?",
+   "box": [
+    700,
+    350,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bucket containing water",
+   "question": "Is there a bucket containing water?",
+   "box": [
+    750,
+    600,
+    820,
+    750
+   ]
+  },
+  {
+   "id": "cannon",
+   "type": "entity",
+   "class": "cannon",
+   "plural": "cannons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large metal cannon",
+   "question": "Is there a large metal cannon?",
+   "box": [
+    850,
+    400,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "coiled_rope",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled rope",
+   "question": "Is there a coiled rope?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate of supplies",
+   "question": "Is there a wooden crate of supplies?",
+   "box": [
+    320,
+    820,
+    500,
+    980
+   ]
+  },
+  {
+   "id": "captain_grips_wheel",
+   "type": "action",
+   "of": [
+    "captain",
+    "wheel"
+   ],
+   "desc": "the bearded man in a tattered coat grips the ship's wheel",
+   "question": "Is the bearded man in a tattered coat gripping the ship's wheel?"
+  },
+  {
+   "id": "captain_points",
+   "type": "state",
+   "of": "captain",
+   "desc": "the bearded man in a tattered coat is pointing",
+   "question": "Is the bearded man in a tattered coat pointing?"
+  },
+  {
+   "id": "captain_shouts",
+   "type": "state",
+   "of": "captain",
+   "desc": "the bearded man in a tattered coat has an open mouth as if shouting",
+   "question": "Does the bearded man in a tattered coat have an open mouth as if shouting?"
+  },
+  {
+   "id": "parrot_perches",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "rope_perch"
+   ],
+   "desc": "the parrot with bright green feathers perches on the thick rope",
+   "question": "Is the parrot with bright green feathers perching on the thick rope?"
+  },
+  {
+   "id": "parrot_squawks",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot with bright green feathers has its beak open",
+   "question": "Does the parrot with bright green feathers have its beak open?"
+  },
+  {
+   "id": "sailors_pull_chain",
+   "type": "action",
+   "of": [
+    "sailor_striped",
+    "sailor_shirtless",
+    "anchor_chain"
+   ],
+   "desc": "the man in the striped shirt and the shirtless man pull the heavy anchor chain",
+   "question": "Are the man in the striped shirt and the shirtless man pulling the heavy anchor chain?"
+  },
+  {
+   "id": "sailors_look_captain",
+   "type": "relation",
+   "of": [
+    "sailor_striped",
+    "captain"
+   ],
+   "desc": "the man in the striped shirt looks toward the bearded man in a tattered coat",
+   "question": "Is the man in the striped shirt looking toward the bearded man in a tattered coat?"
+  },
+  {
+   "id": "sailor2_looks_captain",
+   "type": "relation",
+   "of": [
+    "sailor_shirtless",
+    "captain"
+   ],
+   "desc": "the shirtless man looks toward the bearded man in a tattered coat",
+   "question": "Is the shirtless man looking toward the bearded man in a tattered coat?"
+  },
+  {
+   "id": "boy_carries_bucket",
+   "type": "action",
+   "of": [
+    "cabin_boy",
+    "bucket"
+   ],
+   "desc": "the young boy carries the bucket",
+   "question": "Is the young boy carrying the bucket?"
+  },
+  {
+   "id": "water_spills",
+   "type": "state",
+   "of": "bucket",
+   "desc": "water is spilling from the bucket",
+   "question": "Is water spilling from the bucket?"
+  },
+  {
+   "id": "rope_near_crate",
+   "type": "relation",
+   "of": [
+    "coiled_rope",
+    "crate"
+   ],
+   "desc": "the coiled rope lies near the wooden crate",
+   "question": "Does the coiled rope lie near the wooden crate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "wheel",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "rope_perch",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "anchor_chain",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cannon",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "coiled_rope",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0019",
+ "prompt": "This photorealistic photo shows a rugged pirate ship deck under a stormy sky. On the left, a bearded captain in a tattered coat grips the ship's wheel, his eyes fixed on the horizon. Next to him, a parrot with bright green feathers perches on a rope, squawking loudly. In the center, two sailors struggle together to pull a heavy anchor chain, their muscles tense with effort. One wears a striped shirt, while the other is shirtless, revealing tattoos on his arms. To the right, a young cabin boy carries a bucket of water, spilling some onto the wet wooden planks. A large cannon sits nearby, its metal surface gleaming with rain. In the foreground, a coiled rope lies tangled near a crate of supplies. Raindrops streak across the lens, adding realism to the scene. The lighting is dim and moody, with flashes of lightning illuminating the clouds in the background. Waves crash against the hull, visible through the gaps in the railing. The captain shouts orders, pointing toward the distant storm. The sailors look toward him, responding to his command. The texture of the wet wood and soaked clothing is highly detailed. The overall atmosphere is tense and adventurous, capturing the peril of life at sea.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 3,
+  "warnings": []
+ }
+}

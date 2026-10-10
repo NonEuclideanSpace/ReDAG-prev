@@ -1,0 +1,200 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green tent",
+   "question": "Is there a green tent?",
+   "box": [
+    750,
+    400,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl",
+   "question": "Is there a girl?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a yellow hat",
+   "question": "Is there a boy wearing a yellow hat?",
+   "box": [
+    380,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    700,
+    650,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue pigtails is sitting",
+   "question": "Is the girl with blue pigtails sitting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing a yellow hat is standing",
+   "question": "Is the boy wearing a yellow hat standing?"
+  },
+  {
+   "id": "boy_holding_pot",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wearing a yellow hat holds a metal pot",
+   "question": "Is the boy wearing a yellow hat holding a metal pot?"
+  },
+  {
+   "id": "girl_left",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with blue pigtails is to the left of the boy wearing a yellow hat",
+   "question": "Is the girl with blue pigtails to the left of the boy wearing a yellow hat?"
+  },
+  {
+   "id": "boy_center",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy wearing a yellow hat is in the center relative to the girl and the cat",
+   "question": "Is the boy wearing a yellow hat positioned between the girl and the cat?"
+  },
+  {
+   "id": "cat_right",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the small orange cat is to the right of the boy wearing a yellow hat",
+   "question": "Is the small orange cat to the right of the boy wearing a yellow hat?"
+  },
+  {
+   "id": "cat_near_tent",
+   "type": "relation",
+   "of": [
+    "cat",
+    "tent"
+   ],
+   "desc": "the small orange cat is near the green tent",
+   "question": "Is the small orange cat near the green tent?"
+  },
+  {
+   "id": "girl_looking_boy",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with blue pigtails is looking at the boy wearing a yellow hat",
+   "question": "Is the girl with blue pigtails looking at the boy wearing a yellow hat?"
+  },
+  {
+   "id": "boy_handing_pot",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy wearing a yellow hat is handing the metal pot to the girl with blue pigtails",
+   "question": "Is the boy wearing a yellow hat handing the metal pot to the girl with blue pigtails?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "girl_pigtails",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has blue pigtails",
+   "question": "Does the girl have blue pigtails?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0114",
+ "prompt": "In an anime style illustration, a girl with blue pigtails sits on the left side of a mountain campsite. A boy wearing a yellow hat stands in the center holding a metal pot. On the right, a small orange cat rests near a green tent. The girl with blue pigtails is looking at the boy wearing a yellow hat. The boy wearing a yellow hat is handing the metal pot to the girl with blue pigtails. There is no fire in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

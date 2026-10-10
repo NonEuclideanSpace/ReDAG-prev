@@ -1,0 +1,283 @@
+{
+ "style": "photorealistic winter landscape",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy mountain scene with a ski slope descending and a distant mountain peak",
+   "question": "Does the image show a snowy mountain scene with a ski slope and a distant mountain peak?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pine_trees",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tall pine trees",
+   "question": "Are there tall pine trees?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "ski_lift",
+   "type": "entity",
+   "class": "ski lift",
+   "plural": "ski lifts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ski lift with chairs",
+   "question": "Is there a ski lift with chairs?",
+   "box": [
+    0,
+    50,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "lift_people",
+   "type": "attribute",
+   "of": "ski_lift",
+   "desc": "the ski lift chairs carry people",
+   "question": "Do the ski lift chairs carry people?"
+  },
+  {
+   "id": "skier",
+   "type": "entity",
+   "class": "skier",
+   "plural": "skiers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a skier carving a turn",
+   "question": "Is there a skier carving a turn?",
+   "box": [
+    400,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "snowman",
+   "type": "entity",
+   "class": "snowman",
+   "plural": "snowmen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a snowman",
+   "question": "Is there a snowman?",
+   "box": [
+    700,
+    500,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "saplings",
+   "type": "entity",
+   "class": "pine sapling",
+   "plural": "pine saplings",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two small pine saplings",
+   "question": "Are there two small pine saplings?",
+   "box": [
+    750,
+    650,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "snowboard",
+   "type": "entity",
+   "class": "snowboard",
+   "plural": "snowboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a snowboard",
+   "question": "Is there a snowboard?",
+   "box": [
+    100,
+    400,
+    200,
+    600
+   ]
+  },
+  {
+   "id": "tree_for_snowboard",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pine tree",
+   "question": "Is there a pine tree?",
+   "box": [
+    50,
+    100,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "skier_turning",
+   "type": "state",
+   "of": "skier",
+   "desc": "the skier is carving a turn",
+   "question": "Is the skier carving a turn?"
+  },
+  {
+   "id": "lift_above_slope",
+   "type": "state",
+   "of": "ski_lift",
+   "desc": "the ski lift runs above the slope",
+   "question": "Does the ski lift run above the slope?"
+  },
+  {
+   "id": "trees_taller_than_lift",
+   "type": "relation",
+   "of": [
+    "pine_trees",
+    "ski_lift"
+   ],
+   "desc": "the pine trees are taller than the ski lift towers",
+   "question": "Are the pine trees taller than the ski lift towers?"
+  },
+  {
+   "id": "snowman_beside_slope",
+   "type": "state",
+   "of": "snowman",
+   "desc": "the snowman stands beside the slope",
+   "question": "Does the snowman stand beside the slope?"
+  },
+  {
+   "id": "skier_taller_than_snowman",
+   "type": "relation",
+   "of": [
+    "skier",
+    "snowman"
+   ],
+   "desc": "the skier is taller than the snowman",
+   "question": "Is the skier taller than the snowman?"
+  },
+  {
+   "id": "saplings_near_snowman",
+   "type": "relation",
+   "of": [
+    "saplings",
+    "snowman"
+   ],
+   "desc": "the saplings are near the snowman",
+   "question": "Are the saplings near the snowman?"
+  },
+  {
+   "id": "button_count",
+   "type": "attribute",
+   "of": "snowman",
+   "desc": "the snowman has four buttons on its chest",
+   "question": "Does the snowman have four buttons on its chest?"
+  },
+  {
+   "id": "snowboard_leaning",
+   "type": "relation",
+   "of": [
+    "snowboard",
+    "tree_for_snowboard"
+   ],
+   "desc": "the snowboard is leaning against the pine tree",
+   "question": "Is the snowboard leaning against the pine tree?"
+  },
+  {
+   "id": "tracks_behind_skier",
+   "type": "state",
+   "of": "skier",
+   "desc": "ski tracks trail behind the skier",
+   "question": "Do ski tracks trail behind the skier?"
+  },
+  {
+   "id": "skier_closer_to_snowman",
+   "type": "relation",
+   "of": [
+    "skier",
+    "snowman",
+    "snowboard"
+   ],
+   "desc": "the skier is closer to the snowman than to the snowboard",
+   "question": "Is the skier closer to the snowman than to the snowboard?"
+  },
+  {
+   "id": "trees_flanking_slope",
+   "type": "state",
+   "of": "pine_trees",
+   "desc": "the pine trees flank the slope",
+   "question": "Do the pine trees flank the slope?"
+  },
+  {
+   "id": "skier_standing",
+   "type": "state",
+   "of": "skier",
+   "desc": "the skier is standing",
+   "question": "Is the skier standing?"
+  },
+  {
+   "id": "snowman_standing",
+   "type": "state",
+   "of": "snowman",
+   "desc": "the snowman is standing",
+   "question": "Is the snowman standing?"
+  },
+  {
+   "id": "snowman_buttons",
+   "type": "attribute",
+   "of": "snowman",
+   "desc": "the snowman has buttons on its chest",
+   "question": "Does the snowman have buttons on its chest?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pine_trees",
+   "to": "snowboard",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_087",
+ "prompt": "A snowy mountain scene with a ski slope descending between tall pine trees. A skier is carving a turn on the slope. A ski lift runs above the slope, with its chairs carrying people uphill. The pine trees are taller than the ski lift towers. A snowman with some buttons on its chest stands beside the slope. The skier is taller than the snowman. Near the snowman, there are two small pine saplings. The number of buttons on the snowman is twice the number of saplings. A snowboard is leaning against one of the pine trees. Ski tracks trail behind the skier. A mountain peak is visible in the distance. The skier is closer to the snowman than to the snowboard. The pine trees are flanking the slope.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

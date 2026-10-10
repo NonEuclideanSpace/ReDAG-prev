@@ -1,0 +1,277 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy shipyard dock with horizontal dock planks",
+   "question": "Does the image show a busy shipyard dock with horizontal dock planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_blue_hat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue hard hat",
+   "question": "Is there a man in a blue hard hat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman_yellow",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in yellow overalls",
+   "question": "Is there a woman in yellow overalls?",
+   "box": [
+    380,
+    350,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "boy_striped",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in striped shorts",
+   "question": "Is there a boy in striped shorts?",
+   "box": [
+    650,
+    500,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "dog_brown",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    650,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "crate_wooden",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    600,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "sailor_grey",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old sailor in a grey coat",
+   "question": "Is there an old sailor in a grey coat?",
+   "box": [
+    150,
+    600,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "rope_coiled",
+   "type": "attribute",
+   "of": "sailor_grey",
+   "desc": "the old sailor in a grey coat holds a coiled rope",
+   "question": "Is the old sailor in a grey coat holding a coiled rope?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_blue_hat",
+   "desc": "the man in a blue hard hat is leaning",
+   "question": "Is the man in a blue hard hat leaning?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in yellow overalls is pointing",
+   "question": "Is the woman in yellow overalls pointing?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy_striped",
+   "desc": "the boy in striped shorts is sitting",
+   "question": "Is the boy in striped shorts sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog_brown",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "boy_on_crate",
+   "type": "relation",
+   "of": [
+    "boy_striped",
+    "crate_wooden"
+   ],
+   "desc": "the boy in striped shorts sits on the wooden crate",
+   "question": "Is the boy in striped shorts sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_beside_boy",
+   "type": "relation",
+   "of": [
+    "dog_brown",
+    "boy_striped"
+   ],
+   "desc": "the brown dog lies beside the boy in striped shorts",
+   "question": "Is the brown dog lying beside the boy in striped shorts?"
+  },
+  {
+   "id": "sailor_next_to_woman",
+   "type": "relation",
+   "of": [
+    "sailor_grey",
+    "woman_yellow"
+   ],
+   "desc": "the old sailor in a grey coat is next to the woman in yellow overalls",
+   "question": "Is the old sailor in a grey coat next to the woman in yellow overalls?"
+  },
+  {
+   "id": "handover_rope",
+   "type": "action",
+   "of": [
+    "sailor_grey",
+    "man_blue_hat"
+   ],
+   "desc": "the old sailor in a grey coat hands the coiled rope to the man in a blue hard hat",
+   "question": "Is the old sailor in a grey coat handing a coiled rope to the man in a blue hard hat?"
+  },
+  {
+   "id": "woman_looking_boy",
+   "type": "relation",
+   "of": [
+    "woman_yellow",
+    "boy_striped"
+   ],
+   "desc": "the woman in yellow overalls looks at the boy in striped shorts",
+   "question": "Is the woman in yellow overalls looking at the boy in striped shorts?"
+  },
+  {
+   "id": "no_modern_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Is there any modern machinery visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_blue_hat",
+   "desc": "the man in a blue hard hat stands",
+   "question": "Is the man in a blue hard hat standing?"
+  },
+  {
+   "id": "dog_head_on_paws",
+   "type": "state",
+   "of": "dog_brown",
+   "desc": "the brown dog rests its head on its paws",
+   "question": "Does the brown dog rest its head on its paws?"
+  },
+  {
+   "id": "crane_base",
+   "type": "entity",
+   "class": "crane base",
+   "plural": "crane bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted crane base",
+   "question": "Is there a rusted crane base?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "man_against_crane",
+   "type": "relation",
+   "of": [
+    "man_blue_hat",
+    "crane_base"
+   ],
+   "desc": "the man in a blue hard hat leans against the rusted crane base",
+   "question": "Is the man in a blue hard hat leaning against the rusted crane base?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate_wooden",
+   "to": "boy_striped",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0049",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene depicts a busy shipyard dock. On the left stands a man in a blue hard hat, leaning casually against a rusted crane base. In the center, a woman in yellow overalls points firmly toward the horizon, directing attention to the distant water. Next to her on the right, a boy in striped shorts sits patiently on a wooden crate, watching the activity. A brown dog lies calmly beside the boy, resting its head on its paws. Near the foreground edge, an old sailor in a grey coat hands a coiled rope to the man in the blue hard hat, completing the exchange. The woman in yellow overalls looks intently at the boy in striped shorts, ensuring he remains safe. There is no modern machinery visible in this timeless setting. The composition relies on simple lines and faint hues to suggest form without heavy shading. Each figure is distinct through their clothing and posture, creating a balanced triangular arrangement across the dock. The rusted crane provides vertical structure while the horizontal dock planks ground the scene. The interaction between the sailor and the worker suggests ongoing labor, while the guardian-like gaze of the woman adds a layer of care to the industrial environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

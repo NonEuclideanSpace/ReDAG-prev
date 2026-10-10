@@ -1,0 +1,468 @@
+{
+ "style": "photorealistic photo, cool diffuse dawn lighting, sharp textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market scene with cobblestones and a stone wall",
+   "question": "Does the image show a village market scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman wearing a blue shawl?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "woven basket",
+   "plural": "woven baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woven basket",
+   "question": "Is there a woven basket?",
+   "box": [
+    280,
+    500,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright red apples",
+   "question": "Are there bright red apples?",
+   "box": [
+    300,
+    480,
+    430,
+    650
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy wearing a striped shirt?",
+   "box": [
+    400,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "clay pot",
+   "plural": "clay pots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of clay pots",
+   "question": "Is there a stack of clay pots?",
+   "box": [
+    650,
+    400,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    550,
+    600,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    540,
+    650,
+    710,
+    850
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a wide-brimmed hat",
+   "question": "Is there a man wearing a wide-brimmed hat?",
+   "box": [
+    750,
+    200,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "greens",
+   "type": "entity",
+   "class": "leafy greens",
+   "plural": "bundles of leafy greens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bundle of leafy greens",
+   "question": "Is there a bundle of leafy greens?",
+   "box": [
+    600,
+    500,
+    750,
+    650
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "wooden cart",
+   "plural": "wooden carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rustic wooden cart with mud-caked wheels",
+   "question": "Is there a rustic wooden cart with mud-caked wheels?",
+   "box": [
+    200,
+    300,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "woman_hunched",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is slightly hunched",
+   "question": "Is the elderly woman slightly hunched?"
+  },
+  {
+   "id": "woman_arranging",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is arranging produce",
+   "question": "Is the elderly woman arranging produce?"
+  },
+  {
+   "id": "apples_glistening",
+   "type": "attribute",
+   "of": "apples",
+   "desc": "the apples have glistening skins",
+   "question": "Do the apples have glistening skins?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is pointing",
+   "question": "Is the young boy pointing?"
+  },
+  {
+   "id": "boy_delighted",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy has an expression of curious delight",
+   "question": "Does the young boy have an expression of curious delight?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sitting",
+   "question": "Is the tabby cat sitting?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat has half-closed eyes",
+   "question": "Does the tabby cat have half-closed eyes?"
+  },
+  {
+   "id": "cat_turning",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is turning its head",
+   "question": "Is the tabby cat turning its head?"
+  },
+  {
+   "id": "woman_basket_next",
+   "type": "relation",
+   "of": [
+    "basket",
+    "elderly_woman"
+   ],
+   "desc": "the woven basket is next to the elderly woman",
+   "question": "Is the woven basket next to the elderly woman?"
+  },
+  {
+   "id": "apples_in_basket",
+   "type": "relation",
+   "of": [
+    "apples",
+    "basket"
+   ],
+   "desc": "the apples are in the woven basket",
+   "question": "Are the apples in the woven basket?"
+  },
+  {
+   "id": "boy_center",
+   "type": "relation",
+   "of": [
+    "boy",
+    "pots"
+   ],
+   "desc": "the young boy points toward the stack of clay pots",
+   "question": "Is the young boy pointing toward the stack of clay pots?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the tabby cat is on the wooden crate",
+   "question": "Is the tabby cat on the wooden crate?"
+  },
+  {
+   "id": "crate_beside_boy",
+   "type": "relation",
+   "of": [
+    "crate",
+    "boy"
+   ],
+   "desc": "the wooden crate is beside the young boy",
+   "question": "Is the wooden crate beside the young boy?"
+  },
+  {
+   "id": "farmer_right",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "boy"
+   ],
+   "desc": "the farmer is to the right of the young boy",
+   "question": "Is the farmer to the right of the young boy?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "elderly_woman"
+   ],
+   "desc": "the farmer hands the bundle of leafy greens to the elderly woman",
+   "question": "Is the farmer handing the bundle of leafy greens to the elderly woman?"
+  },
+  {
+   "id": "cart_behind",
+   "type": "relation",
+   "of": [
+    "cart",
+    "elderly_woman"
+   ],
+   "desc": "the wooden cart is behind the elderly woman",
+   "question": "Is the wooden cart behind the elderly woman?"
+  },
+  {
+   "id": "cat_watching_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the tabby cat is observing the young boy",
+   "question": "Is the tabby cat observing the young boy?"
+  },
+  {
+   "id": "no_signage",
+   "type": "absent",
+   "desc": "modern signage",
+   "question": "Is there any modern signage visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a blue shawl stands",
+   "question": "Is the elderly woman in a blue shawl standing?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a wide-brimmed hat stands",
+   "question": "Is the farmer in a wide-brimmed hat standing?"
+  },
+  {
+   "id": "cat_beside_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the tabby cat is beside the young boy",
+   "question": "Is the tabby cat beside the young boy?"
+  },
+  {
+   "id": "farmer_beside_woman",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "elderly_woman"
+   ],
+   "desc": "the farmer is beside the elderly woman",
+   "question": "Is the farmer beside the elderly woman?"
+  },
+  {
+   "id": "cart_behind_farmer",
+   "type": "relation",
+   "of": [
+    "cart",
+    "farmer"
+   ],
+   "desc": "the rustic wooden cart is behind the farmer",
+   "question": "Is the rustic wooden cart behind the farmer?"
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone",
+   "plural": "cobblestones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "cobblestones on the ground",
+   "question": "Are there cobblestones on the ground?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stone_wall",
+   "type": "entity",
+   "class": "stone wall",
+   "plural": "stone walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone wall",
+   "question": "Is there a stone wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "cart_against_wall",
+   "type": "relation",
+   "of": [
+    "cart",
+    "stone_wall"
+   ],
+   "desc": "the rustic wooden cart rests against the stone wall",
+   "question": "Does the rustic wooden cart rest against the stone wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cart",
+   "kind": "support"
+  },
+  {
+   "from": "stone_wall",
+   "to": "cart",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0078",
+ "prompt": "In a photorealistic photo set in a village market at dawn, the scene captures the quiet awakening of commerce. On the left stands an elderly woman in a blue shawl, her posture slightly hunched as she arranges fresh produce. Next to her, a woven basket overflows with bright red apples, their skins glistening under the soft morning light. In the center, a young boy in a striped shirt points eagerly toward a stack of clay pots, his expression one of curious delight. Beside him, a tabby cat sits calmly on a wooden crate, observing the activity with half-closed eyes. To the right, a farmer in a wide-brimmed hat hands a bundle of leafy greens to the elderly woman, completing a silent transaction. Behind them, a rustic wooden cart rests against a stone wall, its wheels caked with dried mud from previous journeys. The interaction between the farmer and the woman is gentle, their hands meeting briefly over the exchange of goods. Meanwhile, the boy continues pointing at the pottery, drawing the attention of the tabby cat, which turns its head slightly to follow his gesture. There is no modern signage visible anywhere in the frame, preserving the timeless atmosphere of the rural setting. The light is cool and diffuse, casting long shadows that stretch across the cobblestones. The textures of the wool shawl, the rough clay, and the smooth apple skins are rendered with sharp clarity, emphasizing the tactile nature of the market goods. Each element occupies its space naturally, creating a balanced composition that invites the viewer to step into this serene moment before the day fully begins.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "boy_pointing_target",
+     "boy_center"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,413 @@
+{
+ "style": "photorealistic outdoor photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a desert excavation site",
+   "question": "Does the image show a desert excavation site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "paleontologist",
+   "type": "entity",
+   "class": "paleontologist",
+   "plural": "paleontologists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paleontologist",
+   "question": "Is there a paleontologist?",
+   "box": [
+    350,
+    450,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "skull",
+   "type": "entity",
+   "class": "fossil",
+   "plural": "fossils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive dinosaur skull fossil",
+   "question": "Is there a massive dinosaur skull fossil?",
+   "box": [
+    400,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "rib_cage",
+   "type": "entity",
+   "class": "fossil",
+   "plural": "fossils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a partially uncovered rib cage fossil",
+   "question": "Is there a partially uncovered rib cage fossil?",
+   "box": [
+    720,
+    650,
+    900,
+    820
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "canvas tent",
+   "plural": "canvas tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a canvas tent",
+   "question": "Is there a canvas tent?",
+   "box": [
+    100,
+    200,
+    400,
+    500
+   ]
+  },
+  {
+   "id": "colleague",
+   "type": "entity",
+   "class": "researcher",
+   "plural": "researchers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colleague",
+   "question": "Is there a colleague?",
+   "box": [
+    50,
+    300,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    80,
+    500,
+    150,
+    600
+   ]
+  },
+  {
+   "id": "pens",
+   "type": "entity",
+   "class": "pen",
+   "plural": "pens",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five pens",
+   "question": "Are there five pens?",
+   "box": [
+    90,
+    520,
+    140,
+    580
+   ]
+  },
+  {
+   "id": "fragment",
+   "type": "entity",
+   "class": "fossil fragment",
+   "plural": "fossil fragments",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plaster-covered fossil fragment",
+   "question": "Is there a plaster-covered fossil fragment?",
+   "box": [
+    450,
+    850,
+    550,
+    920
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    880,
+    600,
+    980
+   ]
+  },
+  {
+   "id": "bottles",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three water bottles",
+   "question": "Are there three water bottles?",
+   "box": [
+    620,
+    880,
+    750,
+    980
+   ]
+  },
+  {
+   "id": "jeep",
+   "type": "entity",
+   "class": "jeep",
+   "plural": "jeeps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jeep",
+   "question": "Is there a jeep?",
+   "box": [
+    50,
+    100,
+    350,
+    300
+   ]
+  },
+  {
+   "id": "brush",
+   "type": "attribute",
+   "of": "paleontologist",
+   "desc": "the paleontologist holds a small brush",
+   "question": "Is the paleontologist holding a small brush?"
+  },
+  {
+   "id": "paleontologist_kneeling",
+   "type": "state",
+   "of": "paleontologist",
+   "desc": "the paleontologist is kneeling",
+   "question": "Is the paleontologist kneeling?"
+  },
+  {
+   "id": "paleontologist_facing_skull",
+   "type": "state",
+   "of": "paleontologist",
+   "desc": "the paleontologist is facing the skull",
+   "question": "Is the paleontologist facing the skull?"
+  },
+  {
+   "id": "colleague_standing",
+   "type": "state",
+   "of": "colleague",
+   "desc": "the colleague is standing",
+   "question": "Is the colleague standing?"
+  },
+  {
+   "id": "colleague_looking_down",
+   "type": "state",
+   "of": "colleague",
+   "desc": "the colleague is looking down",
+   "question": "Is the colleague looking down?"
+  },
+  {
+   "id": "colleague_holding_clipboard",
+   "type": "attribute",
+   "of": "colleague",
+   "desc": "the colleague holds a clipboard",
+   "question": "Is the colleague holding a clipboard?"
+  },
+  {
+   "id": "colleague_holding_pens",
+   "type": "attribute",
+   "of": "colleague",
+   "desc": "the colleague holds pens",
+   "question": "Is the colleague holding pens?"
+  },
+  {
+   "id": "brushing_action",
+   "type": "action",
+   "of": [
+    "paleontologist",
+    "skull"
+   ],
+   "desc": "the paleontologist brushes dust from the skull",
+   "question": "Is the paleontologist brushing dust from the skull?"
+  },
+  {
+   "id": "rib_next_to_skull",
+   "type": "relation",
+   "of": [
+    "rib_cage",
+    "skull"
+   ],
+   "desc": "the rib cage fossil is next to the skull",
+   "question": "Is the rib cage fossil next to the skull?"
+  },
+  {
+   "id": "skull_larger_than_rib",
+   "type": "relation",
+   "of": [
+    "skull",
+    "rib_cage"
+   ],
+   "desc": "the skull is larger than the rib cage fossil",
+   "question": "Is the skull larger than the rib cage fossil?"
+  },
+  {
+   "id": "tent_behind_paleontologist",
+   "type": "relation",
+   "of": [
+    "tent",
+    "paleontologist"
+   ],
+   "desc": "the tent is behind the paleontologist",
+   "question": "Is the tent behind the paleontologist?"
+  },
+  {
+   "id": "colleague_pointing_at_rib",
+   "type": "action",
+   "of": [
+    "colleague",
+    "rib_cage"
+   ],
+   "desc": "the colleague points at the rib cage",
+   "question": "Is the colleague pointing at the rib cage?"
+  },
+  {
+   "id": "fragment_on_crate",
+   "type": "relation",
+   "of": [
+    "fragment",
+    "crate"
+   ],
+   "desc": "the fossil fragment rests on the wooden crate",
+   "question": "Does the fossil fragment rest on the wooden crate?"
+  },
+  {
+   "id": "crate_in_front_of_pit",
+   "type": "relation",
+   "of": [
+    "crate",
+    "pit"
+   ],
+   "desc": "the crate is in front of the dig pit",
+   "question": "Is the crate in front of the dig pit?"
+  },
+  {
+   "id": "bottles_next_to_crate",
+   "type": "relation",
+   "of": [
+    "bottles",
+    "crate"
+   ],
+   "desc": "the water bottles are next to the crate",
+   "question": "Are the water bottles next to the crate?"
+  },
+  {
+   "id": "jeep_behind_tent",
+   "type": "relation",
+   "of": [
+    "jeep",
+    "tent"
+   ],
+   "desc": "the jeep is behind the tent",
+   "question": "Is the jeep behind the tent?"
+  },
+  {
+   "id": "jeep_taller_than_tent",
+   "type": "relation",
+   "of": [
+    "jeep",
+    "tent"
+   ],
+   "desc": "the jeep is taller than the tent",
+   "question": "Is the jeep taller than the tent?"
+  },
+  {
+   "id": "colleague_outside_pit",
+   "type": "state",
+   "of": "colleague",
+   "desc": "the colleague is standing outside the dig pit",
+   "question": "Is the colleague standing outside the dig pit?"
+  },
+  {
+   "id": "brush_shorter_than_pens",
+   "type": "relation",
+   "of": [
+    "paleontologist",
+    "colleague"
+   ],
+   "desc": "the brush held by the paleontologist is shorter than the pens held by the colleague",
+   "question": "Is the brush held by the paleontologist shorter than the pens held by the colleague?"
+  },
+  {
+   "id": "pit",
+   "type": "entity",
+   "class": "dig pit",
+   "plural": "dig pits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large dig pit",
+   "question": "Is there a large dig pit?",
+   "box": [
+    100,
+    400,
+    924,
+    900
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "fragment",
+   "kind": "support"
+  },
+  {
+   "from": "pit",
+   "to": "paleontologist",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_049",
+ "prompt": "At a desert excavation site, a paleontologist is kneeling inside a large dig pit, carefully brushing dust from a massive dinosaur skull fossil. A partially uncovered rib cage fossil is next to the skull, and the skull is larger than the rib cage fossil. Behind the paleontologist stands a canvas tent. The paleontologist is holding a small brush. A colleague is standing outside the pit, looking down at the paleontologist and holding a clipboard and some pens. The brush the paleontologist is holding is shorter than the pens. The colleague is pointing at the rib cage. The paleontologist is facing the skull. In front of the dig pit, a plaster-covered fossil fragment rests on a wooden crate. The three water bottles are standing in a row next to the crate. The number of pens the colleague is holding is two more than the number of water bottles. A jeep is parked behind the tent and is taller than the tent.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

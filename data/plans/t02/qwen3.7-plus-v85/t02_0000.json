@@ -1,0 +1,148 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with a net",
+   "question": "Does the image show a beach volleyball court?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player_blue",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball player in a blue jersey",
+   "question": "Is there a volleyball player in a blue jersey?",
+   "box": [
+    50,
+    300,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white volleyball",
+   "question": "Is there a white volleyball?",
+   "box": [
+    450,
+    150,
+    574,
+    274
+   ]
+  },
+  {
+   "id": "player_knees_bent",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the volleyball player in a blue jersey has knees bent",
+   "question": "Does the volleyball player in a blue jersey have knees bent?"
+  },
+  {
+   "id": "player_ready",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the volleyball player in a blue jersey stands ready",
+   "question": "Is the volleyball player in a blue jersey standing in a ready stance?"
+  },
+  {
+   "id": "ball_above_net",
+   "type": "relation",
+   "of": [
+    "ball",
+    "net"
+   ],
+   "desc": "the white volleyball hovers mid-air above the net",
+   "question": "Is the white volleyball hovering mid-air above the net?"
+  },
+  {
+   "id": "player_looks_at_ball",
+   "type": "action",
+   "of": [
+    "player_blue",
+    "ball"
+   ],
+   "desc": "the volleyball player in a blue jersey looks intently at the white volleyball",
+   "question": "Is the volleyball player in a blue jersey looking intently at the white volleyball?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "crowd in the background",
+   "question": "Is there a crowd in the background?"
+  },
+  {
+   "id": "no_additional_figures",
+   "type": "absent",
+   "desc": "additional figures or distracting elements",
+   "question": "Are there any additional figures or distracting elements in the image?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "ball_above_net_rel",
+   "type": "relation",
+   "of": [
+    "ball",
+    "net"
+   ],
+   "desc": "the white volleyball is above the net",
+   "question": "Is the white volleyball above the volleyball net?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0000",
+ "prompt": "A pencil sketch with light color wash depicts a beach volleyball tournament. On the left, a player in a blue jersey stands ready with knees bent. In the center, a white volleyball hovers mid-air above the net. The player in the blue jersey looks intently at the white volleyball. There is no crowd in the background. The scene captures the tension of the match through simple lines and soft hues, focusing entirely on the athlete and the ball without any distracting elements or additional figures.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

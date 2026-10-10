@@ -1,0 +1,201 @@
+{
+ "style": "macro photography, high detail, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for a macro shot of a figurine",
+   "question": "Is the background neutral and suitable for a macro shot?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "base",
+   "type": "entity",
+   "class": "base",
+   "plural": "bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a circular walnut base",
+   "question": "Is there a circular walnut base?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "ballerina",
+   "type": "entity",
+   "class": "porcelain figurine",
+   "plural": "porcelain figurines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porcelain ballerina figurine",
+   "question": "Is there a porcelain ballerina figurine?",
+   "box": [
+    350,
+    150,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass key",
+   "question": "Is there a brass key?",
+   "box": [
+    650,
+    700,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "ballerina_tutu",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina wears a pale-pink tutu with lace embossing",
+   "question": "Does the porcelain ballerina wear a pale-pink tutu with lace embossing?"
+  },
+  {
+   "id": "ballerina_slippers",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina has gilded slippers",
+   "question": "Does the porcelain ballerina have gilded slippers?"
+  },
+  {
+   "id": "ballerina_brooch",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina has a miniature emerald brooch on the bodice",
+   "question": "Does the porcelain ballerina have a miniature emerald brooch on the bodice?"
+  },
+  {
+   "id": "ballerina_skin",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina has skin glazed to a soft sheen",
+   "question": "Does the porcelain ballerina have skin glazed to a soft sheen?"
+  },
+  {
+   "id": "arms_raised",
+   "type": "state",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina has both arms raised gracefully overhead",
+   "question": "Does the porcelain ballerina have both arms raised gracefully overhead?"
+  },
+  {
+   "id": "ballerina_on_base",
+   "type": "relation",
+   "of": [
+    "ballerina",
+    "base"
+   ],
+   "desc": "the porcelain ballerina is positioned on the circular walnut base",
+   "question": "Is the porcelain ballerina positioned on the circular walnut base?"
+  },
+  {
+   "id": "key_on_base",
+   "type": "relation",
+   "of": [
+    "key",
+    "base"
+   ],
+   "desc": "the brass key is on the circular walnut base",
+   "question": "Is the brass key on the circular walnut base?"
+  },
+  {
+   "id": "no_chips",
+   "type": "absent",
+   "desc": "chips on the figurine",
+   "question": "Are there any chips on the figurine?"
+  },
+  {
+   "id": "no_dust",
+   "type": "absent",
+   "desc": "dust on the figurine",
+   "question": "Is there any dust on the figurine?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic components in the scene",
+   "question": "Are there any plastic components in the scene?"
+  },
+  {
+   "id": "base_rings",
+   "type": "attribute",
+   "of": "base",
+   "desc": "the circular walnut base shows concentric carving rings",
+   "question": "Does the circular walnut base show concentric carving rings?"
+  },
+  {
+   "id": "ballerina_tutu_dots",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the porcelain ballerina's tutu has tiny hand-painted silver dots",
+   "question": "Does the porcelain ballerina's tutu have tiny hand-painted silver dots?"
+  },
+  {
+   "id": "no_dust_base",
+   "type": "absent",
+   "desc": "dust on the base",
+   "question": "Is there any dust on the base?"
+  },
+  {
+   "id": "key_head",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the brass key has a treble-clef head",
+   "question": "Does the brass key have a treble-clef head?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "base",
+   "to": "ballerina",
+   "kind": "support"
+  },
+  {
+   "from": "base",
+   "to": "key",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_087",
+ "prompt": "Show a single porcelain ballerina music-box figurine positioned on a circular walnut base. The ballerina wears a pale-pink tutu detailed with lace embossing and tiny hand-painted silver dots. Her slippers are gilded, and a miniature emerald brooch decorates the bodice. Both arms rise gracefully overhead. The porcelain skin is glazed to a soft sheen. The walnut base shows concentric carving rings and bears a brass key with a treble-clef head. The figure displays no chips, no dust, and incorporates no plastic components.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

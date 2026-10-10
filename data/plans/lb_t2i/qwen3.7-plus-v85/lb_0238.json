@@ -1,0 +1,583 @@
+{
+ "style": "surreal cinematic photography, high contrast, heat haze effects",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked asphalt highway edge with heat shimmer and a surreal twilight sky melting into the horizon",
+   "question": "Does the image show a cracked asphalt highway edge with heat shimmer and a surreal twilight sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "truck",
+   "plural": "trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old ash-colored truck",
+   "question": "Is there an old ash-colored truck?",
+   "box": [
+    200,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "billboard",
+   "type": "entity",
+   "class": "billboard",
+   "plural": "billboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded billboard",
+   "question": "Is there a faded billboard?",
+   "box": [
+    750,
+    100,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "gas_pump",
+   "type": "entity",
+   "class": "gas pump",
+   "plural": "gas pumps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered gas pump",
+   "question": "Is there a weathered gas pump?",
+   "box": [
+    820,
+    500,
+    920,
+    850
+   ]
+  },
+  {
+   "id": "cactus_flowers",
+   "type": "entity",
+   "class": "cactus flower",
+   "plural": "cactus flowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a small cluster of cactus flowers",
+   "question": "Are there cactus flowers growing from the gas pump?",
+   "box": [
+    830,
+    600,
+    910,
+    680
+   ]
+  },
+  {
+   "id": "traffic_cone",
+   "type": "entity",
+   "class": "traffic cone",
+   "plural": "traffic cones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a traffic cone",
+   "question": "Is there a traffic cone?",
+   "box": [
+    150,
+    750,
+    220,
+    900
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray bicycle",
+   "question": "Is there a stray bicycle?",
+   "box": [
+    50,
+    800,
+    180,
+    950
+   ]
+  },
+  {
+   "id": "vines",
+   "type": "entity",
+   "class": "dried vine",
+   "plural": "dried vines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dried vines tangled around the bicycle",
+   "question": "Are there dried vines tangled around the bicycle?",
+   "box": [
+    60,
+    820,
+    170,
+    920
+   ]
+  },
+  {
+   "id": "hawk",
+   "type": "entity",
+   "class": "hawk",
+   "plural": "hawks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red-tailed hawk circling in the sky",
+   "question": "Is there a red-tailed hawk in the sky?",
+   "box": [
+    400,
+    50,
+    550,
+    200
+   ]
+  },
+  {
+   "id": "boxes",
+   "type": "entity",
+   "class": "cardboard box",
+   "plural": "cardboard boxes",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a stack of cardboard boxes",
+   "question": "Is there a stack of cardboard boxes?",
+   "box": [
+    350,
+    450,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "melon",
+   "type": "entity",
+   "class": "hami melon",
+   "plural": "hami melons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellowed hami melon with a glowing orange core",
+   "question": "Is there a yellowed hami melon with a glowing orange core?",
+   "box": [
+    450,
+    500,
+    520,
+    580
+   ]
+  },
+  {
+   "id": "origami_cranes",
+   "type": "entity",
+   "class": "origami crane",
+   "plural": "origami cranes",
+   "count": 5,
+   "count_exact": false,
+   "desc": "a flock of white origami cranes",
+   "question": "Are there white origami cranes in the air?",
+   "box": [
+    300,
+    200,
+    700,
+    400
+   ]
+  },
+  {
+   "id": "fireflies",
+   "type": "entity",
+   "class": "firefly",
+   "plural": "fireflies",
+   "count": 10,
+   "count_exact": false,
+   "desc": "glowing fireflies scattered",
+   "question": "Are there glowing fireflies?",
+   "box": [
+    800,
+    50,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "truck_exhaust",
+   "type": "relation",
+   "of": [
+    "truck",
+    "radio"
+   ],
+   "desc": "exhaust snaking from the truck",
+   "question": "Is exhaust snaking from the truck?"
+  },
+  {
+   "id": "hawk_shadow",
+   "type": "relation",
+   "of": [
+    "hawk",
+    "truck"
+   ],
+   "desc": "the hawk's shadow flickering on the ground",
+   "question": "Is the hawk's shadow visible on the ground or truck?"
+  },
+  {
+   "id": "cone_leaning",
+   "type": "state",
+   "of": "traffic_cone",
+   "desc": "the traffic cone leaning slightly",
+   "question": "Is the traffic cone leaning slightly?"
+  },
+  {
+   "id": "bicycle_buried",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle half-buried in sand",
+   "question": "Is the bicycle half-buried in sand?"
+  },
+  {
+   "id": "melon_roots",
+   "type": "state",
+   "of": "melon",
+   "desc": "roots snaking out from the melon",
+   "question": "Are roots snaking out from the melon?"
+  },
+  {
+   "id": "billboard_shattering",
+   "type": "state",
+   "of": "billboard",
+   "desc": "the billboard's glass shattering into mid-air shards",
+   "question": "Is the billboard's glass shattering into mid-air shards?"
+  },
+  {
+   "id": "crane_on_hawk",
+   "type": "relation",
+   "of": [
+    "origami_cranes",
+    "hawk"
+   ],
+   "desc": "some origami cranes catching on the hawk’s tail feathers",
+   "question": "Are some origami cranes catching on the hawk’s tail feathers?"
+  },
+  {
+   "id": "crane_on_billboard",
+   "type": "relation",
+   "of": [
+    "origami_cranes",
+    "billboard"
+   ],
+   "desc": "some origami cranes landing on the billboard",
+   "question": "Are some origami cranes landing on the billboard?"
+  },
+  {
+   "id": "roots_on_cone",
+   "type": "relation",
+   "of": [
+    "melon",
+    "traffic_cone"
+   ],
+   "desc": "the melon's roots wrapping around the traffic cone's legs",
+   "question": "Are the melon's roots wrapping around the traffic cone's legs?"
+  },
+  {
+   "id": "flowers_on_pump",
+   "type": "relation",
+   "of": [
+    "cactus_flowers",
+    "gas_pump"
+   ],
+   "desc": "the cactus flowers sprouting from the gas pump",
+   "question": "Are the cactus flowers sprouting from the gas pump?"
+  },
+  {
+   "id": "vines_on_bicycle",
+   "type": "relation",
+   "of": [
+    "vines",
+    "bicycle"
+   ],
+   "desc": "dried vines tangled around the bicycle handlebars",
+   "question": "Are dried vines tangled around the bicycle handlebars?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows in the scene",
+   "question": "Are there any windows visible in the scene?"
+  },
+  {
+   "id": "garden_tools",
+   "type": "entity",
+   "class": "garden tool",
+   "plural": "garden tools",
+   "count": 1,
+   "count_exact": false,
+   "desc": "garden tools",
+   "question": "Are there garden tools?",
+   "box": [
+    450,
+    650,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "jars",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": false,
+   "desc": "dusty jars of preserved fruit",
+   "question": "Are there dusty jars of preserved fruit?",
+   "box": [
+    460,
+    660,
+    540,
+    740
+   ]
+  },
+  {
+   "id": "truck_idling",
+   "type": "state",
+   "of": "truck",
+   "desc": "the old ash-colored truck idling with a shudder",
+   "question": "Is the old ash-colored truck idling?"
+  },
+  {
+   "id": "boxes_flaps_open",
+   "type": "state",
+   "of": "boxes",
+   "desc": "the cardboard boxes have flaps flaring open",
+   "question": "Do the cardboard boxes have flaps flaring open?"
+  },
+  {
+   "id": "tools_in_boxes",
+   "type": "relation",
+   "of": [
+    "garden_tools",
+    "boxes"
+   ],
+   "desc": "the garden tools are in the cardboard boxes",
+   "question": "Are the garden tools inside the cardboard boxes?"
+  },
+  {
+   "id": "jars_in_boxes",
+   "type": "relation",
+   "of": [
+    "jars",
+    "boxes"
+   ],
+   "desc": "the jars are in the cardboard boxes",
+   "question": "Are the jars inside the cardboard boxes?"
+  },
+  {
+   "id": "melon_in_boxes",
+   "type": "relation",
+   "of": [
+    "melon",
+    "boxes"
+   ],
+   "desc": "the hami melon is in the cardboard boxes",
+   "question": "Is the hami melon inside the cardboard boxes?"
+  },
+  {
+   "id": "cranes_on_hood",
+   "type": "relation",
+   "of": [
+    "origami_cranes",
+    "truck"
+   ],
+   "desc": "some origami cranes are on the hood of the truck",
+   "question": "Are some origami cranes on the hood of the truck?"
+  },
+  {
+   "id": "cloud",
+   "type": "entity",
+   "class": "cloud",
+   "plural": "clouds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a passing cloud blocking the sun",
+   "question": "Is there a passing cloud blocking the sun?",
+   "box": [
+    400,
+    50,
+    624,
+    200
+   ]
+  },
+  {
+   "id": "shards",
+   "type": "entity",
+   "class": "glass shard",
+   "plural": "glass shards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "mid-air glass shards from the billboard",
+   "question": "Are there mid-air glass shards from the billboard?",
+   "box": [
+    700,
+    300,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "radio",
+   "type": "entity",
+   "class": "radio",
+   "plural": "radios",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a radio",
+   "question": "Is there a radio?",
+   "box": [
+    480,
+    250,
+    540,
+    310
+   ]
+  },
+  {
+   "id": "cranes_rearrange",
+   "type": "action",
+   "of": [
+    "origami_cranes",
+    "billboard"
+   ],
+   "desc": "the origami cranes rearrange the letters on the billboard",
+   "question": "Are the origami cranes rearranging the letters on the billboard?"
+  },
+  {
+   "id": "billboard_cracked_glass",
+   "type": "attribute",
+   "of": "billboard",
+   "desc": "the billboard has glass cracked like spider legs",
+   "question": "Does the billboard have glass cracked like spider legs?"
+  },
+  {
+   "id": "billboard_text",
+   "type": "attribute",
+   "of": "billboard",
+   "desc": "the billboard has barely legible words Mango Delight Café",
+   "question": "Does the billboard have barely legible words Mango Delight Café?"
+  },
+  {
+   "id": "gas_pump_blistered",
+   "type": "attribute",
+   "of": "gas_pump",
+   "desc": "the gas pump has blistered metal",
+   "question": "Does the gas pump have blistered metal?"
+  },
+  {
+   "id": "cone_faded_stripes",
+   "type": "attribute",
+   "of": "traffic_cone",
+   "desc": "the traffic cone has faded pink and cream stripes",
+   "question": "Does the traffic cone have faded pink and cream stripes?"
+  },
+  {
+   "id": "bicycle_flat_tires",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has flat tires",
+   "question": "Does the bicycle have flat tires?"
+  },
+  {
+   "id": "boxes_in_truck",
+   "type": "relation",
+   "of": [
+    "boxes",
+    "truck"
+   ],
+   "desc": "the cardboard boxes are in the bed of the truck",
+   "question": "Are the cardboard boxes in the bed of the truck?"
+  },
+  {
+   "id": "radio_in_window",
+   "type": "relation",
+   "of": [
+    "radio",
+    "truck"
+   ],
+   "desc": "the radio is in the rear window of the truck",
+   "question": "Is the radio in the rear window of the truck?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "boxes",
+   "kind": "support"
+  },
+  {
+   "from": "truck",
+   "to": "melon",
+   "kind": "support"
+  },
+  {
+   "from": "gas_pump",
+   "to": "cactus_flowers",
+   "kind": "support"
+  },
+  {
+   "from": "bicycle",
+   "to": "vines",
+   "kind": "support"
+  },
+  {
+   "from": "boxes",
+   "to": "garden_tools",
+   "kind": "support"
+  },
+  {
+   "from": "boxes",
+   "to": "jars",
+   "kind": "support"
+  },
+  {
+   "from": "boxes",
+   "to": "melon",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0238",
+ "prompt": "The sun beats down with a merciless patience, baking the cracked asphalt into a glossy sheen that mirrors the shimmer of heat rising in fractured spirals from the edge of the highway. The old truck, its once-vibrant blue now a ghostly ash, idles with a coughing shudder, exhaust snaking into the hazy distance where a faded billboard sways gently in the dry wind, its glass cracked like spider legs around the words \"Mango Delight Café,\" now barely legible but still somehow seductive. In the bed of the truck, a stack of cardboard boxes swells like forgotten monuments to a life left behind, their flaps flaring open just enough to reveal a tangled nest of garden tools, dusty jars of preserved fruit, and a single wilting hami melon—yellowed and soft, resting like a forgotten relic. Above, a red-tailed hawk circles slowly, wings catching the wind with mechanical precision, its shadow flickering across the truck and the weathered gas pump beside it, whose metal has blistered with age and is now home to a small cluster of cactus flowers sprouting defiantly from the cracks. The traffic cone leans slightly, as if still holding the memory of the last gust, its red and white stripes faded into a ghostly pink and cream, while a stray bicycle lies half-buried in the sand just beyond, its tires flat, handlebars tangled with dried vines that curl around it like fingers. From the rear window of the truck, a radio plays static-laced snippets of a country song that echoes strangely through the still air, distorted by a passing cloud that briefly blocks the sun and causes the mirage-like reflections on the road to ripple and fold like liquid glass. In the bed of the truck, one of the boxes begins to open of its own accord, the wind finding its seams and spilling out a flock of origami cranes that flutter into the air, some catching on the hawk’s tail feathers, others landing on the hood of the truck and the billboard, where they begin to rearrange the letters in a cryptic message only the wind can read. The melon, now trembling with an almost imperceptible rhythm, begins to slowly change shape—its skin peeling back to reveal a core that glows faintly orange, like the sun captured inside a fruit, while roots snake out from beneath it, seeking the earth, twisting through the sand, and wrapping around the legs of the traffic cone as if anchoring the scene in place. In the distance, the highway curves away into a surreal twilight, where the sky melts into the horizon and the billboard’s glass shatters, not with sound but with silence, each shard freezing mid-air before turning into fireflies that flicker and scatter like embers into the vast, uncharted horizon.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 73,
+   "n_uncovered": 2,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 8,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

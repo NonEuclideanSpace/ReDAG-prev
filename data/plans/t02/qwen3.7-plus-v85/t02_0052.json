@@ -1,0 +1,100 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm harvest scene",
+   "question": "Does the image depict a farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in blue overalls",
+   "question": "Is there a farmer in blue overalls?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarecrow wearing a straw hat",
+   "question": "Is there a scarecrow wearing a straw hat?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "farmer_basket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer in blue overalls holds a basket",
+   "question": "Is the farmer in blue overalls holding a basket?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in blue overalls is standing",
+   "question": "Is the farmer in blue overalls standing?"
+  },
+  {
+   "id": "scarecrow_sitting",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow wearing a straw hat is sitting",
+   "question": "Is the scarecrow wearing a straw hat sitting?"
+  },
+  {
+   "id": "farmer_looking",
+   "type": "action",
+   "of": [
+    "farmer",
+    "scarecrow"
+   ],
+   "desc": "the farmer in blue overalls is looking at the scarecrow wearing a straw hat",
+   "question": "Is the farmer in blue overalls looking at the scarecrow wearing a straw hat?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0052",
+ "prompt": "This flat vector illustration depicts a farm harvest scene. On the left stands a farmer in blue overalls holding a basket. In the center sits a scarecrow wearing a straw hat. The farmer is looking at the scarecrow. There is no tractor in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

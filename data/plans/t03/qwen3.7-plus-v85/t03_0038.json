@@ -1,0 +1,187 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor or balcony setting without a city skyline",
+   "question": "Does the background lack a city skyline?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    150,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    380,
+    150,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a railing",
+   "question": "Is there a railing?",
+   "box": [
+    350,
+    500,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "palm_tree",
+   "type": "entity",
+   "class": "potted palm tree",
+   "plural": "potted palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted palm tree",
+   "question": "Is there a potted palm tree?",
+   "box": [
+    850,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a silver dress holds a champagne flute",
+   "question": "Is the woman in a silver dress holding a champagne flute?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is leaning",
+   "question": "Is the man in a black tuxedo leaning?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black tuxedo is looking toward the woman",
+   "question": "Is the man in a black tuxedo looking toward the woman in the silver dress?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a silver dress hands the champagne flute to the man in a black tuxedo",
+   "question": "Is the woman in a silver dress handing the champagne flute to the man in a black tuxedo?"
+  },
+  {
+   "id": "man_against_railing",
+   "type": "relation",
+   "of": [
+    "man",
+    "railing"
+   ],
+   "desc": "the man in a black tuxedo leans against the railing",
+   "question": "Is the man in a black tuxedo leaning against the railing?"
+  },
+  {
+   "id": "dog_next_to_palm",
+   "type": "relation",
+   "of": [
+    "dog",
+    "palm_tree"
+   ],
+   "desc": "the golden retriever sits next to the potted palm tree",
+   "question": "Is the golden retriever sitting next to the potted palm tree?"
+  },
+  {
+   "id": "no_skyline",
+   "type": "absent",
+   "desc": "city skyline",
+   "question": "Is there a city skyline visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a silver dress is standing",
+   "question": "Is the woman in a silver dress standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0038",
+ "prompt": "In a cinematic film still, a woman in a silver dress stands on the left, holding a champagne flute. In the center, a man in a black tuxedo leans against a railing, looking toward her. On the right, a golden retriever sits calmly next to a potted palm tree. The woman is handing the glass to the man. There is no city skyline visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

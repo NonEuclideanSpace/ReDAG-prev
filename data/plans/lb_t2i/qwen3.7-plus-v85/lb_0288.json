@@ -1,0 +1,590 @@
+{
+ "style": "surreal photorealistic, ethereal morning light, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shoreline with water and sand",
+   "question": "Does the image show a shoreline with water and sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bracelet",
+   "type": "entity",
+   "class": "bracelet",
+   "plural": "bracelets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver bracelet",
+   "question": "Is there a silver bracelet?",
+   "box": [
+    100,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "seashell",
+   "type": "entity",
+   "class": "seashell",
+   "plural": "seashells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny seashell",
+   "question": "Is there a tiny seashell?",
+   "box": [
+    116,
+    866,
+    164,
+    914
+   ]
+  },
+  {
+   "id": "boot",
+   "type": "entity",
+   "class": "rubber boot",
+   "plural": "rubber boots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s red rubber boot",
+   "question": "Is there a child’s red rubber boot?",
+   "box": [
+    300,
+    800,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "column",
+   "type": "entity",
+   "class": "glass column",
+   "plural": "glass columns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spiraling, translucent glass-like column",
+   "question": "Is there a spiraling, translucent glass-like column?",
+   "box": [
+    500,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "gull",
+   "type": "entity",
+   "class": "gull",
+   "plural": "gulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gull",
+   "question": "Is there a gull?",
+   "box": [
+    700,
+    400,
+    850,
+    550
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "fishing net",
+   "plural": "fishing nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered fishing net",
+   "question": "Is there a weathered fishing net?",
+   "box": [
+    650,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "driftwood",
+   "type": "entity",
+   "class": "driftwood frame",
+   "plural": "driftwood frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a driftwood frame",
+   "question": "Is there a driftwood frame?",
+   "box": [
+    800,
+    700,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "bottle",
+   "plural": "bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bottle half-sunk in the sand",
+   "question": "Is there a bottle half-sunk in the sand?",
+   "box": [
+    820,
+    820,
+    880,
+    920
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    600,
+    850,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "pages",
+   "type": "entity",
+   "class": "page",
+   "plural": "pages",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny ghostly kite-shaped pages",
+   "question": "Are there tiny ghostly kite-shaped pages?",
+   "box": [
+    550,
+    700,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "bubble",
+   "type": "entity",
+   "class": "bubble",
+   "plural": "bubbles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a suspended bubble",
+   "question": "Is there a suspended bubble?",
+   "box": [
+    450,
+    500,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "human figure",
+   "plural": "human figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vague human figure",
+   "question": "Is there a vague human figure?",
+   "box": [
+    200,
+    300,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "bracelet_chain",
+   "type": "attribute",
+   "of": "bracelet",
+   "desc": "the silver bracelet's chain is coiled around the seashell",
+   "question": "Is the silver bracelet's chain coiled around the seashell?"
+  },
+  {
+   "id": "bracelet_buried",
+   "type": "state",
+   "of": "bracelet",
+   "desc": "the silver bracelet is half-buried in the sand",
+   "question": "Is the silver bracelet half-buried in the sand?"
+  },
+  {
+   "id": "boot_overturned",
+   "type": "state",
+   "of": "boot",
+   "desc": "the red rubber boot is overturned",
+   "question": "Is the red rubber boot overturned?"
+  },
+  {
+   "id": "gull_perched",
+   "type": "state",
+   "of": "gull",
+   "desc": "the gull is perched",
+   "question": "Is the gull perched?"
+  },
+  {
+   "id": "gull_entangled",
+   "type": "relation",
+   "of": [
+    "gull",
+    "net"
+   ],
+   "desc": "the gull's legs are entangled in the fishing net",
+   "question": "Are the gull's legs entangled in the fishing net?"
+  },
+  {
+   "id": "net_on_driftwood",
+   "type": "relation",
+   "of": [
+    "net",
+    "driftwood"
+   ],
+   "desc": "the fishing net is caught on the driftwood frame",
+   "question": "Is the fishing net caught on the driftwood frame?"
+  },
+  {
+   "id": "driftwood_on_bottle",
+   "type": "relation",
+   "of": [
+    "driftwood",
+    "bottle"
+   ],
+   "desc": "the driftwood frame balances on the tip of the bottle",
+   "question": "Does the driftwood frame balance on the tip of the bottle?"
+  },
+  {
+   "id": "bottle_against_book",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "book"
+   ],
+   "desc": "the bottle leans against the open book",
+   "question": "Does the bottle lean against the open book?"
+  },
+  {
+   "id": "boot_points_column",
+   "type": "relation",
+   "of": [
+    "boot",
+    "column"
+   ],
+   "desc": "the toe of the boot points at the glass column",
+   "question": "Does the toe of the boot point at the glass column?"
+  },
+  {
+   "id": "bubble_between",
+   "type": "relation",
+   "of": [
+    "bubble",
+    "book",
+    "boot"
+   ],
+   "desc": "the bubble hovers between the book and the boot",
+   "question": "Does the bubble hover between the book and the boot?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "visible source of wind",
+   "question": "Is there any visible source of wind (like a fan or person blowing) in the image?"
+  },
+  {
+   "id": "figure_stands",
+   "type": "state",
+   "of": "figure",
+   "desc": "the vague human figure stands at the edge of the dock",
+   "question": "Is the vague human figure standing?"
+  },
+  {
+   "id": "boot_sits",
+   "type": "state",
+   "of": "boot",
+   "desc": "the child’s red rubber boot sits in the tide’s edge",
+   "question": "Is the child’s red rubber boot sitting in the tide’s edge?"
+  },
+  {
+   "id": "gull_cawing",
+   "type": "state",
+   "of": "gull",
+   "desc": "the gull caws",
+   "question": "Is the gull cawing (beak open/calling)?"
+  },
+  {
+   "id": "book_dissolving",
+   "type": "state",
+   "of": "book",
+   "desc": "the page of the open book appears to dissolve",
+   "question": "Does the page of the open book appear to dissolve?"
+  },
+  {
+   "id": "pages_float",
+   "type": "state",
+   "of": "pages",
+   "desc": "the ghostly kite-shaped pages float above the dock and dip into the light",
+   "question": "Do the ghostly kite-shaped pages float in the air?"
+  },
+  {
+   "id": "bubble_content",
+   "type": "attribute",
+   "of": "bubble",
+   "desc": "the bubble contains a miniature version of the scene with the boot right-side up",
+   "question": "Does the bubble contain a miniature scene where the red rubber boot is right-side up?"
+  },
+  {
+   "id": "figure_mirage",
+   "type": "state",
+   "of": "figure",
+   "desc": "the figure appears as a mirage or reflection, unclear if real",
+   "question": "Does the human figure appear indistinct, like a mirage or reflection?"
+  },
+  {
+   "id": "oyster_shells",
+   "type": "entity",
+   "class": "oyster shell",
+   "plural": "oyster shells",
+   "count": 2,
+   "count_exact": false,
+   "desc": "oyster shells near the boot",
+   "question": "Are there oyster shells near the red rubber boot?",
+   "box": [
+    100,
+    750,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "bracelet_edge",
+   "type": "relation",
+   "of": [
+    "bracelet",
+    "shipwreck"
+   ],
+   "desc": "the silver bracelet lies at the water’s edge",
+   "question": "Is the silver bracelet lying at the water’s edge?"
+  },
+  {
+   "id": "boot_not_pointing_shells",
+   "type": "relation",
+   "of": [
+    "boot",
+    "oyster_shells"
+   ],
+   "desc": "the toe of the boot does not point at the oyster shells",
+   "question": "Does the toe of the red rubber boot NOT point at the oyster shells?"
+  },
+  {
+   "id": "column_buried",
+   "type": "state",
+   "of": "column",
+   "desc": "the glass column is half-buried in the sand",
+   "question": "Is the spiraling glass column half-buried in the sand?"
+  },
+  {
+   "id": "net_stretches",
+   "type": "relation",
+   "of": [
+    "net",
+    "shipwreck"
+   ],
+   "desc": "the fishing net stretches outward into the water",
+   "question": "Does the weathered fishing net stretch outward into the water?"
+  },
+  {
+   "id": "dock_remains",
+   "type": "entity",
+   "class": "dock remains",
+   "plural": "dock remains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "skeletal remains of a dock",
+   "question": "Are there skeletal remains of a dock?",
+   "box": [
+    50,
+    400,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "shipwreck",
+   "type": "entity",
+   "class": "shipwreck hull",
+   "plural": "shipwreck hulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted shipwreck hull barely visible beneath shallow water",
+   "question": "Is there a rusted shipwreck hull barely visible beneath shallow water?",
+   "box": [
+    600,
+    300,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "bracelet_chain_2",
+   "type": "attribute",
+   "of": "bracelet",
+   "desc": "the silver bracelet has a delicate chain",
+   "question": "Does the silver bracelet have a delicate chain?"
+  },
+  {
+   "id": "column_motes",
+   "type": "attribute",
+   "of": "column",
+   "desc": "the glass column is filled with suspended motes of light",
+   "question": "Is the glass column filled with suspended motes of light?"
+  },
+  {
+   "id": "bottle_label",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle has a label curled like a question mark",
+   "question": "Does the bottle have a label curled like a question mark?"
+  },
+  {
+   "id": "book_ink",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the open book has ink bleeding into thin silver lines",
+   "question": "Does the open book have ink bleeding into thin silver lines?"
+  },
+  {
+   "id": "bubble_content_miniature",
+   "type": "attribute",
+   "of": "bubble",
+   "desc": "the bubble contains a miniature version of the scene",
+   "question": "Does the bubble contain a miniature version of the scene?"
+  },
+  {
+   "id": "bubble_gull_silent",
+   "type": "attribute",
+   "of": "bubble",
+   "desc": "in the bubble, the gull is silent",
+   "question": "In the bubble, is the gull silent (beak closed)?"
+  },
+  {
+   "id": "bubble_light_opposite",
+   "type": "attribute",
+   "of": "bubble",
+   "desc": "in the bubble, the light flows in the opposite direction",
+   "question": "In the bubble, does the light appear to flow in the opposite direction?"
+  },
+  {
+   "id": "seashell_glow",
+   "type": "attribute",
+   "of": "seashell",
+   "desc": "the tiny seashell has a faint inner glow",
+   "question": "Does the tiny seashell have a faint inner glow?"
+  },
+  {
+   "id": "figure_at_dock",
+   "type": "relation",
+   "of": [
+    "figure",
+    "dock_remains"
+   ],
+   "desc": "the vague human figure is at the edge of the dock",
+   "question": "Is the vague human figure at the edge of the dock remains?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bracelet",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "boot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "column",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "driftwood",
+   "to": "net",
+   "kind": "support"
+  },
+  {
+   "from": "bottle",
+   "to": "driftwood",
+   "kind": "support"
+  },
+  {
+   "from": "book",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dock_remains",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "shipwreck",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0288",
+ "prompt": "The morning light stretches across the water in slow, molten ribbons, casting shifting reflections that dance between the skeletal remains of the dock and the rusted hull of a shipwreck barely visible beneath the shallows. At the water’s edge, a silver bracelet glints where it lies half-buried in the sand, its delicate chain coiled around a tiny seashell that seems to pulse with a faint inner glow, as though the bracelet had once held some secret power and the shell now remembers it. Nearby, a child’s red rubber boot sits overturned in the tide’s edge, its toe pointed not at the oyster shells but at a spiraling, glass-like column rising from the sand—half-buried, translucent, filled with suspended motes of light that flicker in rhythm with the distant caw of a gull. The gull, itself, perches on the edge of a weathered fishing net, its legs entangled in the mesh while the net stretches outward into the water, caught on a driftwood frame that somehow balances precariously on the tip of a bottle, half-sunk in the sand with its label curled like a question mark. The bottle, in turn, is leaning against a book, open to a page that seems to dissolve as you look at it, the ink bleeding into the water in thin, silver lines that run down the page and pool in the sand at the book’s base. A wind, though there is no visible source, stirs the air, lifting pages from the book and curling them into the shape of tiny, ghostly kites that float above the dock and dip their edges into the light. A figure stands at the edge of the dock, but it is unclear whether they are there or reflected—perhaps a mirage created by the interplay of the water, the glass column, and the light bending through a suspended bubble that hovers between the book and the boot. The bubble is not ordinary; it contains a miniature version of the entire scene, complete with the boot, the shell, the book, and even the gull—except in the bubble, the boot is right-side up, the gull is silent, and the light flows in the opposite direction. As the real sun moves higher, the reflection in the bubble distorts, and for a moment, the lines between the real and the imagined blur so completely that it seems the scene might tip into another dimension. Yet everything remains in balance: the boot points to the shell, the shell to the glass column, the column to the bottle, the bottle to the book, the book to the bubble, the bubble to the figure, and the figure to the gull, which cries again, and this time, the sound is different—familiar, as if from a memory you cannot quite place.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 76,
+   "n_uncovered": 8,
+   "proposed": 5,
+   "ungrounded": 0,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

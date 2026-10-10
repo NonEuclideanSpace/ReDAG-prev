@@ -1,0 +1,192 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with large glass windows overlooking the tarmac",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    512,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with short blue hair",
+   "question": "Is there a girl with short blue hair?",
+   "box": [
+    100,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with messy brown hair",
+   "question": "Is there a boy with messy brown hair?",
+   "box": [
+    550,
+    250,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with short blue hair holds a bright yellow suitcase",
+   "question": "Is the girl with short blue hair holding a suitcase?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with short blue hair is standing",
+   "question": "Is the girl with short blue hair standing?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy with messy brown hair is sitting",
+   "question": "Is the boy with messy brown hair sitting?"
+  },
+  {
+   "id": "boy_chin_hand",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy with messy brown hair rests his chin on his hand",
+   "question": "Is the boy with messy brown hair resting his chin on his hand?"
+  },
+  {
+   "id": "boy_looking_girl",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy with messy brown hair looks at the girl with short blue hair",
+   "question": "Is the boy with messy brown hair looking at the girl with short blue hair?"
+  },
+  {
+   "id": "boy_on_bench",
+   "type": "relation",
+   "of": [
+    "boy",
+    "bench"
+   ],
+   "desc": "the boy with messy brown hair sits on the metal bench",
+   "question": "Is the boy with messy brown hair sitting on the metal bench?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy with messy brown hair is next to the girl with short blue hair",
+   "question": "Is the boy with messy brown hair next to the girl with short blue hair?"
+  },
+  {
+   "id": "no_cart",
+   "type": "absent",
+   "desc": "luggage cart",
+   "question": "Is there a luggage cart in the image?"
+  },
+  {
+   "id": "girl_grips_handle",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with short blue hair grips the handle of her suitcase tightly",
+   "question": "Is the girl with short blue hair gripping the handle of her suitcase tightly?"
+  },
+  {
+   "id": "windows",
+   "type": "entity",
+   "class": "glass window",
+   "plural": "glass windows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "large glass windows overlooking the tarmac",
+   "question": "Are there large glass windows overlooking the tarmac?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "suitcase_color",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the suitcase held by the girl with short blue hair is bright yellow",
+   "question": "Is the suitcase held by the girl with short blue hair bright yellow?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "boy",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0064",
+ "prompt": "In a vibrant anime style, a girl with short blue hair stands on the left side of an airport gate, holding a bright yellow suitcase. Next to her on the right sits a boy with messy brown hair, resting his chin on his hand while looking at her. The two are positioned near large glass windows overlooking the tarmac. There is no luggage cart visible in the scene. The girl grips the handle of her suitcase tightly, while the boy remains seated on a metal bench. Their distinct appearances contrast against the sterile background, highlighting their interaction as they wait for their flight.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

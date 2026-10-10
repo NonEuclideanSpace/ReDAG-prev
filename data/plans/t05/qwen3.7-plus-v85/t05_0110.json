@@ -1,0 +1,319 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn",
+   "question": "Does the image show a quiet village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman wearing a blue shawl?",
+   "box": [
+    60,
+    350,
+    240,
+    750
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woven basket",
+   "question": "Is there a woven basket?",
+   "box": [
+    260,
+    550,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in striped shorts",
+   "question": "Is there a young boy wearing striped shorts?",
+   "box": [
+    400,
+    300,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    580,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a straw hat",
+   "question": "Is there a man wearing a straw hat?",
+   "box": [
+    750,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty bicycle with a slightly bent wheel",
+   "question": "Is there a rusty bicycle with a slightly bent wheel?",
+   "box": [
+    700,
+    400,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the elderly woman is sitting with a slumped posture",
+   "question": "Is the elderly woman sitting with a slumped posture?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy has his arm extended straight, pointing",
+   "question": "Is the young boy pointing with his arm extended straight?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat has wide, curious eyes",
+   "question": "Does the spotted cat have wide, curious eyes?"
+  },
+  {
+   "id": "farmer_handing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the man in the straw hat has his hand outstretched",
+   "question": "Is the man in the straw hat holding his hand outstretched?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "old_woman",
+    "crate"
+   ],
+   "desc": "the elderly woman sits on the wooden crate",
+   "question": "Is the elderly woman sitting on the wooden crate?"
+  },
+  {
+   "id": "basket_next_to_woman",
+   "type": "relation",
+   "of": [
+    "basket",
+    "old_woman"
+   ],
+   "desc": "the woven basket is next to the elderly woman",
+   "question": "Is the woven basket next to the elderly woman?"
+  },
+  {
+   "id": "cat_beside_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the spotted cat is beside the young boy",
+   "question": "Is the spotted cat beside the young boy?"
+  },
+  {
+   "id": "cat_looks_at_boy",
+   "type": "action",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the spotted cat looks at the young boy",
+   "question": "Is the spotted cat looking at the young boy?"
+  },
+  {
+   "id": "farmer_hands_apple",
+   "type": "action",
+   "of": [
+    "farmer",
+    "boy"
+   ],
+   "desc": "the man in the straw hat hands a single apple to the young boy",
+   "question": "Is the man in the straw hat handing a single apple to the young boy?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight breaking through clouds",
+   "question": "Is there any sunlight breaking through the clouds in the image?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in striped shorts stands",
+   "question": "Is the young boy in striped shorts standing?"
+  },
+  {
+   "id": "bicycle_behind_farmer_boy",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "farmer"
+   ],
+   "desc": "the rusty bicycle is behind the man in the straw hat and the young boy",
+   "question": "Is the rusty bicycle behind the man in the straw hat and the young boy?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright red apples",
+   "question": "Are there bright red apples?",
+   "box": [
+    160,
+    580,
+    340,
+    750
+   ]
+  },
+  {
+   "id": "basket_overflowing",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the woven basket is overflowing with apples",
+   "question": "Is the woven basket overflowing with apples?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat's tail is twitching",
+   "question": "Is the spotted cat's tail positioned as if twitching?"
+  },
+  {
+   "id": "bicycle_against_wall",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "stone_wall"
+   ],
+   "desc": "the rusty bicycle leans against the stone wall",
+   "question": "Is the rusty bicycle leaning against the stone wall?"
+  },
+  {
+   "id": "stone_wall",
+   "type": "entity",
+   "class": "stone wall",
+   "plural": "stone walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone wall",
+   "question": "Is there a stone wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "old_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0110",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet village market at dawn. On the left, an old woman in a blue shawl sits on a wooden crate, her posture slumped in rest. Next to her stands a woven basket overflowing with bright red apples. In the center, a young boy in striped shorts points eagerly toward the fruit, his arm extended straight. Beside him, a spotted cat looks at the boy with wide, curious eyes, its tail twitching slightly. On the right, a farmer in a straw hat hands a single apple to the child, his hand outstretched in generosity. Behind them, a rusty bicycle leans against a stone wall, its wheel slightly bent. There is no sunlight breaking through the clouds.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,363 @@
+{
+ "style": "photorealistic nature photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest canopy scene",
+   "question": "Does the image show a forest canopy scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a towering oak tree",
+   "question": "Is there a towering oak tree?",
+   "box": [
+    350,
+    0,
+    674,
+    800
+   ]
+  },
+  {
+   "id": "monkeys",
+   "type": "entity",
+   "class": "monkey",
+   "plural": "monkeys",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three monkeys",
+   "question": "Are there exactly three monkeys?",
+   "box": [
+    200,
+    200,
+    824,
+    500
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick vine",
+   "question": "Is there a thick vine?",
+   "box": [
+    700,
+    100,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful parrot",
+   "question": "Is there a colorful parrot?",
+   "box": [
+    720,
+    300,
+    780,
+    380
+   ]
+  },
+  {
+   "id": "butterflies",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four butterflies",
+   "question": "Are there exactly four butterflies?",
+   "box": [
+    400,
+    50,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "sunbeam",
+   "type": "entity",
+   "class": "sunbeam",
+   "plural": "sunbeams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sunbeam",
+   "question": "Is there a sunbeam?",
+   "box": [
+    450,
+    0,
+    574,
+    200
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "fallen log",
+   "plural": "fallen logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fallen log",
+   "question": "Is there a fallen log?",
+   "box": [
+    200,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "fern_patch",
+   "type": "entity",
+   "class": "fern patch",
+   "plural": "fern patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fern patch",
+   "question": "Is there a fern patch?",
+   "box": [
+    650,
+    850,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "monkeys_leaping",
+   "type": "state",
+   "of": "monkeys",
+   "desc": "the three monkeys are leaping",
+   "question": "Are the three monkeys leaping?"
+  },
+  {
+   "id": "vine_hanging",
+   "type": "state",
+   "of": "vine",
+   "desc": "the thick vine is hanging",
+   "question": "Is the thick vine hanging?"
+  },
+  {
+   "id": "parrot_perched",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the colorful parrot is perched",
+   "question": "Is the colorful parrot perched?"
+  },
+  {
+   "id": "butterflies_fluttering",
+   "type": "state",
+   "of": "butterflies",
+   "desc": "the four butterflies are fluttering",
+   "question": "Are the four butterflies fluttering?"
+  },
+  {
+   "id": "log_lying",
+   "type": "state",
+   "of": "log",
+   "desc": "the fallen log is lying down",
+   "question": "Is the fallen log lying down?"
+  },
+  {
+   "id": "monkeys_between_branches",
+   "type": "relation",
+   "of": [
+    "monkeys",
+    "oak_tree"
+   ],
+   "desc": "the three monkeys are leaping between the branches of the oak tree",
+   "question": "Are the three monkeys leaping between the branches of the oak tree?"
+  },
+  {
+   "id": "vine_beside_oak",
+   "type": "relation",
+   "of": [
+    "vine",
+    "oak_tree"
+   ],
+   "desc": "the thick vine hangs beside the oak tree",
+   "question": "Does the thick vine hang beside the oak tree?"
+  },
+  {
+   "id": "parrot_on_vine",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "vine"
+   ],
+   "desc": "the colorful parrot is perched on the thick vine",
+   "question": "Is the colorful parrot perched on the thick vine?"
+  },
+  {
+   "id": "butterflies_above_sunbeam",
+   "type": "relation",
+   "of": [
+    "butterflies",
+    "sunbeam"
+   ],
+   "desc": "the four butterflies are fluttering above the sunbeam",
+   "question": "Are the four butterflies fluttering above the sunbeam?"
+  },
+  {
+   "id": "waterfall_behind_canopy",
+   "type": "state",
+   "of": "oak_tree",
+   "desc": "the waterfall is behind the forest canopy",
+   "question": "Is the waterfall visible behind the forest canopy?"
+  },
+  {
+   "id": "log_beneath_oak",
+   "type": "relation",
+   "of": [
+    "log",
+    "oak_tree"
+   ],
+   "desc": "the fallen log lies beneath the oak tree",
+   "question": "Does the fallen log lie beneath the oak tree?"
+  },
+  {
+   "id": "fern_next_to_log",
+   "type": "relation",
+   "of": [
+    "fern_patch",
+    "log"
+   ],
+   "desc": "the fern patch is growing next to the fallen log",
+   "question": "Is the fern patch growing next to the fallen log?"
+  },
+  {
+   "id": "parrot_smaller_than_monkeys",
+   "type": "attribute",
+   "of": "parrot",
+   "desc": "the colorful parrot is smaller than the monkeys",
+   "question": "Is the colorful parrot smaller than the monkeys?"
+  },
+  {
+   "id": "oak_thicker_than_vine",
+   "type": "attribute",
+   "of": "oak_tree",
+   "desc": "the oak tree is significantly thicker than the vine",
+   "question": "Is the oak tree significantly thicker than the vine?"
+  },
+  {
+   "id": "log_longer_than_parrot",
+   "type": "attribute",
+   "of": "log",
+   "desc": "the fallen log is longer than the parrot is tall",
+   "question": "Is the fallen log longer than the parrot is tall?"
+  },
+  {
+   "id": "parrot_above_monkeys",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "monkeys"
+   ],
+   "desc": "the colorful parrot is perched above the monkeys",
+   "question": "Is the colorful parrot perched above the monkeys?"
+  },
+  {
+   "id": "log_closer_to_fern",
+   "type": "relation",
+   "of": [
+    "log",
+    "fern_patch",
+    "oak_tree"
+   ],
+   "desc": "the fallen log is closer to the fern patch than to the oak tree",
+   "question": "Is the fallen log closer to the fern patch than to the oak tree?"
+  },
+  {
+   "id": "waterfall",
+   "type": "entity",
+   "class": "waterfall",
+   "plural": "waterfalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waterfall",
+   "question": "Is there a waterfall?",
+   "box": [
+    400,
+    50,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "waterfall_behind_oak",
+   "type": "relation",
+   "of": [
+    "waterfall",
+    "oak_tree"
+   ],
+   "desc": "the waterfall is behind the oak tree",
+   "question": "Is the waterfall behind the oak tree?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "oak_tree",
+   "to": "vine",
+   "kind": "support"
+  },
+  {
+   "from": "vine",
+   "to": "parrot",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_078",
+ "prompt": "A forest canopy scene with a towering oak tree at the center. A troop of three monkeys is leaping between branches. A thick vine hangs beside the oak tree. A colorful parrot, which is smaller than the monkeys, is perched on the vine. The oak tree is significantly thicker than the vine it supports. There are some butterflies fluttering above a sunbeam, and their number is one more than the number of monkeys. A waterfall is visible in the distance behind the canopy. A fallen log, longer than the parrot is tall, lies beneath the oak tree. A fern patch is growing next to the log. The parrot is perched above the monkeys. The log is closer to the fern patch than to the oak tree.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "waterfall_bg",
+     "waterfall"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

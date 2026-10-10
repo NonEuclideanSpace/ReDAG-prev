@@ -1,0 +1,451 @@
+{
+ "style": "photorealistic outdoor scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a playground scene",
+   "question": "Does the image show a playground scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "swing_set",
+   "type": "entity",
+   "class": "swing set",
+   "plural": "swing sets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a freshly painted swing set",
+   "question": "Is there a freshly painted swing set?",
+   "box": [
+    300,
+    200,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a red shirt",
+   "question": "Is there a boy in a red shirt?",
+   "box": [
+    250,
+    300,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl",
+   "question": "Is there a girl?",
+   "box": [
+    400,
+    350,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the younger girl holds a blue balloon",
+   "question": "Is the younger girl holding a blue balloon?"
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall oak tree",
+   "question": "Is there a tall oak tree?",
+   "box": [
+    600,
+    50,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "tire_swing",
+   "type": "entity",
+   "class": "tire swing",
+   "plural": "tire swings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tire swing hanging from the tree",
+   "question": "Is there a tire swing?",
+   "box": [
+    650,
+    200,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    100,
+    600,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "stick",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the golden retriever carries a stick in its mouth",
+   "question": "Is the golden retriever carrying a stick in its mouth?"
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two books",
+   "question": "Are there exactly two books?",
+   "box": [
+    320,
+    820,
+    400,
+    880
+   ]
+  },
+  {
+   "id": "toy_cars",
+   "type": "entity",
+   "class": "toy car",
+   "plural": "toy cars",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five toy cars",
+   "question": "Are there exactly five toy cars?",
+   "box": [
+    420,
+    810,
+    550,
+    890
+   ]
+  },
+  {
+   "id": "sandbox",
+   "type": "entity",
+   "class": "sandbox",
+   "plural": "sandboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sandbox",
+   "question": "Is there a sandbox?",
+   "box": [
+    550,
+    700,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red bucket inside the sandbox",
+   "question": "Is there a red bucket?",
+   "box": [
+    650,
+    750,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "shovel",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the red bucket contains a small shovel",
+   "question": "Does the red bucket contain a small shovel?"
+  },
+  {
+   "id": "kite",
+   "type": "entity",
+   "class": "kite",
+   "plural": "kites",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful kite flying above the tree",
+   "question": "Is there a colorful kite?",
+   "box": [
+    600,
+    20,
+    800,
+    150
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered park bench",
+   "question": "Is there a weathered park bench?",
+   "box": [
+    500,
+    600,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "flowers",
+   "type": "entity",
+   "class": "yellow flower",
+   "plural": "yellow flowers",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four yellow flowers growing next to the park bench",
+   "question": "Are there exactly four yellow flowers?",
+   "box": [
+    900,
+    650,
+    1000,
+    750
+   ]
+  },
+  {
+   "id": "boy_pushing_girl",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the older boy is pushing the younger girl on the swing",
+   "question": "Is the older boy pushing the younger girl on the swing?"
+  },
+  {
+   "id": "girl_on_swing",
+   "type": "relation",
+   "of": [
+    "girl",
+    "swing_set"
+   ],
+   "desc": "the younger girl is on the swing set",
+   "question": "Is the younger girl on the swing set?"
+  },
+  {
+   "id": "tree_behind_swing",
+   "type": "relation",
+   "of": [
+    "tree",
+    "swing_set"
+   ],
+   "desc": "the tall oak tree is behind the swing set",
+   "question": "Is the tall oak tree behind the swing set?"
+  },
+  {
+   "id": "tire_on_tree",
+   "type": "relation",
+   "of": [
+    "tire_swing",
+    "tree"
+   ],
+   "desc": "the tire swing hangs from the tall oak tree",
+   "question": "Does the tire swing hang from the tall oak tree?"
+  },
+  {
+   "id": "dog_running_to_children",
+   "type": "action",
+   "of": [
+    "dog",
+    "boy",
+    "girl"
+   ],
+   "desc": "the golden retriever is running toward the children",
+   "question": "Is the golden retriever running toward the children?"
+  },
+  {
+   "id": "books_next_to_swing",
+   "type": "relation",
+   "of": [
+    "books",
+    "swing_set"
+   ],
+   "desc": "the books are on the ground next to the swing set",
+   "question": "Are the books on the ground next to the swing set?"
+  },
+  {
+   "id": "cars_next_to_swing",
+   "type": "relation",
+   "of": [
+    "toy_cars",
+    "swing_set"
+   ],
+   "desc": "the toy cars are on the ground next to the swing set",
+   "question": "Are the toy cars on the ground next to the swing set?"
+  },
+  {
+   "id": "sandbox_in_front_of_tree",
+   "type": "relation",
+   "of": [
+    "sandbox",
+    "tree"
+   ],
+   "desc": "the sandbox sits in front of the tall oak tree",
+   "question": "Does the sandbox sit in front of the tall oak tree?"
+  },
+  {
+   "id": "bucket_in_sandbox",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "sandbox"
+   ],
+   "desc": "the red bucket is inside the sandbox",
+   "question": "Is the red bucket inside the sandbox?"
+  },
+  {
+   "id": "boy_pointing_at_kite",
+   "type": "action",
+   "of": [
+    "boy",
+    "kite"
+   ],
+   "desc": "the older boy is pointing at the colorful kite",
+   "question": "Is the older boy pointing at the colorful kite?"
+  },
+  {
+   "id": "bench_behind_sandbox",
+   "type": "relation",
+   "of": [
+    "bench",
+    "sandbox"
+   ],
+   "desc": "the weathered park bench is positioned behind the sandbox",
+   "question": "Is the weathered park bench positioned behind the sandbox?"
+  },
+  {
+   "id": "flowers_next_to_bench",
+   "type": "relation",
+   "of": [
+    "flowers",
+    "bench"
+   ],
+   "desc": "the yellow flowers are growing next to the park bench",
+   "question": "Are the yellow flowers growing next to the weathered park bench?"
+  },
+  {
+   "id": "sand",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the red bucket contains sand",
+   "question": "Does the red bucket contain sand?"
+  },
+  {
+   "id": "boy_taller_than_dog",
+   "type": "relation",
+   "of": [
+    "boy",
+    "dog"
+   ],
+   "desc": "the older boy in a red shirt is taller than the golden retriever",
+   "question": "Is the older boy in a red shirt taller than the golden retriever?"
+  },
+  {
+   "id": "bench_older_than_swing",
+   "type": "relation",
+   "of": [
+    "bench",
+    "swing_set"
+   ],
+   "desc": "the weathered park bench looks older than the freshly painted swing set",
+   "question": "Does the weathered park bench look older than the freshly painted swing set?"
+  },
+  {
+   "id": "boy_older",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy is older than the girl",
+   "question": "Is the boy older than the girl?"
+  },
+  {
+   "id": "girl_younger",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl is younger than the boy",
+   "question": "Is the girl younger than the boy?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "swing_set",
+   "to": "girl",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "tire_swing",
+   "kind": "support"
+  },
+  {
+   "from": "sandbox",
+   "to": "bucket",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_002",
+ "prompt": "A playground scene with two children, an older boy in a red shirt and a younger girl. The boy is pushing the girl on a swing. The girl is holding a blue balloon. Behind the swing set, there is a tall oak tree with a tire swing hanging from it. A golden retriever is running toward the children, carrying a stick in its mouth. The boy is taller than the dog. On the ground next to the swing set, there are two books and several toy cars scattered around; the number of toy cars is three more than the number of books. A sandbox sits in front of the tree, with a red bucket inside it. The bucket contains sand and a small shovel. The boy is pointing at a colorful kite flying above the tree. A weathered park bench is positioned behind the sandbox, looking older than the freshly painted swing set. Next to the park bench, some yellow flowers are growing; the number of flowers is double the number of children.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

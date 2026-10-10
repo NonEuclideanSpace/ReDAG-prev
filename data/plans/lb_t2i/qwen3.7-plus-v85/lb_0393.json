@@ -1,0 +1,589 @@
+{
+ "style": "surreal photorealistic, hazy amber lighting, heat distortion effects",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked asphalt driveway under a hazy amber late afternoon sun",
+   "question": "Does the image show a cracked asphalt driveway under a hazy amber late afternoon sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose",
+   "question": "Is there a red garden hose?",
+   "box": [
+    100,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s bicycle",
+   "question": "Is there a child’s bicycle?",
+   "box": [
+    600,
+    400,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "hedge",
+   "type": "entity",
+   "class": "hedge",
+   "plural": "hedges",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scraggly hedge",
+   "question": "Is there a scraggly hedge?",
+   "box": [
+    550,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "lawn chair",
+   "plural": "lawn chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tilted plastic lawn chair",
+   "question": "Is there a tilted plastic lawn chair?",
+   "box": [
+    700,
+    500,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "laundry basket",
+   "plural": "laundry baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a damp white laundry basket",
+   "question": "Is there a damp white laundry basket?",
+   "box": [
+    750,
+    550,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "towels",
+   "type": "entity",
+   "class": "towel",
+   "plural": "towels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "soft white towels",
+   "question": "Are there soft white towels?",
+   "box": [
+    720,
+    580,
+    880,
+    750
+   ]
+  },
+  {
+   "id": "moths",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny iridescent moths",
+   "question": "Are there tiny iridescent moths?",
+   "box": [
+    400,
+    200,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "doorway",
+   "type": "entity",
+   "class": "doorway",
+   "plural": "doorways",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy wooden doorway",
+   "question": "Is there a shadowy wooden doorway?",
+   "box": [
+    600,
+    700,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "stream",
+   "type": "entity",
+   "class": "water stream",
+   "plural": "water streams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an underground water stream flowing upward",
+   "question": "Is there an underground water stream flowing upward?",
+   "box": [
+    620,
+    750,
+    780,
+    950
+   ]
+  },
+  {
+   "id": "sneaker",
+   "type": "entity",
+   "class": "sneaker",
+   "plural": "sneakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single forgotten sneaker",
+   "question": "Is there a single forgotten sneaker?",
+   "box": [
+    200,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "lavender",
+   "type": "entity",
+   "class": "lavender plant",
+   "plural": "lavender plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sprout of lavender",
+   "question": "Is there a sprout of lavender?",
+   "box": [
+    220,
+    880,
+    280,
+    980
+   ]
+  },
+  {
+   "id": "leaf",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single leaf",
+   "question": "Is there a single leaf?",
+   "box": [
+    886,
+    336,
+    934,
+    384
+   ]
+  },
+  {
+   "id": "hose_kinked",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose is kinked in a loop",
+   "question": "Is the red garden hose kinked in a loop?"
+  },
+  {
+   "id": "nozzle_leaking",
+   "type": "state",
+   "of": "hose",
+   "desc": "the metal nozzle of the hose is leaking water",
+   "question": "Is the metal nozzle of the hose leaking water?"
+  },
+  {
+   "id": "steam_rising",
+   "type": "state",
+   "of": "hose",
+   "desc": "wisps of steam rise from where the water hits the asphalt",
+   "question": "Do wisps of steam rise from where the water hits the asphalt?"
+  },
+  {
+   "id": "wheel_wobbling",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "one wheel of the bicycle is wobbling",
+   "question": "Is one wheel of the bicycle wobbling?"
+  },
+  {
+   "id": "seaweed_on_bike",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has woven seaweed entangled with its handlebars",
+   "question": "Does the bicycle have woven seaweed entangled with its handlebars?"
+  },
+  {
+   "id": "anemones_on_seaweed",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "tiny glimmering sea anemones bloom on the seaweed on the bicycle",
+   "question": "Do tiny glimmering sea anemones bloom on the seaweed on the bicycle?"
+  },
+  {
+   "id": "chair_leg_jammed",
+   "type": "relation",
+   "of": [
+    "chair",
+    "bicycle"
+   ],
+   "desc": "the lawn chair has a wobbly leg jammed underneath the bicycle frame",
+   "question": "Does the lawn chair have a wobbly leg jammed underneath the bicycle frame?"
+  },
+  {
+   "id": "basket_spilling",
+   "type": "state",
+   "of": "basket",
+   "desc": "the laundry basket is spilling over",
+   "question": "Is the laundry basket spilling over?"
+  },
+  {
+   "id": "towels_fluttering",
+   "type": "state",
+   "of": "towels",
+   "desc": "the towels are fluttering in the wind",
+   "question": "Are the towels fluttering in the wind?"
+  },
+  {
+   "id": "moths_hovering",
+   "type": "state",
+   "of": "moths",
+   "desc": "the moths are hovering in spirals",
+   "question": "Are the moths hovering in spirals?"
+  },
+  {
+   "id": "doorway_warped",
+   "type": "state",
+   "of": "doorway",
+   "desc": "the wooden frame of the doorway is warped",
+   "question": "Is the wooden frame of the doorway warped?"
+  },
+  {
+   "id": "stream_swirling",
+   "type": "state",
+   "of": "stream",
+   "desc": "the water stream is swirling upward",
+   "question": "Is the water stream swirling upward?"
+  },
+  {
+   "id": "sneaker_half_buried",
+   "type": "state",
+   "of": "sneaker",
+   "desc": "the sneaker is half-buried in the cracks of the driveway",
+   "question": "Is the sneaker half-buried in the cracks of the driveway?"
+  },
+  {
+   "id": "lace_tied_to_lavender",
+   "type": "relation",
+   "of": [
+    "sneaker",
+    "lavender"
+   ],
+   "desc": "the lace of the sneaker is tied to the sprout of lavender",
+   "question": "Is the lace of the sneaker tied to the sprout of lavender?"
+  },
+  {
+   "id": "hose_near_curb",
+   "type": "relation",
+   "of": [
+    "hose",
+    "curb"
+   ],
+   "desc": "the hose is near the curb of the driveway",
+   "question": "Is the hose near the curb of the driveway?"
+  },
+  {
+   "id": "bike_leaning_on_hedge",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "hedge"
+   ],
+   "desc": "the bicycle leans against the hedge",
+   "question": "Does the bicycle lean against the hedge?"
+  },
+  {
+   "id": "seaweed_touching_chair",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "chair"
+   ],
+   "desc": "the seaweed on the bicycle brushes against the lawn chair",
+   "question": "Does the seaweed on the bicycle brush against the lawn chair?"
+  },
+  {
+   "id": "basket_on_chair",
+   "type": "relation",
+   "of": [
+    "basket",
+    "chair"
+   ],
+   "desc": "the laundry basket is on the seat of the lawn chair",
+   "question": "Is the laundry basket on the seat of the lawn chair?"
+  },
+  {
+   "id": "doorway_in_hedge",
+   "type": "relation",
+   "of": [
+    "doorway",
+    "hedge"
+   ],
+   "desc": "the doorway is at the base of the hedge",
+   "question": "Is the doorway at the base of the hedge?"
+  },
+  {
+   "id": "stream_from_doorway",
+   "type": "relation",
+   "of": [
+    "stream",
+    "doorway"
+   ],
+   "desc": "the water stream flows out of the doorway",
+   "question": "Does the water stream flow out of the doorway?"
+  },
+  {
+   "id": "leaf_clinging",
+   "type": "relation",
+   "of": [
+    "leaf",
+    "hedge"
+   ],
+   "desc": "the leaf clings by a thread to the hedge",
+   "question": "Does the leaf cling by a thread to the hedge?"
+  },
+  {
+   "id": "curb",
+   "type": "entity",
+   "class": "curb",
+   "plural": "curbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a curb along the driveway",
+   "question": "Is there a curb along the driveway?",
+   "box": [
+    0,
+    850,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "hose_squirms",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose squirms slightly",
+   "question": "Does the red garden hose appear to be squirming or moving slightly?"
+  },
+  {
+   "id": "nozzle_twitching",
+   "type": "state",
+   "of": "hose",
+   "desc": "the metal nozzle of the hose is twitching",
+   "question": "Is the metal nozzle of the hose twitching?"
+  },
+  {
+   "id": "water_pulsing",
+   "type": "state",
+   "of": "hose",
+   "desc": "water leaks from the nozzle in a slow pulse",
+   "question": "Is water leaking from the nozzle in a slow pulse?"
+  },
+  {
+   "id": "water_sizzling",
+   "type": "state",
+   "of": "hose",
+   "desc": "the water striking the asphalt creates a visual effect of sizzling steam",
+   "question": "Does the water striking the asphalt create a visual effect of sizzling steam?"
+  },
+  {
+   "id": "water_pooling",
+   "type": "state",
+   "of": "hose",
+   "desc": "water pools in the driveway fractures and vanishes",
+   "question": "Is water pooling in the cracks of the driveway and disappearing beneath the surface?"
+  },
+  {
+   "id": "bike_crooked",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the child’s bicycle leans crookedly",
+   "question": "Is the child’s bicycle leaning crookedly?"
+  },
+  {
+   "id": "chair_wobbly",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the plastic lawn chair has a wobbly leg",
+   "question": "Does the plastic lawn chair have a wobbly leg?"
+  },
+  {
+   "id": "basket_damp",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the white laundry basket is damp",
+   "question": "Is the white laundry basket damp?"
+  },
+  {
+   "id": "towels_soft",
+   "type": "attribute",
+   "of": "towels",
+   "desc": "the towels are soft",
+   "question": "Do the towels appear soft?"
+  },
+  {
+   "id": "moths_trace_spirals",
+   "type": "action",
+   "of": [
+    "moths",
+    "hose"
+   ],
+   "desc": "the moths trace spirals that echo the spirals of the hose",
+   "question": "Do the moths trace spiral paths that visually echo the shape of the hose?"
+  },
+  {
+   "id": "doorway_yawns",
+   "type": "state",
+   "of": "doorway",
+   "desc": "the shadowy doorway yawns open",
+   "question": "Does the shadowy doorway appear to yawn open?"
+  },
+  {
+   "id": "doorway_submerged",
+   "type": "state",
+   "of": "doorway",
+   "desc": "the doorway is half-submerged in the earth",
+   "question": "Is the doorway half-submerged in the earth?"
+  },
+  {
+   "id": "stream_pulls_moths",
+   "type": "action",
+   "of": [
+    "stream",
+    "moths"
+   ],
+   "desc": "the stream current pulls the moths into a swirling dance",
+   "question": "Does the stream's current appear to pull the moths into a swirling motion?"
+  },
+  {
+   "id": "stream_pulls_towels",
+   "type": "action",
+   "of": [
+    "stream",
+    "towels"
+   ],
+   "desc": "the stream current pulls the towel flutters into a swirling dance",
+   "question": "Does the stream's current appear to pull the fluttering towels into a swirling motion?"
+  },
+  {
+   "id": "sneaker_lace_loose",
+   "type": "attribute",
+   "of": "sneaker",
+   "desc": "the sneaker has its lace tied loosely",
+   "question": "Is the lace of the sneaker tied loosely?"
+  },
+  {
+   "id": "lavender_from_tire",
+   "type": "relation",
+   "of": [
+    "lavender",
+    "bicycle"
+   ],
+   "desc": "the sprout of lavender seems to draw nourishment from the bicycle’s tire rubber",
+   "question": "Does the sprout of lavender appear to be growing out of or connected to the bicycle's tire rubber?"
+  },
+  {
+   "id": "seaweed_on_rim",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has woven seaweed growing from its rim",
+   "question": "Does the bicycle have woven seaweed growing from its rim?"
+  },
+  {
+   "id": "doorway_mossy",
+   "type": "attribute",
+   "of": "doorway",
+   "desc": "the wooden frame of the doorway is moss-covered",
+   "question": "Is the wooden frame of the doorway moss-covered?"
+  },
+  {
+   "id": "hose_nozzle",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "the red garden hose has a metal nozzle",
+   "question": "Does the red garden hose have a metal nozzle?"
+  },
+  {
+   "id": "basket_contains_towels",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the laundry basket contains soft towels",
+   "question": "Does the laundry basket contain soft towels?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "hedge",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "chair",
+   "to": "basket",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0393",
+ "prompt": "Beneath the hazy amber glow of a late afternoon sun, the cracked driveway radiates heat, distorting the view like the surface of a fevered dream. A red garden hose, its sinuous body kinked in a loop near the curb, squirms slightly as if still alive, its metal nozzle twitching and leaking a slow, rhythmic pulse of water that strikes the asphalt with a sizzling hiss, releasing wisps of ghostly steam. This water, though meager, finds its way through the driveway’s labyrinthine fractures, where it pools and vanishes beneath the surface as if swallowed by a parched world. Nearby, a child’s bicycle, one wheel wobbling slightly, leans crookedly against a scraggly hedge, its handlebars entangled with a long strip of woven seaweed that appears to have grown directly from the rim, sprouting tiny, glimmering sea anemones in full bloom. The seaweed, in turn, brushes against a tilted plastic lawn chair, its wobbly leg jammed underneath the bike’s frame, stabilizing both in an uneasy truce. On the chair’s seat, a damp white laundry basket spills over, releasing soft towels that flutter and flutter in the wind, each corner catching a different shade of the sun’s dying light. But it is the towels that seem to stir something in the air, as if their dampness draws in tiny, iridescent moths that hover in the golden light, tracing spirals that echo the spirals of the hose. At the edge of the scene, a shadowy doorway yawns from the base of the hedge, half-submerged in the earth, its wooden frame warped and moss-covered, as if it had grown from the soil itself. This portal, unnoticed by most, reveals a glimpse of an underground stream flowing upward, its current pulling the very moths and the towel flutters into a slow, swirling dance around it. The stream, though impossible in logic, seems to breathe in sync with the dripping nozzle, the water that rises through it not from the hose but from a mirror-image garden far below. The air shimmers with an almost imperceptible tension, as if every element in this scene is caught in the gravitational pull of some unseen rhythm. The sun lowers further, and with it, the steam becomes a thin veil that distorts the edges of the driveway, blurring the boundary between above and below, real and imagined. A single, forgotten sneaker lies half-buried in the cracks, its lace tied loosely to a sprout of lavender that seems to be drawing nourishment from the tire’s rubber. The wind carries the scent of wet wool and salt, mixing it with the musty aroma of the hedge, where one final leaf clings by a thread, trembling as if holding the scene itself together by a single, fragile strand.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 17,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

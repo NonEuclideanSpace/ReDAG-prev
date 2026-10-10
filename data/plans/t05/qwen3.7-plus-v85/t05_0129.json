@@ -1,0 +1,278 @@
+{
+ "style": "watercolor illustration, soft washes, warm interior",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hat",
+   "question": "Is there a woman in a blue hat?",
+   "box": [
+    50,
+    200,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    320,
+    550,
+    450,
+    680
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    400,
+    180,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a menu",
+   "question": "Is there a menu?",
+   "box": [
+    600,
+    400,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    680,
+    150,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "glass",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass of water",
+   "question": "Is there a glass of water?",
+   "box": [
+    780,
+    500,
+    850,
+    600
+   ]
+  },
+  {
+   "id": "lady",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly lady in a green coat",
+   "question": "Is there an elderly lady in a green coat?",
+   "box": [
+    850,
+    200,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue hat is sitting",
+   "question": "Is the woman in the blue hat sitting?"
+  },
+  {
+   "id": "teapot_spout",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the silver teapot has its spout angled toward the center",
+   "question": "Is the spout of the silver teapot angled toward the center?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is leaning forward slightly",
+   "question": "Is the man in the red scarf leaning forward slightly?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "menu"
+   ],
+   "desc": "the man in the red scarf looks at the menu",
+   "question": "Is the man in the red scarf looking at the menu?"
+  },
+  {
+   "id": "waiter_holding_menu",
+   "type": "action",
+   "of": [
+    "waiter",
+    "menu"
+   ],
+   "desc": "the waiter holds the menu",
+   "question": "Is the waiter holding the menu?"
+  },
+  {
+   "id": "waiter_pointing",
+   "type": "action",
+   "of": [
+    "waiter",
+    "menu"
+   ],
+   "desc": "the waiter points at a specific dish on the menu page",
+   "question": "Is the waiter pointing at a specific dish on the menu page?"
+  },
+  {
+   "id": "waiter_handing_glass",
+   "type": "action",
+   "of": [
+    "waiter",
+    "lady"
+   ],
+   "desc": "the waiter hands the glass of water to the elderly lady",
+   "question": "Is the waiter handing the glass of water to the elderly lady?"
+  },
+  {
+   "id": "lady_sitting",
+   "type": "state",
+   "of": "lady",
+   "desc": "the elderly lady in the green coat is seated",
+   "question": "Is the elderly lady in the green coat seated?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the silver teapot rests on the table",
+   "question": "Is the silver teapot resting on the table?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is next to the woman in the blue hat",
+   "question": "Is the man in the red scarf next to the woman in the blue hat?"
+  },
+  {
+   "id": "waiter_right_of_man",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "man"
+   ],
+   "desc": "the waiter stands to the right of the man in the red scarf",
+   "question": "Is the waiter standing to the right of the man in the red scarf?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the white apron is standing",
+   "question": "Is the waiter in the white apron standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0129",
+ "prompt": "In a watercolor illustration of a train dining car, a woman in a blue hat sits on the left side of the frame. Next to her, a silver teapot rests on the table, its spout angled toward the center. A man in a red scarf occupies the center seat, leaning forward slightly as he looks at a menu held by a waiter in a white apron standing to his right. The waiter points at a specific dish on the page while handing a glass of water to an elderly lady in a green coat seated on the far right. There is no window visible in the background, focusing all attention on the intimate dining arrangement. The soft washes of color blend the figures gently into the warm interior, highlighting the distinct positions of the five entities without distraction from exterior views or additional clutter.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

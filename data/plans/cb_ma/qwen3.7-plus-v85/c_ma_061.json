@@ -1,0 +1,240 @@
+{
+ "style": "highly detailed illustration, dramatic lighting, white spotlight",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark scene with a single white spotlight shining down",
+   "question": "Is there a single white spotlight shining in the scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grey square stone pedestal",
+   "question": "Is there a grey square stone pedestal?",
+   "box": [
+    312,
+    600,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "chest",
+   "type": "entity",
+   "class": "chest",
+   "plural": "chests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient bronze chest",
+   "question": "Is there an ancient bronze chest?",
+   "box": [
+    362,
+    350,
+    662,
+    650
+   ]
+  },
+  {
+   "id": "hinges",
+   "type": "entity",
+   "class": "hinge",
+   "plural": "hinges",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four black iron hinges",
+   "question": "Are there exactly four black iron hinges?",
+   "box": [
+    362,
+    350,
+    662,
+    400
+   ]
+  },
+  {
+   "id": "gems",
+   "type": "entity",
+   "class": "ruby gem",
+   "plural": "ruby gems",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three circular ruby gems",
+   "question": "Are there exactly three circular ruby gems?",
+   "box": [
+    412,
+    360,
+    612,
+    410
+   ]
+  },
+  {
+   "id": "chest_cubic",
+   "type": "state",
+   "of": "chest",
+   "desc": "the bronze chest is perfectly cubic",
+   "question": "Is the bronze chest perfectly cubic?"
+  },
+  {
+   "id": "chest_metallic",
+   "type": "state",
+   "of": "chest",
+   "desc": "the bronze chest is entirely metallic",
+   "question": "Is the bronze chest entirely metallic?"
+  },
+  {
+   "id": "chest_dusty",
+   "type": "state",
+   "of": "chest",
+   "desc": "the bronze chest is visibly dusty",
+   "question": "Is the bronze chest visibly dusty?"
+  },
+  {
+   "id": "chest_crack_free",
+   "type": "state",
+   "of": "chest",
+   "desc": "the polished bronze panels of the chest are free of cracks",
+   "question": "Are the polished bronze panels of the chest free of cracks?"
+  },
+  {
+   "id": "runes",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "a continuous band of faint cyan runes glowing around the chest’s mid-line",
+   "question": "Is there a continuous band of faint cyan runes glowing around the chest’s mid-line?"
+  },
+  {
+   "id": "aura",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "a thin blue shimmering aura enveloping the chest",
+   "question": "Is there a thin blue shimmering aura enveloping the chest?"
+  },
+  {
+   "id": "hinges_on_chest",
+   "type": "relation",
+   "of": [
+    "hinges",
+    "chest"
+   ],
+   "desc": "the four black iron hinges are on the rear edge of the chest",
+   "question": "Are the four black iron hinges on the rear edge of the chest?"
+  },
+  {
+   "id": "gems_on_chest",
+   "type": "relation",
+   "of": [
+    "gems",
+    "chest"
+   ],
+   "desc": "the three ruby gems sit across the lid of the chest",
+   "question": "Do the three ruby gems sit across the lid of the chest?"
+  },
+  {
+   "id": "chest_on_pedestal",
+   "type": "relation",
+   "of": [
+    "chest",
+    "pedestal"
+   ],
+   "desc": "the bronze chest stands on the grey square stone pedestal",
+   "question": "Does the bronze chest stand on the grey square stone pedestal?"
+  },
+  {
+   "id": "no_glass",
+   "type": "absent",
+   "desc": "glass components",
+   "question": "Are there any glass components in the image?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic elements",
+   "question": "Are there any plastic elements in the image?"
+  },
+  {
+   "id": "chest_standing",
+   "type": "state",
+   "of": "chest",
+   "desc": "the ancient bronze chest is standing",
+   "question": "Is the ancient bronze chest standing?"
+  },
+  {
+   "id": "chest_patina",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest has a subtle teal patina",
+   "question": "Does the chest have a subtle teal patina?"
+  },
+  {
+   "id": "chest_filigree",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is adorned with elaborate filigree carvings",
+   "question": "Is the chest adorned with elaborate filigree carvings?"
+  },
+  {
+   "id": "gems_red",
+   "type": "attribute",
+   "of": "gems",
+   "desc": "the ruby gems are vivid red",
+   "question": "Are the ruby gems vivid red?"
+  },
+  {
+   "id": "gems_reflective",
+   "type": "attribute",
+   "of": "gems",
+   "desc": "the ruby gems are reflective",
+   "question": "Are the ruby gems reflective?"
+  },
+  {
+   "id": "gems_glowing",
+   "type": "state",
+   "of": "gems",
+   "desc": "the ruby gems are softly glowing",
+   "question": "Are the ruby gems softly glowing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pedestal",
+   "to": "chest",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_061",
+ "prompt": "Create a highly detailed illustration of a single ancient bronze chest standing on a grey square stone pedestal. The chest is perfectly cubic and entirely metallic; its bronze surface shows a subtle teal patina and is adorned with elaborate filigree carvings. Four black iron hinges are evenly spaced along the rear edge, and exactly three circular ruby gems—each vivid red, reflective, and softly glowing—sit across the lid. A continuous band of faint cyan runes glows around the chest’s mid-line, while a thin blue shimmering aura envelopes the chest beneath a single white spotlight. Decades of neglect have left the chest visibly dusty, yet its polished bronze panels remain free of cracks. It contains no glass components, and absolutely no plastic elements appear anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market at dawn",
+   "question": "Does the image show a village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    750,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "baker",
+   "type": "entity",
+   "class": "baker",
+   "plural": "bakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a baker in a white apron",
+   "question": "Is there a baker wearing a white apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child",
+   "question": "Is there a child?",
+   "box": [
+    380,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an orange stray cat",
+   "question": "Is there an orange cat?",
+   "box": [
+    780,
+    550,
+    920,
+    750
+   ]
+  },
+  {
+   "id": "baker_bread",
+   "type": "attribute",
+   "of": "baker",
+   "desc": "the baker holds a fresh loaf of bread",
+   "question": "Is the baker holding a fresh loaf of bread?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child reaches out eagerly",
+   "question": "Is the child reaching out eagerly?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat sits calmly",
+   "question": "Is the cat sitting calmly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "baker",
+    "child"
+   ],
+   "desc": "the baker hands the loaf to the child",
+   "question": "Is the baker handing the loaf of bread to the child?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "baker"
+   ],
+   "desc": "the child looks at the loaf held by the baker",
+   "question": "Is the child looking at the loaf of bread held by the baker?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the cat sits on the wooden crate",
+   "question": "Is the cat sitting on the wooden crate?"
+  },
+  {
+   "id": "no_glare",
+   "type": "absent",
+   "desc": "sunlight glare",
+   "question": "Is there any sunlight glare in the image?"
+  },
+  {
+   "id": "baker_standing",
+   "type": "state",
+   "of": "baker",
+   "desc": "the baker in a white apron stands",
+   "question": "Is the baker in a white apron standing?"
+  },
+  {
+   "id": "child_blue_hair",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child has blue hair",
+   "question": "Does the child have blue hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0125",
+ "prompt": "In an anime style, a village market at dawn features three distinct figures. On the left stands a baker in a white apron holding a fresh loaf of bread. In the center, a child with blue hair reaches out eagerly toward the bread. To the right, a stray cat with orange fur sits calmly on a wooden crate. The baker is handing the loaf to the child. The child is looking at the loaf. The cat is sitting on the crate. There is no sunlight glare.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

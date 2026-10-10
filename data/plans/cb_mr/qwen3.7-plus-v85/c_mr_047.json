@@ -1,0 +1,372 @@
+{
+ "style": "dramatic circus photography, high contrast spotlighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a circus big top tent with dark surroundings",
+   "question": "Does the image show the interior of a circus big top tent?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wire",
+   "type": "entity",
+   "class": "tightrope",
+   "plural": "tightropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a high wire",
+   "question": "Is there a high wire in the image?",
+   "box": [
+    0,
+    286,
+    1024,
+    334
+   ]
+  },
+  {
+   "id": "walker",
+   "type": "entity",
+   "class": "tightrope walker",
+   "plural": "tightrope walkers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a female tightrope walker",
+   "question": "Is there a female tightrope walker?",
+   "box": [
+    450,
+    280,
+    574,
+    450
+   ]
+  },
+  {
+   "id": "pole",
+   "type": "entity",
+   "class": "balancing pole",
+   "plural": "balancing poles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long balancing pole",
+   "question": "Is there a long balancing pole?",
+   "box": [
+    200,
+    326,
+    824,
+    374
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "safety net",
+   "plural": "safety nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large safety net stretched taut",
+   "question": "Is there a large safety net stretched taut?",
+   "box": [
+    100,
+    600,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "trapeze",
+   "type": "entity",
+   "class": "trapeze",
+   "plural": "trapezes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a swinging trapeze",
+   "question": "Is there a swinging trapeze?",
+   "box": [
+    700,
+    386,
+    900,
+    434
+   ]
+  },
+  {
+   "id": "acrobat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a male acrobat",
+   "question": "Is there a male acrobat?",
+   "box": [
+    750,
+    450,
+    850,
+    600
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single powerful spotlight beam",
+   "question": "Is there a single powerful spotlight beam?",
+   "box": [
+    400,
+    0,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "clown",
+   "type": "entity",
+   "class": "clown",
+   "plural": "clowns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clown",
+   "question": "Is there a clown?",
+   "box": [
+    100,
+    850,
+    300,
+    1024
+   ]
+  },
+  {
+   "id": "balloons",
+   "type": "entity",
+   "class": "balloon",
+   "plural": "balloons",
+   "count": 5,
+   "count_exact": true,
+   "desc": "a bunch of five balloons",
+   "question": "Are there exactly five balloons?",
+   "box": [
+    250,
+    800,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "walker_balancing",
+   "type": "state",
+   "of": "walker",
+   "desc": "the female tightrope walker is balancing",
+   "question": "Is the female tightrope walker balancing?"
+  },
+  {
+   "id": "walker_holding_pole",
+   "type": "attribute",
+   "of": "walker",
+   "desc": "the female tightrope walker holds the balancing pole",
+   "question": "Is the female tightrope walker holding the balancing pole?"
+  },
+  {
+   "id": "walker_looking_forward",
+   "type": "state",
+   "of": "walker",
+   "desc": "the female tightrope walker is looking forward along the wire",
+   "question": "Is the female tightrope walker looking forward along the wire?"
+  },
+  {
+   "id": "acrobat_hanging",
+   "type": "state",
+   "of": "acrobat",
+   "desc": "the male acrobat is hanging upside down",
+   "question": "Is the male acrobat hanging upside down?"
+  },
+  {
+   "id": "acrobat_holding_knees",
+   "type": "relation",
+   "of": [
+    "acrobat",
+    "trapeze"
+   ],
+   "desc": "the male acrobat is holding on with his knees",
+   "question": "Is the male acrobat holding on to the trapeze with his knees?"
+  },
+  {
+   "id": "acrobat_arms_out",
+   "type": "state",
+   "of": "acrobat",
+   "desc": "the male acrobat has his arms outstretched",
+   "question": "Does the male acrobat have his arms outstretched?"
+  },
+  {
+   "id": "clown_standing",
+   "type": "state",
+   "of": "clown",
+   "desc": "the clown is standing",
+   "question": "Is the clown standing?"
+  },
+  {
+   "id": "clown_holding_balloons",
+   "type": "attribute",
+   "of": "clown",
+   "desc": "the clown holds the bunch of balloons",
+   "question": "Is the clown holding the bunch of balloons?"
+  },
+  {
+   "id": "clown_pointing",
+   "type": "action",
+   "of": [
+    "clown",
+    "acrobat"
+   ],
+   "desc": "the clown points up at the male acrobat",
+   "question": "Is the clown pointing up at the male acrobat?"
+  },
+  {
+   "id": "walker_on_wire",
+   "type": "relation",
+   "of": [
+    "walker",
+    "wire"
+   ],
+   "desc": "the female tightrope walker is on the high wire",
+   "question": "Is the female tightrope walker on the high wire?"
+  },
+  {
+   "id": "net_below_walker",
+   "type": "relation",
+   "of": [
+    "net",
+    "walker"
+   ],
+   "desc": "the safety net is directly below the female tightrope walker",
+   "question": "Is the safety net directly below the female tightrope walker?"
+  },
+  {
+   "id": "acrobat_on_trapeze",
+   "type": "relation",
+   "of": [
+    "acrobat",
+    "trapeze"
+   ],
+   "desc": "the male acrobat is hanging from the swinging trapeze",
+   "question": "Is the male acrobat hanging from the swinging trapeze?"
+  },
+  {
+   "id": "acrobat_right_of_walker",
+   "type": "relation",
+   "of": [
+    "acrobat",
+    "walker"
+   ],
+   "desc": "the male acrobat is to the right of the female tightrope walker",
+   "question": "Is the male acrobat to the right of the female tightrope walker?"
+  },
+  {
+   "id": "walker_higher_than_acrobat",
+   "type": "relation",
+   "of": [
+    "walker",
+    "acrobat"
+   ],
+   "desc": "the female tightrope walker is higher than the male acrobat",
+   "question": "Is the female tightrope walker positioned higher than the male acrobat?"
+  },
+  {
+   "id": "spotlight_on_walker",
+   "type": "relation",
+   "of": [
+    "spotlight",
+    "walker"
+   ],
+   "desc": "the spotlight is pointed at the female tightrope walker",
+   "question": "Is the spotlight pointed at the female tightrope walker?"
+  },
+  {
+   "id": "clown_below_net",
+   "type": "relation",
+   "of": [
+    "clown",
+    "net"
+   ],
+   "desc": "the clown is on the ground below the safety net",
+   "question": "Is the clown on the ground below the safety net?"
+  },
+  {
+   "id": "pole_longer_than_trapeze",
+   "type": "relation",
+   "of": [
+    "pole",
+    "trapeze"
+   ],
+   "desc": "the balancing pole is longer than the trapeze bar",
+   "question": "Is the balancing pole visually longer than the trapeze bar?"
+  },
+  {
+   "id": "costume_more_colorful",
+   "type": "relation",
+   "of": [
+    "clown",
+    "walker"
+   ],
+   "desc": "the clown's costume is more colorful and patterned than the tightrope walker's leotard",
+   "question": "Is the clown's costume more colorful and patterned than the tightrope walker's leotard?"
+  },
+  {
+   "id": "walker_leotard",
+   "type": "attribute",
+   "of": "walker",
+   "desc": "the female tightrope walker wears a simple leotard",
+   "question": "Is the female tightrope walker wearing a simple leotard?"
+  },
+  {
+   "id": "pole_ribbons",
+   "type": "attribute",
+   "of": "pole",
+   "desc": "the balancing pole is decorated with three red ribbons",
+   "question": "Is the balancing pole decorated with three red ribbons?"
+  },
+  {
+   "id": "clown_costume",
+   "type": "attribute",
+   "of": "clown",
+   "desc": "the clown wears a colorful patterned costume",
+   "question": "Is the clown wearing a colorful patterned costume?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wire",
+   "to": "walker",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_047",
+ "prompt": "Under a circus big top, a female tightrope walker is balancing on a high wire, holding a long pole decorated with three red ribbons. Directly below her, a large safety net is stretched taut. To her right and slightly lower, a male acrobat is hanging upside down from a swinging trapeze, holding on with his knees. The tightrope walker is higher than the acrobat. The tightrope walker is looking forward, along the wire. The acrobat is holding his arms out towards the tightrope walker. A single, powerful spotlight is pointed at the tightrope walker. A clown is standing on the ground below the net, holding a bunch of balloons and pointing up at the acrobat. The number of balloons is two more than the number of ribbons on the pole. The balancing pole is longer than the trapeze bar. The clown's costume is more colorful and has more patterns than the tightrope walker's simple leotard.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,326 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy airport gate with large glass windows showing a bright blue sky and distant clouds",
+   "question": "Does the background show a busy airport gate with large glass windows revealing a bright blue sky and distant clouds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with pink hair",
+   "question": "Is there a woman with pink hair?",
+   "box": [
+    80,
+    300,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large blue suitcase",
+   "question": "Is there a large blue suitcase?",
+   "box": [
+    330,
+    550,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy in a yellow cap?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat",
+   "question": "Is there a small white cat?",
+   "box": [
+    580,
+    700,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a green vest",
+   "question": "Is there an elderly man in a green vest?",
+   "box": [
+    700,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "attendant",
+   "type": "entity",
+   "class": "flight attendant",
+   "plural": "flight attendants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flight attendant wearing a navy uniform",
+   "question": "Is there a flight attendant wearing a navy uniform?",
+   "box": [
+    820,
+    220,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "boarding_pass",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man holds a boarding pass",
+   "question": "Is the elderly man holding a boarding pass?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with pink hair is sitting",
+   "question": "Is the woman with pink hair sitting?"
+  },
+  {
+   "id": "woman_chin_hand",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with pink hair rests her chin on her hand",
+   "question": "Is the woman with pink hair resting her chin on her hand?"
+  },
+  {
+   "id": "suitcase_upright",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the large blue suitcase is positioned upright",
+   "question": "Is the large blue suitcase positioned upright?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy points with his arm extended high",
+   "question": "Is the young boy pointing with his arm extended high?"
+  },
+  {
+   "id": "cat_looking_up",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat looks up",
+   "question": "Is the small white cat looking up?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat has its tail curled around its paws",
+   "question": "Is the small white cat's tail curled around its paws?"
+  },
+  {
+   "id": "attendant_smiling",
+   "type": "state",
+   "of": "attendant",
+   "desc": "the flight attendant smiles gently",
+   "question": "Is the flight attendant smiling gently?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman with pink hair sits on the metal bench",
+   "question": "Is the woman with pink hair sitting on the metal bench?"
+  },
+  {
+   "id": "suitcase_next_to_woman",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "woman"
+   ],
+   "desc": "the large blue suitcase is next to the woman with pink hair",
+   "question": "Is the large blue suitcase next to the woman with pink hair?"
+  },
+  {
+   "id": "cat_beside_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the small white cat is beside the young boy",
+   "question": "Is the small white cat beside the young boy?"
+  },
+  {
+   "id": "cat_looks_at_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the small white cat looks at the young boy",
+   "question": "Is the small white cat looking at the young boy?"
+  },
+  {
+   "id": "man_hands_pass",
+   "type": "action",
+   "of": [
+    "elderly_man",
+    "attendant"
+   ],
+   "desc": "the elderly man hands the boarding pass to the flight attendant",
+   "question": "Is the elderly man handing the boarding pass to the flight attendant?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane outside the windows",
+   "question": "Is there an airplane visible outside the windows?"
+  },
+  {
+   "id": "boy_pointing_window",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in the yellow cap points toward the window",
+   "question": "Is the young boy in the yellow cap pointing toward the window?"
+  },
+  {
+   "id": "attendant_accepting",
+   "type": "action",
+   "of": [
+    "attendant",
+    "elderly_man"
+   ],
+   "desc": "the flight attendant accepts the boarding pass from the elderly man",
+   "question": "Is the flight attendant accepting the boarding pass from the elderly man?"
+  },
+  {
+   "id": "suitcase_wheels",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the suitcase has silver wheels",
+   "question": "Does the suitcase have silver wheels?"
+  },
+  {
+   "id": "suitcase_reflection",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the suitcase has a polished surface reflecting overhead lights",
+   "question": "Does the suitcase have a polished surface reflecting overhead lights?"
+  },
+  {
+   "id": "cat_spots",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has black spots",
+   "question": "Does the cat have black spots?"
+  },
+  {
+   "id": "attendant_beret",
+   "type": "attribute",
+   "of": "attendant",
+   "desc": "the flight attendant wears a red beret",
+   "question": "Does the flight attendant wear a red beret?"
+  },
+  {
+   "id": "woman_legs_crossed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with pink hair has her legs crossed",
+   "question": "Does the woman with pink hair have her legs crossed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0096",
+ "prompt": "In a vibrant anime style, the scene unfolds at a busy airport gate where six distinct figures occupy the space. On the left, a woman with pink hair sits on a metal bench, her legs crossed casually as she waits. Next to her stands a large blue suitcase with silver wheels, positioned upright and ready for travel. In the center, a young boy in a yellow cap points excitedly toward the window, his arm extended high in anticipation. Beside him, a small white cat with black spots looks up at the boy, its tail curled neatly around its paws. To the right, an elderly man in a green vest hands a boarding pass to a flight attendant wearing a navy uniform and a red beret. The flight attendant smiles gently while accepting the paper ticket from his outstretched hand. There is no airplane visible outside the large glass windows, only a bright blue sky and distant clouds. The woman with pink hair rests her chin on her hand, appearing bored yet patient. The blue suitcase remains stationary, reflecting the overhead lights on its polished surface. The interaction between the elderly man and the flight attendant is calm and routine, contrasting with the energetic gesture of the boy in the yellow cap. The small white cat seems intrigued by the movement, keeping its gaze fixed on the child. The scene captures a moment of transit, filled with individual stories and quiet connections among strangers waiting for their journey to begin.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

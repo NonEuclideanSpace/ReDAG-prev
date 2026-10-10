@@ -1,0 +1,533 @@
+{
+ "style": "surreal photorealistic, moody morning light, damp textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mossy stone wall with grassy ground",
+   "question": "Does the image show a mossy stone wall with grassy ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn wooden ladder",
+   "question": "Is there a worn wooden ladder?",
+   "box": [
+    300,
+    100,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose",
+   "question": "Is there a red garden hose?",
+   "box": [
+    50,
+    700,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "flower pot",
+   "plural": "flower pots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "old weathered terra-cotta flower pots",
+   "question": "Are there old weathered terra-cotta flower pots?",
+   "box": [
+    650,
+    600,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dark crow",
+   "question": "Is there a dark crow?",
+   "box": [
+    350,
+    800,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "bolt",
+   "type": "entity",
+   "class": "metal bolt",
+   "plural": "metal bolts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose metal bolt",
+   "question": "Is there a loose metal bolt?",
+   "box": [
+    376,
+    876,
+    424,
+    924
+   ]
+  },
+  {
+   "id": "sketchbook",
+   "type": "entity",
+   "class": "sketchbook",
+   "plural": "sketchbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-buried sketchbook with a torn cover",
+   "question": "Is there a half-buried sketchbook with a torn cover?",
+   "box": [
+    100,
+    850,
+    300,
+    980
+   ]
+  },
+  {
+   "id": "drone",
+   "type": "entity",
+   "class": "small drone",
+   "plural": "small drones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small drone",
+   "question": "Is there a small drone?",
+   "box": [
+    500,
+    50,
+    650,
+    200
+   ]
+  },
+  {
+   "id": "acorn",
+   "type": "entity",
+   "class": "acorn",
+   "plural": "acorns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an acorn",
+   "question": "Is there an acorn?",
+   "box": [
+    176,
+    876,
+    224,
+    924
+   ]
+  },
+  {
+   "id": "tricycle",
+   "type": "entity",
+   "class": "tricycle",
+   "plural": "tricycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child's tricycle half-buried in soil",
+   "question": "Is there a child's tricycle half-buried in soil?",
+   "box": [
+    800,
+    850,
+    1000,
+    1000
+   ]
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the wooden ladder leans diagonally",
+   "question": "Is the wooden ladder leaning diagonally?"
+  },
+  {
+   "id": "ladder_in_puddle",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the base of the wooden ladder is in the shallow puddle",
+   "question": "Is the base of the wooden ladder in the shallow puddle?"
+  },
+  {
+   "id": "hose_on_grass",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose lies on the grass",
+   "question": "Does the red garden hose lie on the grass?"
+  },
+  {
+   "id": "pots_on_hose",
+   "type": "relation",
+   "of": [
+    "pots",
+    "hose"
+   ],
+   "desc": "the stack of flower pots rests on the red garden hose",
+   "question": "Does the stack of flower pots rest on the red garden hose?"
+  },
+  {
+   "id": "top_pot_teetering",
+   "type": "state",
+   "of": "pots",
+   "desc": "the topmost flower pot teeters precariously",
+   "question": "Does the topmost flower pot teeter precariously?"
+  },
+  {
+   "id": "crow_pecking",
+   "type": "action",
+   "of": [
+    "crow",
+    "bolt"
+   ],
+   "desc": "the crow pecks at the loose metal bolt",
+   "question": "Is the crow pecking at the loose metal bolt?"
+  },
+  {
+   "id": "bolt_near_ladder",
+   "type": "relation",
+   "of": [
+    "bolt",
+    "ladder"
+   ],
+   "desc": "the loose metal bolt is near the base of the ladder",
+   "question": "Is the loose metal bolt near the base of the ladder?"
+  },
+  {
+   "id": "page_lifted",
+   "type": "state",
+   "of": "sketchbook",
+   "desc": "a corner of the sketchbook's page is lifted by the breeze",
+   "question": "Is a corner of the sketchbook's page lifted?"
+  },
+  {
+   "id": "drawing_content",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the sketchbook shows a drawing of a straight ladder, neatly arranged pots, and a sparrow",
+   "question": "Does the sketchbook show a drawing of a straight ladder, neatly arranged pots, and a sparrow?"
+  },
+  {
+   "id": "drone_hovering",
+   "type": "state",
+   "of": "drone",
+   "desc": "the small drone hovers in the air",
+   "question": "Is the small drone hovering in the air?"
+  },
+  {
+   "id": "drone_releasing",
+   "type": "action",
+   "of": [
+    "drone",
+    "acorn"
+   ],
+   "desc": "the small drone releases the acorn",
+   "question": "Is the small drone releasing the acorn?"
+  },
+  {
+   "id": "acorn_on_sketchbook",
+   "type": "relation",
+   "of": [
+    "acorn",
+    "sketchbook"
+   ],
+   "desc": "the acorn is on the open page of the sketchbook",
+   "question": "Is the acorn on the open page of the sketchbook?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "ladder_straight_drawing",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the drawing in the sketchbook shows a straight ladder",
+   "question": "Does the drawing in the sketchbook show a straight ladder?"
+  },
+  {
+   "id": "pots_circular_drawing",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the drawing in the sketchbook shows pots arranged in a circular pattern",
+   "question": "Does the drawing in the sketchbook show pots arranged in a circular pattern?"
+  },
+  {
+   "id": "sparrow_drawing",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the drawing in the sketchbook shows a sparrow perched on a nail",
+   "question": "Does the drawing in the sketchbook show a sparrow perched on a nail?"
+  },
+  {
+   "id": "label_theta",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the sketchbook cover bears the label 'Project Theta'",
+   "question": "Does the sketchbook cover bear the label 'Project Theta'?"
+  },
+  {
+   "id": "drone_scanning_crow",
+   "type": "action",
+   "of": [
+    "drone",
+    "crow"
+   ],
+   "desc": "the drone focuses its lens on the crow",
+   "question": "Is the drone focusing its lens on the crow?"
+  },
+  {
+   "id": "drone_scanning_sketchbook",
+   "type": "action",
+   "of": [
+    "drone",
+    "sketchbook"
+   ],
+   "desc": "the drone focuses its lens on the sketchbook",
+   "question": "Is the drone focusing its lens on the sketchbook?"
+  },
+  {
+   "id": "acorn_smearing_ink",
+   "type": "relation",
+   "of": [
+    "acorn",
+    "sketchbook"
+   ],
+   "desc": "the acorn leaves a trail of smeared ink on the sketchbook page",
+   "question": "Is the acorn leaving a trail of smeared ink on the sketchbook page?"
+  },
+  {
+   "id": "tricycle_wheel_spinning",
+   "type": "state",
+   "of": "tricycle",
+   "desc": "one wheel of the tricycle is spinning",
+   "question": "Is one wheel of the tricycle spinning?"
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow puddle of rainwater",
+   "question": "Is there a shallow puddle of rainwater?",
+   "box": [
+    300,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "hose_beside_ladder",
+   "type": "relation",
+   "of": [
+    "hose",
+    "ladder"
+   ],
+   "desc": "the red garden hose lies beside the wooden ladder",
+   "question": "Does the red garden hose lie beside the wooden ladder?"
+  },
+  {
+   "id": "drone_above_hose",
+   "type": "relation",
+   "of": [
+    "drone",
+    "hose"
+   ],
+   "desc": "the small drone hovers above the kinked hose",
+   "question": "Does the small drone hover above the kinked hose?"
+  },
+  {
+   "id": "tricycle_near_pots",
+   "type": "relation",
+   "of": [
+    "tricycle",
+    "pots"
+   ],
+   "desc": "the child's tricycle is near the stack of flower pots",
+   "question": "Is the child's tricycle near the stack of flower pots?"
+  },
+  {
+   "id": "reflection_in_puddle",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects fragments of the drone",
+   "question": "Does the puddle reflect fragments of the drone?"
+  },
+  {
+   "id": "bolt_loose",
+   "type": "attribute",
+   "of": "bolt",
+   "desc": "the metal bolt is loose",
+   "question": "Is the metal bolt loose?"
+  },
+  {
+   "id": "ladder_against_wall",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the wooden ladder leans against the mossy stone wall",
+   "question": "Does the wooden ladder lean against the mossy stone wall?"
+  },
+  {
+   "id": "drone_circling_ladder",
+   "type": "action",
+   "of": [
+    "drone",
+    "ladder"
+   ],
+   "desc": "the small drone circles the wooden ladder",
+   "question": "Is the small drone circling the wooden ladder?"
+  },
+  {
+   "id": "drone_avoiding_pots",
+   "type": "action",
+   "of": [
+    "drone",
+    "pots"
+   ],
+   "desc": "the small drone avoids the stack of flower pots",
+   "question": "Is the small drone avoiding the stack of flower pots?"
+  },
+  {
+   "id": "crow_tilting_head",
+   "type": "state",
+   "of": "crow",
+   "desc": "the dark crow tilts its head",
+   "question": "Is the dark crow tilting its head?"
+  },
+  {
+   "id": "ladder_warped_rungs",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the ladder has warped rungs",
+   "question": "Does the ladder have warped rungs?"
+  },
+  {
+   "id": "pots_chipped",
+   "type": "attribute",
+   "of": "pots",
+   "desc": "the flower pots are chipped",
+   "question": "Are the flower pots chipped?"
+  },
+  {
+   "id": "sketchbook_open_pages",
+   "type": "state",
+   "of": "sketchbook",
+   "desc": "the sketchbook has open pages",
+   "question": "Are the pages of the sketchbook open?"
+  },
+  {
+   "id": "sketchbook_damp_edges",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the sketchbook's edges are damp",
+   "question": "Are the edges of the sketchbook damp?"
+  },
+  {
+   "id": "reflection_ladder",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects fragments of the ladder",
+   "question": "Does the puddle reflect fragments of the ladder?"
+  },
+  {
+   "id": "reflection_crow",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects fragments of the crow",
+   "question": "Does the puddle reflect fragments of the crow?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hose",
+   "kind": "support"
+  },
+  {
+   "from": "hose",
+   "to": "pots",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "sketchbook",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tricycle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bolt",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0499",
+ "prompt": "The morning air clings to the edges of the mossy stone wall like a ghostly film, damp and cool with the lingering breath of rain. A wooden ladder leans diagonally against it, not quite vertical, its worn rungs warped by time and moisture, one end barely avoiding collapse as it balances in a shallow puddle of rainwater that still glistens under the sun’s hesitant emergence. Beside it, a red garden hose lies in a tangled sprawl across the grass, its bright plastic contrasting sharply with the muted greens and browns of the landscape. The hose kinks unceremoniously beneath a stack of old terra-cotta flower pots—weathered, chipped, and stacked with such carelessness it seems as if they were abandoned mid-moment, their contents long since scattered or wilted. The topmost pot teeters precariously, as if a single gust might send it tumbling onto the hose or the ladder below, triggering a chain reaction of collapse. A crow, dark and watchful, pecks idly at a loose bolt near the ladder’s base, its movements slow and deliberate, as though the bird knows the bolt is not a toy, but part of some forgotten mechanism. Nearby, a breeze stirs, not with a whisper but with a sudden, decisive gust, lifting a corner of a half-buried sketchbook that lies in the grass, its pages curling as ink blots and half-formed ideas are suddenly exposed to the elements. The sketchbook’s edges are damp, its cover torn but still bearing the ghost of a label—*Project Theta*—inked in a careful, archaic hand. As the page lifts, it reveals a drawing of the very scene that surrounds it, but not quite as it is now. In the drawing, the ladder stands straight, the pots are neatly arranged in a circular pattern, and the crow is replaced by a sparrow perched on a nail. The discrepancy is subtle but deliberate, a visual paradox that hints at a deeper design or perhaps a recursive reality in which the drawing and the world it depicts feed into each other. The wind does not carry the page away, but instead holds it suspended, caught between two forces—one of the breeze, the other of gravity—until a shadow passes overhead. A small drone, buzzing faintly, drifts into view, its lens focused first on the crow, then on the sketchbook, as if scanning, analyzing, perhaps recording. Its flight path is erratic, almost playful, as it circles the ladder and avoids the pots with a grace that suggests more intelligence than expected. The drone hovers briefly above the kinked hose, then tilts slightly and releases a tiny object—an acorn—onto the sketchbook’s open page. The acorn rolls slowly across the paper, ink smearing faintly as it moves, leaving a trail that mimics the hose’s winding form. Below, the crow ceases its pecking and tilts its head, as if it understands something the human observer might not. The puddle, now catching more light, reflects not just the sky, but fragments of the drone, the ladder, and the bird itself, creating a surreal mirror that distorts the boundary between the real and the reflected. The grass beneath the pots shivers slightly as the ground rumbles—not from an earthquake, but from the approach of a child’s tricycle, half-buried in the soil, one wheel still spinning slowly as if carried by the memory of motion. The scene is a mosaic of stillness and subtle action, of objects seemingly frozen in time yet moving in their own way, each one tethered to the next by invisible threads of purpose and meaning. It is a place where logic bends, where objects tell stories not through sound but through arrangement, and where the past, present, and future seem to coexist in the hush of a quiet, strange morning.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 50,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 1,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

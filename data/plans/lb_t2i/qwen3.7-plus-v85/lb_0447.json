@@ -1,0 +1,538 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, intricate details, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a narrow alleyway with a graffiti-scarred brick wall, ivy-draped pipes, and a hazy morning light",
+   "question": "Does the image depict a narrow alleyway with a graffiti-scarred brick wall, ivy-draped pipes, and hazy morning light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered bicycle",
+   "question": "Is there a weathered bicycle?",
+   "box": [
+    100,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "brick wall",
+   "plural": "brick walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brick wall covered in shifting graffiti and embedded with mirrors and lenses",
+   "question": "Is there a brick wall covered in shifting graffiti and embedded with mirrors and lenses?",
+   "box": [
+    500,
+    0,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock embedded into the wall with shifting numbers",
+   "question": "Is there a clock embedded into the wall with shifting numbers?",
+   "box": [
+    600,
+    400,
+    750,
+    550
+   ]
+  },
+  {
+   "id": "blocks",
+   "type": "entity",
+   "class": "concrete block",
+   "plural": "concrete blocks",
+   "count": 3,
+   "count_exact": false,
+   "desc": "a stack of concrete blocks",
+   "question": "Is there a stack of concrete blocks?",
+   "box": [
+    150,
+    700,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty coffee cup",
+   "question": "Is there a half-empty coffee cup?",
+   "box": [
+    200,
+    650,
+    280,
+    720
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek black cat",
+   "question": "Is there a sleek black cat?",
+   "box": [
+    450,
+    750,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "dumpster",
+   "type": "entity",
+   "class": "dumpster",
+   "plural": "dumpsters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dumpster made of interlocking gears",
+   "question": "Is there a dumpster made of interlocking gears?",
+   "box": [
+    650,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "orb",
+   "type": "entity",
+   "class": "orb",
+   "plural": "orbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small floating orb",
+   "question": "Is there a small floating orb?",
+   "box": [
+    550,
+    300,
+    650,
+    400
+   ]
+  },
+  {
+   "id": "rain_curtain",
+   "type": "entity",
+   "class": "water drop",
+   "plural": "water drops",
+   "count": 10,
+   "count_exact": false,
+   "desc": "suspended raindrops forming crystal spheres",
+   "question": "Are there suspended raindrops forming crystal spheres?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "chime",
+   "type": "entity",
+   "class": "wind chime",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wind chime made from bicycle parts and scrap metal",
+   "question": "Is there a wind chime made from bicycle parts and scrap metal?",
+   "box": [
+    500,
+    50,
+    600,
+    200
+   ]
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle is leaning",
+   "question": "Is the bicycle leaning?"
+  },
+  {
+   "id": "wheel_wobbling",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the front wheel of the bicycle is wobbling",
+   "question": "Is the front wheel of the bicycle wobbling?"
+  },
+  {
+   "id": "steam_rising",
+   "type": "state",
+   "of": "cup",
+   "desc": "steam curls upward from the coffee cup",
+   "question": "Does steam curl upward from the coffee cup?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is crouching",
+   "question": "Is the cat crouching?"
+  },
+  {
+   "id": "tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is flicking",
+   "question": "Is the cat's tail flicking?"
+  },
+  {
+   "id": "fur_shimmering",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's fur is briefly shimmering silver",
+   "question": "Is the cat's fur briefly shimmering silver?"
+  },
+  {
+   "id": "graffiti_shifting",
+   "type": "state",
+   "of": "wall",
+   "desc": "the graffiti on the wall is shifting and morphing",
+   "question": "Is the graffiti on the wall shifting and morphing?"
+  },
+  {
+   "id": "bicycle_against_wall",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "wall"
+   ],
+   "desc": "the bicycle leans against the brick wall",
+   "question": "Is the bicycle leaning against the brick wall?"
+  },
+  {
+   "id": "clock_beside_bicycle",
+   "type": "relation",
+   "of": [
+    "clock",
+    "bicycle"
+   ],
+   "desc": "the clock is beside the bicycle",
+   "question": "Is the clock beside the bicycle?"
+  },
+  {
+   "id": "cup_on_blocks",
+   "type": "relation",
+   "of": [
+    "cup",
+    "blocks"
+   ],
+   "desc": "the coffee cup is perched on the stack of concrete blocks",
+   "question": "Is the coffee cup perched on the stack of concrete blocks?"
+  },
+  {
+   "id": "cat_at_dumpster",
+   "type": "relation",
+   "of": [
+    "cat",
+    "dumpster"
+   ],
+   "desc": "the cat crouches at the edge of the dumpster",
+   "question": "Is the cat crouching at the edge of the dumpster?"
+  },
+  {
+   "id": "orb_near_wall",
+   "type": "relation",
+   "of": [
+    "orb",
+    "wall"
+   ],
+   "desc": "the orb hovers near the wall",
+   "question": "Is the orb hovering near the wall?"
+  },
+  {
+   "id": "chime_hanging",
+   "type": "relation",
+   "of": [
+    "chime",
+    "wall"
+   ],
+   "desc": "the wind chime hangs near the top of the wall",
+   "question": "Is the wind chime hanging near the top of the wall?"
+  },
+  {
+   "id": "rain_above",
+   "type": "relation",
+   "of": [
+    "rain_curtain",
+    "blocks"
+   ],
+   "desc": "the suspended raindrops are above the concrete blocks",
+   "question": "Are the suspended raindrops above the concrete blocks?"
+  },
+  {
+   "id": "smoke_around_paws",
+   "type": "relation",
+   "of": [
+    "cat",
+    "blocks"
+   ],
+   "desc": "wisps of colored smoke curl around the cat's paws near the blocks",
+   "question": "Do wisps of colored smoke curl around the cat's paws near the blocks?"
+  },
+  {
+   "id": "no_rider",
+   "type": "absent",
+   "desc": "a rider on the bicycle",
+   "question": "Is there a rider on the bicycle?"
+  },
+  {
+   "id": "no_figure",
+   "type": "absent",
+   "desc": "a person sitting by the coffee cup",
+   "question": "Is there a person sitting by the coffee cup?"
+  },
+  {
+   "id": "pipe_overhead",
+   "type": "entity",
+   "class": "pipe",
+   "plural": "pipes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a suspended pipe overhead",
+   "question": "Is there a suspended pipe overhead?",
+   "box": [
+    400,
+    50,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "rain_from_pipe",
+   "type": "relation",
+   "of": [
+    "rain_curtain",
+    "pipe_overhead"
+   ],
+   "desc": "the suspended raindrops drip from the suspended pipe",
+   "question": "Do the suspended raindrops drip from the suspended pipe?"
+  },
+  {
+   "id": "spheres_shatter_on_blocks",
+   "type": "action",
+   "of": [
+    "rain_curtain",
+    "blocks"
+   ],
+   "desc": "some crystal spheres shatter when they make contact with the concrete blocks",
+   "question": "Do some of the crystal spheres shatter when they make contact with the concrete blocks?"
+  },
+  {
+   "id": "ivy",
+   "type": "entity",
+   "class": "ivy",
+   "plural": "ivy",
+   "count": 1,
+   "count_exact": true,
+   "desc": "ivy draping the pipes",
+   "question": "Is there ivy draping the pipes?",
+   "box": [
+    200,
+    50,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "pipes",
+   "type": "entity",
+   "class": "pipe",
+   "plural": "pipes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "pipes draped with ivy",
+   "question": "Are there pipes draped with ivy?",
+   "box": [
+    200,
+    50,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "river_haze",
+   "type": "entity",
+   "class": "haze",
+   "plural": "hazes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dreamlike haze rolling in from the river",
+   "question": "Is there a dreamlike haze rolling in from the river?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "bicycle_wheel_green",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a front wheel that was once vibrant green",
+   "question": "Does the bicycle have a front wheel that appears to have been vibrant green?"
+  },
+  {
+   "id": "cat_gaze_flitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's gaze flits between the coffee cup, the bike, and the orb",
+   "question": "Does the cat's gaze flit between the coffee cup, the bike, and the orb?"
+  },
+  {
+   "id": "spheres_reflect_alley",
+   "type": "attribute",
+   "of": "rain_curtain",
+   "desc": "the crystal spheres reflect the alley’s surreal geometry",
+   "question": "Do the crystal spheres reflect the alley’s surreal geometry?"
+  },
+  {
+   "id": "bricks_mirrors_lenses",
+   "type": "attribute",
+   "of": "wall",
+   "desc": "the bricks of the wall are embedded with mirrors and lenses",
+   "question": "Are the bricks of the wall embedded with mirrors and lenses?"
+  },
+  {
+   "id": "chime_light_pulse",
+   "type": "state",
+   "of": "chime",
+   "desc": "the wind chime releases a pulse of light",
+   "question": "Does the wind chime release a pulse of light?"
+  },
+  {
+   "id": "ivy_on_pipes",
+   "type": "relation",
+   "of": [
+    "ivy",
+    "pipes"
+   ],
+   "desc": "the ivy drapes the pipes",
+   "question": "Is the ivy draping the pipes?"
+  },
+  {
+   "id": "haze_from_river",
+   "type": "state",
+   "of": "river_haze",
+   "desc": "the haze rolls in from the river beyond",
+   "question": "Does the haze roll in from the river beyond?"
+  },
+  {
+   "id": "faint_figures",
+   "type": "entity",
+   "class": "figure",
+   "plural": "figures",
+   "count": 2,
+   "count_exact": false,
+   "desc": "faint figures flickering in the alley",
+   "question": "Are there faint figures flickering in the alley?",
+   "box": [
+    100,
+    100,
+    924,
+    924
+   ]
+  },
+  {
+   "id": "dumpster_behind_cat",
+   "type": "relation",
+   "of": [
+    "dumpster",
+    "cat"
+   ],
+   "desc": "the dumpster is behind the cat",
+   "question": "Is the dumpster behind the cat?"
+  },
+  {
+   "id": "bicycle_rust",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle frame is rusting in places",
+   "question": "Is the bicycle frame rusting in places?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wall",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "blocks",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "wall",
+   "to": "chime",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0447",
+ "prompt": "The alley is a slurry of memory and mystery, where the morning sun struggles to penetrate a lattice of ivy-draped pipes and the hazy breath of the city. The weathered bicycle, its frame rusting in places but still sturdy, leans against a graffiti-scarred brick wall as if waiting for a rider who might return from the dreamlike haze that rolls in from the river beyond. Its front wheel, once a vibrant green, wobbles slightly in the breeze, but not with randomness—its movement is synchronized with the rhythm of a ticking clock embedded into the wall beside it, the numbers shifting subtly as if time itself were a participant in the scene. Steam from the half-empty coffee cup, perched precariously on a stack of concrete blocks, curls upward in slow, deliberate spirals, as though tracing the paths of thoughts escaping from the mind of a figure that once sat there but has now vanished, leaving behind a lingering warmth that lingers on the blocks and in the air. A stray cat, sleek and silent, crouches at the edge of a dumpster that appears to be made of interlocking gears, each one humming with a faint metallic whir that matches the tempo of the bicycle’s wobble and the clock’s tick. The cat's tail flicks rhythmically, not in mere curiosity, but as if it understands the pulse of the scene, perhaps even conducting it with its gaze, which flits between the coffee cup, the bike, and a small, floating orb that hovers near the wall, reflecting and refracting the alley in a way that makes depth seem both infinite and collapsing at once. Behind the cat, the dumpster appears to spill into another dimension: a patchwork of other alleys, other cities, all layered like translucent parchment, shifting when the wind blows, revealing glimpses of identical bicycles, identical coffee cups, and identical cats, each performing the same ritual in a thousand mirrored realities. A curtain of rainwater, suspended midair and held together by an invisible force, drips lazily from a suspended pipe overhead, each drop freezing mid-fall and forming tiny crystal spheres that reflect the alley’s surreal geometry. Some of the spheres shatter softly when they make contact with the concrete blocks, releasing wisps of colored smoke that curl around the cat’s paws, transforming the fur briefly into shimmering silver before returning to black. The wall itself is not just covered in graffiti, but alive with it—symbols and letters shift and morph when unobserved, as if writing a message only to those who can pause, breathe, and listen to the alley’s quiet symphony. The bricks are embedded with mirrors and lenses, creating recursive reflections that trap the scene in an infinite loop of itself, each version slightly distorted, like a memory of a memory. A wind chime, made from bicycle parts and scrap metal, hangs near the top of the wall, its sound not just auditory but visual—each chime releases a pulse of light that dances across the alley like liquid, illuminating the cat’s eyes and the steam, momentarily revealing faint figures that flicker in and out of existence. The alley, though still and silent, feels alive, not in a conventional way, but in a way that makes you feel you’ve stepped between moments, between dreams, between versions of yourself, all existing in the same space, the same time, the same impossible yet coherent world.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 12,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 41,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

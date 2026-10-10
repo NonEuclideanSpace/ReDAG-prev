@@ -1,0 +1,430 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site with uneven ground, a half-built wall, and dirt",
+   "question": "Does the image show a construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "cord",
+   "type": "entity",
+   "class": "extension cord",
+   "plural": "extension cords",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled orange extension cord",
+   "question": "Is there a coiled orange extension cord?",
+   "box": [
+    300,
+    600,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in a blue vest",
+   "question": "Is there a foreman in a blue vest?",
+   "box": [
+    600,
+    250,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "blocks",
+   "type": "entity",
+   "class": "concrete block",
+   "plural": "concrete blocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of gray concrete blocks",
+   "question": "Is there a stack of gray concrete blocks?",
+   "box": [
+    800,
+    400,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black dog",
+   "question": "Is there a small black dog?",
+   "box": [
+    820,
+    650,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "engineer",
+   "plural": "engineers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an engineer in a white shirt",
+   "question": "Is there an engineer in a white shirt?",
+   "box": [
+    350,
+    200,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red toolbox",
+   "question": "Is there a red toolbox?",
+   "box": [
+    850,
+    800,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "wooden beam",
+   "plural": "wooden beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden beam",
+   "question": "Is there a wooden beam?",
+   "box": [
+    800,
+    850,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is standing",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "cord_lying",
+   "type": "relation",
+   "of": [
+    "cord",
+    "ground"
+   ],
+   "desc": "the coiled orange extension cord is lying on the ground",
+   "question": "Is the coiled orange extension cord lying on the ground?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman in the blue vest is pointing",
+   "question": "Is the foreman in the blue vest pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small black dog is sitting",
+   "question": "Is the small black dog sitting?"
+  },
+  {
+   "id": "engineer_holding_blueprints",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer in the white shirt holds rolled-up blueprints against her chest",
+   "question": "Is the engineer in the white shirt holding rolled-up blueprints against her chest?"
+  },
+  {
+   "id": "toolbox_lid_ajar",
+   "type": "state",
+   "of": "toolbox",
+   "desc": "the red toolbox has its lid slightly ajar",
+   "question": "Is the lid of the red toolbox slightly ajar?"
+  },
+  {
+   "id": "worker_left",
+   "type": "relation",
+   "of": [
+    "worker",
+    "cord"
+   ],
+   "desc": "the worker in the yellow hard hat is to the left of the coiled orange extension cord",
+   "question": "Is the worker in the yellow hard hat to the left of the coiled orange extension cord?"
+  },
+  {
+   "id": "cord_center",
+   "type": "relation",
+   "of": [
+    "cord",
+    "foreman"
+   ],
+   "desc": "the coiled orange extension cord is near the center, to the left of the foreman",
+   "question": "Is the coiled orange extension cord positioned between the worker and the foreman?"
+  },
+  {
+   "id": "foreman_points_blocks",
+   "type": "action",
+   "of": [
+    "foreman",
+    "blocks"
+   ],
+   "desc": "the foreman in the blue vest points toward the stack of gray concrete blocks",
+   "question": "Is the foreman in the blue vest pointing toward the stack of gray concrete blocks?"
+  },
+  {
+   "id": "dog_next_to_blocks",
+   "type": "relation",
+   "of": [
+    "dog",
+    "blocks"
+   ],
+   "desc": "the small black dog is next to the stack of gray concrete blocks",
+   "question": "Is the small black dog next to the stack of gray concrete blocks?"
+  },
+  {
+   "id": "engineer_looks_foreman",
+   "type": "action",
+   "of": [
+    "engineer",
+    "foreman"
+   ],
+   "desc": "the engineer in the white shirt looks at the foreman in the blue vest",
+   "question": "Is the engineer in the white shirt looking at the foreman in the blue vest?"
+  },
+  {
+   "id": "toolbox_on_beam",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "beam"
+   ],
+   "desc": "the red toolbox is perched atop the wooden beam",
+   "question": "Is the red toolbox perched atop the wooden beam?"
+  },
+  {
+   "id": "worker_hands_engineer",
+   "type": "action",
+   "of": [
+    "worker",
+    "engineer"
+   ],
+   "desc": "the worker in the yellow hard hat hands a silver wrench to the engineer in the white shirt",
+   "question": "Is the worker in the yellow hard hat handing a silver wrench to the engineer in the white shirt?"
+  },
+  {
+   "id": "foreman_looks_dog",
+   "type": "action",
+   "of": [
+    "foreman",
+    "dog"
+   ],
+   "desc": "the foreman in the blue vest looks at the small black dog",
+   "question": "Is the foreman in the blue vest looking at the small black dog?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery",
+   "question": "Is there any heavy machinery visible in the image?"
+  },
+  {
+   "id": "worker_firmly",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat stands firmly",
+   "question": "Is the worker in the yellow hard hat standing firmly?"
+  },
+  {
+   "id": "cord_loosely",
+   "type": "attribute",
+   "of": "cord",
+   "desc": "the coiled orange extension cord rests loosely",
+   "question": "Does the coiled orange extension cord rest loosely?"
+  },
+  {
+   "id": "foreman_decisively",
+   "type": "attribute",
+   "of": "foreman",
+   "desc": "the foreman in the blue vest points decisively",
+   "question": "Is the foreman in the blue vest pointing decisively?"
+  },
+  {
+   "id": "blocks_high",
+   "type": "attribute",
+   "of": "blocks",
+   "desc": "the stack of gray concrete blocks is piled high",
+   "question": "Is the stack of gray concrete blocks piled high?"
+  },
+  {
+   "id": "dog_patient",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small black dog sits patiently",
+   "question": "Is the small black dog sitting patiently?"
+  },
+  {
+   "id": "dog_alert_ears",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small black dog has alert ears",
+   "question": "Does the small black dog have alert ears?"
+  },
+  {
+   "id": "engineer_tight_blueprints",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer in the white shirt holds rolled-up blueprints tightly",
+   "question": "Is the engineer in the white shirt holding rolled-up blueprints tightly?"
+  },
+  {
+   "id": "toolbox_right",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "beam"
+   ],
+   "desc": "the red toolbox is perched atop the wooden beam in the foreground right",
+   "question": "Is the red toolbox perched atop the wooden beam in the foreground right?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-built wall",
+   "question": "Is there a half-built wall?",
+   "box": [
+    500,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "ground",
+   "type": "entity",
+   "class": "ground",
+   "plural": "grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "uneven dirt ground",
+   "question": "Is there uneven dirt ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "blocks_against_wall",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "wall"
+   ],
+   "desc": "the gray concrete blocks are piled against the half-built wall",
+   "question": "Are the gray concrete blocks piled against the half-built wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "beam",
+   "to": "toolbox",
+   "kind": "support"
+  },
+  {
+   "from": "ground",
+   "to": "cord",
+   "kind": "support"
+  },
+  {
+   "from": "ground",
+   "to": "worker",
+   "kind": "support"
+  },
+  {
+   "from": "ground",
+   "to": "blocks",
+   "kind": "support"
+  },
+  {
+   "from": "ground",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0060",
+ "prompt": "Rendered in a pencil sketch with light color wash, the scene captures a bustling construction site. On the left, a worker in a yellow hard hat stands firmly on uneven ground. Beside him, near the center, lies a coiled orange extension cord resting loosely on the dirt. To the right, a foreman in a blue vest points decisively toward a stack of gray concrete blocks piled high against a half-built wall. Next to these blocks, a small black dog sits patiently, watching the activity with alert ears. In the background, slightly to the left of center, an engineer in a white shirt holds rolled-up blueprints tightly against her chest while looking at the foreman. Perched atop a wooden beam in the foreground right is a red toolbox, its lid slightly ajar. The worker in the yellow hard hat is handing a silver wrench to the engineer in the white shirt, bridging the gap between them. The foreman in the blue vest is looking at the small black dog, creating a momentary pause in his instructions. There is no heavy machinery visible in this intimate snapshot of manual labor and coordination.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

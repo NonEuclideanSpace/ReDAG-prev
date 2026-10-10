@@ -1,0 +1,295 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image depict a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    380,
+    200,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "guest",
+   "type": "entity",
+   "class": "guest",
+   "plural": "guests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guest in a blue dress",
+   "question": "Is there a guest in a blue dress?",
+   "box": [
+    700,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    720,
+    400,
+    930,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    750,
+    800,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "round table",
+   "plural": "round tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a round table",
+   "question": "Is there a round table?",
+   "box": [
+    350,
+    100,
+    670,
+    350
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "multi-tiered cake",
+   "plural": "multi-tiered cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a multi-tiered cake",
+   "question": "Is there a multi-tiered cake?",
+   "box": [
+    450,
+    50,
+    570,
+    250
+   ]
+  },
+  {
+   "id": "slice",
+   "type": "entity",
+   "class": "slice of cake",
+   "plural": "slices of cake",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slice of cake",
+   "question": "Is there a slice of cake?",
+   "box": [
+    320,
+    400,
+    380,
+    450
+   ]
+  },
+  {
+   "id": "bouquet",
+   "type": "entity",
+   "class": "bouquet",
+   "plural": "bouquets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bouquet",
+   "question": "Is there a bouquet?",
+   "box": [
+    150,
+    500,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "bride_holding_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a bouquet",
+   "question": "Is the bride holding a bouquet?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom is smiling",
+   "question": "Is the groom smiling?"
+  },
+  {
+   "id": "groom_looking_at_bride",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom looks at the bride",
+   "question": "Is the groom looking at the bride?"
+  },
+  {
+   "id": "guest_sitting",
+   "type": "state",
+   "of": "guest",
+   "desc": "the guest is sitting",
+   "question": "Is the guest sitting?"
+  },
+  {
+   "id": "guest_on_chair",
+   "type": "relation",
+   "of": [
+    "guest",
+    "chair"
+   ],
+   "desc": "the guest sits on the wooden chair",
+   "question": "Is the guest sitting on the wooden chair?"
+  },
+  {
+   "id": "dog_next_to_guest",
+   "type": "relation",
+   "of": [
+    "dog",
+    "guest"
+   ],
+   "desc": "the dog is next to the guest",
+   "question": "Is the dog next to the guest?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog rests on the floor",
+   "question": "Is the dog resting on the floor?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the multi-tiered cake is on the round table",
+   "question": "Is the multi-tiered cake on the round table?"
+  },
+  {
+   "id": "bride_handing_slice",
+   "type": "action",
+   "of": [
+    "bride",
+    "groom"
+   ],
+   "desc": "the bride hands a slice of cake to the groom",
+   "question": "Is the bride handing a slice of cake to the groom?"
+  },
+  {
+   "id": "guest_pointing_at_dog",
+   "type": "action",
+   "of": [
+    "guest",
+    "dog"
+   ],
+   "desc": "the guest points at the dog",
+   "question": "Is the guest pointing at the dog?"
+  },
+  {
+   "id": "no_champagne",
+   "type": "absent",
+   "desc": "champagne bottle",
+   "question": "Is there a champagne bottle in the image?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown stands",
+   "question": "Is the bride in a white gown standing?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog rests",
+   "question": "Is the small brown dog resting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "guest",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0033",
+ "prompt": "This flat vector illustration depicts a wedding reception scene. On the left, a bride in a white gown stands holding a bouquet. In the center, a groom in a black tuxedo smiles while looking at the bride. To the right, a guest in a blue dress sits on a wooden chair. Next to the seated guest, a small brown dog rests on the floor. Above them, a round table holds a multi-tiered cake. The bride is handing a slice of cake to the groom. The guest in the blue dress is pointing at the dog. There is no champagne bottle visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5"
+ }
+}

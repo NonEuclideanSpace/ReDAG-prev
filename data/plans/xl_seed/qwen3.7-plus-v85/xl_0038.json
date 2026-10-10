@@ -1,0 +1,380 @@
+{
+ "style": "3D animated film still, vibrant colors, exaggerated proportions, bright lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a carpenter's workshop",
+   "question": "Does the image show a carpenter's workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "carpenter",
+   "type": "entity",
+   "class": "carpenter",
+   "plural": "carpenters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a burly man with a bushy beard",
+   "question": "Is there a burly man with a bushy beard?",
+   "box": [
+    350,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic assistant with shiny metal limbs",
+   "question": "Is there a robotic assistant with shiny metal limbs?",
+   "box": [
+    100,
+    250,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "plank",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden plank",
+   "question": "Is there a wooden plank?",
+   "box": [
+    300,
+    600,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "hammer",
+   "type": "entity",
+   "class": "hammer",
+   "plural": "hammers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hammer",
+   "question": "Is there a hammer?",
+   "box": [
+    550,
+    400,
+    650,
+    550
+   ]
+  },
+  {
+   "id": "nail",
+   "type": "entity",
+   "class": "nail",
+   "plural": "nails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nail",
+   "question": "Is there a nail?",
+   "box": [
+    566,
+    606,
+    614,
+    654
+   ]
+  },
+  {
+   "id": "lumber_stack",
+   "type": "entity",
+   "class": "lumber",
+   "plural": "pieces of lumber",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of lumber",
+   "question": "Is there a stack of lumber?",
+   "box": [
+    800,
+    300,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a parrot",
+   "question": "Is there a parrot?",
+   "box": [
+    100,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "sawhorse",
+   "type": "entity",
+   "class": "sawhorse",
+   "plural": "sawhorses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sawhorse",
+   "question": "Is there a sawhorse?",
+   "box": [
+    120,
+    800,
+    280,
+    980
+   ]
+  },
+  {
+   "id": "mouse",
+   "type": "entity",
+   "class": "mouse",
+   "plural": "mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mouse",
+   "question": "Is there a small mouse?",
+   "box": [
+    850,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toolbox",
+   "question": "Is there a toolbox?",
+   "box": [
+    820,
+    800,
+    980,
+    920
+   ]
+  },
+  {
+   "id": "carpenter_holding_hammer",
+   "type": "attribute",
+   "of": "carpenter",
+   "desc": "the burly man holds a hammer",
+   "question": "Is the burly man holding a hammer?"
+  },
+  {
+   "id": "robot_holding_plank",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robotic assistant holds the wooden plank",
+   "question": "Is the robotic assistant holding the wooden plank?"
+  },
+  {
+   "id": "carpenter_striking",
+   "type": "action",
+   "of": [
+    "carpenter",
+    "nail"
+   ],
+   "desc": "the burly man is poised to strike the nail with the hammer",
+   "question": "Is the burly man poised to strike the nail with the hammer?"
+  },
+  {
+   "id": "robot_left_carpenter",
+   "type": "relation",
+   "of": [
+    "robot",
+    "carpenter"
+   ],
+   "desc": "the robotic assistant is to the left of the burly man",
+   "question": "Is the robotic assistant to the left of the burly man?"
+  },
+  {
+   "id": "lumber_right",
+   "type": "relation",
+   "of": [
+    "lumber_stack",
+    "carpenter"
+   ],
+   "desc": "the stack of lumber is to the right of the burly man",
+   "question": "Is the stack of lumber to the right of the burly man?"
+  },
+  {
+   "id": "lumber_against_wall",
+   "type": "state",
+   "of": "lumber_stack",
+   "desc": "the stack of lumber leans against the wall",
+   "question": "Does the stack of lumber lean against the wall?"
+  },
+  {
+   "id": "parrot_on_sawhorse",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "sawhorse"
+   ],
+   "desc": "the parrot perches on the sawhorse",
+   "question": "Is the parrot perching on the sawhorse?"
+  },
+  {
+   "id": "mouse_behind_toolbox",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "toolbox"
+   ],
+   "desc": "the small mouse peeks out from behind the toolbox",
+   "question": "Is the small mouse peeking out from behind the toolbox?"
+  },
+  {
+   "id": "parrot_squawking",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot has its beak open as if squawking",
+   "question": "Does the parrot have its beak open as if squawking?"
+  },
+  {
+   "id": "carpenter_standing",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the burly man is standing",
+   "question": "Is the burly man standing?"
+  },
+  {
+   "id": "nail_in_plank",
+   "type": "relation",
+   "of": [
+    "nail",
+    "plank"
+   ],
+   "desc": "the nail is in the wooden plank",
+   "question": "Is the nail in the wooden plank?"
+  },
+  {
+   "id": "pegboard",
+   "type": "entity",
+   "class": "pegboard",
+   "plural": "pegboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pegboard with tools hanging on it",
+   "question": "Is there a pegboard with tools hanging on it?",
+   "box": [
+    50,
+    50,
+    974,
+    300
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window revealing a sunny sky",
+   "question": "Is there a large window revealing a sunny sky?",
+   "box": [
+    200,
+    50,
+    824,
+    250
+   ]
+  },
+  {
+   "id": "carpenter_apron",
+   "type": "attribute",
+   "of": "carpenter",
+   "desc": "the burly man wears a leather apron",
+   "question": "Does the burly man wear a leather apron?"
+  },
+  {
+   "id": "robot_eyes",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robotic assistant has glowing blue eyes",
+   "question": "Does the robotic assistant have glowing blue eyes?"
+  },
+  {
+   "id": "lumber_colors",
+   "type": "attribute",
+   "of": "lumber_stack",
+   "desc": "the stack of lumber features varying shades of brown and beige",
+   "question": "Does the stack of lumber feature varying shades of brown and beige?"
+  },
+  {
+   "id": "parrot_wings",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot has its wings spread",
+   "question": "Does the parrot have its wings spread?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "sawhorse",
+   "to": "parrot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "lumber_stack",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "pegboard",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "window",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0038",
+ "prompt": "This 3D animated film still showcases a vibrant carpenter's workshop with exaggerated proportions and bright colors. In the center, a burly carpenter with a bushy beard wears a leather apron and holds a hammer, poised to strike a nail into a wooden plank. To his left, a robotic assistant with shiny metal limbs holds the plank steady, its eyes glowing blue. On the right, a stack of lumber leans against the wall, featuring varying shades of brown and beige. A parrot perches on a sawhorse in the foreground, squawking loudly with its wings spread. Behind them, a large window reveals a sunny sky, casting sharp, stylized shadows across the floor. Tools like saws, drills, and sanders hang neatly on a pegboard in the background. A small mouse peeks out from behind a toolbox in the lower right corner, adding a whimsical touch. The lighting is bright and cheerful, emphasizing the smooth textures of the wood and metal. The interaction between the carpenter and the robot highlights a blend of traditional craft and futuristic technology. The composition is dynamic, with diagonal lines created by the tools and lumber leading the eye toward the central action, capturing a moment of focused creativity in a playful, animated world.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

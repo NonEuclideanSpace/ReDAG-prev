@@ -1,0 +1,305 @@
+{
+ "style": "photorealistic photo, night scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party at night",
+   "question": "Does the image show a rooftop party at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    380,
+    220,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    500,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    680,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    850,
+    450,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "silver lantern",
+   "plural": "silver lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver lantern",
+   "question": "Is there a silver lantern?",
+   "box": [
+    750,
+    350,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "small table",
+   "plural": "small tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    720,
+    450,
+    880,
+    600
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a glass",
+   "question": "Is the woman in a blue dress holding a glass?"
+  },
+  {
+   "id": "woman_napkin",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a napkin",
+   "question": "Is the woman in a blue dress holding a napkin?"
+  },
+  {
+   "id": "man_gesture",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf gestures",
+   "question": "Is the man in a red scarf gesturing?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf is looking at the woman",
+   "question": "Is the man in a red scarf looking at the woman in the blue dress?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "relation",
+   "of": [
+    "child",
+    "skyline"
+   ],
+   "desc": "the child in a yellow hat points toward the city skyline",
+   "question": "Is the child in a yellow hat pointing toward the city skyline?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is sitting",
+   "question": "Is the child in a yellow hat sitting?"
+  },
+  {
+   "id": "lantern_glowing",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the silver lantern glows softly",
+   "question": "Is the silver lantern glowing softly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress hands a napkin to the man in a red scarf",
+   "question": "Is the woman in a blue dress handing a napkin to the man in a red scarf?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the brown dog sits on the wooden bench",
+   "question": "Is the brown dog sitting on the wooden bench?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a yellow hat is next to the brown dog",
+   "question": "Is the child in a yellow hat next to the brown dog?"
+  },
+  {
+   "id": "lantern_on_table",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "table"
+   ],
+   "desc": "the silver lantern is on the small table",
+   "question": "Is the silver lantern on the small table?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "skyline",
+   "type": "entity",
+   "class": "city skyline",
+   "plural": "city skylines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a city skyline",
+   "question": "Is there a city skyline?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "man_right_hand",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf uses his right hand",
+   "question": "Is the man in a red scarf using his right hand to gesture?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "lantern",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0012",
+ "prompt": "A photorealistic photo captures a rooftop party at night. On the left, a woman in a blue dress stands holding a glass. In the center, a man in a red scarf gestures with his right hand while looking at her. To the right, a brown dog sits calmly on a wooden bench. Next to the dog, a child in a yellow hat points toward the city skyline. Behind them, a silver lantern glows softly on a small table. The woman is handing a napkin to the man in the red scarf. The child in the yellow hat is sitting next to the brown dog. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

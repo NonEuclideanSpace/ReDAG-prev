@@ -1,0 +1,293 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theatre backstage area",
+   "question": "Does the image show a theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "floor",
+   "plural": "floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the backstage floor",
+   "question": "Is there a floor visible in the backstage area?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    250,
+    650,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging spotlight",
+   "question": "Is there a hanging spotlight?",
+   "box": [
+    700,
+    50,
+    900,
+    250
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    150,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "woman_blue_dress",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue dress",
+   "question": "Is there a woman wearing a blue dress?",
+   "box": [
+    280,
+    200,
+    480,
+    800
+   ]
+  },
+  {
+   "id": "dog_brown",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    450,
+    650,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "technician_black_vest",
+   "type": "entity",
+   "class": "technician",
+   "plural": "technicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a technician wearing a black vest",
+   "question": "Is there a technician wearing a black vest?",
+   "box": [
+    700,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "actor_gold_tunic",
+   "type": "entity",
+   "class": "actor",
+   "plural": "actors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an actor wearing a gold tunic",
+   "question": "Is there an actor wearing a gold tunic?",
+   "box": [
+    850,
+    250,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf holds a clipboard",
+   "question": "Is the man wearing a red scarf holding a clipboard?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue_dress",
+   "desc": "the woman wearing a blue dress is sitting",
+   "question": "Is the woman wearing a blue dress sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman_blue_dress",
+    "man_red_scarf"
+   ],
+   "desc": "the woman wearing a blue dress is looking at the man wearing a red scarf",
+   "question": "Is the woman wearing a blue dress looking at the man wearing a red scarf?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog_brown",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "dog_head_raised",
+   "type": "state",
+   "of": "dog_brown",
+   "desc": "the brown dog has its head raised",
+   "question": "Does the brown dog have its head raised?"
+  },
+  {
+   "id": "technician_pointing",
+   "type": "action",
+   "of": [
+    "technician_black_vest",
+    "spotlight"
+   ],
+   "desc": "the technician wearing a black vest points at the hanging spotlight",
+   "question": "Is the technician wearing a black vest pointing at the hanging spotlight?"
+  },
+  {
+   "id": "actor_handing_script",
+   "type": "action",
+   "of": [
+    "actor_gold_tunic",
+    "woman_blue_dress"
+   ],
+   "desc": "the actor wearing a gold tunic hands a script to the woman wearing a blue dress",
+   "question": "Is the actor wearing a gold tunic handing a script to the woman wearing a blue dress?"
+  },
+  {
+   "id": "man_left",
+   "type": "relation",
+   "of": [
+    "man_red_scarf",
+    "woman_blue_dress"
+   ],
+   "desc": "the man wearing a red scarf is next to the woman wearing a blue dress",
+   "question": "Is the man wearing a red scarf next to the woman wearing a blue dress?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman_blue_dress",
+    "crate"
+   ],
+   "desc": "the woman wearing a blue dress sits on the wooden crate",
+   "question": "Is the woman wearing a blue dress sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "relation",
+   "of": [
+    "dog_brown",
+    "floor"
+   ],
+   "desc": "the brown dog lies on the floor",
+   "question": "Is the brown dog lying on the floor?"
+  },
+  {
+   "id": "technician_right_of_dog",
+   "type": "relation",
+   "of": [
+    "technician_black_vest",
+    "dog_brown"
+   ],
+   "desc": "the technician wearing a black vest is to the right of the brown dog",
+   "question": "Is the technician wearing a black vest to the right of the brown dog?"
+  },
+  {
+   "id": "actor_beside_technician",
+   "type": "relation",
+   "of": [
+    "actor_gold_tunic",
+    "technician_black_vest"
+   ],
+   "desc": "the actor wearing a gold tunic is beside the technician wearing a black vest",
+   "question": "Is the actor wearing a gold tunic beside the technician wearing a black vest?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the background?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf is standing",
+   "question": "Is the man wearing a red scarf standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman_blue_dress",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "dog_brown",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0080",
+ "prompt": "In a photorealistic photo set in a theatre backstage, a man in a red scarf stands on the left holding a clipboard. Next to him, a woman in a blue dress sits on a wooden crate, looking at the man in the red scarf. In the center, a brown dog lies on the floor with its head raised. To the right of the dog, a technician in a black vest points at a hanging spotlight above. Beside the technician, an actor in a gold tunic hands a script to the woman in the blue dress. The scene captures these five distinct entities clearly. There is no audience visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

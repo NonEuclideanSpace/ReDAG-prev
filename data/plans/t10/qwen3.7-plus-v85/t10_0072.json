@@ -1,0 +1,357 @@
+{
+ "style": "oil painting with thick impasto strokes, weathered textures, heavy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with wooden planks and industrial elements",
+   "question": "Does the image show a shipyard dock with wooden planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    260,
+    500,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "woman_blue_overalls",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    400,
+    350,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "crane_base",
+   "type": "entity",
+   "class": "crane base",
+   "plural": "crane bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted crane base",
+   "question": "Is there a rusted crane base?",
+   "box": [
+    550,
+    400,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of gray crates",
+   "question": "Is there a stack of gray crates?",
+   "box": [
+    620,
+    550,
+    780,
+    850
+   ]
+  },
+  {
+   "id": "boy_yellow_cap",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a yellow cap",
+   "question": "Is there a boy wearing a yellow cap?",
+   "box": [
+    750,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "rope",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose rope trailing across the ground",
+   "question": "Is there a loose rope trailing across the ground?",
+   "box": [
+    700,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "sailor_striped_shirt",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old sailor in a striped shirt",
+   "question": "Is there an old sailor in a striped shirt?",
+   "box": [
+    800,
+    300,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf stands firmly",
+   "question": "Is the man in a red scarf standing firmly?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf is pointing toward the horizon",
+   "question": "Is the man wearing a red scarf pointing toward the horizon?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits patiently",
+   "question": "Is the brown dog sitting patiently?"
+  },
+  {
+   "id": "dog_looking_at_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man_red_scarf"
+   ],
+   "desc": "the brown dog is looking at the man's gesture with attentive curiosity",
+   "question": "Is the brown dog looking at the man's gesture with attentive curiosity?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "relation",
+   "of": [
+    "woman_blue_overalls",
+    "crane_base"
+   ],
+   "desc": "the woman in blue overalls is leaning against the crane base",
+   "question": "Is the woman in blue overalls leaning against the crane base?"
+  },
+  {
+   "id": "woman_arms_crossed",
+   "type": "state",
+   "of": "woman_blue_overalls",
+   "desc": "the woman in blue overalls has her arms crossed tightly over her chest",
+   "question": "Does the woman in blue overalls have her arms crossed tightly over her chest?"
+  },
+  {
+   "id": "woman_observing",
+   "type": "state",
+   "of": "woman_blue_overalls",
+   "desc": "the woman in blue overalls is observing the activity nearby",
+   "question": "Is the woman in blue overalls observing the activity nearby?"
+  },
+  {
+   "id": "boy_crouching",
+   "type": "state",
+   "of": "boy_yellow_cap",
+   "desc": "the boy wearing a yellow cap is crouching low",
+   "question": "Is the boy wearing a yellow cap crouching low?"
+  },
+  {
+   "id": "boy_examining_rope",
+   "type": "state",
+   "of": "boy_yellow_cap",
+   "desc": "the boy wearing a yellow cap is examining the loose rope",
+   "question": "Is the boy wearing a yellow cap examining the loose rope?"
+  },
+  {
+   "id": "sailor_watching_boy",
+   "type": "state",
+   "of": "sailor_striped_shirt",
+   "desc": "the old sailor in a striped shirt is watching the child closely",
+   "question": "Is the old sailor in a striped shirt watching the child closely?"
+  },
+  {
+   "id": "sailor_hands_on_hips",
+   "type": "state",
+   "of": "sailor_striped_shirt",
+   "desc": "the old sailor in a striped shirt has his hands resting on his hips",
+   "question": "Does the old sailor in a striped shirt have his hands resting on his hips?"
+  },
+  {
+   "id": "man_beside_dog",
+   "type": "relation",
+   "of": [
+    "man_red_scarf",
+    "dog"
+   ],
+   "desc": "the brown dog is beside the man wearing a red scarf",
+   "question": "Is the brown dog beside the man wearing a red scarf?"
+  },
+  {
+   "id": "woman_next_to_crates",
+   "type": "relation",
+   "of": [
+    "woman_blue_overalls",
+    "crates"
+   ],
+   "desc": "the stack of gray crates is next to the woman in blue overalls",
+   "question": "Is the stack of gray crates next to the woman in blue overalls?"
+  },
+  {
+   "id": "sailor_behind_boy",
+   "type": "relation",
+   "of": [
+    "sailor_striped_shirt",
+    "boy_yellow_cap"
+   ],
+   "desc": "the old sailor in a striped shirt is behind the boy wearing a yellow cap",
+   "question": "Is the old sailor in a striped shirt behind the boy wearing a yellow cap?"
+  },
+  {
+   "id": "woman_glancing_at_sailor",
+   "type": "relation",
+   "of": [
+    "woman_blue_overalls",
+    "sailor_striped_shirt"
+   ],
+   "desc": "the woman in blue overalls exchanges glances with the old sailor in a striped shirt",
+   "question": "Is the woman in blue overalls exchanging glances with the old sailor in a striped shirt?"
+  },
+  {
+   "id": "no_modern_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Are there any modern machinery visible in the image?"
+  },
+  {
+   "id": "man_gloved_hand",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf has a gloved hand",
+   "question": "Does the man wearing a red scarf have a gloved hand?"
+  },
+  {
+   "id": "man_gloves",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf wears gloves",
+   "question": "Does the man in a red scarf wear gloves?"
+  },
+  {
+   "id": "crates_condition",
+   "type": "attribute",
+   "of": "crates",
+   "desc": "the stack of gray crates shows signs of wear and salt corrosion",
+   "question": "Do the gray crates show signs of wear and salt corrosion?"
+  },
+  {
+   "id": "man_posture",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf has a rigid posture",
+   "question": "Does the man in a red scarf have a rigid posture?"
+  },
+  {
+   "id": "dog_ears",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog has its ears perked up",
+   "question": "Are the brown dog's ears perked up?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crane_base",
+   "to": "woman_blue_overalls",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crates",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0072",
+ "prompt": "Rendered in the style of an oil painting, this scene captures a bustling shipyard dock where thick impasto strokes define the weathered textures of wood and iron. On the left, a man in a red scarf stands firmly on the planks, his posture rigid as he points toward the horizon with a gloved hand. Beside him, a brown dog sits patiently, its ears perked up while looking at the man’s gesture with attentive curiosity. In the center, a woman in blue overalls leans against a rusted crane base, her arms crossed tightly over her chest as she observes the activity nearby. Next to her, a stack of gray crates rests precariously, showing signs of wear and salt corrosion. To the right, a boy in a yellow cap crouches low, examining a loose rope that trails across the damp ground. Behind the boy, an old sailor in a striped shirt watches the child closely, his hands resting on his hips in a stance of quiet supervision. The interaction between the man in the red scarf and the brown dog is clear through the shared direction of their focus, while the woman in blue overalls appears engaged in a silent exchange of glances with the old sailor in the striped shirt. The heavy atmosphere suggests impending rain, yet the figures remain distinct amidst the industrial clutter. There is no modern machinery visible in this timeless tableau, ensuring the historical integrity of the maritime setting remains undisturbed by contemporary elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "man_pointing_horizon",
+     "man_pointing"
+    ]
+   ]
+  }
+ }
+}

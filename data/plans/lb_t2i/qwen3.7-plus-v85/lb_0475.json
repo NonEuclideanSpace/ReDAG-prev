@@ -1,0 +1,487 @@
+{
+ "style": "surreal cinematic photography, high contrast, moody lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wet racetrack with a spiraling geometry vanishing into fog, under translucent tarps",
+   "question": "Does the image show a wet racetrack with spiraling geometry vanishing into fog, under translucent tarps?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "f1_car",
+   "type": "entity",
+   "class": "formula 1 car",
+   "plural": "formula 1 cars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage red Formula 1 car with chrome details",
+   "question": "Is there a vintage red Formula 1 car with chrome details?",
+   "box": [
+    200,
+    400,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "mechanic_1",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in a neon-yellow rain slicker",
+   "question": "Is there a mechanic in a neon-yellow rain slicker?",
+   "box": [
+    750,
+    350,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "mechanic_2",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older shadowy mechanic",
+   "question": "Is there an older shadowy mechanic?",
+   "box": [
+    780,
+    380,
+    920,
+    750
+   ]
+  },
+  {
+   "id": "tire_stack",
+   "type": "entity",
+   "class": "racing tire",
+   "plural": "racing tires",
+   "count": 4,
+   "count_exact": false,
+   "desc": "a stack of black racing tires",
+   "question": "Is there a stack of black racing tires?",
+   "box": [
+    50,
+    600,
+    200,
+    900
+   ]
+  },
+  {
+   "id": "cone",
+   "type": "entity",
+   "class": "caution cone",
+   "plural": "caution cones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wobbly yellow caution cone",
+   "question": "Is there a wobbly yellow caution cone?",
+   "box": [
+    180,
+    650,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "tire_iron",
+   "type": "entity",
+   "class": "tire iron",
+   "plural": "tire irons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tire iron",
+   "question": "Is there a tire iron?",
+   "box": [
+    300,
+    850,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "drone",
+   "type": "entity",
+   "class": "drone",
+   "plural": "drones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small drone with a blinking red light",
+   "question": "Is there a small drone with a blinking red light?",
+   "box": [
+    450,
+    300,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "floodlight",
+   "type": "entity",
+   "class": "floodlight",
+   "plural": "floodlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single portable floodlight",
+   "question": "Is there a single portable floodlight?",
+   "box": [
+    100,
+    100,
+    200,
+    300
+   ]
+  },
+  {
+   "id": "mirrors",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 3,
+   "count_exact": false,
+   "desc": "mirrors embedded in the track surface",
+   "question": "Are there mirrors embedded in the track surface?",
+   "box": [
+    300,
+    750,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tool",
+   "plural": "tools",
+   "count": 3,
+   "count_exact": false,
+   "desc": "floating tools",
+   "question": "Are there tools levitating in the air?",
+   "box": [
+    800,
+    200,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "car_rain",
+   "type": "state",
+   "of": "f1_car",
+   "desc": "rain cascading down the windscreen of the car",
+   "question": "Is rain cascading down the windscreen of the car?"
+  },
+  {
+   "id": "car_chrome",
+   "type": "state",
+   "of": "f1_car",
+   "desc": "chrome details glinting on the car",
+   "question": "Are the chrome details on the car glinting?"
+  },
+  {
+   "id": "car_tires_spinning",
+   "type": "state",
+   "of": "f1_car",
+   "desc": "rear tires of the car spinning idly",
+   "question": "Are the rear tires of the car spinning idly?"
+  },
+  {
+   "id": "mechanic_1_crouching",
+   "type": "state",
+   "of": "mechanic_1",
+   "desc": "the mechanic in the neon-yellow slicker crouching low",
+   "question": "Is the mechanic in the neon-yellow slicker crouching low?"
+  },
+  {
+   "id": "mechanic_1_shielding",
+   "type": "state",
+   "of": "mechanic_1",
+   "desc": "the mechanic shields his eyes with one hand",
+   "question": "Is the mechanic shielding his eyes with one hand?"
+  },
+  {
+   "id": "wire_pulsing",
+   "type": "attribute",
+   "of": "mechanic_1",
+   "desc": "a wire pulsing with static electricity held by the mechanic",
+   "question": "Is the wire held by the mechanic pulsing with static electricity?"
+  },
+  {
+   "id": "mechanic_2_translucent",
+   "type": "state",
+   "of": "mechanic_1",
+   "desc": "the neon-yellow slicker appearing translucent to reveal the shadowy figure",
+   "question": "Does the neon-yellow slicker appear translucent, revealing a shadowy figure beneath?"
+  },
+  {
+   "id": "mechanic_2_watching",
+   "type": "state",
+   "of": "mechanic_2",
+   "desc": "the shadowy mechanic watching silently",
+   "question": "Is the shadowy mechanic watching silently?"
+  },
+  {
+   "id": "tire_stack_leaning",
+   "type": "state",
+   "of": "tire_stack",
+   "desc": "the stack of tires leaning",
+   "question": "Is the stack of tires leaning?"
+  },
+  {
+   "id": "tire_iron_rotating",
+   "type": "state",
+   "of": "tire_iron",
+   "desc": "the tire iron rotating slowly on the ground",
+   "question": "Is the tire iron rotating slowly on the ground?"
+  },
+  {
+   "id": "drone_hovering",
+   "type": "state",
+   "of": "drone",
+   "desc": "the drone hovering near the car's engine bay",
+   "question": "Is the drone hovering near the car's engine bay?"
+  },
+  {
+   "id": "mirror_reflections",
+   "type": "attribute",
+   "of": "mirrors",
+   "desc": "mirrors reflecting different eras of racing including vintage cars and hovercraft",
+   "question": "Do the mirrors reflect different eras of racing, including vintage cars and hovercraft?"
+  },
+  {
+   "id": "mechanic_1_beside_car",
+   "type": "relation",
+   "of": [
+    "mechanic_1",
+    "f1_car"
+   ],
+   "desc": "the mechanic in the neon-yellow slicker is beside the car",
+   "question": "Is the mechanic in the neon-yellow slicker beside the car?"
+  },
+  {
+   "id": "tire_stack_against_cone",
+   "type": "relation",
+   "of": [
+    "tire_stack",
+    "cone"
+   ],
+   "desc": "the stack of tires leans against the yellow caution cone",
+   "question": "Does the stack of tires lean against the yellow caution cone?"
+  },
+  {
+   "id": "drone_near_engine",
+   "type": "relation",
+   "of": [
+    "drone",
+    "f1_car"
+   ],
+   "desc": "the drone is near the car's open engine bay",
+   "question": "Is the drone near the car's open engine bay?"
+  },
+  {
+   "id": "tools_near_mechanic_2",
+   "type": "relation",
+   "of": [
+    "tools",
+    "mechanic_2"
+   ],
+   "desc": "the tools are levitating before the shadowy mechanic",
+   "question": "Are the tools levitating before the shadowy mechanic?"
+  },
+  {
+   "id": "puddle_reflection",
+   "type": "attribute",
+   "of": "f1_car",
+   "desc": "a puddle near the car reflecting a desert racetrack under a blood-red sun",
+   "question": "Is there a puddle near the car reflecting a desert racetrack under a blood-red sun?"
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock ticking backwards",
+   "question": "Is there a clock ticking backwards?",
+   "box": [
+    50,
+    50,
+    150,
+    150
+   ]
+  },
+  {
+   "id": "wire",
+   "type": "entity",
+   "class": "wire",
+   "plural": "wires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wire",
+   "question": "Is there a wire?",
+   "box": [
+    450,
+    600,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle on the track",
+   "question": "Is there a puddle on the track?",
+   "box": [
+    200,
+    800,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "mechanic_1_translucent",
+   "type": "state",
+   "of": "mechanic_1",
+   "desc": "the neon-yellow rain slicker of the mechanic appearing translucent",
+   "question": "Does the neon-yellow rain slicker of the mechanic appear translucent?"
+  },
+  {
+   "id": "tools_levitating",
+   "type": "state",
+   "of": "tools",
+   "desc": "the tools levitating in the air",
+   "question": "Are the tools levitating in the air?"
+  },
+  {
+   "id": "tire_iron_on_ground",
+   "type": "state",
+   "of": "tire_iron",
+   "desc": "the tire iron is on the ground",
+   "question": "Is the tire iron on the ground?"
+  },
+  {
+   "id": "tire_iron_magnetic_pull",
+   "type": "state",
+   "of": "tire_iron",
+   "desc": "the tire iron rotating slowly on its own due to magnetic pull",
+   "question": "Is the tire iron rotating slowly on its own?"
+  },
+  {
+   "id": "puddle_reflection_desert",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflecting a desert racetrack under a blood-red sun",
+   "question": "Does the puddle reflect a desert racetrack under a blood-red sun?"
+  },
+  {
+   "id": "mechanic_1_straightening",
+   "type": "state",
+   "of": "mechanic_1",
+   "desc": "the mechanic in the neon-yellow slicker straightening up",
+   "question": "Is the mechanic in the neon-yellow slicker straightening up?"
+  },
+  {
+   "id": "wire_secured",
+   "type": "state",
+   "of": "wire",
+   "desc": "the wire secured by the mechanic",
+   "question": "Is the wire secured?"
+  },
+  {
+   "id": "tires_have_treads",
+   "type": "attribute",
+   "of": "tire_stack",
+   "desc": "the tires have treads",
+   "question": "Do the tires in the stack have visible treads?"
+  },
+  {
+   "id": "mechanic_1_gloves",
+   "type": "attribute",
+   "of": "mechanic_1",
+   "desc": "the mechanic wears gloves",
+   "question": "Is the mechanic wearing gloves?"
+  },
+  {
+   "id": "mechanic_1_twisting",
+   "type": "action",
+   "of": [
+    "mechanic_1",
+    "wire"
+   ],
+   "desc": "the mechanic twists the wire",
+   "question": "Is the mechanic twisting the wire?"
+  },
+  {
+   "id": "wire_static",
+   "type": "state",
+   "of": "wire",
+   "desc": "the wire pulses with static electricity",
+   "question": "Does the wire pulse with static electricity?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "f1_car",
+   "to": "tire_iron",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cone",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tire_stack",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0475",
+ "prompt": "Rain cascaded in slow, almost syrupy rivulets down the windscreen of the vintage red Formula 1 car, its chrome details glinting under the flickering glow of a single portable floodlight. The engine purred softly, a low, vibrating hum that seemed more mechanical purr than roar, as if the car were alive and merely breathing. Its rear tires spun idly in the puddled track, sending arcs of oily water skittering into the air before collapsing back into the asphalt. Beside it, the mechanic in a neon-yellow rain slicker crouched low, one gloved hand shielding his eyes from the glare as the other deftly twisted a wire that pulsed faintly with static electricity, as though resisting his touch. Nearby, a stack of black racing tires leaned against a wobbly yellow caution cone like a group of conspirators whispering in a language of rubber and tension, their treads still warm from the grip of some unseen force or recent motion. The cone itself trembled slightly, as if reacting to the subtle tremors rippling through the ground from a distant engine growling over the drizzle, its echo warping the air like heat rising from tarmac on a summer’s day. Overhead, a canopy of translucent tarps billowed and snapped in the wind, some torn at the edges, letting in shafts of cold, silvery light that bent strangely as they pierced the mist. In the distance, the track curved impossibly, its geometry defying perspective, looping back on itself in a spiral that vanished into a swirling fog of rain and vapor. A tire iron, left carelessly on the ground, began to rotate slowly on its own, drawn by the faint magnetic pull of the engine’s idle hum, while a puddle nearby reflected not the car, but a completely different scene: a desert racetrack under a blood-red sun. The floodlight flickered again, and for a heartbeat, the yellow rain slicker of the mechanic appeared translucent, revealing a shadowy figure beneath—another mechanic, older, watching silently from the periphery, his tools levitating in the air before him. Above, the floodlight’s beam stretched out like a spotlight in a stage play, illuminating a series of mirrors embedded in the track itself, each one reflecting a different era of racing—vintage cars with wooden frames, futuristic hovercraft, and one image that flickered between the two, as if time itself were folding. A small drone hovered near the car’s open engine bay, its camera lens focused on the wire being adjusted, its red light blinking in sync with the car’s engine. Somewhere, a clock ticked backwards, the seconds unwinding the tension in the air, the track itself beginning to contract, the rain turning to steam, the scene dissolving into an eerie stillness just as the mechanic straightened, wire now secured, and a new engine roared to life in the distance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 52,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 2,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 4,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

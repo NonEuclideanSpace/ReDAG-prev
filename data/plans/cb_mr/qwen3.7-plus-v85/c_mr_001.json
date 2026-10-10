@@ -1,0 +1,524 @@
+{
+ "style": "photorealistic kitchen scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen",
+   "question": "Does the image show a kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old, worn wooden counter",
+   "question": "Is there a wooden counter?",
+   "box": [
+    0,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an experienced chef wearing a white hat",
+   "question": "Is there an experienced chef wearing a white hat?",
+   "box": [
+    300,
+    100,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "cutting_board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cutting board",
+   "question": "Is there a cutting board?",
+   "box": [
+    400,
+    520,
+    600,
+    620
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "gas stove",
+   "plural": "gas stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gas stove",
+   "question": "Is there a gas stove?",
+   "box": [
+    750,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny, new red pot",
+   "question": "Is there a red pot?",
+   "box": [
+    780,
+    450,
+    920,
+    580
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    350,
+    750,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three apples",
+   "question": "Are there exactly three apples?",
+   "box": [
+    200,
+    530,
+    350,
+    630
+   ]
+  },
+  {
+   "id": "carrots_group",
+   "type": "entity",
+   "class": "carrot",
+   "plural": "carrots",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a group of six carrots",
+   "question": "Are there exactly six carrots?",
+   "box": [
+    620,
+    530,
+    720,
+    630
+   ]
+  },
+  {
+   "id": "onions",
+   "type": "entity",
+   "class": "onion",
+   "plural": "onions",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two onions",
+   "question": "Are there exactly two onions?",
+   "box": [
+    100,
+    530,
+    180,
+    610
+   ]
+  },
+  {
+   "id": "recipe_book",
+   "type": "entity",
+   "class": "recipe book",
+   "plural": "recipe books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick recipe book",
+   "question": "Is there a thick recipe book?",
+   "box": [
+    300,
+    540,
+    380,
+    600
+   ]
+  },
+  {
+   "id": "salt_shaker",
+   "type": "entity",
+   "class": "salt shaker",
+   "plural": "salt shakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a salt shaker",
+   "question": "Is there a salt shaker?",
+   "box": [
+    386,
+    540,
+    434,
+    600
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "kitchen towel",
+   "plural": "kitchen towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kitchen towel",
+   "question": "Is there a kitchen towel?",
+   "box": [
+    800,
+    200,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "wooden spoon",
+   "plural": "wooden spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden spoon",
+   "question": "Is there a wooden spoon?",
+   "box": [
+    800,
+    480,
+    880,
+    550
+   ]
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "recipe_book",
+   "desc": "the recipe book is lying open",
+   "question": "Is the recipe book lying open?"
+  },
+  {
+   "id": "chef_behind_counter",
+   "type": "relation",
+   "of": [
+    "chef",
+    "counter"
+   ],
+   "desc": "the chef stands behind the counter",
+   "question": "Is the chef standing behind the counter?"
+  },
+  {
+   "id": "chef_holding_knife",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a large knife",
+   "question": "Is the chef holding a large knife?"
+  },
+  {
+   "id": "chef_cutting",
+   "type": "action",
+   "of": [
+    "chef",
+    "carrots_group"
+   ],
+   "desc": "the chef cuts the carrots",
+   "question": "Is the chef cutting the carrots?"
+  },
+  {
+   "id": "pot_on_stove",
+   "type": "relation",
+   "of": [
+    "pot",
+    "stove"
+   ],
+   "desc": "the pot sits on top of the stove",
+   "question": "Is the pot sitting on top of the stove?"
+  },
+  {
+   "id": "stove_next_to_counter",
+   "type": "relation",
+   "of": [
+    "stove",
+    "counter"
+   ],
+   "desc": "the stove is next to the counter",
+   "question": "Is the stove next to the counter?"
+  },
+  {
+   "id": "cat_under_counter",
+   "type": "relation",
+   "of": [
+    "cat",
+    "counter"
+   ],
+   "desc": "the cat is under the counter",
+   "question": "Is the cat under the counter?"
+  },
+  {
+   "id": "cat_facing_chef",
+   "type": "relation",
+   "of": [
+    "cat",
+    "chef"
+   ],
+   "desc": "the cat faces the chef",
+   "question": "Is the cat facing the chef?"
+  },
+  {
+   "id": "apples_in_front_of_board",
+   "type": "relation",
+   "of": [
+    "apples",
+    "cutting_board"
+   ],
+   "desc": "the apples are arranged in front of the cutting board",
+   "question": "Are the apples arranged in front of the cutting board?"
+  },
+  {
+   "id": "carrots_on_counter",
+   "type": "relation",
+   "of": [
+    "carrots_group",
+    "counter"
+   ],
+   "desc": "the carrots are on the counter",
+   "question": "Are the carrots on the counter?"
+  },
+  {
+   "id": "spoon_in_pot",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "pot"
+   ],
+   "desc": "the wooden spoon is inside the red pot",
+   "question": "Is the wooden spoon inside the red pot?"
+  },
+  {
+   "id": "chef_pointing_at_book",
+   "type": "action",
+   "of": [
+    "chef",
+    "recipe_book"
+   ],
+   "desc": "the chef points at the recipe book",
+   "question": "Is the chef pointing at the recipe book?"
+  },
+  {
+   "id": "book_between_apples_and_board",
+   "type": "relation",
+   "of": [
+    "recipe_book",
+    "apples",
+    "cutting_board"
+   ],
+   "desc": "the recipe book lies between the apples and the cutting board",
+   "question": "Does the recipe book lie between the apples and the cutting board?"
+  },
+  {
+   "id": "towel_on_wall",
+   "type": "relation",
+   "of": [
+    "towel",
+    "stove"
+   ],
+   "desc": "the towel hangs from a hook on the wall behind the stove",
+   "question": "Does the towel hang from a hook on the wall behind the stove?"
+  },
+  {
+   "id": "shaker_next_to_book",
+   "type": "relation",
+   "of": [
+    "salt_shaker",
+    "recipe_book"
+   ],
+   "desc": "the salt shaker sits next to the recipe book",
+   "question": "Does the salt shaker sit next to the recipe book?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the experienced chef wearing a white hat is standing",
+   "question": "Is the experienced chef wearing a white hat standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "counter_condition",
+   "type": "attribute",
+   "of": "counter",
+   "desc": "the counter is old and worn",
+   "question": "Is the counter old and worn?"
+  },
+  {
+   "id": "pot_shiny",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the pot is shiny",
+   "question": "Is the pot shiny?"
+  },
+  {
+   "id": "pot_new",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the pot is new",
+   "question": "Is the pot new?"
+  },
+  {
+   "id": "pot_newer_than_counter",
+   "type": "relation",
+   "of": [
+    "pot",
+    "counter"
+   ],
+   "desc": "the pot is noticeably newer than the counter",
+   "question": "Is the pot noticeably newer than the counter?"
+  },
+  {
+   "id": "book_thicker_than_board",
+   "type": "relation",
+   "of": [
+    "recipe_book",
+    "cutting_board"
+   ],
+   "desc": "the recipe book is thicker than the cutting board",
+   "question": "Is the recipe book thicker than the cutting board?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall behind the stove",
+   "question": "Is there a wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "wall_behind_stove",
+   "type": "relation",
+   "of": [
+    "wall",
+    "stove"
+   ],
+   "desc": "the wall is behind the stove",
+   "question": "Is the wall behind the stove?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "cutting_board",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "apples",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "carrots_group",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "onions",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "recipe_book",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "salt_shaker",
+   "kind": "support"
+  },
+  {
+   "from": "stove",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "pot",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "wall",
+   "to": "towel",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_001",
+ "prompt": "A kitchen scene with an experienced chef wearing a white hat standing behind an old, worn wooden counter. The chef is holding a large knife and cutting carrots on a cutting board. A shiny, new red pot sits on top of a gas stove next to the counter; the pot is noticeably newer than the counter. A black cat is sitting under the counter facing the chef. On the counter, there are three apples and a group of carrots. The number of carrots is twice the number of apples. The three apples are arranged in front of the cutting board. Also on the counter are some onions, and their number is one less than the number of apples. A wooden spoon is inside the red pot. The chef is pointing at a recipe book that lies open between the apples and the cutting board. The recipe book is thicker than the cutting board. A kitchen towel hangs from a hook on the wall behind the stove. A salt shaker sits next to the recipe book on the counter.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 2,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

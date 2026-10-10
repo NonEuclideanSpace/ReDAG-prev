@@ -1,0 +1,427 @@
+{
+ "style": "rich textured oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate terminal with expansive windows",
+   "question": "Does the image show an airport gate terminal with expansive windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "partition",
+   "type": "entity",
+   "class": "glass partition",
+   "plural": "glass partitions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass partition",
+   "question": "Is there a glass partition?",
+   "box": [
+    400,
+    200,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large digital departure board",
+   "question": "Is there a large digital departure board?",
+   "box": [
+    100,
+    50,
+    400,
+    200
+   ]
+  },
+  {
+   "id": "woman_yellow",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    50,
+    250,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small boy in blue overalls",
+   "question": "Is there a small boy in blue overalls?",
+   "box": [
+    150,
+    450,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "man_grey",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    450,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    650,
+    700,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "woman_floral",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    750,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "traveler",
+   "type": "entity",
+   "class": "young traveler",
+   "plural": "young travelers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young traveler in a green hoodie",
+   "question": "Is there a young traveler in a green hoodie?",
+   "box": [
+    850,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman_yellow_rigid",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat has a rigid posture",
+   "question": "Does the woman in the yellow coat have a rigid posture?"
+  },
+  {
+   "id": "woman_yellow_bag",
+   "type": "attribute",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat clutches a worn leather handbag",
+   "question": "Is the woman in the yellow coat clutching a worn leather handbag?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the small boy in blue overalls is sitting",
+   "question": "Is the small boy in blue overalls sitting?"
+  },
+  {
+   "id": "boy_swinging",
+   "type": "state",
+   "of": "boy",
+   "desc": "the small boy in blue overalls has his legs swinging freely",
+   "question": "Are the legs of the small boy in blue overalls swinging freely?"
+  },
+  {
+   "id": "boy_looking_up",
+   "type": "state",
+   "of": "boy",
+   "desc": "the small boy in blue overalls is looking up",
+   "question": "Is the small boy in blue overalls looking up?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_grey",
+   "desc": "the man in the grey suit is leaning casually",
+   "question": "Is the man in the grey suit leaning casually?"
+  },
+  {
+   "id": "man_checking_watch",
+   "type": "attribute",
+   "of": "man_grey",
+   "desc": "the man in the grey suit is checking his wristwatch",
+   "question": "Is the man in the grey suit checking his wristwatch?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying calmly",
+   "question": "Is the golden retriever lying calmly?"
+  },
+  {
+   "id": "dog_head_on_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever rests its head on its front paws",
+   "question": "Does the golden retriever rest its head on its front paws?"
+  },
+  {
+   "id": "woman_floral_pointing",
+   "type": "action",
+   "of": [
+    "woman_floral",
+    "traveler"
+   ],
+   "desc": "the elderly woman in the floral dress points toward the runway, drawing the attention of the young traveler",
+   "question": "Is the elderly woman in the floral dress pointing in a way that draws the attention of the young traveler in the green hoodie?"
+  },
+  {
+   "id": "traveler_turning_head",
+   "type": "state",
+   "of": "traveler",
+   "desc": "the young traveler in the green hoodie turns their head to follow the gesture",
+   "question": "Does the young traveler in the green hoodie turn their head to follow the gesture?"
+  },
+  {
+   "id": "boy_on_bench",
+   "type": "relation",
+   "of": [
+    "boy",
+    "bench"
+   ],
+   "desc": "the small boy in blue overalls sits on the metal bench",
+   "question": "Is the small boy in blue overalls sitting on the metal bench?"
+  },
+  {
+   "id": "boy_next_to_woman_yellow",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman_yellow"
+   ],
+   "desc": "the small boy in blue overalls is next to the woman in the yellow coat",
+   "question": "Is the small boy in blue overalls next to the woman in the yellow coat?"
+  },
+  {
+   "id": "boy_looks_at_board",
+   "type": "relation",
+   "of": [
+    "boy",
+    "board"
+   ],
+   "desc": "the small boy in blue overalls looks up at the large digital departure board",
+   "question": "Is the small boy in blue overalls looking up at the large digital departure board?"
+  },
+  {
+   "id": "man_against_partition",
+   "type": "relation",
+   "of": [
+    "man_grey",
+    "partition"
+   ],
+   "desc": "the man in the grey suit leans against the glass partition",
+   "question": "Is the man in the grey suit leaning against the glass partition?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever lies on the polished floor",
+   "question": "Is the golden retriever lying on the polished floor?"
+  },
+  {
+   "id": "traveler_beside_dog",
+   "type": "relation",
+   "of": [
+    "traveler",
+    "dog"
+   ],
+   "desc": "the young traveler in the green hoodie is beside the golden retriever",
+   "question": "Is the young traveler in the green hoodie beside the golden retriever?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "visible airplane on the tarmac",
+   "question": "Is there a visible airplane on the tarmac?"
+  },
+  {
+   "id": "woman_yellow_standing",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat stands",
+   "question": "Is the woman in the yellow coat standing?"
+  },
+  {
+   "id": "man_grey_standing",
+   "type": "state",
+   "of": "man_grey",
+   "desc": "the man in the grey suit stands",
+   "question": "Is the man in the grey suit standing?"
+  },
+  {
+   "id": "traveler_standing",
+   "type": "state",
+   "of": "traveler",
+   "desc": "the young traveler in the green hoodie stands",
+   "question": "Is the young traveler in the green hoodie standing?"
+  },
+  {
+   "id": "dog_observing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever observes the surroundings",
+   "question": "Is the golden retriever observing the surroundings?"
+  },
+  {
+   "id": "woman_floral_beside_dog",
+   "type": "relation",
+   "of": [
+    "woman_floral",
+    "dog"
+   ],
+   "desc": "the elderly woman in the floral dress is beside the golden retriever",
+   "question": "Is the elderly woman in the floral dress beside the golden retriever?"
+  },
+  {
+   "id": "traveler_near_woman_floral",
+   "type": "relation",
+   "of": [
+    "traveler",
+    "woman_floral"
+   ],
+   "desc": "the young traveler in the green hoodie is near the elderly woman in the floral dress",
+   "question": "Is the young traveler in the green hoodie near the elderly woman in the floral dress?"
+  },
+  {
+   "id": "traveler_looks_at_woman_floral",
+   "type": "action",
+   "of": [
+    "traveler",
+    "woman_floral"
+   ],
+   "desc": "the young traveler in the green hoodie looks at the elderly woman in the floral dress",
+   "question": "Does the young traveler in the green hoodie look at the elderly woman in the floral dress?"
+  },
+  {
+   "id": "blurred_passengers",
+   "type": "entity",
+   "class": "passenger",
+   "plural": "passengers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "blurred shapes of other passengers",
+   "question": "Are there blurred shapes of other passengers?",
+   "box": [
+    50,
+    50,
+    974,
+    300
+   ]
+  },
+  {
+   "id": "luggage_carts",
+   "type": "entity",
+   "class": "luggage cart",
+   "plural": "luggage carts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "luggage carts",
+   "question": "Are there luggage carts?",
+   "box": [
+    800,
+    100,
+    1000,
+    300
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "boy",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0101",
+ "prompt": "Rendered in the rich, textured style of an oil painting, the scene captures a quiet moment at a busy airport gate. On the left, a woman in a yellow coat stands with her posture rigid, clutching a worn leather handbag tightly against her side. Next to her, a small boy in blue overalls sits on a metal bench, his legs swinging freely as he looks up at a large digital departure board hanging above. In the center, a man in a grey suit leans casually against a glass partition, checking his wristwatch with an air of impatience. To his right, a golden retriever lies calmly on the polished floor, resting its head on its front paws while observing the surroundings. Beside the dog, an elderly woman in a floral dress points toward the runway outside the window, drawing the attention of a young traveler in a green hoodie who stands nearby. The traveler turns their head to follow her gesture, creating a silent connection between the two figures. The background features blurred shapes of other passengers and luggage carts, adding depth without distracting from the main subjects. There is no visible airplane on the tarmac, keeping the focus entirely on the human and animal elements within the terminal. The warm hues of the interior lighting contrast with the cool blues of the evening sky visible through the expansive windows, enhancing the tactile quality of the brushstrokes that define each figure and object in this transient space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

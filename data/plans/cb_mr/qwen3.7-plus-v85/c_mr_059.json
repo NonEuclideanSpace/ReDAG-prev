@@ -1,0 +1,324 @@
+{
+ "style": "epic mythological painting, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rocky cliffside on Mount Olympus under daylight",
+   "question": "Does the image show a rocky cliffside on Mount Olympus under daylight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hercules",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a muscular man",
+   "question": "Is there a muscular man?",
+   "box": [
+    350,
+    400,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "hydra",
+   "type": "entity",
+   "class": "hydra",
+   "plural": "hydras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dark scaly multi-headed serpent",
+   "question": "Is there a dark scaly multi-headed serpent?",
+   "box": [
+    600,
+    450,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "pegasus",
+   "type": "entity",
+   "class": "pegasus",
+   "plural": "pegasi",
+   "count": 4,
+   "count_exact": true,
+   "desc": "a white winged horse",
+   "question": "Is there a white winged horse?",
+   "box": [
+    100,
+    300,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "zeus",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man with a long beard",
+   "question": "Is there an older man?",
+   "box": [
+    400,
+    50,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "cloud",
+   "type": "entity",
+   "class": "cloud",
+   "plural": "clouds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cloud",
+   "question": "Is there a cloud?",
+   "box": [
+    380,
+    150,
+    620,
+    320
+   ]
+  },
+  {
+   "id": "bolt",
+   "type": "entity",
+   "class": "lightning bolt",
+   "plural": "lightning bolts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lightning bolt",
+   "question": "Is there a lightning bolt?",
+   "box": [
+    500,
+    250,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "hercules_wrestling",
+   "type": "action",
+   "of": [
+    "hercules",
+    "hydra"
+   ],
+   "desc": "the muscular man is wrestling with the dark scaly multi-headed serpent",
+   "question": "Is the muscular man wrestling with the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "pegasus_standing",
+   "type": "state",
+   "of": "pegasus",
+   "desc": "the white winged horse is standing",
+   "question": "Is the white winged horse standing?"
+  },
+  {
+   "id": "pegasus_pawing",
+   "type": "state",
+   "of": "pegasus",
+   "desc": "the white winged horse is pawing at the rock",
+   "question": "Is the white winged horse pawing at the rock?"
+  },
+  {
+   "id": "zeus_floating",
+   "type": "state",
+   "of": "zeus",
+   "desc": "the older man with a long beard is floating",
+   "question": "Is the older man with a long beard floating?"
+  },
+  {
+   "id": "zeus_holding_bolt",
+   "type": "attribute",
+   "of": "zeus",
+   "desc": "the older man with a long beard holds the lightning bolt",
+   "question": "Is the older man with a long beard holding the lightning bolt?"
+  },
+  {
+   "id": "zeus_pointing",
+   "type": "action",
+   "of": [
+    "zeus",
+    "hydra"
+   ],
+   "desc": "the older man with a long beard points the lightning bolt at the dark scaly multi-headed serpent",
+   "question": "Is the older man with a long beard pointing the lightning bolt at the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "hercules_looking",
+   "type": "action",
+   "of": [
+    "hercules",
+    "hydra"
+   ],
+   "desc": "the muscular man looks at the main head of the dark scaly multi-headed serpent",
+   "question": "Is the muscular man looking at the main head of the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "hydra_biting",
+   "type": "action",
+   "of": [
+    "hydra",
+    "hercules"
+   ],
+   "desc": "the other heads of the dark scaly multi-headed serpent try to bite the muscular man",
+   "question": "Are the other heads of the dark scaly multi-headed serpent trying to bite the muscular man?"
+  },
+  {
+   "id": "pegasus_behind_hercules",
+   "type": "relation",
+   "of": [
+    "pegasus",
+    "hercules"
+   ],
+   "desc": "the white winged horse is behind the muscular man",
+   "question": "Is the white winged horse behind the muscular man?"
+  },
+  {
+   "id": "zeus_above",
+   "type": "relation",
+   "of": [
+    "zeus",
+    "hercules"
+   ],
+   "desc": "the older man with a long beard is above the muscular man and the dark scaly multi-headed serpent",
+   "question": "Is the older man with a long beard above the muscular man and the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "hercules_between",
+   "type": "relation",
+   "of": [
+    "hercules",
+    "hydra",
+    "pegasus"
+   ],
+   "desc": "the muscular man is between the dark scaly multi-headed serpent and the white winged horse",
+   "question": "Is the muscular man between the dark scaly multi-headed serpent and the white winged horse?"
+  },
+  {
+   "id": "cliff_under",
+   "type": "relation",
+   "of": [
+    "hercules",
+    "zeus"
+   ],
+   "desc": "the rocky cliffside is under the muscular man and the dark scaly multi-headed serpent",
+   "question": "Is the rocky cliffside under the muscular man and the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "hydra_heads_count",
+   "type": "attribute",
+   "of": "hydra",
+   "desc": "the dark scaly multi-headed serpent has five heads",
+   "question": "Does the dark scaly multi-headed serpent have five heads?"
+  },
+  {
+   "id": "pegasus_legs_count",
+   "type": "attribute",
+   "of": "pegasus",
+   "desc": "the white winged horse has four legs",
+   "question": "Does the white winged horse have four legs?"
+  },
+  {
+   "id": "hercules_holding_necks",
+   "type": "attribute",
+   "of": "hercules",
+   "desc": "the muscular man holds two necks of the dark scaly multi-headed serpent",
+   "question": "Is the muscular man holding two necks of the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "pegasus_feathers",
+   "type": "attribute",
+   "of": "pegasus",
+   "desc": "the white winged horse has pristine white feathers",
+   "question": "Does the white winged horse have pristine white feathers?"
+  },
+  {
+   "id": "hydra_skin",
+   "type": "attribute",
+   "of": "hydra",
+   "desc": "the dark scaly multi-headed serpent has dark, scaly skin",
+   "question": "Does the dark scaly multi-headed serpent have dark, scaly skin?"
+  },
+  {
+   "id": "zeus_cloud",
+   "type": "relation",
+   "of": [
+    "zeus",
+    "cloud"
+   ],
+   "desc": "the older man with a long beard is floating on the cloud",
+   "question": "Is the older man with a long beard floating on the cloud?"
+  },
+  {
+   "id": "cloud_above",
+   "type": "relation",
+   "of": [
+    "cloud",
+    "hercules"
+   ],
+   "desc": "the cloud is above the muscular man and the dark scaly multi-headed serpent",
+   "question": "Is the cloud above the muscular man and the dark scaly multi-headed serpent?"
+  },
+  {
+   "id": "pegasus_ledge",
+   "type": "state",
+   "of": "pegasus",
+   "desc": "the white winged horse is standing on a ledge of the rocky cliffside",
+   "question": "Is the white winged horse standing on a ledge of the rocky cliffside?"
+  },
+  {
+   "id": "zeus_beard",
+   "type": "attribute",
+   "of": "zeus",
+   "desc": "the older man has a long beard",
+   "question": "Does the older man have a long beard?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cloud",
+   "to": "zeus",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_059",
+ "prompt": "On a rocky cliffside on Mount Olympus, a muscular Hercules is wrestling with a Hydra. A winged Pegasus is standing on a ledge behind Hercules; the Pegasus has pristine white feathers, contrasting with the dark, scaly skin of the Hydra. The number of the Hydra's heads is one more than the number of legs on Pegasus. Zeus is floating on a cloud above them, holding one lightning bolt, which casts a brighter light than the ambient daylight. The number of Hydra's necks Hercules is holding is twice the number of lightning bolts Zeus is holding. Zeus is pointing the lightning bolt at the Hydra. Hercules is looking at the Hydra's main head. The Hydra is trying to bite Hercules with its other heads. The cliff is under Hercules and the Hydra. Zeus appears older, with a longer beard, than Hercules. The Pegasus is pawing at the rock. Hercules is between the Hydra and the Pegasus.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

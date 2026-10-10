@@ -1,0 +1,464 @@
+{
+ "style": "surreal photorealistic, dreamlike atmosphere, diffused and piercing light, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a weathered kitchen with a chipped wooden countertop, wooden floorboards, and a cracked window showing clockwork trees and mirrored birds",
+   "question": "Does the image show a weathered kitchen with a chipped wooden countertop, wooden floorboards, and a cracked window revealing a surreal landscape of clockwork trees and mirrored birds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "scale",
+   "type": "entity",
+   "class": "kitchen scale",
+   "plural": "kitchen scales",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered digital kitchen scale",
+   "question": "Is there a weathered digital kitchen scale?",
+   "box": [
+    100,
+    500,
+    300,
+    650
+   ]
+  },
+  {
+   "id": "potato",
+   "type": "entity",
+   "class": "potato",
+   "plural": "potatoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-peeled potato",
+   "question": "Is there a half-peeled potato?",
+   "box": [
+    320,
+    520,
+    420,
+    600
+   ]
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "kitchen curtain",
+   "plural": "kitchen curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a swinging kitchen curtain",
+   "question": "Is there a swinging kitchen curtain?",
+   "box": [
+    450,
+    0,
+    650,
+    400
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked mirror",
+   "question": "Is there a cracked mirror?",
+   "box": [
+    500,
+    100,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "apron",
+   "type": "entity",
+   "class": "leather apron",
+   "plural": "leather aprons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn leather apron",
+   "question": "Is there a worn leather apron?",
+   "box": [
+    150,
+    700,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "faucet",
+   "type": "entity",
+   "class": "faucet",
+   "plural": "faucets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kitchen faucet",
+   "question": "Is there a kitchen faucet?",
+   "box": [
+    50,
+    300,
+    150,
+    450
+   ]
+  },
+  {
+   "id": "spoon_glass",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass of murky water",
+   "question": "Is there a glass of murky water?",
+   "box": [
+    700,
+    550,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "kettle",
+   "type": "entity",
+   "class": "kettle",
+   "plural": "kettles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kettle",
+   "question": "Is there a kettle?",
+   "box": [
+    850,
+    500,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "wall clock",
+   "plural": "wall clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall clock",
+   "question": "Is there a wall clock?",
+   "box": [
+    800,
+    50,
+    950,
+    200
+   ]
+  },
+  {
+   "id": "keys",
+   "type": "entity",
+   "class": "set of keys",
+   "plural": "sets of keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a set of keys suspended in midair",
+   "question": "Is there a set of keys suspended in midair?",
+   "box": [
+    350,
+    450,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceramic mug",
+   "question": "Is there a ceramic mug?",
+   "box": [
+    900,
+    550,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "scale_screen",
+   "type": "state",
+   "of": "scale",
+   "desc": "the digital screen of the scale flickers",
+   "question": "Does the digital screen of the scale flicker?"
+  },
+  {
+   "id": "spoon_bent",
+   "type": "attribute",
+   "of": "spoon_glass",
+   "desc": "the handle of the silver spoon is bent backward in a cursive curve",
+   "question": "Is the handle of the silver spoon bent backward in a cursive curve?"
+  },
+  {
+   "id": "curtain_swinging",
+   "type": "state",
+   "of": "curtain",
+   "desc": "the kitchen curtain is swinging",
+   "question": "Is the kitchen curtain swinging?"
+  },
+  {
+   "id": "apron_rippling",
+   "type": "state",
+   "of": "apron",
+   "desc": "the leather apron is rippling",
+   "question": "Is the leather apron rippling?"
+  },
+  {
+   "id": "water_drip",
+   "type": "state",
+   "of": "faucet",
+   "desc": "a drop of water hangs suspended in the air below the faucet",
+   "question": "Is a drop of water hanging suspended in the air below the faucet?"
+  },
+  {
+   "id": "potato_rolling",
+   "type": "relation",
+   "of": [
+    "potato",
+    "hook"
+   ],
+   "desc": "the potato is rolling toward the edge of the counter",
+   "question": "Is the potato rolling toward the edge of the counter?"
+  },
+  {
+   "id": "scale_on_counter",
+   "type": "state",
+   "of": "scale",
+   "desc": "the scale sits on the chipped wooden countertop",
+   "question": "Is the scale sitting on the chipped wooden countertop?"
+  },
+  {
+   "id": "potato_beside_scale",
+   "type": "relation",
+   "of": [
+    "potato",
+    "scale"
+   ],
+   "desc": "the potato is beside the scale",
+   "question": "Is the potato beside the scale?"
+  },
+  {
+   "id": "curtain_reveals_mirror",
+   "type": "relation",
+   "of": [
+    "curtain",
+    "mirror"
+   ],
+   "desc": "the curtain is in front of the mirror, partially revealing it",
+   "question": "Is the curtain in front of the mirror, partially revealing it?"
+  },
+  {
+   "id": "apron_below_counter",
+   "type": "state",
+   "of": "apron",
+   "desc": "the apron hangs below the countertop",
+   "question": "Is the apron hanging below the countertop?"
+  },
+  {
+   "id": "keys_above_potato",
+   "type": "relation",
+   "of": [
+    "keys",
+    "potato"
+   ],
+   "desc": "the keys are suspended above the potato",
+   "question": "Are the keys suspended above the potato?"
+  },
+  {
+   "id": "window_behind_scale",
+   "type": "state",
+   "of": "scale",
+   "desc": "the cracked window is behind the scale",
+   "question": "Is the cracked window behind the scale?"
+  },
+  {
+   "id": "clock_on_wall",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock is on the wall",
+   "question": "Is the clock on the wall?"
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall stool",
+   "question": "Is there a tall stool in the image?",
+   "box": [
+    800,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "spoon_glass_on_counter",
+   "type": "state",
+   "of": "spoon_glass",
+   "desc": "the glass of murky water with a silver spoon rests on the countertop",
+   "question": "Does the glass of murky water with a silver spoon rest on the countertop?"
+  },
+  {
+   "id": "kettle_on_counter",
+   "type": "state",
+   "of": "kettle",
+   "desc": "the kettle sits on the countertop",
+   "question": "Does the kettle sit on the countertop?"
+  },
+  {
+   "id": "apron_hanging",
+   "type": "state",
+   "of": "apron",
+   "desc": "the worn leather apron hangs on a hook",
+   "question": "Is the worn leather apron hanging on a hook?"
+  },
+  {
+   "id": "hook",
+   "type": "entity",
+   "class": "hook",
+   "plural": "hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hook on the wall or under the counter",
+   "question": "Is there a hook?",
+   "box": [
+    400,
+    800,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "apron_on_hook",
+   "type": "relation",
+   "of": [
+    "apron",
+    "hook"
+   ],
+   "desc": "the worn leather apron hangs on the hook",
+   "question": "Is the worn leather apron hanging on the hook?"
+  },
+  {
+   "id": "stool_absent",
+   "type": "absent",
+   "desc": "a tall stool",
+   "question": "Is there a tall stool in the image?"
+  },
+  {
+   "id": "apron_loops",
+   "type": "attribute",
+   "of": "apron",
+   "desc": "the worn leather apron has loops",
+   "question": "Does the worn leather apron have loops?"
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver spoon with a bent handle",
+   "question": "Is there a silver spoon with a bent handle?",
+   "box": [
+    720,
+    620,
+    830,
+    780
+   ]
+  },
+  {
+   "id": "spoon_in_glass",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "spoon_glass"
+   ],
+   "desc": "the silver spoon rests in the glass of murky water",
+   "question": "Does the silver spoon rest in the glass of murky water?"
+  },
+  {
+   "id": "kettle_steam",
+   "type": "state",
+   "of": "kettle",
+   "desc": "steam rising from the kettle",
+   "question": "Is steam rising from the kettle?"
+  },
+  {
+   "id": "mirror_on_wall_rel",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the cracked mirror is on the wall",
+   "question": "Is the cracked mirror on the wall?"
+  },
+  {
+   "id": "mug_tea",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the ceramic mug is filled with cold tea",
+   "question": "Is the ceramic mug filled with cold tea?"
+  }
+ ],
+ "edges": [],
+ "id": "lb_0263",
+ "prompt": "The kitchen, suspended between morning and an uncertain afternoon, hums with the low, almost reverent energy of things caught mid-becoming. A weathered kitchen scale sits on a chipped wooden countertop, its digital screen flickering erratically between 0.1 and 0.2 kg, as if trying to decide the weight of a world that no longer wants to be weighed. Beside it, a half-peeled potato rolls slowly toward the edge of the counter, nudged by the shadow of a swinging kitchen curtain that appears to move without wind, propelled by an unseen breath or the sigh of time itself. Below, a worn leather apron hangs on a hook, its loops catching the faint scent of garlic and time, but also of something else—an undertone of ash and forgotten recipes. The curtain sways again, this time revealing a cracked mirror on the wall behind it, where reflections move just a heartbeat ahead of reality, showing the potato already off the counter, already rolling across the tiled floor and into the legs of a tall stool that is not there yet. A slow drip of water from the faucet hangs in the air like a frozen thought, defying gravity and memory alike, while a silver spoon rests in a glass of murky water, its handle bent backward in a cursive curve that mirrors the curl of steam rising from a kettle that hasn’t been turned on. A clock on the wall ticks not in time but in questions, each tick echoing a different tone depending on the angle from which it’s heard. The wooden floorboards creak as though under the weight of stories, their knots blooming like inkblots into the scene’s fabric. A set of keys, impossibly suspended in midair, dangle just above the potato’s path, as if the room itself is conspiring to grant the vegetable a means of escape from its own existence. A cracked window behind the scale offers a glimpse of a world that doesn’t align with the kitchen—fields of clockwork trees sway in a direction opposite the sun, while birds with mirrored feathers sing in a language of shapes. The light in the room is strange—simultaneously diffused and piercing, casting shadows that stretch into other rooms that exist only in the corners of the eyes. The apron seems to ripple, its fabric thinning where the scent of garlic is strongest, as if it’s becoming air, becoming memory. A ceramic mug filled with cold tea trembles slightly on the far counter, though no one has touched it, its surface reflected in the mirror behind it as a different mug, filled with steam. The scene is alive in its contradictions—time folds into itself, space stretches and contracts like breath, and objects seem to hold conversations through their forms and movements. It is a kitchen not just of cooking but of transformation, of beginnings that are endings and things that never quite arrive, a place where the potato is on the verge of rolling into a story that may or may not have been written.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 48,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 5,
+   "ungrounded": 3,
+   "repair": 2,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "clock_on_wall_rel",
+     "clock_on_wall"
+    ]
+   ]
+  }
+ }
+}

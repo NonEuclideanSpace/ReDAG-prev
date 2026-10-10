@@ -1,0 +1,442 @@
+{
+ "style": "photorealistic photo, warm artificial lighting, cozy professional atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a tailor's shop",
+   "question": "Does the image show the interior of a tailor's shop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "platform",
+   "type": "entity",
+   "class": "platform",
+   "plural": "platforms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small platform",
+   "question": "Is there a small platform in the image?",
+   "box": [
+    400,
+    650,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "tailor",
+   "type": "entity",
+   "class": "tailor",
+   "plural": "tailors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly tailor",
+   "question": "Is there an elderly tailor?",
+   "box": [
+    350,
+    200,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall customer",
+   "question": "Is there a tall customer?",
+   "box": [
+    420,
+    150,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "table_left",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    50,
+    550,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "sewing_machine",
+   "type": "entity",
+   "class": "sewing machine",
+   "plural": "sewing machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sewing machine",
+   "question": "Is there a sewing machine?",
+   "box": [
+    100,
+    500,
+    250,
+    650
+   ]
+  },
+  {
+   "id": "seamstress",
+   "type": "entity",
+   "class": "seamstress",
+   "plural": "seamstresses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seamstress",
+   "question": "Is there a seamstress?",
+   "box": [
+    150,
+    300,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "mannequin",
+   "type": "entity",
+   "class": "mannequin",
+   "plural": "mannequins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mannequin dressed in a half-finished red dress",
+   "question": "Is there a mannequin dressed in a half-finished red dress?",
+   "box": [
+    280,
+    250,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "apprentice",
+   "type": "entity",
+   "class": "apprentice",
+   "plural": "apprentices",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young apprentice",
+   "question": "Is there a young apprentice?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "pressing_board",
+   "type": "entity",
+   "class": "pressing board",
+   "plural": "pressing boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pressing board",
+   "question": "Is there a pressing board?",
+   "box": [
+    750,
+    600,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a basket full of colorful thread spools",
+   "question": "Is there a basket full of colorful thread spools?",
+   "box": [
+    800,
+    850,
+    950,
+    980
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tool",
+   "plural": "tools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scissors, thimbles, and pattern weights scattered on worktables",
+   "question": "Are there scissors, thimbles, and pattern weights scattered on worktables?",
+   "box": [
+    50,
+    550,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "tailor_measuring",
+   "type": "action",
+   "of": [
+    "tailor",
+    "customer"
+   ],
+   "desc": "the elderly tailor measures the sleeve of the customer's navy blue suit jacket",
+   "question": "Is the elderly tailor measuring the sleeve of the customer's navy blue suit jacket?"
+  },
+  {
+   "id": "tailor_tape",
+   "type": "attribute",
+   "of": "tailor",
+   "desc": "the elderly tailor holds a yellow measuring tape taut against the fabric",
+   "question": "Is the elderly tailor holding a yellow measuring tape taut against the fabric?"
+  },
+  {
+   "id": "customer_standing",
+   "type": "state",
+   "of": "customer",
+   "desc": "the tall customer is standing",
+   "question": "Is the tall customer standing?"
+  },
+  {
+   "id": "customer_on_platform",
+   "type": "relation",
+   "of": [
+    "customer",
+    "platform"
+   ],
+   "desc": "the tall customer stands on the small platform",
+   "question": "Is the tall customer standing on the small platform?"
+  },
+  {
+   "id": "seamstress_threading",
+   "type": "action",
+   "of": [
+    "seamstress",
+    "sewing_machine"
+   ],
+   "desc": "the seamstress threads a needle at the sewing machine",
+   "question": "Is the seamstress threading a needle at the sewing machine?"
+  },
+  {
+   "id": "machine_on_table",
+   "type": "relation",
+   "of": [
+    "sewing_machine",
+    "table_left"
+   ],
+   "desc": "the sewing machine sits on the wooden table",
+   "question": "Does the sewing machine sit on the wooden table?"
+  },
+  {
+   "id": "mannequin_next_to_machine",
+   "type": "relation",
+   "of": [
+    "mannequin",
+    "sewing_machine"
+   ],
+   "desc": "the mannequin stands next to the sewing machine",
+   "question": "Does the mannequin stand next to the sewing machine?"
+  },
+  {
+   "id": "apprentice_ironing",
+   "type": "action",
+   "of": [
+    "apprentice",
+    "pressing_board"
+   ],
+   "desc": "the young apprentice irons a pair of gray trousers on the pressing board",
+   "question": "Is the young apprentice ironing a pair of gray trousers on the pressing board?"
+  },
+  {
+   "id": "basket_near_apprentice",
+   "type": "relation",
+   "of": [
+    "basket",
+    "apprentice"
+   ],
+   "desc": "the basket rests on the floor near the apprentice's feet",
+   "question": "Does the basket rest on the floor near the apprentice's feet?"
+  },
+  {
+   "id": "seamstress_silk",
+   "type": "attribute",
+   "of": "seamstress",
+   "desc": "the seamstress holds a piece of silk fabric",
+   "question": "Is the seamstress holding a piece of silk fabric?"
+  },
+  {
+   "id": "seamstress_looking",
+   "type": "state",
+   "of": "seamstress",
+   "desc": "the seamstress is looking closely",
+   "question": "Is the seamstress looking closely?"
+  },
+  {
+   "id": "apprentice_trousers",
+   "type": "attribute",
+   "of": "apprentice",
+   "desc": "the young apprentice handles a pair of gray trousers",
+   "question": "Is the young apprentice handling a pair of gray trousers?"
+  },
+  {
+   "id": "iron_steam",
+   "type": "state",
+   "of": "apprentice",
+   "desc": "steam rises from the iron used by the young apprentice",
+   "question": "Is steam rising from the iron used by the young apprentice?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "relation",
+   "of": [
+    "customer",
+    "mirror"
+   ],
+   "desc": "the mirror on the back wall reflects the customer",
+   "question": "Does the mirror on the back wall reflect the customer?"
+  },
+  {
+   "id": "mirror_reflection_tailor",
+   "type": "relation",
+   "of": [
+    "tailor",
+    "mirror"
+   ],
+   "desc": "the mirror on the back wall reflects the elderly tailor",
+   "question": "Does the mirror on the back wall reflect the elderly tailor?"
+  },
+  {
+   "id": "tools_on_tables",
+   "type": "relation",
+   "of": [
+    "tools",
+    "table_left"
+   ],
+   "desc": "scissors, thimbles, and pattern weights are scattered on the worktables",
+   "question": "Are scissors, thimbles, and pattern weights scattered on the worktables?"
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": false,
+   "desc": "shelves stacked with bolts of various fabrics",
+   "question": "Are there shelves stacked with bolts of various fabrics?",
+   "box": [
+    50,
+    50,
+    974,
+    300
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror on the back wall",
+   "question": "Is there a mirror on the back wall?",
+   "box": [
+    800,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "mannequin_details",
+   "type": "attribute",
+   "of": "mannequin",
+   "desc": "the mannequin is draped with pins and chalk marks",
+   "question": "Is the mannequin draped with pins and chalk marks?"
+  },
+  {
+   "id": "seamstress_looking_silk",
+   "type": "state",
+   "of": "seamstress",
+   "desc": "the seamstress looks closely at the silk fabric",
+   "question": "Is the seamstress looking closely at the silk fabric?"
+  },
+  {
+   "id": "tailor_hair",
+   "type": "attribute",
+   "of": "tailor",
+   "desc": "the elderly tailor has silver hair",
+   "question": "Does the elderly tailor have silver hair?"
+  },
+  {
+   "id": "customer_jacket",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the tall customer wears a navy blue suit jacket",
+   "question": "Does the tall customer wear a navy blue suit jacket?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table_left",
+   "to": "sewing_machine",
+   "kind": "support"
+  },
+  {
+   "from": "platform",
+   "to": "customer",
+   "kind": "support"
+  },
+  {
+   "from": "pressing_board",
+   "to": "apprentice",
+   "kind": "support"
+  },
+  {
+   "from": "table_left",
+   "to": "tools",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0047",
+ "prompt": "A photorealistic photo shows the interior of a busy tailor's shop bathed in warm artificial light. In the center, an elderly tailor with silver hair measures the sleeve of a navy blue suit jacket worn by a tall customer standing on a small platform. The tailor holds a yellow measuring tape taut against the fabric. To the left, a sewing machine sits on a wooden table, with a seamstress threading a needle while looking closely at a piece of silk fabric. A mannequin dressed in a half-finished red dress stands next to the sewing machine, draped with pins and chalk marks. On the right, a young apprentice irons a pair of gray trousers on a pressing board, steam rising visibly from the iron. A basket full of colorful thread spools rests on the floor near the apprentice's feet. In the background, shelves are stacked with bolts of various fabrics, including velvet and linen. A mirror on the back wall reflects the customer’s posture and the tailor’s focused expression. Tools like scissors, thimbles, and pattern weights are scattered neatly across the worktables. The lighting highlights the textures of the fabrics and the concentration on the workers' faces, creating a cozy yet professional atmosphere.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  }
+ }
+}

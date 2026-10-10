@@ -1,0 +1,241 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet hospital corridor with walls and a distant door",
+   "question": "Does the image depict a quiet hospital corridor with walls and a distant door?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench of the corridor?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a grey coat",
+   "question": "Is there an elderly man in a grey coat?",
+   "box": [
+    400,
+    300,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "young woman",
+   "plural": "young women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a pink dress",
+   "question": "Is there a young woman in a pink dress?",
+   "box": [
+    700,
+    250,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    550,
+    800,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern with green leaves",
+   "question": "Is there a potted fern with green leaves?",
+   "box": [
+    20,
+    500,
+    150,
+    900
+   ]
+  },
+  {
+   "id": "nurse_holding_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "elderly_man_tired",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the grey coat looks tired",
+   "question": "Does the elderly man in the grey coat look tired?"
+  },
+  {
+   "id": "elderly_man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the grey coat is sitting",
+   "question": "Is the elderly man in the grey coat sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog lies calmly",
+   "question": "Is the small brown dog lying down calmly?"
+  },
+  {
+   "id": "nurse_looking_at_man",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs looks at the elderly man in the grey coat",
+   "question": "Is the nurse in blue scrubs looking at the elderly man in the grey coat?"
+  },
+  {
+   "id": "woman_pointing_at_door",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in the pink dress points toward the distant door",
+   "question": "Is the young woman in the pink dress pointing toward the distant door in the background?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man in the grey coat sits on the wooden bench",
+   "question": "Is the elderly man in the grey coat sitting on the wooden bench?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "elderly_man"
+   ],
+   "desc": "the young woman in the pink dress is next to the elderly man in the grey coat",
+   "question": "Is the young woman in the pink dress next to the elderly man in the grey coat?"
+  },
+  {
+   "id": "dog_near_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the small brown dog is near the wooden bench",
+   "question": "Is the small brown dog near the wooden bench?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the scene?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "fern_against_wall",
+   "type": "state",
+   "of": "fern",
+   "desc": "the potted fern rests against the wall",
+   "question": "Does the potted fern rest against the wall of the corridor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0124",
+ "prompt": "This watercolor illustration depicts a quiet hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly man in a grey coat sits on a wooden bench, looking tired. Next to him on the right, a young woman in a pink dress points toward a distant door. A small brown dog lies calmly on the floor near the bench. A potted fern with green leaves rests against the wall on the far left. The nurse in blue scrubs is looking at the elderly man in the grey coat. The young woman in the pink dress is pointing at the distant door. The elderly man in the grey coat is sitting on the wooden bench. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

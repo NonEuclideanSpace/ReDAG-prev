@@ -1,0 +1,531 @@
+{
+ "style": "surreal, dim amber lighting, cinematic, detailed texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior",
+   "question": "Does the image show a kitchen interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table surface",
+   "question": "Is there a table surface in the scene?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "gas lamp",
+   "plural": "gas lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gas lamp",
+   "question": "Is there a gas lamp?",
+   "box": [
+    800,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "tart_plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped porcelain plate",
+   "question": "Is there a chipped porcelain plate?",
+   "box": [
+    400,
+    650,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a delicate ceramic teacup",
+   "question": "Is there a delicate ceramic teacup?",
+   "box": [
+    650,
+    620,
+    750,
+    720
+   ]
+  },
+  {
+   "id": "chopstick",
+   "type": "entity",
+   "class": "chopstick",
+   "plural": "chopsticks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single red chopstick",
+   "question": "Is there a single red chopstick?",
+   "box": [
+    630,
+    580,
+    680,
+    700
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an iridescent moth",
+   "question": "Is there an iridescent moth?",
+   "box": [
+    680,
+    550,
+    730,
+    600
+   ]
+  },
+  {
+   "id": "saucer",
+   "type": "entity",
+   "class": "saucer",
+   "plural": "saucers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down ceramic saucer with cryptic runes on its bottom",
+   "question": "Is there an upside-down ceramic saucer with cryptic runes on its bottom?",
+   "box": [
+    200,
+    850,
+    350,
+    920
+   ]
+  },
+  {
+   "id": "napkin",
+   "type": "entity",
+   "class": "napkin",
+   "plural": "napkins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled napkin",
+   "question": "Is there a crumpled napkin?",
+   "box": [
+    220,
+    880,
+    330,
+    950
+   ]
+  },
+  {
+   "id": "shelf_objects",
+   "type": "entity",
+   "class": "assorted objects",
+   "plural": "assorted objects",
+   "count": 3,
+   "count_exact": true,
+   "desc": "a rubber duck, a dusty magnifying glass, and a rusted keyhole frame",
+   "question": "Are there a rubber duck, a dusty magnifying glass, and a rusted keyhole frame?",
+   "box": [
+    100,
+    200,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "hand",
+   "type": "entity",
+   "class": "hand",
+   "plural": "hands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy hand",
+   "question": "Is there a shadowy hand?",
+   "box": [
+    550,
+    500,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "wire",
+   "type": "entity",
+   "class": "wire",
+   "plural": "wires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose frayed wire",
+   "question": "Is there a loose frayed wire?",
+   "box": [
+    700,
+    400,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a threadbare curtain rippling",
+   "question": "Is there a threadbare curtain rippling?",
+   "box": [
+    900,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection in a cracked mirror showing a blue moth, a whole smiling hand, and a double egg tart",
+   "question": "Does the reflection in the cracked mirror show a blue moth, a whole smiling hand, and a double egg tart?",
+   "box": [
+    50,
+    50,
+    250,
+    350
+   ]
+  },
+  {
+   "id": "tart_on_plate",
+   "type": "relation",
+   "of": [
+    "tart_plate",
+    "table"
+   ],
+   "desc": "the plate with the egg tart is on the table",
+   "question": "Is the plate with the egg tart on the table?"
+  },
+  {
+   "id": "tart_steaming",
+   "type": "state",
+   "of": "tart_plate",
+   "desc": "the egg tart is steaming with a sinuous trail of smoke",
+   "question": "Is the egg tart steaming with a sinuous trail of smoke?"
+  },
+  {
+   "id": "tea_iridescent",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup is half-full of dark iridescent tea",
+   "question": "Is the teacup half-full of dark iridescent tea?"
+  },
+  {
+   "id": "chopstick_damp",
+   "type": "attribute",
+   "of": "chopstick",
+   "desc": "the tip of the red chopstick is damp",
+   "question": "Is the tip of the red chopstick damp?"
+  },
+  {
+   "id": "moth_hovering",
+   "type": "relation",
+   "of": [
+    "moth",
+    "teacup"
+   ],
+   "desc": "the iridescent moth is hovering just above the rim of the teacup",
+   "question": "Is the iridescent moth hovering just above the rim of the teacup?"
+  },
+  {
+   "id": "saucer_floating",
+   "type": "state",
+   "of": "saucer",
+   "desc": "the saucer is floating upside down above the floor",
+   "question": "Is the saucer floating upside down above the floor?"
+  },
+  {
+   "id": "napkin_buried",
+   "type": "relation",
+   "of": [
+    "napkin",
+    "saucer"
+   ],
+   "desc": "the napkin lies half-buried under the floating saucer",
+   "question": "Does the napkin lie half-buried under the floating saucer?"
+  },
+  {
+   "id": "chopstick_leaning",
+   "type": "relation",
+   "of": [
+    "chopstick",
+    "teacup"
+   ],
+   "desc": "the red chopstick leans against the teacup",
+   "question": "Does the red chopstick lean against the teacup?"
+  },
+  {
+   "id": "hand_near_chopstick",
+   "type": "relation",
+   "of": [
+    "hand",
+    "chopstick"
+   ],
+   "desc": "the shadowy hand hovers near the red chopstick",
+   "question": "Does the shadowy hand hover near the red chopstick?"
+  },
+  {
+   "id": "wire_between",
+   "type": "relation",
+   "of": [
+    "wire",
+    "teacup",
+    "lamp"
+   ],
+   "desc": "the frayed wire weaves through the air between the teacup and the gas lamp",
+   "question": "Does the frayed wire weave through the air between the teacup and the gas lamp?"
+  },
+  {
+   "id": "shelf_behind_table",
+   "type": "relation",
+   "of": [
+    "shelf_objects",
+    "table"
+   ],
+   "desc": "the warped wooden shelf with objects is behind the table",
+   "question": "Is the warped wooden shelf with objects behind the table?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "visible window panes or frames",
+   "question": "Are there any visible window panes or frames in the image?"
+  },
+  {
+   "id": "wallpaper_border",
+   "type": "entity",
+   "class": "wallpaper border",
+   "plural": "wallpaper borders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a peeling wallpaper border",
+   "question": "Is there a peeling wallpaper border?",
+   "box": [
+    0,
+    0,
+    1024,
+    150
+   ]
+  },
+  {
+   "id": "calendar",
+   "type": "entity",
+   "class": "calendar page",
+   "plural": "calendar pages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a torn calendar page reading August with smudged numbers",
+   "question": "Is there a torn calendar page reading August with smudged numbers?",
+   "box": [
+    800,
+    200,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "keyhole_frame_relation",
+   "type": "relation",
+   "of": [
+    "shelf_objects",
+    "wallpaper_border"
+   ],
+   "desc": "the rusted keyhole frame is framed by the peeling wallpaper border",
+   "question": "Is the rusted keyhole frame framed by the peeling wallpaper border?"
+  },
+  {
+   "id": "mirror_reflection_relation",
+   "type": "state",
+   "of": "mirror_reflection",
+   "desc": "the reflection is in the cracked mirror on the wall",
+   "question": "Is the reflection visible in the cracked mirror on the wall?"
+  },
+  {
+   "id": "floorboards",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden floorboards",
+   "question": "Are there wooden floorboards visible?",
+   "box": [
+    0,
+    900,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "duck_beside_glass",
+   "type": "state",
+   "of": "shelf_objects",
+   "desc": "the rubber duck is beside the dusty magnifying glass",
+   "question": "Is the rubber duck beside the dusty magnifying glass?"
+  },
+  {
+   "id": "hand_above_table",
+   "type": "relation",
+   "of": [
+    "hand",
+    "table"
+   ],
+   "desc": "the shadowy hand dangles above the edge of the table",
+   "question": "Is the shadowy hand dangling above the edge of the table?"
+  },
+  {
+   "id": "august_jagged",
+   "type": "attribute",
+   "of": "calendar",
+   "desc": "the letters of August are jagged",
+   "question": "Are the letters of August jagged?"
+  },
+  {
+   "id": "lamp_glow",
+   "type": "attribute",
+   "of": "lamp",
+   "desc": "the gas lamp emits an amber glow",
+   "question": "Does the gas lamp emit an amber glow?"
+  },
+  {
+   "id": "egg_tart",
+   "type": "entity",
+   "class": "egg tart",
+   "plural": "egg tarts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an egg tart with a golden crust",
+   "question": "Is there an egg tart with a golden crust?",
+   "box": [
+    420,
+    610,
+    580,
+    720
+   ]
+  },
+  {
+   "id": "wire_sparking",
+   "type": "state",
+   "of": "wire",
+   "desc": "the loose frayed wire is sparking",
+   "question": "Is the loose frayed wire sparking?"
+  },
+  {
+   "id": "teacup_lilies",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup is etched with faded lilies",
+   "question": "Is the teacup etched with faded lilies?"
+  },
+  {
+   "id": "napkin_smudged",
+   "type": "attribute",
+   "of": "napkin",
+   "desc": "the napkin is smudged with grease and soy sauce",
+   "question": "Is the napkin smudged with grease and soy sauce?"
+  },
+  {
+   "id": "hand_partial",
+   "type": "attribute",
+   "of": "hand",
+   "desc": "the hand shows only fingers and wrist",
+   "question": "Does the hand show only fingers and wrist?"
+  },
+  {
+   "id": "wallpaper_pattern",
+   "type": "attribute",
+   "of": "wallpaper_border",
+   "desc": "the wallpaper border has a pattern of identical teacups",
+   "question": "Does the wallpaper border have a pattern of identical teacups?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "tart_plate",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "teacup",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "egg_tart",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0249",
+ "prompt": "In the dim, amber glow of a flickering gas lamp, the steaming egg tart on its chipped porcelain plate is the center of a quiet, surreal symphony. The golden crust, glossy with butter and time, trembles slightly as a shadowy breeze passes through an unseen crack in the windowpane, causing a threadbare curtain to ripple like liquid. Beside it, a single red chopstick leans precariously against a delicate ceramic teacup, its tip damp with the memory of recent use. The cup, etched with faded lilies, sits half-full of a dark, iridescent tea that seems to shift in hue with each breath of air. Suspended just above the rim, an iridescent moth hovers, as if held in place by the very scent of the tea. A crumpled napkin, smudged with grease and a faint streak of soy sauce, lies half-buried under a saucer that is somehow upside down and floating just above the floor. Its ceramic bottom, normally hidden, is now visible and etched with cryptic runes that seem to shimmer in time with the moth’s wings. Behind the table, a warped wooden shelf bows under the weight of mismatched objects: a rubber duck perched beside a dusty magnifying glass, a rusted keyhole gazing into a blank wall. The keyhole is framed by a peeling wallpaper border that repeats a pattern of identical teacups—each subtly different in shape and color, as if the wallpaper is evolving with time. A shadowy hand, only the suggestion of fingers and wrist, dangles just above the edge of the table, hovering near the red chopstick as if caught mid-motion, between use and rest. A faint trail of smoke curls from the tart’s crust, twisting upward in a sinuous line that seems to pull the moth toward it. The air is thick with the mingling scents of baked pastry, fermented tea, and the faint, citrus tang of cleaning supplies. A cracked mirror hanging on the wall reflects the scene in perfect, inverted detail, though the image is subtly off: the moth in the reflection is blue instead of green, the shadowy hand appears whole and smiling, and the egg tart seems to have grown a second, smaller version of itself, sitting on the mirrored plate. A loose wire, frayed and buzzing faintly, weaves through the air between the teacup and the lamp, sparking with each ripple of the curtain. On the wall behind it all, a calendar page hangs torn at the corner, its numbers smudged by what looks like soy sauce. The date is illegible, but the month reads *August* in jagged letters. The floorboards creak under an invisible weight, as if something vast and slow is passing beneath them. The kitchen is quiet but alive, each object a character in a silent, looping performance, each interaction a clue in a narrative that never quite resolves. The moth, the shadow, the floating saucer—they all exist in a delicate balance of tension and harmony, as if the entire room is suspended in the breath between one act and the next. The tart continues to steam, golden and unblinking, a quiet monument to the surreal ordinariness of a world just beyond reach.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node shelf_objects: entity question is long (19 words); should only ask presence + identifying look",
+   "node mirror_reflection: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v6",
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "facts_pass": {
+   "n_facts": 73,
+   "n_uncovered": 7,
+   "proposed": 7,
+   "ungrounded": 3,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

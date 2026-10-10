@@ -1,0 +1,493 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station bay with brick walls and an open garage door",
+   "question": "Does the image show the interior of a fire station bay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "concrete floor",
+   "plural": "concrete floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a concrete floor",
+   "question": "Is there a concrete floor visible?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "engine",
+   "type": "entity",
+   "class": "fire engine",
+   "plural": "fire engines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy red fire engine",
+   "question": "Is there a heavy red fire engine?",
+   "box": [
+    300,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in yellow suspenders",
+   "question": "Is there a tall firefighter wearing yellow suspenders?",
+   "box": [
+    50,
+    100,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "puppy",
+   "type": "entity",
+   "class": "dalmatian puppy",
+   "plural": "dalmatian puppies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small dalmatian puppy with black spots on white fur",
+   "question": "Is there a small dalmatian puppy with black spots on white fur?",
+   "box": [
+    260,
+    650,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic wearing blue overalls?",
+   "box": [
+    750,
+    450,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "bell",
+   "type": "entity",
+   "class": "brass bell",
+   "plural": "brass bells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage polished brass bell",
+   "question": "Is there a vintage polished brass bell?",
+   "box": [
+    350,
+    550,
+    420,
+    620
+   ]
+  },
+  {
+   "id": "captain",
+   "type": "entity",
+   "class": "fire captain",
+   "plural": "fire captains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older captain in a navy coat",
+   "question": "Is there an older captain wearing a navy coat?",
+   "box": [
+    820,
+    200,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "recruit",
+   "type": "entity",
+   "class": "recruit",
+   "plural": "recruits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young recruit in a crisp uniform",
+   "question": "Is there a young recruit in a crisp uniform?",
+   "box": [
+    900,
+    250,
+    1024,
+    700
+   ]
+  },
+  {
+   "id": "calendar",
+   "type": "entity",
+   "class": "calendar",
+   "plural": "calendars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large calendar",
+   "question": "Is there a large calendar?",
+   "box": [
+    850,
+    50,
+    1000,
+    200
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    850,
+    220,
+    1024,
+    350
+   ]
+  },
+  {
+   "id": "helmet",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forgotten helmet",
+   "question": "Is there a helmet?",
+   "box": [
+    860,
+    230,
+    920,
+    290
+   ]
+  },
+  {
+   "id": "gloves",
+   "type": "entity",
+   "class": "gloves",
+   "plural": "pairs of gloves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of thick gloves",
+   "question": "Is there a pair of thick gloves?",
+   "box": [
+    930,
+    230,
+    990,
+    290
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the tall firefighter holds a coiled hose tightly",
+   "question": "Is the tall firefighter holding a coiled hose tightly?"
+  },
+  {
+   "id": "puppy_sitting",
+   "type": "state",
+   "of": "puppy",
+   "desc": "the dalmatian puppy is sitting",
+   "question": "Is the dalmatian puppy sitting?"
+  },
+  {
+   "id": "mechanic_leaning",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is leaning",
+   "question": "Is the mechanic leaning?"
+  },
+  {
+   "id": "mechanic_wiping",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic wipes grease from his hands with a rag",
+   "question": "Is the mechanic wiping grease from his hands with a rag?"
+  },
+  {
+   "id": "captain_pointing",
+   "type": "relation",
+   "of": [
+    "captain",
+    "garage_door"
+   ],
+   "desc": "the older captain points toward the open garage door",
+   "question": "Is the older captain pointing toward the open garage door?"
+  },
+  {
+   "id": "recruit_looking",
+   "type": "action",
+   "of": [
+    "recruit",
+    "captain"
+   ],
+   "desc": "the young recruit looks at the captain with focused intensity",
+   "question": "Is the young recruit looking at the captain with focused intensity?"
+  },
+  {
+   "id": "firefighter_next_to_puppy",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "puppy"
+   ],
+   "desc": "the tall firefighter is next to the dalmatian puppy",
+   "question": "Is the tall firefighter next to the dalmatian puppy?"
+  },
+  {
+   "id": "mechanic_against_tire",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "engine"
+   ],
+   "desc": "the mechanic leans against the front tire of the fire engine",
+   "question": "Is the mechanic leaning against the front tire of the fire engine?"
+  },
+  {
+   "id": "bell_on_engine",
+   "type": "relation",
+   "of": [
+    "bell",
+    "engine"
+   ],
+   "desc": "the brass bell is perched on the running board of the fire engine",
+   "question": "Is the brass bell perched on the running board of the fire engine?"
+  },
+  {
+   "id": "captain_right_of_engine",
+   "type": "relation",
+   "of": [
+    "captain",
+    "engine"
+   ],
+   "desc": "the older captain is to the right of the fire engine",
+   "question": "Is the older captain to the right of the fire engine?"
+  },
+  {
+   "id": "recruit_beside_captain",
+   "type": "relation",
+   "of": [
+    "recruit",
+    "captain"
+   ],
+   "desc": "the young recruit is beside the older captain",
+   "question": "Is the young recruit beside the older captain?"
+  },
+  {
+   "id": "calendar_on_wall",
+   "type": "relation",
+   "of": [
+    "calendar",
+    "recruit"
+   ],
+   "desc": "the calendar hangs on the wall behind the captain and recruit",
+   "question": "Does the calendar hang on the wall behind the captain and recruit?"
+  },
+  {
+   "id": "bench_below_calendar",
+   "type": "relation",
+   "of": [
+    "bench",
+    "calendar"
+   ],
+   "desc": "the wooden bench is below the calendar",
+   "question": "Is the wooden bench below the calendar?"
+  },
+  {
+   "id": "helmet_on_bench",
+   "type": "relation",
+   "of": [
+    "helmet",
+    "bench"
+   ],
+   "desc": "the helmet rests on the wooden bench",
+   "question": "Does the helmet rest on the wooden bench?"
+  },
+  {
+   "id": "gloves_on_bench",
+   "type": "relation",
+   "of": [
+    "gloves",
+    "bench"
+   ],
+   "desc": "the pair of thick gloves rests on the wooden bench",
+   "question": "Do the thick gloves rest on the wooden bench?"
+  },
+  {
+   "id": "helmet_next_to_gloves",
+   "type": "relation",
+   "of": [
+    "helmet",
+    "gloves"
+   ],
+   "desc": "the helmet rests next to the gloves",
+   "question": "Is the helmet resting next to the gloves?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke filling the air",
+   "question": "Is there smoke filling the air?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "visible flame",
+   "question": "Is there any visible flame?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the tall firefighter in yellow suspenders stands",
+   "question": "Is the tall firefighter in yellow suspenders standing?"
+  },
+  {
+   "id": "puppy_on_floor",
+   "type": "relation",
+   "of": [
+    "puppy",
+    "floor"
+   ],
+   "desc": "the dalmatian puppy sits on the concrete floor",
+   "question": "Is the dalmatian puppy sitting on the concrete floor?"
+  },
+  {
+   "id": "mechanic_rag",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the mechanic in blue overalls holds a rag",
+   "question": "Is the mechanic in blue overalls holding a rag?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "brick wall",
+   "plural": "brick walls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "brick walls",
+   "question": "Are there brick walls visible in the scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "garage_door",
+   "type": "entity",
+   "class": "garage door",
+   "plural": "garage doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open garage door",
+   "question": "Is there an open garage door?",
+   "box": [
+    700,
+    100,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "engine_bumper",
+   "type": "attribute",
+   "of": "engine",
+   "desc": "the fire engine has a gleaming chrome bumper",
+   "question": "Does the fire engine have a gleaming chrome bumper?"
+  },
+  {
+   "id": "calendar_marks",
+   "type": "attribute",
+   "of": "calendar",
+   "desc": "the calendar is marked with red circles",
+   "question": "Is the calendar marked with red circles?"
+  },
+  {
+   "id": "no_fire_2",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "floor",
+   "to": "puppy",
+   "kind": "support"
+  },
+  {
+   "from": "engine",
+   "to": "bell",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "helmet",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "gloves",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0040",
+ "prompt": "Rendered in a pencil sketch with light color wash, the scene captures the bustling interior of a fire station bay. On the left stands a tall firefighter in yellow suspenders, holding a coiled hose tightly. Next to him, a small dalmatian puppy sits patiently on the concrete floor, its black spots stark against white fur. In the center, a heavy red fire engine dominates the space, its chrome bumper gleaming faintly. A mechanic in blue overalls leans against the front tire, wiping grease from his hands with a rag. Perched on the engine's running board is a vintage brass bell, polished to a soft shine. To the right of the engine, an older captain in a navy coat points toward the open garage door, directing attention outward. Beside the captain, a young recruit in a crisp uniform looks at the captain with focused intensity. Hanging on the wall behind them is a large calendar marked with red circles. Below the calendar, a wooden bench holds a forgotten helmet and a pair of thick gloves. The helmet rests next to the gloves, suggesting a hurried departure. There is no smoke filling the air, keeping the lines clean and distinct. There is no visible flame or fire, ensuring the atmosphere remains calm and preparatory rather than chaotic. The sketch lines are loose yet precise, capturing the texture of the brick walls and the smooth metal of the truck. The light wash adds subtle warmth to the reds and yellows without overwhelming the graphite details. Each figure maintains a distinct posture, contributing to the narrative of routine readiness. The spatial arrangement guides the eye from the detailed left foreground to the indicative gestures on the right, creating a balanced composition within the industrial setting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

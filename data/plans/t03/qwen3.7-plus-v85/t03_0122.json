@@ -1,0 +1,198 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image show a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    380,
+    200,
+    680,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    400,
+    400,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "wedding cake",
+   "plural": "wedding cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white three-tiered cake",
+   "question": "Is there a white three-tiered cake?",
+   "box": [
+    750,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    700,
+    600,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a glass of champagne",
+   "question": "Is the woman in the blue dress holding a glass of champagne?"
+  },
+  {
+   "id": "woman_gift",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a small gift box",
+   "question": "Is the woman in the blue dress holding a small gift box?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is sitting",
+   "question": "Is the man in the black tuxedo sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the black tuxedo looks at the woman in the blue dress",
+   "question": "Is the man in the black tuxedo looking at the woman in the blue dress?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress hands the small gift box to the man in the black tuxedo",
+   "question": "Is the woman in the blue dress handing a small gift box to the man in the black tuxedo?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the white three-tiered cake rests on the table",
+   "question": "Is the white three-tiered cake resting on the table?"
+  },
+  {
+   "id": "table_next_to_man",
+   "type": "relation",
+   "of": [
+    "table",
+    "man"
+   ],
+   "desc": "the table is next to the man in the black tuxedo",
+   "question": "Is the table next to the man in the black tuxedo?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress stands",
+   "question": "Is the woman in the blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0122",
+ "prompt": "A cinematic film still captures a wedding reception scene. On the left, a woman in a blue dress stands holding a glass of champagne. In the center, a man in a black tuxedo sits on a wooden chair, looking at the woman. To the right, a white cake with three tiers rests on a table next to the man. The woman is handing a small gift box to the man. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

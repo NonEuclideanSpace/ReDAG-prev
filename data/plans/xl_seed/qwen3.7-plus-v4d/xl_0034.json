@@ -1,0 +1,224 @@
+{
+ "style": "photorealistic photo, sterile and professional atmosphere, bright even illumination, high fidelity details, metallic sheens, glass transparency",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a modern chemistry laboratory with safety signs and chemical storage cabinets along the back wall, clean tiled floor, overhead fluorescent lights",
+   "question": "Does the image show a modern chemistry laboratory with safety signs and chemical storage cabinets along the back wall, a clean tiled floor, and overhead fluorescent lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless steel workbench",
+   "question": "Is there a stainless steel workbench?",
+   "box": [
+    50,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "scientist_left",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scientist in a white lab coat and safety goggles",
+   "question": "Is there a scientist in a white lab coat and safety goggles?",
+   "box": [
+    100,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "colleague_center",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second scientist",
+   "question": "Is there a second scientist?",
+   "box": [
+    380,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "distillation_apparatus",
+   "type": "entity",
+   "class": "distillation apparatus",
+   "plural": "distillation apparatuses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a complex distillation apparatus with glass tubing and flasks",
+   "question": "Is there a complex distillation apparatus with glass tubing and flasks?",
+   "box": [
+    400,
+    400,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "robotic_arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic arm",
+   "question": "Is there a robotic arm?",
+   "box": [
+    650,
+    300,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "researcher_right",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third scientist",
+   "question": "Is there a third scientist?",
+   "box": [
+    750,
+    250,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "microscope",
+   "type": "entity",
+   "class": "microscope",
+   "plural": "microscopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a microscope",
+   "question": "Is there a microscope?",
+   "box": [
+    800,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "test_tube",
+   "type": "attribute",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat and safety goggles holds a test tube containing purple liquid",
+   "question": "Is the scientist in a white lab coat and safety goggles holding a test tube containing purple liquid?"
+  },
+  {
+   "id": "scientist_left_examining",
+   "type": "state",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat and safety goggles is examining the test tube",
+   "question": "Is the scientist in a white lab coat and safety goggles examining the test tube?"
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "colleague_center",
+   "desc": "the second scientist holds a clipboard",
+   "question": "Is the second scientist holding a clipboard?"
+  },
+  {
+   "id": "colleague_center_writing",
+   "type": "state",
+   "of": "colleague_center",
+   "desc": "the second scientist is writing notes",
+   "question": "Is the second scientist writing notes?"
+  },
+  {
+   "id": "colleague_center_leaning",
+   "type": "relation",
+   "of": [
+    "colleague_center",
+    "workbench"
+   ],
+   "desc": "the second scientist leans against the stainless steel workbench",
+   "question": "Is the second scientist leaning against the stainless steel workbench?"
+  },
+  {
+   "id": "apparatus_bubbling",
+   "type": "state",
+   "of": "distillation_apparatus",
+   "desc": "the distillation apparatus is bubbling with clear fluid",
+   "question": "Is the distillation apparatus bubbling with clear fluid?"
+  },
+  {
+   "id": "robotic_arm_adjusting",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "distillation_apparatus"
+   ],
+   "desc": "the robotic arm adjusts a valve on the distillation apparatus",
+   "question": "Is the robotic arm adjusting a valve on the distillation apparatus?"
+  },
+  {
+   "id": "researcher_right_operating",
+   "type": "action",
+   "of": [
+    "researcher_right",
+    "microscope"
+   ],
+   "desc": "the third scientist operates the microscope",
+   "question": "Is the third scientist operating the microscope?"
+  },
+  {
+   "id": "researcher_right_peering",
+   "type": "state",
+   "of": "researcher_right",
+   "desc": "the third scientist is peering into the eyepiece",
+   "question": "Is the third scientist peering into the eyepiece?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "distillation_apparatus",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "microscope",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0034",
+ "prompt": "A photorealistic photo presents a modern chemistry laboratory with precise scientific equipment and focused researchers. On the left, a scientist in a white lab coat and safety goggles examines a test tube containing a purple liquid, holding it up to the light. Next to her, a colleague writes notes on a clipboard, leaning against a stainless steel workbench. In the center, a complex distillation apparatus bubbles with clear fluid, connected by glass tubing to various flasks. A robotic arm adjusts a valve on the setup, demonstrating advanced technology. To the right, another researcher operates a microscope, peering intently into the eyepiece while adjusting the focus knob. Safety signs and chemical storage cabinets line the back wall, organized neatly. Overhead fluorescent lights provide bright, even illumination, reflecting off the polished surfaces. The floor is clean and tiled, with no clutter. The atmosphere is sterile and professional, emphasizing precision and safety. Each instrument is rendered with high fidelity, showing metallic sheens and glass transparency. The composition balances human activity with technological complexity. The style is a photorealistic photo, capturing the intricate details of a scientific environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 1,
+  "warnings": []
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor stretching into the distance",
+   "question": "Does the image show a sterile hospital corridor stretching into the distance?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    400,
+    350,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    700,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard",
+   "question": "Is the nurse holding a clipboard?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is sitting",
+   "question": "Is the elderly woman sitting?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is pointing",
+   "question": "Is the young boy pointing?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "boy"
+   ],
+   "desc": "the nurse looks at the boy",
+   "question": "Is the nurse looking at the boy?"
+  },
+  {
+   "id": "boy_points_at_nurse",
+   "type": "relation",
+   "of": [
+    "boy",
+    "nurse"
+   ],
+   "desc": "the boy points at the nurse",
+   "question": "Is the boy pointing at the nurse?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "bench"
+   ],
+   "desc": "the elderly woman sits on the metal bench",
+   "question": "Is the elderly woman sitting on the metal bench?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0056",
+ "prompt": "In a cinematic film still, a sterile hospital corridor stretches into the distance. On the left stands a nurse in blue scrubs holding a clipboard. In the center sits an elderly woman in a floral dress on a metal bench. To the right, a young boy in a striped shirt points at the nurse. The nurse looks at the boy while he points. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

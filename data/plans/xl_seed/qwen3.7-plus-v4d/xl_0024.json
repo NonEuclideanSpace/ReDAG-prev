@@ -1,0 +1,311 @@
+{
+ "style": "watercolor illustration with soft washes, visible brushstrokes, bleeding colors, and a dreamy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a city park scene with autumn trees, a paved path, faint city buildings in the distance, and dappled sunlight on grass",
+   "question": "Does the image depict a city park scene with autumn trees, a paved path, faint city buildings, and dappled sunlight on grass?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a gray suit",
+   "question": "Is there an old man in a gray suit?",
+   "box": [
+    400,
+    450,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier dog",
+   "question": "Is there a small terrier dog?",
+   "box": [
+    480,
+    700,
+    580,
+    820
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a flowing yellow dress",
+   "question": "Is there a woman in a flowing yellow dress?",
+   "box": [
+    150,
+    400,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nearby table",
+   "question": "Is there a table?",
+   "box": [
+    50,
+    650,
+    200,
+    850
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vase of tulips",
+   "question": "Is there a vase of tulips?",
+   "box": [
+    80,
+    580,
+    170,
+    680
+   ]
+  },
+  {
+   "id": "canvas",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a canvas",
+   "question": "Is there a canvas?",
+   "box": [
+    200,
+    500,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "children",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two children",
+   "question": "Are there two children?",
+   "box": [
+    700,
+    500,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "kite",
+   "type": "entity",
+   "class": "kite",
+   "plural": "kites",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red kite",
+   "question": "Is there a red kite?",
+   "box": [
+    800,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "cyclist",
+   "type": "entity",
+   "class": "cyclist",
+   "plural": "cyclists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cyclist in blue gear",
+   "question": "Is there a cyclist in blue gear?",
+   "box": [
+    750,
+    450,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall streetlamp",
+   "question": "Is there a tall streetlamp?",
+   "box": [
+    50,
+    100,
+    150,
+    600
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man is sitting",
+   "question": "Is the old man sitting?"
+  },
+  {
+   "id": "man_reading",
+   "type": "attribute",
+   "of": "old_man",
+   "desc": "the old man holds a newspaper",
+   "question": "Is the old man holding a newspaper?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the terrier is sleeping with its head resting",
+   "question": "Is the terrier sleeping with its head resting?"
+  },
+  {
+   "id": "woman_painting",
+   "type": "action",
+   "of": [
+    "woman",
+    "canvas"
+   ],
+   "desc": "the woman paints on the canvas with a brush",
+   "question": "Is the woman painting on the canvas with a brush?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "vase"
+   ],
+   "desc": "the woman looks at the vase of tulips",
+   "question": "Is the woman looking at the vase of tulips?"
+  },
+  {
+   "id": "woman_mixing",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds a palette with paint",
+   "question": "Is the woman holding a palette with paint?"
+  },
+  {
+   "id": "children_flying",
+   "type": "action",
+   "of": [
+    "children",
+    "kite"
+   ],
+   "desc": "the children fly the red kite with raised arms",
+   "question": "Are the children flying the red kite with their arms raised?"
+  },
+  {
+   "id": "cyclist_riding",
+   "type": "state",
+   "of": "cyclist",
+   "desc": "the cyclist is riding and appears blurred",
+   "question": "Is the cyclist riding and appearing slightly blurred?"
+  },
+  {
+   "id": "dog_on_knee",
+   "type": "relation",
+   "of": [
+    "dog",
+    "old_man"
+   ],
+   "desc": "the terrier rests its head on the old man's knee",
+   "question": "Is the terrier resting its head on the old man's knee?"
+  },
+  {
+   "id": "vase_on_table",
+   "type": "relation",
+   "of": [
+    "vase",
+    "table"
+   ],
+   "desc": "the vase stands on the table",
+   "question": "Is the vase standing on the table?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "old_man",
+    "bench"
+   ],
+   "desc": "the old man sits on the wooden bench",
+   "question": "Is the old man sitting on the wooden bench?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "old_man",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "vase",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0024",
+ "prompt": "This watercolor illustration portrays a serene city park scene with soft washes of color and visible brushstrokes. In the center foreground, an old man in a gray suit sits on a wooden bench, reading a newspaper while a small terrier dog rests its head on his knee. To his left, a woman in a flowing yellow dress paints on a canvas, her brush touching the paper as she looks at a vase of tulips on a nearby table. On the right, two children fly a red kite, their arms raised high as the string pulls taut. Behind them, a cyclist in blue gear rides past on a paved path, blurring slightly to suggest motion. A streetlamp stands tall in the background left, surrounded by autumn trees with orange and brown leaves. The woman mixes paint on her palette, while the dog sleeps peacefully. Soft dappled sunlight filters through the branches, creating gentle pools of light on the grass. The background features faint outlines of city buildings, blending into the sky with pale blues and grays. The loose style captures the transient beauty of the moment, with bleeding colors enhancing the dreamy, relaxed atmosphere of this urban oasis where nature and leisure intersect harmoniously.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 2,
+  "warnings": []
+ }
+}

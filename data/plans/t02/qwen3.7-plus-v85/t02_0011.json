@@ -1,0 +1,125 @@
+{
+ "style": "oil painting style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    574,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue hat is sitting",
+   "question": "Is the woman in a blue hat sitting?"
+  },
+  {
+   "id": "man_spoon",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a silver spoon",
+   "question": "Is the man in a red scarf holding a silver spoon?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf hands the silver spoon to the woman in a blue hat",
+   "question": "Is the man in a red scarf handing a silver spoon to the woman in a blue hat?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the image?"
+  },
+  {
+   "id": "man_scarf",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a red scarf",
+   "question": "Does the man wear a red scarf?"
+  },
+  {
+   "id": "woman_hat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue hat",
+   "question": "Does the woman wear a blue hat?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0011",
+ "prompt": "In an oil painting style, a man in a red scarf sits on the left side of a train dining car. A woman in a blue hat sits on the right side. The man holds a silver spoon. He is handing the spoon to the woman. There is no window visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

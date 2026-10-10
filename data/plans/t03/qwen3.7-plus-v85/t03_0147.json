@@ -1,0 +1,181 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site",
+   "question": "Does the image depict a construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "supervisor",
+   "type": "entity",
+   "class": "supervisor",
+   "plural": "supervisors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a supervisor in an orange vest",
+   "question": "Is there a supervisor in an orange vest?",
+   "box": [
+    380,
+    300,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large gray crane",
+   "question": "Is there a large gray crane?",
+   "box": [
+    700,
+    100,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick",
+   "plural": "bricks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked bricks",
+   "question": "Are there stacked bricks?",
+   "box": [
+    750,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds blueprints",
+   "question": "Is the worker in the yellow hard hat holding blueprints?"
+  },
+  {
+   "id": "worker_looking",
+   "type": "relation",
+   "of": [
+    "worker",
+    "supervisor"
+   ],
+   "desc": "the worker in the yellow hard hat is looking at the supervisor",
+   "question": "Is the worker in the yellow hard hat looking toward the supervisor in the orange vest?"
+  },
+  {
+   "id": "supervisor_pointing",
+   "type": "state",
+   "of": "supervisor",
+   "desc": "the supervisor in the orange vest is pointing",
+   "question": "Is the supervisor in the orange vest pointing?"
+  },
+  {
+   "id": "worker_left",
+   "type": "relation",
+   "of": [
+    "worker",
+    "supervisor"
+   ],
+   "desc": "the worker in the yellow hard hat is to the left of the supervisor",
+   "question": "Is the worker in the yellow hard hat to the left of the supervisor in the orange vest?"
+  },
+  {
+   "id": "supervisor_center",
+   "type": "relation",
+   "of": [
+    "supervisor",
+    "crane"
+   ],
+   "desc": "the supervisor in the orange vest is to the left of the crane",
+   "question": "Is the supervisor in the orange vest to the left of the large gray crane?"
+  },
+  {
+   "id": "crane_next_to_bricks",
+   "type": "relation",
+   "of": [
+    "crane",
+    "bricks"
+   ],
+   "desc": "the large gray crane is next to the stacked bricks",
+   "question": "Is the large gray crane next to the stacked bricks?"
+  },
+  {
+   "id": "supervisor_points_at_crane",
+   "type": "action",
+   "of": [
+    "supervisor",
+    "crane"
+   ],
+   "desc": "the supervisor in the orange vest points at the large gray crane",
+   "question": "Is the supervisor in the orange vest pointing at the large gray crane?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery operating in the background",
+   "question": "Is there any heavy machinery operating in the background?"
+  },
+  {
+   "id": "worker_stands",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat stands",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "crane_sits",
+   "type": "state",
+   "of": "crane",
+   "desc": "the large gray crane sits idle",
+   "question": "Is the large gray crane sitting idle?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0147",
+ "prompt": "This flat vector illustration depicts a construction site. On the left stands a worker in a yellow hard hat holding blueprints. In the center, a supervisor in an orange vest points toward the right side of the scene. On the right, a large gray crane sits idle next to stacked bricks. The worker in the yellow hard hat is looking at the supervisor in the orange vest. The supervisor in the orange vest is pointing at the large gray crane. There is no heavy machinery operating in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

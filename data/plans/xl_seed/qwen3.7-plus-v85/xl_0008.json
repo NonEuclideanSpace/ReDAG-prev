@@ -1,0 +1,336 @@
+{
+ "style": "oil painting, thick brushstrokes, warm earth tones",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic farmyard with dirt ground and large oak trees in the distance",
+   "question": "Does the image show a rustic farmyard with dirt ground and large oak trees in the distance?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly farmer",
+   "question": "Is there an elderly farmer?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "chickens",
+   "type": "entity",
+   "class": "chicken",
+   "plural": "chickens",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a flock of chickens",
+   "question": "Are there multiple chickens?",
+   "box": [
+    300,
+    700,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "horse",
+   "type": "entity",
+   "class": "horse",
+   "plural": "horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown horse",
+   "question": "Is there a brown horse?",
+   "box": [
+    50,
+    250,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "wooden fence",
+   "plural": "wooden fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence",
+   "question": "Is there a wooden fence?",
+   "box": [
+    0,
+    400,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young child",
+   "question": "Is there a young child?",
+   "box": [
+    700,
+    300,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "entity",
+   "class": "watering can",
+   "plural": "watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty watering can",
+   "question": "Is there a rusty watering can?",
+   "box": [
+    100,
+    850,
+    300,
+    1000
+   ]
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "patch of grass",
+   "plural": "patches of grass",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of green grass",
+   "question": "Is there a patch of green grass?",
+   "box": [
+    50,
+    880,
+    350,
+    1024
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    650,
+    600,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    750,
+    820,
+    900
+   ]
+  },
+  {
+   "id": "farmer_feeding",
+   "type": "action",
+   "of": [
+    "farmer",
+    "chickens"
+   ],
+   "desc": "the elderly farmer feeds corn kernels to the chickens",
+   "question": "Is the elderly farmer feeding corn kernels to the chickens?"
+  },
+  {
+   "id": "chickens_around_boots",
+   "type": "relation",
+   "of": [
+    "chickens",
+    "farmer"
+   ],
+   "desc": "the chickens are gathered around the elderly farmer's boots",
+   "question": "Are the chickens gathered around the elderly farmer's boots?"
+  },
+  {
+   "id": "horse_leaning",
+   "type": "relation",
+   "of": [
+    "horse",
+    "fence"
+   ],
+   "desc": "the brown horse leans its head over the wooden fence",
+   "question": "Is the brown horse leaning its head over the wooden fence?"
+  },
+  {
+   "id": "horse_nuzzling",
+   "type": "action",
+   "of": [
+    "horse",
+    "farmer"
+   ],
+   "desc": "the brown horse nuzzles the elderly farmer's shoulder",
+   "question": "Is the brown horse nuzzling the elderly farmer's shoulder?"
+  },
+  {
+   "id": "child_holding",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the young child holds a basket",
+   "question": "Is the young child holding a basket?"
+  },
+  {
+   "id": "child_looking",
+   "type": "action",
+   "of": [
+    "child",
+    "horse"
+   ],
+   "desc": "the young child looks up at the brown horse",
+   "question": "Is the young child looking up at the brown horse?"
+  },
+  {
+   "id": "watering_can_position",
+   "type": "state",
+   "of": "watering_can",
+   "desc": "the rusty watering can lies on its side",
+   "question": "Is the rusty watering can lying on its side?"
+  },
+  {
+   "id": "watering_can_near_grass",
+   "type": "relation",
+   "of": [
+    "watering_can",
+    "grass"
+   ],
+   "desc": "the rusty watering can is near the patch of green grass",
+   "question": "Is the rusty watering can near the patch of green grass?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat sits atop the wooden crate",
+   "question": "Is the black cat sitting atop the wooden crate?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "chickens"
+   ],
+   "desc": "the black cat watches the chickens",
+   "question": "Is the black cat watching the chickens?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the elderly farmer in a plaid shirt stands",
+   "question": "Is the elderly farmer in a plaid shirt standing?"
+  },
+  {
+   "id": "horse_standing",
+   "type": "state",
+   "of": "horse",
+   "desc": "the brown horse stands",
+   "question": "Is the brown horse standing?"
+  },
+  {
+   "id": "barn_door",
+   "type": "entity",
+   "class": "barn door",
+   "plural": "barn doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open red barn door revealing dark interior shadows and stacked hay bales",
+   "question": "Is there an open red barn door revealing dark interior shadows and stacked hay bales?",
+   "box": [
+    800,
+    50,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "farmer_shirt",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the elderly farmer wears a plaid shirt",
+   "question": "Does the elderly farmer wear a plaid shirt?"
+  },
+  {
+   "id": "child_overalls",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the young child wears overalls",
+   "question": "Does the young child wear overalls?"
+  },
+  {
+   "id": "basket_eggs",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the basket held by the young child contains fresh eggs",
+   "question": "Does the basket held by the young child contain fresh eggs?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0008",
+ "prompt": "In a rustic farmyard, an elderly farmer in a plaid shirt feeds corn kernels to a flock of chickens gathered around his boots in the center. A brown horse stands on the left, leaning its head over a wooden fence to nuzzle the farmer's shoulder affectionately. To the right, a young child in overalls holds a basket of fresh eggs, looking up at the horse with wonder. In the foreground, a rusty watering can lies on its side near a patch of green grass. A red barn door stands open in the background, revealing dark interior shadows and stacked hay bales. A black cat sits atop a wooden crate near the center-right, watching the chickens with keen interest. Sunlight filters through large oak trees in the distance, casting dappled light across the dirt ground. The thick brushstrokes capture the texture of the animal fur and the weathered wood of the fence. Warm earth tones dominate the palette, with touches of vibrant red and green adding contrast. The atmosphere is peaceful and timeless, evoking a sense of rural tranquility. This is an oil painting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

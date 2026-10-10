@@ -1,0 +1,636 @@
+{
+ "style": "surreal photorealism, dreamlike atmosphere, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park scene with grass and an oak tree",
+   "question": "Does the image show a park scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden park bench with splits in the wood",
+   "question": "Is there a weathered wooden park bench with visible splits?",
+   "box": [
+    100,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "leather backpack",
+   "plural": "leather backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an aged leather backpack turned upside down",
+   "question": "Is there an aged leather backpack turned upside down?",
+   "box": [
+    250,
+    350,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten apple",
+   "question": "Is there a half-eaten apple?",
+   "box": [
+    300,
+    500,
+    350,
+    550
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of binoculars",
+   "question": "Is there a pair of binoculars?",
+   "box": [
+    360,
+    496,
+    420,
+    544
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled map",
+   "question": "Is there a crumpled map?",
+   "box": [
+    280,
+    520,
+    340,
+    580
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose",
+   "question": "Is there a red garden hose?",
+   "box": [
+    600,
+    600,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage camera",
+   "question": "Is there a vintage camera?",
+   "box": [
+    800,
+    750,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "basil plant",
+   "plural": "basil plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted basil plant",
+   "question": "Is there a potted basil plant?",
+   "box": [
+    50,
+    600,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "sock",
+   "type": "entity",
+   "class": "sock",
+   "plural": "socks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray sock",
+   "question": "Is there a stray sock?",
+   "box": [
+    200,
+    100,
+    250,
+    200
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "sparrow",
+   "plural": "sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sparrow",
+   "question": "Is there a sparrow?",
+   "box": [
+    691,
+    641,
+    739,
+    689
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a trail of ants",
+   "question": "Are there ants visible in a trail?",
+   "box": [
+    300,
+    550,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "oak branch",
+   "plural": "oak branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low-hanging oak branch",
+   "question": "Is there a low-hanging oak branch?",
+   "box": [
+    0,
+    0,
+    400,
+    150
+   ]
+  },
+  {
+   "id": "backpack_upside_down",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the leather backpack is turned upside down",
+   "question": "Is the leather backpack turned upside down?"
+  },
+  {
+   "id": "backpack_zippers_open",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the zippers of the leather backpack are gaping open",
+   "question": "Are the zippers of the leather backpack gaping open?"
+  },
+  {
+   "id": "binoculars_fixed",
+   "type": "state",
+   "of": "binoculars",
+   "desc": "the binoculars are fixed in position",
+   "question": "Are the binoculars fixed in position?"
+  },
+  {
+   "id": "camera_face_down",
+   "type": "state",
+   "of": "camera",
+   "desc": "the vintage camera is lying face-down",
+   "question": "Is the vintage camera lying face-down?"
+  },
+  {
+   "id": "camera_upright",
+   "type": "state",
+   "of": "camera",
+   "desc": "the vintage camera rests upright despite the broken leg",
+   "question": "Does the vintage camera rest upright despite having a broken tripod leg?"
+  },
+  {
+   "id": "sock_dangling",
+   "type": "relation",
+   "of": [
+    "sock",
+    "branch"
+   ],
+   "desc": "the sock dangles from the branch",
+   "question": "Does the sock dangle from the branch?"
+  },
+  {
+   "id": "bench_rotating",
+   "type": "state",
+   "of": "bench",
+   "desc": "the bench appears to be rotating on its axis",
+   "question": "Does the bench appear to be rotating on its axis?"
+  },
+  {
+   "id": "backpack_on_bench",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "bench"
+   ],
+   "desc": "the leather backpack is on the bench",
+   "question": "Is the leather backpack on the bench?"
+  },
+  {
+   "id": "cargo_spilled",
+   "type": "relation",
+   "of": [
+    "apple",
+    "backpack"
+   ],
+   "desc": "the apple has spilled out of the backpack",
+   "question": "Has the apple spilled out of the backpack?"
+  },
+  {
+   "id": "binoculars_spilled",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "backpack"
+   ],
+   "desc": "the binoculars have spilled out of the backpack",
+   "question": "Have the binoculars spilled out of the backpack?"
+  },
+  {
+   "id": "map_spilled",
+   "type": "relation",
+   "of": [
+    "map",
+    "backpack"
+   ],
+   "desc": "the map has spilled out of the backpack",
+   "question": "Has the map spilled out of the backpack?"
+  },
+  {
+   "id": "hose_beside_bench",
+   "type": "relation",
+   "of": [
+    "hose",
+    "bench"
+   ],
+   "desc": "the red garden hose is beside the bench",
+   "question": "Is the red garden hose beside the bench?"
+  },
+  {
+   "id": "hose_on_grass",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose lies across the grass",
+   "question": "Does the red garden hose lie across the grass?"
+  },
+  {
+   "id": "camera_in_dirt",
+   "type": "state",
+   "of": "camera",
+   "desc": "the vintage camera lies in the dirt",
+   "question": "Does the vintage camera lie in the dirt?"
+  },
+  {
+   "id": "drip_on_lens",
+   "type": "relation",
+   "of": [
+    "hose",
+    "camera"
+   ],
+   "desc": "water drips from the hose onto the camera lens",
+   "question": "Does water drip from the hose onto the camera lens?"
+  },
+  {
+   "id": "sock_on_branch",
+   "type": "relation",
+   "of": [
+    "sock",
+    "branch"
+   ],
+   "desc": "the sock hangs from the oak branch",
+   "question": "Does the sock hang from the oak branch?"
+  },
+  {
+   "id": "shadow_on_bench",
+   "type": "relation",
+   "of": [
+    "sock",
+    "bench"
+   ],
+   "desc": "the shadow of the sock falls on the bench",
+   "question": "Does the shadow of the sock fall on the bench?"
+  },
+  {
+   "id": "sparrow_on_hose",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "hose"
+   ],
+   "desc": "the sparrow alights on the hose",
+   "question": "Does the sparrow alight on the hose?"
+  },
+  {
+   "id": "ants_on_bench",
+   "type": "relation",
+   "of": [
+    "ants",
+    "bench"
+   ],
+   "desc": "the ants are on the bench",
+   "question": "Are the ants on the bench?"
+  },
+  {
+   "id": "no_animal",
+   "type": "absent",
+   "desc": "any animal other than the sparrow and ants",
+   "question": "Are there any animals other than the sparrow and ants in the image?"
+  },
+  {
+   "id": "apple_on_bench",
+   "type": "relation",
+   "of": [
+    "apple",
+    "bench"
+   ],
+   "desc": "the half-eaten apple is on the bench",
+   "question": "Is the half-eaten apple on the bench?"
+  },
+  {
+   "id": "binoculars_on_bench",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "bench"
+   ],
+   "desc": "the binoculars are on the bench",
+   "question": "Are the binoculars on the bench?"
+  },
+  {
+   "id": "map_on_bench",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the crumpled map is on the bench",
+   "question": "Is the crumpled map on the bench?"
+  },
+  {
+   "id": "ants_on_hose",
+   "type": "relation",
+   "of": [
+    "ants",
+    "hose"
+   ],
+   "desc": "the ants are on the hose",
+   "question": "Are the ants on the hose?"
+  },
+  {
+   "id": "plant_new_leaf",
+   "type": "relation",
+   "of": [
+    "plant",
+    "map"
+   ],
+   "desc": "the potted basil plant has a single new leaf with the shape of the map and the color of the sock",
+   "question": "Does the potted basil plant have a single new leaf with the shape of the map and the color of the sock?"
+  },
+  {
+   "id": "leaf_veins_glowing",
+   "type": "state",
+   "of": "plant",
+   "desc": "the veins of the new leaf on the basil plant are glowing faintly",
+   "question": "Are the veins of the new leaf on the basil plant glowing faintly?"
+  },
+  {
+   "id": "apple_juice",
+   "type": "attribute",
+   "of": "apple",
+   "desc": "juices from the half-eaten apple pooling on the bench",
+   "question": "Are juices from the half-eaten apple pooling on the bench?"
+  },
+  {
+   "id": "map_wet",
+   "type": "state",
+   "of": "map",
+   "desc": "the crumpled map is wet from dew",
+   "question": "Is the crumpled map wet from dew?"
+  },
+  {
+   "id": "map_curling",
+   "type": "state",
+   "of": "map",
+   "desc": "the crumpled map is curling in on itself",
+   "question": "Is the crumpled map curling in on itself?"
+  },
+  {
+   "id": "camera_clicking",
+   "type": "state",
+   "of": "camera",
+   "desc": "the vintage camera's shutter is clicking",
+   "question": "Is the vintage camera's shutter clicking?"
+  },
+  {
+   "id": "sparrow_pecking",
+   "type": "action",
+   "of": [
+    "sparrow",
+    "hose"
+   ],
+   "desc": "the sparrow pecks at the water droplet on the hose",
+   "question": "Is the sparrow pecking at the water droplet on the hose?"
+  },
+  {
+   "id": "water_on_lens",
+   "type": "relation",
+   "of": [
+    "hose",
+    "camera"
+   ],
+   "desc": "a bead of water accumulates on the polished glass lens of the vintage camera",
+   "question": "Is a bead of water accumulating on the polished glass lens of the vintage camera?"
+  },
+  {
+   "id": "map_chewed",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the crumpled map appears chewed",
+   "question": "Does the crumpled map appear chewed?"
+  },
+  {
+   "id": "hose_drip",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose ends in a drip",
+   "question": "Does the red garden hose end in a drip?"
+  },
+  {
+   "id": "binoculars_project",
+   "type": "action",
+   "of": [
+    "binoculars",
+    "bench"
+   ],
+   "desc": "the binoculars project an image onto the bench",
+   "question": "Do the binoculars project an image onto the bench?"
+  },
+  {
+   "id": "projected_traveler",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench displays a projected image of a traveler",
+   "question": "Does the bench display a projected image of a traveler?"
+  },
+  {
+   "id": "no_wind",
+   "type": "absent",
+   "desc": "wind",
+   "question": "Is there any visible wind in the image?"
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "grasses",
+   "count": 1,
+   "count_exact": false,
+   "desc": "green grass covering the ground",
+   "question": "Is there green grass covering the ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oak tree with low-hanging branches",
+   "question": "Is there an oak tree with low-hanging branches?",
+   "box": [
+    0,
+    0,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "apple_browned",
+   "type": "attribute",
+   "of": "apple",
+   "desc": "the apple has browned red flesh",
+   "question": "Does the apple have browned red flesh?"
+  },
+  {
+   "id": "binoculars_clouded",
+   "type": "attribute",
+   "of": "binoculars",
+   "desc": "one lens of the binoculars is clouded",
+   "question": "Is one lens of the binoculars clouded?"
+  },
+  {
+   "id": "camera_broken_leg",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera has one leg broken off its tripod",
+   "question": "Does the camera have one leg broken off its tripod?"
+  },
+  {
+   "id": "plant_glistening",
+   "type": "state",
+   "of": "plant",
+   "desc": "the leaves of the basil plant are glistening",
+   "question": "Are the leaves of the basil plant glistening?"
+  },
+  {
+   "id": "sock_footprint",
+   "type": "attribute",
+   "of": "sock",
+   "desc": "the toe of the sock is caked with a dried footprint",
+   "question": "Is the toe of the sock caked with a dried footprint?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "backpack",
+   "kind": "support"
+  },
+  {
+   "from": "branch",
+   "to": "sock",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0349",
+ "prompt": "The park bench, weathered and split by time, supports a turned-upside-down leather backpack, its aged zippers gaping like an animal's maw to spill out its meager cargo: a half-eaten apple with its red flesh turned faintly brown, a pair of binoculars with one lens clouded and one eye fixed on some distant vanishing point, and a crumpled map that seems to have been chewed by a stray animal, though no animal is in sight. Beside the bench, a red garden hose weaves a lazy, sinuous path across the grass, its limp body ending in a slow, steady drip onto the polished glass lens of a vintage camera lying face-down in the dirt. The camera, a relic of mid-century craftsmanship, has one leg broken off its tripod, yet still somehow rests upright, as if held by an invisible force, its focus ring turned as if in response to the drip of water that now accumulates like a bead on its lens. Just a few feet away, a potted basil plant sways slightly, though there is no wind, its leaves glistening as if misted with something beyond water—perhaps the memory of rain. From a low-hanging oak branch, a single stray sock dangles like a macabre wind chime, its toe still caked with the dried footprint of some absent traveler, who once carried the backpack before abandoning it in this liminal moment. The sock swings gently, and in the shifting light, its shadow elongates and folds over the bench like a phantom limb, merging briefly with the backpack before dissipating. A sparrow alights on the hose, its tiny talons curling around the plastic, and it pecks at the water droplet before it slips off and lands on the camera lens, distorting the reflection of the oak above into a fractured, dreamlike pattern. The binoculars, fixed on a point in the distance, seem to draw the gaze of the bench itself, which is slowly rotating on its own axis, the wood groaning like a ship in a storm, though the bench sits still on the same patch of earth. The camera, still, begins to hum faintly, its shutter almost imperceptibly clicking, as if recording not just the scene but the subtle shifts in time and matter that the human eye cannot perceive. The apple, left too long in the open, begins to soften, its juices pooling onto the bench, where a trail of ants appears and begins to follow the scent, winding between the backpack’s open flaps and up the hose like explorers on an unseen quest. The map, crumpled and wet from dew, begins to curl in on itself, the paper warping and forming strange topographical ridges that mirror the actual contours of the park, though the park itself seems to subtly change as the map reshapes, as if they are both reacting to the same hidden design. The sock, still hanging, begins to vibrate slightly, its cotton fibers resonating with the faint sound of the camera’s shutter and the low thrum of the bench’s slow turn, creating a kind of harmonic feedback loop that hums through the entire scene like an unseen conductor. The basil plant, now drenched in the strange moisture, begins to grow a single new leaf, which unfurls with the shape of the map and the color of the sock, its veins glowing faintly in the morning light. The binoculars, their lenses reflecting the sun, catch the glow and project it onto the bench, creating a shifting image of the traveler who once walked here, their face a blur of memory and shadow. The water continues to drip, the scene continues to shift, and the objects—backpack, bench, hose, camera, plant, sock—remain locked in an intricate, recursive dance, each one both acting and being acted upon in a moment that feels suspended between the real and the imagined, where logic bends but never breaks.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 9,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 69,
+   "n_uncovered": 7,
+   "proposed": 7,
+   "ungrounded": 2,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 3,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

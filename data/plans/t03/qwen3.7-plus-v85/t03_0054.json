@@ -1,0 +1,197 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench in the image?",
+   "box": [
+    350,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "woman_briefcase",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a silver briefcase",
+   "question": "Is the woman in a blue coat holding a silver briefcase?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green hat is sitting",
+   "question": "Is the man in a green hat sitting?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is resting",
+   "question": "Is the black cat resting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue coat is looking at the man in a green hat",
+   "question": "Is the woman in a blue coat looking at the man in a green hat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in a green hat sits on the wooden bench",
+   "question": "Is the man in a green hat sitting on the wooden bench?"
+  },
+  {
+   "id": "cat_next_to_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat is next to the wooden bench",
+   "question": "Is the black cat next to the wooden bench?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train",
+   "question": "Is there a train visible in the image?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "concrete floor",
+   "plural": "concrete floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cold concrete floor",
+   "question": "Is there a cold concrete floor?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0054",
+ "prompt": "An oil painting depicts a subway platform. On the left, a woman in a blue coat stands holding a silver briefcase. In the center, a man in a green hat sits on a wooden bench. To the right, a black cat rests on the cold concrete floor. The woman is looking at the man. The man is sitting on the bench. The cat is next to the bench. There is no train visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

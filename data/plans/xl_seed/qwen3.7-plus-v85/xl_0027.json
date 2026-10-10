@@ -1,0 +1,431 @@
+{
+ "style": "oil painting with thick impasto brushstrokes, dramatic lighting, rich saturated colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling train station platform",
+   "question": "Does the image show a bustling train station platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man",
+   "question": "Is there an elderly man?",
+   "box": [
+    400,
+    300,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large leather suitcase",
+   "question": "Is there a large leather suitcase?",
+   "box": [
+    560,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman",
+   "question": "Is there a young woman?",
+   "box": [
+    250,
+    320,
+    380,
+    820
+   ]
+  },
+  {
+   "id": "soldier",
+   "type": "entity",
+   "class": "soldier",
+   "plural": "soldiers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a soldier in uniform",
+   "question": "Is there a soldier in uniform?",
+   "box": [
+    100,
+    350,
+    240,
+    800
+   ]
+  },
+  {
+   "id": "porter",
+   "type": "entity",
+   "class": "porter",
+   "plural": "porters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porter",
+   "question": "Is there a porter?",
+   "box": [
+    600,
+    350,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "trunks",
+   "type": "entity",
+   "class": "trunk",
+   "plural": "trunks",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three stacked trunks",
+   "question": "Are there three stacked trunks?",
+   "box": [
+    620,
+    550,
+    730,
+    750
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child",
+   "question": "Is there a child?",
+   "box": [
+    800,
+    450,
+    920,
+    850
+   ]
+  },
+  {
+   "id": "pigeon",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pigeon",
+   "question": "Is there a pigeon?",
+   "box": [
+    850,
+    650,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    780,
+    700,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a newsstand vendor",
+   "question": "Is there a newsstand vendor?",
+   "box": [
+    850,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "businessman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a businessman",
+   "question": "Is there a businessman?",
+   "box": [
+    900,
+    320,
+    1000,
+    650
+   ]
+  },
+  {
+   "id": "newspaper",
+   "type": "entity",
+   "class": "newspaper",
+   "plural": "newspapers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a newspaper",
+   "question": "Is there a newspaper?",
+   "box": [
+    880,
+    450,
+    940,
+    520
+   ]
+  },
+  {
+   "id": "man_watch",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed coat holds a pocket watch",
+   "question": "Is the elderly man in a tweed coat holding a pocket watch?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed coat is standing",
+   "question": "Is the elderly man in a tweed coat standing?"
+  },
+  {
+   "id": "man_next_suitcase",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "suitcase"
+   ],
+   "desc": "the elderly man in a tweed coat stands next to the large leather suitcase",
+   "question": "Is the elderly man in a tweed coat standing next to the large leather suitcase?"
+  },
+  {
+   "id": "woman_left_man",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "elderly_man"
+   ],
+   "desc": "the young woman in a red scarf is to the left of the elderly man in a tweed coat",
+   "question": "Is the young woman in a red scarf to the left of the elderly man in a tweed coat?"
+  },
+  {
+   "id": "woman_waves",
+   "type": "action",
+   "of": [
+    "young_woman",
+    "soldier"
+   ],
+   "desc": "the young woman in a red scarf waves goodbye to the soldier in uniform",
+   "question": "Is the young woman in a red scarf waving goodbye to the soldier in uniform?"
+  },
+  {
+   "id": "soldier_boarding",
+   "type": "state",
+   "of": "soldier",
+   "desc": "the soldier in uniform is boarding a steam train",
+   "question": "Is the soldier in uniform boarding a steam train?"
+  },
+  {
+   "id": "porter_carries",
+   "type": "action",
+   "of": [
+    "porter",
+    "trunks"
+   ],
+   "desc": "the porter in a blue cap carries the three stacked trunks",
+   "question": "Is the porter in a blue cap carrying the three stacked trunks?"
+  },
+  {
+   "id": "child_feeds",
+   "type": "action",
+   "of": [
+    "child",
+    "pigeon"
+   ],
+   "desc": "the child in a striped shirt feeds crumbs to the pigeon",
+   "question": "Is the child in a striped shirt feeding crumbs to the pigeon?"
+  },
+  {
+   "id": "pigeon_on_bench",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "bench"
+   ],
+   "desc": "the pigeon is perched on the wooden bench",
+   "question": "Is the pigeon perched on the wooden bench?"
+  },
+  {
+   "id": "vendor_hands",
+   "type": "action",
+   "of": [
+    "vendor",
+    "businessman"
+   ],
+   "desc": "the newsstand vendor hands the newspaper to the businessman in a suit",
+   "question": "Is the newsstand vendor handing the newspaper to the businessman in a suit?"
+  },
+  {
+   "id": "businessman_reading",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman in a suit is reading the headlines",
+   "question": "Is the businessman in a suit reading the headlines?"
+  },
+  {
+   "id": "train",
+   "type": "entity",
+   "class": "steam train",
+   "plural": "steam trains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steam train emitting billowing white smoke",
+   "question": "Is there a steam train emitting billowing white smoke?",
+   "box": [
+    500,
+    200,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "porter_straining",
+   "type": "state",
+   "of": "porter",
+   "desc": "the porter in a blue cap is straining under the weight",
+   "question": "Is the porter in a blue cap straining under the weight?"
+  },
+  {
+   "id": "porter_toward_train",
+   "type": "relation",
+   "of": [
+    "porter",
+    "train"
+   ],
+   "desc": "the porter in a blue cap moves toward the steam train",
+   "question": "Is the porter in a blue cap moving toward the steam train?"
+  },
+  {
+   "id": "clock_tower",
+   "type": "entity",
+   "class": "clock tower",
+   "plural": "clock towers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock tower",
+   "question": "Is there a clock tower?",
+   "box": [
+    400,
+    50,
+    624,
+    400
+   ]
+  },
+  {
+   "id": "clock_obscured",
+   "type": "state",
+   "of": "clock_tower",
+   "desc": "the clock tower face is partially obscured by steam",
+   "question": "Is the clock tower face partially obscured by steam?"
+  },
+  {
+   "id": "man_coat",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man wears a tweed coat",
+   "question": "Does the elderly man wear a tweed coat?"
+  },
+  {
+   "id": "woman_scarf",
+   "type": "attribute",
+   "of": "young_woman",
+   "desc": "the young woman wears a red scarf",
+   "question": "Does the young woman wear a red scarf?"
+  },
+  {
+   "id": "porter_cap",
+   "type": "attribute",
+   "of": "porter",
+   "desc": "the porter wears a blue cap",
+   "question": "Does the porter wear a blue cap?"
+  },
+  {
+   "id": "child_shirt",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears a striped shirt",
+   "question": "Does the child wear a striped shirt?"
+  },
+  {
+   "id": "businessman_suit",
+   "type": "attribute",
+   "of": "businessman",
+   "desc": "the businessman wears a suit",
+   "question": "Does the businessman wear a suit?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "pigeon",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0027",
+ "prompt": "On a bustling train station platform, thick impasto brushstrokes capture the movement of travelers. In the center, an elderly man in a tweed coat checks his pocket watch while standing next to a large leather suitcase. To his left, a young woman in a red scarf waves goodbye to a soldier in uniform who is boarding a steam train emitting billowing white smoke. A porter in a blue cap carries three stacked trunks toward the train car, straining under the weight. On the right, a child in a striped shirt feeds crumbs to a pigeon perched on a wooden bench. Behind them, a newsstand vendor hands a newspaper to a businessman in a suit reading the headlines. A clock tower looms in the background, its face partially obscured by steam. The lighting is dramatic, with shafts of light piercing through the smoky haze, illuminating dust motes in the air. Colors are rich and saturated, with deep blues, warm browns, and vibrant reds contrasting against the gray steel of the trains. The texture of the paint is visible, adding a tactile quality to the scene. This composition is rendered in the style of an oil painting, emphasizing emotional resonance and atmospheric depth over precise photographic detail.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

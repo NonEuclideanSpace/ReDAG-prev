@@ -1,0 +1,315 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy airport gate scene with a glass wall and floor",
+   "question": "Does the image show a busy airport gate scene with a glass wall and floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "metal chair",
+   "plural": "metal chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal chair",
+   "question": "Is there a metal chair?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "departure_board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large digital departure board",
+   "question": "Is there a large digital departure board?",
+   "box": [
+    700,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    80,
+    200,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "man_suit",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    400,
+    150,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    650,
+    300,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "terrier dog",
+   "plural": "terrier dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier dog",
+   "question": "Is there a small terrier dog?",
+   "box": [
+    700,
+    700,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a green hat",
+   "question": "Is there an elderly man in a green hat?",
+   "box": [
+    500,
+    200,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is sitting",
+   "question": "Is the woman in the blue coat sitting?"
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat has a relaxed posture",
+   "question": "Does the woman in the blue coat have a relaxed posture?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_suit",
+   "desc": "the man in the gray suit is standing upright",
+   "question": "Is the man in the gray suit standing upright?"
+  },
+  {
+   "id": "man_holding_briefcase",
+   "type": "attribute",
+   "of": "man_suit",
+   "desc": "the man in the gray suit holds a black briefcase tightly in his right hand",
+   "question": "Is the man in the gray suit holding a black briefcase tightly in his right hand?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow shirt is pointing excitedly",
+   "question": "Is the child in the yellow shirt pointing excitedly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small terrier dog is sitting patiently",
+   "question": "Is the small terrier dog sitting patiently?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small terrier dog is looking up",
+   "question": "Is the small terrier dog looking up?"
+  },
+  {
+   "id": "elderly_man_leaning",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the green hat is leaning",
+   "question": "Is the elderly man in the green hat leaning?"
+  },
+  {
+   "id": "elderly_man_observing",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the green hat is observing quietly",
+   "question": "Is the elderly man in the green hat observing quietly?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman",
+    "chair"
+   ],
+   "desc": "the woman in the blue coat sits on the metal chair",
+   "question": "Is the woman in the blue coat sitting on the metal chair?"
+  },
+  {
+   "id": "child_points_at_board",
+   "type": "action",
+   "of": [
+    "child",
+    "departure_board"
+   ],
+   "desc": "the child in the yellow shirt points at the large digital departure board",
+   "question": "Is the child in the yellow shirt pointing at the large digital departure board?"
+  },
+  {
+   "id": "dog_next_to_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the small terrier dog is next to the child in the yellow shirt",
+   "question": "Is the small terrier dog next to the child in the yellow shirt?"
+  },
+  {
+   "id": "elderly_man_behind_group",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "woman"
+   ],
+   "desc": "the elderly man in the green hat is behind the woman in the blue coat",
+   "question": "Is the elderly man in the green hat behind the woman in the blue coat?"
+  },
+  {
+   "id": "elderly_man_against_wall",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the green hat leans against the glass wall",
+   "question": "Is the elderly man in the green hat leaning against the glass wall?"
+  },
+  {
+   "id": "woman_looks_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man_suit"
+   ],
+   "desc": "the woman in the blue coat looks at the man in the gray suit",
+   "question": "Is the woman in the blue coat looking at the man in the gray suit?"
+  },
+  {
+   "id": "child_touches_dog",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in the yellow shirt rests a hand on the head of the small terrier dog",
+   "question": "Is the child in the yellow shirt resting a hand on the head of the small terrier dog?"
+  },
+  {
+   "id": "no_luggage_cart",
+   "type": "absent",
+   "desc": "luggage cart",
+   "question": "Is there any luggage cart visible in the image?"
+  },
+  {
+   "id": "board_displaying_info",
+   "type": "attribute",
+   "of": "departure_board",
+   "desc": "the large digital departure board displays flight information",
+   "question": "Does the large digital departure board display flight information?"
+  },
+  {
+   "id": "dog_alert_eyes",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small terrier dog has alert eyes",
+   "question": "Does the small terrier dog have alert eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0001",
+ "prompt": "A photorealistic photo captures a busy airport gate scene. On the left, a woman in a blue coat sits on a metal chair, her posture relaxed as she waits. In the center, a man in a gray suit stands upright, holding a black briefcase tightly in his right hand. To the right, a child in a yellow shirt points excitedly at a large digital departure board displaying flight information. Next to the child, a small terrier dog sits patiently on the floor, looking up at its owner with alert eyes. Behind them, an elderly man in a green hat leans against a glass wall, observing the scene quietly. The woman in the blue coat looks at the man in the gray suit, creating a subtle connection across the space. The child in the yellow shirt interacts with the small terrier dog by gently resting a hand on its head. There is no luggage cart visible in the frame. The composition focuses strictly on these five distinct entities and their immediate surroundings, avoiding any extraneous details or background clutter that might distract from the primary subjects and their defined interactions within this transient travel hub environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

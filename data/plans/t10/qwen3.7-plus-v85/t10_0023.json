@@ -1,0 +1,309 @@
+{
+ "style": "cinematic film still, dramatic lighting, sterile atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with beige walls and double doors at the far end",
+   "question": "Does the image show a sterile hospital corridor with beige walls and double doors at the far end?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    60,
+    350,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall nurse in crisp blue scrubs",
+   "question": "Is there a tall nurse in crisp blue scrubs?",
+   "box": [
+    250,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    400,
+    400,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    550,
+    600,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    750,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "extinguisher",
+   "type": "entity",
+   "class": "fire extinguisher",
+   "plural": "fire extinguishers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire extinguisher",
+   "question": "Is there a red fire extinguisher?",
+   "box": [
+    900,
+    400,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "woman_slumped",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is slumped with her head bowed low",
+   "question": "Is the elderly woman slumped?"
+  },
+  {
+   "id": "nurse_leaning",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is leaning forward with a concerned expression",
+   "question": "Is the nurse leaning forward?"
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a silver clipboard against her chest",
+   "question": "Is the nurse holding a silver clipboard against her chest?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy points urgently with wide eyes and a pale face",
+   "question": "Is the boy pointing urgently with wide eyes and a pale face?"
+  },
+  {
+   "id": "boy_leash",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds a leash loosely in his other hand",
+   "question": "Is the boy holding a leash loosely in his other hand?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting calmly",
+   "question": "Is the golden retriever sitting calmly?"
+  },
+  {
+   "id": "doctor_looking",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor looks intently at a glowing tablet screen",
+   "question": "Is the doctor looking intently at a glowing tablet screen?"
+  },
+  {
+   "id": "doctor_tablet",
+   "type": "attribute",
+   "of": "doctor",
+   "desc": "the doctor holds a glowing tablet",
+   "question": "Is the doctor holding a glowing tablet?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman sits on the plastic chair",
+   "question": "Is the elderly woman sitting on the plastic chair?"
+  },
+  {
+   "id": "nurse_beside_woman",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the nurse stands beside the elderly woman",
+   "question": "Is the nurse standing beside the elderly woman?"
+  },
+  {
+   "id": "handover_tissue",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the nurse hands a tissue to the elderly woman who reaches out",
+   "question": "Is the nurse handing a tissue to the elderly woman who reaches out?"
+  },
+  {
+   "id": "boy_next_to_dog",
+   "type": "relation",
+   "of": [
+    "boy",
+    "dog"
+   ],
+   "desc": "the golden retriever sits next to the boy",
+   "question": "Is the golden retriever sitting next to the boy?"
+  },
+  {
+   "id": "extinguisher_near_doctor",
+   "type": "relation",
+   "of": [
+    "extinguisher",
+    "doctor"
+   ],
+   "desc": "the fire extinguisher is mounted on the wall near the doctor",
+   "question": "Is the fire extinguisher mounted on the wall near the doctor?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse stands",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy stands",
+   "question": "Is the boy standing?"
+  },
+  {
+   "id": "doctor_standing",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor stands",
+   "question": "Is the doctor standing?"
+  },
+  {
+   "id": "woman_head_bowed",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman has her head bowed low",
+   "question": "Is the elderly woman's head bowed low?"
+  },
+  {
+   "id": "nurse_expression",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse has a concerned expression",
+   "question": "Does the nurse have a concerned expression?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0023",
+ "prompt": "A cinematic film still captures a tense moment in a sterile hospital corridor. On the left, an elderly woman in a floral dress sits slumped on a plastic chair, her head bowed low in exhaustion. Beside her stands a tall nurse in crisp blue scrubs, leaning forward with a concerned expression while holding a silver clipboard tightly against her chest. In the center of the frame, a young boy in a striped shirt points urgently toward the double doors at the far end of the hall, his face pale and eyes wide with fear. Next to him, a golden retriever sits calmly, its leash held loosely by the boy’s other hand, providing a stark contrast to the tension. To the right, a doctor in a white coat looks intently at a glowing tablet screen, ignoring the commotion around him. A red fire extinguisher is mounted on the wall near the doctor, standing out against the beige paint. There is no blood visible anywhere in the scene. The nurse is handing a tissue to the elderly woman, who reaches out with a trembling hand to accept it. The doctor is looking at the tablet, completely absorbed in the data displayed. The boy is pointing at the doors, directing attention away from the immediate group. The golden retriever is sitting next to the boy, offering silent support. The elderly woman is sitting on the chair, embodying fatigue. The nurse is standing beside the woman, showing care. The doctor is positioned on the right, isolated by his focus. The boy is in the center, acting as the focal point of action. The fire extinguisher is on the right wall, a static element.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

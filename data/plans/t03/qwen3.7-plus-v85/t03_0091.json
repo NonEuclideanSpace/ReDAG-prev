@@ -1,0 +1,164 @@
+{
+ "style": "oil painting with thick brushstrokes, gritty industrial texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with wooden planks and industrial elements",
+   "question": "Does the image depict a shipyard dock with wooden planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor",
+   "question": "Is there a large rusted anchor?",
+   "box": [
+    380,
+    500,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing blue overalls",
+   "question": "Is there a boy wearing blue overalls?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "metal chain",
+   "plural": "metal chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a corroded metal chain",
+   "question": "Is there a corroded metal chain?",
+   "box": [
+    550,
+    450,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "man_wrench",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a heavy wrench",
+   "question": "Is the man in the red scarf holding a heavy wrench?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "anchor_resting",
+   "type": "state",
+   "of": "anchor",
+   "desc": "the large rusted anchor is resting on the wooden planks",
+   "question": "Is the large rusted anchor resting on the wooden planks?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "chain"
+   ],
+   "desc": "the boy in blue overalls points at the corroded metal chain",
+   "question": "Is the boy in blue overalls pointing at the corroded metal chain?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the man in the red scarf looks intently at the boy in blue overalls",
+   "question": "Is the man in the red scarf looking intently at the boy in blue overalls?"
+  },
+  {
+   "id": "chain_attached",
+   "type": "relation",
+   "of": [
+    "chain",
+    "anchor"
+   ],
+   "desc": "the corroded metal chain is attached to the large rusted anchor",
+   "question": "Is the corroded metal chain attached to the large rusted anchor?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "no_extra_figures",
+   "type": "absent",
+   "desc": "extra people or background distractions",
+   "question": "Are there any extra people or background distractions beyond the man, the boy, the anchor, and the chain?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "anchor",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0091",
+ "prompt": "This oil painting depicts a shipyard dock where a man in a red scarf stands on the left, holding a heavy wrench firmly. In the center, a large rusted anchor rests heavily on the wooden planks. To the right, a boy in blue overalls points directly at the corroded metal chain attached to the anchor. The man in the red scarf looks intently at the boy in blue overalls. There is no water visible in the scene. The thick brushstrokes capture the gritty texture of the industrial setting without adding extra figures or background distractions beyond these three distinct elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

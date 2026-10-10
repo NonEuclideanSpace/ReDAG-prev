@@ -1,0 +1,368 @@
+{
+ "style": "cinematic, dimly lit, photorealistic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an ancient Egyptian tomb interior with walls covered in carved hieroglyphs",
+   "question": "Does the image show an ancient Egyptian tomb interior with walls covered in carved hieroglyphs?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sarcophagus",
+   "type": "entity",
+   "class": "sarcophagus",
+   "plural": "sarcophagi",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large, ornate golden sarcophagus",
+   "question": "Is there a large, ornate golden sarcophagus?",
+   "box": [
+    300,
+    300,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "archaeologist",
+   "type": "entity",
+   "class": "archaeologist",
+   "plural": "archaeologists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a female archaeologist",
+   "question": "Is there a female archaeologist?",
+   "box": [
+    400,
+    500,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "torch",
+   "type": "entity",
+   "class": "torch",
+   "plural": "torches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lit torch",
+   "question": "Is there a lit torch?",
+   "box": [
+    450,
+    600,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "brush",
+   "type": "entity",
+   "class": "brush",
+   "plural": "brushes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brush",
+   "question": "Is there a small brush?",
+   "box": [
+    476,
+    700,
+    524,
+    750
+   ]
+  },
+  {
+   "id": "statue",
+   "type": "entity",
+   "class": "statue",
+   "plural": "statues",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall, golden statue of Anubis",
+   "question": "Is there a tall, golden statue of Anubis?",
+   "box": [
+    100,
+    100,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "scepter",
+   "type": "entity",
+   "class": "scepter",
+   "plural": "scepters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scepter",
+   "question": "Is there a scepter?",
+   "box": [
+    120,
+    400,
+    180,
+    800
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a modern, nylon backpack",
+   "question": "Is there a modern, nylon backpack?",
+   "box": [
+    700,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "clay pot",
+   "plural": "clay pots",
+   "count": 2,
+   "count_exact": true,
+   "desc": "ancient, intact clay pots",
+   "question": "Are there exactly two ancient, intact clay pots?",
+   "box": [
+    800,
+    700,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "treasure",
+   "type": "entity",
+   "class": "pile of treasure",
+   "plural": "piles of treasure",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pile of treasure containing three large jewels and six golden coins",
+   "question": "Is there a pile of treasure containing three large jewels and six golden coins?",
+   "box": [
+    150,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "stone door",
+   "plural": "stone doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large, round stone door",
+   "question": "Is there a large, round stone door?",
+   "box": [
+    350,
+    100,
+    650,
+    400
+   ]
+  },
+  {
+   "id": "archaeologist_kneeling",
+   "type": "state",
+   "of": "archaeologist",
+   "desc": "the female archaeologist is kneeling",
+   "question": "Is the female archaeologist kneeling?"
+  },
+  {
+   "id": "statue_holding_scepter",
+   "type": "action",
+   "of": [
+    "statue",
+    "scepter"
+   ],
+   "desc": "the statue of Anubis holds the scepter",
+   "question": "Is the statue of Anubis holding the scepter?"
+  },
+  {
+   "id": "archaeologist_pointing",
+   "type": "action",
+   "of": [
+    "archaeologist",
+    "sarcophagus"
+   ],
+   "desc": "the female archaeologist points the lit torch at the sarcophagus's faceplate",
+   "question": "Is the female archaeologist pointing the lit torch at the sarcophagus's faceplate?"
+  },
+  {
+   "id": "archaeologist_sweeping",
+   "type": "action",
+   "of": [
+    "archaeologist",
+    "sarcophagus"
+   ],
+   "desc": "the female archaeologist uses the small brush to sweep dust from the sarcophagus",
+   "question": "Is the female archaeologist using the small brush to sweep dust from the sarcophagus?"
+  },
+  {
+   "id": "statue_left_of_sarcophagus",
+   "type": "relation",
+   "of": [
+    "statue",
+    "sarcophagus"
+   ],
+   "desc": "the golden statue of Anubis is to the left of the sarcophagus",
+   "question": "Is the golden statue of Anubis to the left of the sarcophagus?"
+  },
+  {
+   "id": "statue_taller",
+   "type": "relation",
+   "of": [
+    "statue",
+    "sarcophagus"
+   ],
+   "desc": "the golden statue of Anubis is taller than the sarcophagus",
+   "question": "Is the golden statue of Anubis taller than the sarcophagus?"
+  },
+  {
+   "id": "archaeologist_in_front",
+   "type": "relation",
+   "of": [
+    "archaeologist",
+    "sarcophagus"
+   ],
+   "desc": "the female archaeologist is between the viewer and the sarcophagus",
+   "question": "Is the female archaeologist positioned in front of the sarcophagus?"
+  },
+  {
+   "id": "backpack_behind_archaeologist",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "archaeologist"
+   ],
+   "desc": "the nylon backpack is behind the female archaeologist",
+   "question": "Is the nylon backpack behind the female archaeologist?"
+  },
+  {
+   "id": "backpack_next_to_pots",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "pots"
+   ],
+   "desc": "the nylon backpack is next to the clay pots",
+   "question": "Is the nylon backpack next to the clay pots?"
+  },
+  {
+   "id": "backpack_larger",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "pots"
+   ],
+   "desc": "the nylon backpack is larger than any of the individual clay pots",
+   "question": "Is the nylon backpack larger than any of the individual clay pots?"
+  },
+  {
+   "id": "treasure_next_to_statue",
+   "type": "relation",
+   "of": [
+    "treasure",
+    "statue"
+   ],
+   "desc": "the pile of treasure is next to the statue of Anubis",
+   "question": "Is the pile of treasure next to the statue of Anubis?"
+  },
+  {
+   "id": "scepter_longer",
+   "type": "relation",
+   "of": [
+    "scepter",
+    "torch"
+   ],
+   "desc": "the scepter is longer than the torch",
+   "question": "Is the scepter longer than the torch?"
+  },
+  {
+   "id": "statue_looking_away",
+   "type": "relation",
+   "of": [
+    "statue",
+    "archaeologist"
+   ],
+   "desc": "the statue of Anubis is looking away from the archaeologist",
+   "question": "Is the statue of Anubis looking away from the archaeologist?"
+  },
+  {
+   "id": "door_behind_archaeologist",
+   "type": "relation",
+   "of": [
+    "door",
+    "archaeologist"
+   ],
+   "desc": "the large, round stone door is behind the female archaeologist",
+   "question": "Is the large, round stone door behind the female archaeologist?"
+  },
+  {
+   "id": "torch_brightest",
+   "type": "attribute",
+   "of": "torch",
+   "desc": "the lit torch is the brightest light source",
+   "question": "Is the lit torch the brightest light source in the scene?"
+  },
+  {
+   "id": "hat_light",
+   "type": "attribute",
+   "of": "archaeologist",
+   "desc": "the hat has a light on its front",
+   "question": "Does the archaeologist's hat have a light on its front?"
+  },
+  {
+   "id": "statue_looking_entrance",
+   "type": "state",
+   "of": "statue",
+   "desc": "the statue of Anubis is looking towards the tomb's entrance",
+   "question": "Is the statue of Anubis looking towards the tomb's entrance?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "sarcophagus",
+   "to": "treasure",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_040",
+ "prompt": "Inside a dimly lit ancient Egyptian tomb, a female archaeologist is kneeling in front of a large, ornate golden sarcophagus. She is pointing a lit torch at the sarcophagus's faceplate. To the left of the sarcophagus is a tall, golden statue of Anubis, which is taller than the sarcophagus. The archaeologist is between the viewer and the sarcophagus. The wall behind the sarcophagus is covered with carved hieroglyphs. The archaeologist is using a small brush to gently sweep dust from the sarcophagus. Her modern, nylon backpack is in a corner behind her, next to a group of ancient, intact clay pots. The backpack is larger than any of the individual pots. The pile of treasure, containing three large jewels and some golden coins, is positioned next to the statue of Anubis. The number of coins is double the number of jewels. The number of clay pots is one less than the number of jewels. The torch is the brightest light source in the tomb. The statue of Anubis is holding a scepter, which is longer than the archaeologist's torch. The archaeologist is wearing a hat that has a light on its front. The Anubis statue is looking towards the tomb's entrance, away from the archaeologist. A large, round stone door is behind the archaeologist.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

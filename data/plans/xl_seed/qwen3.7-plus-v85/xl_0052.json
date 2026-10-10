@@ -1,0 +1,480 @@
+{
+ "style": "photorealistic photo, golden hour lighting, high resolution",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop terrace with a wooden deck against a twilight sky",
+   "question": "Does the image show a rooftop terrace with a wooden deck against a twilight sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "glass table",
+   "plural": "glass tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low glass table",
+   "question": "Is there a low glass table?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "cushions",
+   "type": "entity",
+   "class": "cushion",
+   "plural": "cushions",
+   "count": 2,
+   "count_exact": false,
+   "desc": "plush beige cushions",
+   "question": "Are there plush beige cushions?",
+   "box": [
+    300,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silk emerald dress",
+   "question": "Is there a woman in a silk emerald dress?",
+   "box": [
+    250,
+    300,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "men",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two men",
+   "question": "Are there two men?",
+   "box": [
+    400,
+    400,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white uniform",
+   "question": "Is there a chef in a white uniform?",
+   "box": [
+    50,
+    350,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    200,
+    350,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    650,
+    650,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "guest",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guest",
+   "question": "Is there a guest?",
+   "box": [
+    700,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "couple",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a couple",
+   "question": "Are there two people forming a couple?",
+   "box": [
+    800,
+    300,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "woman_pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "men"
+   ],
+   "desc": "the woman in the silk emerald dress pours red wine into crystal glasses held by the two men",
+   "question": "Is the woman in the silk emerald dress pouring red wine into crystal glasses held by the two men?"
+  },
+  {
+   "id": "men_seated",
+   "type": "relation",
+   "of": [
+    "men",
+    "cushions"
+   ],
+   "desc": "the two men are seated on the plush beige cushions",
+   "question": "Are the two men seated on the plush beige cushions?"
+  },
+  {
+   "id": "chef_plating",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in the white uniform plates a colorful salad on a ceramic dish",
+   "question": "Is the chef in the white uniform plating a colorful salad on a ceramic dish?"
+  },
+  {
+   "id": "waiter_carrying",
+   "type": "action",
+   "of": [
+    "waiter",
+    "chef"
+   ],
+   "desc": "the waiter in the black vest carries a tray of appetizers past the chef",
+   "question": "Is the waiter in the black vest carrying a tray of appetizers past the chef?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_next_to_table",
+   "type": "relation",
+   "of": [
+    "dog",
+    "table"
+   ],
+   "desc": "the golden retriever is next to the low glass table",
+   "question": "Is the golden retriever next to the low glass table?"
+  },
+  {
+   "id": "dog_looking_at_guest",
+   "type": "action",
+   "of": [
+    "dog",
+    "guest"
+   ],
+   "desc": "the golden retriever looks up at the guest",
+   "question": "Is the golden retriever looking up at the guest?"
+  },
+  {
+   "id": "guest_offering",
+   "type": "action",
+   "of": [
+    "guest",
+    "dog"
+   ],
+   "desc": "the guest offers a piece of bread to the golden retriever",
+   "question": "Is the guest offering a piece of bread to the golden retriever?"
+  },
+  {
+   "id": "couple_leaning",
+   "type": "relation",
+   "of": [
+    "couple",
+    "railing"
+   ],
+   "desc": "the couple leans against the metal railing",
+   "question": "Does the couple lean against the metal railing?"
+  },
+  {
+   "id": "couple_gazing",
+   "type": "relation",
+   "of": [
+    "couple",
+    "skyline"
+   ],
+   "desc": "the couple gazes at the city skyline",
+   "question": "Does the couple gaze at the city skyline?"
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "wine bottle",
+   "plural": "wine bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wine bottle containing red wine",
+   "question": "Is there a wine bottle containing red wine?",
+   "box": [
+    480,
+    500,
+    540,
+    620
+   ]
+  },
+  {
+   "id": "glasses",
+   "type": "entity",
+   "class": "crystal glass",
+   "plural": "crystal glasses",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two crystal glasses",
+   "question": "Are there two crystal glasses?",
+   "box": [
+    550,
+    580,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "salad",
+   "type": "entity",
+   "class": "salad",
+   "plural": "salads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful salad",
+   "question": "Is there a colorful salad?",
+   "box": [
+    150,
+    600,
+    250,
+    680
+   ]
+  },
+  {
+   "id": "dish",
+   "type": "entity",
+   "class": "ceramic dish",
+   "plural": "ceramic dishes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceramic dish",
+   "question": "Is there a ceramic dish?",
+   "box": [
+    140,
+    620,
+    260,
+    690
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tray of appetizers",
+   "question": "Is there a tray of appetizers?",
+   "box": [
+    300,
+    550,
+    400,
+    620
+   ]
+  },
+  {
+   "id": "woman_holding_bottle",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the silk emerald dress holds the wine bottle",
+   "question": "Is the woman in the silk emerald dress holding the wine bottle?"
+  },
+  {
+   "id": "men_holding_glasses",
+   "type": "attribute",
+   "of": "men",
+   "desc": "the two men hold the crystal glasses",
+   "question": "Do the two men hold the crystal glasses?"
+  },
+  {
+   "id": "chef_plating_action",
+   "type": "action",
+   "of": [
+    "chef",
+    "salad"
+   ],
+   "desc": "the chef in the white uniform plates the colorful salad",
+   "question": "Is the chef in the white uniform plating the colorful salad?"
+  },
+  {
+   "id": "salad_on_dish",
+   "type": "relation",
+   "of": [
+    "salad",
+    "dish"
+   ],
+   "desc": "the colorful salad is on the ceramic dish",
+   "question": "Is the colorful salad on the ceramic dish?"
+  },
+  {
+   "id": "waiter_carrying_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the black vest carries the tray of appetizers",
+   "question": "Is the waiter in the black vest carrying the tray of appetizers?"
+  },
+  {
+   "id": "guest_holding_bread",
+   "type": "attribute",
+   "of": "guest",
+   "desc": "the guest holds the piece of bread",
+   "question": "Is the guest holding the piece of bread?"
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "metal railing",
+   "plural": "metal railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal railing",
+   "question": "Is there a metal railing?",
+   "box": [
+    750,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "olive_trees",
+   "type": "entity",
+   "class": "potted olive tree",
+   "plural": "potted olive trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "potted olive trees in terracotta pots",
+   "question": "Are there potted olive trees in terracotta pots?",
+   "box": [
+    0,
+    200,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "string_lights",
+   "type": "entity",
+   "class": "string lights",
+   "plural": "string lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "string lights hanging overhead",
+   "question": "Are there string lights hanging overhead?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "skyline",
+   "type": "entity",
+   "class": "city skyline",
+   "plural": "city skylines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an illuminated city skyline",
+   "question": "Is there an illuminated city skyline?",
+   "box": [
+    700,
+    0,
+    1024,
+    300
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "cushions",
+   "to": "men",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0052",
+ "prompt": "A photorealistic photo captures a lively rooftop terrace during golden hour, with warm sunlight casting long shadows across the wooden deck. In the foreground, a group of friends gathers around a low glass table. A woman in a silk emerald dress pours red wine from a bottle into crystal glasses held by two men seated on plush beige cushions. To the left, a chef in a white uniform plates a colorful salad on a ceramic dish, while a waiter in a black vest carries a tray of appetizers past him. A golden retriever sits patiently next to the table, looking up at a guest who is offering a piece of bread. On the right, a couple leans against the metal railing, gazing at the city skyline illuminated by twilight lights. Potted olive trees in terracotta pots line the perimeter, adding greenery to the urban setting. String lights hang overhead, glowing softly against the deepening blue sky. The interactions include pouring, holding, carrying, offering, looking, and leaning, creating a dynamic social scene. High-resolution details reveal the texture of the wood, the condensation on the wine glasses, and the fabric folds of the clothing, ensuring every element is distinct and physically plausible within the square composition.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 11,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

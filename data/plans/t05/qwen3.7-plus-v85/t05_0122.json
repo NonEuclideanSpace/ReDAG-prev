@@ -1,0 +1,330 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image depict a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    50,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    80,
+    250,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "man_tux",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    350,
+    200,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    400,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "cake",
+   "plural": "cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white cake",
+   "question": "Is there a white cake?",
+   "box": [
+    480,
+    550,
+    620,
+    650
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    750,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    600,
+    300,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a suit",
+   "question": "Is there a young boy in a suit?",
+   "box": [
+    700,
+    400,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    500,
+    800,
+    700,
+    980
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "woman_holding_glass",
+   "type": "attribute",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress holds a glass of champagne",
+   "question": "Is the woman in a blue dress holding a glass of champagne?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_tux",
+   "desc": "the man in a black tuxedo is standing",
+   "question": "Is the man in a black tuxedo standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man_tux",
+    "cake"
+   ],
+   "desc": "the man in a black tuxedo points at the white cake",
+   "question": "Is the man in a black tuxedo pointing at the white cake?"
+  },
+  {
+   "id": "elderly_smiling",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a pearl necklace is smiling",
+   "question": "Is the elderly woman in a pearl necklace smiling?"
+  },
+  {
+   "id": "elderly_looking",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "woman_blue",
+    "man_tux"
+   ],
+   "desc": "the elderly woman in a pearl necklace looks at the couple",
+   "question": "Is the elderly woman in a pearl necklace looking at the woman in the blue dress and the man in the black tuxedo?"
+  },
+  {
+   "id": "waiter_handing",
+   "type": "action",
+   "of": [
+    "waiter",
+    "boy"
+   ],
+   "desc": "the waiter in a white apron hands a plate to the young boy in a suit",
+   "question": "Is the waiter in a white apron handing a plate to the young boy in a suit?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying on the floor",
+   "question": "Is the golden retriever lying on the floor?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "action",
+   "of": [
+    "dog",
+    "woman_blue",
+    "man_tux",
+    "elderly_woman",
+    "waiter",
+    "boy"
+   ],
+   "desc": "the golden retriever watches the scene",
+   "question": "Is the golden retriever watching the people in the scene?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "chair"
+   ],
+   "desc": "the woman in a blue dress sits on the wooden chair",
+   "question": "Is the woman in a blue dress sitting on the wooden chair?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_tux",
+    "woman_blue"
+   ],
+   "desc": "the man in a black tuxedo stands next to the woman in a blue dress",
+   "question": "Is the man in a black tuxedo standing next to the woman in a blue dress?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the white cake is on the table",
+   "question": "Is the white cake on the table?"
+  },
+  {
+   "id": "dog_near_table",
+   "type": "relation",
+   "of": [
+    "dog",
+    "table"
+   ],
+   "desc": "the golden retriever lies near the table",
+   "question": "Is the golden retriever lying near the table?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "elderly_pearls",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman wears a pearl necklace",
+   "question": "Does the elderly woman wear a pearl necklace?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman_blue",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0122",
+ "prompt": "A cinematic film still captures a wedding reception scene. On the left, a woman in a blue dress sits on a wooden chair, holding a glass of champagne. In the center, a man in a black tuxedo stands next to her, pointing at a white cake on the table. To the right, an elderly woman in a pearl necklace looks at the couple with a smile. Behind them, a waiter in a white apron hands a plate to a young boy in a suit. A golden retriever lies on the floor near the table, watching the scene. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

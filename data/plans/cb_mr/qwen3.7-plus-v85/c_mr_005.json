@@ -1,0 +1,464 @@
+{
+ "style": "photorealistic garden scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a garden scene",
+   "question": "Does the image show a garden scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "flower_bed",
+   "type": "entity",
+   "class": "flower bed",
+   "plural": "flower beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flower bed",
+   "question": "Is there a flower bed?",
+   "box": [
+    50,
+    600,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "roses",
+   "type": "entity",
+   "class": "rose",
+   "plural": "roses",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three red roses",
+   "question": "Are there three red roses?",
+   "box": [
+    100,
+    650,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "tulips",
+   "type": "entity",
+   "class": "tulip",
+   "plural": "tulips",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six yellow tulips",
+   "question": "Are there six yellow tulips?",
+   "box": [
+    150,
+    680,
+    450,
+    880
+   ]
+  },
+  {
+   "id": "vegetable_garden",
+   "type": "entity",
+   "class": "vegetable patch",
+   "plural": "vegetable patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vegetable garden with tomato plants on stakes",
+   "question": "Is there a vegetable garden with tomato plants on stakes?",
+   "box": [
+    600,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "tomatoes",
+   "type": "entity",
+   "class": "tomato",
+   "plural": "tomatoes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two ripe red tomatoes",
+   "question": "Are there two ripe red tomatoes?",
+   "box": [
+    700,
+    550,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rock",
+   "question": "Is there a large rock?",
+   "box": [
+    650,
+    700,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rabbit",
+   "question": "Is there a rabbit?",
+   "box": [
+    680,
+    750,
+    750,
+    820
+   ]
+  },
+  {
+   "id": "shed",
+   "type": "entity",
+   "class": "garden shed",
+   "plural": "garden sheds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a new garden shed",
+   "question": "Is there a new garden shed?",
+   "box": [
+    50,
+    100,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "wheelbarrow",
+   "type": "entity",
+   "class": "wheelbarrow",
+   "plural": "wheelbarrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelbarrow",
+   "question": "Is there a wheelbarrow?",
+   "box": [
+    320,
+    350,
+    550,
+    550
+   ]
+  },
+  {
+   "id": "shovel",
+   "type": "entity",
+   "class": "shovel",
+   "plural": "shovels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty, worn shovel",
+   "question": "Is there a rusty, worn shovel?",
+   "box": [
+    276,
+    250,
+    324,
+    450
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bird",
+   "question": "Is there a bird?",
+   "box": [
+    150,
+    80,
+    200,
+    130
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled garden hose",
+   "question": "Is there a coiled garden hose?",
+   "box": [
+    350,
+    550,
+    500,
+    650
+   ]
+  },
+  {
+   "id": "gardener",
+   "type": "entity",
+   "class": "gardener",
+   "plural": "gardeners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gardener",
+   "question": "Is there a gardener?",
+   "box": [
+    200,
+    400,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "attribute",
+   "of": "gardener",
+   "desc": "the gardener holds a large watering can",
+   "question": "Is the gardener holding a large watering can?"
+  },
+  {
+   "id": "gardener_kneeling",
+   "type": "state",
+   "of": "gardener",
+   "desc": "the gardener is kneeling",
+   "question": "Is the gardener kneeling?"
+  },
+  {
+   "id": "gardener_watering",
+   "type": "action",
+   "of": [
+    "gardener",
+    "roses"
+   ],
+   "desc": "the gardener is watering the roses",
+   "question": "Is the gardener watering the roses?"
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a butterfly",
+   "question": "Is there a butterfly?",
+   "box": [
+    241,
+    691,
+    289,
+    739
+   ]
+  },
+  {
+   "id": "butterfly_on_rose",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "roses"
+   ],
+   "desc": "the butterfly is landing on one of the red roses",
+   "question": "Is the butterfly landing on one of the red roses?"
+  },
+  {
+   "id": "rabbit_behind_rock",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "rock"
+   ],
+   "desc": "the rabbit is hiding behind the large rock",
+   "question": "Is the rabbit hiding behind the large rock?"
+  },
+  {
+   "id": "rock_near_vegetables",
+   "type": "relation",
+   "of": [
+    "rock",
+    "vegetable_garden"
+   ],
+   "desc": "the large rock is near the vegetable garden",
+   "question": "Is the large rock near the vegetable garden?"
+  },
+  {
+   "id": "gardener_pointing",
+   "type": "action",
+   "of": [
+    "gardener",
+    "rabbit"
+   ],
+   "desc": "the gardener is pointing at the rabbit",
+   "question": "Is the gardener pointing at the rabbit?"
+  },
+  {
+   "id": "wheelbarrow_next_to_shed",
+   "type": "relation",
+   "of": [
+    "wheelbarrow",
+    "shed"
+   ],
+   "desc": "the wheelbarrow sits next to the garden shed",
+   "question": "Is the wheelbarrow sitting next to the garden shed?"
+  },
+  {
+   "id": "shovel_against_shed",
+   "type": "relation",
+   "of": [
+    "shovel",
+    "shed"
+   ],
+   "desc": "the shovel is leaning against the garden shed",
+   "question": "Is the shovel leaning against the garden shed?"
+  },
+  {
+   "id": "bird_on_shed",
+   "type": "relation",
+   "of": [
+    "bird",
+    "shed"
+   ],
+   "desc": "the bird is perched on top of the garden shed",
+   "question": "Is the bird perched on top of the garden shed?"
+  },
+  {
+   "id": "can_larger_than_bird",
+   "type": "relation",
+   "of": [
+    "gardener",
+    "bird"
+   ],
+   "desc": "the watering can held by the gardener is larger than the bird",
+   "question": "Is the watering can held by the gardener visibly larger than the bird?"
+  },
+  {
+   "id": "hose_next_to_wheelbarrow",
+   "type": "relation",
+   "of": [
+    "hose",
+    "wheelbarrow"
+   ],
+   "desc": "the garden hose is next to the wheelbarrow",
+   "question": "Is the garden hose next to the wheelbarrow?"
+  },
+  {
+   "id": "tomatoes_on_stakes",
+   "type": "attribute",
+   "of": "tomatoes",
+   "desc": "the ripe red tomatoes are growing on stakes",
+   "question": "Are the ripe red tomatoes growing on stakes?"
+  },
+  {
+   "id": "shed_new",
+   "type": "attribute",
+   "of": "shed",
+   "desc": "the garden shed is new",
+   "question": "Is the garden shed new?"
+  },
+  {
+   "id": "shovel_older",
+   "type": "relation",
+   "of": [
+    "shovel",
+    "shed"
+   ],
+   "desc": "the rusty shovel is visibly older than the new garden shed",
+   "question": "Is the rusty shovel visibly older than the new garden shed?"
+  },
+  {
+   "id": "wheelbarrow_soil",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "the wheelbarrow is filled with soil",
+   "question": "Is the wheelbarrow filled with soil?"
+  },
+  {
+   "id": "roses_in_bed",
+   "type": "relation",
+   "of": [
+    "roses",
+    "flower_bed"
+   ],
+   "desc": "the red roses are in the flower bed",
+   "question": "Are the red roses in the flower bed?"
+  },
+  {
+   "id": "tulips_in_bed",
+   "type": "relation",
+   "of": [
+    "tulips",
+    "flower_bed"
+   ],
+   "desc": "the yellow tulips are in the flower bed",
+   "question": "Are the yellow tulips in the flower bed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "flower_bed",
+   "to": "roses",
+   "kind": "support"
+  },
+  {
+   "from": "flower_bed",
+   "to": "tulips",
+   "kind": "support"
+  },
+  {
+   "from": "vegetable_garden",
+   "to": "tomatoes",
+   "kind": "support"
+  },
+  {
+   "from": "shed",
+   "to": "bird",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_005",
+ "prompt": "A garden scene with a gardener tending to plants. The gardener is kneeling, holding a watering can and watering plants in a flower bed. In the bed, there are three red roses and a patch of yellow tulips; the number of yellow tulips is twice the number of red roses. A butterfly is landing on one of the red roses. Next to the flower bed, there is a vegetable garden with ripe tomatoes growing on stakes. The number of ripe tomatoes is one less than the number of red roses. A rabbit is hiding behind a large rock near the vegetable garden. The gardener is pointing at the rabbit. A wheelbarrow filled with soil sits next to a new garden shed. A shovel, showing signs of rust and wear, is leaning against the garden shed; the shovel is visibly older than the new shed. A bird is perched on top of the shed. The watering can is larger than the bird. A garden hose is coiled on the ground next to the wheelbarrow.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "vegetable_garden_bg",
+     "vegetable_garden"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

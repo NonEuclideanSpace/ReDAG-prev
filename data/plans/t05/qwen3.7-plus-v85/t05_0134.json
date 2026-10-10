@@ -1,0 +1,271 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with walls and floor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench of the corridor?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "digital screen",
+   "plural": "digital screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a digital screen mounted on the wall",
+   "question": "Is there a digital screen mounted wall?",
+   "box": [
+    800,
+    200,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    150,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    400,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a pink dress",
+   "question": "Is there a young woman in a pink dress?",
+   "box": [
+    650,
+    180,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow shirt",
+   "question": "Is there a small child in a yellow shirt?",
+   "box": [
+    830,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    280,
+    750,
+    380,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard",
+   "question": "Is the nurse holding a clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman is looking at the digital screen",
+   "question": "Is the young woman looking at the digital screen?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is pointing at the digital screen",
+   "question": "Is the small child pointing at the digital screen?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse is handing a pen to the elderly man",
+   "question": "Is the nurse handing a pen to the elderly man?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the metal bench",
+   "question": "Is the elderly man sitting on the metal bench?"
+  },
+  {
+   "id": "woman_next_to_child",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "child"
+   ],
+   "desc": "the young woman stands next to the small child",
+   "question": "Is the young woman standing next to the small child?"
+  },
+  {
+   "id": "fern_near_bench",
+   "type": "relation",
+   "of": [
+    "fern",
+    "bench"
+   ],
+   "desc": "the potted fern is near the metal bench",
+   "question": "Is the potted fern near the metal bench?"
+  },
+  {
+   "id": "no_doctor",
+   "type": "absent",
+   "desc": "a doctor",
+   "question": "Is there a visible doctor in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress is standing",
+   "question": "Is the young woman in a pink dress standing?"
+  },
+  {
+   "id": "screen_on_wall",
+   "type": "state",
+   "of": "screen",
+   "desc": "the digital screen is mounted on the wall",
+   "question": "Is the digital screen mounted on the wall?"
+  },
+  {
+   "id": "fern_on_floor",
+   "type": "state",
+   "of": "fern",
+   "desc": "the potted fern rests on the floor",
+   "question": "Does the potted fern rest on the floor?"
+  },
+  {
+   "id": "fern_pot_color",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the potted fern is in a white ceramic pot",
+   "question": "Is the potted fern in a white ceramic pot?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0134",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly man in a gray coat sits on a metal bench. To the right, a young woman in a pink dress stands looking at a digital screen mounted on the wall. Next to her, a small child in a yellow shirt points at the same screen. A potted fern in a white ceramic pot rests on the floor near the bench. The nurse is handing a pen to the elderly man. The young woman is standing next to the small child. There is no visible doctor.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

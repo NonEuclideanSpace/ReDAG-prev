@@ -1,0 +1,150 @@
+{
+ "style": "pencil sketch with light color wash, soft graphite lines, faint watercolor tints",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sparse fire station interior",
+   "question": "Does the image depict a sparse fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    100,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    450,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose tightly",
+   "question": "Is the firefighter holding a coiled hose tightly?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dalmatian_looking_up",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is looking up attentively",
+   "question": "Is the dalmatian looking up attentively?"
+  },
+  {
+   "id": "firefighter_left",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter is to the left of the dalmatian",
+   "question": "Is the firefighter to the left of the dalmatian?"
+  },
+  {
+   "id": "dalmatian_looking_at_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian is looking at the firefighter",
+   "question": "Is the dalmatian looking at the firefighter?"
+  },
+  {
+   "id": "firefighter_pointing_at_dog",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter is pointing toward the dalmatian",
+   "question": "Is the firefighter pointing toward the dalmatian?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in a yellow helmet stands",
+   "question": "Is the firefighter in a yellow helmet standing?"
+  },
+  {
+   "id": "firefighter_pointing",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter points toward the dalmatian with one hand",
+   "question": "Is the firefighter pointing toward the dalmatian with one hand?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0071",
+ "prompt": "A pencil sketch with light color wash depicts a fire station interior. On the left stands a firefighter in a yellow helmet, holding a coiled hose tightly. In the center sits a dalmatian with black spots, looking up attentively at the firefighter. The firefighter is pointing toward the dog with one hand. There is no fire truck visible in the background. The scene captures only these two figures and their simple interaction within the sparse station environment, rendered with soft graphite lines and faint watercolor tints to suggest depth without overwhelming detail or additional clutter.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,481 @@
+{
+ "style": "photorealistic, warm lighting, detailed interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a flower shop interior",
+   "question": "Does the image show the interior of a flower shop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "florist_1",
+   "type": "entity",
+   "class": "florist",
+   "plural": "florists",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a florist wearing an apron",
+   "question": "Is there a florist wearing an apron?",
+   "box": [
+    100,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "florist_2",
+   "type": "entity",
+   "class": "florist",
+   "plural": "florists",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second florist wearing an apron",
+   "question": "Is there a second florist wearing an apron?",
+   "box": [
+    600,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "bouquets",
+   "type": "entity",
+   "class": "bouquet",
+   "plural": "bouquets",
+   "count": 3,
+   "count_exact": false,
+   "desc": "colorful bouquets of roses, lilies, and carnations in glass vases",
+   "question": "Are there colorful bouquets of roses, lilies, and carnations in glass vases?",
+   "box": [
+    50,
+    400,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "scissors",
+   "type": "entity",
+   "class": "scissors",
+   "plural": "scissors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "sharp scissors",
+   "question": "Are there sharp scissors visible?",
+   "box": [
+    250,
+    600,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "wire",
+   "type": "entity",
+   "class": "floral wire",
+   "plural": "floral wires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "floral wire",
+   "question": "Is there floral wire visible?",
+   "box": [
+    280,
+    620,
+    380,
+    720
+   ]
+  },
+  {
+   "id": "ribbon_spools",
+   "type": "entity",
+   "class": "ribbon spool",
+   "plural": "ribbon spools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "ribbon spools",
+   "question": "Are there ribbon spools?",
+   "box": [
+    400,
+    500,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "gift_cards",
+   "type": "entity",
+   "class": "gift card",
+   "plural": "gift cards",
+   "count": 3,
+   "count_exact": false,
+   "desc": "gift cards",
+   "question": "Are there gift cards?",
+   "box": [
+    700,
+    200,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "cash_register",
+   "type": "entity",
+   "class": "cash register",
+   "plural": "cash registers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cash register",
+   "question": "Is there a cash register?",
+   "box": [
+    750,
+    400,
+    900,
+    550
+   ]
+  },
+  {
+   "id": "wrapping_paper",
+   "type": "entity",
+   "class": "wrapping paper roll",
+   "plural": "wrapping paper rolls",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wrapping paper rolls",
+   "question": "Are there wrapping paper rolls?",
+   "box": [
+    800,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "planters",
+   "type": "entity",
+   "class": "planter",
+   "plural": "planters",
+   "count": 2,
+   "count_exact": false,
+   "desc": "ceramic planters",
+   "question": "Are there ceramic planters?",
+   "box": [
+    100,
+    700,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "fertilizer",
+   "type": "entity",
+   "class": "fertilizer bag",
+   "plural": "fertilizer bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fertilizer bag",
+   "question": "Is there a fertilizer bag?",
+   "box": [
+    350,
+    750,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "entity",
+   "class": "watering can",
+   "plural": "watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a watering can",
+   "question": "Is there a watering can?",
+   "box": [
+    450,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "buckets",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "buckets of water with fresh flowers",
+   "question": "Are there buckets containing water and fresh flowers?",
+   "box": [
+    50,
+    800,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "price_tags",
+   "type": "entity",
+   "class": "price tag",
+   "plural": "price tags",
+   "count": 3,
+   "count_exact": false,
+   "desc": "price tags indicating costs",
+   "question": "Are there price tags indicating costs?",
+   "box": [
+    150,
+    500,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "cards_hanging",
+   "type": "state",
+   "of": "gift_cards",
+   "desc": "the gift cards are hanging",
+   "question": "Are the gift cards hanging?"
+  },
+  {
+   "id": "cards_near_register",
+   "type": "relation",
+   "of": [
+    "gift_cards",
+    "cash_register"
+   ],
+   "desc": "gift cards hang near the cash register",
+   "question": "Do the gift cards hang near the cash register?"
+  },
+  {
+   "id": "plants_in_planters",
+   "type": "state",
+   "of": "planters",
+   "desc": "potted plants are in the ceramic planters",
+   "question": "Are there potted plants in the ceramic planters?"
+  },
+  {
+   "id": "florist_1_action",
+   "type": "action",
+   "of": [
+    "florist_1",
+    "scissors"
+   ],
+   "desc": "the florist uses sharp scissors to create arrangements",
+   "question": "Is the florist using sharp scissors?"
+  },
+  {
+   "id": "florist_2_action",
+   "type": "action",
+   "of": [
+    "florist_2",
+    "wire"
+   ],
+   "desc": "the second florist uses floral wire to create arrangements",
+   "question": "Is the second florist using floral wire?"
+  },
+  {
+   "id": "no_tools",
+   "type": "absent",
+   "desc": "automotive tools like wrenches or screwdrivers",
+   "question": "Are there any automotive tools like wrenches or screwdrivers in the image?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices such as laptops or tablets",
+   "question": "Are there any electronic devices such as laptops or tablets in the image?"
+  },
+  {
+   "id": "misting_systems",
+   "type": "entity",
+   "class": "misting system",
+   "plural": "misting systems",
+   "count": 1,
+   "count_exact": false,
+   "desc": "misting systems",
+   "question": "Are there misting systems visible in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "bouquets_on_tables",
+   "type": "relation",
+   "of": [
+    "bouquets",
+    "tables"
+   ],
+   "desc": "the colorful bouquets in glass vases are arranged on the wooden display tables",
+   "question": "Are the colorful bouquets in glass vases arranged on the wooden display tables?"
+  },
+  {
+   "id": "scissors_held",
+   "type": "attribute",
+   "of": "florist_1",
+   "desc": "the florist wearing an apron holds sharp scissors",
+   "question": "Is the florist wearing an apron holding sharp scissors?"
+  },
+  {
+   "id": "wire_held",
+   "type": "attribute",
+   "of": "florist_2",
+   "desc": "the second florist wearing an apron holds floral wire",
+   "question": "Is the second florist wearing an apron holding floral wire?"
+  },
+  {
+   "id": "ribbon_spools_property",
+   "type": "attribute",
+   "of": "ribbon_spools",
+   "desc": "the ribbon spools provide decorative finishing touches",
+   "question": "Do the ribbon spools appear to provide decorative finishing touches?"
+  },
+  {
+   "id": "tables",
+   "type": "entity",
+   "class": "display table",
+   "plural": "display tables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden display tables",
+   "question": "Are there wooden display tables?",
+   "box": [
+    50,
+    600,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "cases",
+   "type": "entity",
+   "class": "refrigerated case",
+   "plural": "refrigerated cases",
+   "count": 1,
+   "count_exact": false,
+   "desc": "refrigerated cases",
+   "question": "Are there refrigerated cases?",
+   "box": [
+    800,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "potted_plants",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "potted plants",
+   "question": "Are there potted plants?",
+   "box": [
+    620,
+    650,
+    780,
+    850
+   ]
+  },
+  {
+   "id": "plants_in_planters_rel",
+   "type": "relation",
+   "of": [
+    "potted_plants",
+    "planters"
+   ],
+   "desc": "the potted plants are in the ceramic planters",
+   "question": "Are the potted plants in the ceramic planters?"
+  },
+  {
+   "id": "fresh_flowers_buckets",
+   "type": "entity",
+   "class": "flower",
+   "plural": "flowers",
+   "count": 5,
+   "count_exact": false,
+   "desc": "fresh flowers in buckets",
+   "question": "Are there fresh flowers in the buckets?",
+   "box": [
+    60,
+    680,
+    240,
+    850
+   ]
+  },
+  {
+   "id": "flowers_in_buckets",
+   "type": "relation",
+   "of": [
+    "fresh_flowers_buckets",
+    "buckets"
+   ],
+   "desc": "the fresh flowers are in the buckets",
+   "question": "Are the fresh flowers in the buckets?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bouquets",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "planters",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "buckets",
+   "kind": "support"
+  },
+  {
+   "from": "tables",
+   "to": "bouquets",
+   "kind": "support"
+  },
+  {
+   "from": "tables",
+   "to": "planters",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_028",
+ "prompt": "A charming flower shop during Valentine's preparation, where colorful bouquets of roses, lilies, and carnations fill glass vases arranged on wooden display tables. Florists wearing aprons use sharp scissors and floral wire to create custom arrangements while ribbon spools provide decorative finishing touches. Refrigerated cases preserve delicate blooms while misting systems maintain optimal humidity levels throughout the fragrant workspace. Gift cards hang near the cash register, and wrapping paper rolls await special occasion presentations. However, this botanical paradise contains no automotive tools like wrenches or screwdrivers, maintaining its delicate artistic atmosphere focused on floral design rather than mechanical work. You won't discover any electronic devices such as laptops or tablets either, preserving the traditional hands-on approach that defines authentic flower arrangement craftsmanship. Ceramic planters hold potted plants while gardening supplies include fertilizer bags and watering cans. Fresh flower deliveries arrive in buckets of water, and price tags indicate costs for individual stems and complete arrangements in this beloved neighborhood floral destination.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

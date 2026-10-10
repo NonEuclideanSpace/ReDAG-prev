@@ -1,0 +1,373 @@
+{
+ "style": "photorealistic photo, cool even lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with polished linoleum floors and overhead fluorescent lights",
+   "question": "Does the image show a sterile hospital corridor with polished linoleum floors and overhead fluorescent lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hard plastic chair",
+   "question": "Is there a hard plastic chair?",
+   "box": [
+    50,
+    500,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral blouse",
+   "question": "Is there an elderly woman in a floral blouse?",
+   "box": [
+    60,
+    350,
+    240,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young nurse in blue scrubs",
+   "question": "Is there a young nurse in blue scrubs?",
+   "box": [
+    260,
+    300,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a grey suit",
+   "question": "Is there a tall man in a grey suit?",
+   "box": [
+    400,
+    150,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "smartphone",
+   "type": "entity",
+   "class": "smartphone",
+   "plural": "smartphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smartphone",
+   "question": "Is there a smartphone?",
+   "box": [
+    520,
+    450,
+    580,
+    550
+   ]
+  },
+  {
+   "id": "guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard in a dark uniform",
+   "question": "Is there a security guard in a dark uniform?",
+   "box": [
+    750,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "visitor",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a visitor in a yellow raincoat",
+   "question": "Is there a visitor in a yellow raincoat?",
+   "box": [
+    850,
+    300,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted fern in a white ceramic pot",
+   "question": "Is there a small potted fern in a white ceramic pot?",
+   "box": [
+    780,
+    800,
+    880,
+    950
+   ]
+  },
+  {
+   "id": "cleaning_cart",
+   "type": "entity",
+   "class": "cleaning cart",
+   "plural": "cleaning carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cleaning cart with bright orange buckets",
+   "question": "Is there a cleaning cart with bright orange buckets?",
+   "box": [
+    100,
+    600,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a closed door",
+   "question": "Is there a closed door?",
+   "box": [
+    150,
+    200,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral blouse is sitting",
+   "question": "Is the elderly woman in a floral blouse sitting?"
+  },
+  {
+   "id": "nurse_handing_cup",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the young nurse in blue scrubs holds a paper cup of water",
+   "question": "Is the young nurse in blue scrubs holding a paper cup of water?"
+  },
+  {
+   "id": "man_looking_phone",
+   "type": "state",
+   "of": "man",
+   "desc": "the tall man in a grey suit has his eyes fixed on a smartphone",
+   "question": "Does the tall man in a grey suit have his eyes fixed on a smartphone?"
+  },
+  {
+   "id": "man_holding_phone",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the tall man in a grey suit holds a smartphone in his right hand",
+   "question": "Is the tall man in a grey suit holding a smartphone in his right hand?"
+  },
+  {
+   "id": "guard_leaning",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform is leaning casually",
+   "question": "Is the security guard in a dark uniform leaning casually?"
+  },
+  {
+   "id": "guard_pointing",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform is pointing",
+   "question": "Is the security guard in a dark uniform pointing?"
+  },
+  {
+   "id": "guard_speaking",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform is speaking",
+   "question": "Is the security guard in a dark uniform speaking?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman in a floral blouse sits on the hard plastic chair",
+   "question": "Is the elderly woman in a floral blouse sitting on the hard plastic chair?"
+  },
+  {
+   "id": "nurse_next_to_woman",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the young nurse in blue scrubs stands next to the elderly woman in a floral blouse",
+   "question": "Is the young nurse in blue scrubs standing next to the elderly woman in a floral blouse?"
+  },
+  {
+   "id": "nurse_handing_patient",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the young nurse in blue scrubs hands a paper cup of water to the elderly woman in a floral blouse",
+   "question": "Is the young nurse in blue scrubs handing a paper cup of water to the elderly woman in a floral blouse?"
+  },
+  {
+   "id": "visitor_beside_guard",
+   "type": "relation",
+   "of": [
+    "visitor",
+    "guard"
+   ],
+   "desc": "the visitor in a yellow raincoat stands beside the security guard in a dark uniform",
+   "question": "Is the visitor in a yellow raincoat standing beside the security guard in a dark uniform?"
+  },
+  {
+   "id": "guard_pointing_sign",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform points toward a distant exit sign",
+   "question": "Is the security guard in a dark uniform pointing toward a distant exit sign?"
+  },
+  {
+   "id": "fern_near_guard",
+   "type": "relation",
+   "of": [
+    "fern",
+    "guard"
+   ],
+   "desc": "the small potted fern in a white ceramic pot rests near the security guard's feet",
+   "question": "Is the small potted fern in a white ceramic pot resting near the security guard's feet?"
+  },
+  {
+   "id": "cart_near_door",
+   "type": "relation",
+   "of": [
+    "cleaning_cart",
+    "door"
+   ],
+   "desc": "the cleaning cart with bright orange buckets is parked near the closed door",
+   "question": "Is the cleaning cart with bright orange buckets parked near the closed door?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "man_walking",
+   "type": "state",
+   "of": "man",
+   "desc": "the tall man in a grey suit walks briskly",
+   "question": "Is the tall man in a grey suit walking briskly?"
+  },
+  {
+   "id": "woman_slumped",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral blouse has a slumped posture",
+   "question": "Does the elderly woman in a floral blouse have a slumped posture?"
+  },
+  {
+   "id": "guard_against_wall",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform leans against the wall",
+   "question": "Is the security guard in a dark uniform leaning against the wall of the corridor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "fern",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cleaning_cart",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0053",
+ "prompt": "This photorealistic photo captures a sterile hospital corridor with polished linoleum floors reflecting the overhead fluorescent lights. On the left side, an elderly woman in a floral blouse sits on a hard plastic chair, her posture slumped in exhaustion. Next to her stands a young nurse in blue scrubs, who is gently handing a paper cup of water to the seated patient. In the center of the frame, a tall man in a grey suit walks briskly toward the camera, his eyes fixed on a smartphone held in his right hand. To the right, a security guard in a dark uniform leans casually against the wall, pointing toward a distant exit sign while speaking to a visitor in a yellow raincoat standing beside him. A small potted fern in a white ceramic pot rests on the floor near the guard's feet, adding a touch of green to the clinical setting. Further down the hall, a cleaning cart with bright orange buckets is parked near a closed door. There is no blood visible anywhere in the scene, maintaining a calm and routine atmosphere despite the busy environment. The lighting is even and cool, highlighting the textures of the walls and the expressions of the individuals present.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "guard_pointing_sign_rel",
+     "guard_pointing_sign"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "style": "photorealistic, high detail, industrial sci-fi",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suggesting mid-air space",
+   "question": "Is the background neutral and empty, suggesting open air?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "drone",
+   "type": "entity",
+   "class": "surveillance drone",
+   "plural": "surveillance drones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a damaged surveillance drone with a hexagonal matte black metallic body",
+   "question": "Is there a damaged surveillance drone with a hexagonal matte black metallic body?",
+   "box": [
+    212,
+    212,
+    812,
+    812
+   ]
+  },
+  {
+   "id": "drone_floating",
+   "type": "state",
+   "of": "drone",
+   "desc": "the drone is floating motionless in mid-air",
+   "question": "Is the drone floating motionless in mid-air?"
+  },
+  {
+   "id": "drone_rusted_scratched",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "some panels on the drone are visibly rusted",
+   "question": "Are some panels on the drone visibly rusted?"
+  },
+  {
+   "id": "drone_sensor_red",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "a single large central optical sensor glowing with steady red light",
+   "question": "Does the drone have a single large central optical sensor glowing with steady red light?"
+  },
+  {
+   "id": "drone_propellers",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "three propellers on the drone",
+   "question": "Does the drone have three propellers?"
+  },
+  {
+   "id": "propellers_spinning",
+   "type": "state",
+   "of": "drone",
+   "desc": "the propellers are spinning",
+   "question": "Are the propellers spinning?"
+  },
+  {
+   "id": "drone_antenna",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "the drone has a single long antenna that is bent",
+   "question": "Does the drone have a single long antenna that is bent?"
+  },
+  {
+   "id": "drone_blue_lights",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "several small blue sensor lights dotted across the chassis",
+   "question": "Are there several small blue sensor lights dotted across the drone's chassis?"
+  },
+  {
+   "id": "drone_camouflage",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "faded camouflage pattern on sections of the armor plating",
+   "question": "Are there sections of armor plating with a faded camouflage pattern on the drone?"
+  },
+  {
+   "id": "drone_wiring",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "a tangle of exposed wiring near a damaged panel",
+   "question": "Is there a tangle of exposed wiring near a damaged panel on the drone?"
+  },
+  {
+   "id": "drone_dusty",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "a dusty grimy surface on the entire drone",
+   "question": "Is the entire surface of the drone dusty and grimy?"
+  },
+  {
+   "id": "drone_asymmetrical",
+   "type": "state",
+   "of": "drone",
+   "desc": "the drone is not symmetrical",
+   "question": "Is the drone asymmetrical?"
+  },
+  {
+   "id": "no_ground",
+   "type": "absent",
+   "desc": "ground beneath the drone",
+   "question": "Is there any ground visible beneath the drone?"
+  },
+  {
+   "id": "no_weapons",
+   "type": "absent",
+   "desc": "weapons firing from the drone",
+   "question": "Is the drone firing any weapons?"
+  },
+  {
+   "id": "no_wheels",
+   "type": "absent",
+   "desc": "wheels on the drone",
+   "question": "Does the drone have any wheels?"
+  },
+  {
+   "id": "drone_scratched",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "some panels on the drone are scratched",
+   "question": "Are some panels on the drone scratched?"
+  },
+  {
+   "id": "drone_antenna_broken",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "the tip of the drone's antenna is broken",
+   "question": "Is the tip of the drone's antenna broken?"
+  },
+  {
+   "id": "no_floor",
+   "type": "absent",
+   "desc": "floor beneath the drone",
+   "question": "Is there any floor visible beneath the drone?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_040",
+ "prompt": "A single, damaged surveillance drone, floating motionless in mid-air. Its main body is hexagonal and made of a matte black, metallic material, though some panels are visibly rusted and scratched. It has a single, large, central optical sensor that glows with a steady red light. The drone has three propellers for lift, and all of them are currently spinning. A single long antenna is attached, but it is bent and broken at the tip. Several small, blue sensor lights are dotted across its chassis. Some sections of the armor plating have a faded camouflage pattern. A tangle of exposed wiring is visible near one of the damaged panels. The entire drone has a dusty, grimy surface. Importantly, the drone is not symmetrical, it is not on the ground, it is not firing any weapons, and it has no wheels.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

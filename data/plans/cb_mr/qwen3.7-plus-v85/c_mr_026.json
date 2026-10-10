@@ -1,0 +1,409 @@
+{
+ "style": "photorealistic clinical photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dentist office interior with walls and a light board",
+   "question": "Does the image show the interior of a dentist office?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dentist_chair",
+   "type": "entity",
+   "class": "dental chair",
+   "plural": "dental chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dental chair",
+   "question": "Is there a dental chair?",
+   "box": [
+    300,
+    400,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "dentist",
+   "type": "entity",
+   "class": "dentist",
+   "plural": "dentists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older dentist wearing gloves",
+   "question": "Is there an older dentist wearing gloves?",
+   "box": [
+    350,
+    200,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "patient_exam",
+   "type": "entity",
+   "class": "patient",
+   "plural": "patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patient",
+   "question": "Is there a patient?",
+   "box": [
+    320,
+    450,
+    580,
+    850
+   ]
+  },
+  {
+   "id": "hygienist",
+   "type": "entity",
+   "class": "dental hygienist",
+   "plural": "dental hygienists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a younger dental hygienist",
+   "question": "Is there a younger dental hygienist?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "sink",
+   "type": "entity",
+   "class": "sink",
+   "plural": "sinks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sink",
+   "question": "Is there a sink?",
+   "box": [
+    750,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "sterilizer",
+   "type": "entity",
+   "class": "sterilizer",
+   "plural": "sterilizers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sterilizer containing instruments",
+   "question": "Is there a sterilizer?",
+   "box": [
+    720,
+    600,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "receptionist",
+   "type": "entity",
+   "class": "receptionist",
+   "plural": "receptionists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a receptionist",
+   "question": "Is there a receptionist?",
+   "box": [
+    50,
+    300,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "computer",
+   "type": "entity",
+   "class": "computer",
+   "plural": "computers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a computer with a screen",
+   "question": "Is there a computer with a screen?",
+   "box": [
+    80,
+    500,
+    220,
+    650
+   ]
+  },
+  {
+   "id": "child_patient",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child patient",
+   "question": "Is there a child patient?",
+   "box": [
+    50,
+    750,
+    200,
+    950
+   ]
+  },
+  {
+   "id": "mother",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman filling out paperwork",
+   "question": "Is there a woman filling out paperwork?",
+   "box": [
+    220,
+    750,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "assistant",
+   "type": "entity",
+   "class": "assistant",
+   "plural": "assistants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an assistant",
+   "question": "Is there an assistant?",
+   "box": [
+    600,
+    100,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tray",
+   "question": "Is there a tray?",
+   "box": [
+    650,
+    350,
+    750,
+    450
+   ]
+  },
+  {
+   "id": "light_board",
+   "type": "entity",
+   "class": "light board",
+   "plural": "light boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a light board with X-ray films",
+   "question": "Is there a light board with X-ray films?",
+   "box": [
+    100,
+    50,
+    300,
+    250
+   ]
+  },
+  {
+   "id": "dentist_tools",
+   "type": "attribute",
+   "of": "dentist",
+   "desc": "the dentist holds a mirror",
+   "question": "Is the dentist holding a mirror?"
+  },
+  {
+   "id": "patient_lying",
+   "type": "state",
+   "of": "patient_exam",
+   "desc": "the patient is lying down",
+   "question": "Is the patient lying down?"
+  },
+  {
+   "id": "hygienist_standing",
+   "type": "state",
+   "of": "hygienist",
+   "desc": "the dental hygienist is standing",
+   "question": "Is the dental hygienist standing?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child_patient",
+   "desc": "the child is sitting",
+   "question": "Is the child sitting?"
+  },
+  {
+   "id": "child_holding_toy",
+   "type": "attribute",
+   "of": "child_patient",
+   "desc": "the child patient holds a toy",
+   "question": "Is the child patient holding a toy?"
+  },
+  {
+   "id": "dentist_examines",
+   "type": "action",
+   "of": [
+    "dentist",
+    "patient_exam"
+   ],
+   "desc": "the dentist examines the patient's teeth",
+   "question": "Is the dentist examining the patient's teeth?"
+  },
+  {
+   "id": "hygienist_cleans",
+   "type": "action",
+   "of": [
+    "hygienist",
+    "sterilizer"
+   ],
+   "desc": "the dental hygienist cleans instruments in the sterilizer",
+   "question": "Is the dental hygienist cleaning instruments in the sterilizer?"
+  },
+  {
+   "id": "receptionist_types",
+   "type": "action",
+   "of": [
+    "receptionist",
+    "computer"
+   ],
+   "desc": "the receptionist types on the computer keyboard",
+   "question": "Is the receptionist typing on the computer keyboard?"
+  },
+  {
+   "id": "assistant_prepares",
+   "type": "action",
+   "of": [
+    "assistant",
+    "tray"
+   ],
+   "desc": "the assistant prepares a syringe and organizes supplies on the tray",
+   "question": "Is the assistant preparing a syringe and organizing supplies on the tray?"
+  },
+  {
+   "id": "hygienist_next_to_sink",
+   "type": "relation",
+   "of": [
+    "hygienist",
+    "sink"
+   ],
+   "desc": "the dental hygienist stands next to the sink",
+   "question": "Is the dental hygienist standing next to the sink?"
+  },
+  {
+   "id": "sterilizer_contents",
+   "type": "attribute",
+   "of": "sterilizer",
+   "desc": "the sterilizer contains two mirrors",
+   "question": "Does the sterilizer contain two mirrors?"
+  },
+  {
+   "id": "xray_on_board",
+   "type": "state",
+   "of": "light_board",
+   "desc": "X-ray films are clipped to the light board on the wall",
+   "question": "Are X-ray films clipped to the light board on the wall?"
+  },
+  {
+   "id": "mother_paperwork",
+   "type": "attribute",
+   "of": "mother",
+   "desc": "the woman holds paperwork",
+   "question": "Is the woman holding paperwork?"
+  },
+  {
+   "id": "assistant_syringe",
+   "type": "attribute",
+   "of": "assistant",
+   "desc": "the assistant holds a syringe",
+   "question": "Is the assistant holding a syringe?"
+  },
+  {
+   "id": "calendar_display",
+   "type": "attribute",
+   "of": "computer",
+   "desc": "the computer screen displays a calendar with appointments",
+   "question": "Does the computer screen display a calendar with appointments?"
+  },
+  {
+   "id": "dentist_probe",
+   "type": "attribute",
+   "of": "dentist",
+   "desc": "the dentist holds a probe",
+   "question": "Is the dentist holding a probe?"
+  },
+  {
+   "id": "sterilizer_probes",
+   "type": "attribute",
+   "of": "sterilizer",
+   "desc": "the sterilizer contains four probes",
+   "question": "Does the sterilizer contain four probes?"
+  },
+  {
+   "id": "age_comparison",
+   "type": "relation",
+   "of": [
+    "dentist",
+    "hygienist"
+   ],
+   "desc": "the dentist is older than the dental hygienist",
+   "question": "Is the dentist older than the dental hygienist?"
+  },
+  {
+   "id": "tray_supplies",
+   "type": "attribute",
+   "of": "tray",
+   "desc": "the tray has supplies",
+   "question": "Does the tray have supplies?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "dentist_chair",
+   "to": "patient_exam",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_026",
+ "prompt": "A dentist office with staff and patients. A dentist is examining a patient's teeth while the patient lies on a dental chair. The dentist is using a mirror and a probe while wearing gloves. The dentist, a seasoned professional, is older than the dental hygienist. A dental hygienist is cleaning instruments in a sterilizer while standing next to a sink. The sterilizer contains two mirrors and a number of probes that is twice the number of mirrors. A receptionist is scheduling appointments while typing on a computer keyboard. The computer screen displays a calendar with appointments. A child patient is sitting in the waiting room, holding a toy while her mother fills out paperwork. An assistant is preparing a syringe while organizing supplies on a tray. X-ray films are clipped to a light board mounted on the wall.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 1,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

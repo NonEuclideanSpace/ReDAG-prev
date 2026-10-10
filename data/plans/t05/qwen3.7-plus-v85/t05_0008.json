@@ -1,0 +1,259 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform scene",
+   "question": "Does the image show a subway platform scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench in the image?",
+   "box": [
+    300,
+    600,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    400,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "briefcase",
+   "type": "entity",
+   "class": "briefcase",
+   "plural": "briefcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black leather briefcase",
+   "question": "Is there a black leather briefcase?",
+   "box": [
+    680,
+    700,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a red hat",
+   "question": "Is there a child in a red hat?",
+   "box": [
+    150,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    250,
+    750,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "woman_umbrella",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a yellow umbrella",
+   "question": "Is the woman in a blue coat holding a yellow umbrella?"
+  },
+  {
+   "id": "man_slumped",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit is slumped",
+   "question": "Is the man in a gray suit slumped?"
+  },
+  {
+   "id": "man_token",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a gray suit holds a silver token",
+   "question": "Is the man in a gray suit holding a silver token?"
+  },
+  {
+   "id": "woman_map",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a folded map",
+   "question": "Is the woman in a blue coat holding a folded map?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in a gray suit sits on the metal bench",
+   "question": "Is the man in a gray suit sitting on the metal bench?"
+  },
+  {
+   "id": "briefcase_next_to_man",
+   "type": "relation",
+   "of": [
+    "briefcase",
+    "man"
+   ],
+   "desc": "the black leather briefcase rests next to the man in a gray suit",
+   "question": "Is the black leather briefcase resting next to the man in a gray suit?"
+  },
+  {
+   "id": "child_points_token",
+   "type": "action",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in a red hat points at the silver token held by the man in a gray suit",
+   "question": "Is the child in a red hat pointing at the silver token held by the man in a gray suit?"
+  },
+  {
+   "id": "dog_looks_woman",
+   "type": "action",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog looks at the woman in a blue coat",
+   "question": "Is the brown dog looking at the woman in a blue coat?"
+  },
+  {
+   "id": "woman_hands_child",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue coat hands the folded map to the child in a red hat",
+   "question": "Is the woman in a blue coat handing the folded map to the child in a red hat?"
+  },
+  {
+   "id": "man_looks_briefcase",
+   "type": "action",
+   "of": [
+    "man",
+    "briefcase"
+   ],
+   "desc": "the man in a gray suit looks at the black leather briefcase",
+   "question": "Is the man in a gray suit looking at the black leather briefcase?"
+  },
+  {
+   "id": "no_ad_screen",
+   "type": "absent",
+   "desc": "digital advertisement screen",
+   "question": "Is there any digital advertisement screen visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "woman_umbrella_upright",
+   "type": "state",
+   "of": "woman",
+   "desc": "the yellow umbrella held by the woman in a blue coat is upright",
+   "question": "Is the yellow umbrella held by the woman in a blue coat upright?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "briefcase",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0008",
+ "prompt": "In a pencil sketch with light color wash, a subway platform scene unfolds. On the left stands a woman in a blue coat holding a yellow umbrella upright. In the center sits a man in a gray suit slumped on a metal bench. Next to him on the right rests a black leather briefcase. A child in a red hat points at a silver token held by the seated man. Nearby, a brown dog looks at the woman in the blue coat. The woman is handing a folded map to the child in the red hat. The man in the gray suit is looking at the black leather briefcase. There is no digital advertisement screen visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

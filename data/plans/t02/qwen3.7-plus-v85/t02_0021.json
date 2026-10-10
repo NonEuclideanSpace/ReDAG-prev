@@ -1,0 +1,132 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market at dawn",
+   "question": "Does the image depict a village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman",
+   "question": "Is there an old woman?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "young_boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy",
+   "question": "Is there a young boy?",
+   "box": [
+    450,
+    300,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "old_woman",
+   "desc": "the old woman holds a woven basket",
+   "question": "Is the old woman holding a woven basket?"
+  },
+  {
+   "id": "apple",
+   "type": "attribute",
+   "of": "old_woman",
+   "desc": "the old woman holds a red apple",
+   "question": "Is the old woman holding a red apple?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman is standing",
+   "question": "Is the old woman standing?"
+  },
+  {
+   "id": "boy_looking_up",
+   "type": "state",
+   "of": "young_boy",
+   "desc": "the young boy is looking up",
+   "question": "Is the young boy looking up?"
+  },
+  {
+   "id": "handing_over",
+   "type": "action",
+   "of": [
+    "old_woman",
+    "young_boy"
+   ],
+   "desc": "the old woman is handing the red apple to the young boy",
+   "question": "Is the old woman handing a red apple to the young boy?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight",
+   "question": "Is there any direct sunlight visible in the image?"
+  },
+  {
+   "id": "old_woman_shawl",
+   "type": "attribute",
+   "of": "old_woman",
+   "desc": "the old woman wears a blue shawl",
+   "question": "Does the old woman wear a blue shawl?"
+  },
+  {
+   "id": "young_boy_cap",
+   "type": "attribute",
+   "of": "young_boy",
+   "desc": "the young boy wears a yellow cap",
+   "question": "Does the young boy wear a yellow cap?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0021",
+ "prompt": "A pencil sketch with light color wash depicts a village market at dawn. On the left, an old woman in a blue shawl stands holding a woven basket. In the center, a young boy in a yellow cap looks up at her. The old woman is handing a red apple to the young boy. There is no sunlight.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

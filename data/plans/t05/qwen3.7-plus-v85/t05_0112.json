@@ -1,0 +1,290 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image depict a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a display table",
+   "question": "Is there a display table?",
+   "box": [
+    350,
+    500,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a blue cap",
+   "question": "Is there a boy wearing a blue cap?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with pigtails",
+   "question": "Is there a girl with pigtails?",
+   "box": [
+    380,
+    220,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "adult",
+   "plural": "adults",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an adult wearing a green cardigan",
+   "question": "Is there an adult wearing a green cardigan?",
+   "box": [
+    650,
+    180,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a beaker",
+   "question": "Is there a beaker?",
+   "box": [
+    500,
+    450,
+    600,
+    550
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small gray cat",
+   "question": "Is there a small gray cat?",
+   "box": [
+    600,
+    850,
+    750,
+    980
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "entity",
+   "class": "balloon",
+   "plural": "balloons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red balloon",
+   "question": "Is there a red balloon?",
+   "box": [
+    450,
+    50,
+    550,
+    200
+   ]
+  },
+  {
+   "id": "boy_project",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy has a project beside him",
+   "question": "Is there a project display beside the boy?"
+  },
+  {
+   "id": "girl_points",
+   "type": "action",
+   "of": [
+    "girl",
+    "beaker"
+   ],
+   "desc": "the girl points at the beaker",
+   "question": "Is the girl pointing at the beaker?"
+  },
+  {
+   "id": "teacher_looks",
+   "type": "action",
+   "of": [
+    "teacher",
+    "beaker"
+   ],
+   "desc": "the teacher looks at the experiment",
+   "question": "Is the teacher looking at the experiment?"
+  },
+  {
+   "id": "cat_sits",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting",
+   "question": "Is the cat sitting?"
+  },
+  {
+   "id": "cat_watches",
+   "type": "action",
+   "of": [
+    "cat",
+    "girl"
+   ],
+   "desc": "the cat watches the scene",
+   "question": "Is the cat watching the scene?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy hands a worksheet to the girl",
+   "question": "Is the boy handing a worksheet to the girl?"
+  },
+  {
+   "id": "boy_beside_project",
+   "type": "relation",
+   "of": [
+    "boy",
+    "table"
+   ],
+   "desc": "the boy stands beside his project on the table",
+   "question": "Is the boy standing beside the project on the table?"
+  },
+  {
+   "id": "teacher_next_to_girl",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "girl"
+   ],
+   "desc": "the teacher stands next to the girl",
+   "question": "Is the teacher standing next to the girl?"
+  },
+  {
+   "id": "cat_near_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the cat is near the table leg",
+   "question": "Is the cat near the table leg?"
+  },
+  {
+   "id": "balloon_above",
+   "type": "relation",
+   "of": [
+    "balloon",
+    "table"
+   ],
+   "desc": "the balloon floats above the center display",
+   "question": "Is the balloon floating above the center display?"
+  },
+  {
+   "id": "no_chalkboard",
+   "type": "absent",
+   "desc": "a chalkboard",
+   "question": "Is there a chalkboard in the background?"
+  },
+  {
+   "id": "boy_stands",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing a blue cap stands",
+   "question": "Is the boy wearing a blue cap standing?"
+  },
+  {
+   "id": "teacher_stands",
+   "type": "state",
+   "of": "teacher",
+   "desc": "the adult wearing a green cardigan stands",
+   "question": "Is the adult wearing a green cardigan standing?"
+  },
+  {
+   "id": "balloon_string",
+   "type": "attribute",
+   "of": "balloon",
+   "desc": "the red balloon is tethered by a thin string",
+   "question": "Is the red balloon tethered by a thin string?"
+  },
+  {
+   "id": "beaker_bubbling",
+   "type": "state",
+   "of": "beaker",
+   "desc": "the beaker is bubbling",
+   "question": "Is the liquid in the beaker bubbling?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "beaker",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0112",
+ "prompt": "This watercolor illustration depicts a lively school science fair. On the left, a boy in a blue cap stands beside his project. In the center, a girl with pigtails points at a bubbling beaker on a table. Next to her on the right, a teacher in a green cardigan looks at the experiment with interest. A small gray cat sits on the floor near the table leg, watching the scene. A red balloon floats above the center display, tethered by a thin string. The boy in the blue cap is handing a worksheet to the girl with pigtails. The teacher in the green cardigan is standing next to the girl with pigtails. There is no chalkboard in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

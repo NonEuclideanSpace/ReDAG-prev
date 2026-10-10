@@ -1,0 +1,195 @@
+{
+ "style": "macro photography, high detail, realistic texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background",
+   "question": "Is the background plain?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate key",
+   "question": "Is there an ornate key?",
+   "box": [
+    200,
+    300,
+    824,
+    724
+   ]
+  },
+  {
+   "id": "charm",
+   "type": "entity",
+   "class": "charm",
+   "plural": "charms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small charm shaped like a skull carved from bone",
+   "question": "Is there a small charm shaped like a skull carved from bone?",
+   "box": [
+    250,
+    650,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "key_on_cloth",
+   "type": "state",
+   "of": "key",
+   "desc": "the key is lying down",
+   "question": "Is the key lying down?"
+  },
+  {
+   "id": "bow_dragons",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the bow of the key is shaped like two intricately intertwined dragons",
+   "question": "Is the bow of the key shaped like two intricately intertwined dragons?"
+  },
+  {
+   "id": "ruby_eyes",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the dragon shapes on the key have tiny ruby eyes",
+   "question": "Do the dragon shapes on the key have tiny ruby eyes?"
+  },
+  {
+   "id": "shank_grooves",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the shank of the key has spiral grooves carved into it",
+   "question": "Does the shank of the key have spiral grooves carved into it?"
+  },
+  {
+   "id": "bit_castle",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the bit of the key is shaped like a miniature castle",
+   "question": "Is the bit of the key shaped like a miniature castle?"
+  },
+  {
+   "id": "filigree_damage",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the silver surface of the key has an intricate filigree pattern",
+   "question": "Does the silver surface of the key have an intricate filigree pattern?"
+  },
+  {
+   "id": "charm_hanging",
+   "type": "relation",
+   "of": [
+    "charm",
+    "key"
+   ],
+   "desc": "the skull charm hangs from the bow of the key",
+   "question": "Does the skull charm hang from the bow of the key?"
+  },
+  {
+   "id": "no_gold",
+   "type": "absent",
+   "desc": "gold material",
+   "question": "Is there any gold visible on the key?"
+  },
+  {
+   "id": "no_lock",
+   "type": "absent",
+   "desc": "a lock",
+   "question": "Is the key inserted in a lock?"
+  },
+  {
+   "id": "cloth",
+   "type": "entity",
+   "class": "cloth",
+   "plural": "cloths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a frayed, dark blue velvet cloth",
+   "question": "Is there a frayed, dark blue velvet cloth?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "key_material",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the key is made of dull silver with a matte finish",
+   "question": "Is the key made of dull silver with a matte finish?"
+  },
+  {
+   "id": "key_weathered",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the key is weathered",
+   "question": "Is the key weathered?"
+  },
+  {
+   "id": "ruby_eye_missing",
+   "type": "attribute",
+   "of": "key",
+   "desc": "one of the ruby eyes on the key is missing",
+   "question": "Is one of the ruby eyes on the key missing?"
+  },
+  {
+   "id": "key_blackened_chipped",
+   "type": "attribute",
+   "of": "key",
+   "desc": "some parts of the key are blackened and chipped",
+   "question": "Are some parts of the key blackened and chipped?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "key",
+   "kind": "support"
+  },
+  {
+   "from": "cloth",
+   "to": "key",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_055",
+ "prompt": "A single, ornate, weathered key lying on a frayed, dark blue velvet cloth. The key is made of dull silver, with a matte, unpolished finish. The bow of the key is shaped like two intricately intertwined dragons, and they have tiny ruby eyes, though one of the ruby eyes is missing. Its long, cylindrical shank has spiral grooves carved into it. The bit at the end is complex and shaped like a miniature castle. The silver is covered in an intricate filigree pattern, but some parts are blackened and chipped. From the bow hangs a single, small charm shaped like a skull, which is carved from bone. The entire key is not polished, it is not made of gold, it is not new, and it is not currently in a lock.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

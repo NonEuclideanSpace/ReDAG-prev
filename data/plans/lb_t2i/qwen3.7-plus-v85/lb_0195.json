@@ -1,0 +1,676 @@
+{
+ "style": "surreal photorealistic, golden hour lighting, high detail, atmospheric",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pond with still water reflecting the sky and clouds, surrounded by nature",
+   "question": "Does the image show a pond with still water reflecting the sky and clouds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "canoe",
+   "type": "entity",
+   "class": "canoe",
+   "plural": "canoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an aged wooden canoe",
+   "question": "Is there an aged wooden canoe?",
+   "box": [
+    200,
+    500,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "pineapple",
+   "type": "entity",
+   "class": "pineapple",
+   "plural": "pineapples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ripe pineapple",
+   "question": "Is there a ripe pineapple?",
+   "box": [
+    450,
+    520,
+    550,
+    620
+   ]
+  },
+  {
+   "id": "paddle",
+   "type": "entity",
+   "class": "paddle",
+   "plural": "paddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red wooden paddle",
+   "question": "Is there a red wooden paddle?",
+   "box": [
+    300,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled oak tree",
+   "question": "Is there a gnarled oak tree?",
+   "box": [
+    0,
+    0,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "vine_hoop",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vine braided with copper wire",
+   "question": "Is there a vine braided with copper wire?",
+   "box": [
+    100,
+    200,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted chain",
+   "question": "Is there a rusted chain?",
+   "box": [
+    150,
+    300,
+    200,
+    500
+   ]
+  },
+  {
+   "id": "heron",
+   "type": "entity",
+   "class": "heron",
+   "plural": "herons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heron",
+   "question": "Is there a heron?",
+   "box": [
+    750,
+    600,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mossy rock",
+   "question": "Is there a mossy rock?",
+   "box": [
+    700,
+    650,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "towel",
+   "plural": "towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded sun-bleached pale blue patterned towel",
+   "question": "Is there a folded sun-bleached pale blue patterned towel?",
+   "box": [
+    400,
+    550,
+    480,
+    600
+   ]
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an impossibly blue butterfly",
+   "question": "Is there an impossibly blue butterfly?",
+   "box": [
+    500,
+    700,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "canoe_floats",
+   "type": "relation",
+   "of": [
+    "canoe",
+    "reflection_canoe"
+   ],
+   "desc": "the canoe is floating on the water",
+   "question": "Is the canoe floating on the water?"
+  },
+  {
+   "id": "pineapple_dripping",
+   "type": "state",
+   "of": "pineapple",
+   "desc": "the pineapple is dripping amber liquid",
+   "question": "Is the pineapple dripping amber liquid?"
+  },
+  {
+   "id": "paddle_vertical",
+   "type": "state",
+   "of": "paddle",
+   "desc": "the paddle is floating vertically",
+   "question": "Is the paddle floating vertically?"
+  },
+  {
+   "id": "tree_leaning",
+   "type": "state",
+   "of": "oak_tree",
+   "desc": "the oak tree is leaning dramatically",
+   "question": "Is the oak tree leaning dramatically?"
+  },
+  {
+   "id": "heron_still",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron stands still with its neck curved forward",
+   "question": "Is the heron standing still?"
+  },
+  {
+   "id": "pineapple_on_canoe",
+   "type": "relation",
+   "of": [
+    "pineapple",
+    "canoe"
+   ],
+   "desc": "the pineapple is on the canoe's wooden edge",
+   "question": "Is the pineapple on the canoe's wooden edge?"
+  },
+  {
+   "id": "paddle_in_water",
+   "type": "relation",
+   "of": [
+    "paddle",
+    "canoe"
+   ],
+   "desc": "the paddle is in the water near the canoe",
+   "question": "Is the paddle in the water near the canoe?"
+  },
+  {
+   "id": "vine_on_tree",
+   "type": "relation",
+   "of": [
+    "vine_hoop",
+    "oak_tree"
+   ],
+   "desc": "the vine hangs from the oak tree",
+   "question": "Does the vine hang from the oak tree?"
+  },
+  {
+   "id": "chain_on_tree",
+   "type": "relation",
+   "of": [
+    "chain",
+    "oak_tree"
+   ],
+   "desc": "the chain is anchored in the oak tree",
+   "question": "Is the chain anchored in the oak tree?"
+  },
+  {
+   "id": "heron_on_rock",
+   "type": "relation",
+   "of": [
+    "heron",
+    "rock"
+   ],
+   "desc": "the heron stands on the mossy rock",
+   "question": "Does the heron stand on the mossy rock?"
+  },
+  {
+   "id": "rock_in_water",
+   "type": "state",
+   "of": "rock",
+   "desc": "the rock is in the water",
+   "question": "Is the rock in the water?"
+  },
+  {
+   "id": "towel_on_canoe",
+   "type": "relation",
+   "of": [
+    "towel",
+    "canoe"
+   ],
+   "desc": "the towel is on the canoe",
+   "question": "Is the towel on the canoe?"
+  },
+  {
+   "id": "butterfly_near_water",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "reflection_canoe"
+   ],
+   "desc": "the butterfly hovers at the water's edge",
+   "question": "Does the butterfly hover at the water's edge?"
+  },
+  {
+   "id": "no_person",
+   "type": "absent",
+   "desc": "any person",
+   "question": "Is there any person visible in the image?"
+  },
+  {
+   "id": "flowerbed",
+   "type": "entity",
+   "class": "flowerbed",
+   "plural": "flowerbeds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flowerbed beyond the pond",
+   "question": "Is there a flowerbed beyond the pond?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pulley_system",
+   "type": "entity",
+   "class": "pulley system",
+   "plural": "pulley systems",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pulley system",
+   "question": "Is there a pulley system?",
+   "box": [
+    700,
+    300,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "vine_natural",
+   "type": "attribute",
+   "of": "oak_tree",
+   "desc": "vines dangling like ancient ropes from the oak tree's crooked branches",
+   "question": "Are there vines dangling like ancient ropes from the oak tree's crooked branches?"
+  },
+  {
+   "id": "butterfly_target",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "pineapple"
+   ],
+   "desc": "the butterfly is drawn to the reflection of the pineapple",
+   "question": "Is the butterfly positioned near the water where the pineapple's reflection would be?"
+  },
+  {
+   "id": "heron_target",
+   "type": "action",
+   "of": [
+    "heron",
+    "pineapple"
+   ],
+   "desc": "the heron's beak is poised to strike at the reflection of the pineapple",
+   "question": "Is the heron leaning forward with its beak poised toward the water near the pineapple's reflection?"
+  },
+  {
+   "id": "towel_damp",
+   "type": "state",
+   "of": "towel",
+   "desc": "the towel is slightly damp",
+   "question": "Does the towel appear slightly damp?"
+  },
+  {
+   "id": "flowerbed_beyond",
+   "type": "state",
+   "of": "flowerbed",
+   "desc": "the flowerbed is beyond the pond",
+   "question": "Is the flowerbed located beyond the pond?"
+  },
+  {
+   "id": "reflection_canoe",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection of the canoe",
+   "question": "Is there a reflection of the canoe?",
+   "box": [
+    430,
+    560,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "reflection_pineapple",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection of the pineapple",
+   "question": "Is there a reflection of the pineapple?",
+   "box": [
+    500,
+    600,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "reflection_heron",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection of the heron",
+   "question": "Is there a reflection of the heron?",
+   "box": [
+    720,
+    600,
+    820,
+    800
+   ]
+  },
+  {
+   "id": "reflection_sky",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection of the sky",
+   "question": "Is there a reflection of the sky?",
+   "box": [
+    0,
+    512,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ripple",
+   "type": "entity",
+   "class": "ripple",
+   "plural": "ripples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single ripple in the water",
+   "question": "Is there a single ripple in the water?",
+   "box": [
+    500,
+    650,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "canoe_reflection_visible",
+   "type": "relation",
+   "of": [
+    "canoe",
+    "reflection_canoe"
+   ],
+   "desc": "the canoe is reflected in the water as the reflection of the canoe",
+   "question": "Is the canoe reflected in the water?"
+  },
+  {
+   "id": "pineapple_reflection_visible",
+   "type": "relation",
+   "of": [
+    "pineapple",
+    "reflection_pineapple"
+   ],
+   "desc": "the pineapple is reflected in the water as the reflection of the pineapple",
+   "question": "Is the pineapple reflected in the water?"
+  },
+  {
+   "id": "heron_reflection_visible",
+   "type": "relation",
+   "of": [
+    "heron",
+    "reflection_heron"
+   ],
+   "desc": "the heron is reflected in the water as the reflection of the heron",
+   "question": "Is the heron reflected in the water?"
+  },
+  {
+   "id": "sky_reflection_visible",
+   "type": "state",
+   "of": "reflection_sky",
+   "desc": "the sky is reflected in the water",
+   "question": "Is the sky reflected in the water?"
+  },
+  {
+   "id": "ripple_distorts_reflection",
+   "type": "action",
+   "of": [
+    "ripple",
+    "reflection_pineapple"
+   ],
+   "desc": "the ripple distorts the reflection of the pineapple",
+   "question": "Does the ripple distort the reflection of the pineapple?"
+  },
+  {
+   "id": "towel_threadbare",
+   "type": "attribute",
+   "of": "towel",
+   "desc": "the towel is threadbare",
+   "question": "Is the towel threadbare?"
+  },
+  {
+   "id": "towel_folded_precisely",
+   "type": "state",
+   "of": "towel",
+   "desc": "the towel is folded",
+   "question": "Is the towel folded?"
+  },
+  {
+   "id": "canoe_hull_dark",
+   "type": "attribute",
+   "of": "canoe",
+   "desc": "the canoe has a darkened hull",
+   "question": "Is the canoe's hull darkened?"
+  },
+  {
+   "id": "canoe_ribs_visible",
+   "type": "attribute",
+   "of": "canoe",
+   "desc": "the canoe has visible ribs etched like cracked leather",
+   "question": "Are the canoe's ribs visible and etched like cracked leather?"
+  },
+  {
+   "id": "pineapple_color",
+   "type": "attribute",
+   "of": "pineapple",
+   "desc": "the pineapple has golden-green flesh",
+   "question": "Is the pineapple's flesh golden-green?"
+  },
+  {
+   "id": "paddle_bent",
+   "type": "attribute",
+   "of": "paddle",
+   "desc": "the paddle shaft is slightly bent",
+   "question": "Is the paddle shaft slightly bent?"
+  },
+  {
+   "id": "paddle_splinters",
+   "type": "attribute",
+   "of": "paddle",
+   "desc": "the paddle is marked with splinters",
+   "question": "Is the paddle marked with splinters?"
+  },
+  {
+   "id": "tree_branches_crooked",
+   "type": "attribute",
+   "of": "oak_tree",
+   "desc": "the oak tree has crooked branches",
+   "question": "Does the oak tree have crooked branches?"
+  },
+  {
+   "id": "heron_neck_curved",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron's neck is curved forward",
+   "question": "Is the heron's neck curved forward?"
+  },
+  {
+   "id": "vine_hoop_threaded",
+   "type": "attribute",
+   "of": "vine_hoop",
+   "desc": "the vine is threaded through a small wooden hoop",
+   "question": "Is the vine threaded through a small wooden hoop?"
+  },
+  {
+   "id": "pulley_leading_upward",
+   "type": "relation",
+   "of": [
+    "pulley_system",
+    "vine_hoop"
+   ],
+   "desc": "the pulley system leads upward from the vine",
+   "question": "Does the pulley system lead upward from the vine?"
+  },
+  {
+   "id": "reflection_canoe_in_water",
+   "type": "state",
+   "of": "reflection_canoe",
+   "desc": "the reflection of the canoe is in the water",
+   "question": "Is the reflection of the canoe in the water?"
+  },
+  {
+   "id": "reflection_pineapple_in_water",
+   "type": "state",
+   "of": "reflection_pineapple",
+   "desc": "the reflection of the pineapple is in the water",
+   "question": "Is the reflection of the pineapple in the water?"
+  },
+  {
+   "id": "reflection_heron_in_water",
+   "type": "state",
+   "of": "reflection_heron",
+   "desc": "the reflection of the heron is in the water",
+   "question": "Is the reflection of the heron in the water?"
+  },
+  {
+   "id": "reflection_sky_in_water",
+   "type": "state",
+   "of": "reflection_sky",
+   "desc": "the reflection of the sky is in the water",
+   "question": "Is the reflection of the sky in the water?"
+  },
+  {
+   "id": "reflection_clouds",
+   "type": "attribute",
+   "of": "reflection_sky",
+   "desc": "the reflection includes clouds",
+   "question": "Does the reflection include clouds?"
+  },
+  {
+   "id": "towel_fold_precision",
+   "type": "attribute",
+   "of": "towel",
+   "desc": "the towel is folded with military precision",
+   "question": "Is the towel folded with military precision?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "canoe",
+   "to": "pineapple",
+   "kind": "support"
+  },
+  {
+   "from": "canoe",
+   "to": "towel",
+   "kind": "support"
+  },
+  {
+   "from": "rock",
+   "to": "heron",
+   "kind": "support"
+  },
+  {
+   "from": "oak_tree",
+   "to": "pulley_system",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0195",
+ "prompt": "In the golden hush of a late afternoon, the canoe floats with a slow, deliberate grace, its aged hull darkened by years of sun and water, its ribs etched like cracked leather beneath the still surface of the pond. The water, so perfectly still it seems almost frozen, reflects not only the canoe and its contents but the entire world above it, creating a second, inverted universe where the sky mirrors the real one, cloud for cloud, and the heron’s shadow stands motionless in the mirrored stone. A single ripple distorts this reflection only briefly when the pineapple, heavy with its own ripe urgency, begins to drip, its golden-green flesh slowly bleeding amber onto the canoe’s wooden edge. The paddle, red as a stop sign or a warning, floats vertically like a beacon, its shaft slightly bent from a past collision with submerged roots, the oar still marked with splinters where it brushed against something below. Overhead, the gnarled oak tree leans with such dramatic insistence that it seems to hold its breath, as if one gust of wind might send it toppling into the water, dragging with it the vines that dangle like ancient ropes from its crooked branches. One of those vines, however, is not entirely natural—it is braided with copper wire and threaded through a small wooden hoop, part of a pulley system leading upward to a rusted chain anchored in the tree’s gnarled heart. The chain dangles with no visible purpose, but its weight is enough to hold the heron still on the mossy rock, as if the bird, with its prehistoric grace, senses the energy in the air, the tension in the thread that binds this place. The sun-bleached towel, though worn and threadbare, is folded with military precision, as if placed there not by accident but by someone who values order in the chaos. Its pale blue patterned fabric is slightly damp, as if it had just dried after holding the pineapple in place, yet there is no sign of the person who might have left it—only the scent of salt and citrus lingering on the air. A butterfly, impossibly blue, hovers at the water’s edge, drawn not to the flowerbed beyond the pond but to the reflection of the pineapple, which it mistakes for the real thing. The bird, too, seems caught in this illusion, its long neck curving forward in a slow, deliberate bend, its sharp beak poised to strike, not at the pineapple, but at the reflection in the water. This illusion is so complete that it appears to ripple twice: once in the real world when the pineapple moves, and again in the mirror world when the shadow shifts. The water is not just still but strangely alive, responding not only to the drips and ripples but to the weight of the canoe itself, as if it understands the burden it carries—both physical and symbolic. The air is thick with humidity and possibility, the scent of pine resin mingling with the sweetness of tropical fruit, while the wind, though absent, feels almost palpable in its absence, like a held breath. The canoe, the tree, the heron, the pineapple—they are all part of a slow, silent dance, choreographed by forces unseen, yet perfectly synchronized. It is a scene that exists in the margins of reality, a moment suspended between decay and rebirth, between the stillness of the pond and the restless pulse of the world beyond.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 79,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 13,
+   "new_nodes": 15,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 8,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

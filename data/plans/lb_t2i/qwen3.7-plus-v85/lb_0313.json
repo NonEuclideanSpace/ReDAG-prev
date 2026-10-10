@@ -1,0 +1,470 @@
+{
+ "style": "surreal digital art, bioluminescent, dreamlike, ethereal lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal forest with mossy ground over liquid mercury",
+   "question": "Does the image show a surreal forest with mossy ground over liquid mercury?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "drum",
+   "type": "entity",
+   "class": "drum",
+   "plural": "drums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient weathered drum",
+   "question": "Is there an ancient weathered drum?",
+   "box": [
+    412,
+    462,
+    612,
+    662
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black crow",
+   "question": "Is there a black crow?",
+   "box": [
+    300,
+    350,
+    450,
+    500
+   ]
+  },
+  {
+   "id": "acorns",
+   "type": "entity",
+   "class": "acorn",
+   "plural": "acorns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating acorns",
+   "question": "Are there floating acorns?",
+   "box": [
+    200,
+    200,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "scarf",
+   "type": "entity",
+   "class": "scarf",
+   "plural": "scarves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded red scarf",
+   "question": "Is there a faded red scarf?",
+   "box": [
+    450,
+    500,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "staircase",
+   "type": "entity",
+   "class": "spiral staircase",
+   "plural": "spiral staircases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass spiral staircase appearing and disappearing",
+   "question": "Is there a glass spiral staircase appearing and disappearing?",
+   "box": [
+    700,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden key",
+   "question": "Is there a golden key?",
+   "box": [
+    750,
+    580,
+    800,
+    630
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "bell jar",
+   "plural": "bell jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small glass bell jar",
+   "question": "Is there a small glass bell jar?",
+   "box": [
+    100,
+    600,
+    200,
+    750
+   ]
+  },
+  {
+   "id": "drum_bleeding_color",
+   "type": "state",
+   "of": "drum",
+   "desc": "the drum's carved symbols are glowing with drawn-in red and black colors",
+   "question": "Are the drum's carved symbols glowing with drawn-in red and black colors?"
+  },
+  {
+   "id": "crow_pecking",
+   "type": "action",
+   "of": [
+    "crow",
+    "acorns"
+   ],
+   "desc": "the crow pecks at the floating acorns",
+   "question": "Is the crow pecking at the floating acorns?"
+  },
+  {
+   "id": "scarf_entwined_drum",
+   "type": "relation",
+   "of": [
+    "scarf",
+    "drum"
+   ],
+   "desc": "the faded red scarf is entwined with the drum’s strings",
+   "question": "Is the faded red scarf entwined with the drum’s strings?"
+  },
+  {
+   "id": "key_at_staircase",
+   "type": "relation",
+   "of": [
+    "key",
+    "staircase"
+   ],
+   "desc": "the golden key lies at the base of the glass spiral staircase",
+   "question": "Does the golden key lie at the base of the glass spiral staircase?"
+  },
+  {
+   "id": "jar_nearby",
+   "type": "relation",
+   "of": [
+    "jar",
+    "drum"
+   ],
+   "desc": "the glass bell jar is near the drum",
+   "question": "Is the glass bell jar near the drum?"
+  },
+  {
+   "id": "drum_center",
+   "type": "relation",
+   "of": [
+    "drum",
+    "acorns"
+   ],
+   "desc": "the drum is at the center of the scene",
+   "question": "Is the drum at the center of the scene?"
+  },
+  {
+   "id": "mercury_pool",
+   "type": "entity",
+   "class": "pool",
+   "plural": "pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vast shimmering pool of liquid mercury beneath the moss",
+   "question": "Is there a vast shimmering pool of liquid mercury beneath the moss?",
+   "box": [
+    0,
+    500,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "canopy",
+   "type": "entity",
+   "class": "forest canopy",
+   "plural": "forest canopies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forest canopy with translucent glowing leaves",
+   "question": "Is there a forest canopy with translucent glowing leaves?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "trees",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "trees between which the staircase appears",
+   "question": "Are there trees between which the staircase appears?",
+   "box": [
+    100,
+    300,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "drum_on_ground",
+   "type": "relation",
+   "of": [
+    "drum",
+    "mercury_pool"
+   ],
+   "desc": "the ancient weathered drum rests on the mossy ground over the mercury pool",
+   "question": "Does the ancient weathered drum rest on the mossy ground over the mercury pool?"
+  },
+  {
+   "id": "scarf_taut",
+   "type": "state",
+   "of": "scarf",
+   "desc": "the faded red scarf is fluttering",
+   "question": "Is the faded red scarf fluttering?"
+  },
+  {
+   "id": "crow_feathers_rippling",
+   "type": "state",
+   "of": "crow",
+   "desc": "the black crow's feathers are rippling like ink in water",
+   "question": "Are the black crow's feathers rippling like ink in water?"
+  },
+  {
+   "id": "acorns_spinning",
+   "type": "state",
+   "of": "acorns",
+   "desc": "the floating acorns are slowly spinning",
+   "question": "Are the floating acorns slowly spinning?"
+  },
+  {
+   "id": "jar_cloud_sighing",
+   "type": "state",
+   "of": "jar",
+   "desc": "the living cloud inside the glass bell jar is sighing",
+   "question": "Is the living cloud inside the glass bell jar sighing?"
+  },
+  {
+   "id": "mercury_rippling",
+   "type": "state",
+   "of": "mercury_pool",
+   "desc": "the surface of the mercury pool is rippling",
+   "question": "Is the surface of the mercury pool rippling?"
+  },
+  {
+   "id": "trees_swaying",
+   "type": "state",
+   "of": "trees",
+   "desc": "the trees are swaying in slow deliberate rhythm",
+   "question": "Are the trees swaying in slow deliberate rhythm?"
+  },
+  {
+   "id": "crow_near_jar",
+   "type": "relation",
+   "of": [
+    "crow",
+    "jar"
+   ],
+   "desc": "the black crow flies close to the glass bell jar",
+   "question": "Does the black crow fly close to the glass bell jar?"
+  },
+  {
+   "id": "staircase_between_trees",
+   "type": "relation",
+   "of": [
+    "staircase",
+    "trees"
+   ],
+   "desc": "the glass spiral staircase appears between the trees",
+   "question": "Does the glass spiral staircase appear between the trees?"
+  },
+  {
+   "id": "dancer_reflection",
+   "type": "entity",
+   "class": "dancer",
+   "plural": "dancers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dancer mid-leap reflected in the glass staircase steps",
+   "question": "Is there a reflection of a dancer mid-leap in the glass staircase steps?",
+   "box": [
+    400,
+    300,
+    500,
+    450
+   ]
+  },
+  {
+   "id": "clock_reflection",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock ticking backward reflected in the glass staircase steps",
+   "question": "Is there a reflection of a clock ticking backward in the glass staircase steps?",
+   "box": [
+    640,
+    340,
+    740,
+    490
+   ]
+  },
+  {
+   "id": "lanterns_reflection",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating lanterns reflected in the mercury pool",
+   "question": "Are there reflections of floating lanterns in the mercury pool?",
+   "box": [
+    100,
+    800,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "towers_reflection",
+   "type": "entity",
+   "class": "tower",
+   "plural": "towers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shadowed towers reflected in the mercury pool",
+   "question": "Are there reflections of shadowed towers in the mercury pool?",
+   "box": [
+    100,
+    800,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "child_reflection",
+   "type": "attribute",
+   "of": "staircase",
+   "desc": "the glass spiral staircase reflects a child holding a dying star",
+   "question": "Does the glass spiral staircase reflect a child holding a dying star?"
+  },
+  {
+   "id": "jar_humming",
+   "type": "state",
+   "of": "jar",
+   "desc": "the glass bell jar emits a low resonant hum",
+   "question": "Is the glass bell jar emitting a low resonant hum (visually suggested by vibration or effect)?"
+  },
+  {
+   "id": "crow_near_drum",
+   "type": "relation",
+   "of": [
+    "crow",
+    "drum"
+   ],
+   "desc": "the black crow is near the ancient weathered drum",
+   "question": "Is the black crow near the ancient weathered drum?"
+  },
+  {
+   "id": "drum_symbols",
+   "type": "attribute",
+   "of": "drum",
+   "desc": "the drum is carved with symbols",
+   "question": "Is the drum carved with symbols?"
+  },
+  {
+   "id": "jar_cloud",
+   "type": "attribute",
+   "of": "jar",
+   "desc": "the bell jar contains a living cloud",
+   "question": "Does the bell jar contain a living cloud?"
+  },
+  {
+   "id": "acorns_reflecting",
+   "type": "attribute",
+   "of": "acorns",
+   "desc": "the floating acorns reflect different aspects of the scene",
+   "question": "Do the floating acorns reflect different aspects of the scene?"
+  },
+  {
+   "id": "canopy_bending",
+   "type": "state",
+   "of": "canopy",
+   "desc": "the forest canopy bends in arcs",
+   "question": "Does the forest canopy bend in arcs?"
+  },
+  {
+   "id": "scarf_tautness",
+   "type": "state",
+   "of": "scarf",
+   "desc": "the faded red scarf is taut",
+   "question": "Is the faded red scarf taut?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "mercury_pool",
+   "to": "drum",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0313",
+ "prompt": "The mossy ground, damp with the breath of the forest, is not quite earth but a thin membrane stretched over a vast, shimmering pool of liquid mercury, its surface undulating like a second, ghostly world just beneath the veil of reality. The weathered drum, ancient and carved with symbols that shift subtly in the shifting light, rests at the center of this strange boundary. Its taut leather skin, now slightly tauter as if responding to some unseen pressure, pulses faintly in rhythm with the wind. The crow, blacker than shadow and with feathers that ripple like ink in water, does not merely peck at the acorns but lifts each one to its beak as if tasting time itself, the shells cracking open to reveal seeds that sprout miniature trees in midair before dissolving into mist. The faded red scarf, fluttering gently like a half-forgotten memory, is not simply caught in the breeze—it is entwined with the drum’s strings, invisible to the eye but binding them together in a silent symphony of tension and release. Above, the forest canopy bends in impossible arcs, its leaves translucent and glowing faintly with bioluminescent blues and greens, each leaf a window into another forest somewhere else, distant and unknowable. Between the trees, a spiral staircase of glass appears and disappears, its steps reflecting fragments of scenes from other moments—flickers of a dancer mid-leap, a child holding a dying star, a clock that ticks backward in slow motion. At the base of the staircase lies a key, golden and warm, but when picked up, it becomes a feather, then a seed, then a whisper, and finally nothing at all. A small, glass-bell jar nearby is filled not with air but with a living, breathing cloud that sighs gently in time with the wind, and when the crow flies too close, it emits a low, resonant hum that causes the trees to sway in slow, deliberate rhythm. The mercury beneath the moss ripples in response, creating ripples that mirror not just the forest but also a city of floating lanterns and shadowed towers that flicker in and out of existence as if being drawn on the surface of a dream. The drum, now vibrating in a slow, hypnotic pattern, begins to bleed color—not outward, but inward, drawing the red from the scarf and the black from the crow’s feathers into its carved symbols, which glow with a quiet, ancient power. Around it, the acorns no longer fall—they float, suspended in the air like suspended notes in a melody, each one slowly spinning and reflecting different aspects of the scene, creating a recursive mosaic of sight and sound. The scene is not a stage but a living system, where every object is both cause and effect, where the wind carries the drum’s rhythm into the trees, which echo it into the air, which shapes the mercury into a reflection of all that has come before. And still, at the center of it all, the crow pecks at the acorns, the drum breathes, the scarf flutters, and the world, though impossible, holds itself together in a fragile, luminous balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 46,
+   "n_uncovered": 3,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

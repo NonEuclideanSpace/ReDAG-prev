@@ -1,0 +1,143 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station",
+   "question": "Is the scene set inside a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    500,
+    600,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "firefighter_badge",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a shiny silver badge",
+   "question": "Is the firefighter holding a shiny silver badge?"
+  },
+  {
+   "id": "firefighter_looking",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is looking down",
+   "question": "Is the firefighter looking down?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting",
+   "question": "Is the cat sitting?"
+  },
+  {
+   "id": "cat_next_to_firefighter",
+   "type": "relation",
+   "of": [
+    "cat",
+    "firefighter"
+   ],
+   "desc": "the cat is next to the firefighter",
+   "question": "Is the cat next to the firefighter?"
+  },
+  {
+   "id": "firefighter_looks_at_cat",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "cat"
+   ],
+   "desc": "the firefighter looks at the cat",
+   "question": "Is the firefighter looking at the cat?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in a yellow helmet is standing",
+   "question": "Is the firefighter in a yellow helmet standing?"
+  },
+  {
+   "id": "cat_on_floor",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is sitting on the floor",
+   "question": "Is the small orange cat sitting on the floor?"
+  },
+  {
+   "id": "cat_paws",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small orange cat has white paws",
+   "question": "Does the small orange cat have white paws?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0017",
+ "prompt": "In an anime style scene set inside a fire station, a firefighter in a yellow helmet stands on the left side of the frame. Next to him on the right sits a small orange cat with white paws. The firefighter is holding a shiny silver badge in his hand. He is looking down at the small orange cat. The cat is sitting calmly on the floor. There is no fire truck visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

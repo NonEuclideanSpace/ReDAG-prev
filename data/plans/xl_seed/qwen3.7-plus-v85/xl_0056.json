@@ -1,0 +1,391 @@
+{
+ "style": "photorealistic photo, warm natural morning light, cozy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bakery interior with large glass windows, wooden counter, glass display case, shelves with pastries, and ceramic tiles",
+   "question": "Does the image show a bakery interior with large glass windows, a wooden counter, a glass display case, shelves with pastries, and ceramic tiles?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "baker",
+   "type": "entity",
+   "class": "baker",
+   "plural": "bakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a baker wearing a white apron",
+   "question": "Is there a baker wearing a white apron?",
+   "box": [
+    350,
+    200,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden counter",
+   "question": "Is there a wooden counter?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "display_case",
+   "type": "entity",
+   "class": "display case",
+   "plural": "display cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass display case",
+   "question": "Is there a glass display case?",
+   "box": [
+    700,
+    400,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a blue coat",
+   "question": "Is there a customer in a blue coat?",
+   "box": [
+    50,
+    250,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "pourer",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "another person",
+   "question": "Is there another person?",
+   "box": [
+    150,
+    250,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a striped shirt",
+   "question": "Is there a child in a striped shirt?",
+   "box": [
+    750,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green scarf",
+   "question": "Is there a woman in a green scarf?",
+   "box": [
+    850,
+    250,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    600,
+    50,
+    800,
+    200
+   ]
+  },
+  {
+   "id": "tray_croissants",
+   "type": "attribute",
+   "of": "baker",
+   "desc": "the baker holds a tray of golden croissants",
+   "question": "Is the baker holding a tray of golden croissants?"
+  },
+  {
+   "id": "customer_mug",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the customer holds out a ceramic mug",
+   "question": "Is the customer holding out a ceramic mug?"
+  },
+  {
+   "id": "pourer_pot",
+   "type": "attribute",
+   "of": "pourer",
+   "desc": "the other person holds a silver pot",
+   "question": "Is the other person holding a silver pot?"
+  },
+  {
+   "id": "woman_phone",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman looks at her phone",
+   "question": "Is the woman looking at her phone?"
+  },
+  {
+   "id": "basket_baguettes",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a basket of fresh baguettes",
+   "question": "Is there a basket of fresh baguettes?",
+   "box": [
+    50,
+    850,
+    300,
+    1024
+   ]
+  },
+  {
+   "id": "jar_honey",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jar of honey",
+   "question": "Is there a jar of honey?",
+   "box": [
+    320,
+    850,
+    500,
+    1024
+   ]
+  },
+  {
+   "id": "flour_bags",
+   "type": "entity",
+   "class": "bag",
+   "plural": "bags",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of flour bags",
+   "question": "Is there a stack of flour bags?",
+   "box": [
+    800,
+    100,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "baker_places_tray",
+   "type": "action",
+   "of": [
+    "baker",
+    "counter"
+   ],
+   "desc": "the baker places the tray onto the wooden counter",
+   "question": "Is the baker placing the tray onto the wooden counter?"
+  },
+  {
+   "id": "pourer_pours_coffee",
+   "type": "action",
+   "of": [
+    "pourer",
+    "customer"
+   ],
+   "desc": "the other person pours steaming coffee into the customer's mug",
+   "question": "Is the other person pouring steaming coffee into the customer's mug?"
+  },
+  {
+   "id": "child_reaches_donut",
+   "type": "action",
+   "of": [
+    "child",
+    "display_case"
+   ],
+   "desc": "the child reaches for a chocolate donut in the glass case",
+   "question": "Is the child reaching for a chocolate donut in the glass case?"
+  },
+  {
+   "id": "customer_left",
+   "type": "relation",
+   "of": [
+    "customer",
+    "baker"
+   ],
+   "desc": "the customer is to the left of the baker",
+   "question": "Is the customer to the left of the baker?"
+  },
+  {
+   "id": "child_right",
+   "type": "relation",
+   "of": [
+    "child",
+    "baker"
+   ],
+   "desc": "the child is to the right of the baker",
+   "question": "Is the child to the right of the baker?"
+  },
+  {
+   "id": "woman_beside_child",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman is beside the child",
+   "question": "Is the woman beside the child?"
+  },
+  {
+   "id": "woman_leans_cabinet",
+   "type": "relation",
+   "of": [
+    "woman",
+    "display_case"
+   ],
+   "desc": "the woman leans against the display cabinet",
+   "question": "Is the woman leaning against the display cabinet?"
+  },
+  {
+   "id": "basket_next_to_jar",
+   "type": "relation",
+   "of": [
+    "basket_baguettes",
+    "jar_honey"
+   ],
+   "desc": "the basket of baguettes sits next to the jar of honey",
+   "question": "Is the basket of baguettes next to the jar of honey?"
+  },
+  {
+   "id": "cat_on_shelf",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat sleeps on a high shelf",
+   "question": "Is the cat sleeping on a high shelf?"
+  },
+  {
+   "id": "cat_near_flour",
+   "type": "relation",
+   "of": [
+    "cat",
+    "flour_bags"
+   ],
+   "desc": "the cat is near the stack of flour bags",
+   "question": "Is the cat near the stack of flour bags?"
+  },
+  {
+   "id": "cat_state",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is curled up",
+   "question": "Is the cat curled up?"
+  },
+  {
+   "id": "baker_standing",
+   "type": "state",
+   "of": "baker",
+   "desc": "the baker wearing a white apron is standing",
+   "question": "Is the baker wearing a white apron standing?"
+  },
+  {
+   "id": "donut_in_case",
+   "type": "attribute",
+   "of": "display_case",
+   "desc": "a chocolate donut displayed in the glass case",
+   "question": "Is there a chocolate donut displayed in the glass case?"
+  },
+  {
+   "id": "dipper_in_jar",
+   "type": "attribute",
+   "of": "jar_honey",
+   "desc": "a wooden dipper resting inside the jar of honey",
+   "question": "Is there a wooden dipper resting inside the jar of honey?"
+  },
+  {
+   "id": "flour_bags_on_shelf",
+   "type": "state",
+   "of": "flour_bags",
+   "desc": "the stack of flour bags is on a high shelf in the background",
+   "question": "Is the stack of flour bags on a high shelf in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "basket_baguettes",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "jar_honey",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0056",
+ "prompt": "This photorealistic photo captures a bustling bakery interior bathed in warm, natural morning light streaming through large glass windows. In the center, a baker wearing a white apron carefully places a tray of golden croissants onto a wooden counter. To the left, a customer in a blue coat holds out a ceramic mug while another person pours steaming coffee into it from a silver pot. On the right, a child in a striped shirt reaches for a chocolate donut displayed in a glass case. Beside the child, a woman in a green scarf looks down at her phone, leaning slightly against the display cabinet. In the foreground, a basket of fresh baguettes sits next to a jar of honey with a wooden dipper resting inside. Behind the counter, shelves are stacked with various pastries, including muffins and tarts. A cat sleeps peacefully on a high shelf in the background, curled up near a stack of flour bags. The lighting highlights the textures of the crusty bread and the smooth ceramic tiles, creating a cozy and inviting atmosphere that emphasizes the freshness of the baked goods and the quiet interactions of the patrons.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

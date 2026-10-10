@@ -1,0 +1,358 @@
+{
+ "style": "photorealistic outdoor photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a playground with grass ground",
+   "question": "Does the image show a playground with grass ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "wooden fence",
+   "plural": "wooden fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence",
+   "question": "Is there a wooden fence?",
+   "box": [
+    100,
+    200,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "slide",
+   "type": "entity",
+   "class": "slide",
+   "plural": "slides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red slide",
+   "question": "Is there a red slide?",
+   "box": [
+    500,
+    100,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "swing_seat",
+   "type": "entity",
+   "class": "swing seat",
+   "plural": "swing seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue swing seat",
+   "question": "Is there a blue swing seat?",
+   "box": [
+    300,
+    300,
+    400,
+    500
+   ]
+  },
+  {
+   "id": "seesaw",
+   "type": "entity",
+   "class": "seesaw",
+   "plural": "seesaws",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow seesaw",
+   "question": "Is there a yellow seesaw?",
+   "box": [
+    100,
+    700,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "sandbox",
+   "type": "entity",
+   "class": "sandbox",
+   "plural": "sandboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green sandbox",
+   "question": "Is there a green sandbox?",
+   "box": [
+    450,
+    700,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "toy_cars",
+   "type": "entity",
+   "class": "toy car",
+   "plural": "toy cars",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four small toy cars",
+   "question": "Are there four small toy cars?",
+   "box": [
+    480,
+    750,
+    620,
+    820
+   ]
+  },
+  {
+   "id": "toy_shovels",
+   "type": "entity",
+   "class": "toy shovel",
+   "plural": "toy shovels",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two toy shovels",
+   "question": "Are there two toy shovels?",
+   "box": [
+    480,
+    750,
+    620,
+    820
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child wearing a helmet",
+   "question": "Is there a child wearing a helmet?",
+   "box": [
+    350,
+    500,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "teddy_bear",
+   "type": "entity",
+   "class": "teddy bear",
+   "plural": "teddy bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown teddy bear",
+   "question": "Is there a brown teddy bear?",
+   "box": [
+    400,
+    600,
+    480,
+    700
+   ]
+  },
+  {
+   "id": "slide_attached_fence",
+   "type": "relation",
+   "of": [
+    "slide",
+    "fence"
+   ],
+   "desc": "the red slide is attached to the wooden fence",
+   "question": "Is the red slide attached to the wooden fence?"
+  },
+  {
+   "id": "slide_taller_fence",
+   "type": "relation",
+   "of": [
+    "slide",
+    "fence"
+   ],
+   "desc": "the red slide is taller than the wooden fence",
+   "question": "Is the red slide taller than the wooden fence?"
+  },
+  {
+   "id": "swing_left_slide",
+   "type": "relation",
+   "of": [
+    "swing_seat",
+    "slide"
+   ],
+   "desc": "the blue swing seat is to the left of the red slide",
+   "question": "Is the blue swing seat to the left of the red slide?"
+  },
+  {
+   "id": "seesaw_next_sandbox",
+   "type": "relation",
+   "of": [
+    "seesaw",
+    "sandbox"
+   ],
+   "desc": "the yellow seesaw is next to the green sandbox",
+   "question": "Is the yellow seesaw next to the green sandbox?"
+  },
+  {
+   "id": "seesaw_longer_sandbox_wide",
+   "type": "relation",
+   "of": [
+    "seesaw",
+    "sandbox"
+   ],
+   "desc": "the yellow seesaw is longer than the green sandbox is wide",
+   "question": "Is the yellow seesaw longer than the green sandbox is wide?"
+  },
+  {
+   "id": "cars_in_sandbox",
+   "type": "relation",
+   "of": [
+    "toy_cars",
+    "sandbox"
+   ],
+   "desc": "the four small toy cars are inside the green sandbox",
+   "question": "Are the four small toy cars inside the green sandbox?"
+  },
+  {
+   "id": "shovels_in_sandbox",
+   "type": "relation",
+   "of": [
+    "toy_shovels",
+    "sandbox"
+   ],
+   "desc": "the two toy shovels are inside the green sandbox",
+   "question": "Are the two toy shovels inside the green sandbox?"
+  },
+  {
+   "id": "child_between",
+   "type": "relation",
+   "of": [
+    "child",
+    "slide",
+    "seesaw"
+   ],
+   "desc": "the child is between the red slide and the yellow seesaw",
+   "question": "Is the child positioned between the red slide and the yellow seesaw?"
+  },
+  {
+   "id": "child_shorter_slide",
+   "type": "relation",
+   "of": [
+    "child",
+    "slide"
+   ],
+   "desc": "the child is shorter than the red slide",
+   "question": "Is the child shorter than the red slide?"
+  },
+  {
+   "id": "child_taller_bear",
+   "type": "relation",
+   "of": [
+    "child",
+    "teddy_bear"
+   ],
+   "desc": "the child is taller than the brown teddy bear",
+   "question": "Is the child taller than the brown teddy bear?"
+  },
+  {
+   "id": "fence_surrounds_sandbox",
+   "type": "relation",
+   "of": [
+    "fence",
+    "sandbox"
+   ],
+   "desc": "the wooden fence surrounds the green sandbox",
+   "question": "Does the wooden fence surround the green sandbox?"
+  },
+  {
+   "id": "child_looking_swing",
+   "type": "action",
+   "of": [
+    "child",
+    "swing_seat"
+   ],
+   "desc": "the child is looking at the blue swing seat",
+   "question": "Is the child looking at the blue swing seat?"
+  },
+  {
+   "id": "child_holding_bear",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child holds the brown teddy bear",
+   "question": "Is the child holding the brown teddy bear?"
+  },
+  {
+   "id": "bear_facing_child",
+   "type": "state",
+   "of": "teddy_bear",
+   "desc": "the brown teddy bear is facing the child",
+   "question": "Is the brown teddy bear facing the child?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child wearing a helmet is standing",
+   "question": "Is the child wearing a helmet standing?"
+  },
+  {
+   "id": "chains",
+   "type": "attribute",
+   "of": "swing_seat",
+   "desc": "the blue swing seat hangs by chains",
+   "question": "Does the blue swing seat hang by chains?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fence",
+   "to": "slide",
+   "kind": "support"
+  },
+  {
+   "from": "fence",
+   "to": "swing_seat",
+   "kind": "support"
+  },
+  {
+   "from": "sandbox",
+   "to": "toy_cars",
+   "kind": "support"
+  },
+  {
+   "from": "sandbox",
+   "to": "toy_shovels",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_070",
+ "prompt": "A playground with a red slide attached to a wooden fence. The slide is taller than the fence. A blue swing seat hangs from the fence by chains, to the left of the slide. A yellow seesaw is positioned next to a green sandbox. The seesaw is longer than the sandbox is wide. Inside the sandbox, there are four small toy cars and two toy shovels. A child is standing on the grass between the slide and the seesaw, wearing a helmet and holding a brown teddy bear. The child is shorter than the slide but taller than the teddy bear. The fence surrounds the sandbox. The child is looking at the swing seat. The teddy bear is facing the child.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

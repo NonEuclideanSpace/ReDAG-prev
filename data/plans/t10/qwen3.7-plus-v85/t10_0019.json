@@ -1,0 +1,282 @@
+{
+ "style": "flat vector illustration, clean lines, solid colors, no gradients, no shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with simple geometric shapes representing distant buildings",
+   "question": "Does the image show a snowy town square with simple geometric shapes representing distant buildings?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "stone fountain",
+   "plural": "stone fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large stone fountain",
+   "question": "Is there a large stone fountain?",
+   "box": [
+    380,
+    300,
+    640,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    750,
+    650,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    350,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    220,
+    450,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    450,
+    320,
+    600,
+    820
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow jacket",
+   "question": "Is there a child in a yellow jacket?",
+   "box": [
+    680,
+    450,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    800,
+    550,
+    920,
+    700
+   ]
+  },
+  {
+   "id": "woman_mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a red mug",
+   "question": "Is the woman in a blue coat holding a red mug?"
+  },
+  {
+   "id": "woman_treat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small treat",
+   "question": "Is the woman in a blue coat holding a small treat?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in a blue coat is next to the golden retriever",
+   "question": "Is the woman in a blue coat next to the golden retriever?"
+  },
+  {
+   "id": "dog_behind_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever is slightly behind the woman in a blue coat",
+   "question": "Is the golden retriever slightly behind the woman in a blue coat?"
+  },
+  {
+   "id": "man_center",
+   "type": "relation",
+   "of": [
+    "man",
+    "fountain"
+   ],
+   "desc": "the man in a green hat is in front of the large stone fountain",
+   "question": "Is the man in a green hat in front of the large stone fountain?"
+  },
+  {
+   "id": "child_right_fountain",
+   "type": "relation",
+   "of": [
+    "child",
+    "fountain"
+   ],
+   "desc": "the child in a yellow jacket is to the right of the large stone fountain",
+   "question": "Is the child in a yellow jacket to the right of the large stone fountain?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat is perched on the bench",
+   "question": "Is the black cat perched on the bench?"
+  },
+  {
+   "id": "child_looks_cat",
+   "type": "action",
+   "of": [
+    "child",
+    "cat"
+   ],
+   "desc": "the child in a yellow jacket looks at the black cat",
+   "question": "Is the child in a yellow jacket looking at the black cat?"
+  },
+  {
+   "id": "woman_hands_dog",
+   "type": "action",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in a blue coat hands a small treat to the golden retriever",
+   "question": "Is the woman in a blue coat handing a small treat to the golden retriever?"
+  },
+  {
+   "id": "man_points_fountain",
+   "type": "action",
+   "of": [
+    "man",
+    "fountain"
+   ],
+   "desc": "the man in a green hat points toward the large stone fountain",
+   "question": "Is the man in a green hat pointing toward the large stone fountain?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "man_pointing_gesture",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the man in a green hat gestures toward the child in a yellow jacket",
+   "question": "Is the man in a green hat gesturing toward the child in a yellow jacket?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0019",
+ "prompt": "In a flat vector illustration, a snowy town square features six distinct elements arranged across the foreground. On the left stands a woman in a blue coat holding a red mug. Next to her, slightly behind, is a golden retriever sitting patiently on the snow. In the center, a man in a green hat points toward a large stone fountain that dominates the middle ground. To the right of the fountain, a child in a yellow jacket looks at a black cat perched on a bench. The black cat sits calmly, observing the scene. The woman in the blue coat is handing a small treat to the golden retriever, creating a gentle interaction between them. Meanwhile, the man in the green hat gestures toward the fountain, directing the attention of the child in the yellow jacket, who follows his gaze intently. The snow covers the ground uniformly, with simple geometric shapes representing distant buildings. There is no sun visible in the sky, keeping the focus entirely on the figures and their immediate surroundings. The composition relies on clean lines and solid colors without gradients or shadows, emphasizing the stylized nature of the artwork. Each character is easily distinguishable by their unique clothing color or animal species, ensuring clarity in the visual narrative. The spatial arrangement balances the left and right sides with the central fountain acting as an anchor point for the interactions occurring around it.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

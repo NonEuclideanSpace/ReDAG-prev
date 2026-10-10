@@ -1,0 +1,196 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a station interior with a departure screen above",
+   "question": "Does the image show a station interior with a departure screen visible in the upper area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray bench",
+   "question": "Is there a gray bench?",
+   "box": [
+    350,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    400,
+    350,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black suit",
+   "question": "Is there a man in a black suit?",
+   "box": [
+    750,
+    200,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman_suitcase",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small green suitcase",
+   "question": "Is the woman in a blue coat holding a small green suitcase?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is sitting",
+   "question": "Is the child in a yellow hat sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child in a yellow hat is looking at the woman",
+   "question": "Is the child in a yellow hat looking toward the woman in the blue coat?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "relation",
+   "of": [
+    "man",
+    "screen"
+   ],
+   "desc": "the man in a black suit points toward the departure screen",
+   "question": "Is the man in a black suit pointing toward the departure screen?"
+  },
+  {
+   "id": "woman_next_to_child",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue coat is next to the child",
+   "question": "Is the woman in a blue coat next to the child?"
+  },
+  {
+   "id": "child_on_bench",
+   "type": "relation",
+   "of": [
+    "child",
+    "bench"
+   ],
+   "desc": "the child sits on the gray bench",
+   "question": "Is the child sitting on the gray bench?"
+  },
+  {
+   "id": "no_coffee_cup",
+   "type": "absent",
+   "desc": "coffee cup",
+   "question": "Is there a coffee cup visible in the image?"
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "departure screen",
+   "plural": "departure screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure screen",
+   "question": "Is there a departure screen?",
+   "box": [
+    300,
+    50,
+    724,
+    250
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0101",
+ "prompt": "In this oil painting, a woman in a blue coat stands on the left holding a small green suitcase. In the center, a child in a yellow hat sits on a gray bench looking at the woman. On the right, a man in a black suit points toward the departure screen above them. The woman is next to the child. There is no coffee cup visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "man_pointing_screen",
+     "man_pointing"
+    ]
+   ]
+  }
+ }
+}

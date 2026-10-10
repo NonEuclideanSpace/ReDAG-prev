@@ -1,0 +1,444 @@
+{
+ "style": "photorealistic photo, golden hour lighting, warm afternoon atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm scene with dry earth, a field edge, a wooden fence, a distant barn, and a clear bright sky",
+   "question": "Does the image show a farm scene with dry earth, a field edge, a wooden fence, a distant barn, and a clear bright sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a plaid shirt",
+   "question": "Is there a man in a plaid shirt?",
+   "box": [
+    380,
+    250,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow sunhat",
+   "question": "Is there a woman in a yellow sunhat?",
+   "box": [
+    200,
+    280,
+    360,
+    780
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    100,
+    550,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old tractor with rusted wheels",
+   "question": "Is there an old tractor with rusted wheels?",
+   "box": [
+    700,
+    400,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in blue overalls",
+   "question": "Is there a child in blue overalls?",
+   "box": [
+    780,
+    350,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarecrow with a burlap face",
+   "question": "Is there a scarecrow with a burlap face?",
+   "box": [
+    650,
+    300,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black crow",
+   "question": "Is there a black crow?",
+   "box": [
+    680,
+    280,
+    730,
+    330
+   ]
+  },
+  {
+   "id": "man_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second man in a red scarf",
+   "question": "Is there a second man in a red scarf?",
+   "box": [
+    50,
+    300,
+    180,
+    700
+   ]
+  },
+  {
+   "id": "goat",
+   "type": "entity",
+   "class": "goat",
+   "plural": "goats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white goat",
+   "question": "Is there a white goat?",
+   "box": [
+    180,
+    550,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver bucket",
+   "question": "Is there a silver bucket?",
+   "box": [
+    220,
+    750,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "basket_corn",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the man in the plaid shirt holds a heavy basket of corn",
+   "question": "Is the man in the plaid shirt holding a heavy basket of corn?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the man in the plaid shirt is standing",
+   "question": "Is the man in the plaid shirt standing?"
+  },
+  {
+   "id": "farmer_looking_woman",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the man in the plaid shirt looks directly at the woman in the yellow sunhat",
+   "question": "Does the man in the plaid shirt look directly at the woman in the yellow sunhat?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow sunhat has her hands open and ready to accept the basket",
+   "question": "Does the woman in the yellow sunhat have her hands open and ready to accept the basket?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog watches the exchange between the man in the plaid shirt and the woman in the yellow sunhat",
+   "question": "Does the brown dog watch the exchange between the man in the plaid shirt and the woman in the yellow sunhat?"
+  },
+  {
+   "id": "child_sitting_tire",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in blue overalls is sitting on the large rear tire of the tractor",
+   "question": "Is the child in blue overalls sitting on the large rear tire of the tractor?"
+  },
+  {
+   "id": "child_looking_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in blue overalls looks back at the brown dog",
+   "question": "Does the child in blue overalls look back at the brown dog?"
+  },
+  {
+   "id": "scarecrow_leaning",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow with a burlap face has arms outstretched",
+   "question": "Does the scarecrow with a burlap face have arms outstretched?"
+  },
+  {
+   "id": "crow_perched",
+   "type": "relation",
+   "of": [
+    "crow",
+    "scarecrow"
+   ],
+   "desc": "the black crow is perched on the scarecrow's shoulder",
+   "question": "Is the black crow perched on the scarecrow's shoulder?"
+  },
+  {
+   "id": "crow_looking_down",
+   "type": "state",
+   "of": "crow",
+   "desc": "the black crow looks down at the activity below",
+   "question": "Does the black crow look down at the activity below?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_scarf",
+   "desc": "the second man in the red scarf points toward the horizon",
+   "question": "Does the second man in the red scarf point toward the horizon?"
+  },
+  {
+   "id": "goat_chewing",
+   "type": "state",
+   "of": "goat",
+   "desc": "the white goat is chewing calmly on a stray stalk of wheat",
+   "question": "Is the white goat chewing calmly on a stray stalk of wheat?"
+  },
+  {
+   "id": "bucket_spilling",
+   "type": "state",
+   "of": "bucket",
+   "desc": "the silver bucket lies on its side spilling a few kernels onto the dirt",
+   "question": "Does the silver bucket lie on its side spilling a few kernels onto the dirt?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the man in the plaid shirt passes the basket to the woman in the yellow sunhat",
+   "question": "Is the man in the plaid shirt passing the basket to the woman in the yellow sunhat?"
+  },
+  {
+   "id": "woman_left_farmer",
+   "type": "relation",
+   "of": [
+    "woman",
+    "farmer"
+   ],
+   "desc": "the woman in the yellow sunhat is to the left of the man in the plaid shirt",
+   "question": "Is the woman in the yellow sunhat to the left of the man in the plaid shirt?"
+  },
+  {
+   "id": "dog_beside_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog is beside the woman in the yellow sunhat",
+   "question": "Is the brown dog beside the woman in the yellow sunhat?"
+  },
+  {
+   "id": "tractor_right",
+   "type": "relation",
+   "of": [
+    "tractor",
+    "farmer"
+   ],
+   "desc": "the old tractor is to the right of the man in the plaid shirt",
+   "question": "Is the old tractor to the right of the man in the plaid shirt?"
+  },
+  {
+   "id": "scarecrow_next_to_tractor",
+   "type": "relation",
+   "of": [
+    "scarecrow",
+    "tractor"
+   ],
+   "desc": "the scarecrow with a burlap face is next to the old tractor",
+   "question": "Is the scarecrow with a burlap face next to the old tractor?"
+  },
+  {
+   "id": "man_next_to_goat",
+   "type": "relation",
+   "of": [
+    "man_scarf",
+    "goat"
+   ],
+   "desc": "the second man in the red scarf stands next to the white goat",
+   "question": "Does the second man in the red scarf stand next to the white goat?"
+  },
+  {
+   "id": "bucket_near_woman",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "woman"
+   ],
+   "desc": "the silver bucket is near the feet of the woman in the yellow sunhat",
+   "question": "Is the silver bucket near the feet of the woman in the yellow sunhat?"
+  },
+  {
+   "id": "no_modern_machinery",
+   "type": "absent",
+   "desc": "modern machinery like combines",
+   "question": "Are there any modern machinery like combines in the image?"
+  },
+  {
+   "id": "no_rain_mud",
+   "type": "absent",
+   "desc": "rain",
+   "question": "Is there any rain in the image?"
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    850,
+    300,
+    920,
+    800
+   ]
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog's tail rests on the ground",
+   "question": "Does the brown dog's tail rest on the ground?"
+  },
+  {
+   "id": "scarecrow_leaning_post",
+   "type": "relation",
+   "of": [
+    "scarecrow",
+    "fence_post"
+   ],
+   "desc": "the scarecrow with a burlap face leans against the wooden fence post",
+   "question": "Does the scarecrow with a burlap face lean against the wooden fence post?"
+  },
+  {
+   "id": "no_drones",
+   "type": "absent",
+   "desc": "drones",
+   "question": "Are there any drones in the image?"
+  },
+  {
+   "id": "no_mud",
+   "type": "absent",
+   "desc": "mud on the ground",
+   "question": "Is there any mud on the ground in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tractor",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0074",
+ "prompt": "A photorealistic photo captures a bustling farm scene during the golden hour of harvest. In the center, a farmer in a plaid shirt stands firmly on the dry earth, holding a heavy basket of corn. To his left, a woman in a yellow sunhat reaches out to accept the basket from him, her hands open and ready. Beside her, a brown dog sits patiently, its tail resting on the ground as it watches the exchange. On the right side of the frame, an old tractor with rusted wheels is parked near the field edge, with a child in blue overalls sitting on its large rear tire. Next to the tractor, a scarecrow with a burlap face leans against a wooden fence post, arms outstretched. A black crow perches on the scarecrow's shoulder, looking down at the activity below. In the background, a man in a red scarf points toward the horizon, directing attention to the distant barn. Standing next to him is a white goat, chewing calmly on a stray stalk of wheat. A silver bucket lies on its side near the woman's feet, spilling a few kernels onto the dirt. The sky above is clear and bright, indicating a warm afternoon. There is no modern machinery like combines or drones visible in the shot. There is no rain or mud on the ground, keeping the scene dry and dusty. The farmer looks directly at the woman as he passes the load. The child on the tractor looks back at the dog with curiosity. The crow seems to ignore the humans entirely. The goat remains focused on its snack. The composition balances the human labor with the quiet presence of animals and rustic tools, creating a harmonious tableau of rural life.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

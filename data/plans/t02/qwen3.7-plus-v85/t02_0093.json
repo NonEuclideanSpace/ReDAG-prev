@@ -1,0 +1,145 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue hard hat",
+   "question": "Is there a man in a blue hard hat?",
+   "box": [
+    50,
+    150,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted anchor chain coiled tightly",
+   "question": "Is there a rusted anchor chain coiled tightly?",
+   "box": [
+    450,
+    600,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a blue hard hat holds a clipboard",
+   "question": "Is the man in a blue hard hat holding a clipboard?"
+  },
+  {
+   "id": "man_looking_down",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue hard hat looks down",
+   "question": "Is the man in a blue hard hat looking down?"
+  },
+  {
+   "id": "man_next_to_chain",
+   "type": "relation",
+   "of": [
+    "man",
+    "chain"
+   ],
+   "desc": "the man in a blue hard hat is next to the rusted anchor chain",
+   "question": "Is the man in a blue hard hat next to the rusted anchor chain?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue hard hat stands",
+   "question": "Is the man in a blue hard hat standing?"
+  },
+  {
+   "id": "concrete_ground",
+   "type": "entity",
+   "class": "ground",
+   "plural": "grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wet concrete ground",
+   "question": "Is there wet concrete ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chain_on_concrete",
+   "type": "relation",
+   "of": [
+    "chain",
+    "concrete_ground"
+   ],
+   "desc": "the rusted anchor chain is on the wet concrete ground",
+   "question": "Is the rusted anchor chain on the wet concrete ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "concrete_ground",
+   "to": "chain",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0093",
+ "prompt": "A cinematic film still captures a shipyard dock where a man in a blue hard hat stands on the left, holding a clipboard. Next to him on the right is a rusted anchor chain coiled tightly on the wet concrete. The man looks down at the chain with focused attention. There is no water visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

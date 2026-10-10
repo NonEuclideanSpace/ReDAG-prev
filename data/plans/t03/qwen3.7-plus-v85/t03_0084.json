@@ -1,0 +1,151 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite at dusk",
+   "question": "Does the image show a mountain campsite at dusk?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a log",
+   "question": "Is there a log?",
+   "box": [
+    50,
+    600,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "hiker",
+   "type": "entity",
+   "class": "hiker",
+   "plural": "hikers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hiker in a blue jacket",
+   "question": "Is there a hiker in a blue jacket?",
+   "box": [
+    100,
+    300,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "kettle",
+   "type": "entity",
+   "class": "kettle",
+   "plural": "kettles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver kettle",
+   "question": "Is there a silver kettle?",
+   "box": [
+    450,
+    650,
+    574,
+    780
+   ]
+  },
+  {
+   "id": "camper",
+   "type": "entity",
+   "class": "camper",
+   "plural": "campers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camper in a green hat",
+   "question": "Is there a camper in a green hat?",
+   "box": [
+    700,
+    250,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "hiker_sitting",
+   "type": "state",
+   "of": "hiker",
+   "desc": "the hiker in the blue jacket is sitting",
+   "question": "Is the hiker in the blue jacket sitting?"
+  },
+  {
+   "id": "camper_standing",
+   "type": "state",
+   "of": "camper",
+   "desc": "the camper in the green hat is standing",
+   "question": "Is the camper in the green hat standing?"
+  },
+  {
+   "id": "hiker_on_log",
+   "type": "relation",
+   "of": [
+    "hiker",
+    "log"
+   ],
+   "desc": "the hiker in the blue jacket sits on the log",
+   "question": "Is the hiker in the blue jacket sitting on the log?"
+  },
+  {
+   "id": "kettle_on_ground",
+   "type": "state",
+   "of": "kettle",
+   "desc": "the silver kettle rests on the ground",
+   "question": "Is the silver kettle resting on the ground?"
+  },
+  {
+   "id": "hiker_looking_kettle",
+   "type": "action",
+   "of": [
+    "hiker",
+    "kettle"
+   ],
+   "desc": "the hiker in the blue jacket is looking at the silver kettle",
+   "question": "Is the hiker in the blue jacket looking at the silver kettle?"
+  },
+  {
+   "id": "camper_pointing_kettle",
+   "type": "action",
+   "of": [
+    "camper",
+    "kettle"
+   ],
+   "desc": "the camper in the green hat is pointing at the silver kettle",
+   "question": "Is the camper in the green hat pointing at the silver kettle?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0084",
+ "prompt": "A cinematic film still captures a mountain campsite at dusk. On the left, a hiker in a blue jacket sits on a log. In the center, a silver kettle rests on the ground. To the right, a camper in a green hat stands nearby. The hiker in the blue jacket is looking at the silver kettle. The camper in the green hat is pointing at the silver kettle. There is no fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5"
+ }
+}

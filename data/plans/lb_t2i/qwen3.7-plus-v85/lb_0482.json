@@ -1,0 +1,529 @@
+{
+ "style": "surreal digital painting, magical realism, high detail, vibrant colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dry cracked field under a sky streaked with bruised lavender and burnt gold with a low smoldering sun",
+   "question": "Does the image show a dry cracked field under a sky streaked with bruised lavender and burnt gold with a low smoldering sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "pickup truck",
+   "plural": "pickup trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty old red pickup truck",
+   "question": "Is there a dusty old red pickup truck?",
+   "box": [
+    200,
+    400,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "melons",
+   "type": "entity",
+   "class": "hami melon",
+   "plural": "hami melons",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked hami melons with jagged rinds",
+   "question": "Are there stacked hami melons with jagged rinds?",
+   "box": [
+    350,
+    450,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "jackalope",
+   "type": "entity",
+   "class": "jackalope",
+   "plural": "jackalopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jackalope with iridescent fur",
+   "question": "Is there a jackalope with iridescent fur?",
+   "box": [
+    600,
+    550,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tattered scarecrow with a straw body",
+   "question": "Is there a tattered scarecrow with a straw body?",
+   "box": [
+    100,
+    300,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "pipes",
+   "type": "entity",
+   "class": "irrigation pipe",
+   "plural": "irrigation pipes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "irrigation pipes weaving through the field",
+   "question": "Are there irrigation pipes weaving through the field?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "droplets",
+   "type": "entity",
+   "class": "water droplet",
+   "plural": "water droplets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shimmering suspended water droplets",
+   "question": "Are there shimmering suspended water droplets?",
+   "box": [
+    50,
+    650,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "cactus",
+   "type": "entity",
+   "class": "cactus",
+   "plural": "cacti",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cactus blooming with a flower shaped like a pocket watch",
+   "question": "Is there a cactus blooming with a flower shaped like a pocket watch?",
+   "box": [
+    850,
+    500,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "flickering fence posts that double as hourglasses",
+   "question": "Are there flickering fence posts that double as hourglasses?",
+   "box": [
+    700,
+    300,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "beehive",
+   "type": "entity",
+   "class": "beehive",
+   "plural": "beehives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a beehive that is a half-open door",
+   "question": "Is there a beehive that is a half-open door?",
+   "box": [
+    50,
+    200,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an independent shadow detached from the truck",
+   "question": "Is there an independent shadow detached from the truck?",
+   "box": [
+    300,
+    750,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "truck_half_buried",
+   "type": "state",
+   "of": "truck",
+   "desc": "the dusty old red pickup truck is half-buried in dust",
+   "question": "Is the dusty old red pickup truck half-buried in dust?"
+  },
+  {
+   "id": "melons_in_truck",
+   "type": "relation",
+   "of": [
+    "melons",
+    "truck"
+   ],
+   "desc": "the hami melons are stacked in the rusted bed of the pickup truck",
+   "question": "Are the hami melons stacked in the rusted bed of the pickup truck?"
+  },
+  {
+   "id": "jackalope_on_tailgate",
+   "type": "relation",
+   "of": [
+    "jackalope",
+    "truck"
+   ],
+   "desc": "the jackalope perches on the tailgate of the pickup truck",
+   "question": "Does the jackalope perch on the tailgate of the pickup truck?"
+  },
+  {
+   "id": "jackalope_nibbling",
+   "type": "action",
+   "of": [
+    "jackalope",
+    "melons"
+   ],
+   "desc": "the jackalope leans forward to nibble at a hami melon",
+   "question": "Is the jackalope leaning forward to nibble at a hami melon?"
+  },
+  {
+   "id": "jackalope_dissolving",
+   "type": "state",
+   "of": "jackalope",
+   "desc": "the jackalope is dissolving slightly at the edges becoming a silhouette",
+   "question": "Is the jackalope dissolving slightly at the edges becoming a silhouette?"
+  },
+  {
+   "id": "hat_spinning",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow's star-map hat is spinning slowly on its axis",
+   "question": "Is the scarecrow's star-map hat spinning slowly on its axis?"
+  },
+  {
+   "id": "water_suspended",
+   "type": "state",
+   "of": "droplets",
+   "desc": "the water droplets are suspended in slow-motion above the grass",
+   "question": "Are the water droplets suspended in slow-motion above the grass?"
+  },
+  {
+   "id": "sand_upward",
+   "type": "state",
+   "of": "fence",
+   "desc": "the sand in the fence-post hourglasses flows upward",
+   "question": "Does the sand in the fence-post hourglasses flow upward?"
+  },
+  {
+   "id": "shadow_walking",
+   "type": "action",
+   "of": [
+    "shadow",
+    "scarecrow"
+   ],
+   "desc": "the independent shadow walks across the field towards the scarecrow",
+   "question": "Does the independent shadow walk across the field towards the scarecrow?"
+  },
+  {
+   "id": "scarecrow_nodding",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow nods in recognition",
+   "question": "Does the scarecrow nod in recognition?"
+  },
+  {
+   "id": "figures_fading",
+   "type": "state",
+   "of": "shadow",
+   "desc": "the shadow fades into the horizon",
+   "question": "Does the shadow fade into the horizon?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "wildflowers",
+   "type": "entity",
+   "class": "wildflower",
+   "plural": "wildflowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wildflowers blooming around the truck's tires",
+   "question": "Are there wildflowers blooming around the truck's tires?",
+   "box": [
+    100,
+    750,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "person",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a person walking along the fence line",
+   "question": "Is there a person walking along the fence line?",
+   "box": [
+    800,
+    400,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "jackalope_ear_twitching",
+   "type": "state",
+   "of": "jackalope",
+   "desc": "the jackalope's ear twitches",
+   "question": "Does the jackalope's ear twitch?"
+  },
+  {
+   "id": "wildflowers_around_tires",
+   "type": "relation",
+   "of": [
+    "wildflowers",
+    "truck"
+   ],
+   "desc": "the wildflowers bloom around the truck's tires",
+   "question": "Do the wildflowers bloom around the truck's tires?"
+  },
+  {
+   "id": "pipes_through_field",
+   "type": "state",
+   "of": "pipes",
+   "desc": "the irrigation pipes weave through the field",
+   "question": "Do the irrigation pipes weave through the field?"
+  },
+  {
+   "id": "water_from_pipes",
+   "type": "action",
+   "of": [
+    "pipes",
+    "droplets"
+   ],
+   "desc": "the cracked irrigation pipes spill water that becomes suspended droplets",
+   "question": "Do the cracked irrigation pipes spill water that becomes suspended droplets?"
+  },
+  {
+   "id": "cactus_in_field",
+   "type": "state",
+   "of": "cactus",
+   "desc": "the cactus is in the field",
+   "question": "Is the cactus in the field?"
+  },
+  {
+   "id": "fence_near_cactus",
+   "type": "relation",
+   "of": [
+    "fence",
+    "cactus"
+   ],
+   "desc": "the fence line is nearby the cactus",
+   "question": "Is the fence line nearby the cactus?"
+  },
+  {
+   "id": "person_on_fence",
+   "type": "relation",
+   "of": [
+    "person",
+    "fence"
+   ],
+   "desc": "the person walks along the fence line",
+   "question": "Does the person walk along the fence line?"
+  },
+  {
+   "id": "shadow_from_truck",
+   "type": "relation",
+   "of": [
+    "shadow",
+    "truck"
+   ],
+   "desc": "the independent shadow detaches from the truck's side",
+   "question": "Does the independent shadow detach from the truck's side?"
+  },
+  {
+   "id": "jackalope_floating",
+   "type": "relation",
+   "of": [
+    "jackalope",
+    "truck"
+   ],
+   "desc": "the jackalope floats beside the truck",
+   "question": "Is the jackalope floating beside the truck?"
+  },
+  {
+   "id": "roots_in_dirt",
+   "type": "relation",
+   "of": [
+    "melons",
+    "pipes"
+   ],
+   "desc": "the delicate roots of the melons spill down into the dirt of the field",
+   "question": "Do the delicate roots of the melons spill down into the dirt of the field?"
+  },
+  {
+   "id": "hat_constellations_mismatch",
+   "type": "attribute",
+   "of": "scarecrow",
+   "desc": "the scarecrow's hat depicts constellations that do not match the sky above",
+   "question": "Does the scarecrow's hat depict constellations that do not match the sky above?"
+  },
+  {
+   "id": "bees",
+   "type": "entity",
+   "class": "bee",
+   "plural": "bees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bees with translucent wings",
+   "question": "Are there bees with translucent wings?",
+   "box": [
+    100,
+    100,
+    300,
+    300
+   ]
+  },
+  {
+   "id": "melons_glistening",
+   "type": "attribute",
+   "of": "melons",
+   "desc": "the hami melons are glistening like polished gemstones",
+   "question": "Are the hami melons glistening like polished gemstones?"
+  },
+  {
+   "id": "melons_roots",
+   "type": "attribute",
+   "of": "melons",
+   "desc": "the hami melons have delicate roots spilling down",
+   "question": "Do the hami melons have delicate roots spilling down?"
+  },
+  {
+   "id": "jackalope_bell",
+   "type": "attribute",
+   "of": "jackalope",
+   "desc": "one ear of the jackalope is adorned with a tiny silver bell",
+   "question": "Is one ear of the jackalope adorned with a tiny silver bell?"
+  },
+  {
+   "id": "scarecrow_hat_map",
+   "type": "attribute",
+   "of": "scarecrow",
+   "desc": "the scarecrow wears a straw hat patched with a map of the stars",
+   "question": "Does the scarecrow wear a straw hat patched with a map of the stars?"
+  },
+  {
+   "id": "cactus_gears",
+   "type": "attribute",
+   "of": "cactus",
+   "desc": "the pocket watch flower has golden gears",
+   "question": "Does the pocket watch flower have golden gears?"
+  },
+  {
+   "id": "truck_chipped_paint",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the pickup truck has chipped paint flaking in the heat",
+   "question": "Does the pickup truck have chipped paint flaking in the heat?"
+  },
+  {
+   "id": "pipes_cracked",
+   "type": "attribute",
+   "of": "pipes",
+   "desc": "the irrigation pipes are cracked open",
+   "question": "Are the irrigation pipes cracked open?"
+  },
+  {
+   "id": "droplets_miniature_scenes",
+   "type": "attribute",
+   "of": "droplets",
+   "desc": "the water droplets contain miniature scenes",
+   "question": "Do the water droplets contain miniature scenes?"
+  },
+  {
+   "id": "beehive_tunnel",
+   "type": "attribute",
+   "of": "beehive",
+   "desc": "the beehive reveals a swirling tunnel of light",
+   "question": "Does the beehive reveal a swirling tunnel of light?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "melons",
+   "kind": "support"
+  },
+  {
+   "from": "truck",
+   "to": "jackalope",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0482",
+ "prompt": "The sun hangs low and smoldering in a sky streaked with bruised lavender and burnt gold, casting elongated shadows that twist like ink spilled across a dry, cracked field. The dusty old pickup truck, its chipped red paint flaking in the heat, sits half-buried in the dust, as if it had fallen from the sky and time had decided to keep it there. Its rusted bed is a precarious tower of stacked hami melons, each glistening like polished gemstones under the glare, their jagged rinds occasionally punctured by long, delicate roots that spill down into the dirt like veins seeking nourishment. A curious jackalope perches on the tailgate, its fur shimmering with iridescent motes of pollen from the wildflowers that bloom defiantly around the truck’s tires. One ear, adorned with a tiny silver bell, twitches as it leans forward to nibble at a melon, its sharp incisors barely piercing the surface before a sudden gust of wind carries the scent of something sweet and smoky from the far side of the field. \n\nThe wind is not natural, but conjured—its origin unclear, as if the field itself is breathing. It rustles the fabric of a tattered scarecrow, its straw body swaying as though dancing to an unheard melody. The scarecrow’s straw hat, patched with a map of the stars, spins slowly on its axis, revealing constellations that do not match the sky above, but instead depict a celestial map from a forgotten era. Around the scarecrow, a network of irrigation pipes weaves through the field like arteries, some cracked open to spill water that flows not into the soil, but into the air—suspended in shimmering, slow-motion droplets that hover just above the grass, as if time had momentarily folded in on itself. The water beads glint like tiny lanterns, each containing a miniature scene within: a cityscape, a forest, a child’s face reflected in infinite fractals of itself. \n\nBehind the truck, the field dissolves into a patchwork of shifting landscapes—now a prairie, now a jungle, now an endless desert—all existing in perfect adjacency without transition or boundary. In one corner, a cactus blooms with a flower shaped like a pocket watch, its golden gears ticking silently as if time itself were being sculpted by the plant’s stem. Nearby, a wooden fence line is both there and not there, flickering between solid and transparent as a person walks along it. The fence posts double as hourglasses, their sand flowing upward instead of down, suggesting a reversal of gravity or a warping of causality. \n\nThe air hums with an invisible energy, as if the field is a crossroads where the laws of physics have agreed to disagree. Bees with translucent wings carry pollen in geometric shapes, depositing it into a beehive that is actually a door, half-open to reveal a swirling tunnel of light. The jackalope, having taken a bite of the melon, begins to dissolve slightly at the edges, its form blending with the air and the scent of fruit until it becomes a silhouette of itself, now floating beside the truck in a state of partial incorporeality. \n\nA shadow detaches from the truck’s side and begins to move independently, stretching and walking across the field as if it has a will of its own. It approaches the scarecrow, who seems to nod in recognition, before both figures fade into the horizon where the sky meets the land in a single, seamless curve. The melons continue to stack precariously in the bed of the truck, their shadows casting impossibly sharp lines that form a labyrinth of their own, intersecting and overlapping with the paths of the roots, the pipes, and the wind-carried droplets. \n\nThe scene breathes and shifts with an eerie, almost musical rhythm, each element entangled with the next in a silent conversation that defies logic but feels perfectly natural in this place where the possible and the impossible are one and the same.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node scarecrow: entity question is long (19 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 58,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 9,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station with an open bay door in the background and a polished concrete floor",
+   "question": "Does the image show the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter wearing a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    100,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    600,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing tall",
+   "question": "Is the firefighter standing tall?"
+  },
+  {
+   "id": "firefighter_pointing",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter points a gloved finger toward the open bay door, directing the dog's gaze",
+   "question": "Is the firefighter pointing a gloved finger toward the open bay door, directing the dog's gaze?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting calmly",
+   "question": "Is the dalmatian sitting calmly?"
+  },
+  {
+   "id": "dalmatian_looking_up",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is looking up attentively",
+   "question": "Is the dalmatian looking up attentively?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  },
+  {
+   "id": "dalmatian_looking_at_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian looks up at the firefighter",
+   "question": "Is the dalmatian looking up at the firefighter?"
+  },
+  {
+   "id": "bay_door",
+   "type": "entity",
+   "class": "bay door",
+   "plural": "bay doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open bay door",
+   "question": "Is there an open bay door?",
+   "box": [
+    300,
+    50,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "concrete floor",
+   "plural": "concrete floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished concrete floor",
+   "question": "Is there a polished concrete floor?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter_gloves",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter wears gloves",
+   "question": "Does the firefighter wear gloves?"
+  },
+  {
+   "id": "firefighter_hands",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter uses both hands to hold the hose",
+   "question": "Is the firefighter using both hands to hold the hose?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "floor"
+   ],
+   "desc": "the dalmatian sits on the polished concrete floor",
+   "question": "Is the dalmatian sitting on the polished concrete floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "floor",
+   "to": "dalmatian",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0028",
+ "prompt": "A cinematic film still captures a quiet moment inside a fire station. On the left, a firefighter in a yellow helmet stands tall, holding a coiled hose with both hands. To the right, a dalmatian with black spots sits calmly on the polished concrete floor, looking up attentively at the standing figure. The firefighter is pointing a gloved finger toward the open bay door in the background, directing the dog's gaze outward. There is no fire or smoke visible in the scene, emphasizing the calm atmosphere before any emergency arises.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a train dining car interior with a booth",
+   "question": "Does the image show the interior of a train dining car with a booth?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with short blue hair",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green vest",
+   "question": "Is there a man in a green vest?",
+   "box": [
+    574,
+    200,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    300,
+    400,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "cup",
+   "plural": "cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cup",
+   "question": "Is there a cup?",
+   "box": [
+    600,
+    500,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with short blue hair is sitting",
+   "question": "Is the woman with short blue hair sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green vest is leaning forward",
+   "question": "Is the man in the green vest leaning forward?"
+  },
+  {
+   "id": "woman_holding_teapot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds the silver teapot",
+   "question": "Is the woman holding the silver teapot?"
+  },
+  {
+   "id": "woman_left_man_right",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman with short blue hair is on the left and the man in the green vest is on the right, opposite each other",
+   "question": "Is the woman with short blue hair on the left and the man in the green vest on the right, opposite each other?"
+  },
+  {
+   "id": "pouring_tea",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman pours tea into the man's cup",
+   "question": "Is the woman pouring tea into the man's cup?"
+  },
+  {
+   "id": "no_luggage",
+   "type": "absent",
+   "desc": "luggage",
+   "question": "Is there any luggage visible in the compartment?"
+  },
+  {
+   "id": "woman_hair",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman has short blue hair",
+   "question": "Does the woman have short blue hair?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0042",
+ "prompt": "In an anime style scene set in a train dining car, a woman with short blue hair sits on the left side of the booth. Opposite her on the right, a man in a green vest leans forward slightly. The woman is holding a silver teapot. She is pouring tea into the man's cup. There is no luggage visible in the compartment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

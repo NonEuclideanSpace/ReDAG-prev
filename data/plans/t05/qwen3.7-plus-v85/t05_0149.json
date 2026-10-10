@@ -1,0 +1,241 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling restaurant kitchen with a back wall, a stove and an oven",
+   "question": "Does the image show a bustling restaurant kitchen with a back wall, a stove and an oven?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "sous_chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second chef",
+   "question": "Is there a second chef?",
+   "box": [
+    380,
+    220,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    720,
+    200,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless steel pot",
+   "question": "Is there a stainless steel pot?",
+   "box": [
+    550,
+    650,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "stove",
+   "plural": "stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stove",
+   "question": "Is there a stove?",
+   "box": [
+    500,
+    700,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "oven",
+   "type": "entity",
+   "class": "oven",
+   "plural": "ovens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oven",
+   "question": "Is there an oven?",
+   "box": [
+    750,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "extinguisher",
+   "type": "entity",
+   "class": "fire extinguisher",
+   "plural": "fire extinguishers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire extinguisher",
+   "question": "Is there a red fire extinguisher?",
+   "box": [
+    900,
+    300,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a black vest holds a tray",
+   "question": "Is the waiter in a black vest holding a tray?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in a white hat is standing",
+   "question": "Is the chef in a white hat standing?"
+  },
+  {
+   "id": "sous_chef_leaning",
+   "type": "state",
+   "of": "sous_chef",
+   "desc": "the second chef leans forward",
+   "question": "Is the second chef leaning forward?"
+  },
+  {
+   "id": "extinguisher_hanging",
+   "type": "state",
+   "of": "extinguisher",
+   "desc": "the red fire extinguisher is hanging vertically",
+   "question": "Is the red fire extinguisher hanging vertically?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "sous_chef"
+   ],
+   "desc": "the chef in a white hat is handing a plate to the second chef with a blue apron",
+   "question": "Is the chef in a white hat handing a plate to the second chef with a blue apron?"
+  },
+  {
+   "id": "waiter_looking",
+   "type": "action",
+   "of": [
+    "waiter",
+    "pot"
+   ],
+   "desc": "the waiter in a black vest is looking at the stainless steel pot",
+   "question": "Is the waiter in a black vest looking at the stainless steel pot?"
+  },
+  {
+   "id": "pot_on_stove",
+   "type": "relation",
+   "of": [
+    "pot",
+    "stove"
+   ],
+   "desc": "the stainless steel pot sits on the stove",
+   "question": "Is the stainless steel pot sitting on the stove?"
+  },
+  {
+   "id": "extinguisher_beside_oven",
+   "type": "relation",
+   "of": [
+    "extinguisher",
+    "oven"
+   ],
+   "desc": "the red fire extinguisher is beside the oven",
+   "question": "Is the red fire extinguisher beside the oven?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "sous_chef_apron",
+   "type": "attribute",
+   "of": "sous_chef",
+   "desc": "the second chef wears a blue apron",
+   "question": "Does the second chef wear a blue apron?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stove",
+   "to": "pot",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0149",
+ "prompt": "A photorealistic photo captures a bustling restaurant kitchen. On the left, a chef in a white hat stands firmly. In the center, a sous chef with a blue apron leans forward eagerly. To the right, a waiter in a black vest holds a tray steadily. Near the back wall, a stainless steel pot sits quietly on the stove. Beside the oven, a red fire extinguisher hangs vertically on the wall. The chef in the white hat is handing a plate to the sous chef with a blue apron. The waiter in a black vest is looking at the stainless steel pot intently. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

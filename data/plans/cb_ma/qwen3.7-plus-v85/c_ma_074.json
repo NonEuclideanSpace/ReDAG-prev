@@ -1,0 +1,159 @@
+{
+ "style": "photorealistic product photography, high contrast, studio lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a glass showcase containing a mirror-polished steel pedestal",
+   "question": "Does the image show a glass showcase?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "beetle",
+   "type": "entity",
+   "class": "mechanical beetle",
+   "plural": "mechanical beetles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cobalt-blue mechanical beetle",
+   "question": "Is there a cobalt-blue mechanical beetle?",
+   "box": [
+    362,
+    300,
+    662,
+    700
+   ]
+  },
+  {
+   "id": "beetle_color",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle has enamel-coated brass plates coloured deep cobalt",
+   "question": "Are the plates of the mechanical beetle's exoskeleton coloured deep cobalt?"
+  },
+  {
+   "id": "beetle_filigree",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle's plates are bordered by thin gold filigree",
+   "question": "Are the plates of the mechanical beetle bordered by thin gold filigree?"
+  },
+  {
+   "id": "beetle_legs",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle has six jointed brass legs",
+   "question": "Does the mechanical beetle have six jointed brass legs?"
+  },
+  {
+   "id": "beetle_wings",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle's wing cases feature symmetrical silver circuit etchings",
+   "question": "Do the wing cases of the mechanical beetle feature symmetrical silver circuit etchings?"
+  },
+  {
+   "id": "beetle_windows",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the wing cases include translucent aventurine windows revealing static gears",
+   "question": "Do the wing cases include translucent aventurine windows revealing static gears?"
+  },
+  {
+   "id": "beetle_eyes",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle has dual emerald lenses at the head that glow",
+   "question": "Does the mechanical beetle have dual emerald lenses at the head that glow?"
+  },
+  {
+   "id": "beetle_on_pedestal",
+   "type": "relation",
+   "of": [
+    "beetle",
+    "pedestal"
+   ],
+   "desc": "the mechanical beetle is displayed on the mirror-polished steel pedestal",
+   "question": "Is the mechanical beetle displayed on the mirror-polished steel pedestal?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the mechanical beetle",
+   "question": "Is there any rust on the mechanical beetle?"
+  },
+  {
+   "id": "no_missing_plates",
+   "type": "absent",
+   "desc": "missing plates on the mechanical beetle",
+   "question": "Are there any missing plates on the mechanical beetle?"
+  },
+  {
+   "id": "no_organic",
+   "type": "absent",
+   "desc": "organic materials in the scene",
+   "question": "Are there any organic materials in the scene?"
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror-polished steel pedestal",
+   "question": "Is there a mirror-polished steel pedestal?",
+   "box": [
+    362,
+    500,
+    662,
+    900
+   ]
+  },
+  {
+   "id": "beetle_claws",
+   "type": "attribute",
+   "of": "beetle",
+   "desc": "the mechanical beetle's legs end in obsidian claw tips",
+   "question": "Do the mechanical beetle's legs end in obsidian claw tips?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pedestal",
+   "to": "beetle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_074",
+ "prompt": "Visualise a single cobalt-blue mechanical beetle displayed on a mirror-polished steel pedestal within a glass showcase. The beetle’s exoskeleton comprises enamel-coated brass plates coloured deep cobalt, each bordered by thin gold filigree. Six jointed brass legs end in obsidian claw tips. The wing cases feature symmetrical silver circuit etchings and include translucent aventurine windows that reveal static gears beneath. Dual emerald lenses glow at the head. The sculpture shows no rust, no missing plates, and contains no organic materials.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

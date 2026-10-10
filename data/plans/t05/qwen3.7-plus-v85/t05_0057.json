@@ -1,0 +1,304 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor event space with a dancing floor and a rug",
+   "question": "Does the image show an indoor event space?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_white",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white gown",
+   "question": "Is there a woman in a white gown?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man_black",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    320,
+    150,
+    570,
+    900
+   ]
+  },
+  {
+   "id": "child_blue",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a blue suit",
+   "question": "Is there a small child in a blue suit?",
+   "box": [
+    400,
+    500,
+    620,
+    950
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    420,
+    550,
+    600,
+    980
+   ]
+  },
+  {
+   "id": "woman_floral",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a floral dress",
+   "question": "Is there an older woman in a floral dress?",
+   "box": [
+    350,
+    200,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    800,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rug",
+   "question": "Is there a rug?",
+   "box": [
+    750,
+    650,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "woman_white_glass",
+   "type": "attribute",
+   "of": "woman_white",
+   "desc": "the woman in a white gown holds a glass of champagne",
+   "question": "Is the woman in a white gown holding a glass of champagne?"
+  },
+  {
+   "id": "man_black_napkin",
+   "type": "attribute",
+   "of": "man_black",
+   "desc": "the man in a black tuxedo holds a napkin",
+   "question": "Is the man in a black tuxedo holding a napkin?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child_blue",
+   "desc": "the small child in a blue suit is sitting",
+   "question": "Is the small child in a blue suit sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_black",
+    "woman_white"
+   ],
+   "desc": "the man in a black tuxedo is next to the woman in a white gown",
+   "question": "Is the man in a black tuxedo next to the woman in a white gown?"
+  },
+  {
+   "id": "man_looking_woman",
+   "type": "action",
+   "of": [
+    "man_black",
+    "woman_white"
+   ],
+   "desc": "the man in a black tuxedo is looking at the woman in a white gown",
+   "question": "Is the man in a black tuxedo looking at the woman in a white gown?"
+  },
+  {
+   "id": "child_on_chair",
+   "type": "relation",
+   "of": [
+    "child_blue",
+    "chair"
+   ],
+   "desc": "the small child in a blue suit sits on the wooden chair",
+   "question": "Is the small child in a blue suit sitting on the wooden chair?"
+  },
+  {
+   "id": "woman_floral_behind_child",
+   "type": "relation",
+   "of": [
+    "woman_floral",
+    "child_blue"
+   ],
+   "desc": "the older woman in a floral dress is behind the small child in a blue suit",
+   "question": "Is the older woman in a floral dress behind the small child in a blue suit?"
+  },
+  {
+   "id": "woman_floral_pointing",
+   "type": "relation",
+   "of": [
+    "woman_floral",
+    "dancing_floor"
+   ],
+   "desc": "the older woman in a floral dress points toward the dancing floor",
+   "question": "Is the older woman in a floral dress pointing toward the dancing floor?"
+  },
+  {
+   "id": "dog_on_rug",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rug"
+   ],
+   "desc": "the golden retriever lies on the rug",
+   "question": "Is the golden retriever lying on the rug?"
+  },
+  {
+   "id": "man_handing_woman",
+   "type": "action",
+   "of": [
+    "man_black",
+    "woman_white"
+   ],
+   "desc": "the man in a black tuxedo is handing a napkin to the woman in a white gown",
+   "question": "Is the man in a black tuxedo handing a napkin to the woman in a white gown?"
+  },
+  {
+   "id": "child_looking_dog",
+   "type": "action",
+   "of": [
+    "child_blue",
+    "dog"
+   ],
+   "desc": "the small child in a blue suit is looking at the golden retriever",
+   "question": "Is the small child in a blue suit looking at the golden retriever?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake",
+   "question": "Is there any cake visible in the image?"
+  },
+  {
+   "id": "woman_white_standing",
+   "type": "state",
+   "of": "woman_white",
+   "desc": "the woman in a white gown is standing",
+   "question": "Is the woman in a white gown standing?"
+  },
+  {
+   "id": "dancing_floor",
+   "type": "entity",
+   "class": "floor",
+   "plural": "floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dancing floor",
+   "question": "Is there a dancing floor?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "child_blue",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0057",
+ "prompt": "In a cinematic film still, a woman in a white gown stands on the left, holding a glass of champagne. Next to her on the right is a man in a black tuxedo who is looking at the woman. In the center foreground, a small child in a blue suit sits on a wooden chair. Behind the child, an older woman in a floral dress points toward the dancing floor. To the far right, a golden retriever lies calmly on the rug. The man in the black tuxedo is handing a napkin to the woman in the white gown. The child in the blue suit is looking at the golden retriever. There is no cake visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

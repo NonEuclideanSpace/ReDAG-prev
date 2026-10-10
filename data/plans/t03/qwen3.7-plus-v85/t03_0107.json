@@ -1,0 +1,135 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with a white backdrop",
+   "question": "Does the image depict a snowy town square with a white backdrop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    400,
+    400,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "lantern_post",
+   "type": "entity",
+   "class": "lantern post",
+   "plural": "lantern posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black lantern post",
+   "question": "Is there a black lantern post?",
+   "box": [
+    750,
+    100,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "woman_gift",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small wrapped gift",
+   "question": "Is the woman in a blue coat holding a small wrapped gift?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat reaches out with both hands",
+   "question": "Is the child in a yellow hat reaching out with both hands?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat looks up eagerly",
+   "question": "Is the child in a yellow hat looking up eagerly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue coat hands the gift to the child in a yellow hat",
+   "question": "Is the woman in a blue coat handing the gift to the child in a yellow hat?"
+  },
+  {
+   "id": "lantern_next_to_child",
+   "type": "relation",
+   "of": [
+    "lantern_post",
+    "child"
+   ],
+   "desc": "the black lantern post is next to the child in a yellow hat",
+   "question": "Is the black lantern post next to the child in a yellow hat?"
+  },
+  {
+   "id": "no_breath",
+   "type": "absent",
+   "desc": "visible breath or steam from any character",
+   "question": "Is there any visible breath or steam from any character?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0107",
+ "prompt": "A pencil sketch with light color wash depicts a snowy town square. On the left, a woman in a blue coat stands holding a small wrapped gift. In the center, a child in a yellow hat looks up eagerly at the woman. To the right, a black lantern post stands tall against the white backdrop. The woman is handing the gift to the child. The child is reaching out with both hands. The lantern post is next to the child. There is no visible breath or steam from any character.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

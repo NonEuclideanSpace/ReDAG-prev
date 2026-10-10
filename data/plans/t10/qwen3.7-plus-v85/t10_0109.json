@@ -1,0 +1,270 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling shipyard dock with wooden planks and a distant ship hull, no sky or horizon line",
+   "question": "Does the image show a shipyard dock with wooden planks and a distant ship hull, without any visible sky or horizon line?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "operator",
+   "type": "entity",
+   "class": "crane operator",
+   "plural": "crane operators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall crane operator wearing a yellow hard hat",
+   "question": "Is there a crane operator wearing a yellow hard hat?",
+   "box": [
+    20,
+    50,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted iron anchor chain coiled neatly",
+   "question": "Is there a rusted iron anchor chain coiled neatly?",
+   "box": [
+    20,
+    750,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in a blue vest",
+   "question": "Is there a foreman in a blue vest?",
+   "box": [
+    350,
+    400,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "apprentice",
+   "type": "entity",
+   "class": "young man",
+   "plural": "young men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young apprentice in gray overalls",
+   "question": "Is there a young apprentice in gray overalls?",
+   "box": [
+    560,
+    450,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "container",
+   "type": "entity",
+   "class": "cargo container",
+   "plural": "cargo containers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large cargo container painted in faded red with signs of wear",
+   "question": "Is there a large cargo container painted in faded red?",
+   "box": [
+    720,
+    300,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray black cat",
+   "question": "Is there a stray black cat?",
+   "box": [
+    800,
+    250,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "operator_arm_raised",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator has his arm raised high",
+   "question": "Does the crane operator have his arm raised high?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman points decisively",
+   "question": "Is the foreman pointing decisively?"
+  },
+  {
+   "id": "apprentice_looking_up",
+   "type": "state",
+   "of": "apprentice",
+   "desc": "the young apprentice looks up attentively",
+   "question": "Is the young apprentice looking up attentively?"
+  },
+  {
+   "id": "apprentice_holding_clipboard",
+   "type": "attribute",
+   "of": "apprentice",
+   "desc": "the young apprentice holds a clipboard tight against his chest",
+   "question": "Is the young apprentice holding a clipboard tight against his chest?"
+  },
+  {
+   "id": "operator_signals_crew",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator signals to the ground crew",
+   "question": "Is the crane operator signaling to the ground crew?"
+  },
+  {
+   "id": "chain_on_planks",
+   "type": "state",
+   "of": "chain",
+   "desc": "the anchor chain rests on the wooden planks",
+   "question": "Does the anchor chain rest on the wooden planks?"
+  },
+  {
+   "id": "chain_beside_operator",
+   "type": "relation",
+   "of": [
+    "chain",
+    "operator"
+   ],
+   "desc": "the anchor chain is beside the crane operator",
+   "question": "Is the anchor chain beside the crane operator?"
+  },
+  {
+   "id": "apprentice_next_to_foreman",
+   "type": "relation",
+   "of": [
+    "apprentice",
+    "foreman"
+   ],
+   "desc": "the young apprentice is next to the foreman",
+   "question": "Is the young apprentice next to the foreman?"
+  },
+  {
+   "id": "container_on_dock",
+   "type": "state",
+   "of": "container",
+   "desc": "the cargo container sits on the dock",
+   "question": "Does the cargo container sit on the dock?"
+  },
+  {
+   "id": "cat_on_container",
+   "type": "relation",
+   "of": [
+    "cat",
+    "container"
+   ],
+   "desc": "the black cat is perched atop the cargo container",
+   "question": "Is the black cat perched atop the cargo container?"
+  },
+  {
+   "id": "foreman_directs_water",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman directs the workflow toward the water",
+   "question": "Is the foreman directing the workflow toward the water?"
+  },
+  {
+   "id": "operator_stands",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator stands",
+   "question": "Is the crane operator standing?"
+  },
+  {
+   "id": "container_sits",
+   "type": "state",
+   "of": "container",
+   "desc": "the cargo container sits heavily",
+   "question": "Does the cargo container appear to sit heavily?"
+  },
+  {
+   "id": "container_wear",
+   "type": "attribute",
+   "of": "container",
+   "desc": "the cargo container shows signs of wear on its metal surface",
+   "question": "Does the cargo container show signs of wear on its metal surface?"
+  },
+  {
+   "id": "operator_tall",
+   "type": "attribute",
+   "of": "operator",
+   "desc": "the crane operator is tall",
+   "question": "Is the crane operator tall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "chain",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "container",
+   "kind": "support"
+  },
+  {
+   "from": "container",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0109",
+ "prompt": "Rendered in a pencil sketch with light color wash, the scene captures a bustling shipyard dock. On the far left stands a tall crane operator wearing a yellow hard hat, his arm raised high as he signals to the ground crew. Beside him, near the left edge, rests a rusted iron anchor chain coiled neatly on the wooden planks. In the center foreground, a foreman in a blue vest points decisively toward the water, directing the workflow. Next to the foreman, a young apprentice in gray overalls looks up attentively, holding a clipboard tight against his chest. To the right, a large cargo container painted in faded red sits heavily on the dock, its metal surface showing signs of wear. Perched atop this container is a stray black cat, observing the chaos below with calm indifference. The foreman and the apprentice share a moment of instruction, their proximity suggesting a transfer of knowledge amidst the industrial noise. Meanwhile, the crane operator’s gesture connects visually with the distant ship hull, bridging the gap between height and depth. There is no visible sky or horizon line, focusing all attention on the immediate labor and machinery. The rough texture of the wood contrasts with the smooth metal of the container, while the soft wash of color adds subtle warmth to the otherwise monochromatic lines. The six distinct elements—the operator, the chain, the foreman, the apprentice, the container, and the cat—create a balanced composition of human effort and static weight.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

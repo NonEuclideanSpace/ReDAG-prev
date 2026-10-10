@@ -1,0 +1,199 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    150,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray cardigan",
+   "question": "Is there an elderly man in a gray cardigan?",
+   "box": [
+    500,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    550,
+    450,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard firmly against her chest",
+   "question": "Is the nurse holding a clipboard firmly against her chest?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is standing",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "man_looking_up",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is looking up",
+   "question": "Is the elderly man looking up?"
+  },
+  {
+   "id": "man_reaching",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man reaches out with his hand",
+   "question": "Is the elderly man reaching out with his hand?"
+  },
+  {
+   "id": "nurse_left",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse stands to the left of the elderly man",
+   "question": "Is the nurse standing to the left of the elderly man?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the elderly man sits on the plastic chair",
+   "question": "Is the elderly man sitting on the plastic chair?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse hands a small white pill bottle to the elderly man",
+   "question": "Is the nurse handing a small white pill bottle to the elderly man?"
+  },
+  {
+   "id": "no_equipment",
+   "type": "absent",
+   "desc": "medical equipment in the background",
+   "question": "Is there any medical equipment visible in the background?"
+  },
+  {
+   "id": "man_anticipation",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a gray cardigan has an expression of anticipation",
+   "question": "Does the elderly man in a gray cardigan have an expression of anticipation?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "linoleum floor",
+   "plural": "linoleum floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished linoleum floor reflecting overhead lights",
+   "question": "Is there a polished linoleum floor reflecting overhead lights?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_right_hand",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the elderly man uses his right hand",
+   "question": "Is the elderly man using his right hand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0034",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left stands a nurse in blue scrubs, holding a clipboard firmly against her chest. To her right, an elderly man in a gray cardigan sits on a plastic chair, looking up at her with anticipation. The nurse is handing a small white pill bottle to the seated man, who reaches out with his right hand to accept it. The floor is polished linoleum reflecting the overhead lights. There is no medical equipment visible in the background, keeping the focus strictly on the exchange between the two figures in this quiet moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

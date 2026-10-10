@@ -1,0 +1,590 @@
+{
+ "style": "surreal photorealistic, warm honeyed lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet kitchen interior with wooden walls and floorboards",
+   "question": "Does the image show a quiet kitchen interior with wooden walls and floorboards?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "kitchen table",
+   "plural": "kitchen tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden kitchen table",
+   "question": "Is there a wooden kitchen table?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leather-bound book with cracked cover and dusty pages",
+   "question": "Is there a leather-bound book with a cracked cover and dusty pages?",
+   "box": [
+    300,
+    550,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mug containing dark coffee",
+   "question": "Is there a mug containing dark coffee?",
+   "box": [
+    550,
+    580,
+    650,
+    720
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded family photograph showing two children",
+   "question": "Is there a faded family photograph showing two children?",
+   "box": [
+    580,
+    520,
+    680,
+    600
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window with a cracked pane",
+   "question": "Is there a window with a cracked pane?",
+   "box": [
+    700,
+    100,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "gear",
+   "type": "entity",
+   "class": "brass gear",
+   "plural": "brass gears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass gear half-buried in the table surface",
+   "question": "Is there a brass gear half-buried in the table surface?",
+   "box": [
+    400,
+    650,
+    480,
+    730
+   ]
+  },
+  {
+   "id": "owl",
+   "type": "entity",
+   "class": "clockwork owl",
+   "plural": "clockwork owls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate clockwork owl",
+   "question": "Is there an ornate clockwork owl?",
+   "box": [
+    800,
+    50,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "chalkboard",
+   "type": "entity",
+   "class": "chalkboard",
+   "plural": "chalkboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chalkboard",
+   "question": "Is there a chalkboard?",
+   "box": [
+    50,
+    100,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "lanterns",
+   "type": "entity",
+   "class": "paper lanterns",
+   "plural": "paper lanterns",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a string of tiny paper lanterns",
+   "question": "Is there a string of tiny paper lanterns?",
+   "box": [
+    200,
+    20,
+    800,
+    150
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small cat",
+   "question": "Is there a small cat?",
+   "box": [
+    350,
+    850,
+    550,
+    980
+   ]
+  },
+  {
+   "id": "bulb",
+   "type": "entity",
+   "class": "edison bulb",
+   "plural": "edison bulbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an Edison light bulb",
+   "question": "Is there an Edison light bulb?",
+   "box": [
+    480,
+    10,
+    544,
+    100
+   ]
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "book",
+   "desc": "the leather-bound book is lying open",
+   "question": "Is the leather-bound book lying open?"
+  },
+  {
+   "id": "mug_steaming",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug is emitting warm vapor",
+   "question": "Is the mug emitting warm vapor?"
+  },
+  {
+   "id": "owl_wings",
+   "type": "state",
+   "of": "owl",
+   "desc": "the clockwork owl has folded wings",
+   "question": "Are the clockwork owl's wings folded?"
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small cat is curled up",
+   "question": "Is the small cat curled up?"
+  },
+  {
+   "id": "bulb_hanging",
+   "type": "state",
+   "of": "bulb",
+   "desc": "the Edison light bulb is hanging",
+   "question": "Is the Edison light bulb hanging?"
+  },
+  {
+   "id": "book_on_table",
+   "type": "relation",
+   "of": [
+    "book",
+    "table"
+   ],
+   "desc": "the leather-bound book lies on the wooden kitchen table",
+   "question": "Is the leather-bound book lying on the wooden kitchen table?"
+  },
+  {
+   "id": "mug_beside_book",
+   "type": "relation",
+   "of": [
+    "mug",
+    "book"
+   ],
+   "desc": "the mug sits beside the leather-bound book",
+   "question": "Is the mug sitting beside the leather-bound book?"
+  },
+  {
+   "id": "photo_behind_mug",
+   "type": "relation",
+   "of": [
+    "photo",
+    "mug"
+   ],
+   "desc": "the faded family photograph is behind the mug",
+   "question": "Is the faded family photograph behind the mug?"
+  },
+  {
+   "id": "gear_on_table",
+   "type": "relation",
+   "of": [
+    "gear",
+    "table"
+   ],
+   "desc": "the brass gear sits on the wooden kitchen table",
+   "question": "Is the brass gear sitting on the wooden kitchen table?"
+  },
+  {
+   "id": "owl_ceiling",
+   "type": "state",
+   "of": "owl",
+   "desc": "the clockwork owl is near the ceiling shadows",
+   "question": "Is the clockwork owl positioned near the ceiling shadows?"
+  },
+  {
+   "id": "chalkboard_wall",
+   "type": "state",
+   "of": "chalkboard",
+   "desc": "the chalkboard is on the far wall",
+   "question": "Is the chalkboard on the far wall?"
+  },
+  {
+   "id": "cat_under_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the small cat is beneath the wooden kitchen table",
+   "question": "Is the small cat beneath the wooden kitchen table?"
+  },
+  {
+   "id": "bulb_above_table",
+   "type": "relation",
+   "of": [
+    "bulb",
+    "table"
+   ],
+   "desc": "the Edison light bulb is above the wooden kitchen table",
+   "question": "Is the Edison light bulb above the wooden kitchen table?"
+  },
+  {
+   "id": "photo_child_1",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "one child in the photo",
+   "question": "Is there one child in the photo?",
+   "box": [
+    650,
+    300,
+    750,
+    450
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree visible outside the window",
+   "question": "Is there a tree visible outside the window?",
+   "box": [
+    100,
+    100,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "steam_figure",
+   "type": "entity",
+   "class": "silhouette",
+   "plural": "silhouettes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silhouette figure formed by steam",
+   "question": "Is there a silhouette figure formed by steam?",
+   "box": [
+    400,
+    400,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "book_pages_shifting",
+   "type": "state",
+   "of": "book",
+   "desc": "the pages of the book are shifting",
+   "question": "Are the pages of the book shifting?"
+  },
+  {
+   "id": "owl_peeking",
+   "type": "state",
+   "of": "owl",
+   "desc": "the clockwork owl is peeking out from the shadows",
+   "question": "Is the clockwork owl peeking out from the shadows?"
+  },
+  {
+   "id": "owl_lid_lifting",
+   "type": "state",
+   "of": "owl",
+   "desc": "one lid of the clockwork owl is lifting",
+   "question": "Is one lid of the clockwork owl lifting?"
+  },
+  {
+   "id": "gear_turning",
+   "type": "state",
+   "of": "gear",
+   "desc": "the brass gear is turning slowly",
+   "question": "Is the brass gear turning slowly?"
+  },
+  {
+   "id": "lanterns_hanging",
+   "type": "state",
+   "of": "lanterns",
+   "desc": "the string of tiny lanterns is hanging from the ceiling",
+   "question": "Is the string of tiny lanterns hanging from the ceiling?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "owl"
+   ],
+   "desc": "the small cat is watching the clockwork owl",
+   "question": "Is the small cat watching the clockwork owl?"
+  },
+  {
+   "id": "cat_watching_book",
+   "type": "action",
+   "of": [
+    "cat",
+    "book"
+   ],
+   "desc": "the small cat is watching the leather-bound book",
+   "question": "Is the small cat watching the leather-bound book?"
+  },
+  {
+   "id": "photo_in_front_of_window",
+   "type": "relation",
+   "of": [
+    "photo",
+    "window"
+   ],
+   "desc": "the faded family photograph is in front of the window",
+   "question": "Is the faded family photograph in front of the window?"
+  },
+  {
+   "id": "tree_outside_window",
+   "type": "relation",
+   "of": [
+    "tree",
+    "window"
+   ],
+   "desc": "the tree is outside the window",
+   "question": "Is the tree outside the window?"
+  },
+  {
+   "id": "steam_figure_above_mug",
+   "type": "relation",
+   "of": [
+    "steam_figure",
+    "mug"
+   ],
+   "desc": "the silhouette figure is above the mug",
+   "question": "Is the silhouette figure above the mug?"
+  },
+  {
+   "id": "photo_child_1_airplane",
+   "type": "attribute",
+   "of": "photo_child_1",
+   "desc": "the first child in the photo clutches a paper airplane",
+   "question": "Does the first child in the photo clutch a paper airplane?"
+  },
+  {
+   "id": "photo_children_smiling",
+   "type": "state",
+   "of": "photo_child_1",
+   "desc": "the children in the photo are smiling",
+   "question": "Are the children in the photo smiling?"
+  },
+  {
+   "id": "window_rain",
+   "type": "relation",
+   "of": [
+    "window",
+    "tree"
+   ],
+   "desc": "rain taps on the window glass with water pooling in rivulets",
+   "question": "Is rain tapping on the window glass with water pooling in rivulets?"
+  },
+  {
+   "id": "tree_bending",
+   "type": "state",
+   "of": "tree",
+   "desc": "the tree is bending slightly",
+   "question": "Is the tree bending slightly?"
+  },
+  {
+   "id": "mug_rim_shimmer",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug has a shimmering rim",
+   "question": "Does the mug have a shimmering rim?"
+  },
+  {
+   "id": "cat_tail_floor",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small cat's tail is on the floorboards",
+   "question": "Is the small cat's tail on the floorboards?"
+  },
+  {
+   "id": "window_rain_rivulets",
+   "type": "relation",
+   "of": [
+    "window",
+    "tree"
+   ],
+   "desc": "water pools in rivulets on the window glass",
+   "question": "Are there water rivulets pooling on the window glass?"
+  },
+  {
+   "id": "mug_steam_rising",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam is rising from the mug",
+   "question": "Is steam rising from the mug?"
+  },
+  {
+   "id": "photo_children_smiling_2",
+   "type": "state",
+   "of": "photo",
+   "desc": "the children in the photo are smiling",
+   "question": "Are the children in the photo smiling?"
+  },
+  {
+   "id": "owl_eyes_glowing",
+   "type": "attribute",
+   "of": "owl",
+   "desc": "the owl has glowing amber eyes",
+   "question": "Does the owl have glowing amber eyes?"
+  },
+  {
+   "id": "chalkboard_patterns",
+   "type": "attribute",
+   "of": "chalkboard",
+   "desc": "the chalkboard has intricate geometric patterns",
+   "question": "Does the chalkboard have intricate geometric patterns?"
+  },
+  {
+   "id": "cat_fur_color",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat's fur is the color of wood grain",
+   "question": "Is the cat's fur the color of wood grain?"
+  },
+  {
+   "id": "owl_wings_twitching",
+   "type": "state",
+   "of": "owl",
+   "desc": "the clockwork owl has twitching wings",
+   "question": "Are the clockwork owl's wings twitching?"
+  },
+  {
+   "id": "book_ink_rearranging",
+   "type": "state",
+   "of": "book",
+   "desc": "the ink on the book pages is rearranging",
+   "question": "Is the ink on the book pages rearranging?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "gear",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0203",
+ "prompt": "The leather-bound book, cracked and dusted with a fine layer of golden age, lies open on the wooden kitchen table, its brittle pages rustling in the gentle draft that seeps through the cracked windowpane. A single steaming mug of coffee, its dark liquid almost black in the dim light, sits beside it, its warm vapor curling into the air like a breath of life in a quiet, contemplative room. The scent of roasted beans mingles with the faint, earthy musk of old paper, grounding the scene in the familiar before it veers into the surreal. Behind the mug, a corner of a faded family photo peeks through the steam and shadow—two children, their faces sunlit and blurred, one clutching a paper airplane, the other holding a daisy, both smiling as if they’ve just caught a glimpse of something magical. Outside, the rain taps a soft rhythm on the glass, the water pooling in rivulets that distort the image of a tree bending slightly under the weight of time and wind. The tree’s roots stretch out into a world beyond the window that seems to shift with each droplet, morphing between a desert of glowing sand and a forest where the leaves are made of mirrors, reflecting not the sky, but other rooms, other lives, other versions of this very moment. Inside, the Edison bulb above flickers and hums, casting a warm, honeyed glow that spills over the table, the walls, and a brass gear that sits half-buried in the wood, its teeth meshing with an invisible mechanism beneath the surface. As the gear turns slowly, a faint creak echoes from the ceiling, where an ornate clockwork owl peeks out from the shadows, its eyes glowing like amber embers, one lid lifting in deliberate curiosity. The owl’s wings twitch and fold with the rhythm of the rain, and as it does, the shadow it casts stretches across the floor, not following the light but pulling it into its form, warping the lines of the room as if it’s alive. On the far wall, a chalkboard has been drawn over in intricate geometric patterns that pulse faintly with each heartbeat-like flicker of the bulb, their edges vibrating as though alive, rearranging subtly as if reacting to the room’s collective breath. A string of tiny lanterns hangs from the ceiling, their paper facades depicting scenes that change when unobserved—children growing into trees, letters dissolving into smoke, the same family photo fading into a new image with each blink. The coffee cup, seemingly static, now shows a faint shimmer on its rim, as if it’s drinking the light instead of holding it, and as the last of the steam rises, it takes the shape of a figure—a silhouette that pauses in the air before dissolving into the mist of the window, merging with the rain and the ever-shifting world outside. A small cat curls beneath the table, its fur the color of the wood grain, its eyes the exact shade of the bulb’s glow, watching the owl and the book with a gaze that holds the weight of infinite stories, its tail tracing invisible constellations on the floorboards. The pages of the book, which once seemed still, now begin to shift subtly, the ink rearranging itself like a living manuscript, the words forming a new sentence each time the reader looks away. It is not a book of the past, but of the becoming, its sentences looping back to earlier paragraphs, forming Möbius narratives that echo the recursive nature of time and thought. In this impossible kitchen, every object is both itself and something more—a coffee cup that dreams of the moon, a window that remembers every face that has passed through, a table that holds not just history but futures, folded like origami within its grain. And as the rain continues to fall, the room hums with the sound of a story being written in real time, a symphony of causality and coincidence where everything is connected, even the shadows, even the silence between the words.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 45,
+   "n_uncovered": 6,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 1
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 8,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

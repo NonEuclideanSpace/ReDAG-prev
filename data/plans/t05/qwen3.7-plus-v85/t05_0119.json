@@ -1,0 +1,294 @@
+{
+ "style": "watercolor illustration, soft washes, no sharp lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site with a pale sky",
+   "question": "Does the image depict a construction site with a pale sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick",
+   "plural": "bricks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of gray bricks",
+   "question": "Is there a stack of gray bricks?",
+   "box": [
+    260,
+    500,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman wearing an orange vest",
+   "question": "Is there a foreman wearing an orange vest?",
+   "box": [
+    400,
+    250,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    750,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    740,
+    700,
+    920,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    650,
+    350,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large yellow crane with its arm extended horizontally",
+   "question": "Is there a large yellow crane with its arm extended horizontally?",
+   "box": [
+    100,
+    50,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is standing",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman wearing an orange vest is pointing",
+   "question": "Is the foreman wearing an orange vest pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue overalls is standing",
+   "question": "Is the woman in blue overalls standing?"
+  },
+  {
+   "id": "worker_blueprint",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds a rolled-up blueprint",
+   "question": "Is the worker in the yellow hard hat holding a rolled-up blueprint?"
+  },
+  {
+   "id": "foreman_clipboard",
+   "type": "attribute",
+   "of": "foreman",
+   "desc": "the foreman wearing an orange vest holds a clipboard",
+   "question": "Is the foreman wearing an orange vest holding a clipboard?"
+  },
+  {
+   "id": "worker_beside_bricks",
+   "type": "relation",
+   "of": [
+    "worker",
+    "bricks"
+   ],
+   "desc": "the worker in the yellow hard hat stands beside the stack of gray bricks",
+   "question": "Is the worker in the yellow hard hat standing beside the stack of gray bricks?"
+  },
+  {
+   "id": "dog_on_crate",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crate"
+   ],
+   "desc": "the small brown dog sits on the wooden crate",
+   "question": "Is the small brown dog sitting on the wooden crate?"
+  },
+  {
+   "id": "woman_near_dog",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in blue overalls is near the small brown dog",
+   "question": "Is the woman in blue overalls near the small brown dog?"
+  },
+  {
+   "id": "woman_looks_clipboard",
+   "type": "action",
+   "of": [
+    "woman",
+    "foreman"
+   ],
+   "desc": "the woman in blue overalls looks at the clipboard held by the foreman",
+   "question": "Is the woman in blue overalls looking at the clipboard held by the foreman?"
+  },
+  {
+   "id": "crane_behind_group",
+   "type": "relation",
+   "of": [
+    "crane",
+    "worker"
+   ],
+   "desc": "the large yellow crane is behind the worker",
+   "question": "Is the large yellow crane behind the worker?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker in the yellow hard hat hands the rolled-up blueprint to the foreman",
+   "question": "Is the worker in the yellow hard hat handing the rolled-up blueprint to the foreman?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "operating heavy machinery in the background",
+   "question": "Is there any operating heavy machinery in the background?"
+  },
+  {
+   "id": "framework",
+   "type": "entity",
+   "class": "steel framework",
+   "plural": "steel frameworks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unfinished steel framework",
+   "question": "Is there an unfinished steel framework?",
+   "box": [
+    300,
+    50,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "foreman_points_framework",
+   "type": "relation",
+   "of": [
+    "foreman",
+    "framework"
+   ],
+   "desc": "the foreman wearing an orange vest points toward the unfinished steel framework",
+   "question": "Is the foreman wearing an orange vest pointing toward the unfinished steel framework?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0119",
+ "prompt": "This watercolor illustration depicts a quiet moment at a construction site. On the left, a worker in a yellow hard hat stands firmly beside a stack of gray bricks. In the center, a foreman wearing an orange vest points toward the unfinished steel framework above. To the right, a small brown dog sits patiently on a wooden crate, watching the scene unfold. Near the dog, a woman in blue overalls looks at a clipboard held by the foreman. Behind them, a large yellow crane looms against the pale sky, its arm extended horizontally. The worker in the yellow hard hat is handing a rolled-up blueprint to the foreman in the orange vest. The woman in blue overalls is standing next to the small brown dog. There is no heavy machinery operating in the background. The soft washes of color define the dusty air and the rough textures of the materials without sharp lines. The composition remains simple, focusing only on these five distinct figures and their immediate surroundings. The interaction between the two humans involves the transfer of plans, while the other pair shares proximity without direct contact. The dog remains still, observing the human activity with calm curiosity.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

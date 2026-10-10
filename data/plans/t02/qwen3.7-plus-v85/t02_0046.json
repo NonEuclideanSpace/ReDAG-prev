@@ -1,0 +1,149 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand",
+   "question": "Does the image show a beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player_blue",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball player in blue shorts",
+   "question": "Is there a volleyball player in blue shorts?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    460,
+    200,
+    564,
+    304
+   ]
+  },
+  {
+   "id": "player_knees_bent",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the volleyball player in blue shorts has knees bent",
+   "question": "Does the volleyball player in blue shorts have their knees bent?"
+  },
+  {
+   "id": "player_ready",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the volleyball player in blue shorts stands ready",
+   "question": "Is the volleyball player in blue shorts standing in a ready stance?"
+  },
+  {
+   "id": "volleyball_mid_air",
+   "type": "state",
+   "of": "volleyball",
+   "desc": "the yellow volleyball floats mid-air",
+   "question": "Is the yellow volleyball floating mid-air?"
+  },
+  {
+   "id": "volleyball_above_net",
+   "type": "relation",
+   "of": [
+    "volleyball",
+    "net"
+   ],
+   "desc": "the yellow volleyball is above the net",
+   "question": "Is the yellow volleyball positioned above the net?"
+  },
+  {
+   "id": "player_looks_at_ball",
+   "type": "action",
+   "of": [
+    "player_blue",
+    "volleyball"
+   ],
+   "desc": "the volleyball player in blue shorts looks intently at the yellow volleyball",
+   "question": "Is the volleyball player in blue shorts looking intently at the yellow volleyball?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "a crowd in the background",
+   "question": "Is there a crowd visible in the background?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "volleyball_above_net_rel",
+   "type": "relation",
+   "of": [
+    "volleyball",
+    "net"
+   ],
+   "desc": "the yellow volleyball is above the net",
+   "question": "Is the yellow volleyball above the volleyball net?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0046",
+ "prompt": "A watercolor illustration depicts a beach volleyball tournament scene. On the left, a player in blue shorts stands ready with knees bent. In the center, a yellow volleyball floats mid-air above the net. The player in blue shorts looks intently at the yellow volleyball. There is no crowd in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench in the image?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    50,
+    200,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    400,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow coat holds a black umbrella",
+   "question": "Is the woman in the yellow coat holding a black umbrella?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow coat is standing",
+   "question": "Is the woman in the yellow coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is sitting",
+   "question": "Is the man in the blue suit sitting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow coat is looking at the man in the blue suit",
+   "question": "Is the woman in the yellow coat looking at the man in the blue suit?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in the blue suit sits on the metal bench",
+   "question": "Is the man in the blue suit sitting on the metal bench?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train",
+   "question": "Is there a train visible in the background?"
+  },
+  {
+   "id": "umbrella_upright",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow coat holds the umbrella upright",
+   "question": "Is the woman in the yellow coat holding the umbrella upright?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0054",
+ "prompt": "An oil painting depicts a subway platform. On the left stands a woman in a yellow coat holding a black umbrella upright. In the center sits a man in a blue suit on a metal bench. The woman is looking at the man. There is no train visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

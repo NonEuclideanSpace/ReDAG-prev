@@ -1,0 +1,288 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor stretching into the distance with a ceiling and walls",
+   "question": "Does the image show a sterile hospital corridor stretching into the distance?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a grey coat",
+   "question": "Is there an elderly man in a grey coat?",
+   "box": [
+    350,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    380,
+    500,
+    580,
+    900
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a denim jacket",
+   "question": "Is there a young woman in a denim jacket?",
+   "box": [
+    650,
+    220,
+    900,
+    880
+   ]
+  },
+  {
+   "id": "wall_map",
+   "type": "entity",
+   "class": "wall map",
+   "plural": "wall maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall map",
+   "question": "Is there a wall map?",
+   "box": [
+    850,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier",
+   "question": "Is there a small terrier?",
+   "box": [
+    700,
+    750,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "fluorescent_light",
+   "type": "entity",
+   "class": "fluorescent light",
+   "plural": "fluorescent lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fluorescent light fixture",
+   "question": "Is there a fluorescent light fixture?",
+   "box": [
+    400,
+    0,
+    600,
+    100
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a grey coat is sitting",
+   "question": "Is the elderly man in a grey coat sitting?"
+  },
+  {
+   "id": "man_tired",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a grey coat looks tired",
+   "question": "Does the elderly man in a grey coat look tired?"
+  },
+  {
+   "id": "terrier_sitting",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier with a red collar is sitting",
+   "question": "Is the small terrier with a red collar sitting?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "chair"
+   ],
+   "desc": "the elderly man in a grey coat sits on the plastic chair",
+   "question": "Is the elderly man in a grey coat sitting on the plastic chair?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "elderly_man"
+   ],
+   "desc": "the young woman in a denim jacket is next to the elderly man in a grey coat",
+   "question": "Is the young woman in a denim jacket next to the elderly man in a grey coat?"
+  },
+  {
+   "id": "woman_points_map",
+   "type": "action",
+   "of": [
+    "young_woman",
+    "wall_map"
+   ],
+   "desc": "the young woman in a denim jacket points at the wall map",
+   "question": "Is the young woman in a denim jacket pointing at the wall map?"
+  },
+  {
+   "id": "terrier_beside_woman",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "young_woman"
+   ],
+   "desc": "the small terrier with a red collar is beside the young woman's feet",
+   "question": "Is the small terrier with a red collar beside the young woman's feet?"
+  },
+  {
+   "id": "light_above_people",
+   "type": "relation",
+   "of": [
+    "fluorescent_light",
+    "elderly_man",
+    "young_woman"
+   ],
+   "desc": "the fluorescent light hangs above the elderly man and the young woman",
+   "question": "Is the fluorescent light hanging above the elderly man and the young woman?"
+  },
+  {
+   "id": "nurse_hands_pen",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs hands a pen to the elderly man in a grey coat",
+   "question": "Is the nurse in blue scrubs handing a pen to the elderly man in a grey coat?"
+  },
+  {
+   "id": "woman_looks_terrier",
+   "type": "action",
+   "of": [
+    "young_woman",
+    "terrier"
+   ],
+   "desc": "the young woman in a denim jacket looks at the small terrier with a red collar",
+   "question": "Is the young woman in a denim jacket looking at the small terrier with a red collar?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "terrier_collar",
+   "type": "attribute",
+   "of": "terrier",
+   "desc": "the small terrier wears a red collar",
+   "question": "Does the small terrier wear a red collar?"
+  },
+  {
+   "id": "light_hanging",
+   "type": "state",
+   "of": "fluorescent_light",
+   "desc": "the fluorescent light fixture hangs from the ceiling",
+   "question": "Does the fluorescent light fixture hang from the ceiling?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0023",
+ "prompt": "In a cinematic film still, a sterile hospital corridor stretches into the distance. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly man in a grey coat sits on a plastic chair, looking tired. Next to him on the right, a young woman in a denim jacket points at a wall map. A small terrier with a red collar sits calmly beside the woman's feet. Above them, a flickering fluorescent light hangs from the ceiling. The nurse is handing a pen to the elderly man. The young woman is looking at the terrier. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,364 @@
+{
+ "style": "cinematic digital painting, dramatic lighting, stormy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "stormy Arctic waters under the northern lights",
+   "question": "Does the background show stormy Arctic waters under the northern lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "longship",
+   "type": "entity",
+   "class": "longship",
+   "plural": "longships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive Viking longship with a high prow",
+   "question": "Is there a massive Viking longship with a high prow?",
+   "box": [
+    100,
+    300,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "dragon_head",
+   "type": "entity",
+   "class": "figurehead",
+   "plural": "figureheads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved dragon head figurehead",
+   "question": "Is there a carved dragon head figurehead?",
+   "box": [
+    850,
+    350,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "sail",
+   "type": "entity",
+   "class": "sail",
+   "plural": "sails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single square sail with red and white stripes",
+   "question": "Is there a single square sail with red and white stripes?",
+   "box": [
+    400,
+    100,
+    624,
+    400
+   ]
+  },
+  {
+   "id": "oars",
+   "type": "entity",
+   "class": "oar",
+   "plural": "oars",
+   "count": 10,
+   "count_exact": true,
+   "desc": "ten wooden oars",
+   "question": "Are there ten wooden oars?",
+   "box": [
+    150,
+    500,
+    874,
+    650
+   ]
+  },
+  {
+   "id": "shields",
+   "type": "entity",
+   "class": "shield",
+   "plural": "shields",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several round shields",
+   "question": "Are there several round shields?",
+   "box": [
+    200,
+    450,
+    824,
+    550
+   ]
+  },
+  {
+   "id": "deck",
+   "type": "entity",
+   "class": "deck",
+   "plural": "decks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden deck",
+   "question": "Is there a wooden deck?",
+   "box": [
+    250,
+    550,
+    774,
+    750
+   ]
+  },
+  {
+   "id": "rigging",
+   "type": "entity",
+   "class": "rope rigging",
+   "plural": "rope riggings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "thick rope rigging connecting the mast to the hull",
+   "question": "Is there thick rope rigging connecting the mast to the hull?",
+   "box": [
+    450,
+    200,
+    574,
+    500
+   ]
+  },
+  {
+   "id": "dragon_eyes",
+   "type": "attribute",
+   "of": "dragon_head",
+   "desc": "the dragon head has glowing red gemstone eyes",
+   "question": "Does the dragon head have glowing red gemstone eyes?"
+  },
+  {
+   "id": "ship_condition",
+   "type": "state",
+   "of": "longship",
+   "desc": "the longship is undamaged",
+   "question": "Is the longship undamaged?"
+  },
+  {
+   "id": "ship_sailing",
+   "type": "state",
+   "of": "longship",
+   "desc": "the longship is sailing through the water",
+   "question": "Is the longship sailing through the water?"
+  },
+  {
+   "id": "dragon_on_prow",
+   "type": "relation",
+   "of": [
+    "dragon_head",
+    "longship"
+   ],
+   "desc": "the dragon head is on the prow of the longship",
+   "question": "Is the dragon head on the prow of the longship?"
+  },
+  {
+   "id": "sail_on_ship",
+   "type": "relation",
+   "of": [
+    "sail",
+    "longship"
+   ],
+   "desc": "the square sail is attached to the longship",
+   "question": "Is the square sail attached to the longship?"
+  },
+  {
+   "id": "oars_on_ship",
+   "type": "relation",
+   "of": [
+    "oars",
+    "longship"
+   ],
+   "desc": "the oars extend from the sides of the longship",
+   "question": "Do the oars extend from the sides of the longship?"
+  },
+  {
+   "id": "shields_on_ship",
+   "type": "relation",
+   "of": [
+    "shields",
+    "longship"
+   ],
+   "desc": "the shields are mounted on the side of the longship",
+   "question": "Are the shields mounted on the side of the longship?"
+  },
+  {
+   "id": "deck_on_ship",
+   "type": "relation",
+   "of": [
+    "deck",
+    "longship"
+   ],
+   "desc": "the deck is part of the longship",
+   "question": "Is the deck part of the longship?"
+  },
+  {
+   "id": "rigging_on_ship",
+   "type": "relation",
+   "of": [
+    "rigging",
+    "longship"
+   ],
+   "desc": "the rigging connects parts of the longship",
+   "question": "Does the rigging connect parts of the longship?"
+  },
+  {
+   "id": "no_modern_equip",
+   "type": "absent",
+   "desc": "modern navigation equipment",
+   "question": "Is there any modern navigation equipment visible?"
+  },
+  {
+   "id": "longship_oak",
+   "type": "attribute",
+   "of": "longship",
+   "desc": "the longship is constructed from dark oak planks",
+   "question": "Is the longship constructed from dark oak planks?"
+  },
+  {
+   "id": "sail_stripes",
+   "type": "attribute",
+   "of": "sail",
+   "desc": "the sail has alternating red and white bands",
+   "question": "Does the sail have alternating red and white bands?"
+  },
+  {
+   "id": "sail_runes",
+   "type": "attribute",
+   "of": "sail",
+   "desc": "the sail has runic symbols embroidered along the edges",
+   "question": "Are there runic symbols embroidered along the edges of the sail?"
+  },
+  {
+   "id": "oars_count",
+   "type": "attribute",
+   "of": "oars",
+   "desc": "there are ten wooden oars",
+   "question": "Are there exactly ten wooden oars?"
+  },
+  {
+   "id": "shields_green",
+   "type": "attribute",
+   "of": "shields",
+   "desc": "some shields are bright green",
+   "question": "Are some of the round shields bright green?"
+  },
+  {
+   "id": "shields_purple",
+   "type": "attribute",
+   "of": "shields",
+   "desc": "other shields are deep purple",
+   "question": "Are other round shields deep purple?"
+  },
+  {
+   "id": "shields_animal",
+   "type": "attribute",
+   "of": "shields",
+   "desc": "several shields are painted with fierce animal designs",
+   "question": "Are several round shields painted with fierce animal designs?"
+  },
+  {
+   "id": "deck_nails",
+   "type": "attribute",
+   "of": "deck",
+   "desc": "the deck planks are secured by iron nails",
+   "question": "Are the wooden deck planks secured by iron nails?"
+  },
+  {
+   "id": "no_rot",
+   "type": "absent",
+   "desc": "signs of rot on the ship",
+   "question": "Are there any signs of rot on the ship?"
+  },
+  {
+   "id": "dragon_head_material",
+   "type": "attribute",
+   "of": "dragon_head",
+   "desc": "the dragon head is made of gray weathered wood",
+   "question": "Is the dragon head made of gray weathered wood?"
+  },
+  {
+   "id": "dragon_head_teeth",
+   "type": "attribute",
+   "of": "dragon_head",
+   "desc": "the dragon head has bronze teeth",
+   "question": "Does the dragon head have bronze teeth?"
+  },
+  {
+   "id": "oars_pattern",
+   "type": "attribute",
+   "of": "oars",
+   "desc": "the oars are painted with colorful geometric patterns in blue and yellow",
+   "question": "Are the oars painted with colorful geometric patterns in blue and yellow?"
+  },
+  {
+   "id": "longship_hull",
+   "type": "attribute",
+   "of": "longship",
+   "desc": "the longship has a distinctive curved hull",
+   "question": "Does the longship have a distinctive curved hull?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "longship",
+   "to": "dragon_head",
+   "kind": "support"
+  },
+  {
+   "from": "longship",
+   "to": "sail",
+   "kind": "support"
+  },
+  {
+   "from": "longship",
+   "to": "oars",
+   "kind": "support"
+  },
+  {
+   "from": "longship",
+   "to": "shields",
+   "kind": "support"
+  },
+  {
+   "from": "longship",
+   "to": "deck",
+   "kind": "support"
+  },
+  {
+   "from": "longship",
+   "to": "rigging",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_012",
+ "prompt": "A single massive longship with Viking design sailing through stormy Arctic waters under the northern lights. The vessel is constructed from dark oak planks with a distinctive curved hull and high prow featuring a carved dragon head. The ship has a single square sail made of thick fabric, striped in alternating red and white bands with runic symbols embroidered along the edges. The longship is not damaged, despite weathering the harsh voyage. Ten wooden oars extend from both sides, each painted with colorful geometric patterns in blue and yellow. The ship's shield wall displays round shields in various colors - some bright green, others deep purple, and several painted with fierce animal designs. The dragon figurehead is carved from a single piece of gray weathered wood, with glowing red gemstone eyes and bronze teeth. Thick rope rigging connects the mast to the hull, while the deck is covered with wooden planks secured by iron nails. The ship shows no signs of rot and contains no modern navigation equipment, maintaining its authentic Viking-era construction.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 9,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,467 @@
+{
+ "style": "bustling anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen with a back door and a cluttered shelf",
+   "question": "Does the image show a kitchen with a back door and a cluttered shelf?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef",
+   "question": "Is there a chef?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "sous_chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second chef in a blue apron",
+   "question": "Is there a second chef in a blue apron?",
+   "box": [
+    320,
+    320,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter",
+   "question": "Is there a waiter?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dishwasher",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker",
+   "question": "Is there a worker?",
+   "box": [
+    680,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    750,
+    100,
+    900,
+    250
+   ]
+  },
+  {
+   "id": "refrigerator",
+   "type": "entity",
+   "class": "refrigerator",
+   "plural": "refrigerators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a refrigerator",
+   "question": "Is there a refrigerator?",
+   "box": [
+    700,
+    250,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "inspector",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    100,
+    150,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "cooking pots",
+   "question": "Are there cooking pots?",
+   "box": [
+    350,
+    500,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cutting board",
+   "question": "Is there a wooden cutting board?",
+   "box": [
+    150,
+    650,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "ladle",
+   "type": "attribute",
+   "of": "sous_chef",
+   "desc": "the second chef holds a silver ladle",
+   "question": "Is the second chef holding a silver ladle?"
+  },
+  {
+   "id": "stockpot",
+   "type": "relation",
+   "of": [
+    "sous_chef",
+    "chef"
+   ],
+   "desc": "the second chef has a simmering stockpot",
+   "question": "Is there a simmering stockpot with the second chef?"
+  },
+  {
+   "id": "tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter balances a tray of three steaming ramen bowls",
+   "question": "Is the waiter balancing a tray of three steaming ramen bowls?"
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "inspector",
+   "desc": "the man in the gray suit holds a clipboard",
+   "question": "Is the man in the gray suit holding a clipboard?"
+  },
+  {
+   "id": "herbs",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a fresh bundle of green herbs",
+   "question": "Is the chef holding a fresh bundle of green herbs?"
+  },
+  {
+   "id": "chef_chopping",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef chops onions rapidly",
+   "question": "Is the chef chopping onions rapidly?"
+  },
+  {
+   "id": "waiter_anxious",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter looks anxious",
+   "question": "Does the waiter look anxious?"
+  },
+  {
+   "id": "dishwasher_scrubbing",
+   "type": "state",
+   "of": "dishwasher",
+   "desc": "the worker scrubs plates vigorously under running water",
+   "question": "Is the worker scrubbing plates vigorously under running water?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat sits calmly with half-closed eyes",
+   "question": "Is the small orange cat sitting?"
+  },
+  {
+   "id": "inspector_pointing",
+   "type": "state",
+   "of": "inspector",
+   "desc": "the man in the gray suit points sternly",
+   "question": "Is the man in the gray suit pointing sternly?"
+  },
+  {
+   "id": "steam_pots",
+   "type": "state",
+   "of": "pots",
+   "desc": "steam rises violently from the pots",
+   "question": "Does steam rise violently from the pots?"
+  },
+  {
+   "id": "chef_next_to_sous_chef",
+   "type": "relation",
+   "of": [
+    "chef",
+    "sous_chef"
+   ],
+   "desc": "the chef is next to the second chef",
+   "question": "Is the chef next to the second chef?"
+  },
+  {
+   "id": "cat_on_refrigerator",
+   "type": "relation",
+   "of": [
+    "cat",
+    "refrigerator"
+   ],
+   "desc": "the small orange cat is on top of the refrigerator",
+   "question": "Is the small orange cat on top of the refrigerator?"
+  },
+  {
+   "id": "inspector_near_door",
+   "type": "state",
+   "of": "inspector",
+   "desc": "the man in the gray suit is near the back door",
+   "question": "Is the man in the gray suit near the back door?"
+  },
+  {
+   "id": "inspector_points_shelf",
+   "type": "relation",
+   "of": [
+    "inspector",
+    "shelf"
+   ],
+   "desc": "the man in the gray suit points at the cluttered shelf",
+   "question": "Is the man in the gray suit pointing at the cluttered shelf?"
+  },
+  {
+   "id": "chef_hands_sous_chef",
+   "type": "action",
+   "of": [
+    "chef",
+    "sous_chef"
+   ],
+   "desc": "the chef hands the green herbs to the second chef",
+   "question": "Is the chef handing the green herbs to the second chef?"
+  },
+  {
+   "id": "sous_chef_accepts",
+   "type": "action",
+   "of": [
+    "sous_chef",
+    "chef"
+   ],
+   "desc": "the second chef accepts the herbs with a nod",
+   "question": "Is the second chef accepting the herbs?"
+  },
+  {
+   "id": "waiter_looks_dishwasher",
+   "type": "action",
+   "of": [
+    "waiter",
+    "dishwasher"
+   ],
+   "desc": "the waiter looks at the worker with rolled-up sleeves",
+   "question": "Is the waiter looking at the worker with rolled-up sleeves?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the scene?"
+  },
+  {
+   "id": "onions",
+   "type": "entity",
+   "class": "onion",
+   "plural": "onions",
+   "count": 2,
+   "count_exact": false,
+   "desc": "chopped onions",
+   "question": "Are there chopped onions visible?",
+   "box": [
+    100,
+    650,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of plates",
+   "question": "Is there a stack of plates?",
+   "box": [
+    800,
+    600,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cluttered shelf",
+   "question": "Is there a cluttered shelf?",
+   "box": [
+    700,
+    200,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "chef_on_board",
+   "type": "relation",
+   "of": [
+    "chef",
+    "board"
+   ],
+   "desc": "the chef chops onions on the wooden board",
+   "question": "Is the chef chopping onions on the wooden cutting board?"
+  },
+  {
+   "id": "ladle_over_stockpot",
+   "type": "relation",
+   "of": [
+    "sous_chef",
+    "pots"
+   ],
+   "desc": "the second chef holds the ladle over a simmering stockpot",
+   "question": "Is the second chef holding the ladle over a simmering stockpot?"
+  },
+  {
+   "id": "waiter_signals_dishwasher",
+   "type": "action",
+   "of": [
+    "waiter",
+    "dishwasher"
+   ],
+   "desc": "the waiter signals the worker for more clean plates",
+   "question": "Is the waiter signaling the worker?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat has half-closed eyes",
+   "question": "Does the small orange cat have half-closed eyes?"
+  },
+  {
+   "id": "sous_chef_nodding",
+   "type": "state",
+   "of": "sous_chef",
+   "desc": "the second chef is nodding",
+   "question": "Is the second chef nodding?"
+  },
+  {
+   "id": "chef_hat",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef wears a tall white hat",
+   "question": "Does the chef wear a tall white hat?"
+  },
+  {
+   "id": "waiter_hair",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter has messy black hair",
+   "question": "Does the waiter have messy black hair?"
+  },
+  {
+   "id": "dishwasher_sleeves",
+   "type": "attribute",
+   "of": "dishwasher",
+   "desc": "the worker has rolled-up sleeves",
+   "question": "Does the worker have rolled-up sleeves?"
+  },
+  {
+   "id": "signal_content",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter's signal is for more clean plates",
+   "question": "Is the waiter's signal for more clean plates?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "refrigerator",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0095",
+ "prompt": "In a bustling anime style kitchen, steam rises violently from pots. On the left, a chef with a tall white hat chops onions rapidly on a wooden board. Next to him, a sous-chef in a blue apron holds a silver ladle poised over a simmering stockpot. In the center, a waiter with messy black hair balances a tray of three steaming ramen bowls, looking anxious as he navigates the narrow aisle. To his right, a dishwasher with rolled-up sleeves scrubs a stack of plates vigorously under running water. Behind them, a small orange cat sits calmly on top of a refrigerator, watching the chaos with half-closed eyes. Near the back door, a health inspector in a gray suit points sternly at a cluttered shelf while holding a clipboard. The chef hands a fresh bundle of green herbs to the sous-chef, who accepts them with a nod. The waiter looks at the dishwasher, signaling for more clean plates. There is no fire visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

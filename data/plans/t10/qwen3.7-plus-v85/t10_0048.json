@@ -1,0 +1,346 @@
+{
+ "style": "oil painting with thick impasto brushstrokes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop gathering under a starry night sky",
+   "question": "Does the image show a rooftop gathering under a starry night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "parapet",
+   "type": "entity",
+   "class": "stone parapet",
+   "plural": "stone parapets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone parapet",
+   "question": "Is there a stone parapet?",
+   "box": [
+    0,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue silk dress",
+   "question": "Is there a woman in a blue silk dress?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    200,
+    750,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tuxedo",
+   "question": "Is there a man in a tuxedo?",
+   "box": [
+    400,
+    250,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "woman_gold",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a gold sequined gown",
+   "question": "Is there a woman wearing a gold sequined gown?",
+   "box": [
+    600,
+    280,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    800,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "guest_leather",
+   "type": "entity",
+   "class": "guest",
+   "plural": "guests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guest in a leather jacket",
+   "question": "Is there a guest in a leather jacket?",
+   "box": [
+    900,
+    350,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "palm",
+   "type": "entity",
+   "class": "potted palm tree",
+   "plural": "potted palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted palm tree",
+   "question": "Is there a large potted palm tree?",
+   "box": [
+    700,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "woman_blue_holding",
+   "type": "attribute",
+   "of": "woman_blue",
+   "desc": "the woman in a blue silk dress holds a champagne flute",
+   "question": "Is the woman in a blue silk dress holding a champagne flute?"
+  },
+  {
+   "id": "woman_blue_leaning",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue silk dress is leaning",
+   "question": "Is the woman in a blue silk dress leaning?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is grooming its paw",
+   "question": "Is the small black cat grooming its paw?"
+  },
+  {
+   "id": "man_gesturing",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the man in a tuxedo is gesturing",
+   "question": "Is the man in a tuxedo gesturing?"
+  },
+  {
+   "id": "woman_gold_listening",
+   "type": "state",
+   "of": "woman_gold",
+   "desc": "the woman wearing a gold sequined gown has her head tilted slightly",
+   "question": "Does the woman wearing a gold sequined gown have her head tilted slightly?"
+  },
+  {
+   "id": "guest_reaching",
+   "type": "state",
+   "of": "guest_leather",
+   "desc": "the guest in a leather jacket reaches out",
+   "question": "Is the guest in a leather jacket reaching out?"
+  },
+  {
+   "id": "woman_blue_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "cat"
+   ],
+   "desc": "the small black cat is next to the woman in a blue silk dress",
+   "question": "Is the small black cat next to the woman in a blue silk dress?"
+  },
+  {
+   "id": "woman_blue_against_parapet",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "parapet"
+   ],
+   "desc": "the woman in a blue silk dress leans against the stone parapet",
+   "question": "Is the woman in a blue silk dress leaning against the stone parapet?"
+  },
+  {
+   "id": "man_speaking_to_woman",
+   "type": "action",
+   "of": [
+    "man_tuxedo",
+    "woman_gold"
+   ],
+   "desc": "the man in a tuxedo speaks to the woman wearing a gold sequined gown",
+   "question": "Is the man in a tuxedo speaking to the woman wearing a gold sequined gown?"
+  },
+  {
+   "id": "waiter_hands_tray",
+   "type": "action",
+   "of": [
+    "waiter",
+    "guest_leather"
+   ],
+   "desc": "the waiter in a white apron hands a tray of hors d'oeuvres to the guest in a leather jacket",
+   "question": "Is the waiter in a white apron handing a tray of hors d'oeuvres to the guest in a leather jacket?"
+  },
+  {
+   "id": "palm_behind_guests",
+   "type": "relation",
+   "of": [
+    "palm",
+    "waiter"
+   ],
+   "desc": "the large potted palm tree is behind the waiter in a white apron",
+   "question": "Is the large potted palm tree behind the waiter in a white apron?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_blue_standing",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue silk dress stands",
+   "question": "Is the woman in a blue silk dress standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat sits",
+   "question": "Is the small black cat sitting?"
+  },
+  {
+   "id": "palm_behind_guest_leather",
+   "type": "relation",
+   "of": [
+    "palm",
+    "guest_leather"
+   ],
+   "desc": "the large potted palm tree is behind the guest in a leather jacket",
+   "question": "Is the large potted palm tree behind the guest in a leather jacket?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall",
+   "question": "Is there a wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone",
+   "plural": "cobblestones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "cobblestones",
+   "question": "Are there cobblestones?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small black cat has bright green eyes",
+   "question": "Does the small black cat have bright green eyes?"
+  },
+  {
+   "id": "man_right_hand",
+   "type": "attribute",
+   "of": "man_tuxedo",
+   "desc": "the man in a tuxedo uses his right hand to gesture",
+   "question": "Is the man in a tuxedo gesturing with his right hand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "parapet",
+   "to": "woman_blue",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0048",
+ "prompt": "Rendered in the style of an oil painting, this scene captures a lively rooftop gathering under a starry night sky. On the left, a woman in a blue silk dress stands holding a champagne flute, her posture relaxed as she leans against the stone parapet. Next to her sits a small black cat with bright green eyes, calmly grooming its paw on the warm tiles. In the center, a man in a tuxedo gestures animatedly with his right hand while speaking to a woman wearing a gold sequined gown who listens intently, her head tilted slightly. To the right, a waiter in a white apron hands a tray of hors d'oeuvres to a guest in a leather jacket, who reaches out eagerly to take a canapé. Behind them, a large potted palm tree sways gently in the breeze, its fronds casting soft shadows on the wall. There is no moon visible in the dark expanse above. The thick impasto brushstrokes give texture to the cobblestones and the fabric of the guests' attire, emphasizing the tactile quality of the evening air and the vibrant social energy. The composition balances the figures across the frame, creating a dynamic yet harmonious visual narrative of urban celebration.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

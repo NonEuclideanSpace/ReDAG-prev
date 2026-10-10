@@ -1,0 +1,658 @@
+{
+ "style": "surreal photorealistic, dreamlike lighting, soft focus, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room",
+   "question": "Does the image show a room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "rubber ball",
+   "plural": "rubber balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red rubber ball",
+   "question": "Is there a red rubber ball?",
+   "box": [
+    450,
+    400,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "blocks",
+   "type": "entity",
+   "class": "wooden block",
+   "plural": "wooden blocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "painted wooden blocks",
+   "question": "Are there painted wooden blocks?",
+   "box": [
+    700,
+    500,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small music box",
+   "question": "Is there a small music box?",
+   "box": [
+    720,
+    476,
+    780,
+    524
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    200,
+    600,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "ceramic mug",
+   "plural": "ceramic mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceramic mug",
+   "question": "Is there a ceramic mug?",
+   "box": [
+    380,
+    300,
+    440,
+    380
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "pendulum clock",
+   "plural": "pendulum clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pendulum clock",
+   "question": "Is there a pendulum clock?",
+   "box": [
+    50,
+    100,
+    150,
+    300
+   ]
+  },
+  {
+   "id": "tv",
+   "type": "entity",
+   "class": "television",
+   "plural": "televisions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a television displaying static",
+   "question": "Is there a television displaying static?",
+   "box": [
+    850,
+    100,
+    950,
+    200
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    500,
+    700,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "silhouette",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child's silhouette",
+   "question": "Is there a child's silhouette?",
+   "box": [
+    100,
+    200,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "garden_view",
+   "type": "entity",
+   "class": "garden view",
+   "plural": "garden views",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a view of a garden with reverse-blooming roses",
+   "question": "Is there a view of a garden with reverse-blooming roses?",
+   "box": [
+    750,
+    50,
+    900,
+    250
+   ]
+  },
+  {
+   "id": "ball_mid_air",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is suspended mid-bounce",
+   "question": "Is the red rubber ball suspended mid-bounce?"
+  },
+  {
+   "id": "blocks_toppling",
+   "type": "state",
+   "of": "blocks",
+   "desc": "the painted wooden blocks are toppling",
+   "question": "Are the painted wooden blocks toppling?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is crouching",
+   "question": "Is the cat crouching?"
+  },
+  {
+   "id": "cat_leaping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is leaping in a low arc",
+   "question": "Is the cat leaping in a low arc?"
+  },
+  {
+   "id": "mug_wobbling",
+   "type": "state",
+   "of": "mug",
+   "desc": "the ceramic mug is wobbling but settled",
+   "question": "Is the ceramic mug wobbling but settled?"
+  },
+  {
+   "id": "clock_ticking",
+   "type": "state",
+   "of": "clock",
+   "desc": "the pendulum clock is functioning with its pendulum swinging",
+   "question": "Is the pendulum clock functioning with its pendulum swinging?"
+  },
+  {
+   "id": "pages_floating",
+   "type": "state",
+   "of": "book",
+   "desc": "the pages of the open book are floating and turning",
+   "question": "Are the pages of the open book floating and turning?"
+  },
+  {
+   "id": "ink_dripping",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the pages of the book have ink dripping and soaking into the paper",
+   "question": "Do the pages of the book have ink dripping and soaking into the paper?"
+  },
+  {
+   "id": "ball_nudges_blocks",
+   "type": "action",
+   "of": [
+    "ball",
+    "blocks"
+   ],
+   "desc": "the red rubber ball nudges the painted wooden blocks",
+   "question": "Is the red rubber ball nudging the painted wooden blocks?"
+  },
+  {
+   "id": "block_strikes_music_box",
+   "type": "action",
+   "of": [
+    "blocks",
+    "music_box"
+   ],
+   "desc": "one of the wooden blocks strikes the small music box",
+   "question": "Is one of the wooden blocks striking the small music box?"
+  },
+  {
+   "id": "cat_pounces_ball",
+   "type": "action",
+   "of": [
+    "cat",
+    "ball"
+   ],
+   "desc": "the cat pounces and brushes the red rubber ball",
+   "question": "Is the cat pouncing and brushing the red rubber ball?"
+  },
+  {
+   "id": "ball_skitters_bookshelf",
+   "type": "relation",
+   "of": [
+    "ball",
+    "bookshelf"
+   ],
+   "desc": "the red rubber ball skitters into the base of the bookshelf",
+   "question": "Is the red rubber ball skittering into the base of the bookshelf?"
+  },
+  {
+   "id": "tail_flicks_mug",
+   "type": "action",
+   "of": [
+    "cat",
+    "mug"
+   ],
+   "desc": "the cat's tail flicks against the ceramic mug",
+   "question": "Is the cat's tail flicking against the ceramic mug?"
+  },
+  {
+   "id": "blocks_beside_windowsill",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "windowsill"
+   ],
+   "desc": "the painted wooden blocks are stacked beside the sunlit windowsill",
+   "question": "Are the painted wooden blocks stacked beside the sunlit windowsill?"
+  },
+  {
+   "id": "music_box_on_sill",
+   "type": "relation",
+   "of": [
+    "music_box",
+    "windowsill"
+   ],
+   "desc": "the small music box rests on the windowsill",
+   "question": "Does the small music box rest on the windowsill?"
+  },
+  {
+   "id": "mug_on_shelf",
+   "type": "relation",
+   "of": [
+    "mug",
+    "bookshelf"
+   ],
+   "desc": "the ceramic mug teeters on the edge of the bookshelf",
+   "question": "Does the ceramic mug teeter on the edge of the bookshelf?"
+  },
+  {
+   "id": "clock_in_corner",
+   "type": "state",
+   "of": "clock",
+   "desc": "the pendulum clock is in the corner of the room",
+   "question": "Is the pendulum clock in the corner of the room?"
+  },
+  {
+   "id": "tv_behind_partition",
+   "type": "relation",
+   "of": [
+    "tv",
+    "partition"
+   ],
+   "desc": "the television is behind the translucent mirrored partition",
+   "question": "Is the television behind the translucent mirrored partition?"
+  },
+  {
+   "id": "book_on_couch",
+   "type": "relation",
+   "of": [
+    "book",
+    "couch"
+   ],
+   "desc": "the open book lies on the couch",
+   "question": "Does the open book lie on the couch?"
+  },
+  {
+   "id": "silhouette_on_wall",
+   "type": "state",
+   "of": "silhouette",
+   "desc": "the child's silhouette is painted by sunlight on the wall",
+   "question": "Is the child's silhouette painted by sunlight on the wall?"
+  },
+  {
+   "id": "garden_through_curtain",
+   "type": "state",
+   "of": "garden_view",
+   "desc": "the garden scene is visible through the ajar curtain",
+   "question": "Is the garden scene visible through the ajar curtain?"
+  },
+  {
+   "id": "ball_suspended",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is suspended mid-bounce in the air",
+   "question": "Is the red rubber ball suspended mid-bounce in the air?"
+  },
+  {
+   "id": "cat_eyes_fixed",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's emerald eyes are fixed on the bouncing sphere",
+   "question": "Are the cat's emerald eyes fixed on the bouncing sphere?"
+  },
+  {
+   "id": "silhouette_moving_backward",
+   "type": "state",
+   "of": "silhouette",
+   "desc": "the child's silhouette is moving backward through time",
+   "question": "Is the child's silhouette moving backward through time?"
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gauzy curtain dangling slightly ajar",
+   "question": "Is there a gauzy curtain dangling slightly ajar?",
+   "box": [
+    800,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "ball_glint",
+   "type": "attribute",
+   "of": "ball",
+   "desc": "sunlight glints off the red rubber ball",
+   "question": "Does sunlight glint off the red rubber ball?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has a long silken tail",
+   "question": "Does the cat have a long silken tail?"
+  },
+  {
+   "id": "clock_shrouded",
+   "type": "state",
+   "of": "clock",
+   "desc": "the pendulum clock is half-shrouded in shadows",
+   "question": "Is the pendulum clock half-shrouded in shadows?"
+  },
+  {
+   "id": "tv_static",
+   "type": "state",
+   "of": "tv",
+   "desc": "the television displays static",
+   "question": "Does the television display static?"
+  },
+  {
+   "id": "garden_birds",
+   "type": "attribute",
+   "of": "garden_view",
+   "desc": "the garden view contains birds with glass feathers flying backwards",
+   "question": "Does the garden view contain birds with glass feathers flying backwards?"
+  },
+  {
+   "id": "silhouette_backward",
+   "type": "state",
+   "of": "silhouette",
+   "desc": "the child's silhouette moves backward through time",
+   "question": "Does the child's silhouette appear to move backward through time?"
+  },
+  {
+   "id": "curtain_ajar",
+   "type": "state",
+   "of": "curtain",
+   "desc": "the curtain is ajar",
+   "question": "Is the curtain ajar?"
+  },
+  {
+   "id": "ball_skitters",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball skitters sideways",
+   "question": "Is the red rubber ball skittering sideways?"
+  },
+  {
+   "id": "pages_content",
+   "type": "attribute",
+   "of": "book",
+   "desc": "the pages of the open book are filled with the scene unfolding around them",
+   "question": "Are the pages of the open book filled with the scene unfolding around them?"
+  },
+  {
+   "id": "ball_bouncing",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is bouncing",
+   "question": "Is the red rubber ball bouncing?"
+  },
+  {
+   "id": "ball_rolling",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball rolls across the worn blue carpet",
+   "question": "Is the red rubber ball rolling across the worn blue carpet?"
+  },
+  {
+   "id": "blocks_precairous",
+   "type": "attribute",
+   "of": "blocks",
+   "desc": "the tower of painted wooden blocks is precarious",
+   "question": "Is the tower of painted wooden blocks precarious?"
+  },
+  {
+   "id": "carpet",
+   "type": "entity",
+   "class": "carpet",
+   "plural": "carpets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn blue carpet",
+   "question": "Is there a worn blue carpet?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sunlit windowsill",
+   "question": "Is there a sunlit windowsill?",
+   "box": [
+    400,
+    100,
+    700,
+    200
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bookshelf",
+   "question": "Is there a bookshelf?",
+   "box": [
+    800,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "couch",
+   "type": "entity",
+   "class": "couch",
+   "plural": "couches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a couch",
+   "question": "Is there a couch?",
+   "box": [
+    100,
+    700,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "partition",
+   "type": "entity",
+   "class": "mirrored partition",
+   "plural": "mirrored partitions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a translucent mirrored partition",
+   "question": "Is there a translucent mirrored partition?",
+   "box": [
+    600,
+    0,
+    800,
+    1024
+   ]
+  },
+  {
+   "id": "blocks_geometric",
+   "type": "attribute",
+   "of": "blocks",
+   "desc": "the painted wooden blocks have bright geometric forms",
+   "question": "Do the painted wooden blocks have bright geometric forms?"
+  },
+  {
+   "id": "cat_emerald_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has emerald eyes",
+   "question": "Does the cat have emerald eyes?"
+  },
+  {
+   "id": "mug_daisies",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the ceramic mug is filled with withered daisies",
+   "question": "Is the ceramic mug filled with withered daisies?"
+  },
+  {
+   "id": "clock_brass_face",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the pendulum clock has a cracked brass face",
+   "question": "Does the pendulum clock have a cracked brass face?"
+  },
+  {
+   "id": "pages_floating_2",
+   "type": "state",
+   "of": "book",
+   "desc": "the pages of the open book are floating",
+   "question": "Are the pages of the open book floating?"
+  },
+  {
+   "id": "cat_coiled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's muscles are coiled",
+   "question": "Are the cat's muscles coiled?"
+  },
+  {
+   "id": "curtain_reveals_garden",
+   "type": "relation",
+   "of": [
+    "curtain",
+    "garden_view"
+   ],
+   "desc": "the curtain reveals the garden view",
+   "question": "Does the curtain reveal the garden view?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "music_box",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "book",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0493",
+ "prompt": "In the golden hush of an afternoon that has long since forgotten the hour, a child’s red rubber ball bounces through the room like a heartbeat. It rolls across the worn blue carpet, its color dulled by years of sun and secrets, its pattern faded into a map of memories. As it glides, it nudges a precarious tower of painted wooden blocks stacked beside a sunlit windowsill, where the last of spring’s warmth spills through gauzy curtains. One by one, the blocks topple in slow, dramatic arcs, their bright geometric forms catching the light like a forgotten mosaic. The final block strikes a small music box resting on the sill, which begins to play a lullaby that seems to drift from both the box and the walls themselves, as if the house has woken up just to listen. Through the curtains, sunlight glints off the ball, suspended mid-bounce in a moment frozen in air, caught between gravity and the whimsy of time. Just then, from the corner of the room, a cat crouches, muscles coiled, its emerald eyes fixed on the bouncing sphere. With a sudden burst of feline grace, it pounces, leaping in a low, fluid arc that brushes the ball and sends it skittering sideways into the base of a bookshelf. The tail of the cat, a long silken ribbon of motion, flicks against a ceramic mug teetering on the very edge of the shelf, filled with daisies that have long since withered but still emit the faintest ghost of fragrance. The mug wobbles—every viewer holds their breath—but settles again, as if time has made a decision. Elsewhere, a pendulum clock, half-shrouded in shadows, ticks rhythmically in the corner, its brass face cracked and peeling, but still functioning with an eerie persistence. The pendulum swings in perfect sync with the bouncing ball, creating a surreal harmony between motion and stillness. In the distance, behind a translucent, mirrored partition, a television flickers with static, though no signal is broadcasting. Reflections from the mirror layer upon the room’s surfaces, warping space and distorting time. A curtain from the window dangles slightly ajar, revealing a garden where time seems to fold back on itself—roses bloom in reverse, their petals unfolding from none to full, while birds with glass feathers fly backwards through the air. Inside the room, a book lies open on the couch, its pages floating freely, turning by themselves as though pulled by an unseen wind. The pages are filled with the very scene unfolding around them, a story being written in real time, with ink that drips and soaks into the paper like rain. In this surreal symphony of motion and stillness, of reality and reflection, everything seems to exist in a state of delicate balance—each object connected by a thread of causality, each action triggering a chain reaction in a world where the rules are known only to the air itself. The child, who moments ago had played in the room, now appears as a silhouette on the wall, painted by the sunlight, moving backward through time, as if the scene is rewinding itself toward an origin it has yet to reach. In this impossible yet coherent world, where the past and present blur into a single frame, the scene breathes with life, tension, and a quiet magic that defies all explanation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 86,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 12,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 8,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

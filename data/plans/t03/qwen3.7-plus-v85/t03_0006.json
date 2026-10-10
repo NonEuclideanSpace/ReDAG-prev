@@ -1,0 +1,134 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hard hat",
+   "question": "Is there a woman wearing a blue hard hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in orange overalls",
+   "question": "Is there a man wearing orange overalls?",
+   "box": [
+    674,
+    250,
+    974,
+    850
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor",
+   "question": "Is there a large rusted anchor?",
+   "box": [
+    380,
+    500,
+    644,
+    800
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue hard hat is standing",
+   "question": "Is the woman in the blue hard hat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in orange overalls is sitting",
+   "question": "Is the man in orange overalls sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in orange overalls is leaning back",
+   "question": "Is the man in orange overalls leaning back?"
+  },
+  {
+   "id": "woman_clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue hard hat holds a clipboard",
+   "question": "Is the woman in the blue hard hat holding a clipboard?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue hard hat looks at the man in orange overalls",
+   "question": "Is the woman in the blue hard hat looking at the man in orange overalls?"
+  },
+  {
+   "id": "anchor_between",
+   "type": "relation",
+   "of": [
+    "anchor",
+    "woman",
+    "man"
+   ],
+   "desc": "the large rusted anchor is between the woman and the man",
+   "question": "Is the large rusted anchor positioned between the woman and the man?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water in the background",
+   "question": "Is there any water visible in the background?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0006",
+ "prompt": "In an anime style scene at a shipyard dock, a woman in a blue hard hat stands on the left. A man in orange overalls sits on the right. Between them in the center rests a large rusted anchor. The woman holds a clipboard. The man leans back casually. The woman looks at the man. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

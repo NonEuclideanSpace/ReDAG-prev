@@ -1,0 +1,343 @@
+{
+ "style": "photorealistic photo, bright sunlight",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand and a net",
+   "question": "Does the image show a beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    250,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in yellow shorts",
+   "question": "Is there a man in yellow shorts?",
+   "box": [
+    400,
+    100,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleysballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white volleyball",
+   "question": "Is there a white volleyball?",
+   "box": [
+    550,
+    150,
+    650,
+    250
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    750,
+    200,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a wide-brimmed hat",
+   "question": "Is there a spectator in a wide-brimmed hat?",
+   "box": [
+    800,
+    400,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "folding chair",
+   "plural": "folding chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding chair",
+   "question": "Is there a folding chair?",
+   "box": [
+    820,
+    500,
+    960,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    650,
+    600,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cooler with condensation droplets",
+   "question": "Is there a cooler with condensation droplets?",
+   "box": [
+    100,
+    750,
+    350,
+    980
+   ]
+  },
+  {
+   "id": "woman_pose",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue bikini stands with knees bent",
+   "question": "Is the woman in a blue bikini standing with her knees bent?"
+  },
+  {
+   "id": "woman_eyes",
+   "type": "relation",
+   "of": [
+    "woman",
+    "ball"
+   ],
+   "desc": "the woman in a blue bikini has her eyes fixed on the ball",
+   "question": "Are the eyes of the woman in a blue bikini fixed on the white volleyball?"
+  },
+  {
+   "id": "man_pose",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in yellow shorts leaps high into the air with arm extended",
+   "question": "Is the man in yellow shorts leaping high into the air with his arm extended?"
+  },
+  {
+   "id": "referee_whistle",
+   "type": "attribute",
+   "of": "referee",
+   "desc": "the referee in a striped shirt holds a whistle near his mouth",
+   "question": "Is the referee in a striped shirt holding a whistle near his mouth?"
+  },
+  {
+   "id": "referee_watch",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt watches intently",
+   "question": "Is the referee in a striped shirt watching intently?"
+  },
+  {
+   "id": "spectator_sit",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "chair"
+   ],
+   "desc": "the spectator in a wide-brimmed hat sits on the folding chair",
+   "question": "Is the spectator in a wide-brimmed hat sitting on the folding chair?"
+  },
+  {
+   "id": "spectator_shade",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a wide-brimmed hat shades their face",
+   "question": "Is the spectator in a wide-brimmed hat shading their face?"
+  },
+  {
+   "id": "dog_pose",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever lies calmly with its tongue lolling out",
+   "question": "Is the golden retriever lying down with its tongue lolling out?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue bikini looks at the man in yellow shorts",
+   "question": "Is the woman in a blue bikini looking at the man in yellow shorts?"
+  },
+  {
+   "id": "man_above_net",
+   "type": "relation",
+   "of": [
+    "man",
+    "net"
+   ],
+   "desc": "the man in yellow shorts is above the net",
+   "question": "Is the man in yellow shorts positioned above the volleyball net?"
+  },
+  {
+   "id": "man_spikes_ball",
+   "type": "action",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in yellow shorts spikes the white volleyball",
+   "question": "Is the man in yellow shorts spiking the white volleyball?"
+  },
+  {
+   "id": "referee_behind_net",
+   "type": "relation",
+   "of": [
+    "referee",
+    "net"
+   ],
+   "desc": "the referee in a striped shirt is behind the net",
+   "question": "Is the referee in a striped shirt behind the volleyball net?"
+  },
+  {
+   "id": "spectator_behind_net",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "net"
+   ],
+   "desc": "the spectator in a wide-brimmed hat is behind the net",
+   "question": "Is the spectator in a wide-brimmed hat behind the volleyball net?"
+  },
+  {
+   "id": "dog_next_to_spectator",
+   "type": "relation",
+   "of": [
+    "dog",
+    "spectator"
+   ],
+   "desc": "the golden retriever is next to the spectator in a wide-brimmed hat",
+   "question": "Is the golden retriever next to the spectator in a wide-brimmed hat?"
+  },
+  {
+   "id": "cooler_in_sand",
+   "type": "state",
+   "of": "cooler",
+   "desc": "the cooler sits partially buried in the sand",
+   "question": "Is the cooler sitting partially buried in the sand?"
+  },
+  {
+   "id": "no_scoreboard",
+   "type": "absent",
+   "desc": "a scoreboard",
+   "question": "Is there a scoreboard visible in the background?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue bikini stands",
+   "question": "Is the woman in a blue bikini standing?"
+  },
+  {
+   "id": "referee_stands",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt stands",
+   "question": "Is the referee in a striped shirt standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "spectator",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0087",
+ "prompt": "A photorealistic photo captures a tense moment at a beach volleyball tournament under bright sunlight. On the left, a woman in a blue bikini stands ready with knees bent, her eyes fixed on the ball. In the center, a man in yellow shorts leaps high into the air, his arm extended to spike the white volleyball. To the right, a referee in a striped shirt watches intently, holding a whistle near his mouth. Behind the net, a spectator in a wide-brimmed hat sits on a folding chair, shading their face from the sun. Next to the spectator, a golden retriever lies calmly on the sand, tongue lolling out. In the foreground, a cooler with condensation droplets sits partially buried in the sand. The woman in the blue bikini is looking at the man in yellow shorts as he prepares to strike. The golden retriever is sitting next to the spectator in the wide-brimmed hat. The man in yellow shorts is jumping above the net. The referee in the striped shirt is standing behind the net. There is no scoreboard visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

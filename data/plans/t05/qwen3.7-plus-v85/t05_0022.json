@@ -1,0 +1,196 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception venue",
+   "question": "Does the image show a wedding reception venue?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    650,
+    150,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue vest",
+   "question": "Is there a waiter in a blue vest?",
+   "box": [
+    400,
+    100,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a purple dress",
+   "question": "Is there an elderly woman in a purple dress?",
+   "box": [
+    0,
+    250,
+    200,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    300,
+    700,
+    700,
+    980
+   ]
+  },
+  {
+   "id": "bride_smiling",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown is smiling gently",
+   "question": "Is the bride in a white gown smiling gently?"
+  },
+  {
+   "id": "groom_hands",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo has his hands clasped behind his back",
+   "question": "Does the groom in a black tuxedo have his hands clasped behind his back?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sleeping peacefully",
+   "question": "Is the golden retriever sleeping peacefully?"
+  },
+  {
+   "id": "bride_sitting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown is sitting",
+   "question": "Is the bride in a white gown sitting?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo is standing",
+   "question": "Is the groom in a black tuxedo standing?"
+  },
+  {
+   "id": "elderly_woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a purple dress is sitting",
+   "question": "Is the elderly woman in a purple dress sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying on the floor",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "groom_next_to_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom in a black tuxedo is next to the bride in a white gown",
+   "question": "Is the groom in a black tuxedo next to the bride in a white gown?"
+  },
+  {
+   "id": "waiter_handing_groom",
+   "type": "action",
+   "of": [
+    "waiter",
+    "groom"
+   ],
+   "desc": "the waiter in a blue vest is handing a champagne flute to the groom in a black tuxedo",
+   "question": "Is the waiter in a blue vest handing a champagne flute to the groom in a black tuxedo?"
+  },
+  {
+   "id": "elderly_woman_looking_bride",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "bride"
+   ],
+   "desc": "the elderly woman in a purple dress is looking at the bride in a white gown",
+   "question": "Is the elderly woman in a purple dress looking at the bride in a white gown?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a wedding cake",
+   "question": "Is there a wedding cake visible in the scene?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0022",
+ "prompt": "In a photorealistic photo of a wedding reception, a bride in a white gown sits on the left. A groom in a black tuxedo stands next to her on the right. A waiter in a blue vest is positioned in the center background. An elderly woman in a purple dress sits on the far left. A golden retriever lies on the floor in the foreground. The bride is smiling gently. The groom has his hands clasped behind his back. The golden retriever is sleeping peacefully. The waiter is handing a champagne flute to the groom. The elderly woman is looking at the bride. There is no cake visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

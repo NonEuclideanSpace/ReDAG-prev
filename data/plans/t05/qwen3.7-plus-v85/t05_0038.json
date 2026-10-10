@@ -1,0 +1,236 @@
+{
+ "style": "cinematic film still, night lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party scene at night with a dark sky",
+   "question": "Does the image show a rooftop party scene at night with a dark sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    460,
+    650,
+    564,
+    780
+   ]
+  },
+  {
+   "id": "woman_silver",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    200,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "man_black",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black suit",
+   "question": "Is there a man in a black suit?",
+   "box": [
+    260,
+    200,
+    440,
+    900
+   ]
+  },
+  {
+   "id": "dog_brown",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    460,
+    550,
+    564,
+    700
+   ]
+  },
+  {
+   "id": "child_blue",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue shirt",
+   "question": "Is there a child in a blue shirt?",
+   "box": [
+    600,
+    350,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "man_gray",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a gray coat",
+   "question": "Is there an older man in a gray coat?",
+   "box": [
+    760,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress holds a champagne flute",
+   "question": "Is the woman in the silver dress holding a champagne flute?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man_black",
+    "woman_silver"
+   ],
+   "desc": "the man in the black suit is looking at the woman in the silver dress",
+   "question": "Is the man in the black suit looking towards the woman in the silver dress?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog_brown",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child_blue",
+   "desc": "the child in the blue shirt is pointing",
+   "question": "Is the child in the blue shirt pointing?"
+  },
+  {
+   "id": "man_holding_gift",
+   "type": "attribute",
+   "of": "man_gray",
+   "desc": "the older man in the gray coat holds a small gift box",
+   "question": "Is the older man in the gray coat holding a small gift box?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_black",
+    "woman_silver"
+   ],
+   "desc": "the man in the black suit is next to the woman in the silver dress",
+   "question": "Is the man in the black suit next to the woman in the silver dress?"
+  },
+  {
+   "id": "dog_on_crate",
+   "type": "relation",
+   "of": [
+    "dog_brown",
+    "crate"
+   ],
+   "desc": "the brown dog sits on the wooden crate",
+   "question": "Is the brown dog sitting on the wooden crate?"
+  },
+  {
+   "id": "child_right_of_dog",
+   "type": "relation",
+   "of": [
+    "child_blue",
+    "dog_brown"
+   ],
+   "desc": "the child in the blue shirt is to the right of the brown dog",
+   "question": "Is the child in the blue shirt to the right of the brown dog?"
+  },
+  {
+   "id": "man_beside_child",
+   "type": "relation",
+   "of": [
+    "man_gray",
+    "child_blue"
+   ],
+   "desc": "the older man in the gray coat is beside the child in the blue shirt",
+   "question": "Is the older man in the gray coat beside the child in the blue shirt?"
+  },
+  {
+   "id": "handover_gift",
+   "type": "action",
+   "of": [
+    "man_gray",
+    "child_blue"
+   ],
+   "desc": "the older man in the gray coat hands the small gift box to the child in the blue shirt",
+   "question": "Is the older man in the gray coat handing a small gift box to the child in the blue shirt?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "a visible moon in the sky",
+   "question": "Is there a visible moon in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress stands",
+   "question": "Is the woman in the silver dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "dog_brown",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0038",
+ "prompt": "A cinematic film still captures a rooftop party at night. On the left, a woman in a silver dress stands holding a champagne flute. Next to her, a man in a black suit looks at the woman in the silver dress. In the center, a brown dog sits on a wooden crate. To the right of the dog, a child in a blue shirt points at the brown dog. Beside the child, an older man in a gray coat hands a small gift box to the child in the blue shirt. There is no visible moon in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

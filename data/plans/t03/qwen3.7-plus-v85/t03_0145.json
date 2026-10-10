@@ -1,0 +1,151 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a field",
+   "question": "Does the image show a field?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a straw hat",
+   "question": "Is there a farmer wearing a straw hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    380,
+    220,
+    680,
+    920
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old tractor",
+   "question": "Is there an old tractor?",
+   "box": [
+    700,
+    300,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a golden sheaf of wheat",
+   "question": "Is the farmer holding a golden sheaf of wheat?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer is standing",
+   "question": "Is the farmer standing?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman reaches out",
+   "question": "Is the woman reaching out?"
+  },
+  {
+   "id": "tractor_idle",
+   "type": "state",
+   "of": "tractor",
+   "desc": "the tractor sits idle",
+   "question": "Is the tractor sitting idle?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the farmer hands the wheat to the woman",
+   "question": "Is the farmer handing the wheat to the woman?"
+  },
+  {
+   "id": "tractor_next_to_woman",
+   "type": "relation",
+   "of": [
+    "tractor",
+    "woman"
+   ],
+   "desc": "the tractor is next to the woman",
+   "question": "Is the tractor next to the woman?"
+  },
+  {
+   "id": "no_combine",
+   "type": "absent",
+   "desc": "a modern combine harvester",
+   "question": "Is there a modern combine harvester visible in the background?"
+  },
+  {
+   "id": "tractor_wheels",
+   "type": "attribute",
+   "of": "tractor",
+   "desc": "the tractor has rusted wheels",
+   "question": "Does the tractor have rusted wheels?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0145",
+ "prompt": "In a cinematic film still, a farmer in a straw hat stands on the left holding a golden sheaf of wheat. In the center, a woman in a blue apron reaches out to accept the bundle from him. To the right, an old tractor with rusted wheels sits idle in the field. The farmer is handing the wheat to the woman. The tractor is positioned next to the woman. There is no modern combine harvester visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

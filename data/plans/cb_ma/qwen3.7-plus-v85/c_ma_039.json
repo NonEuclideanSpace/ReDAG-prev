@@ -1,0 +1,351 @@
+{
+ "style": "photorealistic, natural lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest clearing",
+   "question": "Is the scene set in a forest clearing?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "totem_pole",
+   "type": "entity",
+   "class": "totem pole",
+   "plural": "totem poles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old totem pole",
+   "question": "Is there an old totem pole?",
+   "box": [
+    360,
+    50,
+    664,
+    970
+   ]
+  },
+  {
+   "id": "eagle_head",
+   "type": "entity",
+   "class": "carved eagle head",
+   "plural": "carved eagle heads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved eagle head",
+   "question": "Is there a carved eagle head?",
+   "box": [
+    380,
+    50,
+    644,
+    240
+   ]
+  },
+  {
+   "id": "bear_head",
+   "type": "entity",
+   "class": "carved bear head",
+   "plural": "carved bear heads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved bear head",
+   "question": "Is there a carved bear head?",
+   "box": [
+    380,
+    240,
+    644,
+    430
+   ]
+  },
+  {
+   "id": "wolf_head",
+   "type": "entity",
+   "class": "carved wolf head",
+   "plural": "carved wolf heads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved wolf head",
+   "question": "Is there a carved wolf head?",
+   "box": [
+    380,
+    430,
+    644,
+    620
+   ]
+  },
+  {
+   "id": "frog_head",
+   "type": "entity",
+   "class": "carved frog head",
+   "plural": "carved frog heads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved frog head",
+   "question": "Is there a carved frog head?",
+   "box": [
+    380,
+    620,
+    644,
+    810
+   ]
+  },
+  {
+   "id": "beaver_head",
+   "type": "entity",
+   "class": "carved beaver head",
+   "plural": "carved beaver heads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carved beaver head",
+   "question": "Is there a carved beaver head?",
+   "box": [
+    380,
+    810,
+    644,
+    970
+   ]
+  },
+  {
+   "id": "moss",
+   "type": "entity",
+   "class": "green moss",
+   "plural": "patches of green moss",
+   "count": 1,
+   "count_exact": false,
+   "desc": "green moss",
+   "question": "Is there green moss?",
+   "box": [
+    360,
+    900,
+    664,
+    970
+   ]
+  },
+  {
+   "id": "pole_upright",
+   "type": "state",
+   "of": "totem_pole",
+   "desc": "the totem pole is standing upright",
+   "question": "Is the totem pole standing upright?"
+  },
+  {
+   "id": "eagle_wings_spread",
+   "type": "state",
+   "of": "eagle_head",
+   "desc": "the eagle head has its wings spread",
+   "question": "Does the eagle head have its wings spread?"
+  },
+  {
+   "id": "pole_colors",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole is painted with red, blue, and black colors",
+   "question": "Is the totem pole painted with red, blue, and black colors?"
+  },
+  {
+   "id": "unpainted_wood",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "parts of the totem pole's wood are unpainted",
+   "question": "Are there parts of the totem pole where the wood is unpainted?"
+  },
+  {
+   "id": "eagle_eyes",
+   "type": "attribute",
+   "of": "eagle_head",
+   "desc": "the eagle head has bright white shell pieces inlaid as eyes",
+   "question": "Does the eagle head have bright white shell pieces inlaid as eyes?"
+  },
+  {
+   "id": "bear_eyes",
+   "type": "attribute",
+   "of": "bear_head",
+   "desc": "the bear head has bright white shell pieces inlaid as eyes",
+   "question": "Does the bear head have bright white shell pieces inlaid as eyes?"
+  },
+  {
+   "id": "wolf_eyes",
+   "type": "attribute",
+   "of": "wolf_head",
+   "desc": "the wolf head has bright white shell pieces inlaid as eyes",
+   "question": "Does the wolf head have bright white shell pieces inlaid as eyes?"
+  },
+  {
+   "id": "frog_eyes",
+   "type": "attribute",
+   "of": "frog_head",
+   "desc": "the frog head has bright white shell pieces inlaid as eyes",
+   "question": "Does the frog head have bright white shell pieces inlaid as eyes?"
+  },
+  {
+   "id": "beaver_eyes",
+   "type": "attribute",
+   "of": "beaver_head",
+   "desc": "the beaver head has bright white shell pieces inlaid as eyes",
+   "question": "Does the beaver head have bright white shell pieces inlaid as eyes?"
+  },
+  {
+   "id": "stack_order",
+   "type": "relation",
+   "of": [
+    "eagle_head",
+    "bear_head",
+    "wolf_head",
+    "frog_head",
+    "beaver_head"
+   ],
+   "desc": "the animal heads are stacked from top to bottom: eagle, bear, wolf, frog, beaver",
+   "question": "Are the animal heads stacked from top to bottom in the order: eagle, bear, wolf, frog, beaver?"
+  },
+  {
+   "id": "moss_on_base",
+   "type": "relation",
+   "of": [
+    "moss",
+    "totem_pole"
+   ],
+   "desc": "the green moss is on the base of the totem pole",
+   "question": "Is the green moss on the base of the totem pole?"
+  },
+  {
+   "id": "no_stone",
+   "type": "absent",
+   "desc": "stone material for the totem pole",
+   "question": "Is the totem pole made of stone?"
+  },
+  {
+   "id": "no_brand_new",
+   "type": "absent",
+   "desc": "brand new appearance of the totem pole",
+   "question": "Does the totem pole look brand new?"
+  },
+  {
+   "id": "no_leaning",
+   "type": "absent",
+   "desc": "leaning state of the totem pole",
+   "question": "Is the totem pole leaning?"
+  },
+  {
+   "id": "totem_pole_single_piece",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole is made from a single piece of wood",
+   "question": "Is the totem pole made from a single piece of wood?"
+  },
+  {
+   "id": "eagle_top",
+   "type": "relation",
+   "of": [
+    "eagle_head",
+    "totem_pole"
+   ],
+   "desc": "the eagle head is at the top of the totem pole",
+   "question": "Is the eagle head at the top of the totem pole?"
+  },
+  {
+   "id": "pole_wood_material",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole is made of dark brown wood",
+   "question": "Is the totem pole made of dark brown wood?"
+  },
+  {
+   "id": "pole_cracks",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole has visible cracks",
+   "question": "Does the totem pole have visible cracks?"
+  },
+  {
+   "id": "pole_texture",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole has a rough surface texture",
+   "question": "Does the totem pole have a rough surface texture?"
+  },
+  {
+   "id": "pole_chipped_paint",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "some of the paint on the totem pole is chipped and peeling",
+   "question": "Is some of the paint on the totem pole chipped and peeling?"
+  },
+  {
+   "id": "no_fallen",
+   "type": "absent",
+   "desc": "fallen state of the totem pole",
+   "question": "Is the totem pole fallen?"
+  },
+  {
+   "id": "pole_continuous_wood",
+   "type": "attribute",
+   "of": "totem_pole",
+   "desc": "the totem pole is made from a continuous piece of wood",
+   "question": "Is the totem pole made from a continuous piece of wood?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "totem_pole",
+   "to": "eagle_head",
+   "kind": "support"
+  },
+  {
+   "from": "totem_pole",
+   "to": "bear_head",
+   "kind": "support"
+  },
+  {
+   "from": "totem_pole",
+   "to": "wolf_head",
+   "kind": "support"
+  },
+  {
+   "from": "totem_pole",
+   "to": "frog_head",
+   "kind": "support"
+  },
+  {
+   "from": "totem_pole",
+   "to": "beaver_head",
+   "kind": "support"
+  },
+  {
+   "from": "totem_pole",
+   "to": "moss",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_039",
+ "prompt": "A single, old totem pole made from a single, continuous piece of dark brown wood with visible cracks and a rough surface texture. It is standing upright in a forest clearing. The pole is composed of five stacked, intricately carved animal heads. From top to bottom, the animals are an eagle, a bear, a wolf, a frog, and a beaver. The eagle at the top has its wings spread. The entire pole is painted with red, blue, and black colors, but some of the paint is chipped and peeling. All of the animals have bright white shell pieces inlaid as eyes. Some green moss is growing on the base of the pole. The totem pole is not made of stone, it is not brand new, it is not brightly colored all over because of the chipping, not all parts of the wood are painted, and it is not leaning or fallen.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node totem_pole: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

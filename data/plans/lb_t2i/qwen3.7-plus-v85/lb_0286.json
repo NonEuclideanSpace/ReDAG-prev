@@ -1,0 +1,391 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, fractured light, geometric constellations, warped perspective",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal kitchen with a warped ceiling featuring looping geometric constellations and rain-streaked windows",
+   "question": "Does the image show a surreal kitchen with a warped ceiling featuring looping geometric constellations and rain-streaked windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden table",
+   "question": "Is there a weathered wooden table?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "blue vase",
+   "plural": "blue vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped blue vase",
+   "question": "Is there a chipped blue vase?",
+   "box": [
+    300,
+    450,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "rose",
+   "type": "entity",
+   "class": "red rose",
+   "plural": "red roses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red rose drooping in the vase",
+   "question": "Is there a red rose drooping in the vase?",
+   "box": [
+    320,
+    400,
+    380,
+    480
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee mug half-full of black coffee",
+   "question": "Is there a coffee mug half-full of black coffee?",
+   "box": [
+    500,
+    520,
+    600,
+    620
+   ]
+  },
+  {
+   "id": "newspaper",
+   "type": "entity",
+   "class": "newspaper",
+   "plural": "newspapers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded newspaper with smudged ink",
+   "question": "Is there a folded newspaper with smudged ink?",
+   "box": [
+    480,
+    580,
+    620,
+    650
+   ]
+  },
+  {
+   "id": "spider",
+   "type": "entity",
+   "class": "spider",
+   "plural": "spiders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny spider weaving threads of light",
+   "question": "Is there a tiny spider weaving threads of light?",
+   "box": [
+    700,
+    300,
+    750,
+    350
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "hanging cabinet",
+   "plural": "hanging cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging cabinet, askew and ajar, revealing nested drawers",
+   "question": "Is there a hanging cabinet, askew and ajar, revealing nested drawers?",
+   "box": [
+    650,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "hourglass",
+   "type": "entity",
+   "class": "hourglass",
+   "plural": "hourglasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating hourglass with sand that does not fall",
+   "question": "Is there a floating hourglass with sand that does not fall?",
+   "box": [
+    720,
+    250,
+    780,
+    350
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly hovering still in midair",
+   "question": "Is there a fly hovering still in midair?",
+   "box": [
+    671,
+    311,
+    719,
+    359
+   ]
+  },
+  {
+   "id": "rose_drooping",
+   "type": "state",
+   "of": "rose",
+   "desc": "the red rose drooping in the vase",
+   "question": "Is the red rose drooping?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam curling upward from the coffee mug",
+   "question": "Is steam curling upward from the coffee mug?"
+  },
+  {
+   "id": "newspaper_text",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the newspaper displays shifting headlines 'Tomorrow Never Arrived' and 'Yesterday Was a Mistake'",
+   "question": "Does the newspaper display shifting headlines 'Tomorrow Never Arrived' and 'Yesterday Was a Mistake'?"
+  },
+  {
+   "id": "cabinet_drawers",
+   "type": "attribute",
+   "of": "cabinet",
+   "desc": "the cabinet reveals nested drawers",
+   "question": "Does the cabinet reveal nested drawers?"
+  },
+  {
+   "id": "vase_on_table",
+   "type": "relation",
+   "of": [
+    "vase",
+    "table"
+   ],
+   "desc": "the chipped blue vase stands on the wooden table",
+   "question": "Is the chipped blue vase standing on the wooden table?"
+  },
+  {
+   "id": "mug_on_newspaper",
+   "type": "relation",
+   "of": [
+    "mug",
+    "newspaper"
+   ],
+   "desc": "the coffee mug sits on the folded newspaper",
+   "question": "Is the coffee mug sitting on the folded newspaper?"
+  },
+  {
+   "id": "newspaper_on_table",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "table"
+   ],
+   "desc": "the folded newspaper lies on the wooden table",
+   "question": "Is the folded newspaper lying on the wooden table?"
+  },
+  {
+   "id": "spider_near_cabinet",
+   "type": "relation",
+   "of": [
+    "spider",
+    "cabinet"
+   ],
+   "desc": "the spider is at the edge of the hanging cabinet",
+   "question": "Is the spider at the edge of the hanging cabinet?"
+  },
+  {
+   "id": "spider_touching_hourglass",
+   "type": "relation",
+   "of": [
+    "spider",
+    "hourglass"
+   ],
+   "desc": "the spider's legs brush against the floating hourglass",
+   "question": "Do the spider's legs brush against the floating hourglass?"
+  },
+  {
+   "id": "fly_near_spider",
+   "type": "relation",
+   "of": [
+    "fly",
+    "spider"
+   ],
+   "desc": "the fly hovers just beyond the spider's reach",
+   "question": "Does the fly hover just beyond the spider's reach?"
+  },
+  {
+   "id": "rose_dust",
+   "type": "relation",
+   "of": [
+    "rose",
+    "table"
+   ],
+   "desc": "petals of the red rose dissolving into faint wisps of dust hovering above the table",
+   "question": "Are petals of the red rose dissolving into faint wisps of dust hovering above the table?"
+  },
+  {
+   "id": "mug_resonance",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee mug emitting a low resonance and trembling slightly",
+   "question": "Is the coffee mug emitting a low resonance and trembling slightly?"
+  },
+  {
+   "id": "newspaper_photo",
+   "type": "attribute",
+   "of": "newspaper",
+   "desc": "the folded newspaper reveals a photograph of the room marred by a spider’s web",
+   "question": "Does the folded newspaper reveal a photograph of the room marred by a spider’s web?"
+  },
+  {
+   "id": "cabinet_miniature_kitchen",
+   "type": "attribute",
+   "of": "cabinet",
+   "desc": "nested drawers in the cabinet contain miniature kitchens identical to the main one",
+   "question": "Do nested drawers in the cabinet contain miniature kitchens identical to the main one?"
+  },
+  {
+   "id": "fly_mirror",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is impossibly still in midair, its wings catching sunlight like a mirror",
+   "question": "Is the fly impossibly still in midair, its wings catching sunlight like a mirror?"
+  },
+  {
+   "id": "ivy",
+   "type": "entity",
+   "class": "ivy",
+   "plural": "ivy",
+   "count": 1,
+   "count_exact": true,
+   "desc": "overgrown ivy outside the window",
+   "question": "Is there overgrown ivy visible outside the window?",
+   "box": [
+    0,
+    0,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "floorboards",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "wooden floorboards",
+   "question": "Are there wooden floorboards?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "spider_legs",
+   "type": "attribute",
+   "of": "spider",
+   "desc": "the tiny spider has eight legs",
+   "question": "Does the tiny spider have eight legs?"
+  },
+  {
+   "id": "rose_petals_dust",
+   "type": "state",
+   "of": "rose",
+   "desc": "petals of the red rose dissolving into faint wisps of dust",
+   "question": "Are petals of the red rose dissolving into faint wisps of dust?"
+  },
+  {
+   "id": "floor_shadows",
+   "type": "attribute",
+   "of": "floorboards",
+   "desc": "shadows on the floorboards ripple like liquid gold",
+   "question": "Do shadows on the floorboards ripple like liquid gold?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "newspaper",
+   "kind": "support"
+  },
+  {
+   "from": "newspaper",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0286",
+ "prompt": "In the hushed glow of an impossible morning, the weathered wooden table stands at the heart of a kitchen suspended between time and memory. Sunlight fractures through the rain-streaked window, casting fractured prism patterns onto the floorboards where shadows ripple like liquid gold. The chipped blue vase teeters slightly, as if held in place by the breath of a silent observer, its red rose drooping in slow motion, petals dissolving into faint wisps of dust that hover just above the table’s surface before being caught in the subtle vibration of a humming coffee mug. The mug, half-full of lukewarm black coffee, emits a low resonance that seems to vibrate with the pulse of the room itself, its steam curling upward into the air only to vanish at the edges of the kitchen’s warped ceiling, where reality folds into a dreamscape of looping geometric constellations. A folded newspaper lies beneath the mug, its ink smudged and bleeding, headlines flickering like a ghostly radio signal: *“Tomorrow Never Arrived,”* the words shifting to *“Yesterday Was a Mistake.”* The spider, tiny and ancient, weaves not just with silk but with fragments of light, each thread catching the sun’s rays in midair, stretching and curling as if stitching together the fabric of the room itself. It pauses at the edge of the hanging cabinet, its eight legs delicately brushing against a floating hourglass, half of which is filled with sand that never falls. The cabinet, hanging askew, is ajar, revealing a forest of nested drawers, each smaller than the last, and each containing a miniature kitchen identical to the one it hides. Inside one of the smallest, a flickering candle illuminates a miniature rose wilting in a vase smaller than a thumb, and inside that, a microscopic spider spins in endless circles. Outside, the garden is alive with paradox: overgrown ivy stretches upward through the rain-slick glass as if yearning to break through, while below the window, a reflection shows the same scene—but reversed, the rose in full bloom, the spider in retreat, and the rain falling upward. Inside the kitchen, the newspaper shifts again, revealing a photograph of the room as it once was, before time fractured—yet the image is marred by a spider’s web, as if reality itself had warned against its own return. The mug trembles slightly, as though listening to a whisper in the steam, and the table groans with the weight of centuries, not from decay but from the burden of holding so many intersecting moments in perfect, surreal balance. A fly, impossibly still in midair, hovers just beyond the spider’s reach, its wings catching the sunlight in a way that suggests it is not a fly at all, but a mirror to the spider’s silent patience. And still, the rain continues, a rhythmic pulse on the glass, a lullaby for a kitchen suspended in the liminal, where the past, present, and future are not stacked like drawers, but folded like origami, one inside the other, and all waiting for the spider to weave the final thread.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "coverage_added": 1,
+  "coverage_dropped": 8,
+  "facts_pass": {
+   "n_facts": 57,
+   "n_uncovered": 7,
+   "proposed": 10,
+   "ungrounded": 2,
+   "added": 2,
+   "dropped": 6
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,447 @@
+{
+ "style": "surreal digital painting, hazy atmosphere, dreamlike lighting, warped geometry",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a narrow alley with a cracked stone wall and a rafter above",
+   "question": "Does the image show a narrow alley with a cracked stone wall and a rafter above?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bicycle with a dulled blue frame",
+   "question": "Is there a rusted bicycle?",
+   "box": [
+    100,
+    300,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lean mangy cat with weathered parchment-colored fur",
+   "question": "Is there a lean mangy cat?",
+   "box": [
+    250,
+    450,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of old warped dusty books with cracking spines",
+   "question": "Is there a stack of old warped dusty books with cracking spines?",
+   "box": [
+    600,
+    100,
+    800,
+    250
+   ]
+  },
+  {
+   "id": "sneaker",
+   "type": "entity",
+   "class": "sneaker",
+   "plural": "sneakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down child's sneaker in the dirt with silvery hair sprouting from the toe",
+   "question": "Is there an upside-down child's sneaker in the dirt?",
+   "box": [
+    150,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vine growing sideways up the wall",
+   "question": "Is there a vine growing sideways up the wall?",
+   "box": [
+    500,
+    200,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "birdcage",
+   "type": "entity",
+   "class": "birdcage",
+   "plural": "birdcages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a birdcage swinging from a rafter",
+   "question": "Is there a birdcage swinging from a rafter?",
+   "box": [
+    400,
+    0,
+    600,
+    150
+   ]
+  },
+  {
+   "id": "hourglass",
+   "type": "entity",
+   "class": "hourglass",
+   "plural": "hourglasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked hourglass inside the birdcage with sand flowing upward",
+   "question": "Is there a cracked hourglass inside the birdcage?",
+   "box": [
+    450,
+    50,
+    550,
+    120
+   ]
+  },
+  {
+   "id": "pocket_watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch half-buried in the dirt",
+   "question": "Is there a pocket watch half-buried in the dirt?",
+   "box": [
+    120,
+    880,
+    180,
+    940
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked mirror",
+   "question": "Is there a cracked mirror?",
+   "box": [
+    50,
+    400,
+    150,
+    700
+   ]
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the rusted bicycle is leaning crookedly",
+   "question": "Is the rusted bicycle leaning crookedly?"
+  },
+  {
+   "id": "chain_dangling",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle chain is coiled and dangling",
+   "question": "Is the bicycle chain coiled?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is resting in the crook of the bicycle seat",
+   "question": "Is the cat resting in the crook of the bicycle seat?"
+  },
+  {
+   "id": "cat_one_eye_open",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat has one eye open",
+   "question": "Does the cat have one eye open?"
+  },
+  {
+   "id": "book_half_open",
+   "type": "state",
+   "of": "books",
+   "desc": "one of the books is half-open with a page fluttering",
+   "question": "Is one of the books half-open?"
+  },
+  {
+   "id": "hinges_turned",
+   "type": "state",
+   "of": "vine",
+   "desc": "the rusted hinges curled around by the vine are half-turned",
+   "question": "Are the rusted hinges curled around by the vine half-turned?"
+  },
+  {
+   "id": "watch_spinning",
+   "type": "state",
+   "of": "pocket_watch",
+   "desc": "the hands of the pocket watch are spinning counterclockwise",
+   "question": "Are the hands of the pocket watch spinning counterclockwise?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "door"
+   ],
+   "desc": "the mirror reflects a room identical to the one behind the closed door instead of the alley",
+   "question": "Does the mirror reflect a room?"
+  },
+  {
+   "id": "bicycle_against_wall",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "vine"
+   ],
+   "desc": "the rusted bicycle leans against the cracked stone wall",
+   "question": "Is the rusted bicycle leaning against the cracked stone wall?"
+  },
+  {
+   "id": "books_on_windowsill",
+   "type": "state",
+   "of": "books",
+   "desc": "the stack of books teeters on a windowsill above",
+   "question": "Is the stack of books teetering on a windowsill above?"
+  },
+  {
+   "id": "vine_on_wall",
+   "type": "state",
+   "of": "vine",
+   "desc": "the vine grows up the wall",
+   "question": "Is the vine growing up the wall?"
+  },
+  {
+   "id": "vine_around_doorknob",
+   "type": "state",
+   "of": "vine",
+   "desc": "the vine curls around a doorknob on the wall",
+   "question": "Is the vine curling around a doorknob on the wall?"
+  },
+  {
+   "id": "birdcage_from_rafter",
+   "type": "state",
+   "of": "birdcage",
+   "desc": "the birdcage swings from a rafter",
+   "question": "Is the birdcage swinging from a rafter?"
+  },
+  {
+   "id": "mirror_behind_bicycle",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "bicycle"
+   ],
+   "desc": "the mirror is behind the bicycle",
+   "question": "Is the mirror behind the bicycle?"
+  },
+  {
+   "id": "mirror_against_wall",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "vine"
+   ],
+   "desc": "the mirror leans against the wall",
+   "question": "Is the mirror leaning against the wall?"
+  },
+  {
+   "id": "watch_near_bicycle",
+   "type": "relation",
+   "of": [
+    "pocket_watch",
+    "bicycle"
+   ],
+   "desc": "the pocket watch lies near the bicycle's frame",
+   "question": "Is the pocket watch lying near the bicycle's frame?"
+  },
+  {
+   "id": "no_bird",
+   "type": "absent",
+   "desc": "a bird inside the birdcage",
+   "question": "Is there a bird inside the birdcage?"
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a windowsill above the alley",
+   "question": "Is there a windowsill above the alley?",
+   "box": [
+    200,
+    100,
+    800,
+    150
+   ]
+  },
+  {
+   "id": "cat_tail_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is twitching",
+   "question": "Is the cat's tail twitching?"
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a closed door behind the mirror's reflection",
+   "question": "Is there a closed door visible in the mirror's reflection?",
+   "box": [
+    850,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "sneaker_sole_up",
+   "type": "state",
+   "of": "sneaker",
+   "desc": "the upside-down child's sneaker has its sole facing the sky",
+   "question": "Is the sole of the upside-down child's sneaker facing the sky?"
+  },
+  {
+   "id": "doorknob_nowhere",
+   "type": "attribute",
+   "of": "vine",
+   "desc": "the doorknob curled around by the vine leads to nowhere",
+   "question": "Does the doorknob curled around by the vine lead to nowhere?"
+  },
+  {
+   "id": "bicycle_blue_frame",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a dulled blue frame",
+   "question": "Does the bicycle have a dulled blue frame?"
+  },
+  {
+   "id": "cat_fur_color",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has weathered parchment-colored fur",
+   "question": "Does the cat have weathered parchment-colored fur?"
+  },
+  {
+   "id": "sneaker_hair",
+   "type": "attribute",
+   "of": "sneaker",
+   "desc": "the sneaker has silvery hair sprouting from the toe",
+   "question": "Does the sneaker have silvery hair sprouting from the toe?"
+  },
+  {
+   "id": "hourglass_sand_up",
+   "type": "state",
+   "of": "hourglass",
+   "desc": "the hourglass has sand flowing upward",
+   "question": "Is the sand in the hourglass flowing upward?"
+  },
+  {
+   "id": "chain_dangling_state",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle chain is dangling",
+   "question": "Is the bicycle chain dangling?"
+  },
+  {
+   "id": "book_page_fluttering",
+   "type": "state",
+   "of": "books",
+   "desc": "a page of one book is fluttering",
+   "question": "Is a page of one book fluttering?"
+  },
+  {
+   "id": "mirror_reflects_room_not_alley",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror reflects a room instead of the alley",
+   "question": "Does the mirror reflect a room instead of the alley?"
+  },
+  {
+   "id": "reflected_room_identical_to_door_room",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "door"
+   ],
+   "desc": "the room in the mirror is identical to the room behind the closed door",
+   "question": "Is the room in the mirror identical to the room behind the closed door?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "books",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0191",
+ "prompt": "In the hazy warmth of an unnameable hour, a rusted bicycle leans crookedly against a cracked stone wall, its once-brilliant blue frame dulled to a ghostly hue, the chain dangled like a broken promise, coiled and dangling in slow motion as if suspended by invisible strings. A cat—lean and mangy, with fur like weathered parchment—rests in the crook of the seat, tail twitching with the kind of dreams only forgotten places understand. The sun slants low, casting long shadows that stretch across the narrow alley, warping the geometry of the scene into something subtly off, like a memory trying to correct itself. A stack of old books teeters on a windowsill above, each volume warped and dusted, their spines cracking like dried skin, one of them half-open, a page fluttering in the breeze like a trapped bird. But the breeze is no breeze—it’s the breath of a boy who had run past, his child’s sneaker now upside-down in the dirt, sole facing the sky, as if abandoned mid-step, as if he never truly left. The sneaker, though empty, seems to breathe, contracting and expanding with the rhythm of a heart that is not there, or perhaps the rhythm of something deeper in the earth. \n\nA vine grows up the wall, not toward the sun, but sideways, as if seeking out the books, curling around a doorknob that leads to nowhere—its rusted hinges already half-turned, as if something once tried to pass through. The wall itself is cracked, not from age, but from pressure, like it’s being held in by some unseen force, like the alley is a threshold, a membrane between worlds. Above, a birdcage swings from a rafter, but it holds no bird—only a single hourglass, glass cracked and grains of sand flowing upward in a slow, hypnotic spiral, as if time is not passing, but unraveling. \n\nNear the bicycle’s frame, a pocket watch lies half-buried in the dirt, its hands spinning counterclockwise, ticking with a soft, mournful chime that only the cat seems to hear, as it opens one eye and flicks its tail in time. The books, fluttering in the breeze, do not flutter naturally—they are being turned by a hand that does not belong to any person, as if the alley itself is reading them, or being read by them. The child’s sneaker, still breathing, has begun to sprout hair from its toe—thin, silvery strands that catch the sunlight like glass fibers, humming faintly. \n\nIn the corner, behind the bicycle, a mirror leans precariously against the wall, its surface marred by cracks, but within the reflection is not the alley, but a room identical to the one behind the closed door. The cat stretches and leaps, but when it lands, it lands not on the seat, but on the ground in the mirror’s room, as if the alley and the reflection are two sides of the same coin. \n\nAnd still the hourglass turns, the sneaker breathes, the books whisper, and the bicycle remains still—though it does not look like it belongs there, as if it was borrowed from another scene and has not yet returned it.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 42,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

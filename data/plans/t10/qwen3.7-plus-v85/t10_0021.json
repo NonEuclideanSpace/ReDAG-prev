@@ -1,0 +1,410 @@
+{
+ "style": "pencil sketch with light watercolor wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market at dawn with a stone wall",
+   "question": "Does the image depict a village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman wearing a blue shawl?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    280,
+    500,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright orange pumpkins",
+   "question": "Are there bright orange pumpkins?",
+   "box": [
+    290,
+    480,
+    440,
+    650
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy wearing a striped shirt?",
+   "box": [
+    400,
+    400,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    580,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "mat",
+   "type": "entity",
+   "class": "woven mat",
+   "plural": "woven mats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woven mat",
+   "question": "Is there a woven mat?",
+   "box": [
+    570,
+    780,
+    760,
+    880
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a wide-brimmed hat",
+   "question": "Is there a man wearing a wide-brimmed hat?",
+   "box": [
+    750,
+    250,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "sacks",
+   "type": "entity",
+   "class": "burlap sack",
+   "plural": "burlap sacks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of burlap sacks",
+   "question": "Is there a stack of burlap sacks?",
+   "box": [
+    850,
+    500,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "rooster",
+   "type": "entity",
+   "class": "rooster",
+   "plural": "roosters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooster",
+   "question": "Is there a rooster?",
+   "box": [
+    880,
+    450,
+    980,
+    550
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    700,
+    300,
+    850,
+    600
+   ]
+  },
+  {
+   "id": "woman_handing_coin",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "boy"
+   ],
+   "desc": "the elderly woman hands a small coin to the young boy",
+   "question": "Is the elderly woman handing a small coin to the young boy?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy reaches up eagerly",
+   "question": "Is the young boy reaching up eagerly?"
+  },
+  {
+   "id": "woman_beside_crate",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "crate"
+   ],
+   "desc": "the elderly woman stands beside the wooden crate",
+   "question": "Is the elderly woman standing beside the wooden crate?"
+  },
+  {
+   "id": "pumpkins_in_crate",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "crate"
+   ],
+   "desc": "the pumpkins are overflowing from the wooden crate",
+   "question": "Are the pumpkins overflowing from the wooden crate?"
+  },
+  {
+   "id": "boy_next_to_cat",
+   "type": "relation",
+   "of": [
+    "boy",
+    "cat"
+   ],
+   "desc": "the young boy is next to the spotted cat",
+   "question": "Is the young boy next to the spotted cat?"
+  },
+  {
+   "id": "cat_on_mat",
+   "type": "relation",
+   "of": [
+    "cat",
+    "mat"
+   ],
+   "desc": "the spotted cat sits on the woven mat",
+   "question": "Is the spotted cat sitting on the woven mat?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat watches with half-closed eyes",
+   "question": "Is the spotted cat watching with half-closed eyes?"
+  },
+  {
+   "id": "farmer_leaning_sacks",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "sacks"
+   ],
+   "desc": "the farmer leans against the stack of burlap sacks",
+   "question": "Is the farmer leaning against the stack of burlap sacks?"
+  },
+  {
+   "id": "farmer_looking_rooster",
+   "type": "action",
+   "of": [
+    "farmer",
+    "rooster"
+   ],
+   "desc": "the farmer looks at the rooster",
+   "question": "Is the farmer looking at the rooster?"
+  },
+  {
+   "id": "rooster_on_sacks",
+   "type": "relation",
+   "of": [
+    "rooster",
+    "sacks"
+   ],
+   "desc": "the rooster is perched atop the highest sack",
+   "question": "Is the rooster perched atop the highest sack?"
+  },
+  {
+   "id": "rooster_stretching",
+   "type": "state",
+   "of": "rooster",
+   "desc": "the rooster stretches its neck toward the rising sun",
+   "question": "Is the rooster stretching its neck toward the rising sun?"
+  },
+  {
+   "id": "bicycle_behind_farmer",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "farmer"
+   ],
+   "desc": "the bicycle is behind the farmer",
+   "question": "Is the bicycle behind the farmer?"
+  },
+  {
+   "id": "no_modern_tech",
+   "type": "absent",
+   "desc": "modern technology",
+   "question": "Is there any modern technology visible in the image?"
+  },
+  {
+   "id": "elderly_woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a blue shawl stands",
+   "question": "Is the elderly woman in a blue shawl standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat sits calmly",
+   "question": "Is the spotted cat sitting calmly?"
+  },
+  {
+   "id": "farmer_relaxed",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a wide-brimmed hat has a relaxed posture",
+   "question": "Does the farmer in a wide-brimmed hat have a relaxed posture?"
+  },
+  {
+   "id": "bicycle_dusty",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the wheels of the bicycle are slightly dusty",
+   "question": "Are the wheels of the bicycle slightly dusty?"
+  },
+  {
+   "id": "stone_wall",
+   "type": "entity",
+   "class": "stone wall",
+   "plural": "stone walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone wall",
+   "question": "Is there a stone wall?",
+   "box": [
+    750,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "rooster_comb",
+   "type": "attribute",
+   "of": "rooster",
+   "desc": "the rooster has a vibrant red comb",
+   "question": "Does the rooster have a vibrant red comb?"
+  },
+  {
+   "id": "bicycle_against_wall",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "stone_wall"
+   ],
+   "desc": "the bicycle rests against the stone wall",
+   "question": "Does the bicycle rest against the stone wall?"
+  },
+  {
+   "id": "bicycle_basket",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a wicker basket",
+   "question": "Does the bicycle have a wicker basket?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "pumpkins",
+   "kind": "support"
+  },
+  {
+   "from": "mat",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "sacks",
+   "to": "rooster",
+   "kind": "support"
+  },
+  {
+   "from": "stone_wall",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0021",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet village market at dawn. On the left, an elderly woman in a blue shawl stands beside a wooden crate overflowing with bright orange pumpkins. She is handing a small coin to a young boy in a striped shirt who reaches up eagerly from the center foreground. Next to the boy, a spotted cat sits calmly on a woven mat, watching the exchange with half-closed eyes. To the right, a farmer in a wide-brimmed hat leans against a stack of burlap sacks, his posture relaxed as he looks at a rooster perched atop the highest sack. The rooster, with its vibrant red comb, stretches its neck toward the rising sun. Behind the farmer, a bicycle with a wicker basket rests against a stone wall, its wheels slightly dusty from the morning dew. There is no modern technology visible in this timeless setting. The soft graphite lines define the textures of the rough sacks and smooth pumpkins, while faint watercolor touches bring warmth to the skin tones and produce hues. The interaction between the woman and the boy anchors the composition, creating a gentle narrative of daily trade. The cat remains still, a silent observer amidst the waking activity. The farmer’s gaze connects him to the rooster, suggesting a shared routine. The bicycle adds a touch of rustic utility without dominating the frame. Each element is distinct yet harmoniously blended into the early morning atmosphere, where shadows are long and the air feels crisp and fresh.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

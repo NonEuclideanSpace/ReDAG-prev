@@ -1,0 +1,447 @@
+{
+ "style": "surreal photorealistic, dreamlike lighting, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sun-dappled riverbank with a river",
+   "question": "Does the image show a sun-dappled riverbank with a river?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sun-warmed rock",
+   "question": "Is there a sun-warmed rock?",
+   "box": [
+    750,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    780,
+    550,
+    920,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden crate",
+   "question": "Is there a weathered wooden crate?",
+   "box": [
+    100,
+    400,
+    400,
+    650
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tools",
+   "plural": "tools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hammers, chisels and a screwdriver",
+   "question": "Are there hammers, chisels and a screwdriver?",
+   "box": [
+    150,
+    300,
+    350,
+    500
+   ]
+  },
+  {
+   "id": "wagon",
+   "type": "entity",
+   "class": "wagon",
+   "plural": "wagons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small red wagon",
+   "question": "Is there a small red wagon?",
+   "box": [
+    450,
+    500,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "clay_canvas",
+   "type": "entity",
+   "class": "clay and canvas",
+   "plural": "clay and canvas",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a heap of damp clay and a tightly rolled canvas",
+   "question": "Is there a heap of damp clay?",
+   "box": [
+    500,
+    520,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "cat_state",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat watches with unreadable eyes",
+   "question": "Is the cat watching?"
+  },
+  {
+   "id": "crate_state",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate is open",
+   "question": "Is the wooden crate open?"
+  },
+  {
+   "id": "tools_hovering",
+   "type": "state",
+   "of": "tools",
+   "desc": "the tools are hovering in midair in a rotating constellation",
+   "question": "Are the tools hovering in midair in a rotating constellation?"
+  },
+  {
+   "id": "wagon_tilted",
+   "type": "state",
+   "of": "wagon",
+   "desc": "the red wagon is tilted perilously",
+   "question": "Is the red wagon tilted perilously?"
+  },
+  {
+   "id": "clay_rising",
+   "type": "state",
+   "of": "clay_canvas",
+   "desc": "the damp clay is rising like smoke forming half-shapes",
+   "question": "Is the damp clay rising like smoke forming half-shapes?"
+  },
+  {
+   "id": "canvas_unrolled",
+   "type": "state",
+   "of": "clay_canvas",
+   "desc": "the canvas is unrolled revealing a painted landscape",
+   "question": "Is the canvas unrolled revealing a painted landscape?"
+  },
+  {
+   "id": "cat_on_rock",
+   "type": "relation",
+   "of": [
+    "cat",
+    "rock"
+   ],
+   "desc": "the cat is on the sun-warmed rock",
+   "question": "Is the cat on the sun-warmed rock?"
+  },
+  {
+   "id": "wagon_beside_crate",
+   "type": "relation",
+   "of": [
+    "wagon",
+    "crate"
+   ],
+   "desc": "the red wagon is beside the wooden crate",
+   "question": "Is the red wagon beside the wooden crate?"
+  },
+  {
+   "id": "wagon_wheels_submerged",
+   "type": "state",
+   "of": "wagon",
+   "desc": "the wagon's wheels are half-submerged in the river's silt",
+   "question": "Are the wagon's wheels half-submerged in the river's silt?"
+  },
+  {
+   "id": "roots_gripping_wagon",
+   "type": "state",
+   "of": "wagon",
+   "desc": "gnarled roots are gripping the wagon",
+   "question": "Are gnarled roots gripping the wagon?"
+  },
+  {
+   "id": "tools_in_crate",
+   "type": "relation",
+   "of": [
+    "tools",
+    "crate"
+   ],
+   "desc": "the tools are spilling from the wooden crate",
+   "question": "Are the tools spilling from the wooden crate?"
+  },
+  {
+   "id": "clay_canvas_in_wagon",
+   "type": "relation",
+   "of": [
+    "clay_canvas",
+    "wagon"
+   ],
+   "desc": "the clay and canvas are in the red wagon",
+   "question": "Are the clay and canvas in the red wagon?"
+  },
+  {
+   "id": "reflection_cat",
+   "type": "entity",
+   "class": "cat reflection",
+   "plural": "cat reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflection of the cat in the water",
+   "question": "Is there a reflection of the cat in the water?",
+   "box": [
+    780,
+    800,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "reflection_moving",
+   "type": "state",
+   "of": "reflection_cat",
+   "desc": "the cat's reflection is moving its paws as if walking an invisible path",
+   "question": "Is the cat's reflection moving its paws as if walking an invisible path?"
+  },
+  {
+   "id": "reeds",
+   "type": "entity",
+   "class": "reed",
+   "plural": "reeds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tall reeds lining the water's edge",
+   "question": "Are there tall reeds lining the water's edge?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "roots",
+   "type": "entity",
+   "class": "root",
+   "plural": "roots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "gnarled roots",
+   "question": "Are there gnarled roots?",
+   "box": [
+    500,
+    700,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "reeds_swaying",
+   "type": "state",
+   "of": "reeds",
+   "desc": "the tall reeds are swaying",
+   "question": "Are the tall reeds swaying?"
+  },
+  {
+   "id": "reflection_cat_relation",
+   "type": "relation",
+   "of": [
+    "cat",
+    "reflection_cat"
+   ],
+   "desc": "the cat's reflection is in the water below the cat",
+   "question": "Is the cat's reflection located in the water below the cat?"
+  },
+  {
+   "id": "chisel_glancing",
+   "type": "action",
+   "of": [
+    "tools",
+    "reflection_cat"
+   ],
+   "desc": "a stray chisel from the hovering tools glances off the surface of the water where the reflection is",
+   "question": "Does a stray chisel from the hovering tools glance off the water surface near the cat's reflection?"
+  },
+  {
+   "id": "subsurface_current",
+   "type": "entity",
+   "class": "water current",
+   "plural": "water currents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowed current of mirrored water beneath the surface",
+   "question": "Is there a shadowed current of mirrored water beneath the surface?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tools_silhouettes",
+   "type": "state",
+   "of": "tools",
+   "desc": "the tools appear as silhouettes",
+   "question": "Do the tools appear as silhouettes?"
+  },
+  {
+   "id": "wagon_rocking",
+   "type": "state",
+   "of": "wagon",
+   "desc": "the red wagon is rocking",
+   "question": "Is the red wagon rocking?"
+  },
+  {
+   "id": "wagon_wheels_shifting",
+   "type": "state",
+   "of": "wagon",
+   "desc": "the wagon's wheels are shifting subtly",
+   "question": "Are the wagon's wheels shifting subtly?"
+  },
+  {
+   "id": "current_direction",
+   "type": "attribute",
+   "of": "subsurface_current",
+   "desc": "the shadowed current runs in the opposite direction to the surface river",
+   "question": "Does the shadowed current run in the opposite direction to the surface river?"
+  },
+  {
+   "id": "crate_seams",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the wooden crate has splintered seams glowing with amber patina",
+   "question": "Does the wooden crate have splintered seams glowing with amber patina?"
+  },
+  {
+   "id": "hammer_handles",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the hammers have handles that are split and re-knotted",
+   "question": "Do the hammers have handles that are split and re-knotted?"
+  },
+  {
+   "id": "chisel_points",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the chisels are worn down to jagged points",
+   "question": "Are the chisels worn down to jagged points?"
+  },
+  {
+   "id": "screwdriver_rusted",
+   "type": "attribute",
+   "of": "tools",
+   "desc": "the screwdriver is rusted",
+   "question": "Is the screwdriver rusted?"
+  },
+  {
+   "id": "reflection_sync",
+   "type": "relation",
+   "of": [
+    "reflection_cat",
+    "cat"
+   ],
+   "desc": "the cat's reflection is slightly out of sync with the cat",
+   "question": "Is the cat's reflection slightly out of sync with the cat?"
+  },
+  {
+   "id": "canvas_entity",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tightly rolled canvas",
+   "question": "Is there a tightly rolled canvas?",
+   "box": [
+    680,
+    720,
+    880,
+    830
+   ]
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has unreadable eyes",
+   "question": "Does the cat have unreadable eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "rock",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "tools",
+   "kind": "support"
+  },
+  {
+   "from": "wagon",
+   "to": "clay_canvas",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0209",
+ "prompt": "On the sun-dappled riverbank, the weathered wooden crate creaks open, its splintered seams glowing with the amber patina of age, as if it has weathered not only the seasons but also the passage of forgotten travelers. Tools spill from its depths—hammers with handles split and re-knotted, chisels worn down to jagged points, and a rusted screwdriver that seems to hum faintly with the resonance of a hundred unfinished projects. Beside the crate, the small red wagon, tilted perilously into the water’s edge, balances on the threshold of utility and ruin. Its wheels are half-submerged in the river’s silt, muddied and gripped by gnarled roots that have crept in like patient hands, holding it in a strange, liminal stillness. The wagon’s contents—a heap of damp clay and a tightly rolled canvas—shift and breathe as if alive, the clay oozing like liquid memory and the canvas, when unrolled in a flicker of thought, revealing a painted landscape that is both the same place and entirely elsewhere. A breeze, thin and silver as river mist, ruffles the tall reeds that line the water’s edge, but here the air does not simply move—it tugs at the tools in the crate, lifting hammers and chisels into midair, where they hover in a slow, rotating constellation before gently settling back, their descent choreographed by the unseen hand of the wind itself. On a sun-warmed rock, a cat watches this with unreadable eyes, its tail a pendulum of curiosity and caution. But the cat is not alone; its reflection, caught in the still water below, does not merely mirror it—it is slightly out of sync, moving first one paw forward then another in the water as if walking an invisible path only the cat can see. The reeds, swaying with the wind, also sway against a second river running in the opposite direction beneath the surface, a shadowed current of mirrored water that only becomes visible when a stray chisel, caught mid-sway in the breeze, glances off the surface at just the right angle. In this instant, the world splits: the tools in the crate seem to dissolve into silhouettes, while the cat’s reflection begins to step into the real, its doppelgänger on the water moving with deliberate intent. The wagon rocks, its wheels shifting subtly as if responding to this ripple in reality, the damp clay beginning to rise like smoke from the water, forming half-shapes of statues and broken bridges before dissolving again. And yet, all this occurs in perfect balance—no collision, no collapse—only a delicate, surreal interplay of objects in a world where form and motion are verbs, not nouns, and where the river does not flow forward, but sideways, backward, and all directions at once.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 40,
+   "n_uncovered": 6,
+   "proposed": 6,
+   "ungrounded": 1,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

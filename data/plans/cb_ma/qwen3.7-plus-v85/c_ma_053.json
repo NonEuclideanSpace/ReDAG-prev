@@ -1,0 +1,208 @@
+{
+ "style": "photorealistic close-up, high detail, macro photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty surface serving as a table",
+   "question": "Is there a dusty surface serving as a table?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open music box with a dark wood case",
+   "question": "Is there an open music box?",
+   "box": [
+    200,
+    200,
+    824,
+    824
+   ]
+  },
+  {
+   "id": "ballerina",
+   "type": "entity",
+   "class": "figurine",
+   "plural": "figurines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked ceramic ballerina figurine",
+   "question": "Is there a cracked ceramic ballerina figurine?",
+   "box": [
+    450,
+    400,
+    574,
+    600
+   ]
+  },
+  {
+   "id": "comb",
+   "type": "entity",
+   "class": "musical comb",
+   "plural": "musical combs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rotating musical comb",
+   "question": "Is there a rotating musical comb?",
+   "box": [
+    300,
+    500,
+    724,
+    650
+   ]
+  },
+  {
+   "id": "box_paint",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "peeling white paint revealing a faded floral pattern on the lid",
+   "question": "Does the music box have peeling white paint revealing a faded floral pattern on the lid?"
+  },
+  {
+   "id": "box_hinges",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "rusted brass hinges and clasps",
+   "question": "Does the music box have rusted brass hinges and clasps?"
+  },
+  {
+   "id": "box_interior",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "torn red velvet interior lining",
+   "question": "Is the interior of the music box lined with torn red velvet?"
+  },
+  {
+   "id": "box_dust",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "layer of dust and cobwebs covering the box",
+   "question": "Is the music box covered in a layer of dust and cobwebs?"
+  },
+  {
+   "id": "box_key",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "bent tarnished brass winding key attached to the side",
+   "question": "Is there a bent tarnished brass winding key attached to the side of the music box?"
+  },
+  {
+   "id": "comb_teeth",
+   "type": "attribute",
+   "of": "comb",
+   "desc": "some visibly broken teeth on the musical comb",
+   "question": "Does the musical comb have some visibly broken teeth?"
+  },
+  {
+   "id": "box_on_table",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the music box is on the dusty table",
+   "question": "Is the music box on the dusty table?"
+  },
+  {
+   "id": "ballerina_inside_box",
+   "type": "relation",
+   "of": [
+    "ballerina",
+    "music_box"
+   ],
+   "desc": "the ballerina figurine is inside the music box",
+   "question": "Is the ballerina figurine inside the music box?"
+  },
+  {
+   "id": "comb_inside_box",
+   "type": "relation",
+   "of": [
+    "comb",
+    "music_box"
+   ],
+   "desc": "the musical comb is inside the music box",
+   "question": "Is the musical comb inside the music box?"
+  },
+  {
+   "id": "ballerina_frozen",
+   "type": "state",
+   "of": "ballerina",
+   "desc": "the ballerina figurine is frozen mid-spin",
+   "question": "Is the ballerina figurine frozen mid-spin?"
+  },
+  {
+   "id": "ballerina_not_plastic",
+   "type": "absent",
+   "desc": "plastic material on the ballerina figurine",
+   "question": "Is the ballerina figurine made of plastic?"
+  },
+  {
+   "id": "box_not_closed",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the music box is not closed",
+   "question": "Is the music box open (not closed)?"
+  },
+  {
+   "id": "box_not_new",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the music box appears old and abandoned, not new",
+   "question": "Does the music box appear old and abandoned rather than new?"
+  },
+  {
+   "id": "box_not_playing",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the music box is not playing music",
+   "question": "Is the music box silent (not playing music)?"
+  },
+  {
+   "id": "box_wood",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "the music box case is made of dark wood",
+   "question": "Is the music box case made of dark wood?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "music_box",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_053",
+ "prompt": "A single, abandoned, open music box on a dusty table. Its case is made of dark wood, with peeling white paint that reveals a faded, painted floral pattern on the lid. All the small metal hinges and clasps are made of rusted brass. Inside, a single, cracked ceramic ballerina figurine is frozen mid-spin. The rotating musical comb has some of its teeth visibly broken. A bent, tarnished brass winding key is still attached to its side. The interior is lined with torn, red velvet. The entire box is covered in a layer of dust and a few cobwebs. Importantly, the music box is not closed, it is not new, it is not playing music, and the ballerina figurine is not made of plastic.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

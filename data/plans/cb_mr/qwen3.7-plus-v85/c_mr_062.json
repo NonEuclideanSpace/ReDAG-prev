@@ -1,0 +1,362 @@
+{
+ "style": "photorealistic still life",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background for a fruit arrangement",
+   "question": "Is the background neutral and suitable for a fruit arrangement?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "wicker basket",
+   "plural": "wicker baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker basket",
+   "question": "Is there a wicker basket?",
+   "box": [
+    200,
+    300,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three shiny red apples",
+   "question": "Are there three apples?",
+   "box": [
+    300,
+    400,
+    724,
+    700
+   ]
+  },
+  {
+   "id": "pear",
+   "type": "entity",
+   "class": "pear",
+   "plural": "pears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green pear",
+   "question": "Is there a green pear?",
+   "box": [
+    450,
+    450,
+    574,
+    650
+   ]
+  },
+  {
+   "id": "banana",
+   "type": "entity",
+   "class": "banana",
+   "plural": "bananas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a curved banana",
+   "question": "Is there a banana?",
+   "box": [
+    400,
+    350,
+    624,
+    550
+   ]
+  },
+  {
+   "id": "blueberries",
+   "type": "entity",
+   "class": "blueberry",
+   "plural": "blueberries",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a cluster of six blueberries",
+   "question": "Is there a cluster of six blueberries?",
+   "box": [
+    650,
+    500,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "strawberries",
+   "type": "entity",
+   "class": "strawberry",
+   "plural": "strawberries",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four strawberries",
+   "question": "Are there four strawberries?",
+   "box": [
+    250,
+    550,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "grapes",
+   "type": "entity",
+   "class": "grape",
+   "plural": "grapes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bunch of purple grapes",
+   "question": "Is there a bunch of grapes?",
+   "box": [
+    420,
+    250,
+    580,
+    400
+   ]
+  },
+  {
+   "id": "watermelon",
+   "type": "entity",
+   "class": "watermelon slice",
+   "plural": "watermelon slices",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slice of watermelon",
+   "question": "Is there a slice of watermelon?",
+   "box": [
+    380,
+    420,
+    640,
+    520
+   ]
+  },
+  {
+   "id": "kiwi",
+   "type": "entity",
+   "class": "kiwi",
+   "plural": "kiwis",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kiwi cut in half",
+   "question": "Is there a kiwi?",
+   "box": [
+    680,
+    520,
+    780,
+    620
+   ]
+  },
+  {
+   "id": "fruit_in_basket",
+   "type": "relation",
+   "of": [
+    "apples",
+    "basket"
+   ],
+   "desc": "the apples are in the wicker basket",
+   "question": "Are the apples in the wicker basket?"
+  },
+  {
+   "id": "pear_between_apples",
+   "type": "relation",
+   "of": [
+    "pear",
+    "apples"
+   ],
+   "desc": "the green pear is positioned between two of the apples",
+   "question": "Is the green pear positioned between two of the apples?"
+  },
+  {
+   "id": "banana_around_pear",
+   "type": "relation",
+   "of": [
+    "banana",
+    "pear"
+   ],
+   "desc": "the banana is curved around the green pear",
+   "question": "Is the banana curved around the green pear?"
+  },
+  {
+   "id": "grapes_over_banana",
+   "type": "relation",
+   "of": [
+    "grapes",
+    "banana"
+   ],
+   "desc": "the bunch of purple grapes hangs over the banana",
+   "question": "Does the bunch of purple grapes hang over the banana?"
+  },
+  {
+   "id": "watermelon_under_grapes",
+   "type": "relation",
+   "of": [
+    "watermelon",
+    "grapes"
+   ],
+   "desc": "the watermelon slice is under the bunch of grapes",
+   "question": "Is the watermelon slice under the bunch of grapes?"
+  },
+  {
+   "id": "kiwi_beside_blueberries",
+   "type": "relation",
+   "of": [
+    "kiwi",
+    "blueberries"
+   ],
+   "desc": "the kiwi half is beside the blueberries",
+   "question": "Is the kiwi half beside the blueberries?"
+  },
+  {
+   "id": "apple_leaning_pear",
+   "type": "relation",
+   "of": [
+    "apples",
+    "pear"
+   ],
+   "desc": "one of the apples is leaning against the pear",
+   "question": "Is one of the apples leaning against the pear?"
+  },
+  {
+   "id": "grapes_touching_banana",
+   "type": "relation",
+   "of": [
+    "grapes",
+    "banana"
+   ],
+   "desc": "the grapes are touching the banana",
+   "question": "Are the grapes touching the banana?"
+  },
+  {
+   "id": "apples_shiny_red",
+   "type": "attribute",
+   "of": "apples",
+   "desc": "the apples are shiny and red",
+   "question": "Are the apples shiny and red?"
+  },
+  {
+   "id": "grapes_purple",
+   "type": "attribute",
+   "of": "grapes",
+   "desc": "the grapes are purple",
+   "question": "Are the grapes purple?"
+  },
+  {
+   "id": "kiwi_cut",
+   "type": "state",
+   "of": "kiwi",
+   "desc": "the kiwi is cut in half",
+   "question": "Is the kiwi cut in half?"
+  },
+  {
+   "id": "banana_longer_than_pear",
+   "type": "relation",
+   "of": [
+    "banana",
+    "pear"
+   ],
+   "desc": "the banana is longer than the pear",
+   "question": "Is the banana longer than the pear?"
+  },
+  {
+   "id": "watermelon_wider_than_grapes",
+   "type": "relation",
+   "of": [
+    "watermelon",
+    "grapes"
+   ],
+   "desc": "the watermelon slice is wider than the bunch of grapes",
+   "question": "Is the watermelon slice wider than the bunch of grapes?"
+  },
+  {
+   "id": "banana_curved",
+   "type": "state",
+   "of": "banana",
+   "desc": "the banana is curved",
+   "question": "Is the banana curved?"
+  },
+  {
+   "id": "watermelon_wide",
+   "type": "attribute",
+   "of": "watermelon",
+   "desc": "the watermelon slice is wide",
+   "question": "Is the watermelon slice wide?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "basket",
+   "to": "apples",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "pear",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "banana",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "blueberries",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "strawberries",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "kiwi",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "grapes",
+   "kind": "support"
+  },
+  {
+   "from": "basket",
+   "to": "watermelon",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_062",
+ "prompt": "A fruit arrangement in a wicker basket. The basket holds three shiny red apples. A green pear is positioned between two of the apples. A banana, which is longer than the pear, is curved around it. There is also a cluster of blueberries, and their number is double the number of apples. Also in the basket are some strawberries, and their number is two less than the number of blueberries. A bunch of purple grapes hangs over the banana. A slice of watermelon is under the grapes, and the watermelon slice is wider than the bunch of grapes. A kiwi, cut in half, is beside the blueberries. One of the apples is leaning against the pear, and the grapes are touching the banana.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 2,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

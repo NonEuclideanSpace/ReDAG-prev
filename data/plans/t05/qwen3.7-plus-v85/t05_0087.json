@@ -1,0 +1,331 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand and a net",
+   "question": "Does the image show a beach volleyball court?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    300,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in black shorts",
+   "question": "Is there a man in black shorts?",
+   "box": [
+    380,
+    100,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball",
+   "question": "Is there a volleyball?",
+   "box": [
+    550,
+    50,
+    650,
+    150
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    700,
+    250,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a yellow hat",
+   "question": "Is there a spectator in a yellow hat?",
+   "box": [
+    850,
+    500,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cooler",
+   "question": "Is there a cooler?",
+   "box": [
+    860,
+    700,
+    990,
+    950
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white seagull",
+   "question": "Is there a white seagull?",
+   "box": [
+    680,
+    350,
+    750,
+    420
+   ]
+  },
+  {
+   "id": "net_post",
+   "type": "entity",
+   "class": "net post",
+   "plural": "net posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a net post",
+   "question": "Is there a net post?",
+   "box": [
+    650,
+    200,
+    720,
+    900
+   ]
+  },
+  {
+   "id": "woman_knees_bent",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue bikini has her knees bent",
+   "question": "Does the woman in the blue bikini have her knees bent?"
+  },
+  {
+   "id": "man_jumping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in black shorts is jumping high",
+   "question": "Is the man in black shorts jumping high?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt is watching intently",
+   "question": "Is the referee in the striped shirt watching intently?"
+  },
+  {
+   "id": "spectator_sitting",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in the yellow hat is sitting",
+   "question": "Is the spectator in the yellow hat sitting?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue bikini is looking at the man in black shorts",
+   "question": "Is the woman in the blue bikini looking at the man in black shorts?"
+  },
+  {
+   "id": "man_reaching_for_ball",
+   "type": "action",
+   "of": [
+    "man",
+    "volleyball"
+   ],
+   "desc": "the man in black shorts is reaching for the volleyball",
+   "question": "Is the man in black shorts reaching for the volleyball?"
+  },
+  {
+   "id": "spectator_on_cooler",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "cooler"
+   ],
+   "desc": "the spectator in the yellow hat sits on the cooler",
+   "question": "Is the spectator in the yellow hat sitting on the cooler?"
+  },
+  {
+   "id": "spectator_next_to_referee",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "referee"
+   ],
+   "desc": "the spectator in the yellow hat is next to the referee in the striped shirt",
+   "question": "Is the spectator in the yellow hat next to the referee in the striped shirt?"
+  },
+  {
+   "id": "seagull_on_post",
+   "type": "relation",
+   "of": [
+    "seagull",
+    "net_post"
+   ],
+   "desc": "the white seagull perches on the net post",
+   "question": "Is the white seagull perching on the net post?"
+  },
+  {
+   "id": "no_scoreboard",
+   "type": "absent",
+   "desc": "a scoreboard",
+   "question": "Is there a scoreboard visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue bikini stands",
+   "question": "Is the woman in the blue bikini standing?"
+  },
+  {
+   "id": "sand",
+   "type": "entity",
+   "class": "sand",
+   "plural": "sand",
+   "count": 1,
+   "count_exact": true,
+   "desc": "sand on the court",
+   "question": "Is there sand on the court?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "cooler",
+   "to": "spectator",
+   "kind": "support"
+  },
+  {
+   "from": "net_post",
+   "to": "seagull",
+   "kind": "support"
+  },
+  {
+   "from": "sand",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "sand",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "sand",
+   "to": "referee",
+   "kind": "support"
+  },
+  {
+   "from": "sand",
+   "to": "spectator",
+   "kind": "support"
+  },
+  {
+   "from": "sand",
+   "to": "cooler",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0087",
+ "prompt": "A photorealistic photo captures a tense moment at a beach volleyball tournament. On the left, a woman in a blue bikini stands ready with knees bent. In the center, a man in black shorts jumps high to spike the ball. To the right, a referee in a striped shirt watches intently. Next to the referee, a spectator in a yellow hat sits on a cooler. A white seagull perches on the net post nearby. The woman in the blue bikini is looking at the jumping man. The man in black shorts is reaching for the volleyball. There is no scoreboard visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

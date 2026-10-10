@@ -1,0 +1,304 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    50,
+    600,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "fountain",
+   "plural": "fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall stone fountain",
+   "question": "Is there a tall stone fountain?",
+   "box": [
+    450,
+    300,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    260,
+    650,
+    380,
+    780
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    380,
+    400,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a gray scarf",
+   "question": "Is there an old man in a gray scarf?",
+   "box": [
+    700,
+    350,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "woman_cup",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a cup",
+   "question": "Is the woman in a blue coat holding a cup?"
+  },
+  {
+   "id": "woman_pastry",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small pastry",
+   "question": "Is the woman in a blue coat holding a small pastry?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is pointing",
+   "question": "Is the child in a yellow hat pointing?"
+  },
+  {
+   "id": "man_smiling",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in a gray scarf is smiling",
+   "question": "Is the old man in a gray scarf smiling?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying asleep",
+   "question": "Is the brown dog lying asleep?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in a blue coat stands next to the wooden bench",
+   "question": "Is the woman in a blue coat standing next to the wooden bench?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat sits on the wooden bench",
+   "question": "Is the black cat sitting on the wooden bench?"
+  },
+  {
+   "id": "child_next_to_fountain",
+   "type": "relation",
+   "of": [
+    "child",
+    "fountain"
+   ],
+   "desc": "the child in a yellow hat stands next to the tall stone fountain",
+   "question": "Is the child in a yellow hat standing next to the tall stone fountain?"
+  },
+  {
+   "id": "child_points_at_fountain",
+   "type": "action",
+   "of": [
+    "child",
+    "fountain"
+   ],
+   "desc": "the child in a yellow hat points at the tall stone fountain",
+   "question": "Is the child in a yellow hat pointing at the tall stone fountain?"
+  },
+  {
+   "id": "man_right_of_fountain",
+   "type": "relation",
+   "of": [
+    "man",
+    "fountain"
+   ],
+   "desc": "the old man in a gray scarf is to the right of the tall stone fountain",
+   "question": "Is the old man in a gray scarf to the right of the tall stone fountain?"
+  },
+  {
+   "id": "man_looks_at_child",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the old man in a gray scarf looks at the child in a yellow hat",
+   "question": "Is the old man in a gray scarf looking at the child in a yellow hat?"
+  },
+  {
+   "id": "dog_near_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog lies near the feet of the old man in a gray scarf",
+   "question": "Is the brown dog lying near the feet of the old man in a gray scarf?"
+  },
+  {
+   "id": "woman_hands_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in a blue coat hands a small pastry to the black cat",
+   "question": "Is the woman in a blue coat handing a small pastry to the black cat?"
+  },
+  {
+   "id": "no_vehicle",
+   "type": "absent",
+   "desc": "modern vehicle",
+   "question": "Are there any modern vehicles in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "cup_steam",
+   "type": "state",
+   "of": "woman",
+   "desc": "steam rises from the cup held by the woman in a blue coat",
+   "question": "Does steam rise from the cup held by the woman in a blue coat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0036",
+ "prompt": "In a photorealistic photo of a snowy town square, a woman in a blue coat stands on the left holding a steaming cup. Next to her, a black cat sits calmly on a wooden bench. In the center, a child in a yellow hat points excitedly at a tall stone fountain. To the right of the fountain, an old man in a gray scarf looks at the pointing child with a gentle smile. A brown dog lies asleep on the snow near the old man's feet. The woman is handing a small pastry to the black cat. The child is standing next to the fountain. There is no visible modern vehicle in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

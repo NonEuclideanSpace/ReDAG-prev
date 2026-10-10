@@ -1,0 +1,150 @@
+{
+ "style": "cinematic sci-fi render, dramatic lighting, volumetric fog",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shadowy chamber with dim spotlights forming concentric rings of light on the floor",
+   "question": "Does the image show a shadowy chamber with dim spotlights forming concentric rings of light on the floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "platform",
+   "type": "entity",
+   "class": "platform",
+   "plural": "platforms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a matte-black circular platform",
+   "question": "Is there a matte-black circular platform?",
+   "box": [
+    312,
+    700,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "cube",
+   "type": "entity",
+   "class": "cube",
+   "plural": "cubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clear-glass cube",
+   "question": "Is there a clear-glass cube?",
+   "box": [
+    412,
+    300,
+    612,
+    500
+   ]
+  },
+  {
+   "id": "mist",
+   "type": "entity",
+   "class": "mist",
+   "plural": "mists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low pale mist",
+   "question": "Is there a low pale mist?",
+   "box": [
+    380,
+    450,
+    644,
+    550
+   ]
+  },
+  {
+   "id": "cube_edges_pink",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "the clear-glass cube has steady neon-pink lines along each edge",
+   "question": "Does the clear-glass cube have steady neon-pink lines along each edge?"
+  },
+  {
+   "id": "cube_interior_blue",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "the clear-glass cube has cool blue light glowing from its hollow interior",
+   "question": "Does the clear-glass cube have cool blue light glowing from its hollow interior?"
+  },
+  {
+   "id": "cube_reflections",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "the clear-glass cube has glossy surfaces reflecting the electric arcs",
+   "question": "Does the clear-glass cube have glossy surfaces reflecting the electric arcs?"
+  },
+  {
+   "id": "cube_levitating",
+   "type": "state",
+   "of": "cube",
+   "desc": "the clear-glass cube is levitating",
+   "question": "Is the clear-glass cube levitating?"
+  },
+  {
+   "id": "cube_no_cracks",
+   "type": "absent",
+   "desc": "cracks in the clear-glass cube",
+   "question": "Are there any cracks in the clear-glass cube?"
+  },
+  {
+   "id": "cube_no_wood",
+   "type": "absent",
+   "desc": "wooden parts in the clear-glass cube",
+   "question": "Are there any wooden parts in the clear-glass cube?"
+  },
+  {
+   "id": "mist_surrounds_cube",
+   "type": "relation",
+   "of": [
+    "mist",
+    "cube"
+   ],
+   "desc": "the low pale mist surrounds the lower half of the clear-glass cube",
+   "question": "Does the low pale mist surround the lower half of the clear-glass cube?"
+  },
+  {
+   "id": "cube_above_platform",
+   "type": "relation",
+   "of": [
+    "cube",
+    "platform"
+   ],
+   "desc": "the clear-glass cube is above the matte-black circular platform",
+   "question": "Is the clear-glass cube above the matte-black circular platform?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_070",
+ "prompt": "Depict a single levitating clear-glass cube above a matte-black circular platform in a shadowy chamber. Each edge of the cube emits a steady neon-pink line, and cool blue light glows from its hollow interior. Electric arcs flicker along the edges, reflecting off glossy glass surfaces. A low pale mist surrounds the cube’s lower half, while dim spotlights form concentric rings of light on the platform. The cube shows no cracks and incorporates no wooden parts.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

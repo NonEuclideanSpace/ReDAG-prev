@@ -1,0 +1,188 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "side_table",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal side table",
+   "question": "Is there a metal side table?",
+   "box": [
+    800,
+    650,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    400,
+    200,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted fern",
+   "question": "Is there a small potted fern?",
+   "box": [
+    820,
+    550,
+    960,
+    750
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a gray coat is sitting",
+   "question": "Is the elderly man in a gray coat sitting?"
+  },
+  {
+   "id": "man_tired",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a gray coat looks tired",
+   "question": "Does the elderly man in a gray coat look tired?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs hands a paper to the elderly man in a gray coat",
+   "question": "Is the nurse in blue scrubs handing a paper to the elderly man in a gray coat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man in a gray coat sits on the bench",
+   "question": "Is the elderly man in a gray coat sitting on the bench?"
+  },
+  {
+   "id": "fern_on_table",
+   "type": "relation",
+   "of": [
+    "fern",
+    "side_table"
+   ],
+   "desc": "the small potted fern rests on the metal side table",
+   "question": "Is the small potted fern resting on the metal side table?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows in the background",
+   "question": "Are there any windows in the background?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  },
+  {
+   "from": "side_table",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0083",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly man in a gray coat sits on a bench, looking tired. To the right, a small potted fern rests on a metal side table. The nurse is handing a paper to the elderly man. The elderly man is sitting on the bench. There is no window in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

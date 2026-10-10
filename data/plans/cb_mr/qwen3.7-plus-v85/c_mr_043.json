@@ -1,0 +1,363 @@
+{
+ "style": "photorealistic deep sea illustration, dark atmosphere, bioluminescent lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the blackness of the deep sea",
+   "question": "Does the image show the blackness of the deep sea?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "submersible",
+   "type": "entity",
+   "class": "submersible",
+   "plural": "submersibles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small one-person submersible",
+   "question": "Is there a small one-person submersible?",
+   "box": [
+    100,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "anglerfish",
+   "type": "entity",
+   "class": "anglerfish",
+   "plural": "anglerfish",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a giant anglerfish",
+   "question": "Is there a giant anglerfish?",
+   "box": [
+    500,
+    250,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "shrimp_school",
+   "type": "entity",
+   "class": "shrimp",
+   "plural": "shrimp",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a small school of six glowing shrimp",
+   "question": "Are there exactly six glowing shrimp?",
+   "box": [
+    350,
+    400,
+    550,
+    550
+   ]
+  },
+  {
+   "id": "squid",
+   "type": "entity",
+   "class": "squid",
+   "plural": "squids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a giant squid partially hidden in darkness",
+   "question": "Is there a giant squid partially hidden in darkness?",
+   "box": [
+    600,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "probe",
+   "type": "attribute",
+   "of": "submersible",
+   "desc": "a sensor probe held by one of the submersible's robotic arms",
+   "question": "Is one of the submersible's robotic arms holding a sensor probe?"
+  },
+  {
+   "id": "lure_brightness",
+   "type": "state",
+   "of": "anglerfish",
+   "desc": "the anglerfish's bioluminescent lure is the brightest object in the scene",
+   "question": "Is the anglerfish's bioluminescent lure the brightest object in the scene?"
+  },
+  {
+   "id": "lure_position",
+   "type": "state",
+   "of": "anglerfish",
+   "desc": "the anglerfish's bioluminescent lure is dangling directly above its head",
+   "question": "Is the anglerfish's bioluminescent lure dangling directly above its head?"
+  },
+  {
+   "id": "anglerfish_jaw_open",
+   "type": "state",
+   "of": "anglerfish",
+   "desc": "the anglerfish is opening its massive jaw",
+   "question": "Is the anglerfish opening its massive jaw?"
+  },
+  {
+   "id": "sub_headlights_on",
+   "type": "state",
+   "of": "submersible",
+   "desc": "the submersible's powerful headlights are on and pointing forward",
+   "question": "Are the submersible's powerful headlights on and pointing forward?"
+  },
+  {
+   "id": "arm_extended",
+   "type": "state",
+   "of": "submersible",
+   "desc": "one of the submersible's robotic arms is extended",
+   "question": "Is one of the submersible's robotic arms extended?"
+  },
+  {
+   "id": "squid_partially_hidden",
+   "type": "state",
+   "of": "squid",
+   "desc": "the giant squid is partially hidden in the darkness",
+   "question": "Is the giant squid partially hidden in the darkness?"
+  },
+  {
+   "id": "squid_tentacle_wrapping",
+   "type": "state",
+   "of": "squid",
+   "desc": "the giant squid is wrapping a tentacle",
+   "question": "Is the giant squid wrapping a tentacle?"
+  },
+  {
+   "id": "sub_facing_angler",
+   "type": "relation",
+   "of": [
+    "submersible",
+    "anglerfish"
+   ],
+   "desc": "the submersible is facing the anglerfish",
+   "question": "Is the submersible facing the anglerfish?"
+  },
+  {
+   "id": "sub_in_front_of_angler",
+   "type": "relation",
+   "of": [
+    "submersible",
+    "anglerfish"
+   ],
+   "desc": "the submersible is in front of the anglerfish",
+   "question": "Is the submersible in front of the anglerfish?"
+  },
+  {
+   "id": "jaw_towards_sub",
+   "type": "relation",
+   "of": [
+    "anglerfish",
+    "submersible"
+   ],
+   "desc": "the anglerfish's massive jaw is oriented towards the submersible",
+   "question": "Is the anglerfish's massive jaw oriented towards the submersible?"
+  },
+  {
+   "id": "headlights_at_angler",
+   "type": "relation",
+   "of": [
+    "submersible",
+    "anglerfish"
+   ],
+   "desc": "the submersible's headlights are pointing at the anglerfish",
+   "question": "Are the submersible's headlights pointing at the anglerfish?"
+  },
+  {
+   "id": "headlights_brighter_than_shrimp",
+   "type": "relation",
+   "of": [
+    "submersible",
+    "shrimp_school"
+   ],
+   "desc": "the submersible's headlights are brighter than the glow from the school of shrimp",
+   "question": "Are the submersible's headlights brighter than the glow from the school of shrimp?"
+  },
+  {
+   "id": "probe_at_eye",
+   "type": "relation",
+   "of": [
+    "submersible",
+    "anglerfish"
+   ],
+   "desc": "the sensor probe is pointing at the anglerfish's eye",
+   "question": "Is the sensor probe pointing at the anglerfish's eye?"
+  },
+  {
+   "id": "shrimp_between",
+   "type": "relation",
+   "of": [
+    "shrimp_school",
+    "submersible",
+    "anglerfish"
+   ],
+   "desc": "the school of shrimp is swimming between the submersible and the anglerfish",
+   "question": "Is the school of shrimp swimming between the submersible and the anglerfish?"
+  },
+  {
+   "id": "squid_behind_angler",
+   "type": "relation",
+   "of": [
+    "squid",
+    "anglerfish"
+   ],
+   "desc": "the giant squid is behind the anglerfish",
+   "question": "Is the giant squid behind the anglerfish?"
+  },
+  {
+   "id": "tentacle_on_shipwreck",
+   "type": "relation",
+   "of": [
+    "squid",
+    "shipwreck"
+   ],
+   "desc": "the squid's tentacle is wrapping around the piece of shipwreck on the seafloor",
+   "question": "Is the squid's tentacle wrapping around the piece of shipwreck on the seafloor?"
+  },
+  {
+   "id": "shipwreck_under_angler",
+   "type": "state",
+   "of": "anglerfish",
+   "desc": "the piece of shipwreck is under the anglerfish",
+   "question": "Is the piece of shipwreck under the anglerfish?"
+  },
+  {
+   "id": "squid_looking_at_sub",
+   "type": "relation",
+   "of": [
+    "squid",
+    "submersible"
+   ],
+   "desc": "the giant squid is looking at the submersible",
+   "question": "Is the giant squid looking at the submersible?"
+  },
+  {
+   "id": "eye_larger_than_probe",
+   "type": "relation",
+   "of": [
+    "anglerfish",
+    "submersible"
+   ],
+   "desc": "the anglerfish's eye is larger than the sensor probe",
+   "question": "Is the anglerfish's eye larger than the sensor probe?"
+  },
+  {
+   "id": "shipwreck",
+   "type": "entity",
+   "class": "shipwreck",
+   "plural": "shipwrecks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a piece of shipwreck on the seafloor",
+   "question": "Is there a piece of shipwreck on the seafloor?",
+   "box": [
+    400,
+    850,
+    624,
+    980
+   ]
+  },
+  {
+   "id": "submersible_hovering",
+   "type": "state",
+   "of": "submersible",
+   "desc": "the small one-person submersible is hovering",
+   "question": "Is the small one-person submersible hovering?"
+  },
+  {
+   "id": "lure_dangling",
+   "type": "state",
+   "of": "anglerfish",
+   "desc": "the anglerfish's bioluminescent lure is dangling",
+   "question": "Is the anglerfish's bioluminescent lure dangling?"
+  },
+  {
+   "id": "shrimp_swimming",
+   "type": "state",
+   "of": "shrimp_school",
+   "desc": "the small school of glowing shrimp is swimming",
+   "question": "Is the small school of glowing shrimp swimming?"
+  },
+  {
+   "id": "sub_arms",
+   "type": "attribute",
+   "of": "submersible",
+   "desc": "the submersible has two robotic arms",
+   "question": "Does the submersible have two robotic arms?"
+  },
+  {
+   "id": "sub_headlights",
+   "type": "attribute",
+   "of": "submersible",
+   "desc": "the submersible has powerful headlights",
+   "question": "Does the submersible have powerful headlights?"
+  },
+  {
+   "id": "angler_lure",
+   "type": "attribute",
+   "of": "anglerfish",
+   "desc": "the anglerfish has a bioluminescent lure",
+   "question": "Does the anglerfish have a bioluminescent lure?"
+  },
+  {
+   "id": "angler_jaw",
+   "type": "attribute",
+   "of": "anglerfish",
+   "desc": "the anglerfish has a massive jaw",
+   "question": "Does the anglerfish have a massive jaw?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "shipwreck",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_043",
+ "prompt": "In the blackness of the deep sea, a small, one-person submersible is hovering in front of a giant anglerfish. The anglerfish's bioluminescent lure is dangling directly above its head and is the brightest object in the scene. The anglerfish is opening its massive jaw towards the submersible. The submersible has its powerful headlights pointing at the anglerfish, and these headlights are brighter than the glow from a nearby school of shrimp. The submersible has two robotic arms; one is extended and holding a sensor probe, pointing the probe at the anglerfish's eye. The small school of glowing shrimp is swimming between the submersible and the anglerfish. The number of shrimp is three times the number of the submersible's robotic arms. A giant squid is behind the anglerfish, partially hidden in the darkness. The squid is wrapping a tentacle around a piece of a shipwreck on the seafloor. The submersible is facing the anglerfish. The anglerfish's eye is larger than the sensor probe at the end of the robotic arm. The squid is looking at the submersible. The shipwreck is under the anglerfish.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "squid_looking",
+     "squid_looking_at_sub"
+    ]
+   ]
+  }
+ }
+}

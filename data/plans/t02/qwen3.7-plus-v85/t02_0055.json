@@ -1,0 +1,148 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a scene with sky but no sun",
+   "question": "Is the background a scene with sky but no sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue shawl",
+   "question": "Is there an old woman in a blue shawl?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden basket",
+   "question": "Is there a wooden basket?",
+   "box": [
+    600,
+    400,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman in a blue shawl is standing",
+   "question": "Is the old woman in a blue shawl standing?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "old_woman",
+    "basket"
+   ],
+   "desc": "the old woman in a blue shawl looks at the wooden basket",
+   "question": "Is the old woman in a blue shawl looking at the wooden basket?"
+  },
+  {
+   "id": "basket_next_to_woman",
+   "type": "relation",
+   "of": [
+    "basket",
+    "old_woman"
+   ],
+   "desc": "the wooden basket is next to the old woman in a blue shawl",
+   "question": "Is the wooden basket next to the old woman in a blue shawl?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "basket_sitting",
+   "type": "state",
+   "of": "basket",
+   "desc": "the wooden basket is sitting",
+   "question": "Is the wooden basket sitting?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "red apples",
+   "question": "Are there red apples?",
+   "box": [
+    580,
+    580,
+    880,
+    800
+   ]
+  },
+  {
+   "id": "apples_in_basket",
+   "type": "relation",
+   "of": [
+    "apples",
+    "basket"
+   ],
+   "desc": "the red apples are in the wooden basket",
+   "question": "Are the red apples in the wooden basket?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "basket",
+   "to": "apples",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0055",
+ "prompt": "In a pencil sketch with light color wash, an old woman in a blue shawl stands on the left. A wooden basket sits next to her on the right. The basket is filled with red apples. The old woman looks at the wooden basket. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

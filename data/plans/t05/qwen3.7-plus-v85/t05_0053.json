@@ -1,0 +1,305 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    260,
+    300,
+    460,
+    800
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    280,
+    500,
+    440,
+    900
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a pink dress",
+   "question": "Is there a young woman in a pink dress?",
+   "box": [
+    400,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white lab coat",
+   "question": "Is there a doctor in a white lab coat?",
+   "box": [
+    620,
+    250,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier dog",
+   "question": "Is there a small terrier dog?",
+   "box": [
+    800,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "nurse_pen",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a pen",
+   "question": "Is the nurse in blue scrubs holding a pen?"
+  },
+  {
+   "id": "man_weary",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a gray coat looks weary",
+   "question": "Does the elderly man in a gray coat look weary?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a gray coat is sitting",
+   "question": "Is the elderly man in a gray coat sitting?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress is pointing",
+   "question": "Is the young woman in a pink dress pointing?"
+  },
+  {
+   "id": "woman_speaking",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress is speaking",
+   "question": "Is the young woman in a pink dress speaking?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier dog is sitting",
+   "question": "Is the small terrier dog sitting?"
+  },
+  {
+   "id": "doctor_looking",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "young_woman"
+   ],
+   "desc": "the doctor in a white lab coat is looking at the young woman",
+   "question": "Is the doctor in a white lab coat looking at the young woman in a pink dress?"
+  },
+  {
+   "id": "man_beside_nurse",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "nurse"
+   ],
+   "desc": "the elderly man in a gray coat is beside the nurse in blue scrubs",
+   "question": "Is the elderly man in a gray coat beside the nurse in blue scrubs?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "chair"
+   ],
+   "desc": "the elderly man in a gray coat sits on the plastic chair",
+   "question": "Is the elderly man in a gray coat sitting on the plastic chair?"
+  },
+  {
+   "id": "doctor_next_to_woman",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "young_woman"
+   ],
+   "desc": "the doctor in a white lab coat stands next to the young woman in a pink dress",
+   "question": "Is the doctor in a white lab coat standing next to the young woman in a pink dress?"
+  },
+  {
+   "id": "woman_points_door",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "distant_door"
+   ],
+   "desc": "the young woman in a pink dress points toward the distant door",
+   "question": "Is the young woman in a pink dress pointing toward the distant door?"
+  },
+  {
+   "id": "nurse_hands_pen",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs hands a pen to the elderly man in a gray coat",
+   "question": "Is the nurse in blue scrubs handing a pen to the elderly man in a gray coat?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "doctor_standing",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor in a white lab coat is standing",
+   "question": "Is the doctor in a white lab coat standing?"
+  },
+  {
+   "id": "terrier_on_floor",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier dog sits on the floor",
+   "question": "Is the small terrier dog sitting on the floor?"
+  },
+  {
+   "id": "distant_door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant door",
+   "question": "Is there a distant door?",
+   "box": [
+    450,
+    100,
+    574,
+    300
+   ]
+  },
+  {
+   "id": "terrier_bandana",
+   "type": "attribute",
+   "of": "terrier",
+   "desc": "the small terrier dog wears a red bandana",
+   "question": "Is the small terrier dog wearing a red bandana?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0053",
+ "prompt": "In a photorealistic photo of a sterile hospital corridor, a nurse in blue scrubs stands on the left holding a clipboard. Beside her, an elderly man in a gray coat sits on a plastic chair, looking weary. In the center, a young woman in a pink dress points toward a distant door while speaking to a doctor in a white lab coat who stands next to her. On the right, a small terrier dog sits patiently on the floor, wearing a red bandana. The nurse is handing a pen to the elderly man. The doctor is looking at the young woman. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

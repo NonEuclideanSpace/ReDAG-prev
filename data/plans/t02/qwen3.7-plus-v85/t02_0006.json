@@ -1,0 +1,107 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue hard hat",
+   "question": "Is there a man in a blue hard hat?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in orange overalls",
+   "question": "Is there a woman in orange overalls?",
+   "box": [
+    574,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue hard hat is standing",
+   "question": "Is the man in a blue hard hat standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in orange overalls is standing",
+   "question": "Is the woman in orange overalls standing?"
+  },
+  {
+   "id": "man_holding",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a blue hard hat holds a clipboard",
+   "question": "Is the man in a blue hard hat holding a clipboard?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in orange overalls is looking at the clipboard",
+   "question": "Is the woman in orange overalls looking at the clipboard?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a blue hard hat hands the clipboard to the woman in orange overalls",
+   "question": "Is the man in a blue hard hat handing the clipboard to the woman in orange overalls?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the background?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0006",
+ "prompt": "In an anime style scene at a shipyard dock, a man in a blue hard hat stands on the left side holding a clipboard. A woman in orange overalls stands on the right side looking at the clipboard. The two characters are interacting by the man handing the clipboard to the woman. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

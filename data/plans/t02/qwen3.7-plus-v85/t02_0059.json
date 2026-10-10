@@ -1,0 +1,118 @@
+{
+ "style": "watercolor illustration, soft washes, no sharp lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty construction site environment",
+   "question": "Does the image depict a dusty construction site environment?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "excavator",
+   "type": "entity",
+   "class": "excavator",
+   "plural": "excavators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large excavator",
+   "question": "Is there a large excavator?",
+   "box": [
+    400,
+    200,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds blueprints",
+   "question": "Is the worker in the yellow hard hat holding blueprints?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is standing",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "excavator_idle",
+   "type": "state",
+   "of": "excavator",
+   "desc": "the excavator is idle",
+   "question": "Is the excavator idle?"
+  },
+  {
+   "id": "worker_looks_excavator",
+   "type": "action",
+   "of": [
+    "worker",
+    "excavator"
+   ],
+   "desc": "the worker in the yellow hard hat looks at the large excavator with the rusted bucket",
+   "question": "Is the worker in the yellow hard hat looking at the large excavator with the rusted bucket?"
+  },
+  {
+   "id": "no_fencing",
+   "type": "absent",
+   "desc": "safety fencing",
+   "question": "Is there any safety fencing visible in the image?"
+  },
+  {
+   "id": "excavator_bucket_rusted",
+   "type": "attribute",
+   "of": "excavator",
+   "desc": "the excavator has a rusted bucket",
+   "question": "Does the excavator have a rusted bucket?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0059",
+ "prompt": "A watercolor illustration depicts a construction site scene. On the left, a worker in a yellow hard hat stands firmly holding blueprints. In the center, a large excavator with a rusted bucket sits idle. The worker in the yellow hard hat is looking at the large excavator with the rusted bucket. There is no safety fencing visible in the background. The soft washes of color define the shapes without sharp lines, focusing entirely on these two distinct entities and their simple spatial relationship within the dusty environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

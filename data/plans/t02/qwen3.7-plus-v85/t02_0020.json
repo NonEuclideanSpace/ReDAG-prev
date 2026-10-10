@@ -1,0 +1,135 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty construction site with faint sketches of steel beams and open sky",
+   "question": "Does the background depict a dusty construction site with faint sketches of steel beams and open sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker wearing a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in an orange vest",
+   "question": "Is there a foreman wearing an orange vest?",
+   "box": [
+    550,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "blueprint",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker holds a rolled blueprint tightly against his chest",
+   "question": "Is the worker holding a rolled blueprint?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker is standing",
+   "question": "Is the worker standing?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "action",
+   "of": [
+    "foreman",
+    "worker"
+   ],
+   "desc": "the foreman points at the paper with his index finger",
+   "question": "Is the foreman pointing at the blueprint held by the worker?"
+  },
+  {
+   "id": "foreman_standing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman is standing",
+   "question": "Is the foreman standing?"
+  },
+  {
+   "id": "proximity",
+   "type": "relation",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker and the foreman stand close together",
+   "question": "Are the worker and the foreman standing close together?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery",
+   "question": "Is there any heavy machinery visible in the image?"
+  },
+  {
+   "id": "foreman_finger",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman points with his index finger",
+   "question": "Is the foreman pointing with his index finger?"
+  },
+  {
+   "id": "blueprint_position",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker holds the blueprint tightly against his chest",
+   "question": "Is the worker holding the blueprint tightly against his chest?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0020",
+ "prompt": "A watercolor illustration depicts a dusty construction site. On the left stands a worker in a yellow hard hat, holding a rolled blueprint tightly against his chest. To the right, a foreman in an orange vest points directly at the paper with his index finger. The two figures stand close together, engaged in examining the plan. There is no heavy machinery visible in the background, only faint sketches of steel beams and open sky. The scene captures a quiet moment of coordination amidst the unfinished structure, focusing solely on the exchange of information between the two distinct individuals.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

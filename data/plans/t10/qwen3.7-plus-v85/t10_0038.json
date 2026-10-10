@@ -1,0 +1,342 @@
+{
+ "style": "cinematic film still, night photography, warm string lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop at night with a city skyline in the distance",
+   "question": "Does the image show a rooftop at night with a city skyline in the distance?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal railing",
+   "question": "Is there a metal railing?",
+   "box": [
+    0,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "woman_silver",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    350,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "man_blue",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    260,
+    340,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "palm",
+   "type": "entity",
+   "class": "potted palm tree",
+   "plural": "potted palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted palm tree",
+   "question": "Is there a large potted palm tree?",
+   "box": [
+    400,
+    200,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    660,
+    600,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a leather jacket",
+   "question": "Is there a teenager in a leather jacket?",
+   "box": [
+    860,
+    400,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "girl_floral",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a floral skirt",
+   "question": "Is there a girl in a floral skirt?",
+   "box": [
+    750,
+    450,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "man_gray",
+   "type": "entity",
+   "class": "older man",
+   "plural": "older men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a gray coat",
+   "question": "Is there an older man in a gray coat?",
+   "box": [
+    800,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress is leaning",
+   "question": "Is the woman in the silver dress leaning?"
+  },
+  {
+   "id": "woman_gazing",
+   "type": "state",
+   "of": "woman_silver",
+   "desc": "the woman in the silver dress is gazing out",
+   "question": "Is the woman in the silver dress gazing out?"
+  },
+  {
+   "id": "man_holding",
+   "type": "attribute",
+   "of": "man_blue",
+   "desc": "the man in the blue suit holds a champagne flute",
+   "question": "Is the man in the blue suit holding a champagne flute?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is watching",
+   "question": "Is the golden retriever watching?"
+  },
+  {
+   "id": "teenager_pointing",
+   "type": "action",
+   "of": [
+    "teenager",
+    "girl_floral"
+   ],
+   "desc": "the teenager in the leather jacket points toward the horizon while speaking to the girl in the floral skirt",
+   "question": "Is the teenager in the leather jacket pointing toward the horizon while speaking to the girl in the floral skirt?"
+  },
+  {
+   "id": "girl_looking",
+   "type": "state",
+   "of": "girl_floral",
+   "desc": "the girl in the floral skirt looks in the direction of the pointing",
+   "question": "Does the girl in the floral skirt look in the direction of the pointing?"
+  },
+  {
+   "id": "man_observing",
+   "type": "state",
+   "of": "man_gray",
+   "desc": "the older man in the gray coat observes the scene",
+   "question": "Is the older man in the gray coat observing the scene?"
+  },
+  {
+   "id": "woman_on_railing",
+   "type": "relation",
+   "of": [
+    "woman_silver",
+    "railing"
+   ],
+   "desc": "the woman in the silver dress rests her elbow on the railing",
+   "question": "Is the woman in the silver dress resting her elbow on the railing?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_blue",
+    "woman_silver"
+   ],
+   "desc": "the man in the blue suit stands next to the woman in the silver dress",
+   "question": "Is the man in the blue suit standing next to the woman in the silver dress?"
+  },
+  {
+   "id": "dog_beside_palm",
+   "type": "relation",
+   "of": [
+    "dog",
+    "palm"
+   ],
+   "desc": "the golden retriever sits beside the potted palm tree",
+   "question": "Is the golden retriever sitting beside the potted palm tree?"
+  },
+  {
+   "id": "teenager_beside_dog",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "dog"
+   ],
+   "desc": "the teenager in the leather jacket is beside the golden retriever",
+   "question": "Is the teenager in the leather jacket beside the golden retriever?"
+  },
+  {
+   "id": "girl_beside_teenager",
+   "type": "relation",
+   "of": [
+    "girl_floral",
+    "teenager"
+   ],
+   "desc": "the girl in the floral skirt is beside the teenager in the leather jacket",
+   "question": "Is the girl in the floral skirt beside the teenager in the leather jacket?"
+  },
+  {
+   "id": "man_behind_group",
+   "type": "relation",
+   "of": [
+    "man_gray",
+    "teenager"
+   ],
+   "desc": "the older man in the gray coat is behind the teenager and the girl",
+   "question": "Is the older man in the gray coat behind the teenager and the girl?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke or fog",
+   "question": "Is there any smoke or fog in the image?"
+  },
+  {
+   "id": "man_blue_standing",
+   "type": "state",
+   "of": "man_blue",
+   "desc": "the man in the blue suit stands",
+   "question": "Is the man in the blue suit standing?"
+  },
+  {
+   "id": "man_gray_standing",
+   "type": "state",
+   "of": "man_gray",
+   "desc": "the older man in the gray coat stands",
+   "question": "Is the older man in the gray coat standing?"
+  },
+  {
+   "id": "string_lights",
+   "type": "entity",
+   "class": "string lights",
+   "plural": "string lights",
+   "count": 1,
+   "count_exact": false,
+   "desc": "string lights above",
+   "question": "Are there string lights above?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "railing",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "palm",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "string_lights",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0038",
+ "prompt": "In this cinematic film still, a vibrant rooftop party unfolds under the night sky. On the left, a woman in a silver dress leans against the railing, her posture relaxed as she gazes out at the city lights. Next to her stands a man in a blue suit, holding a champagne flute with a steady hand. In the center, a large potted palm tree sways gently in the breeze, its fronds casting long shadows on the concrete floor. To the right of the palm, a golden retriever sits patiently, watching the festivities with bright eyes. Beside the dog, a teenager in a leather jacket points excitedly toward the horizon, drawing the attention of a girl in a floral skirt who looks in the same direction. Behind them, near the edge of the roof, an older man in a gray coat observes the scene quietly. There is no smoke or fog obscuring the view. The woman in the silver dress rests her elbow on the cold metal railing. The man in the blue suit clinks his glass against the air in a silent toast. The teenager in the leather jacket gestures animatedly while speaking to the girl in the floral skirt. The golden retriever remains seated beside the potted palm tree. The girl in the floral skirt turns her head to follow the pointing finger. The older man in the gray coat stands apart from the main group. The city skyline glimmers in the distance. The string lights above cast a warm glow on the attendees. The concrete surface shows signs of wear and age. The atmosphere feels lively yet intimate. Each character occupies their space distinctly. The composition balances human interaction with urban solitude. The night air seems crisp and clear. The moment captures fleeting joy.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

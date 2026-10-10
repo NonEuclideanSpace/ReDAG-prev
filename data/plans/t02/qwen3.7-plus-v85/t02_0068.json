@@ -1,0 +1,123 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station",
+   "question": "Does the image depict the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    150,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian?",
+   "box": [
+    550,
+    350,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter hands a shiny silver badge to the dalmatian",
+   "question": "Is the firefighter handing a shiny silver badge to the dalmatian?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the image?"
+  },
+  {
+   "id": "no_clutter",
+   "type": "absent",
+   "desc": "additional clutter",
+   "question": "Is there any additional clutter present in the room?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  },
+  {
+   "id": "no_distractions",
+   "type": "absent",
+   "desc": "distractions",
+   "question": "Are there any distractions present in the room?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0068",
+ "prompt": "In an anime style illustration set within a fire station, a firefighter in a yellow helmet stands on the left side of the frame. A dalmatian with black spots sits calmly on the right side. The firefighter is handing a shiny silver badge to the dog. There is no fire truck visible in the background. The scene captures this specific moment of exchange between the two distinct figures without any additional clutter or distractions present in the room.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

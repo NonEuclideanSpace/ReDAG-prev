@@ -1,0 +1,492 @@
+{
+ "style": "photorealistic interior photography, warm lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cozy living room with a stone fireplace and a tall bookshelf lining the wall",
+   "question": "Does the image show a cozy living room with a stone fireplace and a tall bookshelf lining the wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sofa",
+   "type": "entity",
+   "class": "sofa",
+   "plural": "sofas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush gray sofa",
+   "question": "Is there a plush gray sofa?",
+   "box": [
+    100,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "coffee_table",
+   "type": "entity",
+   "class": "coffee table",
+   "plural": "coffee tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden coffee table",
+   "question": "Is there a wooden coffee table?",
+   "box": [
+    300,
+    650,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "area rug",
+   "plural": "area rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick area rug",
+   "question": "Is there a thick area rug?",
+   "box": [
+    50,
+    700,
+    900,
+    1024
+   ]
+  },
+  {
+   "id": "fireplace",
+   "type": "entity",
+   "class": "fireplace",
+   "plural": "fireplaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fireplace with a mantel",
+   "question": "Is there a stone fireplace with a mantel?",
+   "box": [
+    700,
+    200,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "side_table",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small side table",
+   "question": "Is there a small side table?",
+   "box": [
+    800,
+    500,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall bookshelf filled with hardcover books",
+   "question": "Is there a tall bookshelf filled with hardcover books?",
+   "box": [
+    0,
+    100,
+    150,
+    900
+   ]
+  },
+  {
+   "id": "console",
+   "type": "entity",
+   "class": "console table",
+   "plural": "console tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a console table",
+   "question": "Is there a console table?",
+   "box": [
+    400,
+    150,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a content cat",
+   "question": "Is there a content cat?",
+   "box": [
+    200,
+    800,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "attribute",
+   "of": "coffee_table",
+   "desc": "the wooden coffee table is topped with a decorative bowl",
+   "question": "Is the wooden coffee table topped with a decorative bowl?"
+  },
+  {
+   "id": "books_on_table",
+   "type": "attribute",
+   "of": "coffee_table",
+   "desc": "the wooden coffee table is topped with a pair of hardcover books",
+   "question": "Is the wooden coffee table topped with a pair of hardcover books?"
+  },
+  {
+   "id": "laptop_on_table",
+   "type": "attribute",
+   "of": "coffee_table",
+   "desc": "the wooden coffee table holds a laptop computer",
+   "question": "Is the wooden coffee table holding a laptop computer?"
+  },
+  {
+   "id": "candle_flickering",
+   "type": "state",
+   "of": "fireplace",
+   "desc": "a scented candle on the mantel is lit",
+   "question": "Is a scented candle on the mantel lit?"
+  },
+  {
+   "id": "frame_on_mantel",
+   "type": "attribute",
+   "of": "fireplace",
+   "desc": "the mantel of the stone fireplace has a photo frame beside the candle",
+   "question": "Does the mantel of the stone fireplace have a photo frame beside the candle?"
+  },
+  {
+   "id": "vase_on_mantel",
+   "type": "attribute",
+   "of": "fireplace",
+   "desc": "the mantel of the stone fireplace has a ceramic vase holding fresh flowers beside the candle",
+   "question": "Does the mantel of the stone fireplace have a ceramic vase holding fresh flowers beside the candle?"
+  },
+  {
+   "id": "floor_lamp",
+   "type": "relation",
+   "of": [
+    "side_table",
+    "coffee_table"
+   ],
+   "desc": "a floor lamp stands next to the small side table",
+   "question": "Does a floor lamp stand next to the small side table?"
+  },
+  {
+   "id": "table_lamp_on_side",
+   "type": "attribute",
+   "of": "side_table",
+   "desc": "the small side table holds a table lamp",
+   "question": "Does the small side table hold a table lamp?"
+  },
+  {
+   "id": "remote_on_side",
+   "type": "attribute",
+   "of": "side_table",
+   "desc": "the small side table holds a television remote",
+   "question": "Does the small side table hold a television remote?"
+  },
+  {
+   "id": "mug_on_side",
+   "type": "attribute",
+   "of": "side_table",
+   "desc": "the small side table holds a steaming mug",
+   "question": "Does the small side table hold a mug?"
+  },
+  {
+   "id": "basket_on_shelf",
+   "type": "attribute",
+   "of": "bookshelf",
+   "desc": "the tall bookshelf has a woven basket on its lower shelf",
+   "question": "Does the tall bookshelf have a woven basket on its lower shelf?"
+  },
+  {
+   "id": "blanket_on_sofa",
+   "type": "attribute",
+   "of": "sofa",
+   "desc": "a soft throw blanket is draped over the armrest of the plush gray sofa",
+   "question": "Is a soft throw blanket draped over the armrest of the plush gray sofa?"
+  },
+  {
+   "id": "tv_on_wall",
+   "type": "attribute",
+   "of": "console",
+   "desc": "a wall-mounted flat-screen television is above the console",
+   "question": "Is a wall-mounted flat-screen television above the console?"
+  },
+  {
+   "id": "pillows_on_sofa",
+   "type": "attribute",
+   "of": "sofa",
+   "desc": "two decorative pillows rest against the back cushion of the plush gray sofa",
+   "question": "Do two decorative pillows rest against the back cushion of the plush gray sofa?"
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the content cat is curled up",
+   "question": "Is the content cat curled up?"
+  },
+  {
+   "id": "slippers_next_to_cat",
+   "type": "relation",
+   "of": [
+    "slippers",
+    "cat"
+   ],
+   "desc": "the pair of cozy slippers is next to the content cat",
+   "question": "Is the pair of cozy slippers next to the content cat?"
+  },
+  {
+   "id": "magazine_next_to_cat",
+   "type": "relation",
+   "of": [
+    "magazine",
+    "cat"
+   ],
+   "desc": "the open magazine is next to the content cat",
+   "question": "Is the open magazine next to the content cat?"
+  },
+  {
+   "id": "sofa_faces_table",
+   "type": "relation",
+   "of": [
+    "sofa",
+    "coffee_table"
+   ],
+   "desc": "the plush gray sofa faces the wooden coffee table",
+   "question": "Does the plush gray sofa face the wooden coffee table?"
+  },
+  {
+   "id": "rug_in_front_of_fireplace",
+   "type": "relation",
+   "of": [
+    "rug",
+    "fireplace"
+   ],
+   "desc": "the thick area rug lies in front of the stone fireplace",
+   "question": "Does the thick area rug lie in front of the stone fireplace?"
+  },
+  {
+   "id": "no_gaming_console",
+   "type": "absent",
+   "desc": "a gaming console",
+   "question": "Is there a gaming console in the image?"
+  },
+  {
+   "id": "no_plastic_chair",
+   "type": "absent",
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair in the image?"
+  },
+  {
+   "id": "no_ceiling_fan",
+   "type": "absent",
+   "desc": "a ceiling fan",
+   "question": "Is there a ceiling fan in the image?"
+  },
+  {
+   "id": "no_cardboard_box",
+   "type": "absent",
+   "desc": "a cardboard box",
+   "question": "Is there a cardboard box in the image?"
+  },
+  {
+   "id": "no_bicycle",
+   "type": "absent",
+   "desc": "a bicycle",
+   "question": "Is there a bicycle in the image?"
+  },
+  {
+   "id": "slippers",
+   "type": "entity",
+   "class": "slipper",
+   "plural": "slippers",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of cozy slippers",
+   "question": "Are there two cozy slippers?",
+   "box": [
+    300,
+    850,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "magazine",
+   "type": "entity",
+   "class": "magazine",
+   "plural": "magazines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open magazine",
+   "question": "Is there an open magazine?",
+   "box": [
+    460,
+    860,
+    600,
+    940
+   ]
+  },
+  {
+   "id": "mug_steaming",
+   "type": "relation",
+   "of": [
+    "side_table",
+    "coffee_table"
+   ],
+   "desc": "the mug on the small side table is steaming",
+   "question": "Is the mug on the small side table steaming?"
+  },
+  {
+   "id": "cat_content",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is content",
+   "question": "Does the cat look content?"
+  },
+  {
+   "id": "slippers_on_rug",
+   "type": "relation",
+   "of": [
+    "slippers",
+    "rug"
+   ],
+   "desc": "the pair of cozy slippers is on the rug",
+   "question": "Are the cozy slippers on the area rug?"
+  },
+  {
+   "id": "magazine_on_rug",
+   "type": "relation",
+   "of": [
+    "magazine",
+    "rug"
+   ],
+   "desc": "the open magazine is on the rug",
+   "question": "Is the open magazine on the area rug?"
+  },
+  {
+   "id": "painting",
+   "type": "entity",
+   "class": "framed painting",
+   "plural": "framed paintings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a framed painting",
+   "question": "Is there a framed painting?",
+   "box": [
+    400,
+    50,
+    700,
+    250
+   ]
+  },
+  {
+   "id": "painting_above_sofa",
+   "type": "relation",
+   "of": [
+    "painting",
+    "sofa"
+   ],
+   "desc": "the framed painting hangs above the plush gray sofa",
+   "question": "Does the framed painting hang above the plush gray sofa?"
+  },
+  {
+   "id": "speaker",
+   "type": "entity",
+   "class": "stereo speaker",
+   "plural": "stereo speakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stereo speaker",
+   "question": "Is there a stereo speaker?",
+   "box": [
+    200,
+    700,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "speaker_on_console",
+   "type": "relation",
+   "of": [
+    "speaker",
+    "console"
+   ],
+   "desc": "the stereo speaker sits on the console",
+   "question": "Does the stereo speaker sit on the console?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "rug",
+   "to": "slippers",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "magazine",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "console",
+   "to": "speaker",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_074",
+ "prompt": "In a cozy living room, a plush gray sofa faces a wooden coffee table topped with a decorative bowl and a pair of hardcover books. A thick area rug lies in front of a stone fireplace where a scented candle flickers on the mantel beside a photo frame and a ceramic vase holding fresh flowers. To one side, a floor lamp stands next to a small side table that holds a table lamp, a television remote, and a steaming mug. A tall bookshelf lines the wall, filled with hardcover books and a woven basket on its lower shelf, while a framed painting hangs above the sofa. A stereo speaker sits on a console beneath a wall-mounted flat-screen television. A soft throw blanket is draped over the armrest, and two decorative pillows rest against the back cushion. On the rug, a content cat curls up next to a pair of cozy slippers and an open magazine, while a laptop computer is left on the coffee table. There is no gaming console, no plastic chair, no ceiling fan, no cardboard box, and no bicycle.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 4,
+   "ungrounded": 1,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,292 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    400,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    700,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown leather suitcase",
+   "question": "Is there a brown leather suitcase?",
+   "box": [
+    850,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet chair",
+   "question": "Is there a velvet chair?",
+   "box": [
+    80,
+    400,
+    280,
+    950
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a serving tray",
+   "question": "Is there a serving tray?",
+   "box": [
+    420,
+    500,
+    580,
+    600
+   ]
+  },
+  {
+   "id": "glass",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a drinking glass",
+   "question": "Is there a drinking glass?",
+   "box": [
+    350,
+    450,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a menu",
+   "question": "Is there a menu?",
+   "box": [
+    720,
+    500,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "entity",
+   "class": "fork",
+   "plural": "forks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver fork",
+   "question": "Is there a silver fork?",
+   "box": [
+    500,
+    700,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the white apron is standing",
+   "question": "Is the waiter in the white apron standing?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "menu"
+   ],
+   "desc": "the man in the gray suit is looking at the menu",
+   "question": "Is the man in the gray suit looking at the menu?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman",
+    "chair"
+   ],
+   "desc": "the woman in the blue dress sits on the velvet chair",
+   "question": "Is the woman in the blue dress sitting on the velvet chair?"
+  },
+  {
+   "id": "suitcase_next_to_man",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "man"
+   ],
+   "desc": "the brown leather suitcase is next to the man in the gray suit",
+   "question": "Is the brown leather suitcase next to the man in the gray suit?"
+  },
+  {
+   "id": "waiter_hands_glass",
+   "type": "action",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter in the white apron hands the glass to the woman in the blue dress",
+   "question": "Is the waiter in the white apron handing the glass to the woman in the blue dress?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the image?"
+  },
+  {
+   "id": "waiter_holding_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the white apron holds a tray",
+   "question": "Is the waiter in the white apron holding a tray?"
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "fork_on_table",
+   "type": "relation",
+   "of": [
+    "fork",
+    "table"
+   ],
+   "desc": "the silver fork lies on the table",
+   "question": "Is the silver fork lying on the table?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "fork",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0090",
+ "prompt": "In this photorealistic photo, a train dining car features five distinct entities. On the left sits a woman in a blue dress. In the center stands a waiter in a white apron. To the right is a man in a gray suit. Next to him rests a brown leather suitcase. On the table lies a silver fork. The woman in the blue dress is sitting on a velvet chair. The waiter in the white apron is holding a tray. The man in the gray suit is looking at a menu. The waiter in the white apron is handing a glass to the woman in the blue dress. The man in the gray suit is next to the brown leather suitcase. There is no window visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

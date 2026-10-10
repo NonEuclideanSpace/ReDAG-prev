@@ -1,0 +1,154 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with seating and floor",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    400,
+    180,
+    700,
+    820
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black suitcase",
+   "question": "Is there a black suitcase?",
+   "box": [
+    450,
+    750,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "ticket",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the green hat holds a ticket",
+   "question": "Is the man in the green hat holding a ticket?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is sitting",
+   "question": "Is the woman in the blue coat sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is standing",
+   "question": "Is the man in the green hat standing?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the green hat is next to the woman in the blue coat",
+   "question": "Is the man in the green hat next to the woman in the blue coat?"
+  },
+  {
+   "id": "man_pointing_suitcase",
+   "type": "action",
+   "of": [
+    "man",
+    "suitcase"
+   ],
+   "desc": "the man in the green hat points at the black suitcase",
+   "question": "Is the man in the green hat pointing at the black suitcase?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat looks at the man in the green hat",
+   "question": "Is the woman in the blue coat looking at the man in the green hat?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "airplane",
+   "question": "Is there an airplane visible in the background?"
+  },
+  {
+   "id": "suitcase_on_floor",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the black suitcase rests on the floor",
+   "question": "Is the black suitcase resting on the floor?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0064",
+ "prompt": "In an anime style scene at an airport gate, a woman in a blue coat sits on the left. Next to her on the right stands a man in a green hat holding a ticket. In the center, a black suitcase rests on the floor. The man in the green hat is pointing at the black suitcase. The woman in the blue coat is looking at the man in the green hat. There is no airplane visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

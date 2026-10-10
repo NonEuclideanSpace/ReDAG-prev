@@ -1,0 +1,167 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim backstage area with rough graphite lines and faint watercolor tints",
+   "question": "Does the image show a dim backstage area rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman wearing a blue dress?",
+   "box": [
+    550,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    580,
+    600,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "man_holding_script",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a script in his hands",
+   "question": "Is the man in the red scarf holding a script in his hands?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress looks at the man in the red scarf",
+   "question": "Is the woman in the blue dress looking at the man in the red scarf?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the woman in the blue dress sits on the wooden crate",
+   "question": "Is the woman in the blue dress sitting on the wooden crate?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is next to the man in the red scarf",
+   "question": "Is the woman in the blue dress next to the man in the red scarf?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "an audience",
+   "question": "Is there an audience visible in the image?"
+  },
+  {
+   "id": "woman_attention",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress has an expression of quiet attention",
+   "question": "Does the woman in the blue dress have an expression of quiet attention?"
+  },
+  {
+   "id": "script_tight",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf holds the script tightly",
+   "question": "Is the man in the red scarf holding the script tightly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0031",
+ "prompt": "In a pencil sketch with light color wash, a man in a red scarf stands on the left side of the dim backstage area. He is holding a script tightly in his hands. Next to him on the right sits a woman in a blue dress on a wooden crate. She is looking at the man with quiet attention. The rough graphite lines define their forms while faint watercolor tints add subtle depth to the scene. There is no audience visible in this private moment behind the curtain. The two figures remain the sole focus within the sketched environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

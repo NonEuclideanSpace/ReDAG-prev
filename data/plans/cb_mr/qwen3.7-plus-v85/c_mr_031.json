@@ -1,0 +1,502 @@
+{
+ "style": "photorealistic sci-fi illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a chaotic robot workshop interior",
+   "question": "Does the image show a chaotic robot workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long metal workbench",
+   "question": "Is there a long metal workbench?",
+   "box": [
+    300,
+    500,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red bipedal robot with a camera for a head",
+   "question": "Is there a large red bipedal robot with a camera for a head?",
+   "box": [
+    400,
+    150,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "drone",
+   "type": "entity",
+   "class": "quadcopter drone",
+   "plural": "quadcopter drones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small older-looking blue quadcopter drone",
+   "question": "Is there a small blue quadcopter drone?",
+   "box": [
+    100,
+    250,
+    350,
+    500
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pristine toolbox",
+   "question": "Is there a pristine toolbox?",
+   "box": [
+    750,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "power_cell",
+   "type": "entity",
+   "class": "power cell",
+   "plural": "power cells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing green power cell",
+   "question": "Is there a glowing green power cell?",
+   "box": [
+    680,
+    400,
+    730,
+    450
+   ]
+  },
+  {
+   "id": "schematic",
+   "type": "entity",
+   "class": "schematic diagram",
+   "plural": "schematic diagrams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a detailed schematic diagram",
+   "question": "Is there a detailed schematic diagram?",
+   "box": [
+    400,
+    520,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "screws",
+   "type": "entity",
+   "class": "screw",
+   "plural": "screws",
+   "count": 4,
+   "count_exact": true,
+   "desc": "loose screws",
+   "question": "Are there exactly four loose screws?",
+   "box": [
+    620,
+    530,
+    680,
+    580
+   ]
+  },
+  {
+   "id": "gears",
+   "type": "entity",
+   "class": "gear",
+   "plural": "gears",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three broken gears",
+   "question": "Are there exactly three broken gears?",
+   "box": [
+    450,
+    860,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "cable",
+   "type": "entity",
+   "class": "cable",
+   "plural": "cables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single red cable",
+   "question": "Is there a single red cable?",
+   "box": [
+    650,
+    350,
+    700,
+    420
+   ]
+  },
+  {
+   "id": "robotic_arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic arm component of the workbench holding a welding torch",
+   "question": "Is there a robotic arm component of the workbench?",
+   "box": [
+    300,
+    450,
+    400,
+    550
+   ]
+  },
+  {
+   "id": "robot_standing",
+   "type": "state",
+   "of": "robot",
+   "desc": "the large red bipedal robot is standing",
+   "question": "Is the large red bipedal robot standing?"
+  },
+  {
+   "id": "drone_hovering",
+   "type": "state",
+   "of": "drone",
+   "desc": "the blue quadcopter drone is hovering",
+   "question": "Is the blue quadcopter drone hovering?"
+  },
+  {
+   "id": "drone_facing_robot",
+   "type": "state",
+   "of": "drone",
+   "desc": "the blue quadcopter drone is facing the large red bipedal robot",
+   "question": "Is the blue quadcopter drone facing the large red bipedal robot?"
+  },
+  {
+   "id": "robot_holding_cell",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large red bipedal robot holds the glowing green power cell in its right claw-hand",
+   "question": "Is the large red bipedal robot holding the glowing green power cell in its right claw-hand?"
+  },
+  {
+   "id": "drone_holding_screwdriver",
+   "type": "attribute",
+   "of": "drone",
+   "desc": "the blue quadcopter drone holds a tiny screwdriver",
+   "question": "Is the blue quadcopter drone holding a tiny screwdriver?"
+  },
+  {
+   "id": "arm_holding_torch",
+   "type": "attribute",
+   "of": "robotic_arm",
+   "desc": "the robotic arm holds a welding torch",
+   "question": "Is the robotic arm holding a welding torch?"
+  },
+  {
+   "id": "robot_pushing_toolbox",
+   "type": "action",
+   "of": [
+    "robot",
+    "toolbox"
+   ],
+   "desc": "the large red bipedal robot pushes the pristine newer-looking toolbox with its left hand",
+   "question": "Is the large red bipedal robot pushing the pristine newer-looking toolbox with its left hand?"
+  },
+  {
+   "id": "drone_pointing_screwdriver",
+   "type": "action",
+   "of": [
+    "drone",
+    "robot"
+   ],
+   "desc": "the blue quadcopter drone points the tiny screwdriver at a panel on the chest of the large red bipedal robot",
+   "question": "Is the blue quadcopter drone pointing the tiny screwdriver at a panel on the chest of the large red bipedal robot?"
+  },
+  {
+   "id": "arm_pointing_torch",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "robot"
+   ],
+   "desc": "the robotic arm points the welding torch away from the large red bipedal robot",
+   "question": "Is the robotic arm pointing the welding torch away from the large red bipedal robot?"
+  },
+  {
+   "id": "robot_looking_drone",
+   "type": "action",
+   "of": [
+    "robot",
+    "drone"
+   ],
+   "desc": "the large red bipedal robot looks at the blue quadcopter drone",
+   "question": "Is the large red bipedal robot looking at the blue quadcopter drone?"
+  },
+  {
+   "id": "robot_front_bench",
+   "type": "relation",
+   "of": [
+    "robot",
+    "workbench"
+   ],
+   "desc": "the large red bipedal robot is in front of the long metal workbench",
+   "question": "Is the large red bipedal robot in front of the long metal workbench?"
+  },
+  {
+   "id": "drone_left_robot",
+   "type": "relation",
+   "of": [
+    "drone",
+    "robot"
+   ],
+   "desc": "the blue quadcopter drone is to the left of the large red bipedal robot",
+   "question": "Is the blue quadcopter drone to the left of the large red bipedal robot?"
+  },
+  {
+   "id": "toolbox_nearby",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "workbench"
+   ],
+   "desc": "the pristine newer-looking toolbox is near the long metal workbench",
+   "question": "Is the pristine newer-looking toolbox near the long metal workbench?"
+  },
+  {
+   "id": "schematic_on_bench",
+   "type": "relation",
+   "of": [
+    "schematic",
+    "workbench"
+   ],
+   "desc": "the detailed schematic diagram lies flat on top of the long metal workbench",
+   "question": "Is the detailed schematic diagram lying flat on top of the long metal workbench?"
+  },
+  {
+   "id": "screws_near_diagram",
+   "type": "relation",
+   "of": [
+    "screws",
+    "schematic"
+   ],
+   "desc": "the loose screws are near the detailed schematic diagram",
+   "question": "Are the loose screws near the detailed schematic diagram?"
+  },
+  {
+   "id": "gears_under_bench",
+   "type": "relation",
+   "of": [
+    "gears",
+    "workbench"
+   ],
+   "desc": "the three broken gears are under the long metal workbench",
+   "question": "Are the three broken gears under the long metal workbench?"
+  },
+  {
+   "id": "cable_connecting",
+   "type": "relation",
+   "of": [
+    "cable",
+    "power_cell",
+    "robot"
+   ],
+   "desc": "the single red cable connects the glowing green power cell to the chest of the large red bipedal robot",
+   "question": "Does the single red cable connect the glowing green power cell to the chest of the large red bipedal robot?"
+  },
+  {
+   "id": "robot_between",
+   "type": "relation",
+   "of": [
+    "robot",
+    "drone",
+    "workbench"
+   ],
+   "desc": "the large red bipedal robot is between the blue quadcopter drone and the long metal workbench",
+   "question": "Is the large red bipedal robot between the blue quadcopter drone and the long metal workbench?"
+  },
+  {
+   "id": "drone_height",
+   "type": "relation",
+   "of": [
+    "drone",
+    "robot"
+   ],
+   "desc": "the blue quadcopter drone is below the head of the large red bipedal robot",
+   "question": "Is the blue quadcopter drone below the head of the large red bipedal robot?"
+  },
+  {
+   "id": "screwdriver",
+   "type": "entity",
+   "class": "screwdriver",
+   "plural": "screwdrivers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny screwdriver",
+   "question": "Is there a tiny screwdriver?",
+   "box": [
+    200,
+    400,
+    250,
+    450
+   ]
+  },
+  {
+   "id": "welding_torch",
+   "type": "entity",
+   "class": "welding torch",
+   "plural": "welding torches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a welding torch",
+   "question": "Is there a welding torch?",
+   "box": [
+    800,
+    300,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "robot_right_hand",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large red bipedal robot has a right claw-hand",
+   "question": "Does the large red bipedal robot have a right claw-hand?"
+  },
+  {
+   "id": "robot_left_hand",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large red bipedal robot has a left hand",
+   "question": "Does the large red bipedal robot have a left hand?"
+  },
+  {
+   "id": "robot_chest_panel",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large red bipedal robot has a panel on its chest",
+   "question": "Does the large red bipedal robot have a panel on its chest?"
+  },
+  {
+   "id": "toolbox_handle",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "the pristine newer-looking toolbox has a handle on its top",
+   "question": "Does the pristine newer-looking toolbox have a handle on its top?"
+  },
+  {
+   "id": "drone_screwdriver_action",
+   "type": "action",
+   "of": [
+    "drone",
+    "screwdriver"
+   ],
+   "desc": "the blue quadcopter drone holds the tiny screwdriver",
+   "question": "Is the blue quadcopter drone holding the tiny screwdriver?"
+  },
+  {
+   "id": "arm_torch_action",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "welding_torch"
+   ],
+   "desc": "the robotic arm holds the welding torch",
+   "question": "Is the robotic arm holding the welding torch?"
+  },
+  {
+   "id": "screws_count",
+   "type": "attribute",
+   "of": "screws",
+   "desc": "there are four loose screws",
+   "question": "Are there exactly four loose screws?"
+  },
+  {
+   "id": "workbench_scratches",
+   "type": "attribute",
+   "of": "workbench",
+   "desc": "the workbench has numerous scratches and scorch marks",
+   "question": "Does the workbench have numerous scratches and scorch marks?"
+  },
+  {
+   "id": "robot_sleek",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot has a sleek and new design",
+   "question": "Does the robot have a sleek and new design?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "schematic",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "screws",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "robotic_arm",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "gears",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_031",
+ "prompt": "In a chaotic robot workshop, a large red bipedal robot is standing in front of a long metal workbench. The robot's design is sleek and new, contrasting with the small, older-looking blue quadcopter drone hovering to its left. The workbench shows numerous scratches and scorch marks, appearing more worn than the pristine, newer-looking toolbox nearby. The robot has a camera for a head and is using its right claw-hand to hold a glowing green power cell, which is the brightest object in the scene. The robot is simultaneously using its left hand to push the toolbox. The blue drone is facing the robot and holding a tiny screwdriver, pointing the screwdriver at a panel on the robot's chest. A detailed schematic diagram is lying flat on top of the workbench. Near the diagram are some loose screws. Under the workbench, there are three broken gears. The number of screws on the workbench is one more than the number of broken gears. The toolbox has a handle on its top. The robot is between the drone and the workbench. A single red cable is connecting the power cell to the robot's chest. The robot is looking at the drone. The drone is hovering above the floor but below the robot's head. The toolbox contains more tools than are lying on the workbench. A robotic arm, which is a component of the workbench itself, is holding a welding torch and pointing it away from the robot.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node robot: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 9,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

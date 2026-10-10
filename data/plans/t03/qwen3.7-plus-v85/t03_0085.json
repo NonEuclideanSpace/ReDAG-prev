@@ -1,0 +1,174 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hard hat",
+   "question": "Is there a woman in a blue hard hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in orange overalls",
+   "question": "Is there a man in orange overalls?",
+   "box": [
+    380,
+    180,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray cat",
+   "question": "Is there a gray cat?",
+   "box": [
+    700,
+    500,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    720,
+    600,
+    930,
+    900
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue hard hat holds a clipboard",
+   "question": "Is the woman in a blue hard hat holding a clipboard?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue hard hat is standing",
+   "question": "Is the woman in a blue hard hat standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in orange overalls points with his right hand",
+   "question": "Is the man in orange overalls pointing with his right hand?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is sitting",
+   "question": "Is the gray cat sitting?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue hard hat looks at the man in orange overalls",
+   "question": "Is the woman in a blue hard hat looking at the man in orange overalls?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the gray cat sits on the wooden crate",
+   "question": "Is the gray cat sitting on the wooden crate?"
+  },
+  {
+   "id": "crate_next_to_man",
+   "type": "relation",
+   "of": [
+    "crate",
+    "man"
+   ],
+   "desc": "the wooden crate is next to the man in orange overalls",
+   "question": "Is the wooden crate next to the man in orange overalls?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the background?"
+  },
+  {
+   "id": "man_pointing_horizon",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in orange overalls points toward the horizon",
+   "question": "Is the man in orange overalls pointing toward the horizon?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0085",
+ "prompt": "In an anime style scene at a shipyard dock, a woman in a blue hard hat stands on the left holding a clipboard. In the center, a man in orange overalls points toward the horizon with his right hand. On the right, a gray cat sits calmly on a wooden crate next to the man. The woman looks at the man while he gestures. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

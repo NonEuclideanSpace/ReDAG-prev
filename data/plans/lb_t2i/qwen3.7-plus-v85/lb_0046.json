@@ -1,0 +1,734 @@
+{
+ "style": "surreal photorealistic, dreamlike atmosphere, high contrast lighting, eerie mood",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked concrete driveway curving near a house with a porch and eaves",
+   "question": "Does the image show a cracked concrete driveway in front of a house with a porch?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "ash tree",
+   "plural": "ash trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a twisted ash tree",
+   "question": "Is there a twisted ash tree?",
+   "box": [
+    50,
+    0,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "rubber ball",
+   "plural": "rubber balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red rubber ball",
+   "question": "Is there a red rubber ball?",
+   "box": [
+    300,
+    700,
+    380,
+    780
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kinked garden hose",
+   "question": "Is there a kinked garden hose?",
+   "box": [
+    450,
+    650,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "marigolds",
+   "type": "entity",
+   "class": "marigold",
+   "plural": "marigolds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a patch of marigolds",
+   "question": "Is there a patch of marigolds?",
+   "box": [
+    400,
+    600,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "swing_set",
+   "type": "entity",
+   "class": "swing set",
+   "plural": "swing sets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden swing set",
+   "question": "Is there a wooden swing set?",
+   "box": [
+    600,
+    100,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small bicycle",
+   "question": "Is there a small bicycle?",
+   "box": [
+    650,
+    600,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "porch",
+   "type": "entity",
+   "class": "porch",
+   "plural": "porches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the edge of a porch",
+   "question": "Is there a porch edge visible?",
+   "box": [
+    0,
+    700,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cushion",
+   "type": "entity",
+   "class": "wicker cushion",
+   "plural": "wicker cushions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker cushion",
+   "question": "Is there a wicker cushion?",
+   "box": [
+    50,
+    750,
+    200,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with dappled fur",
+   "question": "Is there a cat with dappled fur?",
+   "box": [
+    100,
+    500,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "wind_chime",
+   "type": "entity",
+   "class": "wind chime",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wind chime",
+   "question": "Is there a wind chime?",
+   "box": [
+    100,
+    50,
+    200,
+    200
+   ]
+  },
+  {
+   "id": "clothesline",
+   "type": "entity",
+   "class": "clothesline",
+   "plural": "clotheslines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clothesline strung with tiny glass jars containing pulsing substances",
+   "question": "Is there a clothesline with tiny glass jars containing pulsing substances?",
+   "box": [
+    200,
+    100,
+    500,
+    200
+   ]
+  },
+  {
+   "id": "squirrel",
+   "type": "entity",
+   "class": "squirrel",
+   "plural": "squirrels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half sun-bleached squirrel",
+   "question": "Is there a half sun-bleached squirrel?",
+   "box": [
+    350,
+    150,
+    420,
+    220
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "human figure",
+   "plural": "human figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an indistinct, wavering human figure",
+   "question": "Is there an indistinct human figure?",
+   "box": [
+    800,
+    300,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "ball_glowing",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is glowing faintly",
+   "question": "Is the red rubber ball glowing faintly?"
+  },
+  {
+   "id": "wheel_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "one wheel of the bicycle is spinning",
+   "question": "Is one wheel of the bicycle spinning?"
+  },
+  {
+   "id": "cushion_on_porch",
+   "type": "relation",
+   "of": [
+    "cushion",
+    "porch"
+   ],
+   "desc": "the wicker cushion is on the porch",
+   "question": "Is the wicker cushion on the porch?"
+  },
+  {
+   "id": "bicycle_under_swing",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "swing_set"
+   ],
+   "desc": "the bicycle is beneath the swing set",
+   "question": "Is the bicycle beneath the swing set?"
+  },
+  {
+   "id": "seat_entangled_chain",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "swing_set"
+   ],
+   "desc": "the bicycle seat is entangled in the swing's chain",
+   "question": "Is the bicycle seat entangled in the swing's chain?"
+  },
+  {
+   "id": "cat_above_porch",
+   "type": "relation",
+   "of": [
+    "cat",
+    "porch"
+   ],
+   "desc": "the cat is suspended above the porch",
+   "question": "Is the cat suspended above the porch?"
+  },
+  {
+   "id": "cat_paw_toward_ball",
+   "type": "relation",
+   "of": [
+    "cat",
+    "ball"
+   ],
+   "desc": "the cat's outstretched paw is directed toward the ball",
+   "question": "Is the cat's outstretched paw directed toward the ball?"
+  },
+  {
+   "id": "hose_near_marigolds",
+   "type": "relation",
+   "of": [
+    "hose",
+    "marigolds"
+   ],
+   "desc": "the hose is near the marigolds",
+   "question": "Is the hose near the marigolds?"
+  },
+  {
+   "id": "ball_past_hose",
+   "type": "relation",
+   "of": [
+    "ball",
+    "hose"
+   ],
+   "desc": "the ball is positioned past the hose",
+   "question": "Is the ball positioned past the hose?"
+  },
+  {
+   "id": "squirrel_on_clothespin",
+   "type": "relation",
+   "of": [
+    "squirrel",
+    "clothesline"
+   ],
+   "desc": "the squirrel is perched on a clothespin on the clothesline",
+   "question": "Is the squirrel perched on a clothespin on the clothesline?"
+  },
+  {
+   "id": "chime_from_eaves",
+   "type": "relation",
+   "of": [
+    "wind_chime",
+    "eaves"
+   ],
+   "desc": "the wind chime is suspended from the eaves of the house",
+   "question": "Is the wind chime suspended from the eaves?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat sits motionless",
+   "question": "Is the cat sitting motionless?"
+  },
+  {
+   "id": "cat_paw_raised",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has one paw raised",
+   "question": "Does the cat have one paw raised?"
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is flicking",
+   "question": "Is the cat's tail flicking?"
+  },
+  {
+   "id": "squirrel_perching",
+   "type": "state",
+   "of": "squirrel",
+   "desc": "the squirrel perches",
+   "question": "Is the squirrel perching?"
+  },
+  {
+   "id": "squirrel_watching",
+   "type": "action",
+   "of": [
+    "squirrel",
+    "ball"
+   ],
+   "desc": "the squirrel watches the ball",
+   "question": "Is the squirrel watching the ball?"
+  },
+  {
+   "id": "figure_moving",
+   "type": "state",
+   "of": "figure",
+   "desc": "the figure moves",
+   "question": "Is the figure moving?"
+  },
+  {
+   "id": "cat_eyes_follow_ball",
+   "type": "action",
+   "of": [
+    "cat",
+    "ball"
+   ],
+   "desc": "the cat's eyes follow the ball",
+   "question": "Are the cat's eyes following the ball?"
+  },
+  {
+   "id": "squirrel_on_clothespin_entity",
+   "type": "entity",
+   "class": "clothespin",
+   "plural": "clothespins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted clothespin",
+   "question": "Is there a rusted clothespin?",
+   "box": [
+    850,
+    400,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "squirrel_on_clothespin_rel",
+   "type": "relation",
+   "of": [
+    "squirrel",
+    "squirrel_on_clothespin_entity"
+   ],
+   "desc": "the squirrel perches on the rusted clothespin",
+   "question": "Is the squirrel perching on the rusted clothespin?"
+  },
+  {
+   "id": "clothespin_on_clothesline",
+   "type": "relation",
+   "of": [
+    "squirrel_on_clothespin_entity",
+    "clothesline"
+   ],
+   "desc": "the rusted clothespin is on the clothesline",
+   "question": "Is the rusted clothespin on the clothesline?"
+  },
+  {
+   "id": "swing_set_chains_dangling",
+   "type": "state",
+   "of": "swing_set",
+   "desc": "the swing set's chains are dangling",
+   "question": "Are the swing set's chains dangling?"
+  },
+  {
+   "id": "bicycle_wheel_spinning_lazy",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "one wheel of the bicycle is spinning lazily",
+   "question": "Is one wheel of the bicycle spinning lazily?"
+  },
+  {
+   "id": "cat_leaping_suspended",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is suspended in mid-air",
+   "question": "Is the cat suspended in mid-air?"
+  },
+  {
+   "id": "cat_staring_viewer",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat stares at the viewer",
+   "question": "Is the cat staring at the viewer?"
+  },
+  {
+   "id": "house",
+   "type": "entity",
+   "class": "house",
+   "plural": "houses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a house behind the driveway",
+   "question": "Is there a house behind the driveway?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "eaves",
+   "type": "entity",
+   "class": "eaves",
+   "plural": "eaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the eaves of the house",
+   "question": "Are the eaves of the house visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    150
+   ]
+  },
+  {
+   "id": "tap",
+   "type": "entity",
+   "class": "tap",
+   "plural": "taps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tap connected to the garden hose",
+   "question": "Is there a tap connected to the garden hose?",
+   "box": [
+    800,
+    600,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "cat_eyes_intensity",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat's eyes show eerie intensity",
+   "question": "Do the cat's eyes show eerie intensity?"
+  },
+  {
+   "id": "squirrel_tail_curling",
+   "type": "state",
+   "of": "squirrel",
+   "desc": "the squirrel's tail is curling",
+   "question": "Is the squirrel's tail curling?"
+  },
+  {
+   "id": "ball_looping",
+   "type": "state",
+   "of": "ball",
+   "desc": "the ball appears to have rolled through itself, looping back",
+   "question": "Does the ball appear to have rolled through itself, looping back?"
+  },
+  {
+   "id": "jars_darkening",
+   "type": "state",
+   "of": "clothesline",
+   "desc": "the glass jars on the clothesline are momentarily darkening",
+   "question": "Are the glass jars on the clothesline momentarily darkening?"
+  },
+  {
+   "id": "chime_pausing",
+   "type": "state",
+   "of": "wind_chime",
+   "desc": "the wind chime is pausing its motion",
+   "question": "Is the wind chime pausing its motion?"
+  },
+  {
+   "id": "wheel_slowing",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle's wheel is slowing down",
+   "question": "Is the bicycle's wheel slowing down?"
+  },
+  {
+   "id": "swing_set_from_eaves",
+   "type": "relation",
+   "of": [
+    "swing_set",
+    "house"
+   ],
+   "desc": "the swing set is suspended from or attached near the house eaves",
+   "question": "Is the swing set suspended from or attached near the house eaves?"
+  },
+  {
+   "id": "hose_connected_tap",
+   "type": "relation",
+   "of": [
+    "hose",
+    "tap"
+   ],
+   "desc": "the garden hose is connected to the tap",
+   "question": "Is the garden hose connected to the tap?"
+  },
+  {
+   "id": "no_laundry",
+   "type": "absent",
+   "desc": "laundry on the clothesline",
+   "question": "Is there any laundry on the clothesline?"
+  },
+  {
+   "id": "ball_at_swing_base",
+   "type": "relation",
+   "of": [
+    "ball",
+    "swing_set"
+   ],
+   "desc": "the red rubber ball is at the base of the wooden swing set",
+   "question": "Is the red rubber ball at the base of the wooden swing set?"
+  },
+  {
+   "id": "cat_sitting_state",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting",
+   "question": "Is the cat sitting?"
+  },
+  {
+   "id": "clothesline_behind_chime",
+   "type": "relation",
+   "of": [
+    "clothesline",
+    "wind_chime"
+   ],
+   "desc": "the clothesline is behind the wind chime",
+   "question": "Is the clothesline behind the wind chime?"
+  },
+  {
+   "id": "ball_past_marigolds",
+   "type": "relation",
+   "of": [
+    "ball",
+    "marigolds"
+   ],
+   "desc": "the red rubber ball is past the patch of marigolds",
+   "question": "Is the red rubber ball past the patch of marigolds?"
+  },
+  {
+   "id": "tree_leaves_translucent",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the leaves of the twisted ash tree are bleached to translucent parchment",
+   "question": "Are the leaves of the twisted ash tree bleached to translucent parchment?"
+  },
+  {
+   "id": "ball_dew",
+   "type": "attribute",
+   "of": "ball",
+   "desc": "the surface of the red rubber ball is slick with dew",
+   "question": "Is the surface of the red rubber ball slick with dew?"
+  },
+  {
+   "id": "ball_luminous_smears",
+   "type": "attribute",
+   "of": "ball",
+   "desc": "the red rubber ball is smeared with something faintly luminous",
+   "question": "Is the red rubber ball smeared with something faintly luminous?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose is coiled",
+   "question": "Is the garden hose coiled?"
+  },
+  {
+   "id": "hose_deflated",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose is half-deflated",
+   "question": "Is the garden hose half-deflated?"
+  },
+  {
+   "id": "marigolds_drooping",
+   "type": "state",
+   "of": "marigolds",
+   "desc": "the marigolds are drooping",
+   "question": "Are the marigolds drooping?"
+  },
+  {
+   "id": "marigolds_petals_curled",
+   "type": "attribute",
+   "of": "marigolds",
+   "desc": "the petals of the marigolds are curled inward",
+   "question": "Are the petals of the marigolds curled inward?"
+  },
+  {
+   "id": "swing_set_planks_warped",
+   "type": "attribute",
+   "of": "swing_set",
+   "desc": "the planks of the wooden swing set are warped",
+   "question": "Are the planks of the wooden swing set warped?"
+  },
+  {
+   "id": "bicycle_upside_down",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the small bicycle is resting upside down",
+   "question": "Is the small bicycle resting upside down?"
+  },
+  {
+   "id": "bicycle_fenders_rusted",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the chrome fenders of the small bicycle are rusted",
+   "question": "Are the chrome fenders of the small bicycle rusted?"
+  },
+  {
+   "id": "cat_paw_outstretched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat has one paw outstretched",
+   "question": "Does the cat have one paw outstretched?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "porch",
+   "to": "cushion",
+   "kind": "support"
+  },
+  {
+   "from": "clothesline",
+   "to": "squirrel_on_clothespin_entity",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0046",
+ "prompt": "The morning sun spills through the skeletal arms of a twisted ash tree, its leaves bleached to translucent parchment, casting fractal shadows across the cracked driveway. A child’s red rubber ball rolls with an uncanny momentum, gliding over the rough concrete as if drawn by an unseen force, its surface slick with dew and smeared with something faintly luminous—perhaps the ghostly residue of a dream spilled from the house behind it. A garden hose, kinked and half-deflated, coils like a coiled serpent near a patch of marigolds that droop under the weight of their own decay, petals curled inward as if holding their breath. The ball skitters past them, brushing against the hose with a soft hiss, and for a moment the water seems to rouse inside, though no one is at the tap. It halts abruptly at the base of a wooden swing set, its planks warped by years of sun and shadow, the chains dangling like skeletal fingers. Resting upside down beneath the swing is a small bicycle, its chrome fenders rusted, one wheel spinning lazily as if propelled by some invisible breeze. The bicycle’s seat is inexplicably entangled in the swing’s chain, the two mechanisms locked in a dance of motion and stasis, as if the swing’s forward motion has somehow turned the bicycle into a reluctant participant in its own orbit. Above, the chain creaks in slow, deliberate arcs, and with each swing, the bicycle’s tires spin faster—yet the bike remains perfectly still. At the edge of the porch, a cat sits motionless on a wicker cushion, its fur dappled in the shifting light, one paw raised as if mid-pounce. Its eyes follow the ball with eerie intensity, its tail flicking in a rhythm that matches the bicycle’s wheel rotations. A wind chime, suspended from the eaves, does not chime but hums a low, resonant note, as though the air itself is vibrating with the tension of the scene. A clothesline sways behind it, strung with not laundry but tiny, glass jars—each filled with something that pulses faintly in the light, as if holding the essence of time itself. A squirrel, half its body sun-bleached, perches on a rusted clothespin, watching the ball with a curious intelligence, its tail curling like the tail of the cat. In the distance, a figure moves through the background, indistinct and wavering, as if part of the scene but not of it—a trick of perspective, or perhaps the architect of the scene’s strange logic. The driveway curves in an impossible way near the swing set, folding back on itself slightly, and for a fleeting second, it appears as if the ball has rolled *through* itself, looping back in a paradox of time and motion. The cat leaps suddenly, but instead of landing on the swing or the ground, it lands in the air, suspended above the porch, a single paw outstretched toward the ball, which now glows faintly, as if it is the source of all this strange energy. The cat’s leap has created a ripples—both literal and temporal—the bicycle’s wheel slowing, the wind chime pausing, the jars on the line momentarily darkening. The cat, frozen in its descent, stares not at the ball but at the viewer, and in that eye contact, the scene holds its breath, suspended in a moment that defies cause and effect, logic and linearity, a dream stitched into the seams of reality.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 14,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 66,
+   "n_uncovered": 6,
+   "proposed": 6,
+   "ungrounded": 2,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cat_tail_flicking_rhythm",
+     "cat_tail_flicking"
+    ]
+   ]
+  }
+ }
+}

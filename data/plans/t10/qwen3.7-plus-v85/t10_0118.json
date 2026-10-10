@@ -1,0 +1,332 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy airport gate with a boarding door and a window",
+   "question": "Does the image show a busy airport gate?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with short blue hair",
+   "question": "Is there a woman with short blue hair?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man wearing a tweed cap",
+   "question": "Is there an elderly man wearing a tweed cap?",
+   "box": [
+    380,
+    300,
+    644,
+    800
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright yellow suitcase",
+   "question": "Is there a bright yellow suitcase?",
+   "box": [
+    680,
+    650,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat",
+   "question": "Is there a small white cat?",
+   "box": [
+    860,
+    700,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "attendant",
+   "type": "entity",
+   "class": "flight attendant",
+   "plural": "flight attendants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flight attendant in a navy uniform",
+   "question": "Is there a flight attendant in a navy uniform?",
+   "box": [
+    400,
+    150,
+    624,
+    600
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager with green headphones",
+   "question": "Is there a teenager with green headphones?",
+   "box": [
+    850,
+    250,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "woman_passport",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman with short blue hair holds a passport",
+   "question": "Is the woman with short blue hair holding a passport?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat is sleeping peacefully",
+   "question": "Is the small white cat sleeping peacefully?"
+  },
+  {
+   "id": "teenager_phone",
+   "type": "attribute",
+   "of": "teenager",
+   "desc": "the teenager looks at a smartphone",
+   "question": "Is the teenager looking at a smartphone?"
+  },
+  {
+   "id": "woman_behind_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman stands near the bench area",
+   "question": "Is the woman positioned near the bench area?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the metal bench",
+   "question": "Is the elderly man sitting on the metal bench?"
+  },
+  {
+   "id": "suitcase_right_of_man",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "man"
+   ],
+   "desc": "the yellow suitcase is to the right of the elderly man",
+   "question": "Is the yellow suitcase to the right of the elderly man?"
+  },
+  {
+   "id": "cat_next_to_suitcase",
+   "type": "relation",
+   "of": [
+    "cat",
+    "suitcase"
+   ],
+   "desc": "the small white cat is next to the yellow suitcase",
+   "question": "Is the small white cat next to the yellow suitcase?"
+  },
+  {
+   "id": "attendant_behind_group",
+   "type": "relation",
+   "of": [
+    "attendant",
+    "man"
+   ],
+   "desc": "the flight attendant is behind the elderly man and the woman",
+   "question": "Is the flight attendant behind the elderly man and the woman?"
+  },
+  {
+   "id": "attendant_points_door",
+   "type": "relation",
+   "of": [
+    "attendant",
+    "boarding_door"
+   ],
+   "desc": "the flight attendant points toward the boarding door",
+   "question": "Is the flight attendant pointing toward the boarding door?"
+  },
+  {
+   "id": "woman_hands_ticket",
+   "type": "action",
+   "of": [
+    "woman",
+    "attendant"
+   ],
+   "desc": "the woman hands a ticket to the flight attendant",
+   "question": "Is the woman handing a ticket to the flight attendant?"
+  },
+  {
+   "id": "man_looks_cat",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the elderly man looks at the small white cat",
+   "question": "Is the elderly man looking at the small white cat?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane visible through the window",
+   "question": "Is there an airplane visible through the window?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with short blue hair stands",
+   "question": "Is the woman with short blue hair standing?"
+  },
+  {
+   "id": "attendant_pointing",
+   "type": "relation",
+   "of": [
+    "attendant",
+    "boarding_door"
+   ],
+   "desc": "the flight attendant in a navy uniform points toward the boarding door",
+   "question": "Is the flight attendant in a navy uniform pointing toward the boarding door?"
+  },
+  {
+   "id": "boarding_door",
+   "type": "entity",
+   "class": "boarding door",
+   "plural": "boarding doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boarding door",
+   "question": "Is there a boarding door?",
+   "box": [
+    800,
+    100,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    100,
+    50,
+    300,
+    300
+   ]
+  },
+  {
+   "id": "suitcase_wheels",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the bright yellow suitcase has wheels",
+   "question": "Does the bright yellow suitcase have wheels?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0118",
+ "prompt": "In a vibrant anime style, the scene unfolds at a busy airport gate. On the left stands a woman with short blue hair holding a passport. In the center sits an elderly man in a tweed cap on a metal bench. To his right rests a bright yellow suitcase with wheels. Next to the suitcase, a small white cat sleeps peacefully. Behind them, a flight attendant in a navy uniform points toward the boarding door. On the far right, a teenager with green headphones looks at a smartphone. The woman with short blue hair is handing her ticket to the flight attendant. The elderly man in the tweed cap is looking at the small white cat. There is no airplane visible through the window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

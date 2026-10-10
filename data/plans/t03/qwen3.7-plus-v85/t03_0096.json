@@ -1,0 +1,193 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate interior with a window",
+   "question": "Does the image show an airport gate interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    670,
+    150,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "metal chair",
+   "plural": "metal chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal chair",
+   "question": "Is there a metal chair?",
+   "box": [
+    680,
+    400,
+    960,
+    950
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright yellow suitcase",
+   "question": "Is there a bright yellow suitcase?",
+   "box": [
+    412,
+    600,
+    612,
+    850
+   ]
+  },
+  {
+   "id": "woman_boarding_pass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a boarding pass",
+   "question": "Is the woman in a blue coat holding a boarding pass?"
+  },
+  {
+   "id": "man_watch",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a gray suit checks his watch",
+   "question": "Is the man in a gray suit checking his watch?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit is sitting",
+   "question": "Is the man in a gray suit sitting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue coat is looking at the man in a gray suit",
+   "question": "Is the woman in a blue coat looking at the man in a gray suit?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in a gray suit is sitting on the metal chair",
+   "question": "Is the man in a gray suit sitting on the metal chair?"
+  },
+  {
+   "id": "suitcase_between",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "woman",
+    "man"
+   ],
+   "desc": "the bright yellow suitcase is between the woman in a blue coat and the man in a gray suit",
+   "question": "Is the bright yellow suitcase positioned between the woman in a blue coat and the man in a gray suit?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane visible through the window",
+   "question": "Is there an airplane visible through the window?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window in the airport gate",
+   "question": "Is there a window in the airport gate?",
+   "box": [
+    300,
+    50,
+    724,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0096",
+ "prompt": "In an anime style scene at an airport gate, a woman in a blue coat stands on the left holding a boarding pass. A man in a gray suit sits on the right checking his watch. Between them, center stage, rests a bright yellow suitcase. The woman is looking at the man. The man is sitting on a metal chair. There is no airplane visible through the window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

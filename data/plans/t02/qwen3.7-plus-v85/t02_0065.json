@@ -1,0 +1,121 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a harvest scene background",
+   "question": "Does the image depict a harvest scene background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hat",
+   "question": "Is there a woman in a yellow hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarecrow with a blue shirt",
+   "question": "Is there a scarecrow?",
+   "box": [
+    400,
+    150,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a yellow hat holds a basket of corn",
+   "question": "Is the woman in a yellow hat holding a basket of corn?"
+  },
+  {
+   "id": "scarecrow_upright",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow with a blue shirt stands rigidly upright",
+   "question": "Is the scarecrow with a blue shirt standing rigidly upright?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "scarecrow"
+   ],
+   "desc": "the woman in a yellow hat looks at the scarecrow with a blue shirt",
+   "question": "Is the woman in a yellow hat looking at the scarecrow with a blue shirt?"
+  },
+  {
+   "id": "woman_next_to_scarecrow",
+   "type": "relation",
+   "of": [
+    "woman",
+    "scarecrow"
+   ],
+   "desc": "the woman in a yellow hat stands next to the scarecrow with a blue shirt",
+   "question": "Is the woman in a yellow hat standing next to the scarecrow with a blue shirt?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "scarecrow_shirt",
+   "type": "attribute",
+   "of": "scarecrow",
+   "desc": "the scarecrow wears a blue shirt",
+   "question": "Does the scarecrow wear a blue shirt?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0065",
+ "prompt": "A flat vector illustration depicts a harvest scene. On the left, a woman in a yellow hat holds a basket of corn. In the center, a scarecrow with a blue shirt stands rigidly upright. The woman looks at the scarecrow while standing next to it. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,362 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet library reading room with historic interior details and a windowsill",
+   "question": "Does the image show a quiet library reading room with historic interior details?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    50,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    80,
+    200,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "oak table",
+   "plural": "oak tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large oak table",
+   "question": "Is there a large oak table?",
+   "box": [
+    300,
+    500,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "young_man",
+   "type": "entity",
+   "class": "young man",
+   "plural": "young men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in a blue hoodie",
+   "question": "Is there a young man in a blue hoodie?",
+   "box": [
+    400,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "textbook",
+   "type": "entity",
+   "class": "textbook",
+   "plural": "textbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open textbook",
+   "question": "Is there an open textbook?",
+   "box": [
+    450,
+    550,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "satchel",
+   "type": "entity",
+   "class": "satchel",
+   "plural": "satchels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown leather satchel",
+   "question": "Is there a brown leather satchel?",
+   "box": [
+    350,
+    850,
+    500,
+    980
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "rolling cart",
+   "plural": "rolling carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling cart",
+   "question": "Is there a rolling cart?",
+   "box": [
+    750,
+    450,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "librarian",
+   "type": "entity",
+   "class": "librarian",
+   "plural": "librarians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a librarian in a green vest",
+   "question": "Is there a librarian in a green vest?",
+   "box": [
+    700,
+    200,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "books_stack",
+   "type": "entity",
+   "class": "hardcover book",
+   "plural": "hardcover books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of hardcover books",
+   "question": "Is there a stack of hardcover books?",
+   "box": [
+    720,
+    500,
+    820,
+    600
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    750,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman with silver hair is sitting",
+   "question": "Is the elderly woman with silver hair sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in a blue hoodie is leaning over",
+   "question": "Is the young man in a blue hoodie leaning over?"
+  },
+  {
+   "id": "librarian_standing",
+   "type": "state",
+   "of": "librarian",
+   "desc": "the librarian in a green vest is standing",
+   "question": "Is the librarian in a green vest standing?"
+  },
+  {
+   "id": "librarian_holding_books",
+   "type": "attribute",
+   "of": "librarian",
+   "desc": "the librarian in a green vest holds a stack of hardcover books",
+   "question": "Is the librarian in a green vest holding a stack of hardcover books?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman with silver hair sits on the wooden chair",
+   "question": "Is the elderly woman with silver hair sitting on the wooden chair?"
+  },
+  {
+   "id": "man_at_table",
+   "type": "relation",
+   "of": [
+    "young_man",
+    "table"
+   ],
+   "desc": "the young man in a blue hoodie leans over the large oak table",
+   "question": "Is the young man in a blue hoodie leaning over the large oak table?"
+  },
+  {
+   "id": "librarian_beside_cart",
+   "type": "relation",
+   "of": [
+    "librarian",
+    "cart"
+   ],
+   "desc": "the librarian in a green vest stands beside the rolling cart",
+   "question": "Is the librarian in a green vest standing beside the rolling cart?"
+  },
+  {
+   "id": "satchel_near_man",
+   "type": "relation",
+   "of": [
+    "satchel",
+    "young_man"
+   ],
+   "desc": "the brown leather satchel lies on the floor near the young man's feet",
+   "question": "Is the brown leather satchel lying on the floor near the young man's feet?"
+  },
+  {
+   "id": "fern_behind_librarian",
+   "type": "relation",
+   "of": [
+    "fern",
+    "librarian"
+   ],
+   "desc": "the potted fern sits on the windowsill behind the librarian",
+   "question": "Is the potted fern sitting on the windowsill behind the librarian?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "young_man"
+   ],
+   "desc": "the elderly woman with silver hair is looking at the young man in a blue hoodie",
+   "question": "Is the elderly woman with silver hair looking at the young man in a blue hoodie?"
+  },
+  {
+   "id": "man_pointing_at_book",
+   "type": "action",
+   "of": [
+    "young_man",
+    "textbook"
+   ],
+   "desc": "the young man in a blue hoodie is pointing at a specific page in the open textbook",
+   "question": "Is the young man in a blue hoodie pointing at a specific page in the open textbook?"
+  },
+  {
+   "id": "librarian_handing_book",
+   "type": "action",
+   "of": [
+    "librarian",
+    "young_man"
+   ],
+   "desc": "the librarian in a green vest is handing a book to the young man in a blue hoodie",
+   "question": "Is the librarian in a green vest handing a book to the young man in a blue hoodie?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices",
+   "question": "Are there any electronic devices visible in the image?"
+  },
+  {
+   "id": "satchel_open",
+   "type": "state",
+   "of": "satchel",
+   "desc": "the brown leather satchel is open with its flap partially undone",
+   "question": "Is the brown leather satchel open with its flap partially undone?"
+  },
+  {
+   "id": "fern_lush",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the potted fern has lush and vibrant leaves",
+   "question": "Does the potted fern have lush and vibrant leaves?"
+  },
+  {
+   "id": "woman_upright",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman with silver hair has an upright and dignified posture",
+   "question": "Does the elderly woman with silver hair have an upright and dignified posture?"
+  },
+  {
+   "id": "man_elbow",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in a blue hoodie has his elbow resting firmly on the surface",
+   "question": "Does the young man in a blue hoodie have his elbow resting firmly on the surface?"
+  },
+  {
+   "id": "woman_silver_hair",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman has silver hair",
+   "question": "Does the elderly woman have silver hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "textbook",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0067",
+ "prompt": "A photorealistic photo captures a quiet library reading room. On the left, an elderly woman with silver hair sits on a wooden chair, her posture upright and dignified. In the center, a young man in a blue hoodie leans over a large oak table, his elbow resting firmly on the surface. To the right, a librarian in a green vest stands beside a rolling cart, holding a stack of hardcover books. A brown leather satchel lies open on the floor near the young man's feet, its flap partially undone. A potted fern sits on the windowsill behind the librarian, its leaves lush and vibrant. The elderly woman is looking at the young man, creating a subtle connection across the space. The young man is pointing at a specific page in an open textbook, drawing attention to the text. There is no electronic device visible in the scene, preserving the analog atmosphere. The librarian is handing a book to the young man, completing the triangular dynamic. The five distinct entities are clearly separated by their positions and actions, forming a balanced composition within the historic interior.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,640 @@
+{
+ "style": "surreal fantasy, ethereal lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stream with a muddied bank and a sky of translucent veiled clouds",
+   "question": "Does the image show a stream with a muddied bank and a sky filled with translucent, stained-glass-like clouds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "boots",
+   "type": "entity",
+   "class": "hiking boot",
+   "plural": "hiking boots",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two weathered hiking boots",
+   "question": "Are there two weathered hiking boots?",
+   "box": [
+    100,
+    600,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "canteen",
+   "type": "entity",
+   "class": "canteen",
+   "plural": "canteens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted canteen",
+   "question": "Is there a rusted canteen?",
+   "box": [
+    450,
+    650,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "stone",
+   "type": "entity",
+   "class": "flat stone",
+   "plural": "flat stones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flat stone",
+   "question": "Is there a flat stone?",
+   "box": [
+    440,
+    780,
+    620,
+    850
+   ]
+  },
+  {
+   "id": "twig",
+   "type": "entity",
+   "class": "twig",
+   "plural": "twigs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small fallen twig",
+   "question": "Is there a small fallen twig?",
+   "box": [
+    350,
+    550,
+    450,
+    650
+   ]
+  },
+  {
+   "id": "hummingbird",
+   "type": "entity",
+   "class": "hummingbird",
+   "plural": "hummingbirds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ghostly hummingbird",
+   "question": "Is there a ghostly hummingbird?",
+   "box": [
+    500,
+    200,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "bottles",
+   "type": "entity",
+   "class": "bottle",
+   "plural": "bottles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several hollowed-out glass bottles",
+   "question": "Are there several hollowed-out glass bottles?",
+   "box": [
+    480,
+    350,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "submerged log",
+   "plural": "submerged logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-submerged log in the stream",
+   "question": "Is there a half-submerged log in the stream?",
+   "box": [
+    50,
+    700,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "beetle",
+   "type": "entity",
+   "class": "beetle",
+   "plural": "beetles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a beetle",
+   "question": "Is there a beetle?",
+   "box": [
+    241,
+    741,
+    289,
+    789
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 10,
+   "count_exact": false,
+   "desc": "tiny ants",
+   "question": "Are there tiny ants?",
+   "box": [
+    480,
+    680,
+    580,
+    750
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a small flock of birds",
+   "question": "Is there a small flock of birds?",
+   "box": [
+    100,
+    50,
+    300,
+    150
+   ]
+  },
+  {
+   "id": "craters",
+   "type": "entity",
+   "class": "crater",
+   "plural": "craters",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shallow ground craters",
+   "question": "Are there shallow ground craters?",
+   "box": [
+    300,
+    850,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "boots_buried",
+   "type": "state",
+   "of": "boots",
+   "desc": "the hiking boots are half-buried in mud",
+   "question": "Are the hiking boots half-buried in mud?"
+  },
+  {
+   "id": "laces_dangling",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boot laces are dangling",
+   "question": "Are the boot laces dangling?"
+  },
+  {
+   "id": "moss_glowing",
+   "type": "state",
+   "of": "canteen",
+   "desc": "the moss on the canteen is glowing in pulses",
+   "question": "Is the moss on the canteen glowing in pulses?"
+  },
+  {
+   "id": "hummingbird_hovering",
+   "type": "state",
+   "of": "hummingbird",
+   "desc": "the hummingbird is hovering in midair with wings folded",
+   "question": "Is the hummingbird hovering in midair with wings folded?"
+  },
+  {
+   "id": "shadow_spiral",
+   "type": "attribute",
+   "of": "twig",
+   "desc": "the twig casts a spiral shadow",
+   "question": "Does the twig cast a spiral shadow?"
+  },
+  {
+   "id": "boots_on_bank",
+   "type": "relation",
+   "of": [
+    "boots",
+    "log"
+   ],
+   "desc": "the boots are on the stream's muddied bank",
+   "question": "Are the boots on the stream's muddied bank?"
+  },
+  {
+   "id": "canteen_on_stone",
+   "type": "relation",
+   "of": [
+    "canteen",
+    "stone"
+   ],
+   "desc": "the canteen lies on the flat stone",
+   "question": "Does the canteen lie on the flat stone?"
+  },
+  {
+   "id": "stone_near_boot",
+   "type": "relation",
+   "of": [
+    "stone",
+    "boots"
+   ],
+   "desc": "the stone is just beyond the boot's outstretched toe",
+   "question": "Is the stone just beyond the boot's outstretched toe?"
+  },
+  {
+   "id": "twig_near_boot",
+   "type": "relation",
+   "of": [
+    "twig",
+    "boots"
+   ],
+   "desc": "the twig is nearby the boot",
+   "question": "Is the twig nearby the boot?"
+  },
+  {
+   "id": "shadow_touches_boot",
+   "type": "relation",
+   "of": [
+    "twig",
+    "boots"
+   ],
+   "desc": "the twig's spiral shadow brushes the closest boot",
+   "question": "Does the twig's spiral shadow brush the closest boot?"
+  },
+  {
+   "id": "hummingbird_above_bottles",
+   "type": "relation",
+   "of": [
+    "hummingbird",
+    "bottles"
+   ],
+   "desc": "the hummingbird hovers above the ring of bottles",
+   "question": "Is the hummingbird hovering above the ring of bottles?"
+  },
+  {
+   "id": "shadow_on_bottles",
+   "type": "relation",
+   "of": [
+    "twig",
+    "bottles"
+   ],
+   "desc": "the bottles catch the spiraling shadow of the twig",
+   "question": "Do the bottles catch the spiraling shadow of the twig?"
+  },
+  {
+   "id": "ants_on_canteen",
+   "type": "relation",
+   "of": [
+    "ants",
+    "canteen"
+   ],
+   "desc": "the ants march across the canteen's surface",
+   "question": "Do the ants march across the canteen's surface?"
+  },
+  {
+   "id": "beetle_on_boot",
+   "type": "relation",
+   "of": [
+    "beetle",
+    "boots"
+   ],
+   "desc": "the beetle crawls along the boot's leather",
+   "question": "Is the beetle crawling along the boot's leather?"
+  },
+  {
+   "id": "beetle_near_canteen",
+   "type": "relation",
+   "of": [
+    "beetle",
+    "canteen"
+   ],
+   "desc": "the beetle tumbles toward the canteen's edge",
+   "question": "Is the beetle tumbling toward the canteen's edge?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "mist",
+   "type": "entity",
+   "class": "mist",
+   "plural": "mists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faint mist rising from the stream",
+   "question": "Is there a faint mist rising from the stream?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "pebble",
+   "type": "entity",
+   "class": "pebble",
+   "plural": "pebbles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small pebble rolling into the stream",
+   "question": "Is there a small pebble rolling into the stream?",
+   "box": [
+    300,
+    700,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "boots_laces_shimmering",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boot laces shimmer",
+   "question": "Do the boot laces shimmer?"
+  },
+  {
+   "id": "canteen_breathing",
+   "type": "state",
+   "of": "canteen",
+   "desc": "the canteen appears to breathe slowly and arrhythmically",
+   "question": "Does the canteen appear to breathe slowly and arrhythmically?"
+  },
+  {
+   "id": "log_groaning",
+   "type": "state",
+   "of": "log",
+   "desc": "the half-submerged log emits a low groan and shifts",
+   "question": "Does the half-submerged log appear to emit a low groan and shift?"
+  },
+  {
+   "id": "beetle_repelled",
+   "type": "action",
+   "of": [
+    "beetle",
+    "canteen"
+   ],
+   "desc": "the beetle is repelled by the mossy glow of the canteen and bounces back",
+   "question": "Is the beetle repelled by the mossy glow of the canteen and bouncing back?"
+  },
+  {
+   "id": "birds_formation",
+   "type": "state",
+   "of": "birds",
+   "desc": "the birds fly in tight formation",
+   "question": "Do the birds fly in tight formation?"
+  },
+  {
+   "id": "mist_rising",
+   "type": "relation",
+   "of": [
+    "mist",
+    "log"
+   ],
+   "desc": "the mist rises from the stream near the log",
+   "question": "Does the mist rise from the stream near the log?"
+  },
+  {
+   "id": "pebble_in_stream",
+   "type": "relation",
+   "of": [
+    "pebble",
+    "log"
+   ],
+   "desc": "the pebble rolls into the stream",
+   "question": "Does the pebble roll into the stream?"
+  },
+  {
+   "id": "shadow_distorted",
+   "type": "relation",
+   "of": [
+    "twig",
+    "hummingbird"
+   ],
+   "desc": "the ripples distort the shadow of the hummingbird cast by the twig",
+   "question": "Do the ripples distort the shadow of the hummingbird cast by the twig?"
+  },
+  {
+   "id": "mist_hummingbird",
+   "type": "relation",
+   "of": [
+    "mist",
+    "hummingbird"
+   ],
+   "desc": "the mist is guided by the ghostly hummingbird",
+   "question": "Is the mist shaped or guided by the ghostly hummingbird?"
+  },
+  {
+   "id": "bottles_ring",
+   "type": "state",
+   "of": "bottles",
+   "desc": "the hollowed-out bottles are arranged in a ring",
+   "question": "Are the hollowed-out bottles arranged in a ring?"
+  },
+  {
+   "id": "shadow_fractal",
+   "type": "relation",
+   "of": [
+    "twig",
+    "stone"
+   ],
+   "desc": "the twig's shadow forms a repeating fractal pattern on the stones",
+   "question": "Does the twig's shadow form a repeating fractal pattern on the stones?"
+  },
+  {
+   "id": "craters_recursive",
+   "type": "attribute",
+   "of": "craters",
+   "desc": "the craters contain miniature replicas of the scene in recursive loops",
+   "question": "Do the craters contain miniature replicas of the scene in recursive loops?"
+  },
+  {
+   "id": "mist_cursive",
+   "type": "state",
+   "of": "mist",
+   "desc": "the mist fans upward in cursive patterns",
+   "question": "Does the mist fan upward in cursive patterns?"
+  },
+  {
+   "id": "hummingbird_translucent",
+   "type": "attribute",
+   "of": "hummingbird",
+   "desc": "the hummingbird has a translucent body",
+   "question": "Is the hummingbird's body translucent?"
+  },
+  {
+   "id": "bottles_hollowed",
+   "type": "attribute",
+   "of": "bottles",
+   "desc": "the bottles are hollowed-out and filled with stagnant water and strange seeds",
+   "question": "Are the bottles hollowed-out and filled with stagnant water and strange seeds?"
+  },
+  {
+   "id": "shadow_fractal_stones",
+   "type": "relation",
+   "of": [
+    "twig",
+    "bottles"
+   ],
+   "desc": "the twig's shadow bends into a fractal pattern across the stones/bottles",
+   "question": "Does the twig's shadow bend into a fractal pattern across the stones or bottles?"
+  },
+  {
+   "id": "log_submerged",
+   "type": "state",
+   "of": "log",
+   "desc": "the log is half-submerged beneath the stream's surface",
+   "question": "Is the log half-submerged beneath the stream's surface?"
+  },
+  {
+   "id": "beetle_bouncing",
+   "type": "action",
+   "of": [
+    "beetle",
+    "canteen"
+   ],
+   "desc": "the beetle bounces back from the canteen's mossy glow into the mud",
+   "question": "Does the beetle bounce back from the canteen's mossy glow into the mud?"
+  },
+  {
+   "id": "craters_miniature",
+   "type": "attribute",
+   "of": "craters",
+   "desc": "each crater contains a miniature replica of the scene shrinking in recursive loops",
+   "question": "Does each crater contain a miniature replica of the scene shrinking in recursive loops?"
+  },
+  {
+   "id": "mist_guided_hummingbird",
+   "type": "relation",
+   "of": [
+    "mist",
+    "hummingbird"
+   ],
+   "desc": "the mist is guided by the ghostly hummingbird",
+   "question": "Is the mist guided by the ghostly hummingbird?"
+  },
+  {
+   "id": "laces_in_water",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boot laces are in the water",
+   "question": "Are the boot laces in the water?"
+  },
+  {
+   "id": "boots_laces_snapped",
+   "type": "attribute",
+   "of": "boots",
+   "desc": "the hiking boots have snapped laces",
+   "question": "Do the hiking boots have snapped laces?"
+  },
+  {
+   "id": "canteen_moss",
+   "type": "attribute",
+   "of": "canteen",
+   "desc": "the canteen is coated in glowing moss",
+   "question": "Is the canteen coated in glowing moss?"
+  },
+  {
+   "id": "canteen_sealed",
+   "type": "attribute",
+   "of": "canteen",
+   "desc": "the canteen’s mouth is sealed with a tangle of leaves",
+   "question": "Is the canteen’s mouth sealed with a tangle of leaves?"
+  },
+  {
+   "id": "hummingbird_wings_folded",
+   "type": "state",
+   "of": "hummingbird",
+   "desc": "the hummingbird has folded wings",
+   "question": "Does the hummingbird have folded wings?"
+  },
+  {
+   "id": "craters_replicas",
+   "type": "attribute",
+   "of": "craters",
+   "desc": "the craters contain miniature replicas of the scene",
+   "question": "Do the craters contain miniature replicas of the scene?"
+  },
+  {
+   "id": "birds_iridescent",
+   "type": "attribute",
+   "of": "birds",
+   "desc": "the birds have iridescent feathers",
+   "question": "Do the birds have iridescent feathers?"
+  },
+  {
+   "id": "birds_wings_unison",
+   "type": "state",
+   "of": "birds",
+   "desc": "the birds' wings beat in unison",
+   "question": "Do the birds' wings beat in unison?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stone",
+   "to": "canteen",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0099",
+ "prompt": "The weathered hiking boots, half-buried in the stream’s muddied bank, seem less abandoned than abandoned *by time itself*—as if they had walked themselves here, then forgotten the journey. Their laces, snapped and dangling, shimmer faintly as they sway in the water, not from the current but from the faint hum of an unseen magnetic field. Just beyond the boot’s outstretched toe, a rusted canteen lies on a flat stone, its metal surface pitted with age and now coated in a strange moss that glows in pulses, as if responding to the canteen’s slow, arrhythmic breathing. The canteen’s mouth is sealed with a tangle of leaves, yet tiny ants march in solemn procession across its surface, not to devour it but to carry fragments of light it emits—fragments of sunlight refracted through a nearby fallen twig, which, though small, casts a spiral shadow that loops back and brushes the very boot that lies closest to it. A faint mist rises from the stream, but it does not rise evenly; it fans upward in cursive patterns, guided by the invisible air currents shaped by a ghostly hummingbird suspended in midair, its wings folded, its body translucent, hovering above a ring of stones that are, in fact, hollowed-out bottles filled with stagnant water and strange seeds. These bottles catch the spiraling shadow of the twig, bending it into a fractal that repeats across the stones, each iteration subtly shifting, as if the pattern is alive and dreaming. A half-submerged log beneath the stream’s surface emits a low groan, and as it shifts, it triggers a cascade of tiny events: a pebble rolls into the stream, causing ripples that distort the shadow of the hummingbird; a beetle crawling along the boot’s leather slips, disturbed by the vibrations, and tumbles toward the canteen’s edge, only to find itself repelled by the mossy glow, bouncing back like a deflated balloon into the mud. Above, the sky is not blue but a shifting patchwork of translucent veils—clouds stacked like stained glass—through which filtered beams of gold and violet spill, each beam bending oddly as it passes through the spiral shadow, warping the air in such a way that the canteen appears to breathe in tandem with the boot’s half-sunken toe. A small flock of birds flies in tight formation, their wings beating in perfect unison with the pulse of the moss on the canteen, their feathers shimmering with the same iridescent hue as the ant-carried fragments of light. Somewhere between the log and the boot, the ground is pocked with shallow craters, each containing a miniature replica of the scene—boot, canteen, twig, ant parade—shrinking in recursive loops, a universe within a universe, where each level is older, darker, and more still than the last. And yet, the scene is not dead. It hums. It breathes. It shifts in ways the eye cannot fully track, a tapestry of interwoven lives and things that are not quite alive, held together by a logic so ancient and alien it defies capture, yet so coherent that to witness it is to feel, for a moment, as if the world has become both stranger and more true.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 11,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 60,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "beetle_tumbling",
+     "beetle_near_canteen"
+    ]
+   ]
+  }
+ }
+}

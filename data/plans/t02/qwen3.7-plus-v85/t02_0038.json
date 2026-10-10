@@ -1,0 +1,105 @@
+{
+ "style": "cinematic film still, night, shallow depth of field",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop at night with blurred city lights in the background",
+   "question": "Does the image show a rooftop at night with blurred city lights in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    674,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a silver dress holds a champagne flute",
+   "question": "Is the woman in a silver dress holding a champagne flute?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black tuxedo looks directly at the woman",
+   "question": "Is the man in a black tuxedo looking directly at the woman in a silver dress?"
+  },
+  {
+   "id": "eye_contact",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman and the man share eye contact",
+   "question": "Are the woman in a silver dress and the man in a black tuxedo making eye contact?"
+  },
+  {
+   "id": "no_furniture",
+   "type": "absent",
+   "desc": "furniture",
+   "question": "Is there any furniture visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a silver dress stands",
+   "question": "Is the woman in a silver dress standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0038",
+ "prompt": "A cinematic film still captures a rooftop party at night. On the left, a woman in a silver dress stands holding a champagne flute. In the center, a man in a black tuxedo looks directly at her. The two figures share a moment of eye contact across the space between them. There is no furniture visible in the scene. The background features blurred city lights.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

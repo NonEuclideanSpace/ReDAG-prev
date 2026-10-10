@@ -1,0 +1,600 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, high contrast, cold color palette",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy landscape with a forest of frozen trees and twisting tracks forming a loop",
+   "question": "Does the image show a snowy landscape with a forest of frozen trees and twisting tracks forming a loop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "train",
+   "type": "entity",
+   "class": "train",
+   "plural": "trains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colossal red train",
+   "question": "Is there a colossal red train?",
+   "box": [
+    100,
+    300,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    50,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "thermos",
+   "type": "entity",
+   "class": "thermos",
+   "plural": "thermoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dented thermos",
+   "question": "Is there a dented thermos?",
+   "box": [
+    76,
+    620,
+    124,
+    680
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weather-worn map folded in thirds",
+   "question": "Is there a weather-worn map folded in thirds?",
+   "box": [
+    130,
+    621,
+    180,
+    669
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of binoculars",
+   "question": "Is there a pair of binoculars?",
+   "box": [
+    190,
+    616,
+    240,
+    664
+   ]
+  },
+  {
+   "id": "raven",
+   "type": "entity",
+   "class": "raven",
+   "plural": "ravens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black raven",
+   "question": "Is there a black raven?",
+   "box": [
+    350,
+    750,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small lantern hanging from the train",
+   "question": "Is there a small lantern hanging from the train?",
+   "box": [
+    146,
+    280,
+    194,
+    330
+   ]
+  },
+  {
+   "id": "birdcage",
+   "type": "entity",
+   "class": "birdcage",
+   "plural": "birdcages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small open birdcage",
+   "question": "Is there a small open birdcage?",
+   "box": [
+    196,
+    400,
+    244,
+    450
+   ]
+  },
+  {
+   "id": "windmill",
+   "type": "entity",
+   "class": "windmill",
+   "plural": "windmills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant windmill",
+   "question": "Is there a distant windmill?",
+   "box": [
+    850,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    876,
+    116,
+    924,
+    164
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small boy",
+   "question": "Is there a small boy?",
+   "box": [
+    60,
+    650,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "train_peeling",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the train has paint peeling like rusted scales",
+   "question": "Does the train have paint peeling like rusted scales?"
+  },
+  {
+   "id": "train_buried",
+   "type": "state",
+   "of": "train",
+   "desc": "the train is half-buried in snow",
+   "question": "Is the train half-buried in snow?"
+  },
+  {
+   "id": "train_steam",
+   "type": "state",
+   "of": "train",
+   "desc": "steam curls around the train’s nose and fogs the windows",
+   "question": "Does steam curl around the train’s nose?"
+  },
+  {
+   "id": "train_wheels",
+   "type": "state",
+   "of": "train",
+   "desc": "the train's wheels are frozen mid-turn",
+   "question": "Are the train's wheels frozen mid-turn?"
+  },
+  {
+   "id": "bench_beside_tracks",
+   "type": "state",
+   "of": "bench",
+   "desc": "the wooden bench is beside the tracks",
+   "question": "Is the wooden bench beside the tracks?"
+  },
+  {
+   "id": "thermos_on_bench",
+   "type": "relation",
+   "of": [
+    "thermos",
+    "bench"
+   ],
+   "desc": "the dented thermos is on the wooden bench",
+   "question": "Is the dented thermos on the wooden bench?"
+  },
+  {
+   "id": "map_on_bench",
+   "type": "relation",
+   "of": [
+    "map",
+    "bench"
+   ],
+   "desc": "the folded map is on the wooden bench",
+   "question": "Is the folded map on the wooden bench?"
+  },
+  {
+   "id": "binoculars_on_bench",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "bench"
+   ],
+   "desc": "the binoculars are on the wooden bench",
+   "question": "Are the binoculars on the wooden bench?"
+  },
+  {
+   "id": "boy_on_bench",
+   "type": "relation",
+   "of": [
+    "boy",
+    "bench"
+   ],
+   "desc": "the small boy sits on the wooden bench",
+   "question": "Does the small boy sit on the wooden bench?"
+  },
+  {
+   "id": "raven_on_track",
+   "type": "state",
+   "of": "raven",
+   "desc": "the raven perches on the edge of a rusted track",
+   "question": "Does the raven perch on the edge of a rusted track?"
+  },
+  {
+   "id": "birdcage_hanging",
+   "type": "relation",
+   "of": [
+    "birdcage",
+    "train"
+   ],
+   "desc": "the birdcage hangs in the doorway of the train",
+   "question": "Does the birdcage hang in the doorway of the train?"
+  },
+  {
+   "id": "windmill_spinning",
+   "type": "state",
+   "of": "windmill",
+   "desc": "the windmill blades are spinning slowly",
+   "question": "Are the windmill blades spinning slowly?"
+  },
+  {
+   "id": "clock_on_windmill",
+   "type": "relation",
+   "of": [
+    "clock",
+    "windmill"
+   ],
+   "desc": "the clock is on the windmill tower",
+   "question": "Is the clock on the windmill tower?"
+  },
+  {
+   "id": "clock_backward",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock ticks backward",
+   "question": "Does the clock tick backward?"
+  },
+  {
+   "id": "boy_drawing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy draws a train in the snow",
+   "question": "Is the boy drawing a train in the snow?"
+  },
+  {
+   "id": "boy_fingers",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy's fingers are smudged with ash",
+   "question": "Are the boy's fingers smudged with ash?"
+  },
+  {
+   "id": "shadows_inside",
+   "type": "state",
+   "of": "train",
+   "desc": "unnaturally long shadows stretch across the tiled floor inside the train",
+   "question": "Do unnaturally long shadows stretch across the tiled floor inside the train?"
+  },
+  {
+   "id": "seat_leaning",
+   "type": "state",
+   "of": "train",
+   "desc": "an empty seat inside the train leans back",
+   "question": "Does an empty seat inside the train lean back?"
+  },
+  {
+   "id": "photo_wall",
+   "type": "attribute",
+   "of": "train",
+   "desc": "a photograph on the wall inside showing the train in a desert replaced by snow",
+   "question": "Is there a photograph on the wall inside showing the train in a desert?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows in the background scenery",
+   "question": "Are there any windows visible in the background scenery?"
+  },
+  {
+   "id": "tracks",
+   "type": "entity",
+   "class": "railway track",
+   "plural": "railway tracks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "rusted railway tracks forming a loop",
+   "question": "Are there rusted railway tracks forming a loop?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "forest",
+   "type": "entity",
+   "class": "forest",
+   "plural": "forests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forest of trees with branches crystallized into jagged filaments of ice",
+   "question": "Is there a forest of trees?",
+   "box": [
+    0,
+    0,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "train_beside_forest",
+   "type": "relation",
+   "of": [
+    "train",
+    "forest"
+   ],
+   "desc": "the colossal red train is at the threshold of the forest",
+   "question": "Is the colossal red train at the threshold of the forest?"
+  },
+  {
+   "id": "lantern_on_train",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "train"
+   ],
+   "desc": "the small lantern hangs from the roof of the train’s first car",
+   "question": "Does the small lantern hang from the roof of the train’s first car?"
+  },
+  {
+   "id": "boy_coat",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the small boy wears a coat of stitched-together train tickets",
+   "question": "Does the small boy wear a coat of stitched-together train tickets?"
+  },
+  {
+   "id": "raven_wing",
+   "type": "state",
+   "of": "raven",
+   "desc": "the raven has one wing slightly extended",
+   "question": "Does the raven have one wing slightly extended?"
+  },
+  {
+   "id": "snow_spiral",
+   "type": "entity",
+   "class": "snow spiral",
+   "plural": "snow spirals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spiral of snow lifted by wind",
+   "question": "Is there a spiral of snow lifted by wind?",
+   "box": [
+    200,
+    400,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "seat_belongings",
+   "type": "entity",
+   "class": "belongings",
+   "plural": "belongings",
+   "count": 1,
+   "count_exact": false,
+   "desc": "untouched belongings",
+   "question": "Are there untouched belongings?",
+   "box": [
+    450,
+    700,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "train_edge_loop",
+   "type": "relation",
+   "of": [
+    "train",
+    "tracks"
+   ],
+   "desc": "the train sits at the very edge of the loop formed by the tracks",
+   "question": "Is the train sitting at the very edge of the track loop?"
+  },
+  {
+   "id": "boy_charcoal",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds charcoal",
+   "question": "Is the boy holding charcoal?"
+  },
+  {
+   "id": "raven_head_tilt",
+   "type": "state",
+   "of": "raven",
+   "desc": "the raven tilts its head",
+   "question": "Does the raven tilt its head?"
+  },
+  {
+   "id": "binoculars_frost",
+   "type": "attribute",
+   "of": "binoculars",
+   "desc": "the binoculars have frost-encrusted lenses",
+   "question": "Do the binoculars have frost-encrusted lenses?"
+  },
+  {
+   "id": "raven_ice",
+   "type": "attribute",
+   "of": "raven",
+   "desc": "the raven's feathers glisten with ice",
+   "question": "Do the raven's feathers glisten with ice?"
+  },
+  {
+   "id": "train_fogged_windows",
+   "type": "state",
+   "of": "train",
+   "desc": "the train's forward windows are fogged with condensation",
+   "question": "Are the train's forward windows fogged with condensation?"
+  },
+  {
+   "id": "photo_snow_trees",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the desert in the photograph is replaced by snow and trees",
+   "question": "Is the desert in the photograph replaced by snow and trees?"
+  },
+  {
+   "id": "forest_ice_branches",
+   "type": "attribute",
+   "of": "forest",
+   "desc": "the trees' branches are crystallized into jagged filaments of ice",
+   "question": "Are the trees' branches crystallized into jagged filaments of ice?"
+  },
+  {
+   "id": "windmill_tower",
+   "type": "attribute",
+   "of": "windmill",
+   "desc": "the windmill has a tower",
+   "question": "Does the windmill have a tower?"
+  },
+  {
+   "id": "belongings_near_seat",
+   "type": "relation",
+   "of": [
+    "seat_belongings",
+    "train"
+   ],
+   "desc": "the belongings are on or near the empty seat inside the train",
+   "question": "Are the belongings on or near the empty seat inside the train?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "thermos",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "map",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "binoculars",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "boy",
+   "kind": "support"
+  },
+  {
+   "from": "tracks",
+   "to": "bench",
+   "kind": "support"
+  },
+  {
+   "from": "tracks",
+   "to": "raven",
+   "kind": "support"
+  },
+  {
+   "from": "train",
+   "to": "lantern",
+   "kind": "support"
+  },
+  {
+   "from": "windmill",
+   "to": "clock",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0362",
+ "prompt": "A colossal red train, its paint peeling like rusted scales, slumbers half-buried in snow at the threshold of a forest where the trees are frozen in mid-sway, their branches crystallized into jagged filaments of ice. Steam from a distant, unseen source curls around the train’s nose, fogging the forward windows with breath-like condensation, as though the machine itself were sleeping in a fever dream. A wooden bench beside the tracks bears the weight of a dented thermos, a weather-worn map folded in thirds, and a pair of binoculars whose lenses glint with encrusted frost, as if their owner had paused just a heartbeat ago. But the train is not still—its wheels, frozen mid-turn, are caught in a paradox of motion and stasis, caught between the inertia of forward travel and the pull of the snow that buries it. A raven perches on the edge of a rusted track, its black feathers glistening with ice, one wing slightly extended as if caught in a moment of balance, between flight and rest. A gust of wind sweeps through the clearing, lifting a spiral of snow past the train’s motionless windows, but also sending a flicker of something strange through the trees—light reflecting from what appears to be the backs of countless birds, though the sky is clear. A single lantern hangs from the roof of the train’s first car, swaying in a wind that doesn’t touch the snow, its light flickering like a dying heartbeat. Inside the train, shadows stretch unnaturally long across the tiled floor, where an empty seat leans back as if someone had just stood, yet their belongings remain untouched. A photograph on the wall behind it shows the same train moving through a desert, but the desert is gone, replaced by snow and trees. A small birdcage hangs in the doorway, open, though no bird is present, and a faint melody lingers in the air, as if sung by someone long gone. Outside, the tracks twist and rejoin themselves in a loop, forming a closed circuit, yet the train sits at the very edge of it, poised as if about to exit a loop that no longer exists. A windmill in the distance spins slowly, though the wind has died, its blades casting shadows that move independently of their sources. A clock on the windmill’s tower ticks backward in slow, deliberate counts, and yet the snow continues to fall forward in time. A small boy in a coat of stitched-together train tickets sits on the bench, drawing a train in the snow, his charcoal fingers smudged with ash, as if the train he sketches will rise from the page and carry him into the impossible world the scene has become. The train groans softly, as if waking, and the raven tilts its head again, its eyes reflecting not the forest, but the train, as if both are watching each other through the veil of time.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 45,
+   "n_uncovered": 10,
+   "proposed": 9,
+   "ungrounded": 3,
+   "added": 5,
+   "dropped": 1
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

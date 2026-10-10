@@ -1,0 +1,145 @@
+{
+ "style": "photorealistic, macro photography, dusty atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty attic interior",
+   "question": "Does the image show a dusty attic interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "toy robot",
+   "plural": "toy robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanical-style toy robot",
+   "question": "Is there a mechanical-style toy robot?",
+   "box": [
+    200,
+    300,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "robot_fallen",
+   "type": "state",
+   "of": "robot",
+   "desc": "the toy robot is fallen over",
+   "question": "Is the toy robot fallen over?"
+  },
+  {
+   "id": "robot_dusty",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot is covered in a thick layer of dust",
+   "question": "Is the robot covered in a thick layer of dust?"
+  },
+  {
+   "id": "copper_tarnished",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the copper parts of the robot are tarnished and rusted",
+   "question": "Are the copper parts of the robot tarnished and rusted?"
+  },
+  {
+   "id": "plastic_scratched",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the blue plastic parts of the toy robot are heavily scratched",
+   "question": "Are the blue plastic parts of the toy robot heavily scratched?"
+  },
+  {
+   "id": "dome_cracked",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the transparent glass dome head of the toy robot is cracked",
+   "question": "Is the transparent glass dome head of the toy robot cracked?"
+  },
+  {
+   "id": "gears_static",
+   "type": "state",
+   "of": "robot",
+   "desc": "the visible gears inside the dome of the toy robot are not moving",
+   "question": "Are the visible gears inside the dome of the toy robot stationary?"
+  },
+  {
+   "id": "eye_red",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "one eye of the toy robot is a glowing red light",
+   "question": "Is one eye of the toy robot a glowing red light?"
+  },
+  {
+   "id": "eye_dark",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "one eye of the robot is a dark, unlit bulb",
+   "question": "Is one eye of the robot a dark, unlit bulb?"
+  },
+  {
+   "id": "robot_arms",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot has two arms ending in simple pincer-like claws",
+   "question": "Does the robot have two arms ending in simple pincer-like claws?"
+  },
+  {
+   "id": "eye_not_lit",
+   "type": "absent",
+   "desc": "both eyes of the toy robot being lit",
+   "question": "Are both eyes of the toy robot lit?"
+  },
+  {
+   "id": "robot_copper_plastic",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot's body is made of copper and blue plastic parts",
+   "question": "Is the robot's body made of copper and blue plastic parts?"
+  },
+  {
+   "id": "robot_exposed_wires",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "some of the robot's internal wires are exposed",
+   "question": "Are some of the robot's internal wires exposed?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_045",
+ "prompt": "A single, worn-out, mechanical-style toy robot, fallen over in a dusty attic. Its body is made of a combination of copper and plastic parts. All the copper parts are tarnished and rusted, while the plastic parts, which are blue, are heavily scratched. It has a transparent glass dome for a head, which is cracked. Inside the dome, several visible gears are not moving. The robot has two mismatched eyes; one is a glowing red light, and the other is a dark, unlit bulb. Its two arms end in simple, pincer-like claws. The robot is in a fallen-over state and some of its internal wires are exposed. It is covered in a thick layer of dust. The robot is not brand new, it is not standing upright, it is not clean, and both of its eyes are not lit.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node robot: entity question is long (21 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

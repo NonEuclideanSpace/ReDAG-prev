@@ -1,0 +1,368 @@
+{
+ "style": "cinematic film still, high contrast, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen with tiled floor, counters, an oven, and a back door",
+   "question": "Does the image show the interior of a busy restaurant kitchen with tiled floors, counters, an oven, and a back door?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef wearing a white hat?",
+   "box": [
+    50,
+    100,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    350,
+    200,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    700,
+    150,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    750,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pot",
+   "question": "Is there a pot?",
+   "box": [
+    400,
+    600,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "rack",
+   "plural": "racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging rack",
+   "question": "Is there a hanging rack?",
+   "box": [
+    300,
+    50,
+    700,
+    250
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of white plates",
+   "question": "Is there a stack of white plates?",
+   "box": [
+    850,
+    400,
+    980,
+    550
+   ]
+  },
+  {
+   "id": "ladle",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a silver ladle",
+   "question": "Is the chef holding a silver ladle?"
+  },
+  {
+   "id": "spoon",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a wooden spoon",
+   "question": "Is the chef holding a wooden spoon?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef stands tall",
+   "question": "Is the chef standing upright?"
+  },
+  {
+   "id": "chef_sweating",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef has a sweating brow",
+   "question": "Does the chef have visible sweat on their brow?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman leans forward",
+   "question": "Is the woman leaning forward?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "pot"
+   ],
+   "desc": "the woman looks intently at the pot",
+   "question": "Is the woman looking intently at the pot?"
+  },
+  {
+   "id": "stew_bubbling",
+   "type": "state",
+   "of": "pot",
+   "desc": "the stew in the pot is bubbling",
+   "question": "Is the stew in the pot bubbling?"
+  },
+  {
+   "id": "man_gesturing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man gestures urgently",
+   "question": "Is the man gesturing urgently?"
+  },
+  {
+   "id": "man_flushed",
+   "type": "state",
+   "of": "man",
+   "desc": "the man's face is flushed",
+   "question": "Is the man's face flushed red?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever sits",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever watches the activity",
+   "question": "Is the golden retriever looking toward the people or the cooking area?"
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever's tail is wagging",
+   "question": "Is the golden retriever's tail wagging?"
+  },
+  {
+   "id": "plates_teetering",
+   "type": "state",
+   "of": "plates",
+   "desc": "the stack of plates teeters precariously",
+   "question": "Does the stack of plates look unstable or tilted?"
+  },
+  {
+   "id": "chef_passes_spoon",
+   "type": "action",
+   "of": [
+    "chef",
+    "woman"
+   ],
+   "desc": "the chef passes the wooden spoon to the woman",
+   "question": "Is the chef handing a wooden spoon to the woman, with their hands meeting?"
+  },
+  {
+   "id": "man_points_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man points at the golden retriever",
+   "question": "Is the man pointing at the golden retriever?"
+  },
+  {
+   "id": "woman_near_pot",
+   "type": "relation",
+   "of": [
+    "woman",
+    "pot"
+   ],
+   "desc": "the woman is near the pot",
+   "question": "Is the woman positioned close to the pot?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever is next to the man",
+   "question": "Is the golden retriever situated next to the man?"
+  },
+  {
+   "id": "rack_above_counter",
+   "type": "state",
+   "of": "rack",
+   "desc": "the rack is above the counter",
+   "question": "Is the hanging rack positioned above the kitchen counter area?"
+  },
+  {
+   "id": "plates_near_door",
+   "type": "state",
+   "of": "plates",
+   "desc": "the plates are near the back door",
+   "question": "Are the plates located near the back door of the kitchen?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "chef_firm_grip",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds the silver ladle with a firm grip",
+   "question": "Is the chef holding the silver ladle with a firm grip?"
+  },
+  {
+   "id": "man_toward_oven",
+   "type": "state",
+   "of": "man",
+   "desc": "the man gestures toward the oven",
+   "question": "Is the man gesturing toward the oven?"
+  },
+  {
+   "id": "stew_in_pot",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the pot contains stew",
+   "question": "Does the pot contain stew?"
+  },
+  {
+   "id": "copper_pots_on_rack",
+   "type": "relation",
+   "of": [
+    "rack",
+    "copper_pots"
+   ],
+   "desc": "copper pots hang on the rack",
+   "question": "Do copper pots hang on the rack?"
+  },
+  {
+   "id": "copper_pots",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 2,
+   "count_exact": false,
+   "desc": "copper pots",
+   "question": "Are there copper pots?",
+   "box": [
+    250,
+    100,
+    750,
+    180
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "rack",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plates",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0073",
+ "prompt": "A cinematic film still captures the chaotic energy of a busy restaurant kitchen. On the left, a chef in a white hat stands tall, holding a silver ladle with a firm grip. In the center, a woman in a blue apron leans forward, her eyes fixed intently on a bubbling pot of stew. To the right, a man in a red scarf gestures urgently toward the oven, his face flushed with heat. Next to him, a golden retriever sits patiently on the tiled floor, watching the activity with calm curiosity. Above the counter, a hanging rack of copper pots gleams under the harsh lights, reflecting the movement below. Near the back door, a stack of white plates teeters precariously, ready to be grabbed. The chef in the white hat passes a wooden spoon to the woman in the blue apron, their hands meeting briefly in the steam. The man in the red scarf points at the golden retriever, perhaps scolding it for being too close to the action. There is no window visible in the background, keeping the focus entirely on the internal dynamics of the kitchen staff and their unusual canine companion. The scene is tight and cluttered, emphasizing the pressure of the moment without showing any exterior context or natural light sources. Every element contributes to the sense of urgency and confined space, from the sweating brow of the chef to the wagging tail of the dog.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

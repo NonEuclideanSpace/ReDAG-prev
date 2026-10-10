@@ -1,0 +1,206 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    300,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    450,
+    300,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    780,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman_briefcase",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a silver briefcase",
+   "question": "Is the woman in the blue coat holding a silver briefcase?"
+  },
+  {
+   "id": "man_phone",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the green hat holds a phone",
+   "question": "Is the man in the green hat holding a phone?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is sitting",
+   "question": "Is the man in the green hat sitting?"
+  },
+  {
+   "id": "man_looking_phone",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is looking at his phone",
+   "question": "Is the man in the green hat looking at his phone?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is resting calmly",
+   "question": "Is the black cat resting calmly?"
+  },
+  {
+   "id": "woman_handing_ticket",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat is handing a ticket to the man in the green hat",
+   "question": "Is the woman in the blue coat handing a ticket to the man in the green hat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in the green hat sits on the metal bench",
+   "question": "Is the man in the green hat sitting on the metal bench?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the black cat is next to the man in the green hat",
+   "question": "Is the black cat next to the man in the green hat?"
+  },
+  {
+   "id": "no_poster",
+   "type": "absent",
+   "desc": "advertising poster on the wall",
+   "question": "Is there an advertising poster on the wall?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall of the subway platform",
+   "question": "Is there a wall of the subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0008",
+ "prompt": "A pencil sketch with light color wash depicts a subway platform. On the left, a woman in a blue coat stands holding a silver briefcase. In the center, a man in a green hat sits on a metal bench looking at his phone. To the right, a black cat rests calmly next to the seated man. The woman in the blue coat is handing a ticket to the man in the green hat. There is no advertising poster on the wall.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

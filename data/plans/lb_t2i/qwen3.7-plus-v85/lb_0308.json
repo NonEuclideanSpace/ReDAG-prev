@@ -1,0 +1,587 @@
+{
+ "style": "surreal cinematic photography, high contrast, neon and sodium-vapor lighting, damp atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a narrow alley between two hulking industrial buildings with damp walls",
+   "question": "Does the image show a narrow alley between two large industrial buildings with damp walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pallets",
+   "type": "entity",
+   "class": "pallet",
+   "plural": "pallets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of weathered wooden pallets",
+   "question": "Is there a stack of weathered wooden pallets?",
+   "box": [
+    100,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sodium-vapor streetlamp emitting a flickering glow",
+   "question": "Is there a sodium-vapor streetlamp emitting a flickering glow?",
+   "box": [
+    850,
+    50,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "delivery truck",
+   "plural": "delivery trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a delivery truck with an open cargo door",
+   "question": "Is there a delivery truck with an open cargo door?",
+   "box": [
+    600,
+    300,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "cone",
+   "type": "entity",
+   "class": "traffic cone",
+   "plural": "traffic cones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a muddied orange traffic cone",
+   "question": "Is there a muddied orange traffic cone?",
+   "box": [
+    550,
+    650,
+    620,
+    750
+   ]
+  },
+  {
+   "id": "arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an automated robotic arm dangling from the truck",
+   "question": "Is there an automated robotic arm dangling from the truck?",
+   "box": [
+    620,
+    450,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek black cat",
+   "question": "Is there a sleek black cat?",
+   "box": [
+    350,
+    700,
+    420,
+    780
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a graffiti-covered door half-open",
+   "question": "Is there a graffiti-covered door half-open?",
+   "box": [
+    450,
+    200,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "bag",
+   "type": "entity",
+   "class": "plastic bag",
+   "plural": "plastic bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic grocery bag fluttering in the wind",
+   "question": "Is there a plastic grocery bag fluttering in the wind?",
+   "box": [
+    700,
+    500,
+    750,
+    550
+   ]
+  },
+  {
+   "id": "billboard",
+   "type": "entity",
+   "class": "billboard",
+   "plural": "billboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old billboard with a faded image of a smiling woman",
+   "question": "Is there an old billboard with a faded image of a smiling woman?",
+   "box": [
+    200,
+    50,
+    800,
+    200
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle missing one wheel",
+   "question": "Is there a bicycle missing one wheel?",
+   "box": [
+    100,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "screens",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "flickering screens inside the truck displaying fragmented data",
+   "question": "Are there flickering screens inside the truck displaying fragmented data?"
+  },
+  {
+   "id": "cone_leaning",
+   "type": "state",
+   "of": "cone",
+   "desc": "the traffic cone is leaning precariously",
+   "question": "Is the traffic cone leaning precariously?"
+  },
+  {
+   "id": "cat_crouched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is crouched and motionless",
+   "question": "Is the cat crouched and motionless?"
+  },
+  {
+   "id": "billboard_leaning",
+   "type": "relation",
+   "of": [
+    "billboard",
+    "buildings"
+   ],
+   "desc": "the billboard is leaning on the buildings",
+   "question": "Is the billboard leaning on the buildings?"
+  },
+  {
+   "id": "arm_reaching",
+   "type": "action",
+   "of": [
+    "arm",
+    "cone"
+   ],
+   "desc": "the robotic arm reaches toward the traffic cone",
+   "question": "Is the robotic arm reaching toward the traffic cone?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "arm"
+   ],
+   "desc": "the cat watches the robotic arm",
+   "question": "Is the cat watching the robotic arm?"
+  },
+  {
+   "id": "pallets_block_alley",
+   "type": "state",
+   "of": "pallets",
+   "desc": "the pallets partially block the alley",
+   "question": "Do the pallets partially block the alley?"
+  },
+  {
+   "id": "cone_against_truck",
+   "type": "relation",
+   "of": [
+    "cone",
+    "truck"
+   ],
+   "desc": "the traffic cone leans against the side of the delivery truck",
+   "question": "Does the traffic cone lean against the side of the delivery truck?"
+  },
+  {
+   "id": "cat_behind_pallets",
+   "type": "relation",
+   "of": [
+    "cat",
+    "pallets"
+   ],
+   "desc": "the cat is crouched behind the pallets",
+   "question": "Is the cat crouched behind the pallets?"
+  },
+  {
+   "id": "bag_between",
+   "type": "relation",
+   "of": [
+    "bag",
+    "truck",
+    "pallets"
+   ],
+   "desc": "the plastic bag is caught in a vortex between the truck and the pallets",
+   "question": "Is the plastic bag caught in a vortex between the truck and the pallets?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows on the industrial buildings",
+   "question": "Are there any windows visible on the industrial buildings?"
+  },
+  {
+   "id": "newspaper",
+   "type": "entity",
+   "class": "newspaper",
+   "plural": "newspapers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "newspaper pages caught in a vortex",
+   "question": "Are there newspaper pages caught in a vortex?",
+   "box": [
+    400,
+    650,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "loose_change",
+   "type": "entity",
+   "class": "coins",
+   "plural": "coins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "loose change clattering to the ground",
+   "question": "Is there loose change on the ground?",
+   "box": [
+    450,
+    850,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "pebbles",
+   "type": "entity",
+   "class": "pebbles",
+   "plural": "pebbles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a cascade of pebbles",
+   "question": "Are there pebbles falling or scattered?",
+   "box": [
+    300,
+    700,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "loose_wood",
+   "type": "entity",
+   "class": "wood piece",
+   "plural": "wood pieces",
+   "count": 2,
+   "count_exact": false,
+   "desc": "loose pieces of wood",
+   "question": "Are there loose pieces of wood?",
+   "box": [
+    320,
+    720,
+    420,
+    820
+   ]
+  },
+  {
+   "id": "puddles",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "puddles at the alley’s lowest point",
+   "question": "Are there puddles at the lowest point of the alley?",
+   "box": [
+    100,
+    850,
+    924,
+    1024
+   ]
+  },
+  {
+   "id": "kaleidoscopic_sky",
+   "type": "attribute",
+   "of": "puddles",
+   "desc": "the puddles reflect a kaleidoscopic sky of swirling patterns",
+   "question": "Do the puddles reflect a kaleidoscopic sky of swirling patterns?"
+  },
+  {
+   "id": "arm_twitching",
+   "type": "state",
+   "of": "arm",
+   "desc": "the automated arm is twitching",
+   "question": "Is the automated arm twitching?"
+  },
+  {
+   "id": "cat_blinking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is blinking",
+   "question": "Is the cat blinking?"
+  },
+  {
+   "id": "cone_shifting",
+   "type": "state",
+   "of": "cone",
+   "desc": "the traffic cone is shifting slightly",
+   "question": "Is the traffic cone shifting slightly?"
+  },
+  {
+   "id": "door_creaking",
+   "type": "state",
+   "of": "door",
+   "desc": "the graffiti-covered door is creaking open a fraction more",
+   "question": "Is the graffiti-covered door creaking open further?"
+  },
+  {
+   "id": "bag_flutters_to_lamp",
+   "type": "action",
+   "of": [
+    "bag",
+    "streetlamp"
+   ],
+   "desc": "the plastic grocery bag blows toward the streetlamp",
+   "question": "Is the plastic grocery bag blowing toward the streetlamp?"
+  },
+  {
+   "id": "newspaper_between",
+   "type": "relation",
+   "of": [
+    "newspaper",
+    "truck",
+    "pallets"
+   ],
+   "desc": "the newspaper pages are caught in a vortex between the truck and the pallets",
+   "question": "Are the newspaper pages caught in a vortex between the truck and the pallets?"
+  },
+  {
+   "id": "change_on_ground",
+   "type": "state",
+   "of": "loose_change",
+   "desc": "the loose change is on the ground",
+   "question": "Is the loose change on the ground?"
+  },
+  {
+   "id": "bicycle_in_puddles",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "puddles"
+   ],
+   "desc": "the bicycle is half-buried in the puddles",
+   "question": "Is the bicycle half-buried in the puddles?"
+  },
+  {
+   "id": "clock_sound",
+   "type": "absent",
+   "desc": "a visible clock or source of ticking sound",
+   "question": "Is there a visible clock or mechanical device emitting a ticking sound in the scene?"
+  },
+  {
+   "id": "buildings",
+   "type": "entity",
+   "class": "industrial building",
+   "plural": "industrial buildings",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two hulking industrial buildings",
+   "question": "Are there two hulking industrial buildings?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "sky_reflection",
+   "type": "attribute",
+   "of": "puddles",
+   "desc": "the puddles reflect a kaleidoscopic sky instead of the real sky",
+   "question": "Do the puddles reflect a kaleidoscopic sky instead of the real sky?"
+  },
+  {
+   "id": "arm_touches_shadow",
+   "type": "action",
+   "of": [
+    "arm",
+    "cat"
+   ],
+   "desc": "the automated arm reaches out to touch the shadow of the cat",
+   "question": "Does the automated arm reach out to touch the shadow of the cat?"
+  },
+  {
+   "id": "cat_green_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the sleek black cat has green eyes",
+   "question": "Does the sleek black cat have green eyes?"
+  },
+  {
+   "id": "door_at_end",
+   "type": "state",
+   "of": "door",
+   "desc": "the graffiti-covered door is at the end of the alley",
+   "question": "Is the graffiti-covered door located at the end of the narrow alley?"
+  },
+  {
+   "id": "billboard_above_alley",
+   "type": "state",
+   "of": "billboard",
+   "desc": "the old billboard is above the alley",
+   "question": "Is the old billboard positioned above the narrow alley?"
+  },
+  {
+   "id": "pallets_symbols",
+   "type": "attribute",
+   "of": "pallets",
+   "desc": "the pallets are etched with cryptic symbols",
+   "question": "Are the pallets etched with cryptic symbols?"
+  },
+  {
+   "id": "pallets_pyramid",
+   "type": "state",
+   "of": "pallets",
+   "desc": "the pallets are arranged in a crooked pyramid",
+   "question": "Are the pallets arranged in a crooked pyramid?"
+  },
+  {
+   "id": "cone_rain_streaks",
+   "type": "attribute",
+   "of": "cone",
+   "desc": "the traffic cone is streaked with rain residue",
+   "question": "Is the traffic cone streaked with rain residue?"
+  },
+  {
+   "id": "wood_from_pallets",
+   "type": "relation",
+   "of": [
+    "loose_wood",
+    "pallets"
+   ],
+   "desc": "the loose wood pieces are from the pallets",
+   "question": "Are the loose wood pieces from the pallets?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "pallets",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "truck",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cone",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "truck",
+   "to": "arm",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0308",
+ "prompt": "A narrow alley twists like a serpent between two hulking industrial buildings, its mouth partially blocked by a stack of wooden pallets stacked in a crooked pyramid, their surfaces weathered and etched with cryptic symbols that seem to shift under the flickering glow of a sodium-vapor streetlamp. The lamp sways slightly in the cold wind, its trembling light casting jagged shadows that dance across the alley’s damp walls and a single traffic cone that leans precariously against the side of a delivery truck idling nearby. The cone’s once-bright orange surface is now muddied with tire dust and streaked with the glistening residue of a recent rain, giving it the look of a neglected sentinel guarding a place forgotten by time. Inside the truck’s open cargo door, a faint glow pulses like a heartbeat—screens flicker with fragmented data streams, and an automated arm, seemingly disconnected from any visible system, dangles over the edge, reaching out toward the cone as if attempting to right it, or perhaps to touch the shadow of the cat crouched behind one of the pallets. The cat, sleek and motionless, watches the unfolding tableau with an eerie patience, its green eyes reflecting the strange lights and the flickering screen in an uncanny double exposure. Behind it, the alley narrows into a tight passage where a graffiti-covered door is half-open, revealing the faint echo of a ticking clock that seems to come from nowhere and everywhere at once. The wind carries with it a chorus of distant sirens and the rustle of newspaper pages caught in a vortex between the truck and the pallets, where a plastic grocery bag flutters open and loose change clatters to the ground. Above the alley, an old billboard leans on the buildings, its faded image of a smiling woman slowly dissolving under the elements, yet somehow always reforming, as if the image is a loop that resets every time it fades to black. A bicycle, missing a wheel, sits half-buried in the puddles that have formed at the alley’s lowest point, where the water reflects not the real sky, but a kaleidoscopic sky of swirling patterns and colors that seem to pulse with the same rhythm as the truck’s screens. The wind picks up, causing the delivery truck to rattle slightly, and the automatic arm to twitch in response, its joints creaking as if made of ancient metal. A gust blows the grocery bag toward the flickering lamp, which momentarily flares with an unnatural intensity, causing the cat to blink and the shadows to stretch and warp into shapes that almost resemble human silhouettes. The traffic cone, disturbed by the movement, shifts slightly, triggering a cascade of pebbles and loose wood from the pallets, which in turn causes the flickering door to creak open a fraction more, releasing a low, resonant hum that seems to vibrate through the very bones of the alley. The air is thick with the mingling scents of exhaust, rain-soaked concrete, and something more elusive—like burnt sugar or the faint memory of laughter. Each element of the scene is bound to the next in a web of quiet causality, where movement begets movement, and stillness hides intention. The surrealism is subtle, creeping in at the edges, but entirely consistent within its own logic, a place where the mundane and the magical share a delicate, precarious balance, like the traffic cone itself, poised on the edge of collapse or transformation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 46,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "bag_toward_lamp",
+     "bag_flutters_to_lamp"
+    ]
+   ]
+  }
+ }
+}

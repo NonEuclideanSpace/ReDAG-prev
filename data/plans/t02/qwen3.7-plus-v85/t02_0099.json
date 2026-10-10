@@ -1,0 +1,102 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theatre backstage area",
+   "question": "Does the image show a theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a sequined dress",
+   "question": "Is there a woman in a sequined dress?",
+   "box": [
+    50,
+    150,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    574,
+    150,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "woman_holding_mic",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a sequined dress holds a silver microphone",
+   "question": "Is the woman in a sequined dress holding a silver microphone?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a sequined dress hands the silver microphone to the man in a black tuxedo",
+   "question": "Is the woman in a sequined dress handing a silver microphone to the man in a black tuxedo?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a sequined dress is standing",
+   "question": "Is the woman in a sequined dress standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is standing",
+   "question": "Is the man in a black tuxedo standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0099",
+ "prompt": "In a photorealistic photo set in a theatre backstage, a woman in a sequined dress stands on the left side of the frame. A man in a black tuxedo stands on the right side. The woman holds a silver microphone in her hand. She is handing the microphone to the man. There is no audience visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

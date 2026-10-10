@@ -1,0 +1,324 @@
+{
+ "style": "oil painting, lush botanical greenhouse, dappled sunlight, rich textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush botanical greenhouse with a glass ceiling revealing a clear blue sky and a tiled floor",
+   "question": "Does the image show a lush botanical greenhouse?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern",
+   "question": "Is there a large fern?",
+   "box": [
+    200,
+    200,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a blue cap",
+   "question": "Is there a young boy in a blue cap?",
+   "box": [
+    400,
+    350,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "orchid",
+   "type": "entity",
+   "class": "orchid",
+   "plural": "orchids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging orchid",
+   "question": "Is there a hanging orchid?",
+   "box": [
+    450,
+    50,
+    650,
+    300
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    550,
+    500,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    750,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    700,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "wicker basket",
+   "plural": "wicker baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker basket overflowing with gardening tools including a trowel and pruning shears",
+   "question": "Is there a wicker basket?",
+   "box": [
+    650,
+    750,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "woman_tending_fern",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "fern"
+   ],
+   "desc": "the elderly woman in a floral dress tends to the large fern, brushing its fronds",
+   "question": "Is the elderly woman in a floral dress tending to the large fern, brushing its fronds?"
+  },
+  {
+   "id": "boy_pointing_orchid",
+   "type": "action",
+   "of": [
+    "boy",
+    "orchid"
+   ],
+   "desc": "the young boy in a blue cap points at the hanging orchid",
+   "question": "Is the young boy in a blue cap pointing at the hanging orchid?"
+  },
+  {
+   "id": "boy_expression",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a blue cap has a face alight with wonder",
+   "question": "Does the young boy in a blue cap have a face alight with wonder?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "man_leaning_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in a red scarf leans against the wooden bench",
+   "question": "Is the man in a red scarf leaning against the wooden bench?"
+  },
+  {
+   "id": "man_smiling",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf has a calm smile",
+   "question": "Does the man in a red scarf have a calm smile?"
+  },
+  {
+   "id": "basket_next_to_bench",
+   "type": "relation",
+   "of": [
+    "basket",
+    "bench"
+   ],
+   "desc": "the wicker basket is next to the wooden bench",
+   "question": "Is the wicker basket next to the wooden bench?"
+  },
+  {
+   "id": "woman_looking_boy",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "boy"
+   ],
+   "desc": "the elderly woman in a floral dress looks toward the young boy in a blue cap",
+   "question": "Is the elderly woman in a floral dress looking toward the young boy in a blue cap?"
+  },
+  {
+   "id": "man_watching_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in a red scarf watches the golden retriever",
+   "question": "Is the man in a red scarf watching the golden retriever?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic equipment",
+   "question": "Is there any electronic equipment visible in the image?"
+  },
+  {
+   "id": "dog_tail_thumping",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tiled_floor"
+   ],
+   "desc": "the golden retriever's tail is thumping against the floor",
+   "question": "Is the golden retriever's tail thumping against the floor?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tiled_floor"
+   ],
+   "desc": "the golden retriever sits on the tiled floor",
+   "question": "Is the golden retriever sitting on the tiled floor?"
+  },
+  {
+   "id": "glass_ceiling",
+   "type": "entity",
+   "class": "glass ceiling",
+   "plural": "glass ceilings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass ceiling revealing a clear blue sky",
+   "question": "Is there a glass ceiling revealing a clear blue sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "tiled_floor",
+   "type": "entity",
+   "class": "tiled floor",
+   "plural": "tiled floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiled floor",
+   "question": "Is there a tiled floor?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "basket_tools",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the wicker basket overflows with gardening tools including a trowel and pruning shears",
+   "question": "Does the wicker basket overflow with gardening tools including a trowel and pruning shears?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "basket",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0108",
+ "prompt": "This oil painting captures a lush botanical greenhouse filled with vibrant greenery and dappled sunlight. On the left, an elderly woman in a floral dress tends to a large fern, her hands gently brushing the fronds. In the center, a young boy in a blue cap points excitedly at a hanging orchid, his face alight with wonder. Beside him, a golden retriever sits patiently, its tail thumping softly against the tiled floor. To the right, a man in a red scarf leans against a wooden bench, observing the scene with a calm smile. Next to the bench, a wicker basket overflows with gardening tools, including a trowel and pruning shears. Above them, a glass ceiling reveals a clear blue sky, allowing natural light to flood the space. The elderly woman looks toward the boy, sharing in his discovery, while the man in the red scarf watches the dog with affection. There is no electronic equipment visible in this serene setting, preserving the timeless atmosphere of the garden. The rich textures of the leaves, the soft fur of the dog, and the intricate details of the flowers are rendered with careful attention, creating a harmonious composition that invites the viewer to step into this peaceful moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

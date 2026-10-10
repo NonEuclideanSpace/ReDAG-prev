@@ -1,0 +1,429 @@
+{
+ "style": "photorealistic, atmospheric, dusty lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty attic interior",
+   "question": "Does the image show a dusty attic interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rocking_chair",
+   "type": "entity",
+   "class": "rocking chair",
+   "plural": "rocking chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden rocking chair",
+   "question": "Is there a wooden rocking chair?",
+   "box": [
+    50,
+    400,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "trunk",
+   "type": "entity",
+   "class": "leather trunk",
+   "plural": "leather trunks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old leather trunk latched shut",
+   "question": "Is there an old leather trunk latched shut?",
+   "box": [
+    360,
+    500,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "dress_form",
+   "type": "entity",
+   "class": "dress form",
+   "plural": "dress forms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dress form",
+   "question": "Is there a dress form?",
+   "box": [
+    700,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "letters",
+   "type": "entity",
+   "class": "letter",
+   "plural": "letters",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of yellowed letters",
+   "question": "Is there a stack of yellowed letters?",
+   "box": [
+    100,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "film camera",
+   "plural": "film cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage film camera",
+   "question": "Is there a vintage film camera?",
+   "box": [
+    320,
+    860,
+    450,
+    940
+   ]
+  },
+  {
+   "id": "birdcage",
+   "type": "entity",
+   "class": "birdcage",
+   "plural": "birdcages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken birdcage",
+   "question": "Is there a broken birdcage?",
+   "box": [
+    470,
+    840,
+    650,
+    960
+   ]
+  },
+  {
+   "id": "spinning_wheel",
+   "type": "entity",
+   "class": "spinning wheel",
+   "plural": "spinning wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old spinning wheel partially visible",
+   "question": "Is there an old spinning wheel partially visible?",
+   "box": [
+    800,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "stack of books",
+   "plural": "stacks of books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of dusty books",
+   "question": "Is there a stack of dusty books?",
+   "box": [
+    750,
+    700,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small crate",
+   "question": "Is there a small crate?",
+   "box": [
+    50,
+    600,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "hand mirror",
+   "plural": "hand mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tarnished hand mirror",
+   "question": "Is there a tarnished hand mirror?",
+   "box": [
+    80,
+    580,
+    150,
+    650
+   ]
+  },
+  {
+   "id": "doll",
+   "type": "entity",
+   "class": "porcelain doll",
+   "plural": "porcelain dolls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single porcelain doll",
+   "question": "Is there a single porcelain doll?",
+   "box": [
+    160,
+    590,
+    230,
+    680
+   ]
+  },
+  {
+   "id": "rocking_horse",
+   "type": "entity",
+   "class": "rocking horse",
+   "plural": "rocking horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child's rocking horse half-hidden in shadows",
+   "question": "Is there a child's rocking horse half-hidden in shadows?",
+   "box": [
+    850,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "chair_sheet",
+   "type": "attribute",
+   "of": "rocking_chair",
+   "desc": "the wooden rocking chair is covered by a white sheet",
+   "question": "Is the wooden rocking chair covered by a white sheet?"
+  },
+  {
+   "id": "trunk_latched",
+   "type": "state",
+   "of": "trunk",
+   "desc": "the old leather trunk is latched shut",
+   "question": "Is the old leather trunk latched shut?"
+  },
+  {
+   "id": "trunk_beside_chair",
+   "type": "relation",
+   "of": [
+    "trunk",
+    "rocking_chair"
+   ],
+   "desc": "the old leather trunk is beside the wooden rocking chair",
+   "question": "Is the old leather trunk beside the wooden rocking chair?"
+  },
+  {
+   "id": "letters_next_to_camera",
+   "type": "relation",
+   "of": [
+    "letters",
+    "camera"
+   ],
+   "desc": "the stack of yellowed letters lies next to the vintage film camera",
+   "question": "Does the stack of yellowed letters lie next to the vintage film camera?"
+  },
+  {
+   "id": "camera_next_to_cage",
+   "type": "relation",
+   "of": [
+    "camera",
+    "birdcage"
+   ],
+   "desc": "the vintage film camera lies next to the broken birdcage",
+   "question": "Does the vintage film camera lie next to the broken birdcage?"
+  },
+  {
+   "id": "wheel_behind_books",
+   "type": "relation",
+   "of": [
+    "spinning_wheel",
+    "books"
+   ],
+   "desc": "the old spinning wheel is behind the stack of dusty books",
+   "question": "Is the old spinning wheel behind the stack of dusty books?"
+  },
+  {
+   "id": "mirror_on_crate",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "crate"
+   ],
+   "desc": "the tarnished hand mirror is on top of the small crate",
+   "question": "Is the tarnished hand mirror on top of the small crate?"
+  },
+  {
+   "id": "doll_on_crate",
+   "type": "relation",
+   "of": [
+    "doll",
+    "crate"
+   ],
+   "desc": "the single porcelain doll is on top of the small crate",
+   "question": "Is the single porcelain doll on top of the small crate?"
+  },
+  {
+   "id": "no_tv",
+   "type": "absent",
+   "desc": "a flat-screen TV",
+   "question": "Is there a flat-screen TV in the image?"
+  },
+  {
+   "id": "no_stereo",
+   "type": "absent",
+   "desc": "a stereo system",
+   "question": "Is there a stereo system in the image?"
+  },
+  {
+   "id": "no_console",
+   "type": "absent",
+   "desc": "a video game console",
+   "question": "Is there a video game console in the image?"
+  },
+  {
+   "id": "no_pizza",
+   "type": "absent",
+   "desc": "a pizza box",
+   "question": "Is there a pizza box in the image?"
+  },
+  {
+   "id": "no_dumbbell",
+   "type": "absent",
+   "desc": "a dumbbell",
+   "question": "Is there a dumbbell in the image?"
+  },
+  {
+   "id": "rocking_chair_sits",
+   "type": "state",
+   "of": "rocking_chair",
+   "desc": "the wooden rocking chair sits",
+   "question": "Is the wooden rocking chair sitting?"
+  },
+  {
+   "id": "dress_form_stands",
+   "type": "state",
+   "of": "dress_form",
+   "desc": "the dress form stands",
+   "question": "Is the dress form standing?"
+  },
+  {
+   "id": "letters_lie",
+   "type": "state",
+   "of": "letters",
+   "desc": "the stack of yellowed letters lies",
+   "question": "Does the stack of yellowed letters lie on the floor?"
+  },
+  {
+   "id": "camera_on_floor",
+   "type": "state",
+   "of": "camera",
+   "desc": "the vintage film camera is on the floor",
+   "question": "Is the vintage film camera on the floor?"
+  },
+  {
+   "id": "birdcage_on_floor",
+   "type": "state",
+   "of": "birdcage",
+   "desc": "the broken birdcage is on the floor",
+   "question": "Is the broken birdcage on the floor?"
+  },
+  {
+   "id": "form_near_window_rel",
+   "type": "relation",
+   "of": [
+    "dress_form",
+    "window"
+   ],
+   "desc": "the dress form is near the cobweb-covered window",
+   "question": "Is the dress form near the cobweb-covered window?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cobweb-covered window",
+   "question": "Is there a cobweb-covered window?",
+   "box": [
+    800,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "ribbon",
+   "type": "attribute",
+   "of": "letters",
+   "desc": "the stack of yellowed letters is tied with a ribbon",
+   "question": "Is the stack of yellowed letters tied with a ribbon?"
+  },
+  {
+   "id": "form_near_window",
+   "type": "relation",
+   "of": [
+    "dress_form",
+    "window"
+   ],
+   "desc": "the dress form stands near the cobweb-covered window",
+   "question": "Is the dress form standing near the cobweb-covered window?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "mirror",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "doll",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_052",
+ "prompt": "A dusty, forgotten attic filled with old memories. A wooden rocking chair sits in one corner, covered by a white sheet. Beside it, an old leather trunk is latched shut. A dress form stands silently near a cobweb-covered window. On the floor, a stack of yellowed letters tied with a ribbon lies next to a vintage film camera and a broken birdcage. An old spinning wheel is partially visible behind a stack of dusty books. A tarnished hand mirror and a single porcelain doll are on top of a small crate. A child's rocking horse is half-hidden in the shadows. The space is filled with relics of the past; there are no modern electronics like a flat-screen TV, a stereo system, or a video game console. It's a place of forgotten things, so you won't find any fresh food like a pizza box, nor any workout gear such as a dumbbell.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hat",
+   "question": "Is there a woman in a blue hat?",
+   "box": [
+    50,
+    200,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green vest",
+   "question": "Is there a man in a green vest?",
+   "box": [
+    574,
+    200,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue hat holds a silver teapot",
+   "question": "Is the woman in a blue hat holding a silver teapot?"
+  },
+  {
+   "id": "cup",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a green vest has a cup",
+   "question": "Does the man in a green vest have a cup?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue hat is sitting",
+   "question": "Is the woman in a blue hat sitting?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green vest is sitting",
+   "question": "Is the man in a green vest sitting?"
+  },
+  {
+   "id": "pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue hat pours tea into the cup of the man in a green vest",
+   "question": "Is the woman in a blue hat pouring tea into the cup of the man in a green vest?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0045",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue hat sits on the left side of a train dining car. A man in a green vest sits on the right side. The woman holds a silver teapot. She is pouring tea into the man's cup. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

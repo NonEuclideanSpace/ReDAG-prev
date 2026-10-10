@@ -1,0 +1,239 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stage setting",
+   "question": "Does the image show a stage setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white gown",
+   "question": "Is there a woman in a white gown?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    670,
+    150,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    650,
+    400,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "candelabra",
+   "type": "entity",
+   "class": "candelabra",
+   "plural": "candelabras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall silver candelabra",
+   "question": "Is there a tall silver candelabra?",
+   "box": [
+    460,
+    300,
+    564,
+    700
+   ]
+  },
+  {
+   "id": "woman_holding",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a white gown holds a champagne flute",
+   "question": "Is the woman in a white gown holding a champagne flute?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a white gown is standing",
+   "question": "Is the woman in a white gown standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is sitting",
+   "question": "Is the man in a black tuxedo sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is leaning back",
+   "question": "Is the man in a black tuxedo leaning back?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a white gown is looking at the man in a black tuxedo",
+   "question": "Is the woman in a white gown looking at the man in a black tuxedo?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in a black tuxedo sits on the chair",
+   "question": "Is the man in a black tuxedo sitting on the chair?"
+  },
+  {
+   "id": "candelabra_on_table",
+   "type": "relation",
+   "of": [
+    "candelabra",
+    "table"
+   ],
+   "desc": "the tall silver candelabra rests on the table",
+   "question": "Does the tall silver candelabra rest on the table?"
+  },
+  {
+   "id": "candelabra_between",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man",
+    "candelabra"
+   ],
+   "desc": "the tall silver candelabra is between the woman in a white gown and the man in a black tuxedo",
+   "question": "Is the tall silver candelabra positioned between the woman in a white gown and the man in a black tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake",
+   "question": "Is there any cake visible in the image?"
+  },
+  {
+   "id": "candles",
+   "type": "entity",
+   "class": "candle",
+   "plural": "candles",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three unlit candles",
+   "question": "Are there three unlit candles?",
+   "box": [
+    472,
+    320,
+    552,
+    450
+   ]
+  },
+  {
+   "id": "candles_in_candelabra",
+   "type": "relation",
+   "of": [
+    "candles",
+    "candelabra"
+   ],
+   "desc": "the three unlit candles are in the tall silver candelabra",
+   "question": "Are the three unlit candles in the tall silver candelabra?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "candelabra",
+   "kind": "support"
+  },
+  {
+   "from": "candelabra",
+   "to": "candles",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0057",
+ "prompt": "In a cinematic film still, a woman in a white gown stands on the left holding a champagne flute. A man in a black tuxedo sits on the right leaning back in his chair. Between them, center stage, rests a tall silver candelabra with three unlit candles. The woman is looking at the man across the table. There is no cake visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

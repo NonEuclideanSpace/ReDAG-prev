@@ -1,0 +1,174 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform scene",
+   "question": "Does the image depict a subway platform scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench in the image?",
+   "box": [
+    350,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man with a briefcase",
+   "question": "Is there a man?",
+   "box": [
+    400,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat is looking at the man with a briefcase",
+   "question": "Is the woman in the blue coat looking at the man with a briefcase?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with a briefcase is sitting",
+   "question": "Is the man with a briefcase sitting?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man with a briefcase is sitting on the bench",
+   "question": "Is the man with a briefcase sitting on the bench?"
+  },
+  {
+   "id": "cat_on_floor",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat rests on the floor",
+   "question": "Is the small black cat resting on the floor?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train",
+   "question": "Is there a train visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat stands",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat rests",
+   "question": "Is the small black cat resting?"
+  },
+  {
+   "id": "man_briefcase",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds or has a briefcase",
+   "question": "Does the man have a briefcase?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0007",
+ "prompt": "A watercolor illustration depicts a subway platform scene. On the left, a woman in a blue coat stands waiting. In the center, a man with a briefcase sits on a bench. To the right, a small black cat rests on the floor. The woman in the blue coat is looking at the man with a briefcase. The man with a briefcase is sitting on the bench. There is no train visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

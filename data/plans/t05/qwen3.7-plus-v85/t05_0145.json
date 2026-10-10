@@ -1,0 +1,257 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden wheat field under a hazy sky with dry earth",
+   "question": "Does the image show a golden wheat field under a hazy sky with dry earth?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old farmer in a straw hat",
+   "question": "Is there an old farmer wearing a straw hat?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a blue dress",
+   "question": "Is there a young woman wearing a blue dress?",
+   "box": [
+    400,
+    350,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    600,
+    580,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black dog",
+   "question": "Is there a black dog?",
+   "box": [
+    620,
+    550,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red tractor",
+   "question": "Is there a red tractor?",
+   "box": [
+    350,
+    250,
+    650,
+    500
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in overalls",
+   "question": "Is there a boy wearing overalls?",
+   "box": [
+    680,
+    350,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "farmer_sheaf",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the old farmer holds a sheaf of wheat",
+   "question": "Is the old farmer holding a sheaf of wheat?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman is sitting",
+   "question": "Is the young woman sitting?"
+  },
+  {
+   "id": "woman_wiping",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman is wiping sweat from her brow",
+   "question": "Is the young woman wiping sweat from her brow?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the black dog is lying down",
+   "question": "Is the black dog lying down?"
+  },
+  {
+   "id": "dog_panting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the black dog is panting",
+   "question": "Is the black dog panting?"
+  },
+  {
+   "id": "tractor_parked",
+   "type": "state",
+   "of": "tractor",
+   "desc": "the red tractor is parked with its engine off",
+   "question": "Is the red tractor parked and stationary?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy is pointing toward the horizon",
+   "question": "Is the boy pointing toward the horizon?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the young woman sits on the wooden crate",
+   "question": "Is the young woman sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_right_of_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the black dog is to the right of the young woman",
+   "question": "Is the black dog to the right of the young woman?"
+  },
+  {
+   "id": "tractor_behind_woman",
+   "type": "relation",
+   "of": [
+    "tractor",
+    "woman"
+   ],
+   "desc": "the red tractor is behind the young woman",
+   "question": "Is the red tractor behind the young woman?"
+  },
+  {
+   "id": "boy_next_to_tractor",
+   "type": "relation",
+   "of": [
+    "boy",
+    "tractor"
+   ],
+   "desc": "the boy is next to the red tractor",
+   "question": "Is the boy next to the red tractor?"
+  },
+  {
+   "id": "farmer_looks_woman",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the old farmer looks at the young woman",
+   "question": "Is the old farmer looking at the young woman?"
+  },
+  {
+   "id": "woman_looks_boy",
+   "type": "action",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the young woman looks at the boy",
+   "question": "Is the young woman looking at the boy?"
+  },
+  {
+   "id": "no_barn",
+   "type": "absent",
+   "desc": "a barn in the background",
+   "question": "Is there a barn visible in the background?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the old farmer in a straw hat stands",
+   "question": "Is the old farmer in a straw hat standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0145",
+ "prompt": "In this cinematic film still, a golden wheat field stretches under a hazy sky. On the left, an old farmer in a straw hat stands holding a sheaf of wheat. In the center, a young woman in a blue dress sits on a wooden crate, wiping sweat from her brow. To her right, a black dog lies panting on the dry earth. Behind the woman, a red tractor is parked with its engine off. Next to the tractor, a boy in overalls points toward the horizon. The old farmer looks at the young woman. The young woman looks at the boy. There is no barn in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

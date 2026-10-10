@@ -1,0 +1,184 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kitchen counter",
+   "question": "Is there a kitchen counter?",
+   "box": [
+    512,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    380,
+    150,
+    680,
+    850
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of white plates",
+   "question": "Is there a stack of white plates?",
+   "box": [
+    750,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "chef_tray",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef in the white hat holds a silver tray",
+   "question": "Is the chef in the white hat holding a silver tray?"
+  },
+  {
+   "id": "waiter_hand",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the blue apron reaches out with an open hand",
+   "question": "Is the waiter in the blue apron reaching out?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef in the white hat is handing the silver tray to the waiter in the blue apron",
+   "question": "Is the chef in the white hat handing the silver tray to the waiter in the blue apron?"
+  },
+  {
+   "id": "plates_next_to_waiter",
+   "type": "relation",
+   "of": [
+    "plates",
+    "waiter"
+   ],
+   "desc": "the stack of white plates is next to the waiter in the blue apron",
+   "question": "Is the stack of white plates next to the waiter in the blue apron?"
+  },
+  {
+   "id": "plates_on_counter",
+   "type": "relation",
+   "of": [
+    "plates",
+    "counter"
+   ],
+   "desc": "the stack of white plates sits on the counter",
+   "question": "Does the stack of white plates sit on the counter?"
+  },
+  {
+   "id": "no_food_tray",
+   "type": "absent",
+   "desc": "food on the silver tray",
+   "question": "Is there any food visible on the silver tray?"
+  },
+  {
+   "id": "no_food_plates",
+   "type": "absent",
+   "desc": "food on the stack of white plates",
+   "question": "Is there any food visible on the stack of white plates?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in the white hat stands",
+   "question": "Is the chef in the white hat standing?"
+  },
+  {
+   "id": "waiter_open_hand",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the blue apron has an open hand",
+   "question": "Does the waiter in the blue apron have an open hand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "plates",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0149",
+ "prompt": "A photorealistic photo captures a busy restaurant kitchen. On the left, a chef in a white hat stands holding a silver tray. In the center, a waiter in a blue apron reaches out with an open hand. On the right, a stack of white plates sits on the counter. The chef in the white hat is handing the silver tray to the waiter in the blue apron. The stack of white plates is next to the waiter in the blue apron. There is no food visible on the tray or plates.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

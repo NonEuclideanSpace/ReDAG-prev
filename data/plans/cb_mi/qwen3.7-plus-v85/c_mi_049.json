@@ -1,0 +1,370 @@
+{
+ "style": "photorealistic, bright sunny day",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy apiary on a sunny day",
+   "question": "Does the image show a busy apiary on a sunny day?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    50,
+    200,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "hives",
+   "type": "entity",
+   "class": "beehive",
+   "plural": "beehives",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several white wooden beehives",
+   "question": "Are there several white wooden beehives?",
+   "box": [
+    200,
+    500,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    600,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "smoker",
+   "type": "entity",
+   "class": "metal smoker",
+   "plural": "metal smokers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal smoker",
+   "question": "Is there a metal smoker?",
+   "box": [
+    620,
+    580,
+    680,
+    640
+   ]
+  },
+  {
+   "id": "tool",
+   "type": "entity",
+   "class": "hive tool",
+   "plural": "hive tools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hive tool",
+   "question": "Is there a hive tool?",
+   "box": [
+    690,
+    586,
+    750,
+    634
+   ]
+  },
+  {
+   "id": "brush",
+   "type": "entity",
+   "class": "bee brush",
+   "plural": "bee brushes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bee brush",
+   "question": "Is there a bee brush?",
+   "box": [
+    760,
+    580,
+    820,
+    640
+   ]
+  },
+  {
+   "id": "extractor",
+   "type": "entity",
+   "class": "honey extractor",
+   "plural": "honey extractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large honey extractor",
+   "question": "Is there a large honey extractor?",
+   "box": [
+    100,
+    300,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bucket",
+   "question": "Is there a bucket?",
+   "box": [
+    150,
+    700,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "glass jar",
+   "plural": "glass jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clear glass jar of honey",
+   "question": "Is there a clear glass jar of honey?",
+   "box": [
+    700,
+    550,
+    780,
+    650
+   ]
+  },
+  {
+   "id": "frame",
+   "type": "entity",
+   "class": "honeycomb frame",
+   "plural": "honeycomb frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a honeycomb frame full of honey",
+   "question": "Is there a honeycomb frame full of honey?",
+   "box": [
+    400,
+    200,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "wheelbarrow",
+   "type": "entity",
+   "class": "wheelbarrow",
+   "plural": "wheelbarrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelbarrow",
+   "question": "Is there a wheelbarrow?",
+   "box": [
+    800,
+    100,
+    980,
+    300
+   ]
+  },
+  {
+   "id": "feeder",
+   "type": "entity",
+   "class": "feeder",
+   "plural": "feeders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bee feeder",
+   "question": "Is there a bee feeder?",
+   "box": [
+    250,
+    476,
+    320,
+    524
+   ]
+  },
+  {
+   "id": "suit",
+   "type": "attribute",
+   "of": "fence_post",
+   "desc": "a beekeeper's suit hangs on the fence post",
+   "question": "Is a beekeeper's suit hanging on the wooden fence post?"
+  },
+  {
+   "id": "excluder",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "a queen excluder inside the wheelbarrow",
+   "question": "Is there a queen excluder inside the wheelbarrow?"
+  },
+  {
+   "id": "knife",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "an uncapping knife inside the wheelbarrow",
+   "question": "Is there an uncapping knife inside the wheelbarrow?"
+  },
+  {
+   "id": "bees_flying",
+   "type": "state",
+   "of": "hives",
+   "desc": "bees flying around the beehives",
+   "question": "Are bees flying around the beehives?"
+  },
+  {
+   "id": "frame_inspected",
+   "type": "state",
+   "of": "frame",
+   "desc": "the honeycomb frame is being inspected",
+   "question": "Is the honeycomb frame being held up for inspection?"
+  },
+  {
+   "id": "smoker_next_to_tool",
+   "type": "relation",
+   "of": [
+    "smoker",
+    "tool"
+   ],
+   "desc": "the metal smoker sits next to the hive tool",
+   "question": "Is the metal smoker sitting next to the hive tool?"
+  },
+  {
+   "id": "bucket_under_extractor",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "extractor"
+   ],
+   "desc": "the bucket is underneath the honey extractor",
+   "question": "Is the bucket underneath the large honey extractor?"
+  },
+  {
+   "id": "feeder_on_hive",
+   "type": "relation",
+   "of": [
+    "feeder",
+    "hives"
+   ],
+   "desc": "the feeder is placed on one of the beehives",
+   "question": "Is the feeder placed on one of the white wooden beehives?"
+  },
+  {
+   "id": "no_scarecrow",
+   "type": "absent",
+   "desc": "a scarecrow",
+   "question": "Is there a scarecrow in the image?"
+  },
+  {
+   "id": "no_birdhouse",
+   "type": "absent",
+   "desc": "a birdhouse",
+   "question": "Is there a birdhouse in the image?"
+  },
+  {
+   "id": "no_chair",
+   "type": "absent",
+   "desc": "a lawn chair",
+   "question": "Is there a lawn chair in the image?"
+  },
+  {
+   "id": "no_torch",
+   "type": "absent",
+   "desc": "a tiki torch",
+   "question": "Is there a tiki torch in the image?"
+  },
+  {
+   "id": "no_hornet_nest",
+   "type": "absent",
+   "desc": "a hornet's nest",
+   "question": "Is there a hornet's nest in the image?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a butterfly net",
+   "question": "Is anyone using a butterfly net in the image?"
+  },
+  {
+   "id": "hives_row",
+   "type": "state",
+   "of": "hives",
+   "desc": "the beehives are arranged in a row",
+   "question": "Are the beehives arranged in a row?"
+  },
+  {
+   "id": "suit_veil",
+   "type": "attribute",
+   "of": "fence_post",
+   "desc": "the beekeeper's suit has a veil",
+   "question": "Does the beekeeper's suit have a veil?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "smoker",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "tool",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "brush",
+   "kind": "support"
+  },
+  {
+   "from": "hives",
+   "to": "feeder",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_049",
+ "prompt": "A sunny day at a busy apiary. Several white wooden beehives are arranged in a row, with bees flying around. A beekeeper's suit with its veil hangs on a wooden fence post. On a small table, a metal smoker sits next to a hive tool and a bee brush. A large honey extractor stands nearby, with a bucket underneath to catch drips. A clear glass jar of honey gleams in the sun. A honeycomb frame, full of honey, is being inspected. A wheelbarrow is in the background, containing a queen excluder and an uncapping knife. A feeder is placed on one of the hives. The area is for beekeeping, not general gardening, so you will not see a scarecrow or a birdhouse. It is also not a place for leisure, so there is no lawn chair or tiki torch present. The focus is on honeybees, so there is an absence of any hornet's nest, and no one is using a butterfly net.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

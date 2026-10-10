@@ -1,0 +1,455 @@
+{
+ "style": "surreal fantasy, atmospheric, cinematic lighting, detailed texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest scene with a moss-heavy tree, autumn leaves on the ground, and a sky veiled in indigo and copper",
+   "question": "Does the image show a forest scene with a large mossy tree, fallen autumn leaves, and a sky with indigo and copper tones?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bicycle",
+   "question": "Is there a rusted bicycle?",
+   "box": [
+    100,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large tree covered in moss",
+   "question": "Is there a large tree covered in moss?",
+   "box": [
+    300,
+    0,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "comb",
+   "type": "entity",
+   "class": "comb",
+   "plural": "combs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded red comb",
+   "question": "Is there a faded red comb?",
+   "box": [
+    550,
+    600,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "hose",
+   "plural": "hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver garden hose coiled like a serpent",
+   "question": "Is there a silver garden hose coiled like a serpent?",
+   "box": [
+    350,
+    750,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "glove",
+   "type": "entity",
+   "class": "glove",
+   "plural": "gloves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn child’s glove",
+   "question": "Is there a worn child’s glove?",
+   "box": [
+    600,
+    400,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth with translucent wings",
+   "question": "Is there a moth with translucent wings?",
+   "box": [
+    576,
+    546,
+    624,
+    594
+   ]
+  },
+  {
+   "id": "bicycle_slants",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the rusted bicycle is slanting",
+   "question": "Is the rusted bicycle slanting?"
+  },
+  {
+   "id": "chain_sags",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the chain of the rusted bicycle sags",
+   "question": "Does the chain of the rusted bicycle sag?"
+  },
+  {
+   "id": "tire_deflated",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "a tire of the rusted bicycle is deflated",
+   "question": "Is a tire of the rusted bicycle deflated?"
+  },
+  {
+   "id": "spigot_iridescence",
+   "type": "state",
+   "of": "spigot",
+   "desc": "the spigot of the hose emits a faint iridescence that pools",
+   "question": "Does the spigot of the hose emit a faint iridescence that pools?"
+  },
+  {
+   "id": "clock_hands_moving",
+   "type": "state",
+   "of": "tree",
+   "desc": "the hands of the clock face in the tree trunk are moving",
+   "question": "Are the hands of the clock face in the tree trunk moving?"
+  },
+  {
+   "id": "bicycle_against_tree",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "tree"
+   ],
+   "desc": "the rusted bicycle slants against the tree",
+   "question": "Is the rusted bicycle slanting against the tree?"
+  },
+  {
+   "id": "hose_from_tree",
+   "type": "relation",
+   "of": [
+    "hose",
+    "tree"
+   ],
+   "desc": "the silver hose extends from the roots of the tree",
+   "question": "Does the silver hose extend from the roots of the tree?"
+  },
+  {
+   "id": "glove_on_branch",
+   "type": "relation",
+   "of": [
+    "glove",
+    "tree"
+   ],
+   "desc": "the child’s glove hangs from a low branch of the tree",
+   "question": "Does the child’s glove hang from a low branch of the tree?"
+  },
+  {
+   "id": "moth_between",
+   "type": "relation",
+   "of": [
+    "moth",
+    "hose",
+    "glove"
+   ],
+   "desc": "the moth drifts between the spigot of the hose and the glove",
+   "question": "Is the moth drifting between the spigot of the hose and the glove?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "leaf_on_comb",
+   "type": "attribute",
+   "of": "comb",
+   "desc": "a single dry curled maple leaf clings to the faded red comb",
+   "question": "Is there a single dry curled maple leaf clinging to the faded red comb?"
+  },
+  {
+   "id": "raindrop",
+   "type": "entity",
+   "class": "raindrop",
+   "plural": "raindrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single raindrop",
+   "question": "Is there a single raindrop?",
+   "box": [
+    480,
+    300,
+    544,
+    364
+   ]
+  },
+  {
+   "id": "footprints",
+   "type": "entity",
+   "class": "footprint",
+   "plural": "footprints",
+   "count": 2,
+   "count_exact": false,
+   "desc": "faint ghostly imprints of footprints on the ground",
+   "question": "Are there faint ghostly imprints of footprints on the ground?",
+   "box": [
+    100,
+    800,
+    924,
+    1024
+   ]
+  },
+  {
+   "id": "heaps",
+   "type": "entity",
+   "class": "leaf heap",
+   "plural": "leaf heaps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "deliberate heaps of autumn leaves",
+   "question": "Are there deliberate heaps of autumn leaves?",
+   "box": [
+    200,
+    750,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "footprints_appear_disappear",
+   "type": "state",
+   "of": "footprints",
+   "desc": "the footprints appear and disappear",
+   "question": "Do the footprints appear and disappear?"
+  },
+  {
+   "id": "canopy",
+   "type": "entity",
+   "class": "canopy",
+   "plural": "canopies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree canopy",
+   "question": "Is there a tree canopy?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "moth_trail",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth leaves a faint silvery trail",
+   "question": "Does the moth leave a faint silvery trail?"
+  },
+  {
+   "id": "trail_glow",
+   "type": "relation",
+   "of": [
+    "moth",
+    "hose"
+   ],
+   "desc": "the moth's silvery trail glows where it brushes against the spigot's iridescence",
+   "question": "Does the moth's silvery trail glow where it touches the spigot's iridescence?"
+  },
+  {
+   "id": "raindrop_position",
+   "type": "relation",
+   "of": [
+    "raindrop",
+    "canopy"
+   ],
+   "desc": "the raindrop hovers at the edge of the leaves of the canopy",
+   "question": "Is the raindrop hovering at the edge of the leaves of the canopy?"
+  },
+  {
+   "id": "glove_cracked",
+   "type": "attribute",
+   "of": "glove",
+   "desc": "the worn child’s glove is cracked at the seams",
+   "question": "Is the worn child’s glove cracked at the seams?"
+  },
+  {
+   "id": "glove_fingers_curled",
+   "type": "state",
+   "of": "glove",
+   "desc": "the fingers of the worn child’s glove are curled inward",
+   "question": "Are the fingers of the worn child’s glove curled inward?"
+  },
+  {
+   "id": "clock_rotted",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the clock face embedded in the tree trunk is half-rotted",
+   "question": "Is the clock face embedded in the tree trunk half-rotted?"
+  },
+  {
+   "id": "clock_hands_present",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the clock face embedded in the tree trunk has hands",
+   "question": "Does the clock face embedded in the tree trunk have hands?"
+  },
+  {
+   "id": "clock_face",
+   "type": "entity",
+   "class": "clock face",
+   "plural": "clock faces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-rotted clock face embedded in the trunk",
+   "question": "Is there a half-rotted clock face embedded in the trunk?",
+   "box": [
+    450,
+    400,
+    574,
+    524
+   ]
+  },
+  {
+   "id": "spigot",
+   "type": "entity",
+   "class": "spigot",
+   "plural": "spigots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small moss-encrusted spigot at the end of the hose",
+   "question": "Is there a small moss-encrusted spigot at the end of the hose?",
+   "box": [
+    580,
+    850,
+    640,
+    910
+   ]
+  },
+  {
+   "id": "moth_constellations",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth's wings are etched with constellations",
+   "question": "Are the moth's wings etched with constellations?"
+  },
+  {
+   "id": "tire_buried",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "a tire of the rusted bicycle is half-buried",
+   "question": "Is a tire of the rusted bicycle half-buried?"
+  },
+  {
+   "id": "no_buildings",
+   "type": "absent",
+   "desc": "modern buildings",
+   "question": "Are there any modern buildings in the image?"
+  },
+  {
+   "id": "spigot_retracts",
+   "type": "state",
+   "of": "spigot",
+   "desc": "the iridescence from the spigot retracts",
+   "question": "Does the iridescence from the spigot retract?"
+  },
+  {
+   "id": "heaps_at_base",
+   "type": "relation",
+   "of": [
+    "heaps",
+    "tree"
+   ],
+   "desc": "the heaps of autumn leaves are around the base of the tree",
+   "question": "Are the heaps of autumn leaves around the base of the tree?"
+  },
+  {
+   "id": "canopy_leaves",
+   "type": "attribute",
+   "of": "canopy",
+   "desc": "the canopy has leaves",
+   "question": "Does the canopy have leaves?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tree",
+   "to": "glove",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "clock_face",
+   "kind": "support"
+  },
+  {
+   "from": "tree",
+   "to": "hose",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0158",
+ "prompt": "Beneath a sky veiled in bruised indigo and copper, the forgotten world hums with the low, mechanical pulse of something ancient stirring. The rusted bicycle, once proud and functional, now slants against the moss-heavy tree as if it were bracing itself for the slow descent of time. The chain sags like a serpent uninterested in its own coiling, and the half-buried tire seems to breathe with the earth, deflated yet not defeated. A single maple leaf, dry and curled, clings to the faded red comb, its serrated teeth catching a flicker of golden light that filters through the canopy in fractured beams. It is not just sunlight—it is the breath of something vast, shifting above, its leaves whispering secrets in a language older than memory. Around the base of the tree, the autumn leaves do not merely accumulate; they gather in deliberate heaps, as if placed by unseen hands, each one curled into a tiny boat, bobbing on the faint ripples of a breeze that moves without wind. The ground itself is alive in this way—speckled with the faint, ghostly imprints of footprints that appear and disappear as if walked by memories or shadows. From the roots of the tree, a silver hose extends, coiled like a sleeping serpent, one end disappearing into the bark as if the tree itself is drinking from a well of forgotten energy. The other end sprouts a small, moss-encrusted spigot, from which water does not flow, but a faint iridescence—like liquid light—pools and retracts in slow, rhythmic pulses. Nearby, a child’s glove, worn and cracked at the seams, hangs from a low branch, its fingers curled inward as if still holding the shape of something just released. A moth, its wings translucent and etched with constellations, drifts lazily between the spigot and the glove, leaving a faint silvery trail that momentarily glows where it brushes against the spigot’s iridescence. The scene is layered in paradoxes: the bicycle appears both still and in motion, its frame creaking with the echo of a past journey, yet frozen in a moment that seems to wait for the right question to be asked. The comb, the leaf, the glove—each item exists in a quiet conversation with the others, their relationships unspoken but deeply felt, like a half-remembered melody. Above it all, the canopy shifts, the shifting light rearranging the space into something that feels both real and impossible, a moment suspended between the past and the yet-to-be. A clock face embedded in the trunk, half-rotted and overgrown, ticks not with seconds but with thoughts, its hands moving only when observed, each movement casting ripples of distortion through the air. A single raindrop, long overdue, hovers at the edge of the leaves, trembling with the weight of the world’s hesitation. In this place, time is not a river but a mirror, and the objects—forgotten, broken, or waiting—are not relics, but players in a slow, deliberate dance of transformation. The bicycle may never ride again, but it remembers. The glove, though empty, still holds. The light, though still, speaks. And in the silence between them, something stirs—not a threat, but a promise.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 29,
+   "n_uncovered": 7,
+   "proposed": 7,
+   "ungrounded": 3,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

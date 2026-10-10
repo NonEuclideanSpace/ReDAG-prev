@@ -1,0 +1,359 @@
+{
+ "style": "vibrant anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden wheat field under a clear blue sky",
+   "question": "Does the image show a golden wheat field under a clear blue sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a straw hat",
+   "question": "Is there a woman wearing a straw hat?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black and white cow",
+   "question": "Is there a black and white cow?",
+   "box": [
+    260,
+    400,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in overalls",
+   "question": "Is there a boy wearing overalls?",
+   "box": [
+    400,
+    500,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    750,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in suspenders",
+   "question": "Is there an older man wearing suspenders?",
+   "box": [
+    620,
+    350,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young girl in a yellow dress",
+   "question": "Is there a young girl wearing a yellow dress?",
+   "box": [
+    750,
+    450,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    480,
+    700,
+    580,
+    800
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the straw hat holds a woven basket",
+   "question": "Is the woman in the straw hat holding a woven basket?"
+  },
+  {
+   "id": "boy_handkerchief",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy in overalls holds a checkered handkerchief",
+   "question": "Is the boy in overalls holding a checkered handkerchief?"
+  },
+  {
+   "id": "girl_stalk",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the young girl in the yellow dress clutches a single stalk of wheat",
+   "question": "Is the young girl in the yellow dress clutching a single stalk of wheat?"
+  },
+  {
+   "id": "cow_grazing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the black and white cow has its head lowered toward the earth",
+   "question": "Is the black and white cow's head lowered toward the earth?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in overalls is sitting",
+   "question": "Is the boy in overalls sitting?"
+  },
+  {
+   "id": "boy_smiling",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in overalls is smiling",
+   "question": "Is the boy in overalls smiling?"
+  },
+  {
+   "id": "girl_looking_up",
+   "type": "state",
+   "of": "girl",
+   "desc": "the young girl in the yellow dress is looking up",
+   "question": "Is the young girl in the yellow dress looking up?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is watching the scene",
+   "question": "Is the small orange cat watching the scene?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cow"
+   ],
+   "desc": "the woman in the straw hat is next to the black and white cow",
+   "question": "Is the woman in the straw hat next to the black and white cow?"
+  },
+  {
+   "id": "boy_on_crate",
+   "type": "relation",
+   "of": [
+    "boy",
+    "crate"
+   ],
+   "desc": "the boy in overalls sits on the wooden crate",
+   "question": "Is the boy in overalls sitting on the wooden crate?"
+  },
+  {
+   "id": "man_right_of_boy",
+   "type": "relation",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the older man in suspenders is to the right of the boy in overalls",
+   "question": "Is the older man in suspenders to the right of the boy in overalls?"
+  },
+  {
+   "id": "girl_behind_boy",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the young girl in the yellow dress is behind the boy in overalls",
+   "question": "Is the young girl in the yellow dress behind the boy in overalls?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small orange cat is perched atop the wooden crate",
+   "question": "Is the small orange cat perched atop the wooden crate?"
+  },
+  {
+   "id": "man_next_to_girl",
+   "type": "relation",
+   "of": [
+    "man",
+    "girl"
+   ],
+   "desc": "the older man in suspenders stands next to the young girl in the yellow dress",
+   "question": "Is the older man in suspenders standing next to the young girl in the yellow dress?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the older man in suspenders points toward the horizon",
+   "question": "Is the older man in suspenders pointing toward the horizon?"
+  },
+  {
+   "id": "woman_handing_boy",
+   "type": "action",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman in the straw hat hands a sheaf of wheat to the boy in overalls",
+   "question": "Is the woman in the straw hat handing a sheaf of wheat to the boy in overalls?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in overalls reaches out to accept the sheaf from the woman",
+   "question": "Is the boy in overalls reaching out to accept the sheaf from the woman?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "machinery",
+   "question": "Are there any machinery visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the straw hat stands",
+   "question": "Is the woman in the straw hat standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the older man in suspenders stands",
+   "question": "Is the older man in suspenders standing?"
+  },
+  {
+   "id": "barn",
+   "type": "entity",
+   "class": "barn",
+   "plural": "barns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant barn",
+   "question": "Is there a distant barn?",
+   "box": [
+    850,
+    300,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "basket_grain",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woven basket held by the woman is filled with grain",
+   "question": "Is the woven basket held by the woman filled with grain?"
+  },
+  {
+   "id": "no_equipment",
+   "type": "absent",
+   "desc": "modern equipment",
+   "question": "Is there any modern equipment visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "boy",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0010",
+ "prompt": "In a vibrant anime style illustration, a golden wheat field stretches under a clear blue sky during the height of harvest. On the far left stands a woman in a straw hat, holding a woven basket filled with grain. Next to her, a black and white cow grazes peacefully, its head lowered toward the earth. In the center foreground, a boy in overalls sits on a wooden crate, wiping sweat from his brow with a checkered handkerchief. To his right, an older man in suspenders points enthusiastically toward the horizon, directing attention to the distant barn. Behind the boy, a young girl in a yellow dress looks up at him with admiration, clutching a single stalk of wheat. Perched atop the crate beside the boy is a small orange cat, watching the scene with curious green eyes. The woman in the straw hat is handing a sheaf of wheat to the boy in overalls, who reaches out to accept it with a grateful smile. The older man in suspenders stands next to the young girl in the yellow dress, creating a sense of familial connection amidst the labor. The black and white cow remains indifferent to the human activity, focused solely on the grass. There is no machinery or modern equipment visible in this pastoral scene, emphasizing traditional farming methods. The composition balances the figures across the frame, with the warm colors of the harvest contrasting against the cool blue sky. Each character displays distinct clothing and accessories that define their role in this rural setting, from the practical overalls to the delicate yellow dress. The orange cat adds a touch of whimsy to the otherwise serious work of gathering the crop.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

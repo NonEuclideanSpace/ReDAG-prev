@@ -1,0 +1,556 @@
+{
+ "style": "surreal digital art, dreamlike, impossible physics, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sky with swirling violet and green clouds rippling like ink in water",
+   "question": "Does the background show a sky with swirling violet and green clouds that ripple like ink in water?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hydrant",
+   "type": "entity",
+   "class": "fire hydrant",
+   "plural": "fire hydrants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty red fire hydrant",
+   "question": "Is there a rusty red fire hydrant?",
+   "box": [
+    400,
+    500,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient tree",
+   "question": "Is there an ancient tree?",
+   "box": [
+    420,
+    200,
+    604,
+    600
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s bicycle",
+   "question": "Is there a child’s bicycle?",
+   "box": [
+    100,
+    600,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "shopping cart",
+   "plural": "shopping carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shopping cart",
+   "question": "Is there a shopping cart?",
+   "box": [
+    700,
+    650,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "stray_cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    750,
+    750,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "sign",
+   "type": "entity",
+   "class": "traffic sign",
+   "plural": "traffic signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a traffic sign melting into the shape of a giant key",
+   "question": "Is there a traffic sign melting into the shape of a giant key?",
+   "box": [
+    800,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "origami bird",
+   "plural": "origami birds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a flock of origami birds",
+   "question": "Are there origami birds in the sky?",
+   "box": [
+    100,
+    50,
+    400,
+    250
+   ]
+  },
+  {
+   "id": "sidewalk",
+   "type": "entity",
+   "class": "sidewalk",
+   "plural": "sidewalks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sidewalk",
+   "question": "Is there a sidewalk?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sandwich",
+   "type": "entity",
+   "class": "sandwich",
+   "plural": "sandwiches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sandwich",
+   "question": "Is there a sandwich?",
+   "box": [
+    820,
+    850,
+    880,
+    900
+   ]
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "grasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of grass",
+   "question": "Is there a patch of grass?",
+   "box": [
+    780,
+    820,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "hydrant_cap",
+   "type": "attribute",
+   "of": "hydrant",
+   "desc": "the rusty red fire hydrant has a metal cap hanging open by a single thread of rust",
+   "question": "Does the rusty red fire hydrant have a metal cap hanging open by a single thread of rust?"
+  },
+  {
+   "id": "water_thread",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "a delicate steady thread of water flows upward from the hydrant cap",
+   "question": "Is a delicate steady thread of water flowing upward from the hydrant cap?"
+  },
+  {
+   "id": "tree_from_hydrant",
+   "type": "relation",
+   "of": [
+    "tree",
+    "hydrant"
+   ],
+   "desc": "the ancient tree grows out of the rusty red fire hydrant",
+   "question": "Does the ancient tree grow out of the rusty red fire hydrant?"
+  },
+  {
+   "id": "leaves_paper",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree’s leaves are made of paper pages",
+   "question": "Are the tree’s leaves made of paper pages?"
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "hydrant"
+   ],
+   "desc": "the child’s bicycle leans against the rusty red fire hydrant",
+   "question": "Does the child’s bicycle lean against the rusty red fire hydrant?"
+  },
+  {
+   "id": "bicycle_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the child’s bicycle spins lazily in place",
+   "question": "Is the child’s bicycle spinning lazily in place?"
+  },
+  {
+   "id": "chain_cats",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle’s chain is made of tiny cats",
+   "question": "Is the bicycle’s chain made of tiny cats?"
+  },
+  {
+   "id": "bottles_galaxies",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the shopping cart is crammed full of empty wine bottles holding swirling galaxies",
+   "question": "Is the shopping cart crammed full of empty wine bottles holding swirling galaxies?"
+  },
+  {
+   "id": "cat_behind_cart",
+   "type": "relation",
+   "of": [
+    "stray_cat",
+    "cart"
+   ],
+   "desc": "the stray cat crouches behind the shopping cart",
+   "question": "Does the stray cat crouch behind the shopping cart?"
+  },
+  {
+   "id": "cat_staring_shadow",
+   "type": "action",
+   "of": [
+    "stray_cat",
+    "sandwich"
+   ],
+   "desc": "the stray cat stares at the shadow of the sandwich",
+   "question": "Is the stray cat staring at the shadow of the sandwich?"
+  },
+  {
+   "id": "shadow_crawling",
+   "type": "state",
+   "of": "sandwich",
+   "desc": "the shadow of the sandwich crawls independently across the pavement",
+   "question": "Is the shadow of the sandwich crawling independently across the pavement?"
+  },
+  {
+   "id": "crumbs_floating",
+   "type": "relation",
+   "of": [
+    "sandwich",
+    "sandwich_shadow"
+   ],
+   "desc": "trails of crumbs from the sandwich float midair",
+   "question": "Do trails of crumbs from the sandwich float midair?"
+  },
+  {
+   "id": "sign_numbers_changing",
+   "type": "state",
+   "of": "sign",
+   "desc": "the numbers on the melting traffic sign are changing",
+   "question": "Are the numbers on the melting traffic sign changing?"
+  },
+  {
+   "id": "birds_fluttering",
+   "type": "state",
+   "of": "birds",
+   "desc": "the origami birds have wings unfolding and refolding",
+   "question": "Do the origami birds have wings unfolding and refolding?"
+  },
+  {
+   "id": "sandwich_on_grass",
+   "type": "relation",
+   "of": [
+    "sandwich",
+    "grass"
+   ],
+   "desc": "the sandwich is on the grass",
+   "question": "Is the sandwich on the grass?"
+  },
+  {
+   "id": "grass_beneath_sign",
+   "type": "relation",
+   "of": [
+    "grass",
+    "sign"
+   ],
+   "desc": "the grass is beneath the traffic sign",
+   "question": "Is the grass beneath the traffic sign?"
+  },
+  {
+   "id": "no_wet_sidewalk",
+   "type": "absent",
+   "desc": "wetness on the sidewalk",
+   "question": "Is the sidewalk wet?"
+  },
+  {
+   "id": "no_rain_ground",
+   "type": "absent",
+   "desc": "rain reaching the ground",
+   "question": "Does rain reach the ground?"
+  },
+  {
+   "id": "hydrant_glistening",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the rusty red fire hydrant glistens",
+   "question": "Does the rusty red fire hydrant glisten?"
+  },
+  {
+   "id": "tree_bark_silver",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the ancient tree's bark shimmers with veins",
+   "question": "Does the ancient tree's bark shimmer with veins?"
+  },
+  {
+   "id": "bicycle_distortion",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the child’s bicycle distorts the space around it like a lens bending reality",
+   "question": "Does the child’s bicycle distort the space around it like a lens bending reality?"
+  },
+  {
+   "id": "cat_fur_reflections",
+   "type": "attribute",
+   "of": "stray_cat",
+   "desc": "the stray cat's fur shimmers with reflections",
+   "question": "Does the stray cat's fur shimmer with reflections?"
+  },
+  {
+   "id": "sign_melting",
+   "type": "state",
+   "of": "sign",
+   "desc": "the traffic sign is melting, its metal curving and reforming",
+   "question": "Is the traffic sign melting, with its metal curving and reforming?"
+  },
+  {
+   "id": "sandwich_shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the shadow of the sandwich",
+   "question": "Is there a shadow of the sandwich?",
+   "box": [
+    400,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "cat_staring_shadow_entity",
+   "type": "action",
+   "of": [
+    "stray_cat",
+    "sandwich_shadow"
+   ],
+   "desc": "the stray cat stares at the shadow of the sandwich",
+   "question": "Is the stray cat staring at the shadow of the sandwich?"
+  },
+  {
+   "id": "crumbs",
+   "type": "entity",
+   "class": "crumb",
+   "plural": "crumbs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny suspended breadcrumbs",
+   "question": "Are there tiny suspended breadcrumbs?",
+   "box": [
+    350,
+    800,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "crumbs_from_shadow",
+   "type": "relation",
+   "of": [
+    "crumbs",
+    "sandwich_shadow"
+   ],
+   "desc": "trails of crumbs float midair from the shadow of the sandwich",
+   "question": "Do trails of crumbs float midair from the shadow of the sandwich?"
+  },
+  {
+   "id": "drizzle",
+   "type": "entity",
+   "class": "drizzle",
+   "plural": "drizzles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a drizzle that never quite reaches the ground",
+   "question": "Is there a drizzle suspended in the air?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "bicycle_training_wheels",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has mismatched training wheels",
+   "question": "Does the child’s bicycle have mismatched training wheels?"
+  },
+  {
+   "id": "cart_rusted",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the shopping cart is rusted with age",
+   "question": "Is the shopping cart rusted with age?"
+  },
+  {
+   "id": "cat_eyes_mirrors",
+   "type": "attribute",
+   "of": "stray_cat",
+   "desc": "the stray cat has eyes like shifting mirrors",
+   "question": "Does the stray cat have eyes like shifting mirrors?"
+  },
+  {
+   "id": "sidewalk_dry",
+   "type": "state",
+   "of": "sidewalk",
+   "desc": "the sidewalk is dry",
+   "question": "Is the sidewalk dry?"
+  },
+  {
+   "id": "sidewalk_cracks",
+   "type": "attribute",
+   "of": "sidewalk",
+   "desc": "the sidewalk is patterned with cracks",
+   "question": "Is the sidewalk patterned with cracks?"
+  },
+  {
+   "id": "leaves_novels",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the paper pages are from forgotten novels",
+   "question": "Are the paper pages on the tree from forgotten novels?"
+  },
+  {
+   "id": "chain_cats_glowing",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the cats in the chain are glowing",
+   "question": "Are the cats in the bicycle’s chain glowing?"
+  },
+  {
+   "id": "birds_fluttering_action",
+   "type": "state",
+   "of": "birds",
+   "desc": "the origami birds are fluttering",
+   "question": "Are the origami birds fluttering?"
+  },
+  {
+   "id": "tree_bark_liquid_silver",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the veins in the bark are liquid silver",
+   "question": "Are the veins in the tree's bark liquid silver?"
+  },
+  {
+   "id": "cat_fur_reflections_content",
+   "type": "attribute",
+   "of": "stray_cat",
+   "desc": "the reflections in the fur are of the sky and sidewalk",
+   "question": "Are the reflections in the stray cat's fur of the sky and sidewalk?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "sidewalk",
+   "to": "hydrant",
+   "kind": "support"
+  },
+  {
+   "from": "sidewalk",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "sidewalk",
+   "to": "cart",
+   "kind": "support"
+  },
+  {
+   "from": "sidewalk",
+   "to": "stray_cat",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "sandwich",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0285",
+ "prompt": "Beneath a sky bruised with swirling violet and green clouds that ripple like ink in water, the rusty red fire hydrant glistens under a drizzle that never quite reaches the ground. A metal cap hangs open by a single thread of rust, from which a delicate, steady thread of water flows not downward but upward, suspended in the air like a luminous, liquid thread before vanishing into the mist. The sidewalk is not wet, but dry and patterned with cracks that mirror the branching roots of an ancient tree that grows impossibly out of the hydrant itself, its bark shimmering with veins of liquid silver. The tree’s leaves are made of paper, pages from forgotten novels that flutter with whispers of old stories and half-remembered lullabies. Leaning against the hydrant, a child’s bicycle with mismatched training wheels spins lazily in place, each rotation distorting the space around it like a lens bending reality, warping the reflection of the sky into a kaleidoscope of fractured suns and phantom moons. The bicycle’s chain is made of tiny, glowing cats, each one meowing in a different tone, their sounds resonating with the rustling of the paper leaves. Near the bicycle, a shopping cart rusted with age and mystery is crammed full of empty wine bottles that hold not air, but swirling galaxies, each bottle a window into a different time or world. Behind it crouches a stray cat with eyes like shifting mirrors, its fur shimmering with reflections of the sky and sidewalk, as if it were a living collage of the world around it. The cat stares not at the sandwich on the grass beneath the traffic sign but at the shadow of the sandwich, which seems to have its own will, crawling independently across the pavement and leaving trails of crumbs that float midair like tiny, suspended breadcrumbs. The traffic sign itself is melting, its metal curving and reforming into the shape of a giant key, its numbers changing every time the wind shifts, as if it is counting down to some unknowable moment. Above it all, a flock of origami birds flutters, their paper wings unfolding and refolding with each gust, carrying snippets of conversation from invisible speakers in the sky. The entire scene hums with an impossible coherence, a tapestry of causality and surrealism where the bicycle spins, the hydrant drips upward, the cat watches the shadow, and the world itself feels both alien and familiar, as if memory and imagination have conspired to create a place just beyond the edge of logic.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 38,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 9,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

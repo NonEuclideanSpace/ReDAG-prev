@@ -1,0 +1,246 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image depict a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a restaurant counter",
+   "question": "Is there a restaurant counter?",
+   "box": [
+    512,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "hanging lamp",
+   "plural": "hanging lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging lamp",
+   "question": "Is there a hanging lamp?",
+   "box": [
+    700,
+    50,
+    850,
+    300
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a tall white hat",
+   "question": "Is there a chef in a tall white hat?",
+   "box": [
+    50,
+    150,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a green shirt",
+   "question": "Is there a customer in a green shirt?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    850,
+    800,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "chef_pan",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a silver pan",
+   "question": "Is the chef holding a silver pan?"
+  },
+  {
+   "id": "chef_plate",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a plate",
+   "question": "Is the chef holding a plate?"
+  },
+  {
+   "id": "customer_menu",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the customer holds a menu",
+   "question": "Is the customer holding a menu?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "waiter_reaching",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is reaching out",
+   "question": "Is the waiter reaching out?"
+  },
+  {
+   "id": "customer_sitting",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer is sitting",
+   "question": "Is the customer sitting?"
+  },
+  {
+   "id": "customer_looking",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer is looking at the menu",
+   "question": "Is the customer looking at the menu?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is sitting",
+   "question": "Is the dog sitting?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef hands the plate to the waiter",
+   "question": "Is the chef handing the plate to the waiter?"
+  },
+  {
+   "id": "customer_at_counter",
+   "type": "relation",
+   "of": [
+    "customer",
+    "counter"
+   ],
+   "desc": "the customer sits at the counter",
+   "question": "Is the customer sitting at the counter?"
+  },
+  {
+   "id": "dog_next_to_customer",
+   "type": "relation",
+   "of": [
+    "dog",
+    "customer"
+   ],
+   "desc": "the dog is next to the customer",
+   "question": "Is the dog next to the customer?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog sits on the floor",
+   "question": "Is the dog sitting on the floor?"
+  },
+  {
+   "id": "lamp_above_counter",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "counter"
+   ],
+   "desc": "the lamp hangs above the counter",
+   "question": "Is the lamp hanging above the counter?"
+  },
+  {
+   "id": "no_stove",
+   "type": "absent",
+   "desc": "a stove",
+   "question": "Is there a stove visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0123",
+ "prompt": "This flat vector illustration depicts a busy restaurant kitchen. On the left, a chef in a tall white hat stands holding a silver pan. In the center, a waiter in a blue apron reaches out to take a plate from the chef. To the right, a customer in a green shirt sits at a counter looking at a menu. Next to the customer, a small brown dog sits on the floor. Above the counter, a hanging lamp shines down. The chef is handing the plate to the waiter. The customer is looking at the menu. There is no stove visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

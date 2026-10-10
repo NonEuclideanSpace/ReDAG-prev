@@ -1,0 +1,403 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a living room with a white wall",
+   "question": "Does the image show a living room with a white wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sofa",
+   "type": "entity",
+   "class": "sofa",
+   "plural": "sofas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray sofa",
+   "question": "Is there a gray sofa?",
+   "box": [
+    100,
+    300,
+    924,
+    700
+   ]
+  },
+  {
+   "id": "cushions",
+   "type": "entity",
+   "class": "cushion",
+   "plural": "cushions",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four cushions",
+   "question": "Are there exactly four cushions?",
+   "box": [
+    150,
+    320,
+    874,
+    500
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "coffee table",
+   "plural": "coffee tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden coffee table",
+   "question": "Is there a wooden coffee table?",
+   "box": [
+    200,
+    650,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two red apples",
+   "question": "Are there exactly two red apples?",
+   "box": [
+    400,
+    680,
+    624,
+    780
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue rug",
+   "question": "Is there a blue rug?",
+   "box": [
+    50,
+    750,
+    974,
+    1024
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    250,
+    350,
+    450,
+    550
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "floor lamp",
+   "plural": "floor lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall floor lamp",
+   "question": "Is there a tall floor lamp?",
+   "box": [
+    930,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bookshelf",
+   "question": "Is there a bookshelf?",
+   "box": [
+    0,
+    50,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five books",
+   "question": "Are there exactly five books?",
+   "box": [
+    20,
+    300,
+    130,
+    500
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green potted plant",
+   "question": "Is there a green potted plant?",
+   "box": [
+    20,
+    520,
+    130,
+    650
+   ]
+  },
+  {
+   "id": "tv",
+   "type": "entity",
+   "class": "television",
+   "plural": "televisions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flat-screen television",
+   "question": "Is there a flat-screen television?",
+   "box": [
+    300,
+    50,
+    724,
+    250
+   ]
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "action",
+   "of": [
+    "cat",
+    "tv"
+   ],
+   "desc": "the black cat is looking at the television",
+   "question": "Is the black cat looking at the television?"
+  },
+  {
+   "id": "cushions_on_sofa",
+   "type": "relation",
+   "of": [
+    "cushions",
+    "sofa"
+   ],
+   "desc": "the cushions are on the sofa",
+   "question": "Are the cushions on the sofa?"
+  },
+  {
+   "id": "table_in_front_of_sofa",
+   "type": "relation",
+   "of": [
+    "table",
+    "sofa"
+   ],
+   "desc": "the coffee table is in front of the sofa",
+   "question": "Is the coffee table in front of the sofa?"
+  },
+  {
+   "id": "apples_on_table",
+   "type": "relation",
+   "of": [
+    "apples",
+    "table"
+   ],
+   "desc": "the apples are on top of the coffee table",
+   "question": "Are the apples on top of the coffee table?"
+  },
+  {
+   "id": "rug_under_table",
+   "type": "relation",
+   "of": [
+    "rug",
+    "table"
+   ],
+   "desc": "the rug is under the coffee table",
+   "question": "Is the rug under the coffee table?"
+  },
+  {
+   "id": "cat_on_cushion",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cushions"
+   ],
+   "desc": "the black cat is on one of the cushions",
+   "question": "Is the black cat on one of the cushions?"
+  },
+  {
+   "id": "lamp_beside_sofa",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "sofa"
+   ],
+   "desc": "the floor lamp is beside the sofa",
+   "question": "Is the floor lamp beside the sofa?"
+  },
+  {
+   "id": "bookshelf_left_of_lamp",
+   "type": "relation",
+   "of": [
+    "bookshelf",
+    "lamp"
+   ],
+   "desc": "the bookshelf is to the left of the floor lamp",
+   "question": "Is the bookshelf to the left of the floor lamp?"
+  },
+  {
+   "id": "books_on_bookshelf",
+   "type": "relation",
+   "of": [
+    "books",
+    "bookshelf"
+   ],
+   "desc": "the books are on the bookshelf",
+   "question": "Are the books on the bookshelf?"
+  },
+  {
+   "id": "plant_next_to_books",
+   "type": "relation",
+   "of": [
+    "plant",
+    "books"
+   ],
+   "desc": "the potted plant is next to the books",
+   "question": "Is the potted plant next to the books?"
+  },
+  {
+   "id": "tv_on_wall",
+   "type": "state",
+   "of": "tv",
+   "desc": "the television is mounted on the wall",
+   "question": "Is the television mounted on the wall?"
+  },
+  {
+   "id": "tv_above_table",
+   "type": "relation",
+   "of": [
+    "tv",
+    "table"
+   ],
+   "desc": "the television is above the coffee table",
+   "question": "Is the television above the coffee table?"
+  },
+  {
+   "id": "rug_touching_sofa",
+   "type": "relation",
+   "of": [
+    "rug",
+    "sofa"
+   ],
+   "desc": "the rug is touching the sofa legs",
+   "question": "Is the rug touching the sofa?"
+  },
+  {
+   "id": "rug_wider_than_sofa",
+   "type": "relation",
+   "of": [
+    "rug",
+    "sofa"
+   ],
+   "desc": "the blue rug is wider than the gray sofa is long",
+   "question": "Is the blue rug wider than the gray sofa is long?"
+  },
+  {
+   "id": "bookshelf_taller_than_sofa",
+   "type": "relation",
+   "of": [
+    "bookshelf",
+    "sofa"
+   ],
+   "desc": "the bookshelf is taller than the gray sofa is high",
+   "question": "Is the bookshelf taller than the gray sofa is high?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "sofa",
+   "to": "cushions",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "apples",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "table",
+   "kind": "support"
+  },
+  {
+   "from": "cushions",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bookshelf",
+   "to": "books",
+   "kind": "support"
+  },
+  {
+   "from": "bookshelf",
+   "to": "plant",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_067",
+ "prompt": "A living room with a gray sofa against a white wall. The sofa has four cushions. In front of the sofa is a wooden coffee table, on top of which are two red apples. The number of apples is half the number of cushions on the sofa. A blue rug is under the coffee table and is wider than the sofa is long. A black cat is sitting on one of the sofa's cushions. A tall floor lamp is beside the sofa, and a bookshelf is to the left of the lamp. The bookshelf is taller than the sofa is high. On the bookshelf are some books and a green potted plant next to the books. The number of books is one more than the number of cushions on the sofa. A flat-screen television is mounted on the wall above the coffee table. The cat is looking at the television. The rug is touching the sofa legs.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 2,
+   "set_count": 3,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a harvest scene with dusty ground",
+   "question": "Does the image show a harvest scene with dusty ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a blue plaid shirt",
+   "question": "Is there a farmer in a blue plaid shirt?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    380,
+    600,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow overalls",
+   "question": "Is there a child in yellow overalls?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "wheat_sheaf",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a golden wheat sheaf upright",
+   "question": "Is the farmer holding a golden wheat sheaf upright?"
+  },
+  {
+   "id": "apple_handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "child"
+   ],
+   "desc": "the farmer hands a single apple to the child",
+   "question": "Is the farmer handing a single apple to the child?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child reaches out",
+   "question": "Is the child reaching out?"
+  },
+  {
+   "id": "crate_on_ground",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate sits on the dusty ground",
+   "question": "Is the wooden crate sitting on the dusty ground?"
+  },
+  {
+   "id": "child_toward_crate",
+   "type": "relation",
+   "of": [
+    "child",
+    "crate"
+   ],
+   "desc": "the child reaches toward the crate",
+   "question": "Is the child reaching toward the crate?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a blue plaid shirt stands",
+   "question": "Is the farmer in a blue plaid shirt standing?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "ripe red apples",
+   "question": "Are there ripe red apples?",
+   "box": [
+    360,
+    610,
+    664,
+    850
+   ]
+  },
+  {
+   "id": "crate_filled",
+   "type": "relation",
+   "of": [
+    "crate",
+    "apples"
+   ],
+   "desc": "the wooden crate is filled to the brim with apples",
+   "question": "Is the wooden crate filled to the brim with apples?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0074",
+ "prompt": "A photorealistic photo captures a harvest scene. On the left, a farmer in a blue plaid shirt stands holding a golden wheat sheaf upright. In the center, a wooden crate sits on the dusty ground, filled to the brim with ripe red apples. To the right, a child in yellow overalls reaches out toward the crate. The farmer is handing a single apple to the child. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

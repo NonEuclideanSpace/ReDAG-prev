@@ -1,0 +1,129 @@
+{
+ "style": "anime style with soft lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden wheat field under a bright sky",
+   "question": "Does the image show a golden wheat field under a bright sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a straw hat",
+   "question": "Is there a girl in a straw hat?",
+   "box": [
+    50,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "goat",
+   "type": "entity",
+   "class": "goat",
+   "plural": "goats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white goat",
+   "question": "Is there a white goat?",
+   "box": [
+    450,
+    350,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl holds a woven basket filled with grain",
+   "question": "Is the girl holding a woven basket filled with grain?"
+  },
+  {
+   "id": "girl_looking",
+   "type": "relation",
+   "of": [
+    "girl",
+    "goat"
+   ],
+   "desc": "the girl looks at the goat",
+   "question": "Is the girl looking at the goat?"
+  },
+  {
+   "id": "girl_extending",
+   "type": "relation",
+   "of": [
+    "girl",
+    "goat"
+   ],
+   "desc": "the girl extends her hand toward the goat",
+   "question": "Is the girl extending her hand toward the goat?"
+  },
+  {
+   "id": "goat_facing",
+   "type": "state",
+   "of": "goat",
+   "desc": "the goat faces the girl",
+   "question": "Is the goat facing the girl?"
+  },
+  {
+   "id": "goat_head",
+   "type": "state",
+   "of": "goat",
+   "desc": "the goat's head is slightly lowered",
+   "question": "Is the goat's head slightly lowered?"
+  },
+  {
+   "id": "goat_beside_girl",
+   "type": "relation",
+   "of": [
+    "goat",
+    "girl"
+   ],
+   "desc": "the goat stands beside the girl",
+   "question": "Is the goat standing beside the girl?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "machinery",
+   "question": "Is there any machinery visible in the background?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in a straw hat stands",
+   "question": "Is the girl in a straw hat standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0002",
+ "prompt": "In anime style, a golden wheat field stretches under a bright sky. On the left, a girl in a straw hat holds a woven basket filled with grain. In the center, a white goat stands calmly beside her. The girl looks at the goat while extending her hand toward it. The goat faces the girl, its head slightly lowered. There is no machinery visible in the background. The scene captures a quiet moment of connection during harvest, with soft lines defining the characters and the surrounding crops. The composition focuses strictly on these two figures and their simple interaction amidst the rural landscape.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

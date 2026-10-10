@@ -1,0 +1,519 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, rusted tangerine and bruised indigo palette, fractured lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal landscape with a fractured sky in rusted tangerine and bruised indigo, a gnarled oak tree with spiraling branches, and a tilted cracked mirror reflecting a path into a glade of glass flowers and inverted trees",
+   "question": "Does the background show a surreal landscape with a fractured sky in rusted tangerine and bruised indigo, a gnarled oak tree, and a tilted cracked mirror reflecting an impossible path?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered park bench with worn wood",
+   "question": "Is there a weathered park bench with worn wood?",
+   "box": [
+    200,
+    500,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of binoculars with tarnished brass fittings",
+   "question": "Are there binoculars with tarnished brass fittings?",
+   "box": [
+    450,
+    350,
+    550,
+    450
+   ]
+  },
+  {
+   "id": "squirrel",
+   "type": "entity",
+   "class": "red squirrel",
+   "plural": "red squirrels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red squirrel with fur streaked with dust",
+   "question": "Is there a red squirrel with fur streaked with dust?",
+   "box": [
+    600,
+    550,
+    700,
+    650
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled half-buried map with smudged topography",
+   "question": "Is there a crumpled half-buried map with smudged topography?",
+   "box": [
+    150,
+    750,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bent and crumpled pencil",
+   "question": "Is there a bent and crumpled pencil?",
+   "box": [
+    380,
+    850,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "snail",
+   "type": "entity",
+   "class": "garden snail",
+   "plural": "garden snails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a garden snail trailing a silver arc of mucus",
+   "question": "Is there a garden snail trailing a silver arc of mucus?",
+   "box": [
+    500,
+    880,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "weathervane",
+   "type": "entity",
+   "class": "weathervane",
+   "plural": "weathervanes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted weathervane with a ghostly flaking rooster",
+   "question": "Is there a rusted weathervane with a ghostly flaking rooster?",
+   "box": [
+    850,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "archway",
+   "type": "entity",
+   "class": "stone archway",
+   "plural": "stone archways",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small stone archway half-submerged in roots, glowing faintly",
+   "question": "Is there a small stone archway half-submerged in roots, glowing faintly?",
+   "box": [
+    50,
+    600,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted key",
+   "question": "Is there a rusted key?",
+   "box": [
+    100,
+    776,
+    150,
+    824
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "sparrow",
+   "plural": "sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sparrow",
+   "question": "Is there a sparrow?",
+   "box": [
+    116,
+    576,
+    164,
+    624
+   ]
+  },
+  {
+   "id": "raindrop",
+   "type": "entity",
+   "class": "raindrop",
+   "plural": "raindrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single raindrop",
+   "question": "Is there a single raindrop falling from the sky?",
+   "box": [
+    506,
+    786,
+    554,
+    834
+   ]
+  },
+  {
+   "id": "binoculars_dangling",
+   "type": "state",
+   "of": "binoculars",
+   "desc": "the binoculars are dangling from the bench’s backrest",
+   "question": "Are the binoculars dangling from the bench’s backrest?"
+  },
+  {
+   "id": "squirrel_scampers",
+   "type": "state",
+   "of": "squirrel",
+   "desc": "the red squirrel is scampering across the bench seat",
+   "question": "Is the red squirrel scampering across the bench seat?"
+  },
+  {
+   "id": "squirrel_sniffing",
+   "type": "action",
+   "of": [
+    "squirrel",
+    "binoculars"
+   ],
+   "desc": "the red squirrel sniffs the rubber eyecups of the binoculars",
+   "question": "Is the red squirrel sniffing the rubber eyecups of the binoculars?"
+  },
+  {
+   "id": "map_on_ground",
+   "type": "state",
+   "of": "map",
+   "desc": "the map lies in the leaf litter on the ground",
+   "question": "Does the map lie in the leaf litter on the ground?"
+  },
+  {
+   "id": "pencil_near_map",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "map"
+   ],
+   "desc": "the pencil lies just beyond the map",
+   "question": "Is the pencil lying just beyond the map?"
+  },
+  {
+   "id": "snail_near_pencil",
+   "type": "relation",
+   "of": [
+    "snail",
+    "pencil"
+   ],
+   "desc": "the garden snail is near the pencil",
+   "question": "Is the garden snail near the pencil?"
+  },
+  {
+   "id": "weathervane_spinning",
+   "type": "state",
+   "of": "weathervane",
+   "desc": "the weathervane is spinning slowly",
+   "question": "Is the weathervane spinning slowly?"
+  },
+  {
+   "id": "archway_behind_bench",
+   "type": "relation",
+   "of": [
+    "archway",
+    "bench"
+   ],
+   "desc": "the stone archway is behind the bench",
+   "question": "Is the stone archway behind the bench?"
+  },
+  {
+   "id": "key_at_archway_base",
+   "type": "relation",
+   "of": [
+    "key",
+    "archway"
+   ],
+   "desc": "the key rests at the base of the stone archway",
+   "question": "Does the key rest at the base of the stone archway?"
+  },
+  {
+   "id": "sparrow_on_archway",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "archway"
+   ],
+   "desc": "the sparrow perches on the edge of the stone archway",
+   "question": "Is the sparrow perching on the edge of the stone archway?"
+  },
+  {
+   "id": "sparrow_pecking",
+   "type": "action",
+   "of": [
+    "sparrow",
+    "key"
+   ],
+   "desc": "the sparrow pecks at a crumb of metal near the key",
+   "question": "Is the sparrow pecking at a crumb of metal near the key?"
+  },
+  {
+   "id": "raindrop_hits_snail",
+   "type": "action",
+   "of": [
+    "raindrop",
+    "snail"
+   ],
+   "desc": "the raindrop hits the snail’s shell",
+   "question": "Does the raindrop hit the snail’s shell?"
+  },
+  {
+   "id": "shadowy_figure",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy figure",
+   "question": "Is there a shadowy figure?",
+   "box": [
+    800,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "figure_in_mirror",
+   "type": "state",
+   "of": "shadowy_figure",
+   "desc": "the shadowy figure is walking along the impossible path reflected in the mirror",
+   "question": "Is the shadowy figure walking along the path reflected in the mirror?"
+  },
+  {
+   "id": "violin_strings",
+   "type": "entity",
+   "class": "violin strings",
+   "plural": "violin strings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "violin strings caught on the wind",
+   "question": "Are there violin strings visible in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "strings_wrap_binoculars",
+   "type": "relation",
+   "of": [
+    "violin_strings",
+    "binoculars"
+   ],
+   "desc": "the violin strings wrap around the binoculars",
+   "question": "Do the violin strings wrap around the binoculars?"
+  },
+  {
+   "id": "strings_thread_squirrel",
+   "type": "relation",
+   "of": [
+    "violin_strings",
+    "squirrel"
+   ],
+   "desc": "the violin strings thread through the squirrel’s paws",
+   "question": "Do the violin strings thread through the squirrel’s paws?"
+  },
+  {
+   "id": "strings_slip_map",
+   "type": "relation",
+   "of": [
+    "violin_strings",
+    "map"
+   ],
+   "desc": "the violin strings slip between the pages of the map",
+   "question": "Do the violin strings slip between the pages of the map?"
+  },
+  {
+   "id": "bench_worn_wood",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench has worn wood that appears gnawed",
+   "question": "Does the bench have worn wood that appears gnawed?"
+  },
+  {
+   "id": "map_island_shape",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map bears the shape of an island that doesn't exist",
+   "question": "Does the map show the shape of a non-existent island?"
+  },
+  {
+   "id": "pencil_legible",
+   "type": "attribute",
+   "of": "pencil",
+   "desc": "the pencil is barely legible",
+   "question": "Is the pencil barely legible?"
+  },
+  {
+   "id": "snail_paused",
+   "type": "state",
+   "of": "snail",
+   "desc": "the snail is paused",
+   "question": "Is the snail paused?"
+  },
+  {
+   "id": "weathervane_rooster",
+   "type": "attribute",
+   "of": "weathervane",
+   "desc": "the weathervane has a painted rooster",
+   "question": "Does the weathervane have a painted rooster?"
+  },
+  {
+   "id": "archway_names",
+   "type": "attribute",
+   "of": "archway",
+   "desc": "the archway surface is etched with names and dates that flicker and fade",
+   "question": "Is the archway surface etched with names and dates that appear to flicker and fade?"
+  },
+  {
+   "id": "key_intact",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the key is rusted but intact",
+   "question": "Is the key rusted but intact?"
+  },
+  {
+   "id": "sparrow_crumb",
+   "type": "attribute",
+   "of": "sparrow",
+   "desc": "the sparrow pecks at a crumb of metal that might have been a button",
+   "question": "Is the sparrow pecking at a small metal crumb?"
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled oak tree with branches twisting into impossible shapes",
+   "question": "Is there a gnarled oak tree with branches twisting into impossible shapes?",
+   "box": [
+    100,
+    50,
+    924,
+    600
+   ]
+  },
+  {
+   "id": "oak_behind_bench",
+   "type": "relation",
+   "of": [
+    "oak_tree",
+    "bench"
+   ],
+   "desc": "the gnarled oak tree is behind the bench",
+   "question": "Is the gnarled oak tree behind the bench?"
+  },
+  {
+   "id": "bench_imprints",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench bears faint imprints of past picnics",
+   "question": "Does the bench bear faint imprints of past picnics?"
+  },
+  {
+   "id": "snail_tentacles",
+   "type": "state",
+   "of": "snail",
+   "desc": "the snail has its tentacles curled",
+   "question": "Are the snail's tentacles curled?"
+  },
+  {
+   "id": "rooster_condition",
+   "type": "attribute",
+   "of": "weathervane",
+   "desc": "the rooster on the weathervane looks ghostly and flaking",
+   "question": "Does the rooster on the weathervane look ghostly and flaking?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "binoculars",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "squirrel",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0400",
+ "prompt": "The sun filters through a fractured sky in a kaleidoscope of rusted tangerine and bruised indigo, casting fractured light across a weathered park bench whose worn wood has been gnawed by generations of squirrels, yet still bears the ghostly imprints of past picnics. From the bench’s backrest dangle a pair of binoculars, their brass fittings tarnished and swaying gently in the wind, as if suspended by an invisible thread or caught in a loop of their own watching. A red squirrel, its fur streaked with the dust of ancient oak bark, scampers across the bench seat, pausing just short of the binoculars to sniff the rubber eyecups, mistaking them for some strange, rubbery nut. Nearby, a half-buried map lies crumpled in the leaf litter, its once-vivid topography now smudged and distorted by time and rain, yet still bearing the curious shape of an island that doesn’t exist. The breeze lifts a curled corner of the map, revealing a pencil—bent, crumpled, and barely legible—lying just beyond the reach of a wandering garden snail, which trails a silver arc of mucus across the damp earth like a cartographer’s forgotten line. The pencil seems to hover just slightly, as if caught mid-tumble in the pause between cause and effect, and the snail, perhaps aware of this strange stillness, pauses in turn, curling its tentacles into delicate question marks. A rusted weathervane, its painted rooster now ghostly and flaking, spins in a circle not of wind, but of thought—slow, deliberate, each rotation matching the rhythm of the squirrel’s tail flicking back and forth. Behind the bench, a gnarled oak tree has grown into a spiral of its own shadow, its branches twisting into impossible shapes that echo the contours of the map’s vanished island. Beneath it, a small stone archway, half-submerged in the roots, glows faintly, its surface etched with names and dates that flicker and fade like fireflies. A discarded key rests at its base, rusted but intact, as if waiting for a lock that has never been built. The key, the map, the binoculars—they form a triangle of unspoken purpose, each object pulling the others into a quiet dialogue. A sparrow perches on the edge of the archway, pecking at a crumb of metal that might once have been a button, while a breeze carries the faint hum of a violin played by someone no one can see. The violin strings catch on the wind, wrapping around the binoculars, threading through the squirrel’s paws, and slipping between the pages of the map like a forgotten note in a letter. Somewhere in the background, a mirror—tilted and cracked—reflects a path that does not exist in the real world, leading into a glade of glass flowers and inverted trees. Everything is in motion, yet nothing changes. The scene is suspended in a loop of potential, each object influencing the next in a chain of subtle, surreal causality. A single raindrop falls from the sky and hits the snail’s shell, sending a ripple through the snail’s path, nudging the pencil, altering the map’s trajectory, and in some unspoken logic, causing the weathervane to tilt. The binoculars, now catching the light just right, reveal for a fleeting moment a shadowy figure walking along the impossible path reflected in the mirror. It’s gone as quickly as it appears, but the squirrel pauses, as if it knew.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 11,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 67,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 3,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

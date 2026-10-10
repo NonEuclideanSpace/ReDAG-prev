@@ -1,0 +1,479 @@
+{
+ "style": "surreal digital art, liminal space, dreamlike atmosphere, warped perspective, hyperrealistic textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a liminal room with walls stretching infinitely, featuring impossible folds and a corridor behind the table that curves back on itself with shifting tiles (concrete, marble, moss)",
+   "question": "Does the background show a liminal room with infinite stretching walls, impossible folds, and a curving corridor with shifting tile textures?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden table, warped and gnarled, with legs splitting into multiple dimensions like tree branches",
+   "question": "Is there a weathered wooden table with warped grain and legs that split into multiple dimensional branches?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "glass_milk",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty glass",
+   "question": "Is there a half-empty glass?",
+   "box": [
+    450,
+    520,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "entity",
+   "class": "butter knife",
+   "plural": "butter knives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal butter knife",
+   "question": "Is there a metal butter knife?",
+   "box": [
+    600,
+    576,
+    750,
+    624
+   ]
+  },
+  {
+   "id": "napkin",
+   "type": "entity",
+   "class": "napkin",
+   "plural": "napkins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled napkin stained with golden honey",
+   "question": "Is there a crumpled napkin stained with golden honey?",
+   "box": [
+    580,
+    590,
+    780,
+    680
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly hovering in midair",
+   "question": "Is there a fly hovering in midair?",
+   "box": [
+    641,
+    541,
+    689,
+    589
+   ]
+  },
+  {
+   "id": "honey_ribbon",
+   "type": "entity",
+   "class": "liquid ribbon",
+   "plural": "liquid ribbons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ribbon of golden honey curling sideways in midair and looping around the fly",
+   "question": "Is there a ribbon of golden honey curling sideways in midair and looping around the fly?",
+   "box": [
+    620,
+    500,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small curious cat",
+   "question": "Is there a small curious cat?",
+   "box": [
+    100,
+    750,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    50,
+    100,
+    150,
+    200
+   ]
+  },
+  {
+   "id": "window_ceiling",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window suspended from the ceiling showing a flickering sky with changing constellations",
+   "question": "Is there a window suspended from the ceiling showing a flickering sky with changing constellations?",
+   "box": [
+    400,
+    20,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teapot",
+   "question": "Is there a teapot?",
+   "box": [
+    300,
+    530,
+    400,
+    630
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    750,
+    550,
+    900,
+    650
+   ]
+  },
+  {
+   "id": "cat_shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow of the cat",
+   "question": "Is there a shadow of the cat?",
+   "box": [
+    150,
+    300,
+    350,
+    500
+   ]
+  },
+  {
+   "id": "milk_swirling",
+   "type": "state",
+   "of": "glass_milk",
+   "desc": "the milk in the glass is swirling slowly on its own",
+   "question": "Is the milk in the glass swirling slowly on its own?"
+  },
+  {
+   "id": "knife_on_napkin",
+   "type": "relation",
+   "of": [
+    "knife",
+    "napkin"
+   ],
+   "desc": "the butter knife lies across the crumpled napkin",
+   "question": "Does the butter knife lie across the crumpled napkin?"
+  },
+  {
+   "id": "fly_above_honey",
+   "type": "relation",
+   "of": [
+    "fly",
+    "honey_ribbon"
+   ],
+   "desc": "the fly hovers just above the trail of honey",
+   "question": "Is the fly hovering just above the trail of honey?"
+  },
+  {
+   "id": "cat_near_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the cat is near the table",
+   "question": "Is the cat positioned near the table?"
+  },
+  {
+   "id": "clock_in_corner",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock is in one corner of the room",
+   "question": "Is the clock located in one corner of the room?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the teapot rests on the table",
+   "question": "Does the teapot rest on the table?"
+  },
+  {
+   "id": "book_near_teapot",
+   "type": "relation",
+   "of": [
+    "book",
+    "teapot"
+   ],
+   "desc": "the book lies nearby the teapot",
+   "question": "Is the book lying nearby the teapot?"
+  },
+  {
+   "id": "glass_on_table",
+   "type": "relation",
+   "of": [
+    "glass_milk",
+    "table"
+   ],
+   "desc": "the glass of milk is on the table",
+   "question": "Is the glass of milk on the table?"
+  },
+  {
+   "id": "shadow_on_wall",
+   "type": "state",
+   "of": "cat_shadow",
+   "desc": "the shadow of the cat is on the wall",
+   "question": "Is the shadow of the cat on the wall?"
+  },
+  {
+   "id": "no_windows_wall",
+   "type": "absent",
+   "desc": "windows in the walls",
+   "question": "Are there any windows embedded in the walls of the room?"
+  },
+  {
+   "id": "condensation",
+   "type": "attribute",
+   "of": "table",
+   "desc": "iridescent droplets of condensation clinging to the table surface",
+   "question": "Are there iridescent droplets of condensation clinging to the table surface?"
+  },
+  {
+   "id": "honey_dripping_sideways",
+   "type": "state",
+   "of": "honey_ribbon",
+   "desc": "the ribbon of honey drips sideways",
+   "question": "Does the ribbon of honey drip sideways?"
+  },
+  {
+   "id": "cat_pausing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is pausing mid-step",
+   "question": "Is the cat pausing mid-step?"
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "relation",
+   "of": [
+    "cat",
+    "napkin"
+   ],
+   "desc": "the cat's tail flicks in time with the drip of honey",
+   "question": "Is the cat's tail flicking in time with the drip of honey?"
+  },
+  {
+   "id": "clock_ticking_reverse",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock ticks in reverse while its shadow moves forward",
+   "question": "Does the clock tick in reverse while its shadow moves forward?"
+  },
+  {
+   "id": "window_suspended",
+   "type": "state",
+   "of": "window_ceiling",
+   "desc": "the window is suspended from the ceiling",
+   "question": "Is the window suspended from the ceiling?"
+  },
+  {
+   "id": "table_stands",
+   "type": "state",
+   "of": "table",
+   "desc": "the weathered wooden table stands",
+   "question": "Is the weathered wooden table standing?"
+  },
+  {
+   "id": "cat_shadow_independent",
+   "type": "state",
+   "of": "cat_shadow",
+   "desc": "the shadow of the cat moves independently of the cat",
+   "question": "Does the shadow of the cat move independently of the cat?"
+  },
+  {
+   "id": "honey_stains_napkin",
+   "type": "attribute",
+   "of": "napkin",
+   "desc": "the crumpled napkin is stained with golden honey",
+   "question": "Is the crumpled napkin stained with golden honey?"
+  },
+  {
+   "id": "milk_viscous",
+   "type": "attribute",
+   "of": "glass_milk",
+   "desc": "the glass contains thick and strangely viscous milk",
+   "question": "Does the glass contain thick and strangely viscous milk?"
+  },
+  {
+   "id": "knife_dented",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the butter knife is slightly dented and pitted",
+   "question": "Is the butter knife slightly dented and pitted?"
+  },
+  {
+   "id": "cat_fur_patchwork",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has fur that is a shifting patchwork of colors and patterns",
+   "question": "Does the cat have fur that is a shifting patchwork of colors and patterns?"
+  },
+  {
+   "id": "clock_hands_spinning",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock hands are spinning in different directions",
+   "question": "Are the clock hands spinning in different directions?"
+  },
+  {
+   "id": "teapot_steam_figures",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot emits steam that forms small hovering figures",
+   "question": "Does the teapot emit steam that forms small hovering figures?"
+  },
+  {
+   "id": "book_pages_spiral",
+   "type": "state",
+   "of": "book",
+   "desc": "the book pages are turning in a spiral",
+   "question": "Are the book pages turning in a spiral?"
+  },
+  {
+   "id": "honey_spiral_floor",
+   "type": "state",
+   "of": "honey_ribbon",
+   "desc": "the ribbon of honey falls in a spiral toward the floor",
+   "question": "Does the ribbon of honey fall in a spiral toward the floor?"
+  },
+  {
+   "id": "cat_nose_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's nose is twitching",
+   "question": "Is the cat's nose twitching?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "glass_milk",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "napkin",
+   "to": "knife",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0236",
+ "prompt": "The room is a liminal space where time blurs into texture and light warps like liquid glass, its walls stretching infinitely in all directions with subtle, impossible folds that curve both in and out of themselves. At the heart of it all, a weathered wooden table stands, warped and gnarled with age, its legs splitting off into multiple dimensions like branches of a tree frozen mid-growth. Condensation clings to its surface in iridescent droplets, pooling from a half-empty glass of milk left out too long in a heat that doesn’t exist. The milk, thick and strangely viscous, swirls slowly on its own, as if stirred by an unseen hand or a ghostly wind that only the glass can feel. Near the edge, a butter knife—its metal slightly dented and pitted—lies across a crumpled napkin, its reflection fractured by the uneven wood grain into multiple selves, each one slightly different, like memories of the same event. The napkin, once white, is now stained with golden honey, not from being spilled, but from soaking in the air itself, as if the atmosphere had become a thick syrup. A fly hovers just above the trail of honey, its wings humming in a slow, deliberate rhythm that syncs with the heartbeat of the room. The honey drips not down the counter, but sideways, curling in midair like a ribbon, looping around the fly before falling in a spiral toward the floor. There, a small, curious cat—its fur a shifting patchwork of colors and patterns—pauses mid-step, nose twitching at the scent of something that doesn’t quite belong to the world it’s stepping through. Its tail flicks in time with the drip of honey, the movement synchronized so precisely it seems the cat is conducting the rhythm. Behind the table, the wall stretches into a corridor that curves impossibly back on itself, its tiles shifting from cracked concrete to polished marble to moss-covered stone in slow, undulating waves. In one corner, a clock ticks in reverse while a shadow of itself moves forward, each hand spinning in its own direction. A window, somehow suspended from the ceiling, shows a sky that flickers between night and day, clouds forming constellations that change as you watch. The air is thick with the smell of old wood and sweet decay, mingling with the faint, metallic tang of rust and something unnameable. A teapot rests on the table, its spout smoking with steam that doesn’t disappear but instead forms small, hovering figures that dance and vanish in moments. Nearby, a book lies open, its pages turning by themselves, not forward or backward, but in a spiral, revealing the same story told from multiple perspectives, each one slightly more surreal than the last. A shadow of the cat flickers on the wall, but it moves independently, walking through spaces the cat itself can’t reach. The scene is not chaotic but precise, a delicate balance of contradiction and cohesion, as if the world itself had paused to admire its own design before collapsing into the next impossible moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [
+   "node table: entity question is long (17 words); should only ask presence + identifying look",
+   "node cat: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cat_shadow_on_wall",
+     "shadow_on_wall"
+    ]
+   ]
+  }
+ }
+}

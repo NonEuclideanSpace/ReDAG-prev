@@ -1,0 +1,113 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background suitable for a pencil sketch",
+   "question": "Is the image a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    150,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    450,
+    300,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a velvet dress is standing",
+   "question": "Is the woman in a velvet dress standing?"
+  },
+  {
+   "id": "woman_hand_on_chair",
+   "type": "relation",
+   "of": [
+    "woman",
+    "chair"
+   ],
+   "desc": "the woman in a velvet dress rests her hand on the back of the wooden chair",
+   "question": "Is the woman in a velvet dress resting her hand on the back of the wooden chair?"
+  },
+  {
+   "id": "no_spotlight",
+   "type": "absent",
+   "desc": "spotlight beam",
+   "question": "Is there a spotlight beam in the image?"
+  },
+  {
+   "id": "chair_sitting",
+   "type": "state",
+   "of": "chair",
+   "desc": "the wooden chair is sitting",
+   "question": "Is the wooden chair sitting?"
+  },
+  {
+   "id": "woman_dress",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "velvet dress",
+   "question": "Is the woman wearing a velvet dress?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0061",
+ "prompt": "In a pencil sketch with light color wash, a woman in a velvet dress stands on the left. A wooden chair sits in the center. The woman rests her hand on the back of the chair. There is no spotlight beam.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

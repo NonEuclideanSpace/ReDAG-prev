@@ -1,0 +1,162 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray cardigan",
+   "question": "Is there an elderly man in a gray cardigan?",
+   "box": [
+    624,
+    300,
+    974,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "plastic bench",
+   "plural": "plastic benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic bench",
+   "question": "Is there a plastic bench?",
+   "box": [
+    600,
+    600,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a silver clipboard against her chest",
+   "question": "Is the nurse holding a silver clipboard against her chest?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is standing",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "nurse"
+   ],
+   "desc": "the elderly man looks directly at the nurse",
+   "question": "Is the elderly man looking directly at the nurse?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the plastic bench",
+   "question": "Is the elderly man sitting on the plastic bench?"
+  },
+  {
+   "id": "figures_opposite",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse and the elderly man are positioned opposite each other",
+   "question": "Are the nurse and the elderly man positioned opposite each other?"
+  },
+  {
+   "id": "no_equipment",
+   "type": "absent",
+   "desc": "medical equipment",
+   "question": "Is there any medical equipment visible in the image?"
+  },
+  {
+   "id": "man_calm",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a gray cardigan has a calm expression",
+   "question": "Does the elderly man in a gray cardigan have a calm expression?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0023",
+ "prompt": "In this cinematic film still, a nurse in blue scrubs stands on the left side of a sterile hospital corridor. She is holding a silver clipboard firmly against her chest. On the right, an elderly man in a gray cardigan sits on a plastic bench. He is looking directly at the nurse with a calm expression. The two figures are positioned opposite each other, creating a clear line of sight down the hallway. There is no medical equipment visible in the background or foreground, keeping the focus entirely on the human interaction within the quiet, empty space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

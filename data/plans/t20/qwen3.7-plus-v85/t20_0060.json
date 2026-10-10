@@ -1,0 +1,472 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling construction site with muddy ground and an unfinished wall",
+   "question": "Does the image show a bustling construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker_yellow",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    400,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "steel beam",
+   "plural": "steel beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large steel beam",
+   "question": "Is there a large steel beam?",
+   "box": [
+    260,
+    500,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in an orange vest",
+   "question": "Is there a foreman in an orange vest?",
+   "box": [
+    400,
+    350,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "scaffolding",
+   "type": "entity",
+   "class": "scaffolding",
+   "plural": "scaffolding structures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "upper scaffolding",
+   "question": "Is there upper scaffolding visible?",
+   "box": [
+    350,
+    50,
+    700,
+    300
+   ]
+  },
+  {
+   "id": "operator",
+   "type": "entity",
+   "class": "crane operator",
+   "plural": "crane operators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crane operator in a blue shirt",
+   "question": "Is there a crane operator in a blue shirt?",
+   "box": [
+    500,
+    100,
+    650,
+    250
+   ]
+  },
+  {
+   "id": "cab",
+   "type": "entity",
+   "class": "crane cab",
+   "plural": "crane cabs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crane cab",
+   "question": "Is there a crane cab?",
+   "box": [
+    480,
+    80,
+    670,
+    270
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick",
+   "plural": "bricks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of red bricks",
+   "question": "Is there a stack of red bricks?",
+   "box": [
+    800,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat with black fur",
+   "question": "Is there a stray cat?",
+   "box": [
+    750,
+    700,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white helmet",
+   "question": "Is there a woman in a white helmet?",
+   "box": [
+    300,
+    600,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "colleague_green",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colleague in a green jacket",
+   "question": "Is there a colleague in a green jacket?",
+   "box": [
+    550,
+    620,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "mixer",
+   "type": "entity",
+   "class": "cement mixer",
+   "plural": "cement mixers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cement mixer with a rotating drum",
+   "question": "Is there a cement mixer?",
+   "box": [
+    100,
+    500,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "wooden ladder",
+   "plural": "wooden ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden ladder",
+   "question": "Is there a wooden ladder?",
+   "box": [
+    900,
+    300,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker_yellow",
+   "desc": "the worker in a yellow hard hat is standing firmly",
+   "question": "Is the worker in a yellow hard hat standing firmly?"
+  },
+  {
+   "id": "beam_horizontal",
+   "type": "state",
+   "of": "beam",
+   "desc": "the large steel beam rests horizontally",
+   "question": "Is the large steel beam resting horizontally?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "action",
+   "of": [
+    "foreman",
+    "scaffolding"
+   ],
+   "desc": "the foreman in an orange vest points toward the upper scaffolding",
+   "question": "Is the foreman in an orange vest pointing toward the upper scaffolding?"
+  },
+  {
+   "id": "operator_sitting",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator in a blue shirt sits inside the cab",
+   "question": "Is the crane operator in a blue shirt sitting inside the cab?"
+  },
+  {
+   "id": "operator_looking",
+   "type": "action",
+   "of": [
+    "operator",
+    "worker_yellow"
+   ],
+   "desc": "the crane operator in a blue shirt looks down at the activity below",
+   "question": "Is the crane operator in a blue shirt looking down at the workers below?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the stray cat with black fur is crouching",
+   "question": "Is the stray cat crouching?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "worker_yellow"
+   ],
+   "desc": "the stray cat with black fur watches the workers",
+   "question": "Is the stray cat with black fur watching the workers?"
+  },
+  {
+   "id": "woman_holding",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a white helmet holds a rolled-up blueprint tightly against her chest",
+   "question": "Is the woman in a white helmet holding a rolled-up blueprint tightly against her chest?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "colleague_green"
+   ],
+   "desc": "the woman in a white helmet hands a small tool to the colleague in a green jacket",
+   "question": "Is the woman in a white helmet handing a small tool to the colleague in a green jacket?"
+  },
+  {
+   "id": "colleague_reaching",
+   "type": "state",
+   "of": "colleague_green",
+   "desc": "the colleague in a green jacket reaches out eagerly",
+   "question": "Is the colleague in a green jacket reaching out eagerly?"
+  },
+  {
+   "id": "worker_next_to_beam",
+   "type": "relation",
+   "of": [
+    "worker_yellow",
+    "beam"
+   ],
+   "desc": "the worker in a yellow hard hat is next to the large steel beam",
+   "question": "Is the worker in a yellow hard hat next to the large steel beam?"
+  },
+  {
+   "id": "cat_beside_bricks",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bricks"
+   ],
+   "desc": "the stray cat with black fur is beside the stack of red bricks",
+   "question": "Is the stray cat with black fur beside the stack of red bricks?"
+  },
+  {
+   "id": "mixer_behind_woman",
+   "type": "relation",
+   "of": [
+    "mixer",
+    "woman"
+   ],
+   "desc": "the cement mixer is behind the woman in a white helmet",
+   "question": "Is the cement mixer behind the woman in a white helmet?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "heavy machinery smoke",
+   "question": "Is there any heavy machinery smoke obscuring the view?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "bright sunlight casting harsh shadows",
+   "question": "Are there bright sunlight casting harsh shadows?"
+  },
+  {
+   "id": "operator_in_cab",
+   "type": "relation",
+   "of": [
+    "operator",
+    "cab"
+   ],
+   "desc": "the crane operator in a blue shirt is inside the crane cab",
+   "question": "Is the crane operator in a blue shirt inside the crane cab?"
+  },
+  {
+   "id": "cat_black_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the stray cat has black fur",
+   "question": "Does the stray cat have black fur?"
+  },
+  {
+   "id": "mixer_drum_rotating",
+   "type": "state",
+   "of": "mixer",
+   "desc": "the cement mixer drum is rotating",
+   "question": "Is the drum of the cement mixer rotating?"
+  },
+  {
+   "id": "muddy_ground",
+   "type": "entity",
+   "class": "ground",
+   "plural": "grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "muddy ground",
+   "question": "Is there muddy ground?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "unfinished_wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unfinished wall",
+   "question": "Is there an unfinished wall?",
+   "box": [
+    850,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "unfinished_wall"
+   ],
+   "desc": "the wooden ladder leans against the unfinished wall",
+   "question": "Does the wooden ladder lean against the unfinished wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "worker_yellow",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "beam",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bricks",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "colleague_green",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mixer",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "unfinished_wall",
+   "to": "ladder",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0060",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a bustling construction site. On the left, a worker in a yellow hard hat stands firmly on the muddy ground. Next to him, a large steel beam rests horizontally, its metallic surface lightly shaded. In the center, a foreman in an orange vest points decisively toward the upper scaffolding. A crane operator in a blue shirt sits inside the cab high above, looking down at the activity below. To the right, a stack of red bricks is piled neatly near the edge of the frame. A stray cat with black fur crouches beside the bricks, watching the workers intently. Near the foreground, a woman in a white helmet holds a rolled-up blueprint tightly against her chest. She is handing a small tool to a colleague in a green jacket who reaches out eagerly. Behind them, a cement mixer with a rotating drum churns slowly, adding dynamic motion to the static structures. A wooden ladder leans precariously against the unfinished wall on the far right. There is no heavy machinery smoke obscuring the view. There is no bright sunlight casting harsh shadows.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

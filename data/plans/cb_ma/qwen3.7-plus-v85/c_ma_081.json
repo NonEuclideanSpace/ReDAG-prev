@@ -1,0 +1,187 @@
+{
+ "style": "soft studio lighting, photorealistic product photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral dark background under soft studio light",
+   "question": "Is the image lit with soft studio light against a neutral dark background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "plinth",
+   "type": "entity",
+   "class": "plinth",
+   "plural": "plinths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a matte onyx plinth",
+   "question": "Is there a matte onyx plinth?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "mask",
+   "type": "entity",
+   "class": "theatre mask",
+   "plural": "theatre masks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished pale-cream ivory theatre mask",
+   "question": "Is there a polished pale-cream ivory theatre mask?",
+   "box": [
+    312,
+    300,
+    712,
+    750
+   ]
+  },
+  {
+   "id": "mask_lapis",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "a teardrop-shaped lapis-lazuli inlay beneath the right eye of the mask",
+   "question": "Does the mask have a teardrop-shaped lapis-lazuli inlay beneath the right eye?"
+  },
+  {
+   "id": "mask_ruby",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "a ruby cabochon at the centre of the forehead of the mask",
+   "question": "Does the mask have a ruby cabochon at the centre of the forehead?"
+  },
+  {
+   "id": "mask_filigree",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "fine gold-leaf filigree tracing the brow line of the mask",
+   "question": "Does the mask have fine gold-leaf filigree tracing the brow line?"
+  },
+  {
+   "id": "mask_ribbons",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "thin black silk ribbons knotted through drilled side holes of the mask",
+   "question": "Does the mask have thin black silk ribbons knotted through drilled side holes?"
+  },
+  {
+   "id": "mask_engraving",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "a tiny Roman numeral \"XII\" engraved on the inside chin of the mask",
+   "question": "Is a tiny Roman numeral \"XII\" engraved on the inside chin of the mask?"
+  },
+  {
+   "id": "mask_state",
+   "type": "state",
+   "of": "mask",
+   "desc": "the mask is lying down",
+   "question": "Is the mask lying down?"
+  },
+  {
+   "id": "mask_on_plinth",
+   "type": "relation",
+   "of": [
+    "mask",
+    "plinth"
+   ],
+   "desc": "the mask lies on the plinth",
+   "question": "Is the mask lying on the plinth?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wood parts",
+   "question": "Are there any wood parts in the image?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic parts",
+   "question": "Are there any plastic parts in the image?"
+  },
+  {
+   "id": "mask_eye_openings",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "two almond-shaped eye openings on the mask",
+   "question": "Does the mask have two almond-shaped eye openings?"
+  },
+  {
+   "id": "mask_mouth",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "a small closed mouth on the mask",
+   "question": "Does the mask have a small closed mouth?"
+  },
+  {
+   "id": "mask_rim",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "a subtly beveled outer rim on the mask",
+   "question": "Is the outer rim of the mask subtly beveled?"
+  },
+  {
+   "id": "mask_grain",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "faint natural grain on the surface of the mask",
+   "question": "Does the surface of the mask show faint natural grain?"
+  },
+  {
+   "id": "mask_no_cracks",
+   "type": "absent",
+   "desc": "cracks on the mask",
+   "question": "Are there any cracks on the mask?"
+  },
+  {
+   "id": "mask_vines",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "swirling vine reliefs around the cheeks of the mask",
+   "question": "Does the mask have swirling vine reliefs around the cheeks?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "plinth",
+   "to": "mask",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_081",
+ "prompt": "Illustrate a single ivory theatre mask lying on a matte-onyx plinth under soft studio light. The mask is carved from polished pale-cream ivory and features swirling vine reliefs around the cheeks. Two almond-shaped eye openings and a small closed mouth define the face, while a teardrop-shaped lapis-lazuli inlay appears beneath the right eye. A ruby cabochon is set at the centre of the forehead, and fine gold-leaf filigree traces the brow line. Thin black silk ribbons are knotted through drilled side holes for fastening. The outer rim is subtly beveled, and a tiny Roman numeral \"XII\" is engraved on the inside chin. The surface shows faint natural grain but no cracks. The piece incorporates no wood and no plastic parts at all.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

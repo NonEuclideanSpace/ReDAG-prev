@@ -1,0 +1,540 @@
+{
+ "style": "surreal digital painting, iridescent lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a narrow cobblestone street with worn smooth stones, under a sky of drifting constellation patchworks",
+   "question": "Does the image show a narrow cobblestone street under a sky filled with drifting constellations?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fire_truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck?",
+   "box": [
+    100,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "apartment_building",
+   "type": "entity",
+   "class": "apartment building",
+   "plural": "apartment buildings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow apartment building with flickering windows",
+   "question": "Is there a yellow apartment building with flickering windows?",
+   "box": [
+    600,
+    50,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "pigeons",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 2,
+   "count_exact": false,
+   "desc": "pigeons",
+   "question": "Are there pigeons?",
+   "box": [
+    150,
+    650,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "birdseed",
+   "type": "entity",
+   "class": "birdseed",
+   "plural": "birdseed spills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spill of birdseed in geometric shapes",
+   "question": "Is there a spill of birdseed in geometric shapes?",
+   "box": [
+    180,
+    676,
+    320,
+    724
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child",
+   "question": "Is there a small child?",
+   "box": [
+    50,
+    550,
+    200,
+    850
+   ]
+  },
+  {
+   "id": "paper_bag",
+   "type": "entity",
+   "class": "paper bag",
+   "plural": "paper bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an empty paper bag",
+   "question": "Is there an empty paper bag?",
+   "box": [
+    80,
+    650,
+    150,
+    750
+   ]
+  },
+  {
+   "id": "stoop",
+   "type": "entity",
+   "class": "stoop",
+   "plural": "stoops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "worn steps of a stoop",
+   "question": "Are there worn steps of a stoop?",
+   "box": [
+    20,
+    700,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "entity",
+   "class": "wrought-iron gate",
+   "plural": "wrought-iron gates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wrought-iron gate",
+   "question": "Is there a wrought-iron gate?",
+   "box": [
+    10,
+    400,
+    100,
+    700
+   ]
+  },
+  {
+   "id": "garden",
+   "type": "entity",
+   "class": "garden",
+   "plural": "gardens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moss-covered garden",
+   "question": "Is there a moss-covered garden?",
+   "box": [
+    10,
+    450,
+    150,
+    650
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a reflective vest",
+   "question": "Is there a man wearing a reflective vest?",
+   "box": [
+    400,
+    350,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    450,
+    280,
+    550,
+    350
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken streetlamp pulsing with inner glow",
+   "question": "Is there a broken streetlamp glowing from within?",
+   "box": [
+    850,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    700,
+    500,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "truck_diagonal",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "the red fire truck is positioned diagonally",
+   "question": "Is the red fire truck positioned diagonally across the street?"
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the fire truck has a massive ladder leaning awkwardly",
+   "question": "Does the fire truck have a massive ladder leaning awkwardly against the building?"
+  },
+  {
+   "id": "pigeons_pecking",
+   "type": "action",
+   "of": [
+    "pigeons",
+    "birdseed"
+   ],
+   "desc": "the pigeons peck at the birdseed",
+   "question": "Are the pigeons pecking at the birdseed?"
+  },
+  {
+   "id": "child_perched",
+   "type": "relation",
+   "of": [
+    "child",
+    "stoop"
+   ],
+   "desc": "the child is perched on the stoop",
+   "question": "Is the child perched on the stoop?"
+  },
+  {
+   "id": "child_holding_bag",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child holds the paper bag",
+   "question": "Is the child holding the paper bag?"
+  },
+  {
+   "id": "child_watching",
+   "type": "action",
+   "of": [
+    "child",
+    "pigeons"
+   ],
+   "desc": "the child watches the pigeons",
+   "question": "Is the child watching the pigeons?"
+  },
+  {
+   "id": "gate_opening",
+   "type": "state",
+   "of": "gate",
+   "desc": "the wrought-iron gate is creaking open and shut",
+   "question": "Is the wrought-iron gate swinging open and shut?"
+  },
+  {
+   "id": "gate_reveals_garden",
+   "type": "relation",
+   "of": [
+    "gate",
+    "garden"
+   ],
+   "desc": "the gate reveals the garden behind it",
+   "question": "Is the garden visible behind the gate?"
+  },
+  {
+   "id": "man_walking_backwards",
+   "type": "state",
+   "of": "man",
+   "desc": "the man walks backwards along the fire truck",
+   "question": "Is the man walking backwards alongside the fire truck?"
+  },
+  {
+   "id": "cat_on_roof",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is perched on the roof of the fire truck",
+   "question": "Is the cat perched on the roof of the fire truck?"
+  },
+  {
+   "id": "cat_blinking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is blinking",
+   "question": "Is the cat blinking?"
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "fire_truck"
+   ],
+   "desc": "the bicycle leans against the rear door of the fire truck",
+   "question": "Is the bicycle leaning against the rear door of the fire truck?"
+  },
+  {
+   "id": "shadows_morphing",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "overlapping shadows of the truck, child, and man morph on the ground",
+   "question": "Do overlapping, morphing shadows of the truck, child, and man appear on the ground?"
+  },
+  {
+   "id": "ladder_against_building",
+   "type": "relation",
+   "of": [
+    "fire_truck",
+    "apartment_building"
+   ],
+   "desc": "the ladder of the fire truck leans against the yellow apartment building",
+   "question": "Does the ladder of the fire truck lean against the yellow apartment building?"
+  },
+  {
+   "id": "birdseed_near_wheel",
+   "type": "relation",
+   "of": [
+    "birdseed",
+    "fire_truck"
+   ],
+   "desc": "the birdseed is pooled around the front wheel of the fire truck",
+   "question": "Is the birdseed pooled around the front wheel of the fire truck?"
+  },
+  {
+   "id": "child_behind_gate",
+   "type": "relation",
+   "of": [
+    "child",
+    "gate"
+   ],
+   "desc": "the gate is behind the child",
+   "question": "Is the gate behind the child?"
+  },
+  {
+   "id": "shadows_independent",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the reflective vest steps over shadows that move independently",
+   "question": "Does the man in the reflective vest step over shadows that appear to move independently?"
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail flicks",
+   "question": "Is the cat's tail flicking?"
+  },
+  {
+   "id": "pigeons_frozen",
+   "type": "state",
+   "of": "pigeons",
+   "desc": "the pigeons freeze mid-peck with heads tilted in unison",
+   "question": "Are the pigeons frozen mid-peck with their heads tilted in unison?"
+  },
+  {
+   "id": "child_rising",
+   "type": "relation",
+   "of": [
+    "child",
+    "stoop"
+   ],
+   "desc": "the small child rises slowly from the stoop",
+   "question": "Is the small child rising slowly from the stoop?"
+  },
+  {
+   "id": "cat_reflection_puddles",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's reflection appears in the puddles on the street",
+   "question": "Does the cat's reflection appear in the puddles on the street?"
+  },
+  {
+   "id": "cat_reflection_seed",
+   "type": "relation",
+   "of": [
+    "cat",
+    "birdseed"
+   ],
+   "desc": "the cat's reflection appears in the birdseed",
+   "question": "Does the cat's reflection appear in the birdseed?"
+  },
+  {
+   "id": "cat_reflection_air",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's reflection appears in the air",
+   "question": "Does the cat's reflection appear in the air?"
+  },
+  {
+   "id": "man_along_truck",
+   "type": "relation",
+   "of": [
+    "man",
+    "fire_truck"
+   ],
+   "desc": "the man in the reflective vest walks along the side of the fire truck",
+   "question": "Is the man in the reflective vest walking along the side of the fire truck?"
+  },
+  {
+   "id": "child_wide_eyes",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the small child has wide, solemn eyes",
+   "question": "Does the small child have wide, solemn eyes?"
+  },
+  {
+   "id": "man_boots",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a reflective vest wears boots",
+   "question": "Is the man in a reflective vest wearing boots?"
+  },
+  {
+   "id": "truck_faded_paint",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the fire truck has faded paint",
+   "question": "Does the fire truck have faded paint?"
+  },
+  {
+   "id": "pigeons_dull_feathers",
+   "type": "attribute",
+   "of": "pigeons",
+   "desc": "the pigeons have dull gray feathers",
+   "question": "Do the pigeons have dull gray feathers?"
+  },
+  {
+   "id": "birdseed_glowing",
+   "type": "attribute",
+   "of": "birdseed",
+   "desc": "the birdseed is glowing",
+   "question": "Is the birdseed glowing?"
+  },
+  {
+   "id": "bag_rippling_edges",
+   "type": "attribute",
+   "of": "paper_bag",
+   "desc": "the paper bag has rippling edges",
+   "question": "Does the paper bag have rippling edges?"
+  },
+  {
+   "id": "garden_clocks",
+   "type": "attribute",
+   "of": "garden",
+   "desc": "clocks hang from trees in the garden",
+   "question": "Do clocks hang from trees in the garden?"
+  },
+  {
+   "id": "man_hat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a wide-brimmed hat",
+   "question": "Does the man wear a wide-brimmed hat?"
+  },
+  {
+   "id": "bicycle_flower_handlebars",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has handlebars twisting upward into a spire of flowers",
+   "question": "Does the bicycle have handlebars twisting upward into a spire of flowers?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stoop",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "fire_truck",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "fire_truck",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0298",
+ "prompt": "A red fire truck, its paint faded by years of urban rain and the sharp scent of exhaust, sits diagonally across a narrow, cobblestone street, the cobblestones worn smooth and glistening from a recent, unnatural downpour of iridescent rain that leaves the entire city shimmering as if dusted with crushed opals. The truck’s ladder, massive and rigid, leans awkwardly against a yellow apartment building with windows that flicker intermittently between opaque and transparent, revealing glimpses of interior rooms that shift and reconfigure as though rearranging themselves according to some unseen, rhythmic pulse. A group of pigeons, their feathers dulled to the color of storm clouds, peck aggressively at a spill of birdseed that has pooled in strange geometric shapes around the front wheel, the seed shimmering with a faint bioluminescent glow as if responding to the heartbeat of the truck itself. A small child, no older than six, perched on the worn steps of a nearby stoop, watches the pigeons with wide, solemn eyes, clutching an empty paper bag that seems to ripple at the edges as if it exists in two temporal planes at once—part physical, part memory. Behind the child, a wrought-iron gate creaks open and shut on its own, each swing revealing and obscuring a small, moss-covered garden where clocks hang from trees and melt into puddles of time that drip into the street. A man in a reflective vest, his face half-hidden beneath a wide-brimmed hat, slowly walks backwards along the fire truck’s side, stepping over shadows that move independently, his boots making no sound despite the uneven ground. A cat perched on the truck’s roof blinks at the scene, its tail flicking in time with the flickering windows, its reflection appearing simultaneously in the puddles, the birdseed, and the air itself, as if the world is a fractured mirror. Above, the sky is a patchwork of constellations that drift sideways like paper cutouts caught in a slow, deliberate current, their positions shifting to form new stories with every blink. A streetlamp, broken and pulsing faintly with an inner glow, casts overlapping shadows of the truck, the child, and the man, each shadow morphing and overlapping to suggest a second reality just beneath the surface of this one. The air hums with a low, resonant frequency that causes the pigeons to freeze mid-peck, their heads tilting in unison, as though listening to a song only they can hear. A bicycle leans against the truck’s rear door, its handlebars twisting upward into a spire of flowers that open and close in slow motion, petals curling and unfurling in response to the shifting light. In the distance, a siren wails, but the sound does not come from the fire truck—rather, it echoes from somewhere inside the building, reverberating through the windows that now fully open, spilling out the scent of burnt toast and the sound of a typewriter clacking in reverse. The child, drawn by the siren’s dissonant pull, rises slowly from the stoop, paper bag trembling in their hands, as the world around them seems to stretch and bend, folding space into itself in ways that defy gravity, logic, and expectation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 63,
+   "n_uncovered": 4,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 7,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

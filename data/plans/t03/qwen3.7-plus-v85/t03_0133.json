@@ -1,0 +1,139 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with a floor",
+   "question": "Does the image show an airport gate area with a floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    380,
+    250,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black suitcase",
+   "question": "Is there a black suitcase?",
+   "box": [
+    750,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_boarding_pass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a boarding pass",
+   "question": "Is the woman in the blue coat holding a boarding pass?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is sitting",
+   "question": "Is the man in the grey suit sitting?"
+  },
+  {
+   "id": "man_checking_watch",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is checking his watch",
+   "question": "Is the man in the grey suit checking his watch?"
+  },
+  {
+   "id": "suitcase_upright",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the black suitcase is standing upright",
+   "question": "Is the black suitcase standing upright?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat is looking at the man in the grey suit",
+   "question": "Is the woman in the blue coat looking at the man in the grey suit?"
+  },
+  {
+   "id": "no_screen",
+   "type": "absent",
+   "desc": "digital screen",
+   "question": "Are there any digital screens visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat stands",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "suitcase_on_floor",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the black suitcase rests on the floor",
+   "question": "Does the black suitcase rest on the floor?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0133",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures an airport gate. On the left stands a woman in a blue coat holding a boarding pass. In the center sits a man in a grey suit checking his watch. To the right rests a black suitcase standing upright on the floor. The woman in the blue coat is looking at the man in the grey suit. There is no digital screen visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

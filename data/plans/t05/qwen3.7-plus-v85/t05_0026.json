@@ -1,0 +1,203 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    350,
+    280,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    750,
+    450,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "stone fountain",
+   "plural": "stone fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old stone fountain",
+   "question": "Is there an old stone fountain?",
+   "box": [
+    200,
+    100,
+    824,
+    400
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing still",
+   "question": "Is the woman in the blue coat standing still?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf points his gloved hand toward the right",
+   "question": "Is the man in the red scarf pointing his gloved hand toward the right?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow hat looks with curiosity",
+   "question": "Does the child in the yellow hat look curious?"
+  },
+  {
+   "id": "fountain_frozen",
+   "type": "state",
+   "of": "fountain",
+   "desc": "the old stone fountain is frozen and silent",
+   "question": "Does the old stone fountain appear frozen and silent?"
+  },
+  {
+   "id": "man_bag",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a small paper bag",
+   "question": "Is the man in the red scarf holding a small paper bag?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf hands the small paper bag to the woman in the blue coat",
+   "question": "Is the man in the red scarf handing a small paper bag to the woman in the blue coat?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in the yellow hat is next to the brown dog",
+   "question": "Is the child in the yellow hat next to the brown dog?"
+  },
+  {
+   "id": "dog_on_ground",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits on the cold ground",
+   "question": "Is the brown dog sitting on the ground?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight breaking through clouds",
+   "question": "Is there sunlight breaking through the clouds?"
+  },
+  {
+   "id": "man_gloves",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf wears gloves",
+   "question": "Is the man in the red scarf wearing gloves?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0026",
+ "prompt": "In a pencil sketch with light color wash, a snowy town square features five distinct entities. On the left, a woman in a blue coat stands still. In the center, a man in a red scarf points his gloved hand toward the right. Also on the right, a brown dog sits patiently on the cold ground. Next to the dog, a child in a yellow hat looks at the animal with curiosity. Behind them all, an old stone fountain remains frozen and silent. The man in the red scarf is handing a small paper bag to the woman in the blue coat. The child in the yellow hat is standing next to the brown dog. There is no sunlight breaking through the clouds. The scene captures only these specific figures and their limited actions within the quiet, sketched environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image depict a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    100,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green sweater",
+   "question": "Is there a man in a green sweater?",
+   "box": [
+    600,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    450,
+    700,
+    574,
+    850
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a green sweater holds an open book",
+   "question": "Is the man in a green sweater holding an open book?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green sweater is standing",
+   "question": "Is the man in a green sweater standing?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is resting",
+   "question": "Is the small orange cat resting?"
+  },
+  {
+   "id": "woman_on_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in a blue dress is on the left side of the wooden table",
+   "question": "Is the woman in a blue dress on the left side of the wooden table?"
+  },
+  {
+   "id": "man_on_right",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in a green sweater is on the right side of the wooden table",
+   "question": "Is the man in a green sweater on the right side of the wooden table?"
+  },
+  {
+   "id": "cat_on_floor",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is on the floor",
+   "question": "Is the small orange cat on the floor?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress is looking at the man in a green sweater",
+   "question": "Is the woman in a blue dress looking at the man in a green sweater?"
+  },
+  {
+   "id": "man_pointing_at_book",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green sweater is pointing at the page in his book",
+   "question": "Is the man in a green sweater pointing at the page in the book he is holding?"
+  },
+  {
+   "id": "no_computer",
+   "type": "absent",
+   "desc": "a computer on the table",
+   "question": "Is there a computer on the table?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0016",
+ "prompt": "In a flat vector illustration of a library reading room, a woman in a blue dress sits on the left side of a wooden table. A man in a green sweater stands on the right side, holding an open book. In the center, a small orange cat rests quietly on the floor. The woman is looking at the man. The man is pointing at the page in his book. There is no computer on the table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 3,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  }
+ }
+}

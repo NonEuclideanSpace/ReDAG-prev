@@ -1,0 +1,517 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bedroom with a blue wall and an opposite wall",
+   "question": "Does the image show a bedroom with a blue wall and an opposite wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bed",
+   "type": "entity",
+   "class": "bed",
+   "plural": "beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bed",
+   "question": "Is there a bed?",
+   "box": [
+    100,
+    300,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "nightstand",
+   "type": "entity",
+   "class": "nightstand",
+   "plural": "nightstands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nightstand",
+   "question": "Is there a nightstand?",
+   "box": [
+    620,
+    450,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "person",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a person",
+   "question": "Is there a person?",
+   "box": [
+    150,
+    320,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "pillow",
+   "type": "entity",
+   "class": "pillow",
+   "plural": "pillows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pillow",
+   "question": "Is there a pillow?",
+   "box": [
+    150,
+    300,
+    300,
+    380
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    200,
+    650,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "hardcover book",
+   "plural": "hardcover books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick hardcover book",
+   "question": "Is there a thick hardcover book?",
+   "box": [
+    650,
+    480,
+    750,
+    550
+   ]
+  },
+  {
+   "id": "phone",
+   "type": "entity",
+   "class": "smartphone",
+   "plural": "smartphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek modern smartphone",
+   "question": "Is there a sleek modern smartphone?",
+   "box": [
+    320,
+    310,
+    380,
+    360
+   ]
+  },
+  {
+   "id": "remote",
+   "type": "entity",
+   "class": "remote control",
+   "plural": "remote controls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a remote control",
+   "question": "Is there a remote control?",
+   "box": [
+    400,
+    450,
+    480,
+    500
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "lamp",
+   "plural": "lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lamp",
+   "question": "Is there a lamp?",
+   "box": [
+    700,
+    350,
+    780,
+    480
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rug",
+   "question": "Is there a rug?",
+   "box": [
+    50,
+    700,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "magazines",
+   "type": "entity",
+   "class": "magazine",
+   "plural": "magazines",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two magazines",
+   "question": "Are there exactly two magazines?",
+   "box": [
+    100,
+    750,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "socks",
+   "type": "entity",
+   "class": "sock",
+   "plural": "socks",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five socks",
+   "question": "Are there exactly five socks?",
+   "box": [
+    650,
+    800,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "dresser",
+   "type": "entity",
+   "class": "dresser",
+   "plural": "dressers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wide dresser",
+   "question": "Is there a wide dresser?",
+   "box": [
+    700,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "frames",
+   "type": "entity",
+   "class": "picture frame",
+   "plural": "picture frames",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four picture frames",
+   "question": "Are there exactly four picture frames?",
+   "box": [
+    750,
+    50,
+    950,
+    150
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror",
+   "question": "Is there a mirror?",
+   "box": [
+    750,
+    20,
+    950,
+    90
+   ]
+  },
+  {
+   "id": "bed_against_wall",
+   "type": "state",
+   "of": "bed",
+   "desc": "the bed is pushed against the blue wall",
+   "question": "Is the bed pushed against the blue wall?"
+  },
+  {
+   "id": "nightstand_right_of_bed",
+   "type": "relation",
+   "of": [
+    "nightstand",
+    "bed"
+   ],
+   "desc": "the nightstand is to the right of the bed",
+   "question": "Is the nightstand to the right of the bed?"
+  },
+  {
+   "id": "person_on_bed",
+   "type": "relation",
+   "of": [
+    "person",
+    "bed"
+   ],
+   "desc": "the person is on the bed",
+   "question": "Is the person on the bed?"
+  },
+  {
+   "id": "head_on_pillow",
+   "type": "relation",
+   "of": [
+    "person",
+    "pillow"
+   ],
+   "desc": "the person's head is on the pillow",
+   "question": "Is the person's head on the pillow?"
+  },
+  {
+   "id": "cat_under_bed",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bed"
+   ],
+   "desc": "the cat is under the bed",
+   "question": "Is the cat under the bed?"
+  },
+  {
+   "id": "book_on_nightstand",
+   "type": "relation",
+   "of": [
+    "book",
+    "nightstand"
+   ],
+   "desc": "the book is on the nightstand",
+   "question": "Is the book on the nightstand?"
+  },
+  {
+   "id": "phone_next_to_pillow",
+   "type": "relation",
+   "of": [
+    "phone",
+    "pillow"
+   ],
+   "desc": "the phone is next to the pillow",
+   "question": "Is the phone next to the pillow?"
+  },
+  {
+   "id": "remote_on_blanket",
+   "type": "relation",
+   "of": [
+    "remote",
+    "bed"
+   ],
+   "desc": "the remote control is on the blanket",
+   "question": "Is the remote control on the blanket?"
+  },
+  {
+   "id": "lamp_on_nightstand",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "nightstand"
+   ],
+   "desc": "the lamp is on the nightstand",
+   "question": "Is the lamp on the nightstand?"
+  },
+  {
+   "id": "rug_under_bed",
+   "type": "relation",
+   "of": [
+    "rug",
+    "bed"
+   ],
+   "desc": "the rug is under the bed",
+   "question": "Is the rug under the bed?"
+  },
+  {
+   "id": "magazines_on_rug",
+   "type": "relation",
+   "of": [
+    "magazines",
+    "rug"
+   ],
+   "desc": "the magazines are on the rug",
+   "question": "Are the magazines on the rug?"
+  },
+  {
+   "id": "socks_near_bed",
+   "type": "relation",
+   "of": [
+    "socks",
+    "bed"
+   ],
+   "desc": "the socks are near the bed",
+   "question": "Are the socks near the bed?"
+  },
+  {
+   "id": "dresser_against_wall",
+   "type": "state",
+   "of": "dresser",
+   "desc": "the dresser is against the opposite wall",
+   "question": "Is the dresser against the opposite wall?"
+  },
+  {
+   "id": "frames_on_dresser",
+   "type": "relation",
+   "of": [
+    "frames",
+    "dresser"
+   ],
+   "desc": "the picture frames are on the dresser",
+   "question": "Are the picture frames on the dresser?"
+  },
+  {
+   "id": "mirror_above_dresser",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "dresser"
+   ],
+   "desc": "the mirror is above the dresser",
+   "question": "Is the mirror above the dresser?"
+  },
+  {
+   "id": "person_sleeping",
+   "type": "state",
+   "of": "person",
+   "desc": "the person is sleeping",
+   "question": "Is the person sleeping?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sleeping",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "book",
+   "desc": "the book is open",
+   "question": "Is the book open?"
+  },
+  {
+   "id": "blanket_covers_legs",
+   "type": "state",
+   "of": "person",
+   "desc": "the blanket covers the person's legs",
+   "question": "Does the blanket cover the person's legs?"
+  },
+  {
+   "id": "lamp_shining",
+   "type": "action",
+   "of": [
+    "lamp",
+    "book"
+   ],
+   "desc": "the lamp shines onto the book",
+   "question": "Is the lamp shining onto the book?"
+  },
+  {
+   "id": "bed_blanket",
+   "type": "attribute",
+   "of": "bed",
+   "desc": "the bed has a blanket",
+   "question": "Does the bed have a blanket?"
+  },
+  {
+   "id": "dresser_wider_than_bed",
+   "type": "relation",
+   "of": [
+    "dresser",
+    "bed"
+   ],
+   "desc": "the dresser is wider than the bed",
+   "question": "Is the dresser wider than the bed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bed",
+   "to": "person",
+   "kind": "support"
+  },
+  {
+   "from": "bed",
+   "to": "pillow",
+   "kind": "support"
+  },
+  {
+   "from": "nightstand",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "nightstand",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "bed",
+   "to": "remote",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "magazines",
+   "kind": "support"
+  },
+  {
+   "from": "dresser",
+   "to": "frames",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_084",
+ "prompt": "A bedroom with a bed pushed against a blue wall and a nightstand to its right. A person is sleeping on the bed with their head on a pillow. A cat is sleeping under the bed. A thick, hard-cover book is left open on the nightstand. A sleek, modern phone, which is thinner than the book, is ringing next to the pillow. A remote control is lying on the blanket. A lamp on the nightstand is shining onto the book. A rug is spread under the bed, and on the rug there are two magazines. On the floor near the bed, there are some socks; their number is three more than the number of magazines. A dresser, which is wider than the bed, is against the opposite wall. On the dresser are some picture frames, and their number is twice the number of magazines. A mirror is mounted above the dresser. The blanket is covering the person’s legs.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 1,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

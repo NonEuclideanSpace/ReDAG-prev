@@ -1,0 +1,248 @@
+{
+ "style": "photorealistic, gritty urban atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark background suitable for a glowing vending machine and hologram",
+   "question": "Is the background dark enough to show the glowing neon signs and hologram clearly?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "vending_machine",
+   "type": "entity",
+   "class": "vending machine",
+   "plural": "vending machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single vending machine with a metallic body and worn exterior",
+   "question": "Is there a single vending machine with a metallic body and worn exterior?",
+   "box": [
+    212,
+    100,
+    812,
+    900
+   ]
+  },
+  {
+   "id": "neon_signs",
+   "type": "entity",
+   "class": "neon sign",
+   "plural": "neon signs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several neon signs",
+   "question": "Are there several neon signs?",
+   "box": [
+    250,
+    150,
+    774,
+    250
+   ]
+  },
+  {
+   "id": "yellow_can",
+   "type": "entity",
+   "class": "can",
+   "plural": "cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright yellow can",
+   "question": "Is there a bright yellow can?",
+   "box": [
+    462,
+    750,
+    562,
+    850
+   ]
+  },
+  {
+   "id": "dark_fluid",
+   "type": "entity",
+   "class": "fluid puddle",
+   "plural": "fluid puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle of dark fluid",
+   "question": "Is there a puddle of dark fluid?",
+   "box": [
+    312,
+    876,
+    712,
+    924
+   ]
+  },
+  {
+   "id": "hologram",
+   "type": "entity",
+   "class": "holographic ad",
+   "plural": "holographic ads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a holographic ad",
+   "question": "Is there a holographic ad?",
+   "box": [
+    312,
+    20,
+    712,
+    120
+   ]
+  },
+  {
+   "id": "machine_rust_graffiti",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "the vending machine has rusted spots",
+   "question": "Does the vending machine have rusted spots?"
+  },
+  {
+   "id": "machine_plastic_chipped",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "some parts of the vending machine are plastic and chipped",
+   "question": "Are some parts of the vending machine plastic and chipped?"
+  },
+  {
+   "id": "machine_display_cracked",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "the vending machine has a single large glass display",
+   "question": "Does the vending machine have a single large glass display?"
+  },
+  {
+   "id": "machine_buttons",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "the vending machine has three circular selection buttons",
+   "question": "Does the vending machine have three circular selection buttons?"
+  },
+  {
+   "id": "signs_glowing",
+   "type": "state",
+   "of": "neon_signs",
+   "desc": "all neon signs are glowing except one which is off",
+   "question": "Are all neon signs glowing except one which is off?"
+  },
+  {
+   "id": "machine_dispensing",
+   "type": "action",
+   "of": [
+    "vending_machine",
+    "yellow_can"
+   ],
+   "desc": "the vending machine is actively dispensing the bright yellow can",
+   "question": "Is the vending machine actively dispensing the bright yellow can?"
+  },
+  {
+   "id": "fluid_leaking",
+   "type": "action",
+   "of": [
+    "vending_machine",
+    "dark_fluid"
+   ],
+   "desc": "dark fluid is leaking from the vending machine's base",
+   "question": "Is dark fluid leaking from the vending machine's base?"
+  },
+  {
+   "id": "hologram_above_machine",
+   "type": "relation",
+   "of": [
+    "hologram",
+    "vending_machine"
+   ],
+   "desc": "the holographic ad is projected above the vending machine",
+   "question": "Is the holographic ad projected above the vending machine?"
+  },
+  {
+   "id": "machine_not_clean",
+   "type": "state",
+   "of": "vending_machine",
+   "desc": "the vending machine is not clean",
+   "question": "Is the vending machine dirty or not clean?"
+  },
+  {
+   "id": "display_no_list",
+   "type": "state",
+   "of": "vending_machine",
+   "desc": "the vending machine's display is not showing a product list",
+   "question": "Is the vending machine's display not showing a product list?"
+  },
+  {
+   "id": "no_coin_slot",
+   "type": "absent",
+   "desc": "a coin slot or coin acceptance mechanism",
+   "question": "Is there a coin slot or coin acceptance mechanism visible on the vending machine?"
+  },
+  {
+   "id": "machine_graffiti",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "the vending machine has graffiti",
+   "question": "Does the vending machine have graffiti?"
+  },
+  {
+   "id": "display_cracked",
+   "type": "state",
+   "of": "vending_machine",
+   "desc": "the glass display of the vending machine is cracked",
+   "question": "Is the glass display of the vending machine cracked?"
+  },
+  {
+   "id": "button_broken",
+   "type": "relation",
+   "of": [
+    "vending_machine",
+    "neon_signs"
+   ],
+   "desc": "one of the selection buttons on the vending machine is visibly broken",
+   "question": "Is one of the selection buttons on the vending machine visibly broken?"
+  },
+  {
+   "id": "signs_on_machine",
+   "type": "relation",
+   "of": [
+    "neon_signs",
+    "vending_machine"
+   ],
+   "desc": "the neon signs are on the vending machine",
+   "question": "Are the neon signs on the vending machine?"
+  },
+  {
+   "id": "hologram_cat",
+   "type": "attribute",
+   "of": "hologram",
+   "desc": "the holographic ad shows a cat figure",
+   "question": "Does the holographic ad show a cat figure?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_033",
+ "prompt": "A single vending machine. Its main body is metallic and has a worn exterior with some rusted spots and graffiti. It has a single large, cracked glass display. The machine has several neon signs, all of which are glowing, texcept one which is off. There are three circular selection buttons, but one of them is visibly broken. The machine is actively dispensing a bright yellow can. A dark fluid is leaking from the machine's base. Some parts of the machine are plastic, and these parts are chipped. Above it, a holographic ad is projected, showing a cat figure. The machine is not clean, its display is not showing a product list, it does not accept coins.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

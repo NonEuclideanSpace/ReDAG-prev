@@ -1,0 +1,194 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image depict a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white dress",
+   "question": "Is there a woman in a white dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    420,
+    400,
+    630,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    700,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "bouquet",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the white dress holds a bouquet",
+   "question": "Is the woman in the white dress holding a bouquet?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the white dress is standing",
+   "question": "Is the woman in the white dress standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is sitting",
+   "question": "Is the man in the blue suit sitting?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in the blue suit sits on the wooden chair",
+   "question": "Is the man in the blue suit sitting on the wooden chair?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the small brown dog is next to the man in the blue suit",
+   "question": "Is the small brown dog next to the man in the blue suit?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the white dress looks at the man in the blue suit",
+   "question": "Is the woman in the white dress looking at the man in the blue suit?"
+  },
+  {
+   "id": "man_looking_at_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in the blue suit looks at the small brown dog",
+   "question": "Is the man in the blue suit looking at the small brown dog?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake",
+   "question": "Is there a cake in the image?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting on the floor",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "dog_on_floor_rel",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is on the floor",
+   "question": "Is the small brown dog on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0033",
+ "prompt": "This flat vector illustration depicts a wedding reception scene. On the left, a woman in a white dress stands holding a bouquet. In the center, a man in a blue suit sits on a wooden chair. To the right, a small brown dog sits on the floor next to the man. The woman is looking at the man. The man is looking at the dog. There is no cake.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  }
+ }
+}

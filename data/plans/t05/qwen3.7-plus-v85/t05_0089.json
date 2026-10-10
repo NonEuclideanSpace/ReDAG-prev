@@ -1,0 +1,312 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a serene mountain campsite",
+   "question": "Does the image show a serene mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray log",
+   "question": "Is there a gray log?",
+   "box": [
+    50,
+    600,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    100,
+    400,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green jacket",
+   "question": "Is there a man in a green jacket?",
+   "box": [
+    400,
+    350,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    650,
+    450,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "fox",
+   "type": "entity",
+   "class": "fox",
+   "plural": "foxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange fox",
+   "question": "Is there a small orange fox?",
+   "box": [
+    800,
+    650,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black backpack",
+   "question": "Is there a black backpack?",
+   "box": [
+    850,
+    700,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tent",
+   "question": "Is there a silver tent?",
+   "box": [
+    300,
+    200,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is sitting",
+   "question": "Is the woman in the blue beanie sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green jacket is standing",
+   "question": "Is the man in the green jacket standing?"
+  },
+  {
+   "id": "man_holding_kettle",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the green jacket holds a metal kettle",
+   "question": "Is the man in the green jacket holding a metal kettle?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "fox"
+   ],
+   "desc": "the child in the yellow raincoat points at the small orange fox",
+   "question": "Is the child in the yellow raincoat pointing at the small orange fox?"
+  },
+  {
+   "id": "woman_on_log",
+   "type": "relation",
+   "of": [
+    "woman",
+    "log"
+   ],
+   "desc": "the woman in the blue beanie sits on the gray log",
+   "question": "Is the woman in the blue beanie sitting on the gray log?"
+  },
+  {
+   "id": "child_right_of_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in the yellow raincoat is to the right of the man in the green jacket",
+   "question": "Is the child in the yellow raincoat to the right of the man in the green jacket?"
+  },
+  {
+   "id": "backpack_next_to_fox",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "fox"
+   ],
+   "desc": "the black backpack is next to the small orange fox",
+   "question": "Is the black backpack next to the small orange fox?"
+  },
+  {
+   "id": "tent_behind_group",
+   "type": "relation",
+   "of": [
+    "tent",
+    "woman"
+   ],
+   "desc": "the silver tent is behind the woman in the blue beanie",
+   "question": "Is the silver tent behind the woman in the blue beanie?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue beanie looks at the man in the green jacket",
+   "question": "Is the woman in the blue beanie looking at the man in the green jacket?"
+  },
+  {
+   "id": "man_handing_kettle",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the man in the green jacket hands the metal kettle to the child in the yellow raincoat",
+   "question": "Is the man in the green jacket handing the metal kettle to the child in the yellow raincoat?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "tent_behind_man",
+   "type": "relation",
+   "of": [
+    "tent",
+    "man"
+   ],
+   "desc": "the silver tent is behind the man in the green jacket",
+   "question": "Is the silver tent behind the man in the green jacket?"
+  },
+  {
+   "id": "tent_behind_child",
+   "type": "relation",
+   "of": [
+    "tent",
+    "child"
+   ],
+   "desc": "the silver tent is behind the child in the yellow raincoat",
+   "question": "Is the silver tent behind the child in the yellow raincoat?"
+  },
+  {
+   "id": "backpack_on_ground",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the black backpack rests on the ground",
+   "question": "Does the black backpack rest on the ground?"
+  },
+  {
+   "id": "slope",
+   "type": "entity",
+   "class": "rocky slope",
+   "plural": "rocky slopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rocky slope",
+   "question": "Is there a rocky slope?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tent",
+   "kind": "support"
+  },
+  {
+   "from": "slope",
+   "to": "tent",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0089",
+ "prompt": "A photorealistic photo captures a serene mountain campsite. On the left, a woman in a blue beanie sits on a gray log. In the center, a man in a green jacket stands holding a metal kettle. To his right, a child in a yellow raincoat points at a small orange fox. Next to the fox, a black backpack rests on the ground. Behind them, a silver tent is pitched against the rocky slope. The woman in the blue beanie looks at the man in the green jacket. The man in the green jacket hands the metal kettle to the child in the yellow raincoat. There is no fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

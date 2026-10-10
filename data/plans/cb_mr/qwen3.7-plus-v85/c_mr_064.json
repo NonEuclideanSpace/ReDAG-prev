@@ -1,0 +1,337 @@
+{
+ "style": "photorealistic outdoor photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park scene",
+   "question": "Does the image show a park scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall green tree",
+   "question": "Is there a tall green tree?",
+   "box": [
+    350,
+    0,
+    674,
+    800
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    200,
+    600,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue bicycle",
+   "question": "Is there a blue bicycle?",
+   "box": [
+    150,
+    400,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "person",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a person",
+   "question": "Is there a person?",
+   "box": [
+    300,
+    450,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "balls",
+   "type": "entity",
+   "class": "ball",
+   "plural": "balls",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two red balls",
+   "question": "Are there two red balls?",
+   "box": [
+    600,
+    750,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    500,
+    650,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 6,
+   "count_exact": true,
+   "desc": "small birds",
+   "question": "Are there six small birds?",
+   "box": [
+    400,
+    50,
+    624,
+    250
+   ]
+  },
+  {
+   "id": "lamp_post",
+   "type": "entity",
+   "class": "lamp post",
+   "plural": "lamp posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lamp post",
+   "question": "Is there a lamp post?",
+   "box": [
+    750,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "trash_can",
+   "type": "entity",
+   "class": "trash can",
+   "plural": "trash cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a trash can",
+   "question": "Is there a trash can?",
+   "box": [
+    860,
+    700,
+    960,
+    850
+   ]
+  },
+  {
+   "id": "bench_under_tree",
+   "type": "relation",
+   "of": [
+    "bench",
+    "tree"
+   ],
+   "desc": "the wooden bench is under the tall green tree",
+   "question": "Is the wooden bench under the tall green tree?"
+  },
+  {
+   "id": "bicycle_against_bench",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "bench"
+   ],
+   "desc": "the blue bicycle is leaning against the wooden bench",
+   "question": "Is the blue bicycle leaning against the wooden bench?"
+  },
+  {
+   "id": "person_on_bench",
+   "type": "relation",
+   "of": [
+    "person",
+    "bench"
+   ],
+   "desc": "the person is sitting on the wooden bench",
+   "question": "Is the person sitting on the wooden bench?"
+  },
+  {
+   "id": "balls_near_bench",
+   "type": "relation",
+   "of": [
+    "balls",
+    "bench"
+   ],
+   "desc": "the two red balls are near the wooden bench",
+   "question": "Are the two red balls near the wooden bench?"
+  },
+  {
+   "id": "dog_chasing_ball",
+   "type": "action",
+   "of": [
+    "dog",
+    "balls"
+   ],
+   "desc": "the brown dog is chasing one of the red balls",
+   "question": "Is the brown dog chasing one of the red balls?"
+  },
+  {
+   "id": "birds_in_tree",
+   "type": "relation",
+   "of": [
+    "birds",
+    "tree"
+   ],
+   "desc": "the small birds are in the tall green tree",
+   "question": "Are the small birds in the tall green tree?"
+  },
+  {
+   "id": "lamp_post_behind_bench",
+   "type": "relation",
+   "of": [
+    "lamp_post",
+    "bench"
+   ],
+   "desc": "the lamp post stands behind the wooden bench",
+   "question": "Does the lamp post stand behind the wooden bench?"
+  },
+  {
+   "id": "trash_can_next_to_lamp_post",
+   "type": "relation",
+   "of": [
+    "trash_can",
+    "lamp_post"
+   ],
+   "desc": "the trash can is next to the lamp post",
+   "question": "Is the trash can next to the lamp post?"
+  },
+  {
+   "id": "bicycle_taller_than_dog",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the blue bicycle is taller than the brown dog",
+   "question": "Is the blue bicycle taller than the brown dog?"
+  },
+  {
+   "id": "tree_taller_than_lamp_post",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tall green tree is taller than the lamp post",
+   "question": "Is the tall green tree taller than the lamp post?"
+  },
+  {
+   "id": "trash_can_shorter_than_bench",
+   "type": "attribute",
+   "of": "trash_can",
+   "desc": "the trash can is shorter than the wooden bench",
+   "question": "Is the trash can shorter than the wooden bench?"
+  },
+  {
+   "id": "person_sitting",
+   "type": "state",
+   "of": "person",
+   "desc": "the person is sitting",
+   "question": "Is the person sitting?"
+  },
+  {
+   "id": "lamp_post_standing",
+   "type": "state",
+   "of": "lamp_post",
+   "desc": "the lamp post stands",
+   "question": "Is the lamp post standing?"
+  },
+  {
+   "id": "birds_count",
+   "type": "attribute",
+   "of": "birds",
+   "desc": "there are six small birds",
+   "question": "Are there exactly six small birds?"
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "grasses",
+   "count": 1,
+   "count_exact": false,
+   "desc": "grass",
+   "question": "Is there grass in the image?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "person",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_064",
+ "prompt": "A park scene with a tall green tree. A wooden bench is under the tree. A blue bicycle is leaning against the bench. A person is sitting on the bench. On the grass near the bench are two red balls. A brown dog is chasing one of the balls, and the bicycle is taller than the dog. In the tree, there are some small birds, and the number of birds is three times the number of balls. A lamp post stands behind the bench, and the tree is taller than the lamp post. A trash can, which is shorter than the bench, is next to the lamp post.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

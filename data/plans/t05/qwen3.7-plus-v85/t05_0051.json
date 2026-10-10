@@ -1,0 +1,341 @@
+{
+ "style": "cinematic film still, intimate lighting, realistic textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a dining car",
+   "question": "Does the image show the interior of a dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "booth_left",
+   "type": "entity",
+   "class": "booth seat",
+   "plural": "booth seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush velvet booth seat",
+   "question": "Is there a plush velvet booth seat?",
+   "box": [
+    0,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "booth_right",
+   "type": "entity",
+   "class": "booth seat",
+   "plural": "booth seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush velvet booth seat",
+   "question": "Is there a plush velvet booth seat?",
+   "box": [
+    700,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "dining table",
+   "plural": "dining tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table between the booths",
+   "question": "Is there a dining table between the booths?",
+   "box": [
+    200,
+    600,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "man_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    300,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "woman_dress",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    350,
+    320,
+    650,
+    720
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man with white hair",
+   "question": "Is there an old man with white hair?",
+   "box": [
+    700,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    850,
+    600,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    0,
+    200,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man_scarf",
+   "desc": "the man wearing a red scarf is sitting",
+   "question": "Is the man wearing a red scarf sitting?"
+  },
+  {
+   "id": "man_fork",
+   "type": "attribute",
+   "of": "man_scarf",
+   "desc": "the man wearing a red scarf holds a silver fork mid-air",
+   "question": "Is the man wearing a red scarf holding a silver fork mid-air?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman_dress",
+   "desc": "the woman in a blue dress leans forward",
+   "question": "Is the woman in a blue dress leaning forward?"
+  },
+  {
+   "id": "woman_hand_extended",
+   "type": "state",
+   "of": "woman_dress",
+   "desc": "the woman in a blue dress has her hand extended",
+   "question": "Is the woman in a blue dress extending her hand?"
+  },
+  {
+   "id": "woman_salt",
+   "type": "attribute",
+   "of": "woman_dress",
+   "desc": "the woman in a blue dress holds a salt shaker",
+   "question": "Is the woman in a blue dress holding a salt shaker?"
+  },
+  {
+   "id": "old_man_watching",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man with white hair watches intently",
+   "question": "Is the old man with white hair watching intently?"
+  },
+  {
+   "id": "old_man_chin",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man with white hair rests his chin on his palm",
+   "question": "Is the old man with white hair resting his chin on his palm?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog sleeps curled up",
+   "question": "Is the small brown dog sleeping curled up?"
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog has its tail tucked under its nose",
+   "question": "Is the small brown dog's tail tucked under its nose?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a black vest is standing",
+   "question": "Is the waiter in a black vest standing?"
+  },
+  {
+   "id": "waiter_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a black vest holds a tray",
+   "question": "Is the waiter in a black vest holding a tray?"
+  },
+  {
+   "id": "man_on_booth_left",
+   "type": "relation",
+   "of": [
+    "man_scarf",
+    "booth_left"
+   ],
+   "desc": "the man wearing a red scarf sits on the plush velvet booth seat on the left",
+   "question": "Is the man wearing a red scarf sitting on the plush velvet booth seat on the left?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman_dress",
+    "man_scarf"
+   ],
+   "desc": "the woman in a blue dress is next to the man wearing a red scarf",
+   "question": "Is the woman in a blue dress next to the man wearing a red scarf?"
+  },
+  {
+   "id": "passing_salt",
+   "type": "action",
+   "of": [
+    "woman_dress",
+    "man_scarf"
+   ],
+   "desc": "the woman in a blue dress passes the salt shaker to the man wearing a red scarf",
+   "question": "Is the woman in a blue dress passing a salt shaker to the man wearing a red scarf?"
+  },
+  {
+   "id": "old_man_across_table",
+   "type": "relation",
+   "of": [
+    "old_man",
+    "table"
+   ],
+   "desc": "the old man with white hair is across the table from the others",
+   "question": "Is the old man with white hair positioned across the dining table?"
+  },
+  {
+   "id": "dog_beside_old_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "old_man"
+   ],
+   "desc": "the small brown dog is beside the old man with white hair",
+   "question": "Is the small brown dog beside the old man with white hair?"
+  },
+  {
+   "id": "dog_on_booth_right",
+   "type": "relation",
+   "of": [
+    "dog",
+    "booth_right"
+   ],
+   "desc": "the small brown dog is on the empty plush velvet booth seat on the right",
+   "question": "Is the small brown dog on the plush velvet booth seat on the right?"
+  },
+  {
+   "id": "waiter_far_left",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "man_scarf"
+   ],
+   "desc": "the waiter in a black vest is on the far left relative to the man wearing a red scarf",
+   "question": "Is the waiter in a black vest positioned to the far left of the man wearing a red scarf?"
+  },
+  {
+   "id": "no_window_view",
+   "type": "absent",
+   "desc": "a window view showing the outside",
+   "question": "Is there a window view showing the outside in the background?"
+  },
+  {
+   "id": "waiter_partially_visible",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a black vest is partially visible",
+   "question": "Is the waiter in a black vest partially visible?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "booth_left",
+   "to": "man_scarf",
+   "kind": "support"
+  },
+  {
+   "from": "booth_right",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0051",
+ "prompt": "In a cinematic film still, a man in a red scarf sits on the left side of a plush velvet booth, holding a silver fork mid-air. Next to him in the center, a woman in a blue dress leans forward, her hand extended to pass a salt shaker to the man. Across the table on the right, an old man with white hair watches the exchange intently, his chin resting on his palm. Beside the old man, a small brown dog sleeps curled up on the empty seat, its tail tucked neatly under its nose. On the far left edge of the frame, a waiter in a black vest stands partially visible, holding a tray. The scene is intimate and quiet, focusing on these five distinct figures within the confined space of the dining car. There is no window view visible in the background, keeping the attention strictly on the interior interactions and the characters present. The lighting highlights the textures of the velvet and the silverware, creating a sense of depth and realism without revealing anything outside the train.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

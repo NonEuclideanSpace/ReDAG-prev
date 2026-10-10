@@ -1,0 +1,499 @@
+{
+ "style": "photorealistic workshop scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a workshop interior",
+   "question": "Does the image show a workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden workbench",
+   "question": "Is there a wooden workbench?",
+   "box": [
+    300,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "carpenter",
+   "type": "entity",
+   "class": "carpenter",
+   "plural": "carpenters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carpenter wearing safety glasses",
+   "question": "Is there a carpenter wearing safety glasses?",
+   "box": [
+    400,
+    150,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "wood_piece",
+   "type": "entity",
+   "class": "piece of wood",
+   "plural": "pieces of wood",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rough piece of wood",
+   "question": "Is there a rough piece of wood?",
+   "box": [
+    500,
+    520,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open toolbox",
+   "question": "Is there an open toolbox?",
+   "box": [
+    320,
+    520,
+    480,
+    620
+   ]
+  },
+  {
+   "id": "nails_toolbox",
+   "type": "entity",
+   "class": "nail",
+   "plural": "nails",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three nails inside the toolbox",
+   "question": "Are there three nails inside the toolbox?",
+   "box": [
+    340,
+    536,
+    400,
+    584
+   ]
+  },
+  {
+   "id": "screws_toolbox",
+   "type": "entity",
+   "class": "screw",
+   "plural": "screws",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six screws inside the toolbox",
+   "question": "Are there six screws inside the toolbox?",
+   "box": [
+    340,
+    556,
+    420,
+    604
+   ]
+  },
+  {
+   "id": "chisels_toolbox",
+   "type": "entity",
+   "class": "chisel",
+   "plural": "chisels",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four chisels inside the toolbox",
+   "question": "Are there four chisels inside the toolbox?",
+   "box": [
+    350,
+    530,
+    450,
+    590
+   ]
+  },
+  {
+   "id": "saw",
+   "type": "entity",
+   "class": "saw",
+   "plural": "saws",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hand saw",
+   "question": "Is there a hand saw?",
+   "box": [
+    800,
+    200,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    50,
+    550,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "blueprint",
+   "type": "entity",
+   "class": "blueprint",
+   "plural": "blueprints",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spread blueprint",
+   "question": "Is there a spread blueprint?",
+   "box": [
+    100,
+    560,
+    300,
+    650
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a newly finished wooden chair",
+   "question": "Is there a newly finished wooden chair?",
+   "box": [
+    150,
+    700,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "shavings",
+   "type": "entity",
+   "class": "wood shaving",
+   "plural": "wood shavings",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scattered wood shavings",
+   "question": "Are there scattered wood shavings?",
+   "box": [
+    300,
+    850,
+    900,
+    1000
+   ]
+  },
+  {
+   "id": "drill",
+   "type": "entity",
+   "class": "drill",
+   "plural": "drills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a power drill",
+   "question": "Is there a power drill?",
+   "box": [
+    800,
+    880,
+    950,
+    980
+   ]
+  },
+  {
+   "id": "carpenter_hammer",
+   "type": "attribute",
+   "of": "carpenter",
+   "desc": "the carpenter holds a hammer",
+   "question": "Is the carpenter holding a hammer?"
+  },
+  {
+   "id": "carpenter_pointing",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the carpenter is pointing",
+   "question": "Is the carpenter pointing with a finger or hand?"
+  },
+  {
+   "id": "hammering",
+   "type": "action",
+   "of": [
+    "carpenter",
+    "wood_piece"
+   ],
+   "desc": "the carpenter hammers a nail into the rough piece of wood",
+   "question": "Is the carpenter hammering a nail into the rough piece of wood?"
+  },
+  {
+   "id": "toolbox_on_bench",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "workbench"
+   ],
+   "desc": "the toolbox sits on the workbench",
+   "question": "Is the toolbox sitting on the workbench?"
+  },
+  {
+   "id": "toolbox_next_to_wood",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "wood_piece"
+   ],
+   "desc": "the toolbox is next to the rough piece of wood",
+   "question": "Is the toolbox next to the rough piece of wood?"
+  },
+  {
+   "id": "saw_on_wall",
+   "type": "relation",
+   "of": [
+    "saw",
+    "pegboard"
+   ],
+   "desc": "the saw hangs from the pegboard on the wall",
+   "question": "Is the saw hanging from the pegboard on the wall?"
+  },
+  {
+   "id": "blueprint_on_table",
+   "type": "relation",
+   "of": [
+    "blueprint",
+    "table"
+   ],
+   "desc": "the blueprint is spread on the table",
+   "question": "Is the blueprint spread on the table?"
+  },
+  {
+   "id": "table_next_to_bench",
+   "type": "relation",
+   "of": [
+    "table",
+    "workbench"
+   ],
+   "desc": "the table is next to the workbench",
+   "question": "Is the table next to the workbench?"
+  },
+  {
+   "id": "carpenter_points_at_blueprint",
+   "type": "action",
+   "of": [
+    "carpenter",
+    "blueprint"
+   ],
+   "desc": "the carpenter points at the blueprint",
+   "question": "Is the carpenter pointing at the blueprint?"
+  },
+  {
+   "id": "chair_in_front_of_table",
+   "type": "relation",
+   "of": [
+    "chair",
+    "table"
+   ],
+   "desc": "the chair is in front of the table",
+   "question": "Is the chair positioned in front of the table?"
+  },
+  {
+   "id": "shavings_on_floor",
+   "type": "state",
+   "of": "shavings",
+   "desc": "wood shavings are scattered on the floor",
+   "question": "Are wood shavings scattered on the floor?"
+  },
+  {
+   "id": "shavings_around_bench",
+   "type": "relation",
+   "of": [
+    "shavings",
+    "workbench"
+   ],
+   "desc": "wood shavings are around the workbench",
+   "question": "Are the wood shavings located around the workbench?"
+  },
+  {
+   "id": "drill_on_floor",
+   "type": "state",
+   "of": "drill",
+   "desc": "the drill lies on the floor",
+   "question": "Is the drill lying on the floor?"
+  },
+  {
+   "id": "drill_next_to_shavings",
+   "type": "relation",
+   "of": [
+    "drill",
+    "shavings"
+   ],
+   "desc": "the drill is next to the wood shavings",
+   "question": "Is the drill next to the wood shavings?"
+  },
+  {
+   "id": "carpenter_standing",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the carpenter is standing",
+   "question": "Is the carpenter standing?"
+  },
+  {
+   "id": "toolbox_contains_nails",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "the open toolbox contains three nails",
+   "question": "Does the open toolbox contain three nails?"
+  },
+  {
+   "id": "toolbox_contains_screws",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "the open toolbox contains six screws",
+   "question": "Does the open toolbox contain six screws?"
+  },
+  {
+   "id": "toolbox_contains_chisels",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "the open toolbox contains four chisels",
+   "question": "Does the open toolbox contain four chisels?"
+  },
+  {
+   "id": "saw_hanging",
+   "type": "state",
+   "of": "saw",
+   "desc": "the saw is hanging",
+   "question": "Is the hand saw hanging?"
+  },
+  {
+   "id": "chair_smooth",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the chair has smooth wood",
+   "question": "Is the wood of the chair smooth?"
+  },
+  {
+   "id": "chair_smaller_than_bench",
+   "type": "relation",
+   "of": [
+    "chair",
+    "workbench"
+   ],
+   "desc": "the chair is smaller than the workbench",
+   "question": "Is the chair smaller than the workbench?"
+  },
+  {
+   "id": "wood_smoothness_comparison",
+   "type": "relation",
+   "of": [
+    "chair",
+    "wood_piece"
+   ],
+   "desc": "the wood of the chair is smoother than the rough piece of wood",
+   "question": "Is the wood of the chair smoother than the rough piece of wood?"
+  },
+  {
+   "id": "pegboard",
+   "type": "entity",
+   "class": "pegboard",
+   "plural": "pegboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pegboard on the wall",
+   "question": "Is there a pegboard on the wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "saw_on_pegboard",
+   "type": "relation",
+   "of": [
+    "saw",
+    "pegboard"
+   ],
+   "desc": "the saw is hanging from the pegboard",
+   "question": "Is the hand saw hanging from the pegboard?"
+  },
+  {
+   "id": "wall_behind_bench",
+   "type": "relation",
+   "of": [
+    "pegboard",
+    "workbench"
+   ],
+   "desc": "the pegboard is on the wall behind the workbench",
+   "question": "Is the pegboard on the wall behind the workbench?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "toolbox",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "wood_piece",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "blueprint",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "pegboard",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_006",
+ "prompt": "A workshop scene with a carpenter building furniture. The carpenter is standing at a workbench, holding a hammer and hammering a nail into a piece of wood. An open toolbox sits on the workbench next to the wood. The toolbox contains three nails, a group of screws, and some chisels. The number of screws is double the number of nails, and the number of chisels is one more than the number of nails. A saw is hanging from a pegboard on the wall behind the workbench. The carpenter is wearing safety glasses and pointing at a blueprint spread on a table next to the workbench. A newly finished wooden chair is positioned in front of the table. The chair is smaller than the workbench. The wood used for the chair is smoother than the rough piece of wood on the workbench. Wood shavings are scattered on the floor around the workbench. A drill is lying on the floor next to the wood shavings.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 2,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

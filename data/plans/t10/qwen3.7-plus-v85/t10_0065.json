@@ -1,0 +1,284 @@
+{
+ "style": "flat vector illustration, bright and colorful, clean lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic red barn with white trim in the background",
+   "question": "Is there a rustic red barn with white trim in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever with a red collar",
+   "question": "Is there a golden retriever with a red collar?",
+   "box": [
+    280,
+    450,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a straw hat",
+   "question": "Is there a man in a straw hat?",
+   "box": [
+    400,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow overalls",
+   "question": "Is there a child in yellow overalls?",
+   "box": [
+    620,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a green vest",
+   "question": "Is there an elderly person in a green vest?",
+   "box": [
+    780,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a woven basket",
+   "question": "Is the woman in a blue apron holding a woven basket?"
+  },
+  {
+   "id": "pitchfork",
+   "type": "attribute",
+   "of": "elderly_person",
+   "desc": "the elderly person in a green vest leans on a pitchfork",
+   "question": "Is the elderly person in a green vest leaning on a pitchfork?"
+  },
+  {
+   "id": "crate",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a straw hat lifts a heavy wooden crate",
+   "question": "Is the man in a straw hat lifting a heavy wooden crate?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is looking up",
+   "question": "Is the golden retriever looking up?"
+  },
+  {
+   "id": "man_arms_up",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a straw hat has his arms extended upward",
+   "question": "Does the man in a straw hat have his arms extended upward?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in yellow overalls is pointing",
+   "question": "Is the child in yellow overalls pointing?"
+  },
+  {
+   "id": "elderly_smiling",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person in a green vest is smiling",
+   "question": "Is the elderly person in a green vest smiling?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever is next to the woman in a blue apron",
+   "question": "Is the golden retriever next to the woman in a blue apron?"
+  },
+  {
+   "id": "child_beside_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in yellow overalls is beside the man in a straw hat",
+   "question": "Is the child in yellow overalls beside the man in a straw hat?"
+  },
+  {
+   "id": "elderly_behind_others",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "child"
+   ],
+   "desc": "the elderly person in a green vest is behind the child in yellow overalls",
+   "question": "Is the elderly person in a green vest behind the child in yellow overalls?"
+  },
+  {
+   "id": "barn_behind_all",
+   "type": "state",
+   "of": "woman",
+   "desc": "the rustic red barn is behind the woman in a blue apron",
+   "question": "Is the rustic red barn behind the woman in a blue apron?"
+  },
+  {
+   "id": "woman_hands_pumpkin",
+   "type": "action",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in a blue apron hands a small pumpkin to the golden retriever",
+   "question": "Is the woman in a blue apron handing a small pumpkin to the golden retriever?"
+  },
+  {
+   "id": "dog_takes_pumpkin",
+   "type": "action",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever gently takes a small pumpkin from the woman in a blue apron",
+   "question": "Is the golden retriever gently taking a small pumpkin from the woman in a blue apron?"
+  },
+  {
+   "id": "man_looks_at_child",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the man in a straw hat looks at the child in yellow overalls",
+   "question": "Is the man in a straw hat looking at the child in yellow overalls?"
+  },
+  {
+   "id": "elderly_looks_at_child",
+   "type": "action",
+   "of": [
+    "elderly_person",
+    "child"
+   ],
+   "desc": "the elderly person in a green vest looks at the child in yellow overalls",
+   "question": "Is the elderly person in a green vest looking at the child in yellow overalls?"
+  },
+  {
+   "id": "no_sky",
+   "type": "absent",
+   "desc": "sky",
+   "question": "Is there any sky visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron stands",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a straw hat stands",
+   "question": "Is the man in a straw hat standing?"
+  },
+  {
+   "id": "pumpkins_in_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woven basket held by the woman is filled with orange pumpkins",
+   "question": "Is the woven basket held by the woman filled with orange pumpkins?"
+  }
+ ],
+ "edges": [],
+ "id": "t10_0065",
+ "prompt": "This flat vector illustration depicts a vibrant farm harvest scene. On the left, a woman in a blue apron holds a woven basket filled with orange pumpkins. Next to her stands a golden retriever with a red collar, sitting patiently and looking up at her. In the center, a man in a straw hat lifts a heavy wooden crate, his arms extended upward. Beside him, a child in yellow overalls points excitedly toward the right side of the frame. On the right, an elderly person in a green vest leans on a pitchfork, smiling warmly at the child. Behind them, a rustic red barn with white trim anchors the background. The woman hands a small pumpkin to the dog, who gently takes it. The man in the straw hat looks at the child pointing. There is no sky visible in the composition, keeping the focus entirely on the ground-level activity and characters. The scene is bright and colorful, with clean lines defining each figure and object distinctly.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

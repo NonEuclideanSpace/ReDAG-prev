@@ -1,0 +1,418 @@
+{
+ "style": "photorealistic interior photography, bright lighting, busy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neighborhood laundromat with wall shelves and bulletin boards",
+   "question": "Does the image show the interior of a neighborhood laundromat with wall shelves and bulletin boards?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "washing_machines",
+   "type": "entity",
+   "class": "washing machine",
+   "plural": "washing machines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of coin-operated washing machines",
+   "question": "Are there rows of coin-operated washing machines?",
+   "box": [
+    50,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "dryers",
+   "type": "entity",
+   "class": "dryer",
+   "plural": "dryers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of dryers",
+   "question": "Are there rows of dryers?",
+   "box": [
+    624,
+    300,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "tables",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "long folding tables",
+   "question": "Are there long folding tables?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "customers",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "customers folding clean clothes",
+   "question": "Are there customers folding clean clothes?",
+   "box": [
+    200,
+    400,
+    824,
+    700
+   ]
+  },
+  {
+   "id": "baskets",
+   "type": "entity",
+   "class": "laundry basket",
+   "plural": "laundry baskets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "laundry baskets",
+   "question": "Are there laundry baskets?",
+   "box": [
+    50,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "wall shelf",
+   "plural": "wall shelves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wall shelves",
+   "question": "Are there wall shelves?",
+   "box": [
+    0,
+    100,
+    1024,
+    250
+   ]
+  },
+  {
+   "id": "change_machine",
+   "type": "entity",
+   "class": "change machine",
+   "plural": "change machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a change machine converting bills into quarters",
+   "question": "Is there a change machine converting bills into quarters?",
+   "box": [
+    450,
+    200,
+    574,
+    400
+   ]
+  },
+  {
+   "id": "vending_machine",
+   "type": "entity",
+   "class": "vending machine",
+   "plural": "vending machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vending machine",
+   "question": "Is there a vending machine?",
+   "box": [
+    800,
+    200,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "plastic chairs for seating",
+   "question": "Are there plastic chairs for seating?",
+   "box": [
+    100,
+    800,
+    300,
+    1000
+   ]
+  },
+  {
+   "id": "soap_boxes",
+   "type": "entity",
+   "class": "soap powder box",
+   "plural": "soap powder boxes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked soap powder boxes",
+   "question": "Are there stacked soap powder boxes?",
+   "box": [
+    350,
+    850,
+    500,
+    980
+   ]
+  },
+  {
+   "id": "lost_found",
+   "type": "entity",
+   "class": "container",
+   "plural": "containers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lost and found container",
+   "question": "Is there a lost and found container?",
+   "box": [
+    600,
+    850,
+    750,
+    980
+   ]
+  },
+  {
+   "id": "bulletin_board",
+   "type": "entity",
+   "class": "bulletin board",
+   "plural": "bulletin boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bulletin board displaying community announcements",
+   "question": "Is there a bulletin board displaying community announcements?",
+   "box": [
+    50,
+    50,
+    300,
+    200
+   ]
+  },
+  {
+   "id": "soap_near_tables",
+   "type": "relation",
+   "of": [
+    "soap_boxes",
+    "tables"
+   ],
+   "desc": "the stacked soap powder boxes are near the folding tables",
+   "question": "Are the stacked soap powder boxes near the folding tables?"
+  },
+  {
+   "id": "no_jewelry",
+   "type": "absent",
+   "desc": "luxury jewelry",
+   "question": "Is there any luxury jewelry visible?"
+  },
+  {
+   "id": "no_lab_equipment",
+   "type": "absent",
+   "desc": "scientific laboratory equipment",
+   "question": "Is there any scientific laboratory equipment visible?"
+  },
+  {
+   "id": "washing_machines_operate",
+   "type": "state",
+   "of": "washing_machines",
+   "desc": "the washing machines are operating",
+   "question": "Are the washing machines operating?"
+  },
+  {
+   "id": "dryers_operate",
+   "type": "state",
+   "of": "dryers",
+   "desc": "the dryers are operating",
+   "question": "Are the dryers operating?"
+  },
+  {
+   "id": "customers_fold",
+   "type": "action",
+   "of": [
+    "customers",
+    "baskets"
+   ],
+   "desc": "the customers fold clean clothes from the laundry baskets",
+   "question": "Are the customers folding clean clothes from the laundry baskets?"
+  },
+  {
+   "id": "chairs_provide_seating",
+   "type": "state",
+   "of": "chairs",
+   "desc": "the plastic chairs provide seating",
+   "question": "Do the plastic chairs provide seating?"
+  },
+  {
+   "id": "washing_machine_timers",
+   "type": "attribute",
+   "of": "washing_machines",
+   "desc": "timer displays on the washing machines",
+   "question": "Do the washing machines have timer displays?"
+  },
+  {
+   "id": "dryer_timers",
+   "type": "attribute",
+   "of": "dryers",
+   "desc": "timer displays on the dryers",
+   "question": "Do the dryers have timer displays?"
+  },
+  {
+   "id": "baskets_overflowing",
+   "type": "state",
+   "of": "baskets",
+   "desc": "the laundry baskets are overflowing with colorful garments",
+   "question": "Are the laundry baskets overflowing with colorful garments?"
+  },
+  {
+   "id": "detergent_dispensers",
+   "type": "entity",
+   "class": "detergent dispenser",
+   "plural": "detergent dispensers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "detergent dispensers",
+   "question": "Are there detergent dispensers?",
+   "box": [
+    50,
+    50,
+    200,
+    150
+   ]
+  },
+  {
+   "id": "softener_bottles",
+   "type": "entity",
+   "class": "fabric softener bottle",
+   "plural": "fabric softener bottles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "fabric softener bottles",
+   "question": "Are there fabric softener bottles?",
+   "box": [
+    250,
+    50,
+    400,
+    150
+   ]
+  },
+  {
+   "id": "dispensers_on_shelves",
+   "type": "relation",
+   "of": [
+    "detergent_dispensers",
+    "shelves"
+   ],
+   "desc": "detergent dispensers line the wall shelves",
+   "question": "Do the detergent dispensers line the wall shelves?"
+  },
+  {
+   "id": "bottles_on_shelves",
+   "type": "relation",
+   "of": [
+    "softener_bottles",
+    "shelves"
+   ],
+   "desc": "fabric softener bottles line the wall shelves",
+   "question": "Do the fabric softener bottles line the wall shelves?"
+  },
+  {
+   "id": "vending_snacks",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "snacks in the vending machine",
+   "question": "Does the vending machine offer snacks?"
+  },
+  {
+   "id": "vending_beverages",
+   "type": "attribute",
+   "of": "vending_machine",
+   "desc": "beverages in the vending machine",
+   "question": "Does the vending machine offer beverages?"
+  },
+  {
+   "id": "lost_found_items",
+   "type": "attribute",
+   "of": "lost_found",
+   "desc": "forgotten items in the lost and found container",
+   "question": "Does the lost and found container collect forgotten items?"
+  },
+  {
+   "id": "no_diamond_rings",
+   "type": "absent",
+   "desc": "diamond rings",
+   "question": "Are there any diamond rings visible?"
+  },
+  {
+   "id": "no_gold_necklaces",
+   "type": "absent",
+   "desc": "gold necklaces",
+   "question": "Are there any gold necklaces visible?"
+  },
+  {
+   "id": "no_microscopes",
+   "type": "absent",
+   "desc": "microscopes",
+   "question": "Are there any microscopes visible?"
+  },
+  {
+   "id": "no_test_tubes",
+   "type": "absent",
+   "desc": "test tubes",
+   "question": "Are there any test tubes visible?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "shelves",
+   "to": "detergent_dispensers",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "softener_bottles",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_024",
+ "prompt": "A neighborhood laundromat during busy weekend hours, where rows of washing machines and dryers operate while customers fold clean clothes on long tables. Laundry baskets overflow with colorful garments while detergent dispensers and fabric softener bottles line wall shelves. Change machines convert bills into quarters while vending machines offer snacks and beverages during long wash cycles. However, this self-service facility excludes any luxury jewelry like diamond rings or gold necklaces, maintaining its practical focus on clothing care rather than precious accessory retail. You won't discover any scientific laboratory equipment such as microscopes or test tubes either, preserving the domestic atmosphere designed for laundry services rather than research activities. Coin-operated machines require exact change while timer displays show remaining cycle minutes, and plastic chairs provide seating. And soap powder boxes stack near folding stations. Lost and found containers collect forgotten items, while bulletin boards display community announcements in this essential neighborhood service center.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 14,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

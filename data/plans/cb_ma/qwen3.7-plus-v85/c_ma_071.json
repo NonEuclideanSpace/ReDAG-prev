@@ -1,0 +1,189 @@
+{
+ "style": "photorealistic, dramatic lighting, detailed texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shadowed cavern interior",
+   "question": "Does the image show the interior of a shadowed cavern?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "block",
+   "type": "entity",
+   "class": "stone block",
+   "plural": "stone blocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered sandstone block",
+   "question": "Is there a weathered sandstone block?",
+   "box": [
+    312,
+    600,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient hexagonal wrought-iron lantern",
+   "question": "Is there an ancient hexagonal wrought-iron lantern?",
+   "box": [
+    412,
+    300,
+    612,
+    700
+   ]
+  },
+  {
+   "id": "crystal",
+   "type": "entity",
+   "class": "crystal",
+   "plural": "crystals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steady orange crystal",
+   "question": "Is there a steady orange crystal inside the lantern?",
+   "box": [
+    480,
+    500,
+    544,
+    580
+   ]
+  },
+  {
+   "id": "lanter_iron_bars",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern has matte-black iron bars",
+   "question": "Does the lantern have matte-black iron bars?"
+  },
+  {
+   "id": "lantern_glass_panes",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "six clear glass panes lightly tinted warm amber",
+   "question": "Does the lantern have six clear glass panes lightly tinted warm amber?"
+  },
+  {
+   "id": "lantern_cabochons",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "a turquoise cabochon at the centre of every glass panel",
+   "question": "Is there a turquoise cabochon at the centre of every glass panel of the lantern?"
+  },
+  {
+   "id": "lantern_cap_handle",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern has a conical cap pierced by star-shaped vents",
+   "question": "Does the lantern have a conical cap pierced by star-shaped vents?"
+  },
+  {
+   "id": "lantern_on_block",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "block"
+   ],
+   "desc": "the lantern rests on the sandstone block",
+   "question": "Is the lantern resting on the sandstone block?"
+  },
+  {
+   "id": "crystal_glowing",
+   "type": "state",
+   "of": "crystal",
+   "desc": "the orange crystal emits a soft glow",
+   "question": "Is the orange crystal emitting a soft glow?"
+  },
+  {
+   "id": "rust_patches",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "faint rust patches on the metal of the lantern",
+   "question": "Are there faint rust patches visible on the metal of the lantern?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks in the lantern's glass",
+   "question": "Are there any cracks in the lantern's glass?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden parts in the lantern structure",
+   "question": "Are there any wooden parts in the lantern structure?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic elements anywhere in the image",
+   "question": "Are there any plastic elements anywhere in the image?"
+  },
+  {
+   "id": "lantern_hexagonal",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern is hexagonal",
+   "question": "Is the lantern hexagonal?"
+  },
+  {
+   "id": "lantern_vine_motifs",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern's iron bars are engraved with vine motifs",
+   "question": "Are the lantern's iron bars engraved with vine motifs?"
+  },
+  {
+   "id": "lantern_ring_handle",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern is crowned by a sturdy ring handle",
+   "question": "Is the lantern crowned by a sturdy ring handle?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "block",
+   "to": "lantern",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_071",
+ "prompt": "Illustrate a single ancient wrought-iron lantern resting on a weathered sandstone block inside a shadowed cavern. The lantern is hexagonal, forged from matte-black iron bars engraved with vine motifs. Six clear glass panes, each lightly tinted warm amber, frame the sides, and a turquoise cabochon sits at the centre of every panel. A sturdy ring handle crowns a conical cap pierced by star-shaped vents. Inside, a steady orange crystal emits a soft glow that reveals faint rust patches on the metal. The lantern’s glass shows no cracks, the structure contains no wooden parts, and absolutely no plastic elements appear anywhere.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

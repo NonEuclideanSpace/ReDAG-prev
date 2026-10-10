@@ -1,0 +1,387 @@
+{
+ "style": "photorealistic sci-fi render",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a space station interior with a blue section of the spaceship hull",
+   "question": "Does the image show a space station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "control_panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control panel",
+   "question": "Is there a control panel?",
+   "box": [
+    300,
+    200,
+    724,
+    500
+   ]
+  },
+  {
+   "id": "astronaut",
+   "type": "entity",
+   "class": "astronaut",
+   "plural": "astronauts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an astronaut in a spacesuit",
+   "question": "Is there an astronaut in a spacesuit?",
+   "box": [
+    400,
+    150,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "alien",
+   "type": "entity",
+   "class": "alien",
+   "plural": "aliens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green alien",
+   "question": "Is there a green alien?",
+   "box": [
+    150,
+    250,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "battery",
+   "type": "entity",
+   "class": "battery",
+   "plural": "batteries",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow battery",
+   "question": "Is there a yellow battery?",
+   "box": [
+    50,
+    400,
+    150,
+    500
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "metallic crate",
+   "plural": "metallic crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metallic crate",
+   "question": "Is there a metallic crate?",
+   "box": [
+    200,
+    400,
+    350,
+    550
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red toolbox",
+   "question": "Is there a red toolbox?",
+   "box": [
+    300,
+    550,
+    724,
+    650
+   ]
+  },
+  {
+   "id": "monitor",
+   "type": "entity",
+   "class": "monitor screen",
+   "plural": "monitor screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a monitor screen",
+   "question": "Is there a monitor screen?",
+   "box": [
+    350,
+    450,
+    674,
+    550
+   ]
+  },
+  {
+   "id": "panel_buttons",
+   "type": "attribute",
+   "of": "control_panel",
+   "desc": "six buttons on the control panel",
+   "question": "Are there six buttons on the control panel?"
+  },
+  {
+   "id": "astronaut_floating",
+   "type": "state",
+   "of": "astronaut",
+   "desc": "the astronaut is floating",
+   "question": "Is the astronaut floating?"
+  },
+  {
+   "id": "alien_floating",
+   "type": "state",
+   "of": "alien",
+   "desc": "the green alien is floating",
+   "question": "Is the green alien floating?"
+  },
+  {
+   "id": "alien_pointing",
+   "type": "state",
+   "of": "alien",
+   "desc": "the green alien is pointing",
+   "question": "Is the green alien pointing?"
+  },
+  {
+   "id": "astronaut_looking",
+   "type": "relation",
+   "of": [
+    "astronaut",
+    "monitor"
+   ],
+   "desc": "the astronaut is looking at the monitor",
+   "question": "Is the astronaut looking at the monitor?"
+  },
+  {
+   "id": "astronaut_in_front_panel",
+   "type": "relation",
+   "of": [
+    "astronaut",
+    "control_panel"
+   ],
+   "desc": "the astronaut is in front of the control panel",
+   "question": "Is the astronaut in front of the control panel?"
+  },
+  {
+   "id": "alien_next_astronaut",
+   "type": "relation",
+   "of": [
+    "alien",
+    "astronaut"
+   ],
+   "desc": "the green alien is next to the astronaut",
+   "question": "Is the green alien next to the astronaut?"
+  },
+  {
+   "id": "battery_left_crate",
+   "type": "relation",
+   "of": [
+    "battery",
+    "crate"
+   ],
+   "desc": "the yellow battery is to the left of the metallic crate",
+   "question": "Is the yellow battery to the left of the metallic crate?"
+  },
+  {
+   "id": "panel_on_hull",
+   "type": "relation",
+   "of": [
+    "control_panel",
+    "hull_section"
+   ],
+   "desc": "the control panel is mounted on the hull",
+   "question": "Is the control panel mounted on the hull?"
+  },
+  {
+   "id": "toolbox_beneath_panel",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "control_panel"
+   ],
+   "desc": "the red toolbox is beneath the control panel",
+   "question": "Is the red toolbox beneath the control panel?"
+  },
+  {
+   "id": "monitor_above_toolbox",
+   "type": "relation",
+   "of": [
+    "monitor",
+    "toolbox"
+   ],
+   "desc": "the monitor is above the red toolbox",
+   "question": "Is the monitor above the red toolbox?"
+  },
+  {
+   "id": "astronaut_pushing_toolbox",
+   "type": "action",
+   "of": [
+    "astronaut",
+    "toolbox"
+   ],
+   "desc": "the astronaut is pushing the red toolbox",
+   "question": "Is the astronaut pushing the red toolbox?"
+  },
+  {
+   "id": "alien_pointing_monitor",
+   "type": "action",
+   "of": [
+    "alien",
+    "monitor"
+   ],
+   "desc": "the green alien is pointing at the monitor",
+   "question": "Is the green alien pointing at the monitor?"
+  },
+  {
+   "id": "alien_above_crate",
+   "type": "relation",
+   "of": [
+    "alien",
+    "crate"
+   ],
+   "desc": "the green alien is above the metallic crate",
+   "question": "Is the green alien above the metallic crate?"
+  },
+  {
+   "id": "crate_rivets",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the metallic crate has three rivets",
+   "question": "Does the metallic crate have exactly three rivets?"
+  },
+  {
+   "id": "panel_button_count",
+   "type": "attribute",
+   "of": "control_panel",
+   "desc": "six buttons on the control panel",
+   "question": "Does the control panel have exactly six buttons?"
+  },
+  {
+   "id": "monitor_dial_count",
+   "type": "attribute",
+   "of": "monitor",
+   "desc": "several analog dials on the monitor screen",
+   "question": "Are there several analog dials on the monitor screen?"
+  },
+  {
+   "id": "astronaut_taller",
+   "type": "relation",
+   "of": [
+    "astronaut",
+    "alien"
+   ],
+   "desc": "the astronaut is taller than the green alien",
+   "question": "Is the astronaut taller than the green alien?"
+  },
+  {
+   "id": "toolbox_longer",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "crate"
+   ],
+   "desc": "the red toolbox is longer than the metallic crate",
+   "question": "Is the red toolbox longer than the metallic crate?"
+  },
+  {
+   "id": "button_dial_relation",
+   "type": "relation",
+   "of": [
+    "control_panel",
+    "monitor"
+   ],
+   "desc": "the number of buttons on the control panel is greater than the number of dials on the monitor",
+   "question": "Is the number of buttons on the control panel greater than the number of dials on the monitor?"
+  },
+  {
+   "id": "hull_section",
+   "type": "entity",
+   "class": "spaceship hull",
+   "plural": "spaceship hulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue section of the spaceship hull",
+   "question": "Is there a blue section of the spaceship hull?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hull_behind_alien",
+   "type": "relation",
+   "of": [
+    "hull_section",
+    "alien"
+   ],
+   "desc": "the blue hull section is behind the green alien",
+   "question": "Is the blue hull section behind the green alien?"
+  },
+  {
+   "id": "hull_behind_them",
+   "type": "relation",
+   "of": [
+    "hull_section",
+    "astronaut"
+   ],
+   "desc": "the blue hull section is behind the astronaut",
+   "question": "Is the blue hull section behind the astronaut?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "hull_section",
+   "to": "control_panel",
+   "kind": "support"
+  },
+  {
+   "from": "hull_section",
+   "to": "battery",
+   "kind": "support"
+  },
+  {
+   "from": "hull_section",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_066",
+ "prompt": "A space station interior with an astronaut floating in front of a control panel. A green alien is floating next to the astronaut, and the astronaut is taller than the alien. A blue section of the spaceship hull is behind them. On the hull, there is a yellow battery to the left of a metallic crate with three rivets. The number of bolts on the hull is two more than the number of rivets. The control panel, which has twice as many buttons as the crate has rivets, is mounted on the hull. Beneath the control panel is a red toolbox which is longer than the metallic crate. A monitor screen with several analog dials is above the toolbox, and the number of buttons on the control panel is greater than the number of dials on the monitor. The astronaut is pushing the toolbox. The alien is pointing at the monitor. The astronaut is looking at the monitor. The alien is floating above the crate.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

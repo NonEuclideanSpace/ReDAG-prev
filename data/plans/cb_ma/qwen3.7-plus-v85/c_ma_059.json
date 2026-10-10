@@ -1,0 +1,222 @@
+{
+ "style": "fantasy digital art, ethereal lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cloudy sky",
+   "question": "Is the background a cloudy sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "island",
+   "type": "entity",
+   "class": "floating island",
+   "plural": "floating islands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large floating island",
+   "question": "Is there a large floating island?",
+   "box": [
+    100,
+    300,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "temple",
+   "type": "entity",
+   "class": "stone temple",
+   "plural": "stone temples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large weathered circular stone temple",
+   "question": "Is there a large weathered circular stone temple?",
+   "box": [
+    400,
+    450,
+    624,
+    650
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "gnarled tree",
+   "plural": "gnarled trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive gnarled tree",
+   "question": "Is there a massive gnarled tree?",
+   "box": [
+    650,
+    400,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "waterfalls",
+   "type": "entity",
+   "class": "waterfall",
+   "plural": "waterfalls",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several waterfalls",
+   "question": "Are there several waterfalls?",
+   "box": [
+    150,
+    600,
+    874,
+    900
+   ]
+  },
+  {
+   "id": "core_light",
+   "type": "attribute",
+   "of": "island",
+   "desc": "a bright white light glowing from the core of the island visible through the rock",
+   "question": "Is a bright white light glowing from the core of the island, visible through the rock?"
+  },
+  {
+   "id": "temple_on_island",
+   "type": "relation",
+   "of": [
+    "temple",
+    "island"
+   ],
+   "desc": "the temple sits at the center of the island",
+   "question": "Is the temple sitting at the center of the island?"
+  },
+  {
+   "id": "tree_next_to_temple",
+   "type": "relation",
+   "of": [
+    "tree",
+    "temple"
+   ],
+   "desc": "the tree grows next to the temple",
+   "question": "Is the tree growing next to the temple?"
+  },
+  {
+   "id": "no_ground",
+   "type": "absent",
+   "desc": "ground or earth beneath the island",
+   "question": "Is there any ground or earth visible beneath the island?"
+  },
+  {
+   "id": "no_dirt_rock",
+   "type": "absent",
+   "desc": "normal dirt in the island",
+   "question": "Is there normal dirt in the island?"
+  },
+  {
+   "id": "no_modern_ruin",
+   "type": "absent",
+   "desc": "modern architectural elements in the ruin",
+   "question": "Does the ruin have modern architectural elements?"
+  },
+  {
+   "id": "island_material",
+   "type": "attribute",
+   "of": "island",
+   "desc": "the island is made of translucent blue crystalline rock",
+   "question": "Is the island made of translucent blue crystalline rock?"
+  },
+  {
+   "id": "island_structure",
+   "type": "attribute",
+   "of": "island",
+   "desc": "the island has a geometric angular structure",
+   "question": "Does the island have a geometric angular structure?"
+  },
+  {
+   "id": "temple_walls",
+   "type": "state",
+   "of": "temple",
+   "desc": "the temple has crumbling walls",
+   "question": "Does the temple have crumbling walls?"
+  },
+  {
+   "id": "temple_moss",
+   "type": "attribute",
+   "of": "temple",
+   "desc": "moss growing on the temple",
+   "question": "Is there moss growing on the temple?"
+  },
+  {
+   "id": "tree_bark",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree has white bark",
+   "question": "Does the tree have white bark?"
+  },
+  {
+   "id": "tree_leaves",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree has glowing red leaves",
+   "question": "Does the tree have glowing red leaves?"
+  },
+  {
+   "id": "waterfalls_cascade",
+   "type": "relation",
+   "of": [
+    "waterfalls",
+    "island"
+   ],
+   "desc": "the waterfalls cascade from the island's edges",
+   "question": "Do the waterfalls cascade from the island's edges?"
+  },
+  {
+   "id": "no_normal_rock",
+   "type": "absent",
+   "desc": "normal non-crystalline rock in the island",
+   "question": "Is there normal non-crystalline rock in the island?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "island",
+   "to": "temple",
+   "kind": "support"
+  },
+  {
+   "from": "island",
+   "to": "tree",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_059",
+ "prompt": "A single, large, floating island made of crystalline rock, suspended in a cloudy sky. The island has a geometric, angular structure, and its crystalline material is a translucent blue. A single, large, weathered stone ruin, which is a circular temple, sits at its center. The temple has crumbling walls and has moss growing on it. Several waterfalls cascade from the island's edges. A single, massive, gnarled tree grows next to the temple; its bark is white and its leaves are a glowing red. A bright, white light is glowing from the core of the island, visible through the translucent rock. The island is not on the ground, it is not made of normal dirt and rock, its ruin is not modern",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node island: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "style": "photorealistic product photography, high detail, studio lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for a product shot",
+   "question": "Is the background neutral and suitable for a product shot?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lectern",
+   "type": "entity",
+   "class": "lectern",
+   "plural": "lecterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tarnish-free silver lectern",
+   "question": "Is there a tarnish-free silver lectern?",
+   "box": [
+    312,
+    400,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "grimoire",
+   "type": "entity",
+   "class": "grimoire",
+   "plural": "grimoires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leather-bound grimoire",
+   "question": "Is there a leather-bound grimoire?",
+   "box": [
+    362,
+    450,
+    662,
+    850
+   ]
+  },
+  {
+   "id": "grimoire_closed",
+   "type": "state",
+   "of": "grimoire",
+   "desc": "the grimoire is lying closed",
+   "question": "Is the grimoire lying closed?"
+  },
+  {
+   "id": "grimoire_on_lectern",
+   "type": "relation",
+   "of": [
+    "grimoire",
+    "lectern"
+   ],
+   "desc": "the grimoire lies on the lectern",
+   "question": "Is the grimoire lying on the lectern?"
+  },
+  {
+   "id": "cover_knotwork",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "the cover is tooled with a pentagonal knotwork frame",
+   "question": "Is the cover tooled with a pentagonal knotwork frame?"
+  },
+  {
+   "id": "cover_medallion",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "the cover is centred by a circular jade medallion showing a stylised owl",
+   "question": "Is the cover centred by a circular jade medallion showing a stylised owl?"
+  },
+  {
+   "id": "spine_runes",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "gold-foiled runes line the spine between five raised hubs",
+   "question": "Do gold-foiled runes line the spine between five raised hubs?"
+  },
+  {
+   "id": "corner_guards",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "corner-guards of aged bronze cap each board",
+   "question": "Do corner-guards of aged bronze cap each board?"
+  },
+  {
+   "id": "page_edges",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "gilded page edges gleam subtly",
+   "question": "Do gilded page edges gleam subtly?"
+  },
+  {
+   "id": "bookmark",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "a triple-ribbon bookmark of black, purple, and white silk emerges at the fore-edge",
+   "question": "Does a triple-ribbon bookmark of black, purple, and white silk emerge at the fore-edge?"
+  },
+  {
+   "id": "goatskin_grain",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "the goatskin exhibits natural grain",
+   "question": "Does the goatskin exhibit natural grain?"
+  },
+  {
+   "id": "no_modern_text",
+   "type": "absent",
+   "desc": "modern printed text in the volume",
+   "question": "Is there any modern printed text visible in the volume?"
+  },
+  {
+   "id": "no_plastic_lamination",
+   "type": "absent",
+   "desc": "plastic lamination on the volume",
+   "question": "Is there any plastic lamination on the volume?"
+  },
+  {
+   "id": "grimoire_color_material",
+   "type": "attribute",
+   "of": "grimoire",
+   "desc": "the grimoire has a deep ox-blood red goatskin cover",
+   "question": "Does the grimoire have a deep ox-blood red goatskin cover?"
+  },
+  {
+   "id": "goatskin_no_rips",
+   "type": "absent",
+   "desc": "rips in the goatskin",
+   "question": "Are there any rips in the goatskin?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "lectern",
+   "to": "grimoire",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_084",
+ "prompt": "Render a single leather-bound grimoire lying closed on a tarnish-free silver lectern. The cover is deep ox-blood red goatskin tooled with a pentagonal knotwork frame and centred by a circular jade medallion showing a stylised owl. Gold-foiled runes line the spine between five raised hubs. Corner-guards of aged bronze cap each board. Gilded page edges gleam subtly, and a triple-ribbon bookmark of black, purple, and white silk emerges at the fore-edge. The goatskin exhibits natural grain, no rips, and the volume contains no modern printed text or plastic lamination.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

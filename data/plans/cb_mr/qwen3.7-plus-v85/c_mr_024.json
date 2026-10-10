@@ -1,0 +1,528 @@
+{
+ "style": "photorealistic theater scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theater interior",
+   "question": "Does the image show a theater interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "actor_rehearsing",
+   "type": "entity",
+   "class": "actor",
+   "plural": "actors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older experienced actor",
+   "question": "Is there an older experienced actor?",
+   "box": [
+    350,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "director",
+   "type": "entity",
+   "class": "director",
+   "plural": "directors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a director",
+   "question": "Is there a director?",
+   "box": [
+    100,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "lighting_tech",
+   "type": "entity",
+   "class": "technician",
+   "plural": "technicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lighting technician",
+   "question": "Is there a lighting technician?",
+   "box": [
+    800,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control panel",
+   "question": "Is there a control panel?",
+   "box": [
+    820,
+    150,
+    930,
+    250
+   ]
+  },
+  {
+   "id": "makeup_artist",
+   "type": "entity",
+   "class": "artist",
+   "plural": "artists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a makeup artist",
+   "question": "Is there a makeup artist?",
+   "box": [
+    50,
+    100,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "actor_sitting",
+   "type": "entity",
+   "class": "actor",
+   "plural": "actors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second actor",
+   "question": "Is there a second actor?",
+   "box": [
+    150,
+    150,
+    300,
+    450
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror",
+   "question": "Is there a mirror?",
+   "box": [
+    200,
+    50,
+    350,
+    200
+   ]
+  },
+  {
+   "id": "stagehand",
+   "type": "entity",
+   "class": "stagehand",
+   "plural": "stagehands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stagehand wearing work gloves",
+   "question": "Is there a stagehand wearing work gloves?",
+   "box": [
+    400,
+    500,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    450,
+    600,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four chairs",
+   "question": "Are there four chairs?",
+   "box": [
+    400,
+    550,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "wardrobe_assistant",
+   "type": "entity",
+   "class": "assistant",
+   "plural": "assistants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wardrobe assistant",
+   "question": "Is there a wardrobe assistant?",
+   "box": [
+    850,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "rack",
+   "plural": "racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rack",
+   "question": "Is there a rack?",
+   "box": [
+    800,
+    650,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cart",
+   "question": "Is there a cart?",
+   "box": [
+    920,
+    650,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "actor_script",
+   "type": "attribute",
+   "of": "actor_rehearsing",
+   "desc": "the older experienced actor holds a script",
+   "question": "Is the older experienced actor holding a script?"
+  },
+  {
+   "id": "director_notes",
+   "type": "attribute",
+   "of": "director",
+   "desc": "the director holds notes",
+   "question": "Is the director holding notes?"
+  },
+  {
+   "id": "director_pointing",
+   "type": "action",
+   "of": [
+    "director",
+    "actor_rehearsing"
+   ],
+   "desc": "the director points at the older experienced actor",
+   "question": "Is the director pointing at the older experienced actor?"
+  },
+  {
+   "id": "tech_adjusting",
+   "type": "action",
+   "of": [
+    "lighting_tech",
+    "control_booth_bg"
+   ],
+   "desc": "the lighting technician adjusts spotlights from the control booth",
+   "question": "Is the lighting technician adjusting spotlights from the control booth?"
+  },
+  {
+   "id": "switches_count",
+   "type": "relation",
+   "of": [
+    "panel",
+    "actor_rehearsing"
+   ],
+   "desc": "the control panel has a number of switches equal to the actor's costume pieces plus two",
+   "question": "Does the control panel have a number of switches equal to the actor's costume pieces plus two?"
+  },
+  {
+   "id": "makeup_applying",
+   "type": "action",
+   "of": [
+    "makeup_artist",
+    "actor_sitting"
+   ],
+   "desc": "the makeup artist applies makeup to the second actor using brushes",
+   "question": "Is the makeup artist applying makeup to the second actor using brushes?"
+  },
+  {
+   "id": "artist_behind_actor",
+   "type": "relation",
+   "of": [
+    "makeup_artist",
+    "actor_sitting"
+   ],
+   "desc": "the makeup artist is behind the second actor",
+   "question": "Is the makeup artist behind the second actor?"
+  },
+  {
+   "id": "actor_in_front_mirror",
+   "type": "relation",
+   "of": [
+    "actor_sitting",
+    "mirror"
+   ],
+   "desc": "the second actor is in front of the mirror",
+   "question": "Is the second actor in front of the mirror?"
+  },
+  {
+   "id": "stagehand_moving",
+   "type": "action",
+   "of": [
+    "stagehand",
+    "table"
+   ],
+   "desc": "the stagehand moves props across the stage",
+   "question": "Is the stagehand moving props across the stage?"
+  },
+  {
+   "id": "chairs_around_table",
+   "type": "relation",
+   "of": [
+    "chairs",
+    "table"
+   ],
+   "desc": "the chairs are positioned around the table",
+   "question": "Are the chairs positioned around the table?"
+  },
+  {
+   "id": "assistant_hanging",
+   "type": "action",
+   "of": [
+    "wardrobe_assistant",
+    "rack"
+   ],
+   "desc": "the wardrobe assistant hangs costumes on the rack",
+   "question": "Is the wardrobe assistant hanging costumes on the rack?"
+  },
+  {
+   "id": "cart_next_to_rack",
+   "type": "relation",
+   "of": [
+    "cart",
+    "rack"
+   ],
+   "desc": "the cart is next to the rack",
+   "question": "Is the cart next to the rack?"
+  },
+  {
+   "id": "hats_count",
+   "type": "relation",
+   "of": [
+    "cart",
+    "rack"
+   ],
+   "desc": "the cart has a number of hats equal to half the number of wheels on the rack",
+   "question": "Does the cart have a number of hats equal to half the number of wheels on the rack?"
+  },
+  {
+   "id": "actor_rehearsing_state",
+   "type": "state",
+   "of": "actor_rehearsing",
+   "desc": "the older experienced actor is rehearsing on stage",
+   "question": "Is the older experienced actor rehearsing on stage?"
+  },
+  {
+   "id": "director_sitting",
+   "type": "state",
+   "of": "director",
+   "desc": "the director is sitting in the audience",
+   "question": "Is the director sitting in the audience?"
+  },
+  {
+   "id": "lighting_tech_location",
+   "type": "relation",
+   "of": [
+    "lighting_tech",
+    "control_booth_bg"
+   ],
+   "desc": "the lighting technician is in the control booth",
+   "question": "Is the lighting technician in the control booth?"
+  },
+  {
+   "id": "control_booth_position",
+   "type": "relation",
+   "of": [
+    "control_booth_bg",
+    "audience_area"
+   ],
+   "desc": "the control booth is positioned above the audience area",
+   "question": "Is the control booth positioned above the audience area?"
+  },
+  {
+   "id": "stagehand_wearing_gloves",
+   "type": "attribute",
+   "of": "stagehand",
+   "desc": "the stagehand wears work gloves",
+   "question": "Does the stagehand wear work gloves?"
+  },
+  {
+   "id": "rack_wheels_count",
+   "type": "attribute",
+   "of": "rack",
+   "desc": "the rack has four wheels",
+   "question": "Does the rack have four wheels?"
+  },
+  {
+   "id": "cart_hats_count",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the cart contains two hats",
+   "question": "Does the cart contain two hats?"
+  },
+  {
+   "id": "stage",
+   "type": "entity",
+   "class": "stage",
+   "plural": "stages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a theater stage",
+   "question": "Is there a theater stage?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "audience_area",
+   "type": "entity",
+   "class": "seating area",
+   "plural": "seating areas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an audience seating area",
+   "question": "Is there an audience seating area?",
+   "box": [
+    0,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "control_booth_bg",
+   "type": "entity",
+   "class": "control booth",
+   "plural": "control booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control booth positioned above the audience",
+   "question": "Is there a control booth positioned above the audience?",
+   "box": [
+    750,
+    50,
+    1000,
+    350
+   ]
+  },
+  {
+   "id": "dressing_room",
+   "type": "entity",
+   "class": "dressing room",
+   "plural": "dressing rooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dressing room with a mirror",
+   "question": "Is there a dressing room with a mirror?",
+   "box": [
+    800,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "actor_costume",
+   "type": "attribute",
+   "of": "actor_rehearsing",
+   "desc": "the older experienced actor wears a costume",
+   "question": "Is the older experienced actor wearing a costume?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "control_booth_bg",
+   "to": "panel",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "chairs",
+   "kind": "support"
+  },
+  {
+   "from": "rack",
+   "to": "wardrobe_assistant",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_024",
+ "prompt": "A theater with actors and crew. An actor is rehearsing on stage while holding a script and wearing a costume. A director is sitting in the audience, taking notes while pointing at the actor. The lead actor on stage appears older and more experienced than the lighting technician. A lighting technician is adjusting spotlights from a control booth positioned above the audience. The control booth contains a panel with a number of switches, and their number is two more than the number of the actor's costume pieces. A makeup artist is applying makeup to another actor in the dressing room using brushes. The makeup artist is standing behind the actor who is sitting in front of a mirror. A stagehand is moving props across the stage while wearing work gloves. The props include a table and four chairs positioned around it. A wardrobe assistant is hanging costumes on a rack backstage. The rack has four wheels. Next to it is a cart with a number of hats, which is half the number of wheels on the rack.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "control_booth",
+     "control_booth_bg"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for an oil painting portrait",
+   "question": "Does the image have a background suitable for an oil painting portrait?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    50,
+    100,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    574,
+    100,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a small bouquet of roses",
+   "question": "Is the bride holding a small bouquet of roses?"
+  },
+  {
+   "id": "groom_looks",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom looks at the bride",
+   "question": "Is the groom looking at the bride?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake",
+   "question": "Is there a cake visible in the image?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown is standing",
+   "question": "Is the bride in a white gown standing?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo is standing",
+   "question": "Is the groom in a black tuxedo standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0041",
+ "prompt": "In this oil painting, a bride in a white gown stands on the left side of the frame. A groom in a black tuxedo stands on the right side. The bride holds a small bouquet of roses. The groom looks at the bride. There is no cake visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

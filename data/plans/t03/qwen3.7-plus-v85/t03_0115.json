@@ -1,0 +1,225 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a workshop interior",
+   "question": "Does the image show a workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    380,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "wooden stool",
+   "plural": "wooden stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stool",
+   "question": "Is there a wooden stool?",
+   "box": [
+    420,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    300,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf",
+   "question": "Is there a shelf?",
+   "box": [
+    700,
+    450,
+    1000,
+    550
+   ]
+  },
+  {
+   "id": "woman_holding_bowl",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a wet clay bowl",
+   "question": "Is the woman in a blue apron holding a wet clay bowl?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair is sitting",
+   "question": "Is the man with gray hair sitting?"
+  },
+  {
+   "id": "man_watching",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man with gray hair watches the woman in a blue apron intently",
+   "question": "Is the man with gray hair watching the woman in a blue apron intently?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is resting",
+   "question": "Is the black cat resting?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "action",
+   "of": [
+    "cat",
+    "woman",
+    "man"
+   ],
+   "desc": "the black cat observes the scene involving the woman and the man",
+   "question": "Is the black cat observing the woman and the man?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron hands the clay bowl to the man with gray hair",
+   "question": "Is the woman in a blue apron handing the clay bowl to the man with gray hair?"
+  },
+  {
+   "id": "man_on_stool",
+   "type": "relation",
+   "of": [
+    "man",
+    "stool"
+   ],
+   "desc": "the man with gray hair sits on the wooden stool",
+   "question": "Is the man with gray hair sitting on the wooden stool?"
+  },
+  {
+   "id": "cat_on_shelf",
+   "type": "relation",
+   "of": [
+    "cat",
+    "shelf"
+   ],
+   "desc": "the black cat rests on the shelf",
+   "question": "Is the black cat resting on the shelf?"
+  },
+  {
+   "id": "no_wheel",
+   "type": "absent",
+   "desc": "an electric wheel",
+   "question": "Is there an electric wheel visible in the image?"
+  },
+  {
+   "id": "man_gray_hair",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man has gray hair",
+   "question": "Does the man have gray hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0115",
+ "prompt": "In this cinematic film still, a woman in a blue apron stands on the left, holding a wet clay bowl. In the center, a man with gray hair sits on a wooden stool, watching her intently. On the right, a black cat rests on a shelf, observing the scene. The woman is handing the clay bowl to the man. There is no electric wheel visible in the workshop.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

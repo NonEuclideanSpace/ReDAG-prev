@@ -1,0 +1,170 @@
+{
+ "style": "photorealistic product photography, high detail, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for product photography",
+   "question": "Is the background neutral and suitable for product photography?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "datapad",
+   "type": "entity",
+   "class": "datapad",
+   "plural": "datapads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a handheld sci-fi datapad",
+   "question": "Is there a handheld sci-fi datapad?",
+   "box": [
+    200,
+    200,
+    824,
+    824
+   ]
+  },
+  {
+   "id": "stylus",
+   "type": "entity",
+   "class": "stylus",
+   "plural": "styli",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metallic stylus",
+   "question": "Is there a metallic stylus?",
+   "box": [
+    750,
+    400,
+    850,
+    600
+   ]
+  },
+  {
+   "id": "datapad_screen_cracked",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad has a large rectangular touchscreen that is cracked",
+   "question": "Does the datapad have a large rectangular touchscreen that is cracked?"
+  },
+  {
+   "id": "datapad_screen_on",
+   "type": "state",
+   "of": "datapad",
+   "desc": "the datapad screen is on",
+   "question": "Is the datapad screen on?"
+  },
+  {
+   "id": "datapad_hologram",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad screen displays a glowing three-dimensional blue holographic star map",
+   "question": "Does the datapad screen display a glowing three-dimensional blue holographic star map?"
+  },
+  {
+   "id": "datapad_buttons",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad has several physical buttons below the screen",
+   "question": "Does the datapad have several physical buttons below the screen?"
+  },
+  {
+   "id": "stylus_ejected",
+   "type": "relation",
+   "of": [
+    "stylus",
+    "datapad"
+   ],
+   "desc": "the metallic stylus is partially ejected from its slot on the side of the datapad",
+   "question": "Is the metallic stylus partially ejected from its slot on the side of the datapad?"
+  },
+  {
+   "id": "datapad_ports",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad has two visible data ports",
+   "question": "Does the datapad have two visible data ports?"
+  },
+  {
+   "id": "datapad_port_charred",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "one of the datapad's data ports is visibly charred",
+   "question": "Is one of the datapad's data ports visibly charred?"
+  },
+  {
+   "id": "datapad_dusty",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad is dusty",
+   "question": "Is the datapad dusty?"
+  },
+  {
+   "id": "no_plastic_body",
+   "type": "absent",
+   "desc": "a plastic body on the datapad",
+   "question": "Is the body of the datapad made of plastic?"
+  },
+  {
+   "id": "datapad_screen_not_off",
+   "type": "absent",
+   "desc": "the datapad screen being off",
+   "question": "Is the datapad screen off?"
+  },
+  {
+   "id": "datapad_case_material",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad case is made of dark gray scratched metallic material",
+   "question": "Is the datapad case made of dark gray scratched metallic material?"
+  },
+  {
+   "id": "datapad_grips",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "the datapad has worn-out rubberized grips on the sides",
+   "question": "Does the datapad have worn-out rubberized grips on the sides?"
+  },
+  {
+   "id": "datapad_buttons_worn",
+   "type": "attribute",
+   "of": "datapad",
+   "desc": "some of the datapad's buttons have worn unreadable icons",
+   "question": "Do some of the datapad's buttons have worn unreadable icons?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_049",
+ "prompt": "A single, worn-out, handheld sci-fi datapad. Its case is made of a dark gray, scratched metallic material with some worn-out rubberized grips on the sides. The device has a large, rectangular touchscreen which is cracked. The screen is on and actively displaying a glowing, three-dimensional, blue holographic star map. There are several physical buttons below the screen, but some of them are so worn that their icons are unreadable. A single, metallic stylus is partially ejected from its slot on the side. The device has two visible data ports, one of which is visibly charred. The entire device is dusty. It is not brand new, its screen is not off, its body is not made of plastic.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node datapad: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

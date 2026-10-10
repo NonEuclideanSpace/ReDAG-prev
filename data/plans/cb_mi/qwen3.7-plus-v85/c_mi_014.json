@@ -1,0 +1,440 @@
+{
+ "style": "photorealistic, warm lighting, elegant interior",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an elegant concert hall with curved walls lined with acoustical panels, ornate chandeliers, balcony sections, and a control booth above the main floor",
+   "question": "Does the image show an elegant concert hall with curved walls, acoustical panels, chandeliers, balconies, and a control booth?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stage",
+   "type": "entity",
+   "class": "stage",
+   "plural": "stages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elevated stage",
+   "question": "Is there an elevated stage?",
+   "box": [
+    200,
+    400,
+    824,
+    600
+   ]
+  },
+  {
+   "id": "piano",
+   "type": "entity",
+   "class": "grand piano",
+   "plural": "grand pianos",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grand piano",
+   "question": "Is there a grand piano?",
+   "box": [
+    300,
+    450,
+    500,
+    580
+   ]
+  },
+  {
+   "id": "podium",
+   "type": "entity",
+   "class": "conductor's podium",
+   "plural": "conductor's podiums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conductor's podium with a music stand and baton holder",
+   "question": "Is there a conductor's podium with a music stand and baton holder?",
+   "box": [
+    550,
+    480,
+    650,
+    580
+   ]
+  },
+  {
+   "id": "musician_1",
+   "type": "entity",
+   "class": "orchestra musician",
+   "plural": "orchestra musicians",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an orchestra musician",
+   "question": "Is there an orchestra musician?",
+   "box": [
+    250,
+    500,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "musician_2",
+   "type": "entity",
+   "class": "orchestra musician",
+   "plural": "orchestra musicians",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second orchestra musician",
+   "question": "Is there a second orchestra musician?",
+   "box": [
+    700,
+    500,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "musician_3",
+   "type": "entity",
+   "class": "orchestra musician",
+   "plural": "orchestra musicians",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a third orchestra musician",
+   "question": "Is there a third orchestra musician?",
+   "box": [
+    400,
+    500,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "seats",
+   "type": "entity",
+   "class": "seat",
+   "plural": "seats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of red velvet seats",
+   "question": "Are there rows of red velvet seats?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "usher",
+   "type": "entity",
+   "class": "usher",
+   "plural": "ushers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an usher",
+   "question": "Is there an usher?",
+   "box": [
+    50,
+    700,
+    150,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "small table",
+   "plural": "small tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    850,
+    800,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "programs",
+   "type": "entity",
+   "class": "program",
+   "plural": "programs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "printed programs",
+   "question": "Are there printed programs?",
+   "box": [
+    860,
+    806,
+    940,
+    854
+   ]
+  },
+  {
+   "id": "exit_sign",
+   "type": "entity",
+   "class": "exit sign",
+   "plural": "exit signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lit emergency exit sign",
+   "question": "Is there a lit emergency exit sign?",
+   "box": [
+    100,
+    100,
+    200,
+    150
+   ]
+  },
+  {
+   "id": "musician_1_holding",
+   "type": "attribute",
+   "of": "musician_1",
+   "desc": "the orchestra musician holds a violin",
+   "question": "Is the orchestra musician holding a violin?"
+  },
+  {
+   "id": "musician_2_holding",
+   "type": "attribute",
+   "of": "musician_2",
+   "desc": "the second orchestra musician holds a cello",
+   "question": "Is the second orchestra musician holding a cello?"
+  },
+  {
+   "id": "musician_3_holding",
+   "type": "attribute",
+   "of": "musician_3",
+   "desc": "the third orchestra musician holds a brass instrument",
+   "question": "Is the third orchestra musician holding a brass instrument?"
+  },
+  {
+   "id": "usher_holding",
+   "type": "attribute",
+   "of": "usher",
+   "desc": "the usher holds a flashlight",
+   "question": "Is the usher holding a flashlight?"
+  },
+  {
+   "id": "musician_1_reading",
+   "type": "state",
+   "of": "musician_1",
+   "desc": "the orchestra musician is reading sheet music",
+   "question": "Is the orchestra musician reading sheet music?"
+  },
+  {
+   "id": "musician_2_reading",
+   "type": "state",
+   "of": "musician_2",
+   "desc": "the second orchestra musician is reading sheet music",
+   "question": "Is the second orchestra musician reading sheet music?"
+  },
+  {
+   "id": "musician_3_reading",
+   "type": "state",
+   "of": "musician_3",
+   "desc": "the third orchestra musician is reading sheet music",
+   "question": "Is the third orchestra musician reading sheet music?"
+  },
+  {
+   "id": "piano_on_stage",
+   "type": "relation",
+   "of": [
+    "piano",
+    "stage"
+   ],
+   "desc": "the grand piano is on the elevated stage",
+   "question": "Is the grand piano on the elevated stage?"
+  },
+  {
+   "id": "podium_on_stage",
+   "type": "relation",
+   "of": [
+    "podium",
+    "stage"
+   ],
+   "desc": "the conductor's podium is on the elevated stage",
+   "question": "Is the conductor's podium on the elevated stage?"
+  },
+  {
+   "id": "seats_face_stage",
+   "type": "relation",
+   "of": [
+    "seats",
+    "stage"
+   ],
+   "desc": "the red velvet seats face the elevated stage",
+   "question": "Do the red velvet seats face the elevated stage?"
+  },
+  {
+   "id": "table_near_entrance",
+   "type": "state",
+   "of": "table",
+   "desc": "the small table is near the entrance",
+   "question": "Is the small table near the entrance?"
+  },
+  {
+   "id": "programs_on_table",
+   "type": "relation",
+   "of": [
+    "programs",
+    "table"
+   ],
+   "desc": "the programs rest on the small table",
+   "question": "Do the programs rest on the small table?"
+  },
+  {
+   "id": "no_sports",
+   "type": "absent",
+   "desc": "sports equipment like basketballs or tennis rackets",
+   "question": "Are there any sports equipment like basketballs or tennis rackets in the image?"
+  },
+  {
+   "id": "no_kitchen",
+   "type": "absent",
+   "desc": "kitchen items such as pots or pans",
+   "question": "Are there any kitchen items such as pots or pans in the image?"
+  },
+  {
+   "id": "stage_lights",
+   "type": "entity",
+   "class": "stage light",
+   "plural": "stage lights",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright stage lights",
+   "question": "Are there bright stage lights visible?",
+   "box": [
+    100,
+    0,
+    924,
+    150
+   ]
+  },
+  {
+   "id": "acoustical_panels",
+   "type": "entity",
+   "class": "acoustical panel",
+   "plural": "acoustical panels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "acoustical panels lining the curved walls",
+   "question": "Are there acoustical panels lining the curved walls?",
+   "box": [
+    0,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "control_booth",
+   "type": "entity",
+   "class": "control booth",
+   "plural": "control booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control booth above the main floor",
+   "question": "Is there a control booth above the main floor?",
+   "box": [
+    400,
+    50,
+    624,
+    200
+   ]
+  },
+  {
+   "id": "sound_equipment",
+   "type": "entity",
+   "class": "sound mixing equipment",
+   "plural": "sound mixing equipment",
+   "count": 1,
+   "count_exact": false,
+   "desc": "sound mixing equipment",
+   "question": "Is there sound mixing equipment?",
+   "box": [
+    420,
+    80,
+    604,
+    180
+   ]
+  },
+  {
+   "id": "usher_state",
+   "type": "state",
+   "of": "usher",
+   "desc": "the usher is preparing flashlights",
+   "question": "Is the usher preparing flashlights?"
+  },
+  {
+   "id": "programs_location",
+   "type": "relation",
+   "of": [
+    "programs",
+    "table"
+   ],
+   "desc": "the programs rest on the small table near the entrance",
+   "question": "Are the programs resting on the small table near the entrance?"
+  },
+  {
+   "id": "sound_equipment_in_booth",
+   "type": "relation",
+   "of": [
+    "sound_equipment",
+    "control_booth"
+   ],
+   "desc": "the sound mixing equipment is in the control booth",
+   "question": "Is the sound mixing equipment in the control booth?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stage",
+   "to": "piano",
+   "kind": "support"
+  },
+  {
+   "from": "stage",
+   "to": "podium",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "programs",
+   "kind": "support"
+  },
+  {
+   "from": "control_booth",
+   "to": "sound_equipment",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_014",
+ "prompt": "An elegant concert hall during evening performance preparation, where rows of red velvet seats face an elevated stage adorned with a grand piano and music stands. Orchestra musicians tune their violins, cellos, and brass instruments while reading sheet music under bright stage lights. The conductor's podium stands prominently in center stage, equipped with a music stand and baton holder, while acoustical panels line the curved walls to enhance sound quality. Ornate chandeliers cast warm illumination throughout the venue, and balcony sections provide premium seating for distinguished guests. However, this refined musical environment excludes any sports equipment like basketballs or tennis rackets, maintaining its sophisticated atmosphere dedicated purely to classical performance rather than athletic activities. You won't find any kitchen items such as pots or pans either, preserving the hall's elegant character designed for artistic expression rather than culinary preparation. Sound mixing equipment operates from a control booth above the main floor, while emergency exit signs mark clearly lit pathways. Programs rest on small tables near the entrance, and ushers prepare flashlights for guiding late arrivals to their designated seats.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

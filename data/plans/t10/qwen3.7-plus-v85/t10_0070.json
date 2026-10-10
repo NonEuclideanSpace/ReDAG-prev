@@ -1,0 +1,436 @@
+{
+ "style": "cinematic film still, soft diffuse lighting, humid atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a humid botanical greenhouse with lush greenery and mist",
+   "question": "Does the image show a humid botanical greenhouse with lush greenery and mist?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a towering fern",
+   "question": "Is there a towering fern?",
+   "box": [
+    50,
+    100,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    100,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy",
+   "question": "Is there a young boy?",
+   "box": [
+    380,
+    300,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "terrarium",
+   "type": "entity",
+   "class": "terrarium",
+   "plural": "terrariums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass terrarium",
+   "question": "Is there a glass terrarium?",
+   "box": [
+    620,
+    400,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    450,
+    600,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tabby cat",
+   "question": "Is there a small tabby cat?",
+   "box": [
+    500,
+    620,
+    650,
+    780
+   ]
+  },
+  {
+   "id": "gardener",
+   "type": "entity",
+   "class": "gardener",
+   "plural": "gardeners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gardener wearing blue overalls",
+   "question": "Is there a gardener wearing blue overalls?",
+   "box": [
+    750,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "potting_station",
+   "type": "entity",
+   "class": "potting station",
+   "plural": "potting stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potting station",
+   "question": "Is there a potting station?",
+   "box": [
+    780,
+    500,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a denim jacket",
+   "question": "Is there a teenager wearing a denim jacket?",
+   "box": [
+    850,
+    350,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large parrot with vibrant red feathers",
+   "question": "Is there a large parrot with vibrant red feathers?",
+   "box": [
+    700,
+    50,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging vine",
+   "question": "Is there a hanging vine?",
+   "box": [
+    720,
+    0,
+    880,
+    250
+   ]
+  },
+  {
+   "id": "woman_hunched",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman is hunched",
+   "question": "Is the elderly woman hunched?"
+  },
+  {
+   "id": "woman_examining",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "fern"
+   ],
+   "desc": "the elderly woman examines the fern fronds",
+   "question": "Is the elderly woman examining the fern fronds?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "terrarium"
+   ],
+   "desc": "the boy points toward the terrarium with arm extended",
+   "question": "Is the boy pointing toward the terrarium with his arm fully extended?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting",
+   "question": "Is the cat sitting?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the cat watches the boy",
+   "question": "Is the cat watching the boy?"
+  },
+  {
+   "id": "gardener_kneeling",
+   "type": "state",
+   "of": "gardener",
+   "desc": "the gardener is kneeling",
+   "question": "Is the gardener kneeling?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "gardener",
+    "teenager"
+   ],
+   "desc": "the gardener hands a trowel to the teenager",
+   "question": "Is the gardener handing a trowel to the teenager?"
+  },
+  {
+   "id": "teenager_receiving",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager has hands outstretched to receive the tool",
+   "question": "Does the teenager have hands outstretched to receive the tool?"
+  },
+  {
+   "id": "parrot_perched",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "vine"
+   ],
+   "desc": "the parrot is perched on the vine",
+   "question": "Is the parrot perched on the hanging vine?"
+  },
+  {
+   "id": "parrot_observing",
+   "type": "action",
+   "of": [
+    "parrot",
+    "gardener",
+    "teenager"
+   ],
+   "desc": "the parrot observes the group below",
+   "question": "Is the parrot observing the gardener and teenager below?"
+  },
+  {
+   "id": "woman_beside_fern",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "fern"
+   ],
+   "desc": "the elderly woman stands beside the fern",
+   "question": "Is the elderly woman standing beside the fern?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the cat sits on the bench",
+   "question": "Is the cat sitting on the wooden bench?"
+  },
+  {
+   "id": "cat_next_to_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the cat is next to the boy",
+   "question": "Is the cat next to the boy?"
+  },
+  {
+   "id": "gardener_by_station",
+   "type": "relation",
+   "of": [
+    "gardener",
+    "potting_station"
+   ],
+   "desc": "the gardener kneels by the potting station",
+   "question": "Is the gardener kneeling by the potting station?"
+  },
+  {
+   "id": "teenager_near_gardener",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "gardener"
+   ],
+   "desc": "the teenager stands nearby the gardener",
+   "question": "Is the teenager standing nearby the gardener?"
+  },
+  {
+   "id": "parrot_behind_group",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "gardener",
+    "teenager"
+   ],
+   "desc": "the parrot is behind the gardener and teenager",
+   "question": "Is the parrot behind the gardener and teenager?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through the roof",
+   "question": "Is there sunlight streaming through the roof?"
+  },
+  {
+   "id": "elderly_woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a wide-brimmed straw hat is standing",
+   "question": "Is the elderly woman in a wide-brimmed straw hat standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a bright yellow raincoat is standing",
+   "question": "Is the young boy in a bright yellow raincoat standing?"
+  },
+  {
+   "id": "teenager_standing",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in a denim jacket is standing",
+   "question": "Is the teenager in a denim jacket standing?"
+  },
+  {
+   "id": "gardener_boots",
+   "type": "attribute",
+   "of": "gardener",
+   "desc": "muddy boots on the gardener",
+   "question": "Are the gardener's boots muddy?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is wrapped around its paws",
+   "question": "Is the cat's tail wrapped around its paws?"
+  },
+  {
+   "id": "woman_hat",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "a wide-brimmed straw hat on the elderly woman",
+   "question": "Is the elderly woman wearing a wide-brimmed straw hat?"
+  },
+  {
+   "id": "boy_raincoat",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "a bright yellow raincoat on the young boy",
+   "question": "Is the young boy wearing a bright yellow raincoat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "vine",
+   "to": "parrot",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0070",
+ "prompt": "In a cinematic film still set within a humid botanical greenhouse, the scene captures a quiet moment of discovery among lush greenery. On the left, an elderly woman in a wide-brimmed straw hat stands beside a towering fern, her posture slightly hunched as she examines the fronds. In the center, a young boy in a bright yellow raincoat points excitedly toward a glass terrarium, his arm fully extended to draw attention to the specimen inside. Next to him, a small tabby cat sits calmly on a wooden bench, its tail wrapped neatly around its paws while it watches the boy with mild curiosity. To the right, a gardener in blue overalls kneels by a potting station, carefully handing a trowel to a teenager in a denim jacket who stands nearby with hands outstretched to receive the tool. Behind them, a large parrot with vibrant red feathers perches on a hanging vine, observing the group below with keen interest. The air is thick with mist, blurring the background slightly, yet the six distinct figures remain sharp and clear. There is no sunlight streaming through the roof, keeping the illumination soft and diffuse throughout the space. The interaction between the gardener and the teenager highlights a moment of teaching, while the boy’s gesture connects him visually to the enclosed plant life. The elderly woman’s position anchors the left side of the frame, balancing the composition against the active pair on the right. Every element, from the wet leaves to the muddy boots of the gardener, contributes to the immersive atmosphere of this enclosed garden world.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

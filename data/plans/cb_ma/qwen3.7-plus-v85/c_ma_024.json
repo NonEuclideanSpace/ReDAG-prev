@@ -1,0 +1,174 @@
+{
+ "style": "photorealistic underwater photography, cinematic lighting, deep ocean atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a deep ocean trench environment with darkness",
+   "question": "Does the image show a deep ocean trench environment with darkness?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "submarine",
+   "type": "entity",
+   "class": "research submarine",
+   "plural": "research submarines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive cylindrical research submarine with a reinforced metallic hull",
+   "question": "Is there a massive cylindrical research submarine with a reinforced metallic hull?",
+   "box": [
+    100,
+    300,
+    924,
+    724
+   ]
+  },
+  {
+   "id": "dome",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the submarine has a transparent viewing dome made of thick clear material on its conning tower",
+   "question": "Does the submarine have a transparent viewing dome on its conning tower?"
+  },
+  {
+   "id": "floodlights",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "external floodlights casting bright white beams",
+   "question": "Does the submarine have external floodlights casting bright white beams?"
+  },
+  {
+   "id": "arms",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the submarine has five retractable mechanical arms extending from the forward section",
+   "question": "Does the submarine have five retractable mechanical arms extending from the forward section?"
+  },
+  {
+   "id": "portholes",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "numerous circular portholes with amber-tinted glass on the hull",
+   "question": "Does the submarine hull display numerous circular portholes with amber-tinted glass?"
+  },
+  {
+   "id": "thrusters",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "three large thrusters positioned at the stern",
+   "question": "Does the submarine have three large thrusters positioned at the stern?"
+  },
+  {
+   "id": "sonar_arrays",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "metallic sonar arrays protruding from various points along the hull like fins",
+   "question": "Does the submarine have metallic sonar arrays protruding from various points along the hull like fins?"
+  },
+  {
+   "id": "tiles",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "specialized textured tiles covering the vessel's surface",
+   "question": "Is the submarine's surface covered in specialized textured tiles?"
+  },
+  {
+   "id": "ballast_tanks",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "there are two emergency ballast tanks visible on either side of the submarine",
+   "question": "Are there two emergency ballast tanks visible on either side of the submarine?"
+  },
+  {
+   "id": "no_corrosion",
+   "type": "state",
+   "of": "submarine",
+   "desc": "the submarine shows no signs of corrosion",
+   "question": "Does the submarine show no signs of corrosion?"
+  },
+  {
+   "id": "submerged",
+   "type": "state",
+   "of": "submarine",
+   "desc": "the submarine is fully submerged",
+   "question": "Is the submarine fully submerged?"
+  },
+  {
+   "id": "creatures",
+   "type": "entity",
+   "class": "bioluminescent creature",
+   "plural": "bioluminescent creatures",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bioluminescent creatures",
+   "question": "Are there bioluminescent creatures in the image?",
+   "box": [
+    50,
+    50,
+    974,
+    974
+   ]
+  },
+  {
+   "id": "dome_material",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the viewing dome is made of thick clear material",
+   "question": "Is the viewing dome made of thick clear material?"
+  },
+  {
+   "id": "arm_instruments",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the mechanical arms are equipped with different scientific instruments and sample collection devices",
+   "question": "Are the mechanical arms equipped with scientific instruments and sample collection devices?"
+  },
+  {
+   "id": "tank_color",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the emergency ballast tanks are painted in bright orange",
+   "question": "Are the emergency ballast tanks painted in bright orange?"
+  },
+  {
+   "id": "hull_color",
+   "type": "attribute",
+   "of": "submarine",
+   "desc": "the hull is painted in camouflage patterns of dark blue and gray",
+   "question": "Is the hull painted in camouflage patterns of dark blue and gray?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_024",
+ "prompt": "A single massive underwater research submarine navigating through a deep ocean trench filled with bioluminescent creatures. The vessel is cylindrical with a reinforced metallic hull painted in camouflage patterns of dark blue and gray. Its conning tower features a transparent viewing dome made of thick clear material, while external floodlights cast bright white beams into the abyssal darkness. The submarine is not surfaced, remaining fully submerged in the deep ocean environment. Five retractable mechanical arms extend from the forward section, each equipped with different scientific instruments and sample collection devices. The hull displays numerous circular portholes with amber-tinted glass, and its propulsion system consists of three large thrusters positioned at the stern. Sonar arrays protrude from various points along the hull like metallic fins, while the vessel's surface is covered in specialized textured tiles. Two emergency ballast tanks are visible on either side, painted in bright orange for visibility. The submarine shows no signs of corrosion despite the harsh marine environment, and relies on advanced battery technology.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node submarine: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

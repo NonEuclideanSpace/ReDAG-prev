@@ -1,0 +1,139 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sandy court with textured sand",
+   "question": "Does the image show a sandy court with textured sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue shorts",
+   "question": "Is there a woman in blue shorts?",
+   "box": [
+    674,
+    300,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    462,
+    650,
+    562,
+    750
+   ]
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "woman_crouching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue shorts is crouching low",
+   "question": "Is the woman in blue shorts crouching low?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "volleyball"
+   ],
+   "desc": "the man in the red scarf is looking at the yellow volleyball",
+   "question": "Is the man in the red scarf looking at the yellow volleyball?"
+  },
+  {
+   "id": "woman_next_to_volleyball",
+   "type": "relation",
+   "of": [
+    "woman",
+    "volleyball"
+   ],
+   "desc": "the woman in blue shorts is next to the yellow volleyball",
+   "question": "Is the woman in blue shorts next to the yellow volleyball?"
+  },
+  {
+   "id": "volleyball_on_ground",
+   "type": "state",
+   "of": "volleyball",
+   "desc": "the yellow volleyball rests on the ground",
+   "question": "Does the yellow volleyball rest on the ground?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a net",
+   "question": "Is there a net visible in the image?"
+  },
+  {
+   "id": "volleyball_between",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman",
+    "volleyball"
+   ],
+   "desc": "the yellow volleyball is centered between the man in the red scarf and the woman in blue shorts",
+   "question": "Is the yellow volleyball centered between the man in the red scarf and the woman in blue shorts?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0000",
+ "prompt": "In a pencil sketch with light color wash, a man in a red scarf stands on the left side of the sandy court. A woman in blue shorts crouches low on the right side, ready to receive. Centered between them rests a yellow volleyball on the ground. The man in the red scarf is looking at the yellow volleyball. The woman in blue shorts is next to the yellow volleyball. There is no net visible in the scene. The simple composition highlights the three distinct figures against the textured sand background without any additional distractions or complex background elements cluttering the view.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

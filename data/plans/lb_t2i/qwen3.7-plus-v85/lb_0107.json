@@ -1,0 +1,444 @@
+{
+ "style": "surreal photorealistic, dramatic lighting, stormy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a storm-scarred meadow with a low sun on the horizon casting elongated shadows",
+   "question": "Does the image show a storm-scarred meadow with a low sun on the horizon?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fire_truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck?",
+   "box": [
+    100,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crooked oak tree with gnarled branches",
+   "question": "Is there a crooked oak tree with gnarled branches?",
+   "box": [
+    500,
+    50,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fire truck ladder",
+   "question": "Is there a fire truck ladder?",
+   "box": [
+    550,
+    200,
+    750,
+    500
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a bright yellow raincoat",
+   "question": "Is there a child in a bright yellow raincoat?",
+   "box": [
+    50,
+    500,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow puddle",
+   "question": "Is there a shallow puddle?",
+   "box": [
+    20,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "tangerine",
+   "type": "entity",
+   "class": "tangerine",
+   "plural": "tangerines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tangerine emitting a faint citrus glow",
+   "question": "Is there a tangerine emitting a faint citrus glow?",
+   "box": [
+    400,
+    750,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bicycle",
+   "question": "Is there a rusted bicycle?",
+   "box": [
+    550,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "goose",
+   "type": "entity",
+   "class": "goose",
+   "plural": "geese",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white goose",
+   "question": "Is there a white goose?",
+   "box": [
+    800,
+    700,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "sunflowers",
+   "type": "entity",
+   "class": "sunflower",
+   "plural": "sunflowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "golden sunflowers",
+   "question": "Are there golden sunflowers?",
+   "box": [
+    750,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "stream",
+   "type": "entity",
+   "class": "stream",
+   "plural": "streams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nearby stream",
+   "question": "Is there a nearby stream?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "kites",
+   "type": "entity",
+   "class": "paper kite",
+   "plural": "paper kites",
+   "count": 2,
+   "count_exact": false,
+   "desc": "torn paper kites",
+   "question": "Are there torn paper kites?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "truck_on_side",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "the red fire truck is lying on its side",
+   "question": "Is the red fire truck lying on its side?"
+  },
+  {
+   "id": "truck_wheel_spinning",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "one massive wheel of the fire truck is spinning slowly in midair",
+   "question": "Is one massive wheel of the fire truck spinning slowly in midair?"
+  },
+  {
+   "id": "ladder_dangling",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the ladder is dangling awkwardly",
+   "question": "Is the ladder dangling awkwardly?"
+  },
+  {
+   "id": "ladder_wedged",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "oak_tree"
+   ],
+   "desc": "the ladder is wedged into a gnarled branch of the oak tree",
+   "question": "Is the ladder wedged into a gnarled branch of the oak tree?"
+  },
+  {
+   "id": "child_beside_truck",
+   "type": "relation",
+   "of": [
+    "child",
+    "fire_truck"
+   ],
+   "desc": "the child is beside the fire truck",
+   "question": "Is the child beside the fire truck?"
+  },
+  {
+   "id": "child_skipping_stone",
+   "type": "action",
+   "of": [
+    "child",
+    "puddle"
+   ],
+   "desc": "the child skips a stone across the puddle",
+   "question": "Is the child skipping a stone across the puddle?"
+  },
+  {
+   "id": "child_giggling",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is giggling",
+   "question": "Is the child giggling?"
+  },
+  {
+   "id": "child_boots_splashing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child's boots are splashing",
+   "question": "Are the child's boots splashing?"
+  },
+  {
+   "id": "tangerine_blocked_by_bike",
+   "type": "relation",
+   "of": [
+    "tangerine",
+    "bicycle"
+   ],
+   "desc": "the tangerine is blocked by the spokes of the bicycle",
+   "question": "Is the tangerine blocked by the spokes of the bicycle?"
+  },
+  {
+   "id": "moss_illuminated",
+   "type": "relation",
+   "of": [
+    "tangerine",
+    "bicycle"
+   ],
+   "desc": "the tangerine's glow illuminates moss and insects in the bicycle's frame",
+   "question": "Does the tangerine's glow illuminate moss and insects in the bicycle's frame?"
+  },
+  {
+   "id": "goose_in_sunflowers",
+   "type": "relation",
+   "of": [
+    "goose",
+    "sunflowers"
+   ],
+   "desc": "the goose ambles through the sunflowers",
+   "question": "Is the goose ambling through the sunflowers?"
+  },
+  {
+   "id": "sunflowers_nodding",
+   "type": "state",
+   "of": "sunflowers",
+   "desc": "some sunflowers are leaning forward and nodding",
+   "question": "Are some sunflowers leaning forward and nodding?"
+  },
+  {
+   "id": "kites_tangled",
+   "type": "relation",
+   "of": [
+    "kites",
+    "oak_tree"
+   ],
+   "desc": "some kites are tangled in the branches of the oak tree",
+   "question": "Are some kites tangled in the branches of the oak tree?"
+  },
+  {
+   "id": "kites_on_truck",
+   "type": "relation",
+   "of": [
+    "kites",
+    "fire_truck"
+   ],
+   "desc": "some kites are caught on the fire truck's antennas",
+   "question": "Are some kites caught on the fire truck's antennas?"
+  },
+  {
+   "id": "puddle_ripples",
+   "type": "state",
+   "of": "puddle",
+   "desc": "the puddle surface has ripples",
+   "question": "Does the puddle surface show ripples?"
+  },
+  {
+   "id": "tangerine_rolling",
+   "type": "state",
+   "of": "tangerine",
+   "desc": "the tangerine is rolling along the wet grass",
+   "question": "Is the tangerine rolling along the wet grass?"
+  },
+  {
+   "id": "kite_ribbons_fluttering",
+   "type": "state",
+   "of": "kites",
+   "desc": "the kite ribbons are fluttering",
+   "question": "Are the kite ribbons fluttering?"
+  },
+  {
+   "id": "truck_smudged",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the fire truck shell is smudged with earth and rainwater",
+   "question": "Is the fire truck shell smudged with earth and rainwater?"
+  },
+  {
+   "id": "child_boots",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears boots",
+   "question": "Does the child wear boots?"
+  },
+  {
+   "id": "stream_debris",
+   "type": "attribute",
+   "of": "stream",
+   "desc": "the stream carries fragments of plastic and autumn leaves",
+   "question": "Does the stream carry fragments of plastic and autumn leaves?"
+  },
+  {
+   "id": "windup_bird",
+   "type": "entity",
+   "class": "wind-up bird",
+   "plural": "wind-up birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken wind-up bird",
+   "question": "Is there a broken wind-up bird?",
+   "box": [
+    200,
+    750,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "bird_in_stream",
+   "type": "relation",
+   "of": [
+    "windup_bird",
+    "stream"
+   ],
+   "desc": "the broken wind-up bird is in the stream",
+   "question": "Is the broken wind-up bird in the stream?"
+  },
+  {
+   "id": "shadows_crossing_scene",
+   "type": "relation",
+   "of": [
+    "fire_truck",
+    "child",
+    "tangerine"
+   ],
+   "desc": "elongated shadows cross the child's boots, the truck's hood, and the tangerine",
+   "question": "Do elongated shadows cross the child's boots, the truck's hood, and the tangerine?"
+  },
+  {
+   "id": "kites_waterlogged",
+   "type": "attribute",
+   "of": "kites",
+   "desc": "the paper kites are waterlogged",
+   "question": "Are the paper kites waterlogged?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "oak_tree",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "fire_truck",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0107",
+ "prompt": "In the middle of a storm-scarred meadow, a red fire truck lies on its side, its once-gleaming shell now smudged with earth and rainwater, one massive wheel still spinning slowly in midair as if caught between inertia and gravity’s final claim. The ladder, once a symbol of rescue, now dangles awkwardly from a crooked oak tree, its rungs wedged into a gnarled branch that has, over the years, grown around the metal, blurring the boundary between tool and living thing. Beside the truck, a puddle stretches like a shallow mirror, its surface marred by the occasional skip of a stone—sent with cheerful precision by a child in a bright yellow raincoat, who giggles at the ripples they create, their boots splashing with each step. The child’s movements are synchronized with the rhythmic tapping of a tangerine rolling along the wet grass, its path momentarily blocked by the spokes of a rusted bicycle leaning against the truck’s rear door. The tangerine, wedged for a moment, begins to emit a faint citrus glow, illuminating a hidden network of moss and insects thriving in the shadows of the bike’s frame. In the distance, a white goose amble slowly through a patch of sunflowers, their golden petals trembling in the wind as if trying to listen to the soft crunch of the goose’s feet. Some of the flowers, leaning far forward, seem to whisper to the bird, their heads nodding in a way that suggests an exchange of secrets or shared memory. The sun, low on the horizon, casts elongated shadows that weave through the scene like tangled threads—crossing the child’s boots, skimming the fire truck’s hood, and stretching across the tangerine as it rolls free of the bicycle. A nearby stream, fed by the storm, trickles past the truck’s side, carrying with it fragments of plastic, autumn leaves, and a broken wind-up bird that still chirps softly, its motion now powered by the current. In the air, a flock of paper kites, torn and waterlogged, drifts aimlessly, some tangled in the branches of the oak, others caught on the fire truck’s antennas, their ribbons fluttering like nervous breaths. The scene pulses with a quiet, surreal energy, where time seems to slow just enough for each element to interact—briefly, beautifully, but without permanence—until the next rain comes and the world shifts once more.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 46,
+   "n_uncovered": 6,
+   "proposed": 5,
+   "ungrounded": 2,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  }
+ }
+}

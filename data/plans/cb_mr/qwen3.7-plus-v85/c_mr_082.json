@@ -1,0 +1,370 @@
+{
+ "style": "photorealistic museum interior",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a museum gallery with walls and a ceiling",
+   "question": "Does the image show a museum gallery with walls and a ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pedestal",
+   "question": "Is there a pedestal?",
+   "box": [
+    400,
+    500,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "statue",
+   "type": "entity",
+   "class": "marble statue",
+   "plural": "marble statues",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a classical marble statue",
+   "question": "Is there a classical marble statue?",
+   "box": [
+    430,
+    200,
+    594,
+    550
+   ]
+  },
+  {
+   "id": "painting",
+   "type": "entity",
+   "class": "abstract painting",
+   "plural": "abstract paintings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large abstract painting",
+   "question": "Is there a large abstract painting?",
+   "box": [
+    200,
+    100,
+    824,
+    450
+   ]
+  },
+  {
+   "id": "cameras",
+   "type": "entity",
+   "class": "security camera",
+   "plural": "security cameras",
+   "count": 8,
+   "count_exact": true,
+   "desc": "eight security cameras",
+   "question": "Are there eight security cameras?",
+   "box": [
+    100,
+    20,
+    924,
+    100
+   ]
+  },
+  {
+   "id": "visitor",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a visitor",
+   "question": "Is there a visitor?",
+   "box": [
+    150,
+    450,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard",
+   "question": "Is there a security guard?",
+   "box": [
+    650,
+    400,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    300,
+    750,
+    724,
+    950
+   ]
+  },
+  {
+   "id": "case",
+   "type": "entity",
+   "class": "display case",
+   "plural": "display cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a display case",
+   "question": "Is there a display case?",
+   "box": [
+    750,
+    500,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "vases",
+   "type": "entity",
+   "class": "red vase",
+   "plural": "red vases",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two red vases",
+   "question": "Are there two red vases?",
+   "box": [
+    780,
+    600,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "coins",
+   "type": "entity",
+   "class": "ancient coin",
+   "plural": "ancient coins",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six ancient coins",
+   "question": "Are there six ancient coins?",
+   "box": [
+    780,
+    760,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "plaque",
+   "type": "entity",
+   "class": "informational plaque",
+   "plural": "informational plaques",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an informational plaque",
+   "question": "Is there an informational plaque?",
+   "box": [
+    696,
+    550,
+    744,
+    650
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "state",
+   "of": "statue",
+   "desc": "the classical marble statue is illuminated by a spotlight",
+   "question": "Is the classical marble statue illuminated by a spotlight?"
+  },
+  {
+   "id": "cameras_on_ceiling",
+   "type": "state",
+   "of": "cameras",
+   "desc": "the security cameras are on the ceiling",
+   "question": "Are the security cameras on the ceiling?"
+  },
+  {
+   "id": "statue_on_pedestal",
+   "type": "relation",
+   "of": [
+    "statue",
+    "pedestal"
+   ],
+   "desc": "the classical marble statue is on the pedestal",
+   "question": "Is the classical marble statue on the pedestal?"
+  },
+  {
+   "id": "painting_behind_statue",
+   "type": "relation",
+   "of": [
+    "painting",
+    "statue"
+   ],
+   "desc": "the large abstract painting is behind the classical marble statue",
+   "question": "Is the large abstract painting behind the classical marble statue?"
+  },
+  {
+   "id": "painting_wider",
+   "type": "attribute",
+   "of": "painting",
+   "desc": "the large abstract painting is wider than the classical marble statue is tall",
+   "question": "Is the large abstract painting wider than the classical marble statue is tall?"
+  },
+  {
+   "id": "visitor_left_statue",
+   "type": "relation",
+   "of": [
+    "visitor",
+    "statue"
+   ],
+   "desc": "the visitor stands to the left of the classical marble statue",
+   "question": "Does the visitor stand to the left of the classical marble statue?"
+  },
+  {
+   "id": "statue_taller",
+   "type": "attribute",
+   "of": "statue",
+   "desc": "the classical marble statue is taller than the visitor",
+   "question": "Is the classical marble statue taller than the visitor?"
+  },
+  {
+   "id": "guard_between",
+   "type": "relation",
+   "of": [
+    "guard",
+    "statue",
+    "painting"
+   ],
+   "desc": "the security guard walks between the classical marble statue and the large abstract painting",
+   "question": "Does the security guard walk between the classical marble statue and the large abstract painting?"
+  },
+  {
+   "id": "bench_front_painting",
+   "type": "relation",
+   "of": [
+    "bench",
+    "painting"
+   ],
+   "desc": "the bench is positioned in front of the large abstract painting",
+   "question": "Is the bench positioned in front of the large abstract painting?"
+  },
+  {
+   "id": "case_right_statue",
+   "type": "relation",
+   "of": [
+    "case",
+    "statue"
+   ],
+   "desc": "the display case is to the right of the classical marble statue",
+   "question": "Is the display case to the right of the classical marble statue?"
+  },
+  {
+   "id": "vases_in_case",
+   "type": "relation",
+   "of": [
+    "vases",
+    "case"
+   ],
+   "desc": "the two red vases are inside the display case",
+   "question": "Are the two red vases inside the display case?"
+  },
+  {
+   "id": "coins_in_case",
+   "type": "relation",
+   "of": [
+    "coins",
+    "case"
+   ],
+   "desc": "the six ancient coins are inside the display case",
+   "question": "Are the six ancient coins inside the display case?"
+  },
+  {
+   "id": "plaque_next_case",
+   "type": "relation",
+   "of": [
+    "plaque",
+    "case"
+   ],
+   "desc": "the informational plaque is mounted next to the display case",
+   "question": "Is the informational plaque mounted next to the display case?"
+  },
+  {
+   "id": "bench_closer_painting",
+   "type": "relation",
+   "of": [
+    "bench",
+    "painting",
+    "statue"
+   ],
+   "desc": "the bench is closer to the large abstract painting than to the classical marble statue",
+   "question": "Is the bench closer to the large abstract painting than to the classical marble statue?"
+  },
+  {
+   "id": "visitor_stands",
+   "type": "state",
+   "of": "visitor",
+   "desc": "the visitor stands",
+   "question": "Is the visitor standing?"
+  },
+  {
+   "id": "guard_walks",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard walks",
+   "question": "Is the security guard walking?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pedestal",
+   "to": "statue",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_082",
+ "prompt": "A museum gallery with a classical marble statue on a pedestal in the center and a large, abstract painting hanging on the wall behind it. The painting is wider than the statue is tall. A spotlight shines down on the statue. On the ceiling, there are some security cameras, and their number is two more than the number of vases in the display case. A visitor stands to the left of the statue, and the statue is taller than the visitor. A security guard walks between the statue and the painting. A bench is positioned in front of the painting. To the right of the statue is a display case. Inside the display case are two red vases and some ancient coins; the number of ancient coins is three times the number of vases. An informational plaque is mounted next to the display case. The bench is closer to the painting than to the statue.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

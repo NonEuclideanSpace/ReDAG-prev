@@ -1,0 +1,279 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hat",
+   "question": "Is there a woman in a blue hat?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    380,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "silver tray",
+   "plural": "silver trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tray",
+   "question": "Is there a silver tray?",
+   "box": [
+    750,
+    550,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "table_right",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    700,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    750,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "seat_center",
+   "type": "entity",
+   "class": "seat",
+   "plural": "seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seat",
+   "question": "Is there a seat?",
+   "box": [
+    350,
+    400,
+    680,
+    700
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    850,
+    200,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "window_right",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    900,
+    50,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue hat is sitting",
+   "question": "Is the woman in the blue hat sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sleeping",
+   "question": "Is the brown dog sleeping?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the white apron is standing",
+   "question": "Is the waiter in the white apron standing?"
+  },
+  {
+   "id": "tray_gleaming",
+   "type": "attribute",
+   "of": "tray",
+   "desc": "the silver tray is gleaming",
+   "question": "Is the silver tray gleaming?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue hat is looking at the man in the red scarf",
+   "question": "Is the woman in the blue hat looking at the man in the red scarf?"
+  },
+  {
+   "id": "man_handing_menu",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is handing a menu to the woman in the blue hat",
+   "question": "Is the man in the red scarf handing a menu to the woman in the blue hat?"
+  },
+  {
+   "id": "tray_on_table",
+   "type": "relation",
+   "of": [
+    "tray",
+    "table_right"
+   ],
+   "desc": "the silver tray rests on the table on the right",
+   "question": "Is the silver tray resting on the table on the right?"
+  },
+  {
+   "id": "dog_under_seat",
+   "type": "relation",
+   "of": [
+    "dog",
+    "seat_center"
+   ],
+   "desc": "the brown dog lies under the seat in the center",
+   "question": "Is the brown dog lying under the seat in the center?"
+  },
+  {
+   "id": "waiter_near_window",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "window_right"
+   ],
+   "desc": "the waiter in the white apron stands near the window on the right",
+   "question": "Is the waiter in the white apron standing near the window on the right?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "a clock on the wall",
+   "question": "Is there a clock on the wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table_right",
+   "to": "tray",
+   "kind": "support"
+  },
+  {
+   "from": "seat_center",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0135",
+ "prompt": "In an oil painting of a train dining car, a woman in a blue hat sits on the left. A man in a red scarf stands in the center. A silver tray rests on the right table. A brown dog lies under the center seat. A waiter in white apron stands near the right window. The woman in the blue hat is looking at the man in the red scarf. The man in the red scarf is handing a menu to the woman in the blue hat. The brown dog is sleeping peacefully. The silver tray is gleaming brightly. The waiter in white apron is waiting patiently. There is no clock on the wall.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

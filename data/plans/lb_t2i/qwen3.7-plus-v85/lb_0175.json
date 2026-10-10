@@ -1,0 +1,568 @@
+{
+ "style": "surreal photorealism, high detail, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked sidewalk next to a curb with a gnarled willow tree and sun-warmed concrete",
+   "question": "Does the image show a cracked sidewalk next to a curb with a gnarled willow tree?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "soccer_ball",
+   "type": "entity",
+   "class": "soccer ball",
+   "plural": "soccer balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red soccer ball",
+   "question": "Is there a red soccer ball?",
+   "box": [
+    300,
+    600,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "bottle_stack",
+   "type": "entity",
+   "class": "plastic bottle",
+   "plural": "plastic bottles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of pale discarded plastic soda, water, and juice bottles",
+   "question": "Is there a stack of pale discarded plastic bottles?",
+   "box": [
+    500,
+    500,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "hoses",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tangle of garden hoses",
+   "question": "Is there a tangle of garden hoses?",
+   "box": [
+    700,
+    750,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "gnome",
+   "type": "entity",
+   "class": "garden gnome",
+   "plural": "garden gnomes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dented garden gnome",
+   "question": "Is there a dented garden gnome?",
+   "box": [
+    450,
+    650,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white dog",
+   "question": "Is there a small white dog?",
+   "box": [
+    100,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "shadow_figure",
+   "type": "entity",
+   "class": "figure",
+   "plural": "figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy figure made of dust and light",
+   "question": "Is there a shadowy figure made of dust and light?",
+   "box": [
+    350,
+    800,
+    500,
+    1024
+   ]
+  },
+  {
+   "id": "bird_feeder",
+   "type": "entity",
+   "class": "bird feeder",
+   "plural": "bird feeders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered bird feeder",
+   "question": "Is there a weathered bird feeder?",
+   "box": [
+    800,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small puddle reflecting an alternate street",
+   "question": "Is there a small puddle reflecting an alternate street?",
+   "box": [
+    600,
+    850,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "dandelion",
+   "type": "entity",
+   "class": "dandelion",
+   "plural": "dandelions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single dandelion",
+   "question": "Is there a single dandelion?",
+   "box": [
+    611,
+    836,
+    659,
+    884
+   ]
+  },
+  {
+   "id": "leaf",
+   "type": "entity",
+   "class": "willow leaf",
+   "plural": "willow leaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single willow leaf drifting down",
+   "question": "Is there a single willow leaf drifting down?",
+   "box": [
+    776,
+    350,
+    824,
+    400
+   ]
+  },
+  {
+   "id": "ball_rolling",
+   "type": "state",
+   "of": "soccer_ball",
+   "desc": "the red soccer ball is rolling",
+   "question": "Is the red soccer ball rolling?"
+  },
+  {
+   "id": "bottle_wobbling",
+   "type": "state",
+   "of": "bottle_stack",
+   "desc": "one bottle in the stack is wobbling",
+   "question": "Is one bottle in the stack wobbling?"
+  },
+  {
+   "id": "bottle_falling",
+   "type": "state",
+   "of": "bottle_stack",
+   "desc": "a soda bottle is tumbling over from the stack",
+   "question": "Is a soda bottle tumbling over from the stack?"
+  },
+  {
+   "id": "gnome_leaning",
+   "type": "state",
+   "of": "gnome",
+   "desc": "the garden gnome is leaning precariously",
+   "question": "Is the garden gnome leaning precariously?"
+  },
+  {
+   "id": "dog_pausing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small white dog is pausing mid-sniff",
+   "question": "Is the small white dog pausing mid-sniff?"
+  },
+  {
+   "id": "dog_barking",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small white dog is barking",
+   "question": "Is the small white dog barking?"
+  },
+  {
+   "id": "feeder_swaying",
+   "type": "state",
+   "of": "bird_feeder",
+   "desc": "the bird feeder is swaying gently",
+   "question": "Is the bird feeder swaying gently?"
+  },
+  {
+   "id": "figure_reaching",
+   "type": "state",
+   "of": "shadow_figure",
+   "desc": "the shadowy figure is reaching out",
+   "question": "Is the shadowy figure reaching out?"
+  },
+  {
+   "id": "ball_toward_figure",
+   "type": "relation",
+   "of": [
+    "soccer_ball",
+    "shadow_figure"
+   ],
+   "desc": "the red soccer ball is rolling toward the shadowy figure",
+   "question": "Is the red soccer ball rolling toward the shadowy figure?"
+  },
+  {
+   "id": "ball_brushes_bottle",
+   "type": "action",
+   "of": [
+    "soccer_ball",
+    "bottle_stack"
+   ],
+   "desc": "the red soccer ball brushes against the stack of bottles",
+   "question": "Is the red soccer ball brushing against the stack of bottles?"
+  },
+  {
+   "id": "bottle_knocks_hose",
+   "type": "action",
+   "of": [
+    "bottle_stack",
+    "hoses"
+   ],
+   "desc": "a falling bottle from the stack knocks into the tangle of hoses",
+   "question": "Is a falling bottle from the stack knocking into the tangle of hoses?"
+  },
+  {
+   "id": "dog_sniffs_gnome",
+   "type": "action",
+   "of": [
+    "dog",
+    "gnome"
+   ],
+   "desc": "the small white dog sniffs at the garden gnome",
+   "question": "Is the small white dog sniffing at the garden gnome?"
+  },
+  {
+   "id": "dog_barks_at_bike",
+   "type": "action",
+   "of": [
+    "dog",
+    "bicycle"
+   ],
+   "desc": "the small white dog barks at the bicycle",
+   "question": "Is the small white dog barking at the bicycle?"
+  },
+  {
+   "id": "bike_leans_tree",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "tree"
+   ],
+   "desc": "the bicycle leans against the willow tree trunk",
+   "question": "Does the bicycle lean against the willow tree trunk?"
+  },
+  {
+   "id": "bike_in_hoses",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "hoses"
+   ],
+   "desc": "the bicycle tire is wedged in the tangle of hoses",
+   "question": "Is the bicycle tire wedged in the tangle of hoses?"
+  },
+  {
+   "id": "leaf_touches_bike",
+   "type": "action",
+   "of": [
+    "leaf",
+    "bicycle"
+   ],
+   "desc": "the willow leaf brushes against the bicycle's handlebars",
+   "question": "Does the willow leaf brush against the bicycle's handlebars?"
+  },
+  {
+   "id": "figure_near_gnome",
+   "type": "relation",
+   "of": [
+    "shadow_figure",
+    "gnome"
+   ],
+   "desc": "the shadowy figure is near the garden gnome",
+   "question": "Is the shadowy figure near the garden gnome?"
+  },
+  {
+   "id": "seeds_on_puddle",
+   "type": "relation",
+   "of": [
+    "bird_feeder",
+    "puddle"
+   ],
+   "desc": "cracked seeds from the bird feeder spill onto the puddle",
+   "question": "Do cracked seeds from the bird feeder spill onto the puddle?"
+  },
+  {
+   "id": "dandelion_edge_puddle",
+   "type": "relation",
+   "of": [
+    "dandelion",
+    "puddle"
+   ],
+   "desc": "the dandelion is on the edge of the puddle",
+   "question": "Is the dandelion on the edge of the puddle?"
+  },
+  {
+   "id": "mirror_dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirrored counterpart of the small white dog",
+   "question": "Is there a mirrored counterpart of the small white dog visible in the puddle?",
+   "box": [
+    600,
+    850,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "mirror_tree",
+   "type": "entity",
+   "class": "willow tree",
+   "plural": "willow trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirrored willow tree blooming in unnatural hues",
+   "question": "Is there a mirrored willow tree blooming in unnatural hues visible in the puddle?",
+   "box": [
+    500,
+    800,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "mirror_street",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects a strange alternate street where everything is mirrored in scale and color",
+   "question": "Does the puddle reflect a strange alternate street where everything is mirrored in scale and color?"
+  },
+  {
+   "id": "dog_howling",
+   "type": "state",
+   "of": "mirror_dog",
+   "desc": "the mirrored dog lets out a synchronized howl",
+   "question": "Is the mirrored dog letting out a synchronized howl?"
+  },
+  {
+   "id": "figure_listening",
+   "type": "state",
+   "of": "shadow_figure",
+   "desc": "the shadowy figure leans in as if listening",
+   "question": "Is the shadowy figure leaning in as if listening?"
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "willow tree",
+   "plural": "willow trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled willow tree",
+   "question": "Is there a gnarled willow tree?",
+   "box": [
+    700,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "curb",
+   "type": "entity",
+   "class": "curb",
+   "plural": "curbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a curb",
+   "question": "Is there a curb?",
+   "box": [
+    0,
+    850,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "hoses_near_curb",
+   "type": "relation",
+   "of": [
+    "hoses",
+    "curb"
+   ],
+   "desc": "the tangle of garden hoses is near the curb",
+   "question": "Are the garden hoses near the curb?"
+  },
+  {
+   "id": "bottle_stack_leaning",
+   "type": "state",
+   "of": "bottle_stack",
+   "desc": "the stack of plastic bottles is leaning together",
+   "question": "Is the stack of plastic bottles leaning together?"
+  },
+  {
+   "id": "dog_near_gnome",
+   "type": "relation",
+   "of": [
+    "dog",
+    "gnome"
+   ],
+   "desc": "the small white dog is near the garden gnome",
+   "question": "Is the small white dog near the garden gnome?"
+  },
+  {
+   "id": "ball_scuffs",
+   "type": "attribute",
+   "of": "soccer_ball",
+   "desc": "the red soccer ball has scuff marks and shoe imprints",
+   "question": "Does the red soccer ball have scuff marks and shoe imprints?"
+  },
+  {
+   "id": "gnome_face",
+   "type": "attribute",
+   "of": "gnome",
+   "desc": "the dented garden gnome has a smeared painted face",
+   "question": "Does the dented garden gnome have a smeared painted face?"
+  },
+  {
+   "id": "dog_paws",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small white dog has dusty paws",
+   "question": "Does the small white dog have dusty paws?"
+  },
+  {
+   "id": "dog_ears",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small white dog has perked ears",
+   "question": "Does the small white dog have perked ears?"
+  },
+  {
+   "id": "bike_tire",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a deflated tire",
+   "question": "Does the bicycle have a deflated tire?"
+  },
+  {
+   "id": "bike_handlebars",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has rusted handlebars",
+   "question": "Does the bicycle have rusted handlebars?"
+  },
+  {
+   "id": "dandelion_seed",
+   "type": "attribute",
+   "of": "dandelion",
+   "desc": "the dandelion has its head nearly blown to seed",
+   "question": "Is the dandelion's head nearly blown to seed?"
+  },
+  {
+   "id": "figure_emerging",
+   "type": "state",
+   "of": "shadow_figure",
+   "desc": "the shadowy figure is emerging from the ground",
+   "question": "Is the shadowy figure emerging from the ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0175",
+ "prompt": "The red soccer ball, its surface worn with scuff marks and the faint imprints of a dozen different shoes, rolls slowly across the cracked sidewalk, its path interrupted by a precarious stack of discarded plastic bottles—soda, water, and juice containers, all bleached pale by the sun, leaning together in a delicate, almost sentient cluster. One bottle wobbles as the ball brushes against it, sending a chain reaction through the pile, until a final soda bottle tumbles over, knocking into a tangle of garden hoses coiled haphazardly near the curb. A small white dog, its paws dusty and ears perked with curiosity, pauses mid-sniff at the dented garden gnome, now leaning precariously after the disturbance, its painted face smeared with what looks suspiciously like yesterday’s rainwater and someone’s spilled tea. The dog whimpers, then turns to bark at a bicycle leaning against the gnarled trunk of a willow tree, its tire deflated and wedged in the very same tangle of hoses, as if the garden and the sidewalk had conspired to tie it in place. Above, a single leaf from the willow drifts down, brushing against the bike’s rusted handlebars before settling on a patch of sun-warmed concrete where a shadowy figure—part man, part shadow, indistinct yet oddly deliberate—begins to form, its edges bleeding into the cracks between the pavement. The figure appears to reach for the garden gnome, its hand materializing from the ground itself, fingers made of dust and light, as though the world were unraveling and remaking itself in real time. Nearby, a weathered bird feeder sways gently in the breeze, spilling cracked seeds onto a small puddle that has somehow become a perfect mirror, reflecting not the sky above but a strange alternate street where everything is mirrored in scale and color, the willow tree now blooming in unnatural hues and the dog’s twin pacing the mirrored curb with identical skepticism. A single dandelion, its head nearly blown to seed, teeters on the edge of the reflection, caught between worlds, and as the real dog barks, its mirrored counterpart lets out a synchronized howl, echoing in both dimensions. The ball, momentarily still, begins to roll again—not toward the garden, but toward the shadow figure, which seems to lean in as if listening to its silent message, its form shifting subtly, like a face being drawn into focus. The scene holds in a breathless balance, a collision of forgotten objects and quiet transformations, where the ordinary becomes extraordinary through proximity and the subtle alchemy of shared space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 50,
+   "n_uncovered": 4,
+   "proposed": 4,
+   "ungrounded": 2,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 2,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

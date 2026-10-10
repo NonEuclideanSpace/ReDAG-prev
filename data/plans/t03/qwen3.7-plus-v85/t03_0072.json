@@ -1,0 +1,141 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock scene with wooden planks",
+   "question": "Does the image depict a shipyard dock scene with wooden planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large wooden crate",
+   "question": "Is there a large wooden crate?",
+   "box": [
+    350,
+    400,
+    670,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman wearing blue overalls?",
+   "box": [
+    700,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a clipboard",
+   "question": "Is the man in the red scarf holding a clipboard?"
+  },
+  {
+   "id": "crate_on_planks",
+   "type": "state",
+   "of": "crate",
+   "desc": "the large wooden crate sits on the planks",
+   "question": "Is the large wooden crate sitting on the wooden planks?"
+  },
+  {
+   "id": "woman_points_crate",
+   "type": "action",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the woman in blue overalls points at the large wooden crate",
+   "question": "Is the woman in blue overalls pointing at the large wooden crate?"
+  },
+  {
+   "id": "man_looks_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf looks at the woman in blue overalls",
+   "question": "Is the man in the red scarf looking at the woman in blue overalls?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water in the background",
+   "question": "Is there any water visible in the background?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf stands",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "crate_sitting",
+   "type": "state",
+   "of": "crate",
+   "desc": "the large wooden crate sits",
+   "question": "Is the large wooden crate sitting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0072",
+ "prompt": "An oil painting depicts a shipyard dock scene. On the left stands a man in a red scarf, holding a clipboard firmly. In the center, a large wooden crate sits heavily on the planks. To the right, a woman in blue overalls points directly at the crate. The man in the red scarf looks intently at the woman in blue overalls. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

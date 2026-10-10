@@ -1,0 +1,216 @@
+{
+ "style": "fantasy digital art, magical atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "dark soil ground",
+   "question": "Is the ground dark soil?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old tree with white crystalline bark",
+   "question": "Is there an old tree with white crystalline bark?",
+   "box": [
+    200,
+    50,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "fruits",
+   "type": "entity",
+   "class": "fruit",
+   "plural": "fruits",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three large spherical fruits",
+   "question": "Are there exactly three large spherical fruits?",
+   "box": [
+    300,
+    200,
+    724,
+    600
+   ]
+  },
+  {
+   "id": "crystals",
+   "type": "entity",
+   "class": "crystal",
+   "plural": "crystals",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glowing crystals in the soil",
+   "question": "Are there glowing crystals in the soil?",
+   "box": [
+    250,
+    850,
+    774,
+    1000
+   ]
+  },
+  {
+   "id": "bark_material",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree's trunk and branches are made of white crystalline material",
+   "question": "Is the tree's trunk and branches made of white crystalline material?"
+  },
+  {
+   "id": "runes",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "ancient runes carved into the crystalline bark",
+   "question": "Are there ancient runes carved into the crystalline bark?"
+  },
+  {
+   "id": "runes_glowing",
+   "type": "state",
+   "of": "tree",
+   "desc": "the runes on the tree are glowing with faint blue light",
+   "question": "Are the runes on the tree glowing with faint blue light?"
+  },
+  {
+   "id": "leaves_material",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree's leaves are made of thin reflective metallic silver material",
+   "question": "Are the tree's leaves made of thin reflective metallic silver material?"
+  },
+  {
+   "id": "fruit_red",
+   "type": "attribute",
+   "of": "fruits",
+   "desc": "one of the fruits is red and glowing",
+   "question": "Is one of the fruits red?"
+  },
+  {
+   "id": "fruit_green",
+   "type": "attribute",
+   "of": "fruits",
+   "desc": "one of the fruits is green and glowing",
+   "question": "Is one of the fruits green?"
+  },
+  {
+   "id": "fruit_yellow",
+   "type": "attribute",
+   "of": "fruits",
+   "desc": "one of the fruits is yellow and glowing",
+   "question": "Is one of the fruits yellow?"
+  },
+  {
+   "id": "roots_intertwined",
+   "type": "relation",
+   "of": [
+    "tree",
+    "crystals"
+   ],
+   "desc": "the tree's thick roots are intertwined with the glowing crystals",
+   "question": "Are the tree's thick roots intertwined with the glowing crystals?"
+  },
+  {
+   "id": "branches_broken",
+   "type": "state",
+   "of": "tree",
+   "desc": "some of the tree's branches are broken",
+   "question": "Are some of the tree's branches broken?"
+  },
+  {
+   "id": "tree_worn",
+   "type": "state",
+   "of": "tree",
+   "desc": "the tree has a worn appearance",
+   "question": "Does the tree have a worn appearance?"
+  },
+  {
+   "id": "no_wood_bark",
+   "type": "absent",
+   "desc": "wooden bark",
+   "question": "Is there any wooden bark on the tree?"
+  },
+  {
+   "id": "no_green_leaves",
+   "type": "absent",
+   "desc": "green leaves",
+   "question": "Are there any green leaves on the tree?"
+  },
+  {
+   "id": "fruits_count",
+   "type": "attribute",
+   "of": "fruits",
+   "desc": "there are exactly three fruits",
+   "question": "Are there exactly three fruits?"
+  },
+  {
+   "id": "fruit_red_glow",
+   "type": "state",
+   "of": "fruits",
+   "desc": "the red fruit is glowing",
+   "question": "Is the red fruit glowing?"
+  },
+  {
+   "id": "fruit_green_glow",
+   "type": "state",
+   "of": "fruits",
+   "desc": "the green fruit is glowing",
+   "question": "Is the green fruit glowing?"
+  },
+  {
+   "id": "fruit_yellow_glow",
+   "type": "state",
+   "of": "fruits",
+   "desc": "the yellow fruit is glowing",
+   "question": "Is the yellow fruit glowing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "tree",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crystals",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_047",
+ "prompt": "A single, old-looking, magical tree. Its trunk and branches are made of a white, crystalline material, not wood. The entire crystalline bark has ancient runes carved into it, and all the runes are glowing with a faint blue light. The tree has many leaves, all of which are made of a thin, reflective, metallic silver material. The tree bears exactly three large, spherical fruits, and each one is a different glowing color: one is red, one is green, and one is yellow. Its roots are thick and visibly intertwined with glowing crystals in the dark soil below. Some of its branches are broken, and the entire tree has a worn appearance. This tree is not a normal terrestrial tree, its bark is not wooden, its leaves are not green.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

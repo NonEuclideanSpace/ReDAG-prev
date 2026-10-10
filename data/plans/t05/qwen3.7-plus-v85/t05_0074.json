@@ -1,0 +1,301 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm during harvest with golden fields",
+   "question": "Does the image show a farm during harvest?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    320,
+    220,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "sheaf",
+   "type": "entity",
+   "class": "wheat sheaf",
+   "plural": "wheat sheaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden wheat sheaf",
+   "question": "Is there a golden wheat sheaf?",
+   "box": [
+    560,
+    700,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    450,
+    550,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    660,
+    600,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older farmer in a straw hat",
+   "question": "Is there an older farmer in a straw hat?",
+   "box": [
+    800,
+    250,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "man_basket",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a basket",
+   "question": "Is the man in a red scarf holding a basket?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue overalls is pointing",
+   "question": "Is the woman in blue overalls pointing?"
+  },
+  {
+   "id": "sheaf_lying",
+   "type": "state",
+   "of": "sheaf",
+   "desc": "the golden wheat sheaf is lying on the ground",
+   "question": "Is the golden wheat sheaf lying on the ground?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat looks with curiosity",
+   "question": "Does the child in a yellow hat have a curious expression?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in blue overalls is next to the man in a red scarf",
+   "question": "Is the woman in blue overalls next to the man in a red scarf?"
+  },
+  {
+   "id": "woman_points_at_sheaf",
+   "type": "action",
+   "of": [
+    "woman",
+    "sheaf"
+   ],
+   "desc": "the woman in blue overalls points at the golden wheat sheaf",
+   "question": "Is the woman in blue overalls pointing at the golden wheat sheaf?"
+  },
+  {
+   "id": "dog_beside_crate",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crate"
+   ],
+   "desc": "the brown dog sits beside the wooden crate",
+   "question": "Is the brown dog sitting beside the wooden crate?"
+  },
+  {
+   "id": "child_looks_at_dog",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a yellow hat looks at the brown dog",
+   "question": "Is the child in a yellow hat looking at the brown dog?"
+  },
+  {
+   "id": "farmer_hands_apple",
+   "type": "action",
+   "of": [
+    "farmer",
+    "child"
+   ],
+   "desc": "the older farmer in a straw hat hands an apple to the child in a yellow hat",
+   "question": "Is the older farmer in a straw hat handing an apple to the child in a yellow hat?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the background?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several apples",
+   "question": "Are there several apples?",
+   "box": [
+    420,
+    670,
+    604,
+    830
+   ]
+  },
+  {
+   "id": "apples_in_crate",
+   "type": "relation",
+   "of": [
+    "apples",
+    "crate"
+   ],
+   "desc": "the apples are in the wooden crate",
+   "question": "Are the apples inside the wooden crate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "sheaf",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "apples",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0074",
+ "prompt": "In a photorealistic photo of a farm during harvest, a man in a red scarf stands on the left holding a basket. Next to him on the right, a woman in blue overalls points at a golden wheat sheaf lying on the ground. In the center, a brown dog sits calmly beside a wooden crate filled with apples. A child in a yellow hat looks at the dog with curiosity. An older farmer in a straw hat hands an apple to the child. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

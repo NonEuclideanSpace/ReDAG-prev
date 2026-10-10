@@ -1,0 +1,315 @@
+{
+ "style": "cinematic film still, cool dim twilight lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn with indistinct background",
+   "question": "Does the image show a quiet village market at dawn with an indistinct background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue shawl",
+   "question": "Is there an old woman in a blue shawl?",
+   "box": [
+    60,
+    300,
+    240,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    200,
+    550,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow shirt",
+   "question": "Is there a young boy in a yellow shirt?",
+   "box": [
+    400,
+    350,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright orange pumpkins",
+   "question": "Are there bright orange pumpkins?",
+   "box": [
+    600,
+    500,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    550,
+    600,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a green apron",
+   "question": "Is there a farmer in a green apron?",
+   "box": [
+    750,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a grey coat",
+   "question": "Is there a customer in a grey coat?",
+   "box": [
+    850,
+    320,
+    1000,
+    820
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman in a blue shawl is sitting",
+   "question": "Is the old woman in a blue shawl sitting?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog has its eyes closed in sleep",
+   "question": "Does the brown dog have its eyes closed in sleep?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a yellow shirt is pointing",
+   "question": "Is the young boy in a yellow shirt pointing?"
+  },
+  {
+   "id": "customer_reaching",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer in a grey coat reaches out with both hands",
+   "question": "Is the customer in a grey coat reaching out with both hands?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "old_woman",
+    "crate"
+   ],
+   "desc": "the old woman in a blue shawl sits on the wooden crate",
+   "question": "Is the old woman in a blue shawl sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "old_woman"
+   ],
+   "desc": "the brown dog is next to the old woman in a blue shawl",
+   "question": "Is the brown dog next to the old woman in a blue shawl?"
+  },
+  {
+   "id": "dog_head_on_knee",
+   "type": "relation",
+   "of": [
+    "dog",
+    "old_woman"
+   ],
+   "desc": "the brown dog rests its head on the knee of the old woman in a blue shawl",
+   "question": "Does the brown dog rest its head on the knee of the old woman in a blue shawl?"
+  },
+  {
+   "id": "pumpkins_on_table",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "table"
+   ],
+   "desc": "the stack of pumpkins is piled high on the table",
+   "question": "Is the stack of pumpkins piled high on the table?"
+  },
+  {
+   "id": "boy_points_at_pumpkins",
+   "type": "action",
+   "of": [
+    "boy",
+    "pumpkins"
+   ],
+   "desc": "the young boy in a yellow shirt points toward the stack of pumpkins",
+   "question": "Is the young boy in a yellow shirt pointing toward the stack of pumpkins?"
+  },
+  {
+   "id": "farmer_hands_jar",
+   "type": "action",
+   "of": [
+    "farmer",
+    "customer"
+   ],
+   "desc": "the farmer in a green apron hands a small clay jar to the customer in a grey coat",
+   "question": "Is the farmer in a green apron handing a small clay jar to the customer in a grey coat?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight breaking over the horizon",
+   "question": "Is there sunlight breaking over the horizon in the image?"
+  },
+  {
+   "id": "clay_jar",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer in a green apron holds a small clay jar",
+   "question": "Is the farmer in a green apron holding a small clay jar?"
+  },
+  {
+   "id": "customer_touching_jar",
+   "type": "action",
+   "of": [
+    "customer",
+    "farmer"
+   ],
+   "desc": "the customer in a grey coat touches the small clay jar held by the farmer",
+   "question": "Is the customer in a grey coat touching the small clay jar held by the farmer?"
+  },
+  {
+   "id": "pumpkins_rough",
+   "type": "attribute",
+   "of": "pumpkins",
+   "desc": "the pumpkins are rough-skinned",
+   "question": "Are the pumpkins rough-skinned?"
+  },
+  {
+   "id": "pumpkins_dusty",
+   "type": "attribute",
+   "of": "pumpkins",
+   "desc": "the pumpkins are dusty",
+   "question": "Are the pumpkins dusty?"
+  },
+  {
+   "id": "woman_slumped",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman in a blue shawl has a slumped posture",
+   "question": "Does the old woman in a blue shawl have a slumped posture?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "old_woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "pumpkins",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0094",
+ "prompt": "A cinematic film still captures a quiet village market at dawn. On the left, an old woman in a blue shawl sits on a wooden crate, her posture slumped with weariness. Next to her, a brown dog rests its head on her knee, eyes closed in sleep. In the center, a young boy in a yellow shirt points toward a stack of bright orange pumpkins piled high on a table. The pumpkins are rough-skinned and dusty from the morning air. To the right, a farmer in a green apron hands a small clay jar to a customer in a grey coat. The customer reaches out with both hands to receive the item, their fingers just touching the ceramic surface. There is no sunlight breaking over the horizon yet, leaving the scene in cool, dim twilight. The background remains indistinct, focusing attention solely on these five distinct figures and objects. The interaction between the farmer and the customer is gentle and deliberate, while the boy's gesture directs the viewer's eye across the frame. The dog's proximity to the woman suggests a deep bond, anchoring the left side of the composition with warmth amidst the chill.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

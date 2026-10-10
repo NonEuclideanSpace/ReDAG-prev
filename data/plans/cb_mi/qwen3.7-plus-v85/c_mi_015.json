@@ -1,0 +1,474 @@
+{
+ "style": "photorealistic, evening lighting, vibrant screen glow",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an internet café interior with rows of desks, air conditioning vents, and security lockers",
+   "question": "Does the image show an internet café interior with rows of desks, air conditioning vents, and security lockers?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "gamer_1",
+   "type": "entity",
+   "class": "gamer",
+   "plural": "gamers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a gamer wearing headphones",
+   "question": "Is there a gamer wearing headphones?",
+   "box": [
+    100,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "gamer_2",
+   "type": "entity",
+   "class": "gamer",
+   "plural": "gamers",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second gamer wearing headphones",
+   "question": "Is there a second gamer wearing headphones?",
+   "box": [
+    600,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "computer_1",
+   "type": "entity",
+   "class": "desktop computer",
+   "plural": "desktop computers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a desktop computer with a large monitor",
+   "question": "Is there a desktop computer with a large monitor?",
+   "box": [
+    150,
+    400,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "computer_2",
+   "type": "entity",
+   "class": "desktop computer",
+   "plural": "desktop computers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second desktop computer with a large monitor",
+   "question": "Is there a second desktop computer with a large monitor?",
+   "box": [
+    650,
+    400,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "keyboard_1",
+   "type": "entity",
+   "class": "mechanical keyboard",
+   "plural": "mechanical keyboards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a mechanical keyboard",
+   "question": "Is there a mechanical keyboard?",
+   "box": [
+    180,
+    700,
+    320,
+    780
+   ]
+  },
+  {
+   "id": "mouse_1",
+   "type": "entity",
+   "class": "gaming mouse",
+   "plural": "gaming mice",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a gaming mouse",
+   "question": "Is there a gaming mouse?",
+   "box": [
+    330,
+    720,
+    380,
+    770
+   ]
+  },
+  {
+   "id": "mousepad_1",
+   "type": "entity",
+   "class": "mouse pad",
+   "plural": "mouse pads",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a specialized mouse pad",
+   "question": "Is there a specialized mouse pad?",
+   "box": [
+    320,
+    710,
+    390,
+    780
+   ]
+  },
+  {
+   "id": "drinks_snacks",
+   "type": "entity",
+   "class": "energy drink",
+   "plural": "energy drinks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "energy drinks",
+   "question": "Are there energy drinks?",
+   "box": [
+    400,
+    700,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "chair_1",
+   "type": "entity",
+   "class": "gaming chair",
+   "plural": "gaming chairs",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an ergonomic gaming chair",
+   "question": "Is there an ergonomic gaming chair?",
+   "box": [
+    80,
+    500,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "cash_station",
+   "type": "entity",
+   "class": "payment station",
+   "plural": "payment stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cash payment station",
+   "question": "Is there a cash payment station?",
+   "box": [
+    900,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "cables",
+   "type": "entity",
+   "class": "network cables",
+   "plural": "network cables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "organized network cables",
+   "question": "Are there organized network cables?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "gamer_1_seated",
+   "type": "state",
+   "of": "gamer_1",
+   "desc": "the gamer wearing headphones is sitting",
+   "question": "Is the gamer wearing headphones sitting?"
+  },
+  {
+   "id": "gamer_2_seated",
+   "type": "state",
+   "of": "gamer_2",
+   "desc": "the second gamer wearing headphones is sitting",
+   "question": "Is the second gamer wearing headphones sitting?"
+  },
+  {
+   "id": "gamer_1_using_mouse",
+   "type": "action",
+   "of": [
+    "gamer_1",
+    "mouse_1"
+   ],
+   "desc": "the gamer wearing headphones uses the gaming mouse",
+   "question": "Is the gamer wearing headphones using the gaming mouse?"
+  },
+  {
+   "id": "gamer_1_on_chair",
+   "type": "relation",
+   "of": [
+    "gamer_1",
+    "chair_1"
+   ],
+   "desc": "the gamer wearing headphones sits on the gaming chair",
+   "question": "Is the gamer wearing headphones sitting on the gaming chair?"
+  },
+  {
+   "id": "monitor_1_in_front_gamer_1",
+   "type": "relation",
+   "of": [
+    "computer_1",
+    "gamer_1"
+   ],
+   "desc": "the desktop computer is in front of the gamer wearing headphones",
+   "question": "Is the desktop computer in front of the gamer wearing headphones?"
+  },
+  {
+   "id": "keyboard_1_on_desk",
+   "type": "state",
+   "of": "keyboard_1",
+   "desc": "the mechanical keyboard is on the desk surface",
+   "question": "Is the mechanical keyboard on the desk surface?"
+  },
+  {
+   "id": "mouse_1_on_pad",
+   "type": "relation",
+   "of": [
+    "mouse_1",
+    "mousepad_1"
+   ],
+   "desc": "the gaming mouse is on the specialized mouse pad",
+   "question": "Is the gaming mouse on the specialized mouse pad?"
+  },
+  {
+   "id": "items_on_desk",
+   "type": "state",
+   "of": "drinks_snacks",
+   "desc": "the energy drinks and snack packages are on the desk surface",
+   "question": "Are the energy drinks and snack packages on the desk surface?"
+  },
+  {
+   "id": "no_farming_tools",
+   "type": "absent",
+   "desc": "traditional farming tools like plows or harvesting equipment",
+   "question": "Are there any traditional farming tools like plows or harvesting equipment in the image?"
+  },
+  {
+   "id": "no_medical_equipment",
+   "type": "absent",
+   "desc": "medical diagnostic equipment such as MRI machines or X-ray devices",
+   "question": "Are there any medical diagnostic equipment such as MRI machines or X-ray devices in the image?"
+  },
+  {
+   "id": "gamer_1_competing",
+   "type": "state",
+   "of": "gamer_1",
+   "desc": "the gamer wearing headphones is competing",
+   "question": "Is the gamer wearing headphones competing?"
+  },
+  {
+   "id": "gamer_2_competing",
+   "type": "state",
+   "of": "gamer_2",
+   "desc": "the second gamer wearing headphones is competing",
+   "question": "Is the second gamer wearing headphones competing?"
+  },
+  {
+   "id": "gamer_2_computer",
+   "type": "relation",
+   "of": [
+    "computer_2",
+    "gamer_2"
+   ],
+   "desc": "the second desktop computer is in front of the second gamer",
+   "question": "Is the second desktop computer in front of the second gamer?"
+  },
+  {
+   "id": "gamer_2_chair",
+   "type": "entity",
+   "class": "gaming chair",
+   "plural": "gaming chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second ergonomic gaming chair",
+   "question": "Is there a second ergonomic gaming chair?",
+   "box": [
+    60,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "gamer_2_on_chair",
+   "type": "relation",
+   "of": [
+    "gamer_2",
+    "gamer_2_chair"
+   ],
+   "desc": "the second gamer sits on the second gaming chair",
+   "question": "Is the second gamer sitting on the second gaming chair?"
+  },
+  {
+   "id": "mousepad_2",
+   "type": "entity",
+   "class": "mouse pad",
+   "plural": "mouse pads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second specialized mouse pad",
+   "question": "Is there a second specialized mouse pad?",
+   "box": [
+    150,
+    750,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "mouse_2",
+   "type": "entity",
+   "class": "gaming mouse",
+   "plural": "gaming mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second gaming mouse",
+   "question": "Is there a second gaming mouse?",
+   "box": [
+    160,
+    760,
+    240,
+    840
+   ]
+  },
+  {
+   "id": "keyboard_2",
+   "type": "entity",
+   "class": "mechanical keyboard",
+   "plural": "mechanical keyboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second mechanical keyboard",
+   "question": "Is there a second mechanical keyboard?",
+   "box": [
+    50,
+    750,
+    150,
+    850
+   ]
+  },
+  {
+   "id": "gamer_2_using_mouse",
+   "type": "action",
+   "of": [
+    "gamer_2",
+    "mouse_2"
+   ],
+   "desc": "the second gamer uses the second gaming mouse",
+   "question": "Is the second gamer using the second gaming mouse?"
+  },
+  {
+   "id": "mouse_2_on_pad",
+   "type": "relation",
+   "of": [
+    "mouse_2",
+    "mousepad_2"
+   ],
+   "desc": "the second gaming mouse is on the second specialized mouse pad",
+   "question": "Is the second gaming mouse on the second specialized mouse pad?"
+  },
+  {
+   "id": "screen_1_graphics",
+   "type": "attribute",
+   "of": "computer_1",
+   "desc": "the monitor displays colorful game graphics",
+   "question": "Does the monitor display colorful game graphics?"
+  },
+  {
+   "id": "screen_2_graphics",
+   "type": "attribute",
+   "of": "computer_2",
+   "desc": "the second monitor displays colorful game graphics",
+   "question": "Does the second monitor display colorful game graphics?"
+  },
+  {
+   "id": "snacks",
+   "type": "entity",
+   "class": "snack package",
+   "plural": "snack packages",
+   "count": 2,
+   "count_exact": false,
+   "desc": "snack packages",
+   "question": "Are there snack packages?",
+   "box": [
+    380,
+    560,
+    520,
+    640
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "keyboard_1",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mousepad_1",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "drinks_snacks",
+   "kind": "support"
+  },
+  {
+   "from": "chair_1",
+   "to": "gamer_1",
+   "kind": "support"
+  },
+  {
+   "from": "gamer_2_chair",
+   "to": "gamer_2",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_015",
+ "prompt": "A bustling internet café during evening gaming sessions, where rows of desktop computers display colorful game screens while gamers wearing headphones compete in online tournaments. Mechanical keyboards click rapidly as players use gaming mice on specialized mouse pads, while energy drinks and snack packages accumulate on desk surfaces. Large monitors showcase high-resolution graphics, and gaming chairs provide ergonomic support during extended play sessions. However, this digital entertainment venue contains no traditional farming tools like plows or harvesting equipment, maintaining its urban technology focus rather than agricultural activities. You won't find any medical diagnostic equipment such as MRI machines or X-ray devices either, preserving the recreational atmosphere designed for gaming entertainment rather than healthcare services. Network cables organize connections while air conditioning maintains optimal temperatures, and cash payment stations process hourly gaming fees. And security lockers store personal belongings during intensive gaming competitions in this popular digital entertainment destination.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 12,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

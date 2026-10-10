@@ -1,0 +1,190 @@
+{
+ "style": "photorealistic fantasy, clear night, high contrast, magical lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a calm lake under a clear night sky",
+   "question": "Does the image show a calm lake under a clear night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "star",
+   "type": "entity",
+   "class": "crystal star",
+   "plural": "crystal stars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a solitary five-point crystal star",
+   "question": "Is there a solitary five-point crystal star?",
+   "box": [
+    362,
+    200,
+    662,
+    500
+   ]
+  },
+  {
+   "id": "star_hovering",
+   "type": "state",
+   "of": "star",
+   "desc": "the crystal star is hovering",
+   "question": "Is the crystal star hovering?"
+  },
+  {
+   "id": "star_prisms",
+   "type": "attribute",
+   "of": "star",
+   "desc": "the crystal star scatters rainbow prisms in all directions",
+   "question": "Does the crystal star scatter rainbow prisms in all directions?"
+  },
+  {
+   "id": "star_glow",
+   "type": "attribute",
+   "of": "star",
+   "desc": "the core of the crystal star radiates a bright cyan glow",
+   "question": "Does the core of the crystal star radiate a bright cyan glow?"
+  },
+  {
+   "id": "star_constellations",
+   "type": "attribute",
+   "of": "star",
+   "desc": "thin golden constellations are embossed on each facet of the crystal star",
+   "question": "Are thin golden constellations embossed on each facet of the crystal star?"
+  },
+  {
+   "id": "star_frost",
+   "type": "attribute",
+   "of": "star",
+   "desc": "a frost halo coats the upper surfaces of the crystal star",
+   "question": "Does a frost halo coat the upper surfaces of the crystal star?"
+  },
+  {
+   "id": "star_mist",
+   "type": "attribute",
+   "of": "star",
+   "desc": "milky mist curls around the lower points of the crystal star",
+   "question": "Does milky mist curl around the lower points of the crystal star?"
+  },
+  {
+   "id": "star_reflection_sky",
+   "type": "attribute",
+   "of": "star",
+   "desc": "the night sky reflects on the crystal star",
+   "question": "Does the night sky reflect on the crystal star?"
+  },
+  {
+   "id": "star_no_cracks",
+   "type": "absent",
+   "desc": "cracks on the crystal star",
+   "question": "Are there any cracks on the crystal star?"
+  },
+  {
+   "id": "star_no_wood",
+   "type": "absent",
+   "desc": "wooden pieces in the crystal star",
+   "question": "Are there any wooden pieces in the crystal star?"
+  },
+  {
+   "id": "star_no_black_spots",
+   "type": "absent",
+   "desc": "black spots on the crystal star",
+   "question": "Are there any black spots on the crystal star?"
+  },
+  {
+   "id": "mist",
+   "type": "entity",
+   "class": "mist",
+   "plural": "mists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "milky mist",
+   "question": "Is there milky mist?",
+   "box": [
+    400,
+    600,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "star_above_lake",
+   "type": "state",
+   "of": "star",
+   "desc": "the crystal star hovers above the calm lake",
+   "question": "Is the crystal star hovering above the calm lake?"
+  },
+  {
+   "id": "mist_around_star",
+   "type": "relation",
+   "of": [
+    "mist",
+    "star"
+   ],
+   "desc": "the milky mist curls around the lower points of the crystal star",
+   "question": "Does the milky mist curl around the lower points of the crystal star?"
+  },
+  {
+   "id": "galaxies",
+   "type": "entity",
+   "class": "galaxy",
+   "plural": "galaxies",
+   "count": 2,
+   "count_exact": false,
+   "desc": "distant galaxies in the night sky",
+   "question": "Are there distant galaxies visible in the night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "star_quartz",
+   "type": "attribute",
+   "of": "star",
+   "desc": "the crystal star is made of transparent quartz",
+   "question": "Is the crystal star made of transparent quartz?"
+  },
+  {
+   "id": "star_reflection_galaxies",
+   "type": "attribute",
+   "of": "star",
+   "desc": "distant galaxies reflect on the crystal star",
+   "question": "Do distant galaxies reflect on the crystal star?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_064",
+ "prompt": "Create an image of a solitary five-point crystal star hovering above a calm lake on a clear night. Forged from flawless transparent quartz, the faceted star scatters rainbow prisms in all directions. Its core radiates a bright cyan glow, while thin golden constellations are embossed on each facet. A frost halo coats the upper surfaces, and milky mist curls around the lower points. The night sky and distant galaxies reflect on both the star and the glass-smooth water. The star remains pristine—showing no cracks—and contains no wooden pieces or black spots.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

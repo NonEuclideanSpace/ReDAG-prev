@@ -1,0 +1,311 @@
+{
+ "style": "cinematic film still, precise clarity, wintry setting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image depict a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man",
+   "question": "Is there an old man?",
+   "box": [
+    380,
+    300,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    500,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "stone fountain",
+   "plural": "stone fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fountain",
+   "question": "Is there a stone fountain?",
+   "box": [
+    700,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    650,
+    350,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    780,
+    280,
+    880,
+    350
+   ]
+  },
+  {
+   "id": "woman_lantern",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a lantern",
+   "question": "Is the woman in the blue coat holding a lantern?"
+  },
+  {
+   "id": "woman_package",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a small package",
+   "question": "Is the woman in the blue coat holding a small package?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man is sitting",
+   "question": "Is the old man sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man leans back slightly",
+   "question": "Does the old man lean back slightly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_gazing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog gazes forward calmly",
+   "question": "Does the brown dog gaze forward calmly?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow hat is standing",
+   "question": "Is the child in the yellow hat standing?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is perched",
+   "question": "Is the black cat perched?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "action",
+   "of": [
+    "cat",
+    "child"
+   ],
+   "desc": "the black cat looks at the child in the yellow hat",
+   "question": "Is the black cat looking at the child in the yellow hat?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "old_man"
+   ],
+   "desc": "the woman in the blue coat hands the small package to the old man",
+   "question": "Is the woman in the blue coat handing a small package to the old man?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in the yellow hat points at the brown dog",
+   "question": "Is the child in the yellow hat pointing at the brown dog?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "old_man",
+    "bench"
+   ],
+   "desc": "the old man sits on the wooden bench",
+   "question": "Is the old man sitting on the wooden bench?"
+  },
+  {
+   "id": "dog_beside_fountain",
+   "type": "relation",
+   "of": [
+    "dog",
+    "fountain"
+   ],
+   "desc": "the brown dog is beside the stone fountain",
+   "question": "Is the brown dog beside the stone fountain?"
+  },
+  {
+   "id": "child_near_fountain",
+   "type": "relation",
+   "of": [
+    "child",
+    "fountain"
+   ],
+   "desc": "the child in the yellow hat is near the stone fountain",
+   "question": "Is the child in the yellow hat near the stone fountain?"
+  },
+  {
+   "id": "cat_on_fountain",
+   "type": "relation",
+   "of": [
+    "cat",
+    "fountain"
+   ],
+   "desc": "the black cat is atop the stone fountain's edge",
+   "question": "Is the black cat atop the stone fountain's edge?"
+  },
+  {
+   "id": "no_car",
+   "type": "absent",
+   "desc": "a car",
+   "question": "Is there a car visible in the image?"
+  },
+  {
+   "id": "cat_still",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat remains still",
+   "question": "Does the black cat appear still?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "old_man",
+   "kind": "support"
+  },
+  {
+   "from": "fountain",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0117",
+ "prompt": "In this cinematic film still, a snowy town square is depicted with precise clarity. On the left stands a woman in a blue coat holding a lantern. In the center sits an old man on a wooden bench. To the right waits a brown dog beside a stone fountain. A child in a yellow hat stands near the fountain, pointing at the dog. A black cat perches atop the fountain's edge, looking at the child. The woman in the blue coat is handing a small package to the old man on the bench. The brown dog is sitting next to the stone fountain. There is no car visible in the scene. The woman in the blue coat holds the lantern firmly. The old man on the bench leans back slightly. The child in the yellow hat gestures toward the animal. The black cat remains still on the stone structure. The brown dog gazes forward calmly. The scene captures these five distinct entities with their specific actions and positions clearly defined within the wintry setting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

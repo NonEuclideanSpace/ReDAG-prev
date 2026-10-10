@@ -1,0 +1,550 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a living room with a window and a corner",
+   "question": "Does the image show a living room with a window and a corner?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "couch",
+   "type": "entity",
+   "class": "couch",
+   "plural": "couches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a couch",
+   "question": "Is there a couch?",
+   "box": [
+    100,
+    400,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "father",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man",
+   "question": "Is there an older man?",
+   "box": [
+    150,
+    350,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "daughter",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl",
+   "question": "Is there a girl?",
+   "box": [
+    420,
+    380,
+    600,
+    720
+   ]
+  },
+  {
+   "id": "mother",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    200,
+    200,
+    500,
+    500
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dog",
+   "question": "Is there a dog?",
+   "box": [
+    300,
+    750,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    850,
+    300,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "coffee_table",
+   "type": "entity",
+   "class": "coffee table",
+   "plural": "coffee tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee table",
+   "question": "Is there a coffee table?",
+   "box": [
+    200,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "end_table",
+   "type": "entity",
+   "class": "end table",
+   "plural": "end tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an end table",
+   "question": "Is there an end table?",
+   "box": [
+    820,
+    500,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rug",
+   "question": "Is there a rug?",
+   "box": [
+    250,
+    800,
+    750,
+    1024
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a laundry basket",
+   "question": "Is there a laundry basket?",
+   "box": [
+    250,
+    450,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted plant",
+   "question": "Is there a potted plant?",
+   "box": [
+    50,
+    600,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "cushion",
+   "type": "entity",
+   "class": "cushion",
+   "plural": "cushions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cushion",
+   "question": "Is there a cushion?",
+   "box": [
+    840,
+    320,
+    990,
+    380
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "lamp",
+   "plural": "lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lamp",
+   "question": "Is there a lamp?",
+   "box": [
+    850,
+    420,
+    950,
+    550
+   ]
+  },
+  {
+   "id": "tv",
+   "type": "entity",
+   "class": "television",
+   "plural": "televisions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a television",
+   "question": "Is there a television?",
+   "box": [
+    300,
+    50,
+    600,
+    250
+   ]
+  },
+  {
+   "id": "remote",
+   "type": "attribute",
+   "of": "father",
+   "desc": "the older man holds a remote control",
+   "question": "Is the older man holding a remote control?"
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "daughter",
+   "desc": "the girl holds a thick hardcover book",
+   "question": "Is the girl holding a thick hardcover book?"
+  },
+  {
+   "id": "laundry",
+   "type": "relation",
+   "of": [
+    "mother",
+    "basket"
+   ],
+   "desc": "the woman handles laundry from the basket",
+   "question": "Is the woman handling laundry from the basket?"
+  },
+  {
+   "id": "toy_bone",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the dog chews on a toy bone",
+   "question": "Is the dog chewing on a toy bone?"
+  },
+  {
+   "id": "socks_count",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the basket contains three socks",
+   "question": "Are there exactly three socks in the basket?"
+  },
+  {
+   "id": "shirts_count",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the basket contains five shirts",
+   "question": "Are there exactly five shirts in the basket?"
+  },
+  {
+   "id": "magazine",
+   "type": "entity",
+   "class": "magazine",
+   "plural": "magazines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin magazine",
+   "question": "Is there a thin magazine?",
+   "box": [
+    400,
+    716,
+    500,
+    764
+   ]
+  },
+  {
+   "id": "father_sitting",
+   "type": "state",
+   "of": "father",
+   "desc": "the older man is sitting",
+   "question": "Is the older man sitting?"
+  },
+  {
+   "id": "daughter_sitting",
+   "type": "state",
+   "of": "daughter",
+   "desc": "the girl is sitting",
+   "question": "Is the girl sitting?"
+  },
+  {
+   "id": "mother_standing",
+   "type": "state",
+   "of": "mother",
+   "desc": "the woman is standing",
+   "question": "Is the woman standing?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is lying down",
+   "question": "Is the dog lying down?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sleeping",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "cat_facing_plant",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat faces the potted plant",
+   "question": "Does the cat face the potted plant?"
+  },
+  {
+   "id": "father_watching_tv",
+   "type": "action",
+   "of": [
+    "father",
+    "tv"
+   ],
+   "desc": "the older man watches the television",
+   "question": "Is the older man watching the television?"
+  },
+  {
+   "id": "daughter_next_to_father",
+   "type": "relation",
+   "of": [
+    "daughter",
+    "father"
+   ],
+   "desc": "the girl sits next to the older man",
+   "question": "Is the girl sitting next to the older man?"
+  },
+  {
+   "id": "mother_behind_couch",
+   "type": "relation",
+   "of": [
+    "mother",
+    "couch"
+   ],
+   "desc": "the woman stands behind the couch",
+   "question": "Is the woman standing behind the couch?"
+  },
+  {
+   "id": "magazine_on_table",
+   "type": "relation",
+   "of": [
+    "magazine",
+    "coffee_table"
+   ],
+   "desc": "the thin magazine lies on the coffee table",
+   "question": "Is the thin magazine lying on the coffee table?"
+  },
+  {
+   "id": "table_in_front_of_couch",
+   "type": "relation",
+   "of": [
+    "coffee_table",
+    "couch"
+   ],
+   "desc": "the coffee table is in front of the couch",
+   "question": "Is the coffee table in front of the couch?"
+  },
+  {
+   "id": "dog_on_rug",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rug"
+   ],
+   "desc": "the dog lies on the rug",
+   "question": "Is the dog lying on the rug?"
+  },
+  {
+   "id": "rug_in_front_of_couch",
+   "type": "relation",
+   "of": [
+    "rug",
+    "couch"
+   ],
+   "desc": "the rug is in front of the couch",
+   "question": "Is the rug in front of the couch?"
+  },
+  {
+   "id": "end_table_next_to_couch",
+   "type": "relation",
+   "of": [
+    "end_table",
+    "couch"
+   ],
+   "desc": "the end table is next to the couch",
+   "question": "Is the end table next to the couch?"
+  },
+  {
+   "id": "lamp_on_end_table",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "end_table"
+   ],
+   "desc": "the lamp is on the end table",
+   "question": "Is the lamp on the end table?"
+  },
+  {
+   "id": "plant_next_to_window",
+   "type": "state",
+   "of": "plant",
+   "desc": "the potted plant is next to the window",
+   "question": "Is the potted plant next to the window?"
+  },
+  {
+   "id": "cat_on_cushion",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cushion"
+   ],
+   "desc": "the cat sleeps on the cushion",
+   "question": "Is the cat sleeping on the cushion?"
+  },
+  {
+   "id": "cushion_on_windowsill",
+   "type": "state",
+   "of": "cushion",
+   "desc": "the cushion is on the windowsill",
+   "question": "Is the cushion on the windowsill?"
+  },
+  {
+   "id": "book_thicker_than_magazine",
+   "type": "relation",
+   "of": [
+    "daughter",
+    "magazine"
+   ],
+   "desc": "the book held by the girl is thicker than the magazine",
+   "question": "Is the book held by the girl thicker than the magazine?"
+  },
+  {
+   "id": "father_older_than_mother",
+   "type": "relation",
+   "of": [
+    "father",
+    "mother"
+   ],
+   "desc": "the older man appears older than the woman",
+   "question": "Does the older man appear older than the woman?"
+  },
+  {
+   "id": "pet_count",
+   "type": "relation",
+   "of": [
+    "dog",
+    "cat",
+    "father",
+    "mother",
+    "daughter"
+   ],
+   "desc": "the number of pets (dog and cat) is one less than the number of family members (father, mother, daughter)",
+   "question": "Are there exactly two pets and three family members?"
+  },
+  {
+   "id": "plant_on_floor",
+   "type": "state",
+   "of": "plant",
+   "desc": "the potted plant rests on the floor",
+   "question": "Is the potted plant resting on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "couch",
+   "to": "father",
+   "kind": "support"
+  },
+  {
+   "from": "couch",
+   "to": "daughter",
+   "kind": "support"
+  },
+  {
+   "from": "coffee_table",
+   "to": "magazine",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "end_table",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plant",
+   "kind": "support"
+  },
+  {
+   "from": "cushion",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_008",
+ "prompt": "A living room scene with a family relaxing. A father is sitting on a couch, holding a remote control and watching television. His daughter is sitting next to him, reading a thick hardcover book. A thin magazine lies on the coffee table in front of the couch; the book the daughter is reading is thicker than the magazine. A mother is standing behind the couch, folding laundry from a basket. The basket contains three socks, and the number of shirts is two more than the number of socks. A dog is lying on a rug in front of the couch, chewing on a toy bone. An end table with a lamp on it is positioned next to the couch. The father is older than the mother. In the corner, a potted plant rests on the floor next to a window. A cat is sleeping on a cushion on the windowsill, facing the potted plant. The number of pets is one less than the number of family members.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,389 @@
+{
+ "style": "photorealistic photo, sunlit",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop interior",
+   "question": "Does the image show a pottery workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pottery wheel",
+   "question": "Is there a pottery wheel?",
+   "box": [
+    360,
+    500,
+    660,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    380,
+    200,
+    640,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a grey vest",
+   "question": "Is there an elderly man in a grey vest?",
+   "box": [
+    100,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    700,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall vase",
+   "question": "Is there a tall vase?",
+   "box": [
+    850,
+    100,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "wooden shelf",
+   "plural": "wooden shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden shelf",
+   "question": "Is there a wooden shelf?",
+   "box": [
+    800,
+    350,
+    1024,
+    450
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "orange cat",
+   "plural": "orange cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    200,
+    600,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "towels",
+   "type": "entity",
+   "class": "stack of towels",
+   "plural": "stacks of towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of towels",
+   "question": "Is there a stack of towels?",
+   "box": [
+    180,
+    650,
+    370,
+    780
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "entity",
+   "class": "green watering can",
+   "plural": "green watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green watering can",
+   "question": "Is there a green watering can?",
+   "box": [
+    720,
+    800,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "clay",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman shapes wet clay",
+   "question": "Is the woman shaping wet clay?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is sitting",
+   "question": "Is the woman in a blue apron sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a grey vest is standing",
+   "question": "Is the elderly man in a grey vest standing?"
+  },
+  {
+   "id": "man_arms_crossed",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a grey vest has his arms crossed over his chest",
+   "question": "Does the elderly man in a grey vest have his arms crossed over his chest?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is sleeping curled into a tight ball",
+   "question": "Is the small orange cat sleeping curled into a tight ball?"
+  },
+  {
+   "id": "woman_at_wheel",
+   "type": "relation",
+   "of": [
+    "woman",
+    "wheel"
+   ],
+   "desc": "the woman in a blue apron sits at the pottery wheel",
+   "question": "Is the woman in a blue apron sitting at the pottery wheel?"
+  },
+  {
+   "id": "man_left_of_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the elderly man in a grey vest is to the left of the woman in a blue apron",
+   "question": "Is the elderly man in a grey vest to the left of the woman in a blue apron?"
+  },
+  {
+   "id": "boy_right",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the young boy in a striped shirt is on the right relative to the woman in a blue apron",
+   "question": "Is the young boy in a striped shirt on the right side of the image relative to the woman in a blue apron?"
+  },
+  {
+   "id": "vase_on_shelf",
+   "type": "relation",
+   "of": [
+    "vase",
+    "shelf"
+   ],
+   "desc": "the tall vase is on the wooden shelf",
+   "question": "Is the tall vase on the wooden shelf?"
+  },
+  {
+   "id": "cat_on_towels",
+   "type": "relation",
+   "of": [
+    "cat",
+    "towels"
+   ],
+   "desc": "the small orange cat is on the stack of towels",
+   "question": "Is the small orange cat on the stack of towels?"
+  },
+  {
+   "id": "towels_behind_woman",
+   "type": "relation",
+   "of": [
+    "towels",
+    "woman"
+   ],
+   "desc": "the stack of towels is behind the woman in a blue apron",
+   "question": "Is the stack of towels behind the woman in a blue apron?"
+  },
+  {
+   "id": "watering_can_next_to_boy",
+   "type": "relation",
+   "of": [
+    "watering_can",
+    "boy"
+   ],
+   "desc": "the green watering can is next to the young boy in a striped shirt",
+   "question": "Is the green watering can next to the young boy in a striped shirt?"
+  },
+  {
+   "id": "watering_can_on_floor",
+   "type": "state",
+   "of": "watering_can",
+   "desc": "the green watering can rests on the floor",
+   "question": "Is the green watering can resting on the floor?"
+  },
+  {
+   "id": "boy_points_vase",
+   "type": "action",
+   "of": [
+    "boy",
+    "vase"
+   ],
+   "desc": "the young boy in a striped shirt points at the tall vase",
+   "question": "Is the young boy in a striped shirt pointing at the tall vase?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron looks at the elderly man in a grey vest",
+   "question": "Is the woman in a blue apron looking at the elderly man in a grey vest?"
+  },
+  {
+   "id": "no_kiln",
+   "type": "absent",
+   "desc": "an electric kiln",
+   "question": "Is there an electric kiln visible in the background?"
+  },
+  {
+   "id": "woman_focused",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron has focused hands",
+   "question": "Does the woman in a blue apron have focused hands?"
+  },
+  {
+   "id": "man_watching",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man watches intently",
+   "question": "Is the elderly man watching intently?"
+  },
+  {
+   "id": "boy_eager",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy points eagerly",
+   "question": "Is the young boy pointing eagerly?"
+  },
+  {
+   "id": "vase_drying",
+   "type": "state",
+   "of": "vase",
+   "desc": "the tall vase is drying",
+   "question": "Is the tall vase drying?"
+  },
+  {
+   "id": "shelf_nearby_boy",
+   "type": "relation",
+   "of": [
+    "shelf",
+    "boy"
+   ],
+   "desc": "the wooden shelf is nearby the young boy in a striped shirt",
+   "question": "Is the wooden shelf nearby the young boy in a striped shirt?"
+  },
+  {
+   "id": "watering_can_spout",
+   "type": "attribute",
+   "of": "watering_can",
+   "desc": "the green watering can has its spout angled toward the wall",
+   "question": "Is the spout of the green watering can angled toward the wall?"
+  },
+  {
+   "id": "woman_apron",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue apron",
+   "question": "Does the woman wear a blue apron?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "shelf",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "towels",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0044",
+ "prompt": "In a photorealistic photo of a sunlit pottery workshop, a woman in a blue apron sits at the center wheel, shaping wet clay with focused hands. To her left, an elderly man in a grey vest stands watching intently, his arms crossed over his chest. On the right, a young boy in a striped shirt points eagerly at a tall vase drying on a wooden shelf nearby. A small orange cat sleeps peacefully on a stack of towels behind the woman, curled into a tight ball. Next to the boy, a green watering can rests on the floor, its spout angled toward the wall. The woman looks at the elderly man while smoothing the rim of her pot. The boy interacts with the scene by gesturing toward the finished ceramic piece. There is no electric kiln visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

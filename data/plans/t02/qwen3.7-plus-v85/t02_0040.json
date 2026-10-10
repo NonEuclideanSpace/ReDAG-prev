@@ -1,0 +1,128 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station bay interior",
+   "question": "Does the image show the interior of a fire station bay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian?",
+   "box": [
+    600,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_helmet",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a shiny brass helmet",
+   "question": "Is the firefighter holding a shiny brass helmet?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "firefighter_looking_at_dog",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter looks directly at the dalmatian",
+   "question": "Is the firefighter looking directly at the dalmatian?"
+  },
+  {
+   "id": "dalmatian_looking_at_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian looks back at the firefighter",
+   "question": "Is the dalmatian looking back at the firefighter?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the image?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0040",
+ "prompt": "In a pencil sketch with light color wash, a firefighter in yellow gear stands on the left side of the fire station bay. A dalmatian with black spots sits calmly on the right side. The firefighter is holding a shiny brass helmet in his hands. He is looking directly at the dog. The dog is looking back at the firefighter. There is no fire truck visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,517 @@
+{
+ "style": "surreal fantasy photography, twilight atmosphere, magical realism, high detail, cinematic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest at twilight with mossy ground",
+   "question": "Does the image show a forest at twilight with mossy ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "camping lantern",
+   "plural": "camping lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered camping lantern with a glass shield",
+   "question": "Is there a weathered camping lantern with a glass shield?",
+   "box": [
+    450,
+    400,
+    574,
+    600
+   ]
+  },
+  {
+   "id": "stone",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mossy stone",
+   "question": "Is there a mossy stone?",
+   "box": [
+    400,
+    550,
+    624,
+    700
+   ]
+  },
+  {
+   "id": "ferns",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "ferns with dew clinging to them",
+   "question": "Are there ferns with dew clinging to them?",
+   "box": [
+    350,
+    500,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "can",
+   "type": "entity",
+   "class": "tin can",
+   "plural": "tin cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-buried rusted tin can",
+   "question": "Is there a half-buried rusted tin can?",
+   "box": [
+    600,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "flowers",
+   "type": "entity",
+   "class": "wildflower",
+   "plural": "wildflowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a bouquet of wildflowers",
+   "question": "Is there a bouquet of wildflowers?",
+   "box": [
+    620,
+    600,
+    730,
+    750
+   ]
+  },
+  {
+   "id": "compass",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted compass",
+   "question": "Is there a rusted compass?",
+   "box": [
+    640,
+    640,
+    710,
+    710
+   ]
+  },
+  {
+   "id": "fish_school",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a school of translucent fish",
+   "question": "Are there translucent fish?",
+   "box": [
+    100,
+    700,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    500,
+    300,
+    550,
+    350
+   ]
+  },
+  {
+   "id": "leaves",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating leaves",
+   "question": "Are there floating leaves?",
+   "box": [
+    550,
+    800,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "lantern_on_stone",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "stone"
+   ],
+   "desc": "the lantern perches upon the stone",
+   "question": "Is the lantern perched upon the stone?"
+  },
+  {
+   "id": "ferns_around_lantern",
+   "type": "relation",
+   "of": [
+    "ferns",
+    "lantern"
+   ],
+   "desc": "the ferns curl around the base of the lantern",
+   "question": "Do the ferns curl around the base of the lantern?"
+  },
+  {
+   "id": "can_beside_lantern",
+   "type": "relation",
+   "of": [
+    "can",
+    "lantern"
+   ],
+   "desc": "the tin can is beside the lantern",
+   "question": "Is the tin can beside the lantern?"
+  },
+  {
+   "id": "flowers_in_can",
+   "type": "relation",
+   "of": [
+    "flowers",
+    "can"
+   ],
+   "desc": "the wildflowers are inside the tin can",
+   "question": "Are the wildflowers inside the tin can?"
+  },
+  {
+   "id": "compass_on_can",
+   "type": "relation",
+   "of": [
+    "compass",
+    "can"
+   ],
+   "desc": "the compass is above the lid of the tin can",
+   "question": "Is the compass positioned above the lid of the tin can?"
+  },
+  {
+   "id": "stems_toward_lantern",
+   "type": "relation",
+   "of": [
+    "flowers",
+    "lantern"
+   ],
+   "desc": "the flower stems bend toward the lantern",
+   "question": "Do the flower stems bend toward the lantern?"
+  },
+  {
+   "id": "fish_in_stream",
+   "type": "state",
+   "of": "fish_school",
+   "desc": "the fish are in the stream",
+   "question": "Are the fish in the stream?"
+  },
+  {
+   "id": "moth_near_lantern",
+   "type": "relation",
+   "of": [
+    "moth",
+    "lantern"
+   ],
+   "desc": "the moth flutters near the lantern",
+   "question": "Is the moth fluttering near the lantern?"
+  },
+  {
+   "id": "leaves_pushing_can",
+   "type": "action",
+   "of": [
+    "leaves",
+    "can"
+   ],
+   "desc": "the floating leaves push against the base of the can",
+   "question": "Are the floating leaves pushing against the base of the can?"
+  },
+  {
+   "id": "compass_spinning",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass needle is spinning",
+   "question": "Is the compass needle spinning?"
+  },
+  {
+   "id": "fish_staring",
+   "type": "state",
+   "of": "fish_school",
+   "desc": "one fish is pausing and staring back",
+   "question": "Is one of the fish pausing and staring back?"
+  },
+  {
+   "id": "flowers_wilting",
+   "type": "state",
+   "of": "flowers",
+   "desc": "the wildflowers are wilting at their tips",
+   "question": "Are the wildflowers wilting at their tips?"
+  },
+  {
+   "id": "can_rusted",
+   "type": "attribute",
+   "of": "can",
+   "desc": "the tin can has rust weeping down its sides",
+   "question": "Does the tin can have rust weeping down its sides?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "reflections",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "upside-down reflections of the canopy in the stream",
+   "question": "Are there upside-down reflections of the canopy in the stream?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "branches",
+   "type": "entity",
+   "class": "branch",
+   "plural": "branches",
+   "count": 2,
+   "count_exact": false,
+   "desc": "twisted branches",
+   "question": "Are there twisted branches?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "can_corroded",
+   "type": "attribute",
+   "of": "can",
+   "desc": "the tin can has corroded iron sides",
+   "question": "Does the tin can have corroded iron sides?"
+  },
+  {
+   "id": "fish_pausing",
+   "type": "state",
+   "of": "fish_school",
+   "desc": "one fish in the school is pausing",
+   "question": "Is one fish in the school pausing?"
+  },
+  {
+   "id": "fish_eye_reflecting",
+   "type": "attribute",
+   "of": "fish_school",
+   "desc": "the pausing fish's eye reflects the can's flowers",
+   "question": "Does the pausing fish's eye reflect the flowers in the can?"
+  },
+  {
+   "id": "drip_from_lantern",
+   "type": "state",
+   "of": "lantern",
+   "desc": "a drip falls from the lantern's glass shield",
+   "question": "Is a drip falling from the lantern's glass shield?"
+  },
+  {
+   "id": "drip_ripples",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the drip from the lantern sends ripples across the water",
+   "question": "Does the drip from the lantern send ripples across the water?"
+  },
+  {
+   "id": "leaves_disturbed",
+   "type": "state",
+   "of": "leaves",
+   "desc": "the floating leaves are disturbed by ripples",
+   "question": "Are the floating leaves disturbed by ripples?"
+  },
+  {
+   "id": "compass_faster",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass spins faster",
+   "question": "Is the compass spinning faster?"
+  },
+  {
+   "id": "moth_flight_shifts_compass",
+   "type": "action",
+   "of": [
+    "moth",
+    "compass"
+   ],
+   "desc": "the moth's flight shifts the direction of the compass's spin",
+   "question": "Does the moth's flight shift the direction of the compass's spin?"
+  },
+  {
+   "id": "patterns_on_moss",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth's wings refract glow into shifting patterns on the moss",
+   "question": "Do the moth's wings refract glow into shifting patterns on the moss?"
+  },
+  {
+   "id": "can_half_buried",
+   "type": "state",
+   "of": "can",
+   "desc": "the tin can is half-buried",
+   "question": "Is the tin can half-buried?"
+  },
+  {
+   "id": "can_teetering",
+   "type": "state",
+   "of": "can",
+   "desc": "the tin can teeters precariously",
+   "question": "Is the tin can teetering precariously?"
+  },
+  {
+   "id": "stream",
+   "type": "entity",
+   "class": "stream",
+   "plural": "streams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stream moving slowly like molasses",
+   "question": "Is there a stream moving slowly like molasses?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stream_beside_lantern",
+   "type": "relation",
+   "of": [
+    "stream",
+    "lantern"
+   ],
+   "desc": "the stream is beside the lantern",
+   "question": "Is the stream beside the lantern?"
+  },
+  {
+   "id": "trees_bg",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "trees with entwined branches",
+   "question": "Are there trees with entwined branches?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "lantern_amber",
+   "type": "attribute",
+   "of": "lantern",
+   "desc": "the lantern emits amber light",
+   "question": "Does the lantern emit amber light?"
+  },
+  {
+   "id": "moth_iridescent",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth has iridescent wings",
+   "question": "Does the moth have iridescent wings?"
+  },
+  {
+   "id": "no_man_made",
+   "type": "absent",
+   "desc": "other man-made structures",
+   "question": "Are there any other man-made structures visible?"
+  },
+  {
+   "id": "roots_skyward",
+   "type": "relation",
+   "of": [
+    "branches",
+    "trees_bg"
+   ],
+   "desc": "roots stretch skyward from the branches",
+   "question": "Do roots stretch skyward from the branches?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stone",
+   "to": "lantern",
+   "kind": "support"
+  },
+  {
+   "from": "can",
+   "to": "flowers",
+   "kind": "support"
+  },
+  {
+   "from": "can",
+   "to": "compass",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0462",
+ "prompt": "A hush of twilight blankets the forest floor as the flickering glow of the weathered camping lantern casts long, wavering shadows across the mossy stone it perches upon, its amber light catching the dew that clings to the ferns curling around its base. The stream beside it moves like molasses through a forest suspended in slow motion, each ripple distorting the reflections of the canopy above, which now dangles upside-down from a network of twisted branches, roots stretching skyward like skeletal fingers. Beside the lantern, the half-buried tin can teeters precariously, its iron sides corroded with rust that weeps like tears down the curves of its once-pristine form, now cradling a bouquet of wildflowers whose petals seem to pulse gently in rhythm with the lantern’s flicker. Their stems bend toward the light as if guided by some ancient, unseen pull, their stems coiling and spiraling into the air like tendrils of living fire. Above the can’s lid, the rusted compass spins with a mechanical grace, its needle trembling in circles as though lost in a storm that only it can perceive, the faint metallic creak of its movement blending into the rustle of unseen wings overhead. From the water, a school of translucent fish glides upstream, their scales catching and scattering the lantern’s light into constellations that dance across the moss and bark like a living aurora, and one of the fish, impossibly, pauses to stare back, its unblinking eye reflecting the can’s flowers in a mirrored infinity of color and light. The air is thick with the scent of wet earth and iron, and the occasional drip from the lantern’s glass shield sends ripples across the water’s surface that disturb the floating leaves, which in turn push against the can’s base, nudging it just enough that the compass spins faster, the rusted needle slicing the still air with a high, resonant whine. In the distance, the trees seem to lean toward one another, their branches entwined like old lovers, while from within their embrace, a single moth flutters, drawn by the lantern’s warmth, its wings shimmering with iridescent oils that refract the glow into shifting patterns on the moss below. Each step the moth takes in its erratic flight seems to shift the direction of the compass’s spin, though the two remain locked in a silent conversation that defies time and logic, as if they are two sides of the same ancient, forgotten equation. The wildflowers begin to wilt at their tips, petals curling like smoke in the lantern’s heat, yet their scent only grows stronger, curling into the air like a melody that the wind carries into the unseen depths of the forest, where something—perhaps a breath, perhaps a whisper—echoes back, stirring the water once more. The scene holds itself in perfect balance, a fragile alchemy of decay and bloom, movement and stillness, as if the forest has paused just long enough to watch the moment pass through the glass of its lantern’s fragile, flickering eye.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 50,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,308 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop interior",
+   "question": "Does the image show a pottery workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    50,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    320,
+    200,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "wooden stool",
+   "plural": "wooden stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stool",
+   "question": "Is there a wooden stool?",
+   "box": [
+    480,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man with gray hair",
+   "question": "Is there a man with gray hair?",
+   "box": [
+    460,
+    250,
+    620,
+    850
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench",
+   "question": "Is there a workbench?",
+   "box": [
+    650,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "clay vase",
+   "plural": "clay vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large clay vase",
+   "question": "Is there a large clay vase?",
+   "box": [
+    700,
+    350,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    860,
+    550,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    100,
+    100,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "woman_clay",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds wet clay",
+   "question": "Is the woman in a blue apron holding wet clay?"
+  },
+  {
+   "id": "man_tool",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man with gray hair holds a metal tool",
+   "question": "Is the man with gray hair holding a metal tool?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair is sitting",
+   "question": "Is the man with gray hair sitting?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sleeping curled up",
+   "question": "Is the black cat sleeping curled up?"
+  },
+  {
+   "id": "woman_wheel",
+   "type": "relation",
+   "of": [
+    "woman",
+    "wheel"
+   ],
+   "desc": "the woman in a blue apron stands beside the spinning pottery wheel",
+   "question": "Is the woman in a blue apron standing beside the spinning pottery wheel?"
+  },
+  {
+   "id": "man_stool",
+   "type": "relation",
+   "of": [
+    "man",
+    "stool"
+   ],
+   "desc": "the man with gray hair sits on the wooden stool",
+   "question": "Is the man with gray hair sitting on the wooden stool?"
+  },
+  {
+   "id": "vase_bench",
+   "type": "relation",
+   "of": [
+    "vase",
+    "workbench"
+   ],
+   "desc": "the large clay vase rests on the workbench",
+   "question": "Is the large clay vase resting on the workbench?"
+  },
+  {
+   "id": "cat_vase",
+   "type": "relation",
+   "of": [
+    "cat",
+    "vase"
+   ],
+   "desc": "the black cat is next to the large clay vase",
+   "question": "Is the black cat next to the large clay vase?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron looks at the man with gray hair",
+   "question": "Is the woman in a blue apron looking at the man with gray hair?"
+  },
+  {
+   "id": "child_points_vase",
+   "type": "action",
+   "of": [
+    "child",
+    "vase"
+   ],
+   "desc": "the child in a yellow shirt points toward the large clay vase",
+   "question": "Is the child in a yellow shirt pointing toward the large clay vase?"
+  },
+  {
+   "id": "child_watches",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow shirt watches intently",
+   "question": "Is the child in a yellow shirt watching intently?"
+  },
+  {
+   "id": "no_electric_light",
+   "type": "absent",
+   "desc": "electric lighting fixtures",
+   "question": "Are there any electric lighting fixtures visible in the room?"
+  },
+  {
+   "id": "woman_shaping",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is shaping the clay",
+   "question": "Is the woman in a blue apron shaping the clay with her hands?"
+  },
+  {
+   "id": "man_tool_loose",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair holds the tool loosely",
+   "question": "Is the man with gray hair holding the tool loosely?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0115",
+ "prompt": "A cinematic film still captures a pottery workshop scene. On the left, a woman in a blue apron stands beside a spinning wheel. In the center, a man with gray hair sits on a wooden stool. To his right, a large clay vase rests on a workbench. Next to the vase, a black cat sleeps curled up. In the background, a child in a yellow shirt watches intently. The woman is shaping wet clay with her hands. The man holds a metal tool loosely. The woman looks at the man while working. The child points toward the large clay vase. There is no electric lighting visible in the room.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

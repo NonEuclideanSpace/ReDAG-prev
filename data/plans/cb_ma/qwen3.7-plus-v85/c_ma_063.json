@@ -1,0 +1,199 @@
+{
+ "style": "photorealistic, dimly lit, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit library",
+   "question": "Does the image show a dimly lit library?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black square marble pedestal",
+   "question": "Is there a black square marble pedestal?",
+   "box": [
+    362,
+    700,
+    662,
+    950
+   ]
+  },
+  {
+   "id": "owl",
+   "type": "entity",
+   "class": "statue",
+   "plural": "statues",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass mechanical owl statue",
+   "question": "Is there a brass mechanical owl statue?",
+   "box": [
+    312,
+    300,
+    712,
+    750
+   ]
+  },
+  {
+   "id": "owl_gears",
+   "type": "attribute",
+   "of": "owl",
+   "desc": "rotating gears beneath translucent crystal panels on the chest of the brass mechanical owl statue",
+   "question": "Are there rotating gears beneath translucent crystal panels on the chest of the brass mechanical owl statue?"
+  },
+  {
+   "id": "owl_wings",
+   "type": "state",
+   "of": "owl",
+   "desc": "the wings of the brass mechanical owl statue are half-spread",
+   "question": "Are the wings of the brass mechanical owl statue half-spread?"
+  },
+  {
+   "id": "owl_eyes",
+   "type": "state",
+   "of": "owl",
+   "desc": "steady light shines from the eyes of the brass mechanical owl statue",
+   "question": "Does steady light shine from the eyes of the brass mechanical owl statue?"
+  },
+  {
+   "id": "owl_sapphire",
+   "type": "attribute",
+   "of": "owl",
+   "desc": "a round vivid-blue softly glowing sapphire on the forehead of the brass mechanical owl statue",
+   "question": "Is there a round vivid-blue softly glowing sapphire on the forehead of the brass mechanical owl statue?"
+  },
+  {
+   "id": "owl_steam",
+   "type": "state",
+   "of": "owl",
+   "desc": "wisps of white steam drifting from vents behind the wings of the brass mechanical owl statue",
+   "question": "Are wisps of white steam drifting from vents behind the wings of the brass mechanical owl statue?"
+  },
+  {
+   "id": "owl_dusty",
+   "type": "state",
+   "of": "owl",
+   "desc": "the brass mechanical owl statue is visibly dusty",
+   "question": "Is the brass mechanical owl statue visibly dusty?"
+  },
+  {
+   "id": "owl_no_rust",
+   "type": "absent",
+   "desc": "rust on the brass mechanical owl statue",
+   "question": "Is there any rust on the brass mechanical owl statue?"
+  },
+  {
+   "id": "owl_no_plastic",
+   "type": "absent",
+   "desc": "plastic components in the brass mechanical owl statue",
+   "question": "Are there any plastic components in the brass mechanical owl statue?"
+  },
+  {
+   "id": "no_red",
+   "type": "absent",
+   "desc": "red elements in the image",
+   "question": "Are there any red elements in the image?"
+  },
+  {
+   "id": "owl_on_pedestal",
+   "type": "relation",
+   "of": [
+    "owl",
+    "pedestal"
+   ],
+   "desc": "the brass mechanical owl statue is poised on the black square marble pedestal",
+   "question": "Is the brass mechanical owl statue poised on the black square marble pedestal?"
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dark wooden shelves",
+   "question": "Are there dark wooden shelves?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "aged books",
+   "question": "Are there aged books?",
+   "box": [
+    50,
+    100,
+    974,
+    550
+   ]
+  },
+  {
+   "id": "books_on_shelves",
+   "type": "relation",
+   "of": [
+    "books",
+    "shelves"
+   ],
+   "desc": "the aged books line the dark wooden shelves",
+   "question": "Do the aged books line the dark wooden shelves?"
+  },
+  {
+   "id": "owl_feathers",
+   "type": "attribute",
+   "of": "owl",
+   "desc": "the wings of the brass mechanical owl statue display silver filigree feathers",
+   "question": "Do the wings of the brass mechanical owl statue display silver filigree feathers?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pedestal",
+   "to": "owl",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_063",
+ "prompt": "Render a single brass mechanical owl statue poised on a black square marble pedestal in a dimly lit library. The owl’s polished brass surface gleams, revealing rotating gears beneath translucent crystal panels on its chest. Half-spread wings display silver filigree feathers, and steady light shines from its eyes. A round vivid-blue sapphire, softly glowing, adorns the owl’s forehead. Wisps of white steam drift from vents behind the wings. Scattered aged books line dark wooden shelves in the background. The statue is visibly dusty but shows no rust; it contains no plastic components and features no red elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

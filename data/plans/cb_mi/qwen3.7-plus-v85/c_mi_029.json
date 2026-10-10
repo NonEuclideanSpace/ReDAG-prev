@@ -1,0 +1,233 @@
+{
+ "style": "photorealistic architectural photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "spacious art museum galleries with pristine white walls, ornate gold-framed oil paintings, marble pedestals with sculptures, velvet ropes, information placards, museum maps, gift shop displays with art books and postcards, donation boxes, and emergency lighting",
+   "question": "Does the image show spacious art museum galleries with pristine white walls, ornate gold-framed oil paintings, marble pedestals with sculptures, velvet ropes, information placards, museum maps, gift shop displays with art books and postcards, donation boxes, and emergency lighting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "visitor_1",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a museum visitor wearing headphones",
+   "question": "Is there a museum visitor wearing headphones?",
+   "box": [
+    100,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "guard_1",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a security guard in uniform",
+   "question": "Is there a security guard in uniform?",
+   "box": [
+    700,
+    350,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "visitor_headphones",
+   "type": "attribute",
+   "of": "visitor_1",
+   "desc": "the visitor wears headphones connected to an audio guide",
+   "question": "Is the visitor wearing headphones connected to an audio guide?"
+  },
+  {
+   "id": "guard_monitoring",
+   "type": "state",
+   "of": "guard_1",
+   "desc": "the security guard is monitoring the artifacts",
+   "question": "Is the security guard monitoring the artifacts?"
+  },
+  {
+   "id": "no_kitchen",
+   "type": "absent",
+   "desc": "kitchen equipment like stoves",
+   "question": "Are there any kitchen equipment like stoves in the image?"
+  },
+  {
+   "id": "no_sports",
+   "type": "absent",
+   "desc": "sports equipment such as exercise bikes",
+   "question": "Are there any sports equipment such as exercise bikes in the image?"
+  },
+  {
+   "id": "visitor_2",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second museum visitor wearing headphones",
+   "question": "Is there a second museum visitor wearing headphones?",
+   "box": [
+    600,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "guard_2",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a second security guard in uniform",
+   "question": "Is there a second security guard in uniform?",
+   "box": [
+    100,
+    350,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "pedestal_1",
+   "type": "entity",
+   "class": "marble pedestal",
+   "plural": "marble pedestals",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a marble pedestal",
+   "question": "Is there a marble pedestal?",
+   "box": [
+    750,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "painting_1",
+   "type": "entity",
+   "class": "oil painting",
+   "plural": "oil paintings",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an oil painting in an ornate gold frame",
+   "question": "Is there an oil painting in an ornate gold frame?",
+   "box": [
+    100,
+    100,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "placard_1",
+   "type": "entity",
+   "class": "information placard",
+   "plural": "information placards",
+   "count": 1,
+   "count_exact": false,
+   "desc": "an information placard",
+   "question": "Is there an information placard?",
+   "box": [
+    420,
+    500,
+    520,
+    600
+   ]
+  },
+  {
+   "id": "map_1",
+   "type": "entity",
+   "class": "museum map",
+   "plural": "museum maps",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a museum map",
+   "question": "Is there a museum map?",
+   "box": [
+    550,
+    500,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "rope_1",
+   "type": "entity",
+   "class": "velvet rope",
+   "plural": "velvet ropes",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a velvet rope",
+   "question": "Is there a velvet rope?",
+   "box": [
+    0,
+    700,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "painting_on_wall",
+   "type": "state",
+   "of": "painting_1",
+   "desc": "the oil painting hangs on the wall",
+   "question": "Does the oil painting hang on the wall?"
+  },
+  {
+   "id": "no_dishwasher",
+   "type": "absent",
+   "desc": "dishwashers",
+   "question": "Are there any dishwashers in the image?"
+  },
+  {
+   "id": "no_dumbbells",
+   "type": "absent",
+   "desc": "dumbbells",
+   "question": "Are there any dumbbells in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "c_mi_029",
+ "prompt": "A prestigious art museum during weekend cultural visits, where oil paintings hang in ornate gold frames along pristine white walls while sculptures rest on marble pedestals throughout spacious galleries. Visitors wear headphones connected to audio guides while security guards monitor precious artifacts and priceless masterpieces. Velvet ropes establish viewing boundaries, and climate control systems maintain optimal temperature and humidity for artwork preservation. Information placards describe historical context while museum maps guide tourists through chronological exhibitions. However, this cultural institution excludes any kitchen equipment like stoves or dishwashers, maintaining its focus on artistic appreciation rather than food service beyond a small café area. You won't find any sports equipment such as exercise bikes or dumbbells either, preserving the contemplative atmosphere essential for art appreciation rather than physical activity. Gift shop displays offer art books and postcards while donation boxes support museum operations, and emergency lighting systems ensure visitor safety. Restoration workshops operate behind closed doors.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

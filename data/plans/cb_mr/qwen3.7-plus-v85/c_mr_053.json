@@ -1,0 +1,372 @@
+{
+ "style": "steampunk illustration, detailed, cluttered workshop",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered steampunk inventor's workshop",
+   "question": "Does the image show a cluttered steampunk inventor's workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "inventor",
+   "type": "entity",
+   "class": "inventor",
+   "plural": "inventors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a male inventor",
+   "question": "Is there a male inventor?",
+   "box": [
+    100,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "machine",
+   "type": "entity",
+   "class": "clockwork machine",
+   "plural": "clockwork machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a complex clockwork machine",
+   "question": "Is there a complex clockwork machine?",
+   "box": [
+    350,
+    50,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "automaton",
+   "type": "entity",
+   "class": "automaton",
+   "plural": "automatons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smaller caged brass automaton",
+   "question": "Is there a smaller caged brass automaton?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench with a vise attached to its edge and a rack",
+   "question": "Is there a workbench with a vise attached to its edge and a rack?",
+   "box": [
+    0,
+    700,
+    600,
+    1024
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "leather-bound notebook",
+   "plural": "leather-bound notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large leather-bound notebook",
+   "question": "Is there a large leather-bound notebook?",
+   "box": [
+    100,
+    750,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "test_tubes",
+   "type": "entity",
+   "class": "glass test tube",
+   "plural": "glass test tubes",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three glass test tubes in a rack",
+   "question": "Are there three glass test tubes in a rack?",
+   "box": [
+    420,
+    720,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "inventor_goggles",
+   "type": "attribute",
+   "of": "inventor",
+   "desc": "the male inventor has goggles on his forehead",
+   "question": "Does the male inventor have goggles on his forehead?"
+  },
+  {
+   "id": "inventor_belt",
+   "type": "attribute",
+   "of": "inventor",
+   "desc": "the male inventor's belt has two pouches",
+   "question": "Does the male inventor's belt have two pouches?"
+  },
+  {
+   "id": "machine_crank",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has a large brass crank on its side",
+   "question": "Does the clockwork machine have a large brass crank on its side?"
+  },
+  {
+   "id": "machine_gauge",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has a pressure gauge",
+   "question": "Does the clockwork machine have a pressure gauge?"
+  },
+  {
+   "id": "machine_lever",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has a small lever",
+   "question": "Does the clockwork machine have a small lever?"
+  },
+  {
+   "id": "machine_blueprints",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has unrolled blueprints on top held down by a heavy wrench",
+   "question": "Does the clockwork machine have unrolled blueprints on top held down by a heavy wrench?"
+  },
+  {
+   "id": "machine_gears",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has six visible gears",
+   "question": "Does the clockwork machine have six visible gears?"
+  },
+  {
+   "id": "automaton_oil_can",
+   "type": "attribute",
+   "of": "automaton",
+   "desc": "the caged brass automaton holds a tiny oil can",
+   "question": "Does the caged brass automaton hold a tiny oil can?"
+  },
+  {
+   "id": "automaton_cage",
+   "type": "attribute",
+   "of": "automaton",
+   "desc": "the brass automaton is inside a cage",
+   "question": "Is the brass automaton inside a cage?"
+  },
+  {
+   "id": "workbench_vise",
+   "type": "attribute",
+   "of": "workbench",
+   "desc": "the workbench has a vise attached to its edge",
+   "question": "Does the workbench have a vise attached to its edge?"
+  },
+  {
+   "id": "notebook_open",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the leather-bound notebook is open",
+   "question": "Is the leather-bound notebook open?"
+  },
+  {
+   "id": "inventor_turning_crank",
+   "type": "action",
+   "of": [
+    "inventor",
+    "machine"
+   ],
+   "desc": "the male inventor is turning the large brass crank on the clockwork machine",
+   "question": "Is the male inventor turning the large brass crank on the clockwork machine?"
+  },
+  {
+   "id": "inventor_pushing_lever",
+   "type": "action",
+   "of": [
+    "inventor",
+    "machine"
+   ],
+   "desc": "the male inventor is pushing the small lever on the clockwork machine with his other hand",
+   "question": "Is the male inventor pushing the small lever on the clockwork machine with his other hand?"
+  },
+  {
+   "id": "automaton_pointing",
+   "type": "action",
+   "of": [
+    "automaton",
+    "machine"
+   ],
+   "desc": "the caged brass automaton is pointing the tiny oil can at a gear on the outside of its own cage",
+   "question": "Is the caged brass automaton pointing the tiny oil can at a gear on the outside of its own cage?"
+  },
+  {
+   "id": "inventor_looking_gauge",
+   "type": "action",
+   "of": [
+    "inventor",
+    "machine"
+   ],
+   "desc": "the male inventor is looking at the pressure gauge on the clockwork machine",
+   "question": "Is the male inventor looking at the pressure gauge on the clockwork machine?"
+  },
+  {
+   "id": "automaton_looking_inventor",
+   "type": "action",
+   "of": [
+    "automaton",
+    "inventor"
+   ],
+   "desc": "the caged brass automaton is looking at the male inventor",
+   "question": "Is the caged brass automaton looking at the male inventor?"
+  },
+  {
+   "id": "machine_larger_automaton",
+   "type": "relation",
+   "of": [
+    "machine",
+    "automaton"
+   ],
+   "desc": "the clockwork machine is much larger than the caged brass automaton",
+   "question": "Is the clockwork machine much larger than the caged brass automaton?"
+  },
+  {
+   "id": "automaton_next_to_machine",
+   "type": "relation",
+   "of": [
+    "automaton",
+    "machine"
+   ],
+   "desc": "the caged brass automaton is next to the clockwork machine",
+   "question": "Is the caged brass automaton next to the clockwork machine?"
+  },
+  {
+   "id": "notebook_on_workbench",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "workbench"
+   ],
+   "desc": "the leather-bound notebook lies open on the workbench",
+   "question": "Does the leather-bound notebook lie open on the workbench?"
+  },
+  {
+   "id": "workbench_in_front_inventor",
+   "type": "relation",
+   "of": [
+    "workbench",
+    "inventor"
+   ],
+   "desc": "the workbench is in front of the male inventor",
+   "question": "Is the workbench in front of the male inventor?"
+  },
+  {
+   "id": "test_tubes_right_notebook",
+   "type": "relation",
+   "of": [
+    "test_tubes",
+    "notebook"
+   ],
+   "desc": "the three glass test tubes are to the right of the leather-bound notebook",
+   "question": "Are the three glass test tubes to the right of the leather-bound notebook?"
+  },
+  {
+   "id": "machine_taller_inventor",
+   "type": "relation",
+   "of": [
+    "machine",
+    "inventor"
+   ],
+   "desc": "the clockwork machine is taller than the male inventor",
+   "question": "Is the clockwork machine taller than the male inventor?"
+  },
+  {
+   "id": "automaton_between_inventor_window",
+   "type": "relation",
+   "of": [
+    "automaton",
+    "inventor"
+   ],
+   "desc": "the caged brass automaton is between the male inventor and the large dirty window",
+   "question": "Is the caged brass automaton between the male inventor and the large dirty window?"
+  },
+  {
+   "id": "machine_visible_gears",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the clockwork machine has visible gears",
+   "question": "Does the clockwork machine have visible gears?"
+  },
+  {
+   "id": "window_dirty",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large dirty window",
+   "question": "Is there a large dirty window?",
+   "box": [
+    800,
+    50,
+    1000,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "test_tubes",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_053",
+ "prompt": "Inside a cluttered steampunk inventor's workshop, a male inventor is turning a large brass crank on the side of a complex clockwork machine. The inventor has goggles on his forehead and is wearing a belt with some pouches. The clockwork machine is much larger than a smaller, caged brass automaton next to it. The automaton is holding a tiny oil can and pointing it at a gear on the outside of its own cage. The inventor is looking at a pressure gauge which is a component of the clockwork machine. A large, leather-bound notebook lies open on a workbench that is in front of the inventor. To the right of the notebook, in a rack on the workbench, are three glass test tubes. The number of pouches on the inventor's belt is one less than the number of test tubes. The number of visible gears on the machine is twice the number of test tubes. The clockwork machine is taller than the inventor. A set of blueprints is unrolled on top of the machine, held down by a heavy wrench that is thicker than the crank handle. The automaton is inside the cage, looking at the inventor. The inventor is pushing a small lever with his other hand. The workbench has a vise attached to its edge. The caged automaton is between the inventor and a large, dirty window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [
+   "node machine: entity question is long (24 words); should only ask presence + identifying look",
+   "node workbench: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

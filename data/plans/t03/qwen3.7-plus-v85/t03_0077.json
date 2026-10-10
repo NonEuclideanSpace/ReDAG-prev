@@ -1,0 +1,189 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a station interior",
+   "question": "Does the image show a station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure board",
+   "question": "Is there a departure board?",
+   "box": [
+    750,
+    100,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    350,
+    450,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    700,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_ticket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a ticket",
+   "question": "Is the woman in a blue coat holding a ticket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is sitting",
+   "question": "Is the child in a yellow hat sitting?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is looking up",
+   "question": "Is the child in a yellow hat looking up?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit is standing",
+   "question": "Is the man in a gray suit standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "board"
+   ],
+   "desc": "the man in a gray suit points at the departure board",
+   "question": "Is the man in a gray suit pointing at the departure board?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child in a yellow hat is next to the woman in a blue coat",
+   "question": "Is the child in a yellow hat next to the woman in a blue coat?"
+  },
+  {
+   "id": "no_luggage",
+   "type": "absent",
+   "desc": "luggage",
+   "question": "Is there any luggage in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0077",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue coat stands on the left holding a ticket. A child in a yellow hat sits on the center bench looking up. A man in a gray suit stands on the right pointing at a departure board. The child is next to the woman. There is no luggage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

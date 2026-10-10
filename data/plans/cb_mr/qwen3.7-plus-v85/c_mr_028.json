@@ -1,0 +1,507 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bank interior with a lobby and an office",
+   "question": "Does the image show a bank interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "teller_window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bank teller window",
+   "question": "Is there a bank teller window?",
+   "box": [
+    100,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "teller",
+   "type": "entity",
+   "class": "bank teller",
+   "plural": "bank tellers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bank teller",
+   "question": "Is there a bank teller?",
+   "box": [
+    150,
+    320,
+    350,
+    580
+   ]
+  },
+  {
+   "id": "money",
+   "type": "attribute",
+   "of": "teller",
+   "desc": "the bank teller holds five red bills",
+   "question": "Is the bank teller holding five red bills?"
+  },
+  {
+   "id": "teller_behind_window",
+   "type": "relation",
+   "of": [
+    "teller",
+    "teller_window"
+   ],
+   "desc": "the bank teller stands behind the window",
+   "question": "Is the bank teller standing behind the window?"
+  },
+  {
+   "id": "customer_deposit",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer filling out a deposit slip",
+   "question": "Is there a customer filling out a deposit slip?",
+   "box": [
+    450,
+    400,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "slip",
+   "type": "attribute",
+   "of": "customer_deposit",
+   "desc": "the customer filling out a deposit slip holds a deposit slip",
+   "question": "Is the customer filling out a deposit slip holding a deposit slip?"
+  },
+  {
+   "id": "guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard in uniform",
+   "question": "Is there a security guard in uniform?",
+   "box": [
+    700,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "radio",
+   "type": "attribute",
+   "of": "guard",
+   "desc": "the security guard has a radio clipped to his uniform pocket",
+   "question": "Does the security guard have a radio clipped to his uniform pocket?"
+  },
+  {
+   "id": "manager",
+   "type": "entity",
+   "class": "bank manager",
+   "plural": "bank managers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older bank manager",
+   "question": "Is there an older bank manager?",
+   "box": [
+    50,
+    100,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "applicant",
+   "type": "entity",
+   "class": "loan applicant",
+   "plural": "loan applicants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loan applicant",
+   "question": "Is there a loan applicant?",
+   "box": [
+    260,
+    100,
+    460,
+    400
+   ]
+  },
+  {
+   "id": "documents",
+   "type": "attribute",
+   "of": "manager",
+   "desc": "the older bank manager holds documents",
+   "question": "Is the older bank manager holding documents?"
+  },
+  {
+   "id": "manager_reviewing",
+   "type": "action",
+   "of": [
+    "manager",
+    "applicant"
+   ],
+   "desc": "the older bank manager reviews documents with the loan applicant",
+   "question": "Is the older bank manager reviewing documents with the loan applicant?"
+  },
+  {
+   "id": "desk_1",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a desk in the office",
+   "question": "Is there a desk in the office?",
+   "box": [
+    50,
+    500,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "desk_2",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second desk in the office",
+   "question": "Is there a second desk in the office?",
+   "box": [
+    260,
+    500,
+    460,
+    700
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four chairs in the office",
+   "question": "Are there four chairs in the office?",
+   "box": [
+    50,
+    710,
+    460,
+    900
+   ]
+  },
+  {
+   "id": "technician",
+   "type": "entity",
+   "class": "atm technician",
+   "plural": "atm technicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ATM technician wearing work gloves",
+   "question": "Is there an ATM technician wearing work gloves?",
+   "box": [
+    700,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "atm_service",
+   "type": "entity",
+   "class": "atm",
+   "plural": "atms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ATM",
+   "question": "Is there an ATM?",
+   "box": [
+    750,
+    300,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "attribute",
+   "of": "technician",
+   "desc": "the ATM technician uses tools from a toolbox",
+   "question": "Is the ATM technician using tools from a toolbox?"
+  },
+  {
+   "id": "technician_servicing",
+   "type": "action",
+   "of": [
+    "technician",
+    "atm_service"
+   ],
+   "desc": "the ATM technician services the ATM",
+   "question": "Is the ATM technician servicing the ATM?"
+  },
+  {
+   "id": "customer_atm",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second customer",
+   "question": "Is there a second customer?",
+   "box": [
+    500,
+    500,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "atm_use",
+   "type": "entity",
+   "class": "atm",
+   "plural": "atms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second ATM",
+   "question": "Is there a second ATM?",
+   "box": [
+    550,
+    300,
+    650,
+    500
+   ]
+  },
+  {
+   "id": "card",
+   "type": "attribute",
+   "of": "customer_atm",
+   "desc": "the second customer holds a card",
+   "question": "Is the second customer holding a card?"
+  },
+  {
+   "id": "customer_inserting",
+   "type": "action",
+   "of": [
+    "customer_atm",
+    "atm_use"
+   ],
+   "desc": "the second customer inserts a card into the second ATM",
+   "question": "Is the second customer inserting a card into the second ATM?"
+  },
+  {
+   "id": "shielding",
+   "type": "state",
+   "of": "customer_atm",
+   "desc": "the second customer shields the keypad with her hand",
+   "question": "Is the second customer shielding the keypad?"
+  },
+  {
+   "id": "cleaner",
+   "type": "entity",
+   "class": "cleaning crew member",
+   "plural": "cleaning crew members",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cleaning crew member",
+   "question": "Is there a cleaning crew member?",
+   "box": [
+    300,
+    600,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "bins",
+   "type": "entity",
+   "class": "trash bin",
+   "plural": "trash bins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "trash bins",
+   "question": "Are there trash bins?",
+   "box": [
+    320,
+    700,
+    480,
+    850
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cart",
+   "question": "Is there a cart?",
+   "box": [
+    280,
+    750,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "cleaner_emptying",
+   "type": "action",
+   "of": [
+    "cleaner",
+    "bins"
+   ],
+   "desc": "the cleaning crew member empties the trash bins",
+   "question": "Is the cleaning crew member emptying the trash bins?"
+  },
+  {
+   "id": "cleaner_pushing",
+   "type": "action",
+   "of": [
+    "cleaner",
+    "cart"
+   ],
+   "desc": "the cleaning crew member pushes the cart",
+   "question": "Is the cleaning crew member pushing the cart?"
+  },
+  {
+   "id": "teller_standing",
+   "type": "state",
+   "of": "teller",
+   "desc": "the bank teller is standing",
+   "question": "Is the bank teller standing?"
+  },
+  {
+   "id": "customer_deposit_waiting",
+   "type": "state",
+   "of": "customer_deposit",
+   "desc": "the customer filling out a deposit slip is waiting in line",
+   "question": "Is the customer filling out a deposit slip waiting in line?"
+  },
+  {
+   "id": "guard_watching",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard is watching the lobby",
+   "question": "Is the security guard watching the lobby?"
+  },
+  {
+   "id": "technician_tools",
+   "type": "attribute",
+   "of": "technician",
+   "desc": "the ATM technician uses tools",
+   "question": "Is the ATM technician using tools?"
+  },
+  {
+   "id": "lobby_bg",
+   "type": "entity",
+   "class": "lobby",
+   "plural": "lobbies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bank lobby area",
+   "question": "Is there a bank lobby area visible?",
+   "box": [
+    0,
+    500,
+    600,
+    1024
+   ]
+  },
+  {
+   "id": "office_bg",
+   "type": "entity",
+   "class": "office",
+   "plural": "offices",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bank office room",
+   "question": "Is there a bank office room visible?",
+   "box": [
+    600,
+    0,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "blue_bills",
+   "type": "attribute",
+   "of": "teller",
+   "desc": "the bank teller holds three blue bills",
+   "question": "Is the bank teller holding three blue bills?"
+  },
+  {
+   "id": "manager_older",
+   "type": "relation",
+   "of": [
+    "manager",
+    "technician"
+   ],
+   "desc": "the older bank manager appears older than the ATM technician",
+   "question": "Does the bank manager appear older than the ATM technician?"
+  },
+  {
+   "id": "hand_on_keypad",
+   "type": "relation",
+   "of": [
+    "customer_atm",
+    "atm_use"
+   ],
+   "desc": "the second customer's hand is on the keypad of the second ATM",
+   "question": "Is the second customer's hand on the keypad of the second ATM?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk_1",
+   "to": "chairs",
+   "kind": "support"
+  },
+  {
+   "from": "desk_2",
+   "to": "chairs",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_028",
+ "prompt": "A bank with employees and customers. A bank teller is counting money while standing behind a window. The customer's deposit includes five red bills and a number of blue bills that is two less than the red bills. A customer is filling out a deposit slip while waiting in line. A security guard is watching the lobby while holding a radio. The radio is clipped to his uniform pocket. The bank manager appears older than the ATM technician. The bank manager is reviewing documents with a loan applicant in an office. The office contains two desks and a number of chairs that is twice the number of desks. An ATM technician is servicing a machine while wearing work gloves and using tools from a toolbox. A customer is inserting a card into another ATM while shielding the keypad with her hand. A cleaning crew member is emptying trash bins while pushing a cart through the lobby.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 1,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

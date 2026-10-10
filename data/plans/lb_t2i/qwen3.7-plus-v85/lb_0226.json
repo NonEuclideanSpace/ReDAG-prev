@@ -1,0 +1,463 @@
+{
+ "style": "surreal photorealistic, dramatic lighting, high detail, moody atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room interior with a window, gray morning haze outside, and a far wall",
+   "question": "Does the image show a room interior with a window looking out into gray haze and a far wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a narrow windowsill",
+   "question": "Is there a narrow windowsill?",
+   "box": [
+    0,
+    600,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "medal",
+   "type": "entity",
+   "class": "medal",
+   "plural": "medals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass medal",
+   "question": "Is there a brass medal?",
+   "box": [
+    400,
+    620,
+    550,
+    730
+   ]
+  },
+  {
+   "id": "spider",
+   "type": "entity",
+   "class": "spider",
+   "plural": "spiders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small spider",
+   "question": "Is there a small spider?",
+   "box": [
+    556,
+    626,
+    604,
+    674
+   ]
+  },
+  {
+   "id": "web",
+   "type": "entity",
+   "class": "spider web",
+   "plural": "spider webs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose silken spider web",
+   "question": "Is there a loose silken spider web?",
+   "box": [
+    550,
+    600,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded photograph pinned with a rusted thumbtack",
+   "question": "Is there a faded photograph pinned with a rusted thumbtack?",
+   "box": [
+    750,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "cuckoo clock",
+   "plural": "cuckoo clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanical cuckoo clock",
+   "question": "Is there a mechanical cuckoo clock?",
+   "box": [
+    100,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "candle",
+   "type": "entity",
+   "class": "candle",
+   "plural": "candles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-melted candle",
+   "question": "Is there a half-melted candle?",
+   "box": [
+    320,
+    650,
+    380,
+    720
+   ]
+  },
+  {
+   "id": "bookshelf_shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow of a bookshelf",
+   "question": "Is there a shadow of a bookshelf?",
+   "box": [
+    800,
+    100,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "sunlight_shaft",
+   "type": "entity",
+   "class": "shaft of sunlight",
+   "plural": "shafts of sunlight",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shaft of sunlight",
+   "question": "Is there a shaft of sunlight?",
+   "box": [
+    450,
+    0,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "rain_droplets",
+   "type": "entity",
+   "class": "rain droplet",
+   "plural": "rain droplets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rain droplets",
+   "question": "Are there rain droplets?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "medal_tarnished",
+   "type": "attribute",
+   "of": "medal",
+   "desc": "the brass medal is tarnished",
+   "question": "Is the brass medal tarnished?"
+  },
+  {
+   "id": "ribbon_frayed",
+   "type": "attribute",
+   "of": "medal",
+   "desc": "the medal has a frayed ribbon colored like aged copper",
+   "question": "Does the medal have a frayed ribbon colored like aged copper?"
+  },
+  {
+   "id": "child_holding_boat",
+   "type": "state",
+   "of": "photo",
+   "desc": "the child in the photograph holds a paper boat",
+   "question": "Does the child in the photograph hold a paper boat?"
+  },
+  {
+   "id": "medal_on_sill",
+   "type": "relation",
+   "of": [
+    "medal",
+    "windowsill"
+   ],
+   "desc": "the medal rests on the windowsill",
+   "question": "Is the medal resting on the windowsill?"
+  },
+  {
+   "id": "spider_on_web",
+   "type": "relation",
+   "of": [
+    "spider",
+    "web"
+   ],
+   "desc": "the spider is on the web near the medal hook",
+   "question": "Is the spider on the web near the medal hook?"
+  },
+  {
+   "id": "web_attached_medal",
+   "type": "relation",
+   "of": [
+    "web",
+    "medal"
+   ],
+   "desc": "the web is attached to the medal's hook",
+   "question": "Is the web attached to the medal's hook?"
+  },
+  {
+   "id": "web_near_photo",
+   "type": "relation",
+   "of": [
+    "web",
+    "photo"
+   ],
+   "desc": "the web extends toward the photograph",
+   "question": "Does the web extend toward the photograph?"
+  },
+  {
+   "id": "photo_pinned",
+   "type": "state",
+   "of": "photo",
+   "desc": "the photograph is pinned slightly askew",
+   "question": "Is the photograph pinned slightly askew?"
+  },
+  {
+   "id": "shadow_on_wall",
+   "type": "state",
+   "of": "bookshelf_shadow",
+   "desc": "the bookshelf shadow is on the far wall",
+   "question": "Is the bookshelf shadow on the far wall?"
+  },
+  {
+   "id": "clock_humming",
+   "type": "state",
+   "of": "clock",
+   "desc": "the cuckoo clock appears active with hanging gears",
+   "question": "Does the cuckoo clock appear active with hanging gears?"
+  },
+  {
+   "id": "candle_near_clock",
+   "type": "relation",
+   "of": [
+    "candle",
+    "clock"
+   ],
+   "desc": "the candle sits near the clock",
+   "question": "Does the candle sit near the clock?"
+  },
+  {
+   "id": "light_on_medal",
+   "type": "relation",
+   "of": [
+    "sunlight_shaft",
+    "medal"
+   ],
+   "desc": "the sunlight illuminates the medal",
+   "question": "Does the sunlight illuminate the medal?"
+  },
+  {
+   "id": "rainbows_in_droplets",
+   "type": "attribute",
+   "of": "rain_droplets",
+   "desc": "some rain droplets refract tiny rainbows",
+   "question": "Do some rain droplets refract tiny rainbows?"
+  },
+  {
+   "id": "pattern_on_wall",
+   "type": "relation",
+   "of": [
+    "sunlight_shaft",
+    "bookshelf_shadow"
+   ],
+   "desc": "light refracted through the medal projects a pattern onto the wall near the bookshelf shadow",
+   "question": "Does light refracted through the medal project a pattern onto the wall near the bookshelf shadow?"
+  },
+  {
+   "id": "photo_peeling",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the surface of the photograph is peeling",
+   "question": "Is the surface of the faded photograph peeling?"
+  },
+  {
+   "id": "man_tired_eyes",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the man in the photograph has tired eyes",
+   "question": "Does the man in the faded photograph have tired eyes?"
+  },
+  {
+   "id": "reflection_spider",
+   "type": "relation",
+   "of": [
+    "spider",
+    "sunlight_shaft"
+   ],
+   "desc": "the spider is visible in the reflection on the glass",
+   "question": "Is the small spider visible in the reflection on the window glass?"
+  },
+  {
+   "id": "reflection_photo",
+   "type": "relation",
+   "of": [
+    "photo",
+    "sunlight_shaft"
+   ],
+   "desc": "the photograph is visible in the reflection on the glass",
+   "question": "Is the faded photograph visible in the reflection on the window glass?"
+  },
+  {
+   "id": "reflection_candle",
+   "type": "relation",
+   "of": [
+    "candle",
+    "sunlight_shaft"
+   ],
+   "desc": "the candle flame is visible in the reflection on the glass",
+   "question": "Is the candle flame visible in the reflection on the window glass?"
+  },
+  {
+   "id": "medal_ribbon",
+   "type": "attribute",
+   "of": "medal",
+   "desc": "the medal has a frayed ribbon colored like aged copper and moth wings",
+   "question": "Does the medal have a frayed ribbon colored like aged copper and moth wings?"
+  },
+  {
+   "id": "photo_content_woman",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the photograph shows a woman in a sunflower dress",
+   "question": "Does the photograph show a woman in a sunflower dress?"
+  },
+  {
+   "id": "photo_content_man",
+   "type": "attribute",
+   "of": "photo",
+   "desc": "the photograph shows a man in a pressed shirt",
+   "question": "Does the photograph show a man in a pressed shirt?"
+  },
+  {
+   "id": "candle_smoldering_2",
+   "type": "state",
+   "of": "candle",
+   "desc": "the candle has a smoldering wick",
+   "question": "Does the candle have a smoldering wick?"
+  },
+  {
+   "id": "windowsill_dust",
+   "type": "attribute",
+   "of": "windowsill",
+   "desc": "the windowsill is thick with dust",
+   "question": "Is the windowsill thick with dust?"
+  },
+  {
+   "id": "clock_gears",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has exposed gears and pulleys",
+   "question": "Does the clock have exposed gears and pulleys?"
+  },
+  {
+   "id": "shadow_books",
+   "type": "attribute",
+   "of": "bookshelf_shadow",
+   "desc": "the bookshelf shadow shows disorganized books",
+   "question": "Does the bookshelf shadow show disorganized books?"
+  },
+  {
+   "id": "sunlight_piercing",
+   "type": "state",
+   "of": "sunlight_shaft",
+   "desc": "the shaft of sunlight pierces through the window",
+   "question": "Does the shaft of sunlight pierce through the window?"
+  },
+  {
+   "id": "rain_spiraling",
+   "type": "state",
+   "of": "rain_droplets",
+   "desc": "the rain droplets are spiraling",
+   "question": "Are the rain droplets spiraling?"
+  },
+  {
+   "id": "rain_outside",
+   "type": "state",
+   "of": "rain_droplets",
+   "desc": "the rain droplets are outside the window",
+   "question": "Are the rain droplets outside the window?"
+  },
+  {
+   "id": "candle_flame_flickering",
+   "type": "state",
+   "of": "candle",
+   "desc": "the candle has a flickering flame",
+   "question": "Does the candle have a flickering flame?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "medal",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "candle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0226",
+ "prompt": "The brass medal, tarnished and resting on a narrow windowsill thick with dust and the faint sheen of old rainwater, catches the light just once each day at noon, when a shaft of sunlight pierces through the gray morning haze and illuminates the medal’s dull sheen like a benediction from the sun. Its frayed ribbon, once red and gold, now the color of aged copper and moth wings, dangles like a tail from the medal’s hook, which a single, deliberate spider has transformed into an anchor point for a loose, silken net that trembles with the faintest movement of air, even the whisper of rain outside. This web extends not only toward the corner of the window frame but also toward the edge of a faded photograph, pinned slightly askew with a rusted thumbtack and fraying at the edges like an old memory—its surface peeling to reveal a family frozen in time, a woman in a sunflower dress, a man in a pressed shirt and tired eyes, and a child holding a paper boat that no longer floats. The spider, though small, seems aware of the photo, gliding just inches away as if drawn to the memory, and in its brief pause beside the image, a faint shimmer of reflection appears on the glass—rain-streaked and distorted, but unmistakably a second version of the scene, as if the world beyond is a warped mirror of the one within. Outside, the rain does not fall in straight lines; it spirals, twisting and weaving as it descends, some droplets condensing briefly into tiny rainbows that refract through the glass and cast shifting hues across the medal, the web, and the photograph. One droplet, catching the noon sun at just the right angle, refracts light through the medal’s engravings and projects a shimmering pattern onto the far wall, where it coincides with the shadow of a bookshelf, its contents stacked in disarray—volumes of philosophy, poetry, and travel guides, some open as if mid-reading, others stacked like unstable monoliths. A mechanical cuckoo clock, powered by gears and pulleys that hang like a broken marionette’s limbs, emits a low hum and occasionally coughs out a noteless chime, its brass mechanisms catching stray particles of dust and spider silk, binding the clock’s motion to the web’s structure in a strange mechanical symbiosis. A candle, half-melted and still smoldering, sits nearby, its wick occasionally sputtering as if reacting to the clock’s pulse. The candle’s flame, flickering, casts long shadows across the room that move in defiance of the room’s stillness, as if another time or dimension were at work, folding itself into the space. The medal’s reflection in the glass begins to shift subtly as the light bends, revealing not only the medal itself but also the spider, the photograph, and even the candle flame, all embedded in the mirrored image like a recursive loop of reality and illusion. The room, though still, feels alive with motion—of memory, of time, of the slow and deliberate weaving of an unseen story that binds the medal, the web, the photo, and the candle into a single, surreal moment suspended between past and present.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node photo: entity question is long (30 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 65,
+   "n_uncovered": 6,
+   "proposed": 6,
+   "ungrounded": 1,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

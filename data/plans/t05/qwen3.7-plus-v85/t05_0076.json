@@ -1,0 +1,315 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene",
+   "question": "Does the image show an indoor scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    300,
+    500,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow dress",
+   "question": "Is there a girl in a yellow dress?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in blue overalls",
+   "question": "Is there a boy in blue overalls?",
+   "box": [
+    260,
+    220,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass beaker",
+   "question": "Is there a glass beaker?",
+   "box": [
+    480,
+    450,
+    580,
+    600
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "adult",
+   "plural": "adults",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a gray suit",
+   "question": "Is there a teacher in a gray suit?",
+   "box": [
+    550,
+    180,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    800,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "cage",
+   "type": "entity",
+   "class": "cage",
+   "plural": "cages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cage",
+   "question": "Is there a cage?",
+   "box": [
+    780,
+    650,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    900,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "girl_holding",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in a yellow dress holds a clipboard",
+   "question": "Is the girl in a yellow dress holding a clipboard?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "beaker"
+   ],
+   "desc": "the boy in blue overalls points at the glass beaker",
+   "question": "Is the boy in blue overalls pointing at the glass beaker?"
+  },
+  {
+   "id": "beaker_on_table",
+   "type": "relation",
+   "of": [
+    "beaker",
+    "table"
+   ],
+   "desc": "the glass beaker sits on the wooden table",
+   "question": "Is the glass beaker sitting on the wooden table?"
+  },
+  {
+   "id": "teacher_looking",
+   "type": "action",
+   "of": [
+    "teacher",
+    "beaker"
+   ],
+   "desc": "the teacher in a gray suit looks at the mixture inside the beaker",
+   "question": "Is the teacher in a gray suit looking at the mixture inside the beaker?"
+  },
+  {
+   "id": "mixture_bubbling",
+   "type": "state",
+   "of": "beaker",
+   "desc": "the liquid inside the beaker is bubbling",
+   "question": "Is the liquid inside the beaker bubbling?"
+  },
+  {
+   "id": "rabbit_on_cage",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "cage"
+   ],
+   "desc": "the small white rabbit sits on the cage",
+   "question": "Is the small white rabbit sitting on the cage?"
+  },
+  {
+   "id": "fern_next_to_rabbit",
+   "type": "relation",
+   "of": [
+    "fern",
+    "rabbit"
+   ],
+   "desc": "the potted fern is next to the small white rabbit",
+   "question": "Is the potted fern next to the small white rabbit?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through windows",
+   "question": "Is there sunlight streaming through windows in the image?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in a yellow dress stands",
+   "question": "Is the girl in a yellow dress standing?"
+  },
+  {
+   "id": "boy_beside_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in blue overalls is beside the girl in a yellow dress",
+   "question": "Is the boy in blue overalls beside the girl in a yellow dress?"
+  },
+  {
+   "id": "rabbit_sitting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit sits",
+   "question": "Is the small white rabbit sitting?"
+  },
+  {
+   "id": "beaker_liquid",
+   "type": "attribute",
+   "of": "beaker",
+   "desc": "the glass beaker is filled with green liquid",
+   "question": "Is the glass beaker filled with green liquid?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "floor",
+   "plural": "floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the floor",
+   "question": "Is there a floor visible in the image?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fern_on_floor",
+   "type": "relation",
+   "of": [
+    "fern",
+    "floor"
+   ],
+   "desc": "the potted fern rests on the floor",
+   "question": "Does the potted fern rest on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "beaker",
+   "kind": "support"
+  },
+  {
+   "from": "cage",
+   "to": "rabbit",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0076",
+ "prompt": "In this watercolor illustration, a girl in a yellow dress stands on the left, holding a clipboard. Beside her, a boy in blue overalls points at a glass beaker filled with green liquid. The beaker sits on a wooden table in the center. A teacher in a gray suit looks at the bubbling mixture inside the beaker. To the right, a small white rabbit sits calmly on a cage. Next to the rabbit, a potted fern rests on the floor. There is no sunlight streaming through windows.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

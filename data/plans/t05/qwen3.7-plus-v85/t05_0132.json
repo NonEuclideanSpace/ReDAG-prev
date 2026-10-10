@@ -1,0 +1,217 @@
+{
+ "style": "flat vector illustration, bold colors, distinct shapes, no shading or gradients",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop under a dark sky",
+   "question": "Does the image show a rooftop under a dark sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray cat",
+   "question": "Is there a gray cat?",
+   "box": [
+    20,
+    500,
+    180,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crate",
+   "question": "Is there a crate?",
+   "box": [
+    20,
+    650,
+    180,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    400,
+    250,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow skirt",
+   "question": "Is there a girl in a yellow skirt?",
+   "box": [
+    650,
+    300,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in an orange shirt",
+   "question": "Is there a boy in an orange shirt?",
+   "box": [
+    850,
+    300,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "woman_drink",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a drink",
+   "question": "Is the woman in the blue dress holding a drink?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing upright",
+   "question": "Is the woman in the blue dress standing upright?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is sitting calmly",
+   "question": "Is the gray cat sitting calmly?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is pointing forward",
+   "question": "Is the man in the green hat pointing forward?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the gray cat sits on the crate",
+   "question": "Is the gray cat sitting on the crate?"
+  },
+  {
+   "id": "cat_next_to_woman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman"
+   ],
+   "desc": "the gray cat is next to the woman in the blue dress",
+   "question": "Is the gray cat next to the woman in the blue dress?"
+  },
+  {
+   "id": "girl_looking_at_man",
+   "type": "action",
+   "of": [
+    "girl",
+    "man"
+   ],
+   "desc": "the girl in the yellow skirt looks at the man in the green hat",
+   "question": "Is the girl in the yellow skirt looking at the man in the green hat?"
+  },
+  {
+   "id": "man_looking_at_girl",
+   "type": "action",
+   "of": [
+    "man",
+    "girl"
+   ],
+   "desc": "the man in the green hat looks at the girl in the yellow skirt",
+   "question": "Is the man in the green hat looking at the girl in the yellow skirt?"
+  },
+  {
+   "id": "boy_hands_plate",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in the orange shirt hands a plate to the girl in the yellow skirt",
+   "question": "Is the boy in the orange shirt handing a plate to the girl in the yellow skirt?"
+  },
+  {
+   "id": "no_music_equipment",
+   "type": "absent",
+   "desc": "music equipment",
+   "question": "Is there any music equipment visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0132",
+ "prompt": "In a flat vector illustration, a rooftop party unfolds under a dark sky. On the left, a woman in a blue dress stands holding a drink. Next to her on the left sits a gray cat on a crate. In the center, a man in a green hat points toward the horizon. To his right, a girl in a yellow skirt looks at him intently. On the far right, a boy in an orange shirt hands a plate to the girl in the yellow skirt. The woman in the blue dress is standing upright. The gray cat is sitting calmly. The man in the green hat is pointing forward. The interaction between the boy in the orange shirt and the girl in the yellow skirt involves handing a plate. The interaction between the man in the green hat and the girl in the yellow skirt involves looking at each other. There is no music equipment visible in the scene. The composition remains simple with distinct shapes and bold colors defining each character and object clearly without shading or gradient effects.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

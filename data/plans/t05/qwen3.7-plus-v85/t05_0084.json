@@ -1,0 +1,269 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark tree line in the background",
+   "question": "Does the image show a dark tree line in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "campfire",
+   "type": "entity",
+   "class": "campfire",
+   "plural": "campfires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small campfire burning brightly",
+   "question": "Is there a small campfire burning brightly?",
+   "box": [
+    400,
+    600,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    250,
+    500,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue tent",
+   "question": "Is there a blue tent?",
+   "box": [
+    700,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow jacket",
+   "question": "Is there a woman in a yellow jacket?",
+   "box": [
+    550,
+    250,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green hat",
+   "question": "Is there a boy in a green hat?",
+   "box": [
+    700,
+    350,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "older_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a grey coat",
+   "question": "Is there an older man in a grey coat?",
+   "box": [
+    400,
+    150,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man_red_scarf",
+    "campfire"
+   ],
+   "desc": "the man in a red scarf is looking at the campfire",
+   "question": "Is the man in a red scarf looking at the campfire?"
+  },
+  {
+   "id": "dog_standing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is standing",
+   "question": "Is the brown dog standing?"
+  },
+  {
+   "id": "dog_sniffing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sniffing the ground",
+   "question": "Is the brown dog sniffing the ground?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man_red_scarf"
+   ],
+   "desc": "the brown dog is next to the man in a red scarf",
+   "question": "Is the brown dog next to the man in a red scarf?"
+  },
+  {
+   "id": "dog_near_tent",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tent"
+   ],
+   "desc": "the brown dog is near the blue tent",
+   "question": "Is the brown dog near the blue tent?"
+  },
+  {
+   "id": "woman_holding_mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a yellow jacket holds a metal mug",
+   "question": "Is the woman in a yellow jacket holding a metal mug?"
+  },
+  {
+   "id": "woman_handing_mug",
+   "type": "action",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman in a yellow jacket is handing the metal mug to the boy in a green hat",
+   "question": "Is the woman in a yellow jacket handing a metal mug to the boy in a green hat?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a green hat is reaching out",
+   "question": "Is the boy in a green hat reaching out?"
+  },
+  {
+   "id": "boy_beside_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in a green hat stands beside the woman in a yellow jacket",
+   "question": "Is the boy in a green hat standing beside the woman in a yellow jacket?"
+  },
+  {
+   "id": "older_man_behind_group",
+   "type": "relation",
+   "of": [
+    "older_man",
+    "woman"
+   ],
+   "desc": "the older man in a grey coat is behind the woman in a yellow jacket and the boy",
+   "question": "Is the older man in a grey coat behind the woman in a yellow jacket?"
+  },
+  {
+   "id": "no_snow",
+   "type": "absent",
+   "desc": "snow on the ground",
+   "question": "Is there any snow visible on the ground?"
+  },
+  {
+   "id": "dog_ears",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the brown dog has perked ears",
+   "question": "Does the brown dog have perked ears?"
+  },
+  {
+   "id": "older_man_pointing",
+   "type": "state",
+   "of": "older_man",
+   "desc": "the older man in a grey coat points toward the dark tree line",
+   "question": "Is the older man in a grey coat pointing toward the dark tree line?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0084",
+ "prompt": "In a cinematic film still, a man in a red scarf sits on the left side of the frame. He is looking at a small campfire that burns brightly in the center. Next to him stands a brown dog with perked ears. The dog is sniffing the ground near a blue tent pitched on the right. A woman in a yellow jacket holds a metal mug and is handing it to a boy in a green hat who stands beside her. The boy is reaching out to take the mug. Behind them, an older man in a grey coat points toward the dark tree line. There is no snow visible on the ground.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

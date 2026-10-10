@@ -1,0 +1,198 @@
+{
+ "style": "photorealistic fantasy still life",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stone shelf",
+   "question": "Is there a stone shelf in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "potion bottle",
+   "plural": "potion bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate black glass potion bottle",
+   "question": "Is there an ornate black glass potion bottle?",
+   "box": [
+    360,
+    200,
+    664,
+    800
+   ]
+  },
+  {
+   "id": "liquid",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle contains thick, bright red liquid",
+   "question": "Does the bottle contain thick, bright red liquid?"
+  },
+  {
+   "id": "pearls",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "two small white spherical pearls are inside the liquid in the bottle",
+   "question": "Are there two small white spherical pearls inside the liquid in the bottle?"
+  },
+  {
+   "id": "stopper",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle is sealed with a stopper made of carved dark wood",
+   "question": "Is the bottle sealed with a stopper made of carved dark wood?"
+  },
+  {
+   "id": "label",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "a small, yellowed paper label tied to the neck with string, having faded handwritten runes",
+   "question": "Is there a small, yellowed paper label tied to the neck with string, having faded handwritten runes?"
+  },
+  {
+   "id": "bottle_sitting",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the potion bottle is sitting",
+   "question": "Is the potion bottle sitting?"
+  },
+  {
+   "id": "liquid_bubbling",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the liquid in the bottle is bubbling",
+   "question": "Is the liquid in the bottle bubbling?"
+  },
+  {
+   "id": "bottle_on_shelf",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "shelf"
+   ],
+   "desc": "the potion bottle is on the stone shelf",
+   "question": "Is the potion bottle on the stone shelf?"
+  },
+  {
+   "id": "no_symmetry",
+   "type": "absent",
+   "desc": "symmetrical shape of the bottle",
+   "question": "Is the bottle symmetrical?"
+  },
+  {
+   "id": "no_clear_liquid",
+   "type": "absent",
+   "desc": "clear liquid",
+   "question": "Is the liquid clear?"
+  },
+  {
+   "id": "no_empty_bottle",
+   "type": "absent",
+   "desc": "empty bottle",
+   "question": "Is the bottle empty?"
+  },
+  {
+   "id": "no_blank_label",
+   "type": "absent",
+   "desc": "blank label",
+   "question": "Is the label blank?"
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "stone shelf",
+   "plural": "stone shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone shelf",
+   "question": "Is there a stone shelf?",
+   "box": [
+    0,
+    600,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "bottle_sheen",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle has an iridescent sheen",
+   "question": "Does the bottle have an iridescent sheen?"
+  },
+  {
+   "id": "bottle_dusty",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle has a dusty surface",
+   "question": "Does the bottle have a dusty surface?"
+  },
+  {
+   "id": "liquid_glowing",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the liquid in the bottle is glowing",
+   "question": "Is the liquid in the bottle glowing?"
+  },
+  {
+   "id": "stopper_crystal",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the stopper has a single cracked purple crystal embedded in it",
+   "question": "Does the stopper have a single cracked purple crystal embedded in it?"
+  },
+  {
+   "id": "pearls_floating",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the pearls in the bottle are floating",
+   "question": "Are the pearls in the bottle floating?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "bottle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_046",
+ "prompt": "A single, ornate, old-looking fantasy potion bottle sitting on a stone shelf. The bottle is made of black glass with an iridescent sheen. It contains a thick, glowing, bright red liquid that is bubbling. Inside the liquid, two small, white, spherical pearls are floating. The bottle is sealed with a stopper made of carved, dark wood, which has a single, cracked purple crystal embedded in it. A small, yellowed paper label is tied to its neck with a string; the label has some faded, handwritten runes. The bottle itself has a dusty surface. It is not symmetrical, the liquid is not clear, the bottle is not empty, and the label is not blank.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

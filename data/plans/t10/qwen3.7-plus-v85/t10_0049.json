@@ -1,0 +1,387 @@
+{
+ "style": "pencil sketch with light watercolor wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with graphite lines and subtle watercolor tints",
+   "question": "Does the image show a shipyard dock rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive steel crane",
+   "question": "Is there a massive steel crane?",
+   "box": [
+    50,
+    50,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "operator",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall crane operator in blue overalls",
+   "question": "Is there a tall crane operator in blue overalls?",
+   "box": [
+    80,
+    200,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman wearing a yellow hard hat",
+   "question": "Is there a foreman wearing a yellow hard hat?",
+   "box": [
+    400,
+    300,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "ship",
+   "type": "entity",
+   "class": "cargo ship",
+   "plural": "cargo ships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large cargo ship anchored",
+   "question": "Is there a large cargo ship anchored?",
+   "box": [
+    700,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in grease-stained coveralls",
+   "question": "Is there a worker in grease-stained coveralls?",
+   "box": [
+    620,
+    320,
+    800,
+    760
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    550,
+    450,
+    650,
+    550
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    100,
+    750,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "rope",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled thick rope",
+   "question": "Is there a coiled thick rope?",
+   "box": [
+    320,
+    780,
+    450,
+    920
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seagull",
+   "question": "Is there a seagull?",
+   "box": [
+    850,
+    600,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    820,
+    650,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red toolbox resting open",
+   "question": "Is there a red toolbox resting open?",
+   "box": [
+    500,
+    800,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "metallic tools inside the red toolbox",
+   "question": "Are there metallic tools visible inside the red toolbox?"
+  },
+  {
+   "id": "operator_leaning",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator is leaning casually",
+   "question": "Is the crane operator leaning casually?"
+  },
+  {
+   "id": "operator_foot_on_ladder",
+   "type": "relation",
+   "of": [
+    "operator",
+    "crane"
+   ],
+   "desc": "the crane operator rests one foot on the lower rung of the crane's ladder",
+   "question": "Does the crane operator rest one foot on the lower rung of the crane's ladder?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman has his arm extended straight out pointing",
+   "question": "Is the foreman's arm extended straight out pointing?"
+  },
+  {
+   "id": "foreman_points_at_ship",
+   "type": "action",
+   "of": [
+    "foreman",
+    "ship"
+   ],
+   "desc": "the foreman points toward the cargo ship",
+   "question": "Is the foreman pointing toward the cargo ship?"
+  },
+  {
+   "id": "worker_holding_clipboard",
+   "type": "action",
+   "of": [
+    "worker",
+    "clipboard"
+   ],
+   "desc": "the worker holds the clipboard with both hands",
+   "question": "Is the worker holding the clipboard with both hands?"
+  },
+  {
+   "id": "worker_looking_at_clipboard",
+   "type": "action",
+   "of": [
+    "worker",
+    "clipboard"
+   ],
+   "desc": "the worker looks intently at the clipboard",
+   "question": "Is the worker looking intently at the clipboard?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting patiently",
+   "question": "Is the small brown dog sitting patiently?"
+  },
+  {
+   "id": "dog_next_to_rope",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rope"
+   ],
+   "desc": "the small brown dog sits next to the coiled thick rope",
+   "question": "Is the small brown dog sitting next to the coiled thick rope?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog watches the activity",
+   "question": "Is the small brown dog watching the activity?"
+  },
+  {
+   "id": "seagull_perched",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull is perched",
+   "question": "Is the seagull perched?"
+  },
+  {
+   "id": "seagull_on_crate",
+   "type": "relation",
+   "of": [
+    "seagull",
+    "crate"
+   ],
+   "desc": "the seagull perches atop the wooden crate",
+   "question": "Is the seagull perched atop the wooden crate?"
+  },
+  {
+   "id": "operator_behind_crane_base",
+   "type": "relation",
+   "of": [
+    "operator",
+    "crane"
+   ],
+   "desc": "the crane operator stands against the rusted base of the crane",
+   "question": "Is the crane operator standing against the rusted base of the crane?"
+  },
+  {
+   "id": "worker_beside_foreman",
+   "type": "relation",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker is beside the foreman",
+   "question": "Is the worker beside the foreman?"
+  },
+  {
+   "id": "no_water_foreground",
+   "type": "absent",
+   "desc": "water in the immediate foreground",
+   "question": "Is there any water visible in the immediate foreground?"
+  },
+  {
+   "id": "operator_standing",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator stands",
+   "question": "Is the crane operator standing?"
+  },
+  {
+   "id": "foreman_standing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman stands",
+   "question": "Is the foreman standing?"
+  },
+  {
+   "id": "crane_rusted_base",
+   "type": "attribute",
+   "of": "crane",
+   "desc": "the massive steel crane has a rusted base",
+   "question": "Does the massive steel crane have a rusted base?"
+  },
+  {
+   "id": "dog_ears_perked",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog has its ears perked up",
+   "question": "Does the small brown dog have its ears perked up?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "seagull",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "toolbox",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0049",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a bustling shipyard dock where graphite lines define form and subtle watercolor tints suggest atmosphere. On the left stands a tall crane operator in blue overalls, leaning casually against the rusted base of a massive steel crane that dominates the background. In the center, a foreman wearing a yellow hard hat points firmly toward the horizon, directing attention to a large cargo ship anchored in the distance. Beside him on the right, a worker in grease-stained coveralls looks intently at the clipboard held by the foreman, creating a clear line of professional engagement between the pair. Near the foreground edge, a small brown dog sits patiently next to a coiled thick rope, its ears perked up as it watches the activity. A seagull perches atop a wooden crate nearby, observing the scene with detached curiosity. The sixth entity is a red toolbox resting open on the dock planks, revealing glimpses of metallic tools inside. The crane operator rests one foot on the lower rung of the ladder, showing a relaxed posture despite the industrial setting. The foreman’s arm is extended straight out, emphasizing the directive gesture. The worker holds the clipboard with both hands, stabilizing it against the wind. The interaction of pointing connects the foreman to the distant ship, while the shared focus on the clipboard links the foreman and the worker. There is no water visible in the immediate foreground, keeping the viewer's attention strictly on the dockside operations and the characters involved. The soft wash of pale blues and grays enhances the texture of the wood and steel without overwhelming the delicate pencil work.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

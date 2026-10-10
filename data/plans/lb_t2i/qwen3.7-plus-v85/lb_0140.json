@@ -1,0 +1,534 @@
+{
+ "style": "surreal, atmospheric, amber lighting, dreamlike",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal kitchen with peeling wallpaper and creaking floorboards",
+   "question": "Does the image depict a surreal kitchen with peeling wallpaper and visible floorboards?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "chandelier",
+   "plural": "chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a suspended chandelier with glowing bulbs",
+   "question": "Is there a suspended chandelier?",
+   "box": [
+    300,
+    0,
+    724,
+    200
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "kitchen table",
+   "plural": "kitchen tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped, ancient kitchen table made of dark wood",
+   "question": "Is there a warped, ancient kitchen table?",
+   "box": [
+    100,
+    500,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mug with a cracked rim containing coffee",
+   "question": "Is there a mug with a cracked rim?",
+   "box": [
+    450,
+    480,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "mist",
+   "type": "entity",
+   "class": "steam",
+   "plural": "steams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "spiraling mist rising from the mug",
+   "question": "Is there spiraling mist rising from the mug?",
+   "box": [
+    460,
+    350,
+    540,
+    480
+   ]
+  },
+  {
+   "id": "fairy_lights",
+   "type": "entity",
+   "class": "fairy lights",
+   "plural": "fairy lights",
+   "count": 2,
+   "count_exact": false,
+   "desc": "strung fairy lights",
+   "question": "Are there strung fairy lights?",
+   "box": [
+    0,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "donut",
+   "type": "entity",
+   "class": "ceramic donut",
+   "plural": "ceramic donuts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceramic donut",
+   "question": "Is there a ceramic donut?",
+   "box": [
+    200,
+    520,
+    300,
+    620
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "houseplant",
+   "plural": "houseplants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broad-leafed houseplant",
+   "question": "Is there a broad-leafed houseplant?",
+   "box": [
+    800,
+    300,
+    1024,
+    700
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window with glass",
+   "question": "Is there a window?",
+   "box": [
+    850,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "crystal",
+   "type": "entity",
+   "class": "hanging crystal",
+   "plural": "hanging crystals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging crystal prism",
+   "question": "Is there a hanging crystal prism?",
+   "box": [
+    600,
+    200,
+    700,
+    350
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    900,
+    500,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly in mid-air",
+   "question": "Is there a fly in mid-air?",
+   "box": [
+    476,
+    446,
+    524,
+    494
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with no hands and a glass face",
+   "question": "Is there a clock with a glass face?",
+   "box": [
+    150,
+    300,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "mug_cracked",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug has a cracked rim",
+   "question": "Does the mug have a cracked rim?"
+  },
+  {
+   "id": "mug_steaming",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug is emitting spiraling mist",
+   "question": "Is the mug emitting spiraling mist?"
+  },
+  {
+   "id": "donut_dusty",
+   "type": "attribute",
+   "of": "donut",
+   "desc": "the ceramic donut has dust on its surface",
+   "question": "Does the ceramic donut have dust on its surface?"
+  },
+  {
+   "id": "donut_shadowed",
+   "type": "state",
+   "of": "donut",
+   "desc": "the ceramic donut is half-shrouded in shadow",
+   "question": "Is the ceramic donut half-shrouded in shadow?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is perched on the edge of the table",
+   "question": "Is the cat perched on the edge of the table?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is watching motionlessly",
+   "question": "Is the cat watching motionlessly?"
+  },
+  {
+   "id": "fly_orbiting",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is looping in the air",
+   "question": "Is the fly looping in the air?"
+  },
+  {
+   "id": "clock_handless",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has no hands",
+   "question": "Does the clock have no hands?"
+  },
+  {
+   "id": "mug_on_table",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "the mug rests on the table",
+   "question": "Is the mug resting on the table?"
+  },
+  {
+   "id": "donut_on_table",
+   "type": "relation",
+   "of": [
+    "donut",
+    "table"
+   ],
+   "desc": "the ceramic donut sits on the table",
+   "question": "Is the ceramic donut sitting on the table?"
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the cat is perched on the table",
+   "question": "Is the cat perched on the table?"
+  },
+  {
+   "id": "plant_near_window",
+   "type": "relation",
+   "of": [
+    "plant",
+    "window"
+   ],
+   "desc": "the houseplant leans close to the window",
+   "question": "Is the houseplant leaning close to the window?"
+  },
+  {
+   "id": "plant_shadows_donut",
+   "type": "relation",
+   "of": [
+    "plant",
+    "donut"
+   ],
+   "desc": "the houseplant casts a shadow on the donut",
+   "question": "Is the houseplant casting a shadow on the donut?"
+  },
+  {
+   "id": "crystal_refracts_light",
+   "type": "relation",
+   "of": [
+    "crystal",
+    "donut"
+   ],
+   "desc": "light refracted by the crystal spills onto the donut",
+   "question": "Is light refracted by the crystal spilling onto the donut?"
+  },
+  {
+   "id": "fly_near_mug",
+   "type": "relation",
+   "of": [
+    "fly",
+    "mug"
+   ],
+   "desc": "the fly orbits around the mug",
+   "question": "Is the fly orbiting around the mug?"
+  },
+  {
+   "id": "clock_near_table",
+   "type": "relation",
+   "of": [
+    "clock",
+    "table"
+   ],
+   "desc": "the clock sits nearby the table",
+   "question": "Is the clock sitting nearby the table?"
+  },
+  {
+   "id": "walls",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "walls",
+   "question": "Are there walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "floorboards",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wooden floorboards",
+   "question": "Are there wooden floorboards?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table_carved",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table is carved from petrified oak",
+   "question": "Is the table carved from petrified oak?"
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is flicking",
+   "question": "Is the cat's tail flicking?"
+  },
+  {
+   "id": "plant_roots_curling",
+   "type": "relation",
+   "of": [
+    "plant",
+    "window"
+   ],
+   "desc": "the plant's roots are curling toward the glass",
+   "question": "Are the plant's roots curling toward the glass?"
+  },
+  {
+   "id": "clock_reflects_mist",
+   "type": "relation",
+   "of": [
+    "clock",
+    "mist"
+   ],
+   "desc": "the clock's glass face reflects the swirling mist",
+   "question": "Does the clock's glass face reflect the swirling mist?"
+  },
+  {
+   "id": "clock_reflects_cat",
+   "type": "relation",
+   "of": [
+    "clock",
+    "cat"
+   ],
+   "desc": "the clock's glass face reflects the cat's eyes",
+   "question": "Does the clock's glass face reflect the cat's eyes?"
+  },
+  {
+   "id": "chandelier_above_table",
+   "type": "relation",
+   "of": [
+    "chandelier",
+    "table"
+   ],
+   "desc": "the chandelier is suspended above the table",
+   "question": "Is the chandelier suspended above the table?"
+  },
+  {
+   "id": "donut_abandoned",
+   "type": "state",
+   "of": "donut",
+   "desc": "the ceramic donut sits abandoned",
+   "question": "Does the ceramic donut appear abandoned?"
+  },
+  {
+   "id": "donut_near_plant",
+   "type": "relation",
+   "of": [
+    "donut",
+    "plant"
+   ],
+   "desc": "the ceramic donut is near the houseplant",
+   "question": "Is the ceramic donut near the houseplant?"
+  },
+  {
+   "id": "chandelier_lit",
+   "type": "state",
+   "of": "chandelier",
+   "desc": "the chandelier bulbs are glowing",
+   "question": "Are the chandelier bulbs glowing?"
+  },
+  {
+   "id": "donut_glaze",
+   "type": "attribute",
+   "of": "donut",
+   "desc": "the donut has a sugar-sprinkle glaze",
+   "question": "Does the donut have a sugar-sprinkle glaze?"
+  },
+  {
+   "id": "cat_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has sleek silver-shimmering fur",
+   "question": "Does the cat have sleek silver-shimmering fur?"
+  },
+  {
+   "id": "fly_dipping",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is dipping in the air",
+   "question": "Is the fly dipping in the air?"
+  },
+  {
+   "id": "walls_peeling",
+   "type": "attribute",
+   "of": "walls",
+   "desc": "the walls have peeling paper",
+   "question": "Do the walls have peeling paper?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "donut",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0140",
+ "prompt": "In the hushed, amber glow of a suspended chandelier, where each bulb hums like a dying star, a steaming mug of coffee rests on a warped, ancient kitchen table carved from petrified oak. The mug’s rim is cracked, and its liquid exhales a spiraling mist that twines upward like a whisper trying to reach the light. A single fairy light, strung haphazardly among dozens of others, flickers in time with the heartbeat of the coffee, as if the two are bound by an unseen rhythm. Nearby, a ceramic donut with a glaze of sugar-sprinkle dreams sits abandoned—its surface slowly collecting motes of dust and time, a silent testament to the fleeting sweetness of morning. The donut is half-shrouded in shadow, cast by a broad-leafed houseplant that leans too close to the window, its roots curling toward the glass as if yearning for a sun that refuses to rise. Sunlight, fragmented and fractured by the prisms of a hanging crystal, spills in a kaleidoscope of shifting colors that dance across the donut, refracting into patterns that suggest hidden messages or forgotten spells. Perched on the very edge of the table is a cat—its sleek fur shimmering like liquid silver under the light’s touch. The cat watches, motionless but aware, as a fly loops and dips in a hypnotic orbit around the mug, the air between them thick with an almost magnetic tension. The fly’s wings vibrate with a strange, melodic hum that echoes faintly, not from the insect, but from the very table itself, as if the wood has learned to sing. The cat’s tail flicks once, slow and deliberate, triggering a domino-like reaction: the fly darts forward, the shadow of the plant stretches just a little longer, and the dust on the donut catches the light in a new constellation of specks. Above, the fairy lights dim and brighten in sequence, mirroring the breath of the coffee, while the coffee, in turn, seems to mirror the pulse of the chandelier. The room is alive with layered conversations between shadow and form, stillness and motion, where every object contributes to an unseen narrative that is neither real nor impossible, but simply there—suspended in the in-between. A clock with no hands sits nearby, its glass face reflecting the swirling mist above and the cat’s watchful eyes below, suggesting that time itself is not absent, but merely disguised. The floorboards creak softly, as if whispering to the walls, and the walls, in turn, lean in, their paper peeling like skin in slow, deliberate motion. In this surreal kitchen, everything breathes, everything speaks, and everything is part of a delicate, interwoven ecosystem of objects and atmospheres that defy logic but hold to an internal truth so vivid it feels like memory—just beyond the reach of recognition.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 47,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

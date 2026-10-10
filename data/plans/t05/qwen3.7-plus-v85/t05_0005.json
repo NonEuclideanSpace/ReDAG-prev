@@ -1,0 +1,289 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    700,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with blue pigtails",
+   "question": "Is there a girl with blue pigtails?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a green sweater",
+   "question": "Is there a boy in a green sweater?",
+   "box": [
+    350,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with orange stripes",
+   "question": "Is there a cat with orange stripes?",
+   "box": [
+    750,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "librarian",
+   "type": "entity",
+   "class": "librarian",
+   "plural": "librarians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a librarian with round glasses",
+   "question": "Is there a librarian with round glasses?",
+   "box": [
+    400,
+    100,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern in a ceramic pot",
+   "question": "Is there a potted fern in a ceramic pot?",
+   "box": [
+    850,
+    300,
+    1000,
+    600
+   ]
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue pigtails is sitting",
+   "question": "Is the girl with blue pigtails sitting?"
+  },
+  {
+   "id": "girl_holding_book",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with blue pigtails holds a textbook",
+   "question": "Is the girl with blue pigtails holding a textbook?"
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "girl",
+   "desc": "the thick textbook held by the girl is open",
+   "question": "Is the thick textbook held by the girl open?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in the green sweater points at a diagram in the book held by the girl",
+   "question": "Is the boy in the green sweater pointing at a diagram in the book held by the girl?"
+  },
+  {
+   "id": "boy_handing_pencil",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in the green sweater hands a pencil to the girl with blue pigtails",
+   "question": "Is the boy in the green sweater handing a pencil to the girl with blue pigtails?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with orange stripes is sleeping",
+   "question": "Is the cat with orange stripes sleeping?"
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the cat with orange stripes is on the wooden table",
+   "question": "Is the cat with orange stripes on the wooden table?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in the green sweater is next to the girl with blue pigtails",
+   "question": "Is the boy in the green sweater next to the girl with blue pigtails?"
+  },
+  {
+   "id": "librarian_behind_boy",
+   "type": "relation",
+   "of": [
+    "librarian",
+    "boy"
+   ],
+   "desc": "the librarian with round glasses is behind the boy in the green sweater",
+   "question": "Is the librarian with round glasses behind the boy in the green sweater?"
+  },
+  {
+   "id": "librarian_looking_books",
+   "type": "action",
+   "of": [
+    "librarian",
+    "books"
+   ],
+   "desc": "the librarian with round glasses looks at a stack of returned books",
+   "question": "Is the librarian with round glasses looking at a stack of returned books?"
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of returned books",
+   "question": "Is there a stack of returned books?",
+   "box": [
+    450,
+    400,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices",
+   "question": "Are there any electronic devices visible in the image?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with orange stripes is sitting",
+   "question": "Is the cat with orange stripes sitting?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    850,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "fern_near_window",
+   "type": "relation",
+   "of": [
+    "fern",
+    "window"
+   ],
+   "desc": "the potted fern is near the window",
+   "question": "Is the potted fern near the window?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0005",
+ "prompt": "In an anime style library reading room, a girl with blue pigtails sits on the left holding a thick textbook. Next to her in the center, a boy in a green sweater points at a diagram within the open pages. On the right, a cat with orange stripes sleeps peacefully atop a wooden table. Behind the boy, a librarian with round glasses looks at a stack of returned books. Near the window on the far right, a potted fern stands tall in a ceramic pot. The boy in the green sweater is handing a pencil to the girl with blue pigtails. The cat with orange stripes is sitting on the wooden table. There is no electronic device visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

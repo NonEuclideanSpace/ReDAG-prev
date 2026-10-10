@@ -1,0 +1,417 @@
+{
+ "style": "photorealistic medical drama",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an emergency room with a wall and a window to the left",
+   "question": "Does the image show an emergency room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stretcher",
+   "type": "entity",
+   "class": "stretcher",
+   "plural": "stretchers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hospital stretcher",
+   "question": "Is there a hospital stretcher?",
+   "box": [
+    100,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "patient",
+   "type": "entity",
+   "class": "patient",
+   "plural": "patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patient",
+   "question": "Is there a patient?",
+   "box": [
+    150,
+    520,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in medical scrubs or coat",
+   "question": "Is there a doctor in medical attire?",
+   "box": [
+    800,
+    200,
+    950,
+    780
+   ]
+  },
+  {
+   "id": "heart_monitor",
+   "type": "entity",
+   "class": "heart monitor",
+   "plural": "heart monitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heart monitor",
+   "question": "Is there a heart monitor?",
+   "box": [
+    50,
+    300,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in medical scrubs",
+   "question": "Is there a nurse in medical attire?",
+   "box": [
+    300,
+    250,
+    450,
+    780
+   ]
+  },
+  {
+   "id": "iv_stand",
+   "type": "entity",
+   "class": "iv drip stand",
+   "plural": "iv drip stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an IV drip stand",
+   "question": "Is there an IV drip stand?",
+   "box": [
+    280,
+    150,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "saline_bags",
+   "type": "entity",
+   "class": "saline bag",
+   "plural": "saline bags",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three bags of saline solution",
+   "question": "Are there exactly three bags of saline solution?",
+   "box": [
+    290,
+    160,
+    390,
+    250
+   ]
+  },
+  {
+   "id": "syringes",
+   "type": "entity",
+   "class": "syringe",
+   "plural": "syringes",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four syringes",
+   "question": "Are there exactly four syringes?",
+   "box": [
+    290,
+    160,
+    390,
+    250
+   ]
+  },
+  {
+   "id": "defibrillator",
+   "type": "entity",
+   "class": "defibrillator",
+   "plural": "defibrillators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a defibrillator",
+   "question": "Is there a defibrillator?",
+   "box": [
+    700,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "ambulance",
+   "type": "entity",
+   "class": "ambulance",
+   "plural": "ambulances",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ambulance parked outside",
+   "question": "Is there an ambulance visible through the window?",
+   "box": [
+    0,
+    100,
+    150,
+    400
+   ]
+  },
+  {
+   "id": "patient_lying",
+   "type": "state",
+   "of": "patient",
+   "desc": "the patient is lying down",
+   "question": "Is the patient lying down?"
+  },
+  {
+   "id": "doctor_facing",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "patient"
+   ],
+   "desc": "the doctor is facing the patient",
+   "question": "Is the doctor facing towards the patient?"
+  },
+  {
+   "id": "monitor_facing",
+   "type": "relation",
+   "of": [
+    "heart_monitor",
+    "doctor"
+   ],
+   "desc": "the heart monitor screen is facing the doctor",
+   "question": "Is the heart monitor screen angled towards the doctor?"
+  },
+  {
+   "id": "nurse_adjusting",
+   "type": "action",
+   "of": [
+    "nurse",
+    "iv_stand"
+   ],
+   "desc": "the nurse is adjusting the IV drip stand",
+   "question": "Is the nurse adjusting the IV drip stand?"
+  },
+  {
+   "id": "nurse_placing",
+   "type": "action",
+   "of": [
+    "nurse",
+    "syringes"
+   ],
+   "desc": "the nurse is placing syringes on the tray",
+   "question": "Is the nurse placing syringes on the tray of the IV stand?"
+  },
+  {
+   "id": "patient_on_stretcher",
+   "type": "relation",
+   "of": [
+    "patient",
+    "stretcher"
+   ],
+   "desc": "the patient is on the stretcher",
+   "question": "Is the patient on the stretcher?"
+  },
+  {
+   "id": "doctor_at_foot",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "stretcher"
+   ],
+   "desc": "the doctor stands at the foot of the stretcher",
+   "question": "Is the doctor standing at the foot end of the stretcher?"
+  },
+  {
+   "id": "monitor_next_to_stretcher",
+   "type": "relation",
+   "of": [
+    "heart_monitor",
+    "stretcher"
+   ],
+   "desc": "the heart monitor is next to the stretcher",
+   "question": "Is the heart monitor next to the stretcher?"
+  },
+  {
+   "id": "nurse_beside_iv",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "iv_stand"
+   ],
+   "desc": "the nurse stands beside the IV drip stand",
+   "question": "Is the nurse standing beside the IV drip stand?"
+  },
+  {
+   "id": "doctor_taller_nurse",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "nurse"
+   ],
+   "desc": "the doctor is taller than the nurse",
+   "question": "Is the doctor visibly taller than the nurse?"
+  },
+  {
+   "id": "iv_taller_doctor",
+   "type": "relation",
+   "of": [
+    "iv_stand",
+    "doctor"
+   ],
+   "desc": "the IV drip stand is taller than the doctor",
+   "question": "Is the IV drip stand visibly taller than the doctor?"
+  },
+  {
+   "id": "bags_on_tray",
+   "type": "relation",
+   "of": [
+    "saline_bags",
+    "iv_stand"
+   ],
+   "desc": "the saline bags are on the tray of the IV drip stand",
+   "question": "Are the saline bags on the tray of the IV drip stand?"
+  },
+  {
+   "id": "syringes_on_tray",
+   "type": "relation",
+   "of": [
+    "syringes",
+    "iv_stand"
+   ],
+   "desc": "the syringes are on the tray of the IV drip stand",
+   "question": "Are the syringes on the tray of the IV drip stand?"
+  },
+  {
+   "id": "defib_behind_doctor",
+   "type": "relation",
+   "of": [
+    "defibrillator",
+    "doctor"
+   ],
+   "desc": "the defibrillator is on the wall behind the doctor",
+   "question": "Is the defibrillator on the wall behind the doctor?"
+  },
+  {
+   "id": "ambulance_outside",
+   "type": "state",
+   "of": "ambulance",
+   "desc": "the ambulance is outside the window",
+   "question": "Is the ambulance visible outside through the window?"
+  },
+  {
+   "id": "doctor_standing",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor stands",
+   "question": "Is the doctor standing?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse stands",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall in the emergency room",
+   "question": "Is there a wall in the emergency room?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    0,
+    100,
+    200,
+    500
+   ]
+  },
+  {
+   "id": "monitor_screen_facing",
+   "type": "state",
+   "of": "heart_monitor",
+   "desc": "the heart monitor screen faces the doctor",
+   "question": "Does the heart monitor screen face the doctor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stretcher",
+   "to": "patient",
+   "kind": "support"
+  },
+  {
+   "from": "iv_stand",
+   "to": "saline_bags",
+   "kind": "support"
+  },
+  {
+   "from": "iv_stand",
+   "to": "syringes",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_074",
+ "prompt": "An emergency room scene. A patient is lying on a stretcher. A doctor stands at the foot of the stretcher, facing the patient. Next to the stretcher is a heart monitor with its screen facing the doctor. A nurse stands beside an IV drip stand, adjusting the drip. The doctor is taller than the nurse. The IV drip stand is taller than the doctor. On a tray on the IV drip stand are three bags of saline solution. The nurse places some syringes on the same tray, and the number of syringes is one more than the number of saline bags. A defibrillator is mounted on a wall behind the doctor. Through a window to the left, an ambulance is parked outside.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

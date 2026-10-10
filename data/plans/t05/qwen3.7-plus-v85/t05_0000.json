@@ -1,0 +1,281 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand",
+   "question": "Does the image show a beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball player in blue shorts",
+   "question": "Is there a volleyball player in blue shorts?",
+   "box": [
+    50,
+    100,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    400,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a yellow hat",
+   "question": "Is there a spectator in a yellow hat?",
+   "box": [
+    700,
+    400,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "folding chair",
+   "plural": "folding chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding chair",
+   "question": "Is there a folding chair?",
+   "box": [
+    720,
+    500,
+    880,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    850,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vendor in an apron",
+   "question": "Is there a vendor in an apron?",
+   "box": [
+    550,
+    300,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "attribute",
+   "of": "vendor",
+   "desc": "the vendor in an apron holds a tray of drinks",
+   "question": "Is the vendor in an apron holding a tray of drinks?"
+  },
+  {
+   "id": "player_jumping",
+   "type": "state",
+   "of": "player",
+   "desc": "the volleyball player in blue shorts is jumping high",
+   "question": "Is the volleyball player in blue shorts jumping high?"
+  },
+  {
+   "id": "player_midair",
+   "type": "state",
+   "of": "player",
+   "desc": "the volleyball player in blue shorts is mid-air above the sand",
+   "question": "Is the volleyball player in blue shorts mid-air above the sand?"
+  },
+  {
+   "id": "player_looking",
+   "type": "action",
+   "of": [
+    "player",
+    "referee"
+   ],
+   "desc": "the volleyball player in blue shorts looks toward the referee in the striped shirt",
+   "question": "Is the volleyball player in blue shorts looking toward the referee in the striped shirt?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt watches intently",
+   "question": "Is the referee in the striped shirt watching intently?"
+  },
+  {
+   "id": "referee_arms_crossed",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt has arms crossed behind his back",
+   "question": "Does the referee in the striped shirt have his arms crossed behind his back?"
+  },
+  {
+   "id": "spectator_sitting",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "chair"
+   ],
+   "desc": "the spectator in the yellow hat sits on the folding chair",
+   "question": "Is the spectator in the yellow hat sitting on the folding chair?"
+  },
+  {
+   "id": "spectator_leaning",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in the yellow hat leans forward slightly",
+   "question": "Is the spectator in the yellow hat leaning forward slightly?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever lies calmly",
+   "question": "Is the golden retriever lying calmly?"
+  },
+  {
+   "id": "spectator_next_to_dog",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "dog"
+   ],
+   "desc": "the spectator in the yellow hat is next to the golden retriever",
+   "question": "Is the spectator in the yellow hat next to the golden retriever?"
+  },
+  {
+   "id": "dog_head_near_leg",
+   "type": "relation",
+   "of": [
+    "dog",
+    "spectator"
+   ],
+   "desc": "the golden retriever rests its head next to the leg of the spectator in the yellow hat",
+   "question": "Is the golden retriever resting its head next to the leg of the spectator in the yellow hat?"
+  },
+  {
+   "id": "vendor_near_net",
+   "type": "relation",
+   "of": [
+    "vendor",
+    "net"
+   ],
+   "desc": "the vendor in an apron is near the net",
+   "question": "Is the vendor in an apron near the net?"
+  },
+  {
+   "id": "no_umbrella",
+   "type": "absent",
+   "desc": "an umbrella",
+   "question": "Is there an umbrella visible in the scene?"
+  },
+  {
+   "id": "player_spike",
+   "type": "state",
+   "of": "player",
+   "desc": "the volleyball player in blue shorts spikes the ball",
+   "question": "Is the volleyball player in blue shorts spiking a ball?"
+  },
+  {
+   "id": "referee_standing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt is standing",
+   "question": "Is the referee in the striped shirt standing?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    300,
+    200,
+    724,
+    600
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "spectator",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0000",
+ "prompt": "In a pencil sketch with light color wash, a beach volleyball tournament unfolds. On the left, a player in blue shorts jumps high to spike the ball. In the center, a referee in a striped shirt watches the play intently. To the right, a spectator in a yellow hat sits on a folding chair. Next to the spectator, a golden retriever lies calmly on the sand. Near the net, a vendor in an apron holds a tray of drinks. The player in blue shorts is mid-air above the sand. The referee stands with arms crossed behind his back. The spectator leans forward slightly in their seat. The player in blue shorts looks toward the referee in the striped shirt. The golden retriever rests its head next to the leg of the spectator in the yellow hat. There is no umbrella visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

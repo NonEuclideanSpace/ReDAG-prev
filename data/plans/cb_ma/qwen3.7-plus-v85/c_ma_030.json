@@ -1,0 +1,151 @@
+{
+ "style": "photorealistic landscape photography, natural lighting, historical architecture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a deep valley in the Mediterranean countryside",
+   "question": "Does the image show a deep valley in the Mediterranean countryside?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "aqueduct",
+   "type": "entity",
+   "class": "aqueduct",
+   "plural": "aqueducts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grand Roman aqueduct bridge with honey-colored patination",
+   "question": "Is there a grand Roman aqueduct bridge with honey-colored patination?",
+   "box": [
+    50,
+    100,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "mile_markers",
+   "type": "entity",
+   "class": "mile marker",
+   "plural": "mile markers",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three ancient Roman stone mile markers inscribed with carved numerals",
+   "question": "Are there three ancient Roman stone mile markers inscribed with carved numerals?",
+   "box": [
+    800,
+    700,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "aqueduct_tiers",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct has three tiers of arches decreasing in size from bottom to top",
+   "question": "Does the aqueduct have three tiers of arches decreasing in size from bottom to top?"
+  },
+  {
+   "id": "aqueduct_material",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct is constructed entirely from rectangular limestone blocks fitted tightly together",
+   "question": "Is the aqueduct constructed entirely from rectangular limestone blocks fitted tightly together?"
+  },
+  {
+   "id": "aqueduct_weathering",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct shows two millennia of weathering, natural lichen growth, and weathering cracks",
+   "question": "Does the aqueduct show two millennia of weathering, natural lichen growth, and weathering cracks?"
+  },
+  {
+   "id": "aqueduct_channel",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct has a water channel on the top tier lined with concrete material and designed with a visible slope",
+   "question": "Does the aqueduct have a water channel on the top tier lined with concrete material and designed with a visible slope?"
+  },
+  {
+   "id": "aqueduct_carvings",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct has stone carvings of imperial eagles on the keystones of the largest arches",
+   "question": "Does the aqueduct have stone carvings of imperial eagles on the keystones of the largest arches?"
+  },
+  {
+   "id": "mile_markers_inscriptions",
+   "type": "attribute",
+   "of": "mile_markers",
+   "desc": "the mile markers are inscribed with dedications to various emperors",
+   "question": "Are the mile markers inscribed with dedications to various emperors?"
+  },
+  {
+   "id": "markers_beside_aqueduct",
+   "type": "relation",
+   "of": [
+    "mile_markers",
+    "aqueduct"
+   ],
+   "desc": "the mile markers stand beside the aqueduct",
+   "question": "Do the mile markers stand beside the aqueduct?"
+  },
+  {
+   "id": "aqueduct_arches_count",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct has many individual arches forming the complete span",
+   "question": "Does the aqueduct have many individual arches forming the complete span?"
+  },
+  {
+   "id": "aqueduct_pillars",
+   "type": "attribute",
+   "of": "aqueduct",
+   "desc": "the aqueduct arches are supported by massive pillars with straight vertical sides",
+   "question": "Are the aqueduct arches supported by massive pillars with straight vertical sides?"
+  },
+  {
+   "id": "aqueduct_not_modern",
+   "type": "state",
+   "of": "aqueduct",
+   "desc": "the aqueduct is not modern",
+   "question": "Does the aqueduct appear ancient and not modern?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_030",
+ "prompt": "A single grand Roman aqueduct bridge spanning a deep valley in the Mediterranean countryside. The structure is monumental and constructed entirely from rectangular limestone blocks fitted tightly together. Its design features three tiers of arches decreasing in size from bottom to top, with each arch having classical proportions according to architectural principles. The aqueduct is not modern, displaying two millennia of weathering and historical authenticity. Many individual arches form the complete span, each supported by massive pillars with straight vertical sides. The structure's water channel runs along the top tier, lined with sconcrete material and designed with a visible slope for optimal flow. Stone carvings of imperial eagles decorate the keystones of the largest arches, while the entire structure shows honey-colored patination from centuries of Mediterranean sun exposure. Three ancient Roman mile markers stand beside the aqueduct, each inscribed with carved numerals and dedications to various emperors. The stonework displays natural lichen growth and some weathering cracks that speak to its great age.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node aqueduct: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

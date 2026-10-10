@@ -1,0 +1,529 @@
+{
+ "style": "surreal photorealistic, moody lighting, detailed textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park scene with grass and a brooding cloudy sky",
+   "question": "Does the image show a park scene with grass and a brooding cloudy sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden park bench",
+   "question": "Is there a weathered wooden park bench?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "telescope",
+   "type": "entity",
+   "class": "telescope",
+   "plural": "telescopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass telescope",
+   "question": "Is there a brass telescope?",
+   "box": [
+    300,
+    550,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose",
+   "question": "Is there a red garden hose?",
+   "box": [
+    850,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "wheelbarrow",
+   "type": "entity",
+   "class": "wheelbarrow",
+   "plural": "wheelbarrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelbarrow",
+   "question": "Is there a wheelbarrow?",
+   "box": [
+    800,
+    650,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "pots",
+   "type": "entity",
+   "class": "clay pot",
+   "plural": "clay pots",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several clay pots",
+   "question": "Are there several clay pots?",
+   "box": [
+    820,
+    680,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "soil_mound",
+   "type": "entity",
+   "class": "mound of soil",
+   "plural": "mounds of soil",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mound of rich damp soil",
+   "question": "Is there a mound of rich damp soil?",
+   "box": [
+    850,
+    880,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "mushrooms",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 3,
+   "count_exact": false,
+   "desc": "small mushrooms",
+   "question": "Are there small mushrooms?",
+   "box": [
+    860,
+    886,
+    940,
+    934
+   ]
+  },
+  {
+   "id": "pebble",
+   "type": "entity",
+   "class": "pebble",
+   "plural": "pebbles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pebble",
+   "question": "Is there a pebble?",
+   "box": [
+    871,
+    896,
+    919,
+    944
+   ]
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "branch",
+   "plural": "branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled low tree branch",
+   "question": "Is there a gnarled low tree branch?",
+   "box": [
+    0,
+    0,
+    400,
+    300
+   ]
+  },
+  {
+   "id": "hat",
+   "type": "entity",
+   "class": "paper hat",
+   "plural": "paper hats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-torn frayed paper hat",
+   "question": "Is there a half-torn frayed paper hat?",
+   "box": [
+    150,
+    250,
+    250,
+    350
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wind-up music box",
+   "question": "Is there a small wind-up music box?",
+   "box": [
+    400,
+    850,
+    500,
+    920
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "sparrow",
+   "plural": "sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sparrow",
+   "question": "Is there a sparrow?",
+   "box": [
+    320,
+    580,
+    380,
+    640
+   ]
+  },
+  {
+   "id": "telescope_on_bench",
+   "type": "relation",
+   "of": [
+    "telescope",
+    "bench"
+   ],
+   "desc": "the brass telescope rests on the wooden bench",
+   "question": "Is the brass telescope resting on the wooden bench?"
+  },
+  {
+   "id": "hose_near_wheelbarrow",
+   "type": "relation",
+   "of": [
+    "hose",
+    "wheelbarrow"
+   ],
+   "desc": "the red garden hose slithers around the wheelbarrow",
+   "question": "Is the red garden hose slithering around the wheelbarrow?"
+  },
+  {
+   "id": "pots_in_wheelbarrow",
+   "type": "relation",
+   "of": [
+    "pots",
+    "wheelbarrow"
+   ],
+   "desc": "the clay pots are inside the wheelbarrow",
+   "question": "Are the clay pots inside the wheelbarrow?"
+  },
+  {
+   "id": "soil_from_pot",
+   "type": "relation",
+   "of": [
+    "soil_mound",
+    "pots"
+   ],
+   "desc": "the mound of soil is spilled from one of the clay pots",
+   "question": "Is the mound of soil spilled from one of the clay pots?"
+  },
+  {
+   "id": "soil_on_grass",
+   "type": "state",
+   "of": "soil_mound",
+   "desc": "the mound of soil is on the grass",
+   "question": "Is the mound of soil on the grass?"
+  },
+  {
+   "id": "mushrooms_on_soil",
+   "type": "relation",
+   "of": [
+    "mushrooms",
+    "soil_mound"
+   ],
+   "desc": "the mushrooms sprout from the mound of soil",
+   "question": "Do the mushrooms sprout from the mound of soil?"
+  },
+  {
+   "id": "hat_on_branch",
+   "type": "relation",
+   "of": [
+    "hat",
+    "branch"
+   ],
+   "desc": "the paper hat sways from the low branch",
+   "question": "Is the paper hat swaying from the low branch?"
+  },
+  {
+   "id": "music_box_under_bench",
+   "type": "relation",
+   "of": [
+    "music_box",
+    "bench"
+   ],
+   "desc": "the music box is hidden beneath the bench",
+   "question": "Is the music box hidden beneath the bench?"
+  },
+  {
+   "id": "sparrow_near_telescope",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "telescope"
+   ],
+   "desc": "the sparrow perches near the telescope",
+   "question": "Is the sparrow perching near the telescope?"
+  },
+  {
+   "id": "sparrow_looking",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "telescope"
+   ],
+   "desc": "the sparrow is looking at the telescope lens",
+   "question": "Is the sparrow looking at the telescope lens?"
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "ants marching in concentric circles",
+   "question": "Are there ants marching in concentric circles?",
+   "box": [
+    800,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "leaf",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leaf fluttering",
+   "question": "Is there a leaf fluttering?",
+   "box": [
+    400,
+    400,
+    450,
+    450
+   ]
+  },
+  {
+   "id": "branch_shadow",
+   "type": "relation",
+   "of": [
+    "branch",
+    "bench"
+   ],
+   "desc": "the branch casts a shadow over the bench",
+   "question": "Does the branch cast a shadow over the bench?"
+  },
+  {
+   "id": "pebble_moss",
+   "type": "attribute",
+   "of": "pebble",
+   "desc": "the pebble is covered with bioluminescent moss",
+   "question": "Is the pebble covered with bioluminescent moss?"
+  },
+  {
+   "id": "ants_path",
+   "type": "relation",
+   "of": [
+    "ants",
+    "pebble"
+   ],
+   "desc": "the ants' path curves around the pebble",
+   "question": "Do the ants' paths curve around the pebble?"
+  },
+  {
+   "id": "branch_peeling",
+   "type": "state",
+   "of": "branch",
+   "desc": "the branch's bark is peeling",
+   "question": "Is the branch's bark peeling?"
+  },
+  {
+   "id": "hat_swaying",
+   "type": "state",
+   "of": "hat",
+   "desc": "the paper hat is swaying",
+   "question": "Is the paper hat swaying?"
+  },
+  {
+   "id": "wheelbarrow_wheel",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "the wheelbarrow's wheel is clogged with roots",
+   "question": "Is the wheelbarrow's wheel clogged with roots?"
+  },
+  {
+   "id": "wheelbarrow_handle",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "the wheelbarrow's handle is bent",
+   "question": "Is the wheelbarrow's handle bent?"
+  },
+  {
+   "id": "pot_toppled",
+   "type": "state",
+   "of": "pots",
+   "desc": "one of the clay pots is toppled",
+   "question": "Is one of the clay pots toppled?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose is uncoiled",
+   "question": "Is the red garden hose uncoiled?"
+  },
+  {
+   "id": "sparrow_perched",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the sparrow is perched",
+   "question": "Is the sparrow perched?"
+  },
+  {
+   "id": "telescope_curved",
+   "type": "attribute",
+   "of": "telescope",
+   "desc": "the brass telescope has a curved form",
+   "question": "Does the brass telescope have a curved form?"
+  },
+  {
+   "id": "sky_above_bench",
+   "type": "state",
+   "of": "bench",
+   "desc": "the sky is above the wooden bench",
+   "question": "Is the sky above the wooden bench?"
+  },
+  {
+   "id": "hose_beside_bench",
+   "type": "relation",
+   "of": [
+    "hose",
+    "bench"
+   ],
+   "desc": "the red garden hose is beside the wooden bench",
+   "question": "Is the red garden hose beside the wooden bench?"
+  },
+  {
+   "id": "branch_above_bench",
+   "type": "relation",
+   "of": [
+    "branch",
+    "bench"
+   ],
+   "desc": "the gnarled branch is above the wooden bench",
+   "question": "Is the gnarled branch above the wooden bench?"
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle of water reflecting the sky and park",
+   "question": "Is there a puddle of water reflecting the sky and park?",
+   "box": [
+    50,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "telescope_patina",
+   "type": "attribute",
+   "of": "telescope",
+   "desc": "the brass telescope has a patina",
+   "question": "Does the brass telescope have a patina?"
+  },
+  {
+   "id": "pebble_glowing",
+   "type": "attribute",
+   "of": "pebble",
+   "desc": "the pebble glows with bioluminescent moss",
+   "question": "Does the pebble glow with bioluminescent moss?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "telescope",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "music_box",
+   "kind": "support"
+  },
+  {
+   "from": "wheelbarrow",
+   "to": "pots",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0154",
+ "prompt": "The brass telescope rests on the wooden park bench, its curved form gleaming with a patina of aged curiosity, as if it had once been used to peer not just at the sky but into the fabric of time itself. The wooden bench, though weathered, holds a peculiar stillness, as if it were carved from the bones of a long-forgotten tree, its grain running like a map of some ancient world. Above it, the sky is a brooding mass of clouds, shifting in slow, deliberate spirals, as though the atmosphere itself were caught in a silent waltz with the telescope’s gaze. Beside the bench, a red garden hose, once coiled in orderly precision, now slithers around a wheelbarrow that has become a vessel for chaos—its wheel clogged with roots and its handle bent in an angle that defies the laws of engineering. Inside the wheelbarrow, clay pots jostle like prisoners in a shared cell, each one holding a story of neglect and forgotten cultivation. One of the pots has toppled, spilling a mound of rich, damp soil that has seeped into the grass, forming a miniature ecosystem where mushrooms sprout like tiny umbrellas and ants march in concentric circles, their path curving oddly around a pebble that glows faintly with bioluminescent moss. Above the chaos, a paper hat—half torn and frayed by the wind—sways from a low branch, its limp form a ghost of laughter in the air. The branch itself is gnarled and ancient, its bark peeling like the pages of a forgotten journal, and the shadow it casts over the bench seems to shift independently, almost as if it has a will of its own. Nearby, a puddle of water reflects not just the cloudy sky but the entire park in reverse, its surface distorted by ripples caused by the occasional flutter of a leaf or the distant honk of a bus that never arrives. A small wind-up music box, hidden beneath the bench, ticks softly in sync with the heartbeat of the world, its gears clicking in time with the turning of the telescope, as if the bench itself is a clockwork mechanism, winding down from a grand design. The air is thick with the scent of earth and old wood, mingling with the metallic tang of the telescope and the damp sweetness of the overturned pot. A sparrow perches near the telescope, its eyes locked on the lens as if it too were searching for answers to questions only birds understand. And yet, despite the surreal arrangement of objects, everything fits together in a delicate balance—each element a note in a larger, unspoken symphony, where time and space blur and the impossible becomes not just plausible, but inevitable.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 37,
+   "n_uncovered": 8,
+   "proposed": 5,
+   "ungrounded": 1,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

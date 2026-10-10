@@ -1,0 +1,630 @@
+{
+ "style": "photorealistic beach scene, bright daylight",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach with ocean and sand",
+   "question": "Does the image show a beach with ocean and sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lifeguard_chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall lifeguard chair",
+   "question": "Is there a tall lifeguard chair?",
+   "box": [
+    450,
+    300,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "lifeguard",
+   "type": "entity",
+   "class": "lifeguard",
+   "plural": "lifeguards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a muscular lifeguard",
+   "question": "Is there a muscular lifeguard?",
+   "box": [
+    460,
+    250,
+    590,
+    600
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "attribute",
+   "of": "lifeguard",
+   "desc": "the lifeguard holds binoculars",
+   "question": "Is the lifeguard holding binoculars?"
+  },
+  {
+   "id": "lifeguard_sitting",
+   "type": "state",
+   "of": "lifeguard",
+   "desc": "the lifeguard is sitting",
+   "question": "Is the lifeguard sitting?"
+  },
+  {
+   "id": "lifeguard_focused",
+   "type": "state",
+   "of": "lifeguard",
+   "desc": "the lifeguard has a focused expression",
+   "question": "Does the lifeguard have a focused expression?"
+  },
+  {
+   "id": "lifeguard_on_chair",
+   "type": "relation",
+   "of": [
+    "lifeguard",
+    "lifeguard_chair"
+   ],
+   "desc": "the lifeguard is on the tall chair",
+   "question": "Is the lifeguard on the tall chair?"
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a relaxed beach vendor",
+   "question": "Is there a relaxed beach vendor?",
+   "box": [
+    100,
+    400,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "vendor_relaxed",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the beach vendor looks relaxed",
+   "question": "Does the beach vendor look relaxed?"
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cooler",
+   "question": "Is there a cooler?",
+   "box": [
+    50,
+    650,
+    150,
+    750
+   ]
+  },
+  {
+   "id": "vendor_walking",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the beach vendor is walking",
+   "question": "Is the beach vendor walking?"
+  },
+  {
+   "id": "vendor_pulling_cooler",
+   "type": "action",
+   "of": [
+    "vendor",
+    "cooler"
+   ],
+   "desc": "the beach vendor is pulling the cooler",
+   "question": "Is the beach vendor pulling the cooler?"
+  },
+  {
+   "id": "drinks",
+   "type": "entity",
+   "class": "cold drink",
+   "plural": "cold drinks",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two cold drinks in the cooler",
+   "question": "Are there two cold drinks visible in the cooler?",
+   "box": [
+    60,
+    656,
+    140,
+    704
+   ]
+  },
+  {
+   "id": "ice_cream",
+   "type": "entity",
+   "class": "ice cream bar",
+   "plural": "ice cream bars",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six ice cream bars in the cooler",
+   "question": "Are there six ice cream bars visible in the cooler?",
+   "box": [
+    60,
+    656,
+    140,
+    704
+   ]
+  },
+  {
+   "id": "surfer",
+   "type": "entity",
+   "class": "surfer",
+   "plural": "surfers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a surfer riding a wave",
+   "question": "Is there a surfer riding a wave?",
+   "box": [
+    800,
+    200,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "lifeguard_pointing",
+   "type": "action",
+   "of": [
+    "lifeguard",
+    "surfer"
+   ],
+   "desc": "the lifeguard is pointing at the surfer",
+   "question": "Is the lifeguard pointing at the surfer?"
+  },
+  {
+   "id": "father",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a father digging in the sand",
+   "question": "Is there a man digging in the sand?",
+   "box": [
+    300,
+    600,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "mother",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mother shaping a sandcastle",
+   "question": "Is there a woman shaping a sandcastle?",
+   "box": [
+    400,
+    600,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child",
+   "question": "Is there a child?",
+   "box": [
+    350,
+    650,
+    420,
+    780
+   ]
+  },
+  {
+   "id": "sandcastle",
+   "type": "entity",
+   "class": "sandcastle",
+   "plural": "sandcastles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sandcastle",
+   "question": "Is there a sandcastle?",
+   "box": [
+    320,
+    620,
+    480,
+    720
+   ]
+  },
+  {
+   "id": "buckets",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two buckets",
+   "question": "Are there two buckets?",
+   "box": [
+    360,
+    680,
+    410,
+    730
+   ]
+  },
+  {
+   "id": "father_digging",
+   "type": "state",
+   "of": "father",
+   "desc": "the father is digging",
+   "question": "Is the father digging?"
+  },
+  {
+   "id": "mother_shaping",
+   "type": "state",
+   "of": "mother",
+   "desc": "the mother is shaping the sandcastle",
+   "question": "Is the mother shaping the sandcastle?"
+  },
+  {
+   "id": "child_carrying",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is carrying a bucket",
+   "question": "Is the child carrying a bucket?"
+  },
+  {
+   "id": "family_group",
+   "type": "relation",
+   "of": [
+    "father",
+    "mother",
+    "child"
+   ],
+   "desc": "the father, mother, and child are together as a family",
+   "question": "Are the father, mother, and child grouped together near the sandcastle?"
+  },
+  {
+   "id": "couple_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man diving underwater",
+   "question": "Is there a man diving underwater in the ocean?",
+   "box": [
+    700,
+    400,
+    800,
+    500
+   ]
+  },
+  {
+   "id": "couple_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    650,
+    350,
+    750,
+    450
+   ]
+  },
+  {
+   "id": "raft",
+   "type": "entity",
+   "class": "inflatable raft",
+   "plural": "inflatable rafts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an inflatable raft",
+   "question": "Is there an inflatable raft in the ocean?",
+   "box": [
+    650,
+    380,
+    750,
+    440
+   ]
+  },
+  {
+   "id": "picnic_basket",
+   "type": "entity",
+   "class": "picnic basket",
+   "plural": "picnic baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unattended picnic basket",
+   "question": "Is there an unattended picnic basket?",
+   "box": [
+    150,
+    700,
+    250,
+    780
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seagull flying overhead",
+   "question": "Is there a seagull flying overhead?",
+   "box": [
+    176,
+    100,
+    224,
+    150
+   ]
+  },
+  {
+   "id": "seagull_diving",
+   "type": "action",
+   "of": [
+    "seagull",
+    "picnic_basket"
+   ],
+   "desc": "the seagull is diving toward the picnic basket",
+   "question": "Is the seagull diving toward the picnic basket?"
+  },
+  {
+   "id": "woman_on_raft",
+   "type": "relation",
+   "of": [
+    "couple_woman",
+    "raft"
+   ],
+   "desc": "the woman is on the inflatable raft",
+   "question": "Is the woman on the inflatable raft?"
+  },
+  {
+   "id": "umbrella",
+   "type": "entity",
+   "class": "beach umbrella",
+   "plural": "beach umbrellas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a beach umbrella planted in the sand",
+   "question": "Is there a beach umbrella planted in the sand?",
+   "box": [
+    800,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "towel",
+   "plural": "towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a towel",
+   "question": "Is there a towel?",
+   "box": [
+    820,
+    750,
+    920,
+    800
+   ]
+  },
+  {
+   "id": "umbrella_next_to_towel",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "towel"
+   ],
+   "desc": "the beach umbrella is next to the towel",
+   "question": "Is the beach umbrella next to the towel?"
+  },
+  {
+   "id": "swimmers",
+   "type": "entity",
+   "class": "swimmer",
+   "plural": "swimmers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "swimmers in the ocean",
+   "question": "Are there swimmers in the ocean?",
+   "box": [
+    0,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "lifeguard_watching",
+   "type": "action",
+   "of": [
+    "lifeguard",
+    "swimmers"
+   ],
+   "desc": "the lifeguard is watching the swimmers",
+   "question": "Is the lifeguard watching the swimmers?"
+  },
+  {
+   "id": "couple_man_diving",
+   "type": "state",
+   "of": "couple_man",
+   "desc": "the man is diving underwater",
+   "question": "Is the man diving underwater?"
+  },
+  {
+   "id": "couple_woman_floating",
+   "type": "state",
+   "of": "couple_woman",
+   "desc": "the woman is floating on an inflatable raft",
+   "question": "Is the woman floating on an inflatable raft?"
+  },
+  {
+   "id": "couple_swimming",
+   "type": "action",
+   "of": [
+    "couple_man",
+    "couple_woman"
+   ],
+   "desc": "the couple is swimming in the ocean",
+   "question": "Is the couple swimming in the ocean?"
+  },
+  {
+   "id": "seagull_flying",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull is flying overhead",
+   "question": "Is the seagull flying overhead?"
+  },
+  {
+   "id": "sandcastle_towers",
+   "type": "attribute",
+   "of": "sandcastle",
+   "desc": "the sandcastle has three towers",
+   "question": "Does the sandcastle have three towers?"
+  },
+  {
+   "id": "lifeguard_stronger",
+   "type": "relation",
+   "of": [
+    "lifeguard",
+    "vendor"
+   ],
+   "desc": "the lifeguard appears stronger than the beach vendor",
+   "question": "Does the lifeguard appear stronger than the beach vendor?"
+  },
+  {
+   "id": "buckets_count",
+   "type": "relation",
+   "of": [
+    "buckets",
+    "sandcastle"
+   ],
+   "desc": "the number of buckets is one less than the number of towers",
+   "question": "Is the number of buckets one less than the number of towers on the sandcastle?"
+  },
+  {
+   "id": "ice_cream_count_relation",
+   "type": "relation",
+   "of": [
+    "ice_cream",
+    "drinks"
+   ],
+   "desc": "the number of ice cream bars is three times the number of cold drinks",
+   "question": "Is the number of ice cream bars three times the number of cold drinks?"
+  },
+  {
+   "id": "drinks_in_cooler",
+   "type": "relation",
+   "of": [
+    "drinks",
+    "cooler"
+   ],
+   "desc": "the cold drinks are associated with the cooler",
+   "question": "Are the cold drinks associated with the cooler?"
+  },
+  {
+   "id": "ice_cream_in_cooler",
+   "type": "relation",
+   "of": [
+    "ice_cream",
+    "cooler"
+   ],
+   "desc": "the ice cream bars are associated with the cooler",
+   "question": "Are the ice cream bars associated with the cooler?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "lifeguard_chair",
+   "to": "lifeguard",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cooler",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "sandcastle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "picnic_basket",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "umbrella",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "towel",
+   "kind": "support"
+  },
+  {
+   "from": "cooler",
+   "to": "drinks",
+   "kind": "support"
+  },
+  {
+   "from": "cooler",
+   "to": "ice_cream",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_015",
+ "prompt": "A beach scene with vacationers and activities. A lifeguard is sitting on a tall chair, watching swimmers in the ocean and holding binoculars. The lifeguard appears stronger and focused than the relaxed beach vendor. The lifeguard is pointing at a surfer riding a wave further out. A family is building a sandcastle with three towers on the beach. The father is digging while the mother shapes the castle walls. Their child has a number of buckets, which is one less than the number of towers, and is carrying one to the construction site. A beach vendor is walking along the shore, pulling a cooler behind him. The cooler contains two cold drinks and a number of ice cream bars. The number of ice cream bars is three times the number of cold drinks. A seagull is flying overhead, diving toward a picnic basket that a couple has left unattended. The couple is swimming in the ocean; the woman is floating on an inflatable raft while the man is diving underwater. A beach umbrella is planted in the sand next to a towel.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 3,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

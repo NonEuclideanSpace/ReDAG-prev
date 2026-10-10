@@ -1,0 +1,586 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, impossible physics, soft lighting without shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park setting with a strange tree and a distant clock tower",
+   "question": "Does the image show a park setting with a strange tree and a distant clock tower?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden park bench",
+   "question": "Is there a wooden park bench?",
+   "box": [
+    100,
+    500,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "satchel",
+   "type": "entity",
+   "class": "satchel",
+   "plural": "satchels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open weathered leather satchel",
+   "question": "Is there an open weathered leather satchel?",
+   "box": [
+    300,
+    520,
+    500,
+    650
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tattered notebook",
+   "question": "Is there a tattered notebook?",
+   "box": [
+    320,
+    540,
+    420,
+    600
+   ]
+  },
+  {
+   "id": "compass",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass compass",
+   "question": "Is there a brass compass?",
+   "box": [
+    450,
+    550,
+    520,
+    620
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded map",
+   "question": "Is there a folded map?",
+   "box": [
+    500,
+    560,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nearby tree with roots taking the map as sustenance",
+   "question": "Is there a nearby tree with roots taking the map as sustenance?",
+   "box": [
+    600,
+    100,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "red rubber ball",
+   "plural": "red rubber balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s bright red rubber ball",
+   "question": "Is there a child’s bright red rubber ball?",
+   "box": [
+    850,
+    780,
+    920,
+    850
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "paper cup",
+   "plural": "paper cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming paper cup of coffee",
+   "question": "Is there a steaming paper cup of coffee?",
+   "box": [
+    200,
+    530,
+    260,
+    600
+   ]
+  },
+  {
+   "id": "backpacker",
+   "type": "entity",
+   "class": "backpacker",
+   "plural": "backpackers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slumbering backpacker",
+   "question": "Is there a slumbering backpacker?",
+   "box": [
+    150,
+    300,
+    350,
+    550
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "stray cat",
+   "plural": "stray cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    350,
+    750,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single moth",
+   "question": "Is there a single moth?",
+   "box": [
+    471,
+    531,
+    519,
+    579
+   ]
+  },
+  {
+   "id": "ivy_spire",
+   "type": "entity",
+   "class": "ivy spire",
+   "plural": "ivy spires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny spire of ivy",
+   "question": "Is there a tiny spire of ivy?",
+   "box": [
+    460,
+    600,
+    530,
+    700
+   ]
+  },
+  {
+   "id": "satchel_on_bench",
+   "type": "relation",
+   "of": [
+    "satchel",
+    "bench"
+   ],
+   "desc": "the satchel rests on the bench",
+   "question": "Is the satchel resting on the bench?"
+  },
+  {
+   "id": "contents_in_satchel",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "satchel"
+   ],
+   "desc": "the notebook spills forth from the satchel",
+   "question": "Is the notebook spilling forth from the satchel?"
+  },
+  {
+   "id": "contents_in_satchel_2",
+   "type": "relation",
+   "of": [
+    "compass",
+    "satchel"
+   ],
+   "desc": "the compass spills forth from the satchel",
+   "question": "Is the compass spilling forth from the satchel?"
+  },
+  {
+   "id": "map_to_tree",
+   "type": "relation",
+   "of": [
+    "map",
+    "tree"
+   ],
+   "desc": "the map disappears beneath the tree",
+   "question": "Does the map disappear beneath the tree?"
+  },
+  {
+   "id": "ball_near_cup",
+   "type": "relation",
+   "of": [
+    "ball",
+    "cup"
+   ],
+   "desc": "the ball rolls toward the edge of the bench beside the cup",
+   "question": "Is the ball rolling toward the edge of the bench beside the cup?"
+  },
+  {
+   "id": "cup_near_backpacker",
+   "type": "relation",
+   "of": [
+    "cup",
+    "backpacker"
+   ],
+   "desc": "the cup is beside the backpacker",
+   "question": "Is the cup beside the backpacker?"
+  },
+  {
+   "id": "cat_at_bench_base",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the cat is at the bench’s base",
+   "question": "Is the cat at the bench’s base?"
+  },
+  {
+   "id": "strap_touches_cat",
+   "type": "relation",
+   "of": [
+    "satchel",
+    "cat"
+   ],
+   "desc": "the satchel’s strap brushes the cat",
+   "question": "Does the satchel’s strap brush the cat?"
+  },
+  {
+   "id": "moth_on_compass",
+   "type": "relation",
+   "of": [
+    "moth",
+    "compass"
+   ],
+   "desc": "the moth lands on the tip of the compass needle",
+   "question": "Is the moth landing on the tip of the compass needle?"
+  },
+  {
+   "id": "ivy_wraps_compass",
+   "type": "relation",
+   "of": [
+    "ivy_spire",
+    "compass"
+   ],
+   "desc": "the ivy wraps around the compass casing",
+   "question": "Does the ivy wrap around the compass casing?"
+  },
+  {
+   "id": "backpacker_slumbering",
+   "type": "state",
+   "of": "backpacker",
+   "desc": "the backpacker is slumbering with eyelids fluttering but not open",
+   "question": "Is the backpacker slumbering with eyelids fluttering but not open?"
+  },
+  {
+   "id": "cup_steaming",
+   "type": "state",
+   "of": "cup",
+   "desc": "the coffee cup is steaming in a steady rhythmic plume",
+   "question": "Is the coffee cup steaming in a steady rhythmic plume?"
+  },
+  {
+   "id": "compass_stabilizing",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass needle is stabilizing",
+   "question": "Is the compass needle stabilizing?"
+  },
+  {
+   "id": "no_shadows",
+   "type": "absent",
+   "desc": "shadows cast by the tree",
+   "question": "Are there any shadows cast by the tree?"
+  },
+  {
+   "id": "backpacker_hair",
+   "type": "attribute",
+   "of": "backpacker",
+   "desc": "the backpacker has tousled hair",
+   "question": "Does the backpacker have tousled hair?"
+  },
+  {
+   "id": "backpacker_boots",
+   "type": "attribute",
+   "of": "backpacker",
+   "desc": "the backpacker wears mismatched boots",
+   "question": "Is the backpacker wearing mismatched boots?"
+  },
+  {
+   "id": "cat_circle",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is curled in a perfect circle",
+   "question": "Is the cat curled in a perfect circle?"
+  },
+  {
+   "id": "ball_rolling",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is rolling",
+   "question": "Is the red rubber ball rolling?"
+  },
+  {
+   "id": "cup_reflections",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "the coffee’s surface shimmers with reflections of the sky",
+   "question": "Does the coffee’s surface shimmer with reflections of the sky?"
+  },
+  {
+   "id": "tree_branches_lattice",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree branches form a lattice",
+   "question": "Do the branches of the tree form a lattice?"
+  },
+  {
+   "id": "map_under_tree",
+   "type": "relation",
+   "of": [
+    "map",
+    "tree"
+   ],
+   "desc": "the map disappears beneath the tree roots",
+   "question": "Does the map disappear beneath the tree roots?"
+  },
+  {
+   "id": "ball_edge_bench",
+   "type": "relation",
+   "of": [
+    "ball",
+    "bench"
+   ],
+   "desc": "the ball rolls toward the edge of the bench",
+   "question": "Is the ball rolling toward the edge of the bench?"
+  },
+  {
+   "id": "cat_base_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the cat is at the base of the bench",
+   "question": "Is the cat at the base of the bench?"
+  },
+  {
+   "id": "strap_brushes_cat",
+   "type": "action",
+   "of": [
+    "satchel",
+    "cat"
+   ],
+   "desc": "the satchel strap brushes the cat's fur",
+   "question": "Does the satchel strap brush the cat's fur?"
+  },
+  {
+   "id": "backpacker_eyes_closed",
+   "type": "state",
+   "of": "backpacker",
+   "desc": "the backpacker's eyelids flutter but do not open",
+   "question": "Do the backpacker's eyelids flutter without opening?"
+  },
+  {
+   "id": "cup_steady_steam",
+   "type": "state",
+   "of": "cup",
+   "desc": "the cup steams in a steady rhythmic plume",
+   "question": "Does the cup steam in a steady rhythmic plume?"
+  },
+  {
+   "id": "cup_untouched",
+   "type": "state",
+   "of": "cup",
+   "desc": "the coffee cup remains untouched",
+   "question": "Does the coffee cup remain untouched?"
+  },
+  {
+   "id": "bench_gnarled",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the wooden park bench is gnarled with age and streaked by seasons",
+   "question": "Is the wooden park bench gnarled with age and streaked by seasons?"
+  },
+  {
+   "id": "satchel_flaps",
+   "type": "state",
+   "of": "satchel",
+   "desc": "the satchel's leather flaps hang loose",
+   "question": "Do the satchel's leather flaps hang loose?"
+  },
+  {
+   "id": "notebook_pages",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the notebook has curled pages with inked script",
+   "question": "Does the notebook have curled pages with inked script?"
+  },
+  {
+   "id": "compass_needle",
+   "type": "state",
+   "of": "compass",
+   "desc": "the compass needle is spinning wildly",
+   "question": "Is the compass needle spinning wildly?"
+  },
+  {
+   "id": "map_unspooling",
+   "type": "state",
+   "of": "map",
+   "desc": "the map is unspooling like a ribbon and curling down the bench",
+   "question": "Is the map unspooling like a ribbon and curling down the bench?"
+  },
+  {
+   "id": "tree_branches",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree's branches form a lattice that blocks out parts of the sun",
+   "question": "Do the tree's branches form a lattice that blocks out parts of the sun?"
+  },
+  {
+   "id": "moth_wings",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth has iridescent wings",
+   "question": "Does the moth have iridescent wings?"
+  },
+  {
+   "id": "ivy_twisting",
+   "type": "state",
+   "of": "ivy_spire",
+   "desc": "the ivy spire is twisting upward from a soft mound",
+   "question": "Is the ivy spire twisting upward from a soft mound?"
+  },
+  {
+   "id": "no_other_shadows",
+   "type": "absent",
+   "desc": "shadows cast by other objects",
+   "question": "Are there any shadows cast by other objects?"
+  },
+  {
+   "id": "cup_tree_reflection",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "the coffee’s surface shimmers with reflections of the tree",
+   "question": "Does the coffee’s surface shimmer with reflections of the tree?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "satchel",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "backpacker",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "compass",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "map",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0325",
+ "prompt": "The wooden park bench, gnarled with age and streaked by the passing of seasons, cradles the open satchel like a sleeping beast unguarded for the first time in years. Its weathered leather flaps hang loose, spilling forth the contents of a long journey: a tattered notebook with pages curled and inked in hurried script, a brass compass with its needle spinning wildly in defiance of direction, and a folded map that has somehow begun to unspool like a ribbon, curling down the bench and disappearing beneath a nearby tree whose roots have taken the map’s paper as sustenance. A child’s red rubber ball, bright and out of place, rolls toward the edge of the bench, its motion slow and almost deliberate, as if pulled by some unseen current in the air. It nearly tips the steaming paper cup of coffee beside a slumbering backpacker, whose tousled hair and mismatched boots suggest a long and chaotic odyssey. The coffee’s surface shimmers with reflections of the sky above and the strange tree below, whose branches seem to bend unnaturally, forming a lattice that blocks out parts of the sun but never casts shadows. The satchel’s strap dangles down, brushing the fur of a stray cat curled in a perfect circle at the bench’s base, its breathing slow and deep, as if it too is dreaming of the road not taken. Around the bench, the air hums faintly, charged with the kind of energy that might exist in a place between places—where the rules of physics are not broken, but gently reinterpreted. A single moth, its wings iridescent with impossible hues, flutters through the air, pausing to land on the tip of the compass needle, which begins to stabilize, as if the moth’s presence calms the chaos. The notebook’s pages rustle softly, despite no wind, and as the child’s ball rolls off the edge, the ground beneath it does not harden—it swells slightly, as if the earth itself is catching the ball and cradling it like a child. From this soft mound rises a tiny spire of ivy, twisting upward and wrapping around the compass’s casing, now fused with plant and metal in an unbroken, symbiotic spiral. The cat’s tail flicks once, sending a small ripple through the bench, and for a moment, the backpacker’s eyelids flutter, though they do not open. The coffee cup remains untouched, steaming in a steady, rhythmic plume, as if it is not merely cooling but conversing with the atmosphere. In the distance, a clock tower chimes an hour that does not exist, its sound echoing in layers, as though time itself is folding in on itself here. And through it all, the scene remains utterly still, a frozen instant where motion and stillness are not opposites but collaborators in a surreal, impossible ballet.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [
+   "node tree: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 60,
+   "n_uncovered": 4,
+   "proposed": 4,
+   "ungrounded": 2,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cup_beside_backpacker",
+     "cup_near_backpacker"
+    ]
+   ]
+  }
+ }
+}

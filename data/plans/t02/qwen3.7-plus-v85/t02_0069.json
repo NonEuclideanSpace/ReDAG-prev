@@ -1,0 +1,119 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    400,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    600,
+    450,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tent",
+   "question": "Is there a small tent?",
+   "box": [
+    750,
+    300,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "dog_standing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is standing",
+   "question": "Is the brown dog standing?"
+  },
+  {
+   "id": "man_looking_at_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in a red scarf is looking at the brown dog",
+   "question": "Is the man in a red scarf looking at the brown dog?"
+  },
+  {
+   "id": "dog_near_tent",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tent"
+   ],
+   "desc": "the brown dog is near the small tent",
+   "question": "Is the brown dog near the small tent?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0069",
+ "prompt": "In a flat vector illustration, a man in a red scarf sits on the left side of a mountain campsite. A brown dog stands on the right side near a small tent. The man is looking at the brown dog. There is no fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

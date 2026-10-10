@@ -1,0 +1,137 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image depict a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue coat",
+   "question": "Is there a child in a blue coat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green hat",
+   "question": "Is there a woman in a green hat?",
+   "box": [
+    380,
+    250,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    720,
+    280,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the blue coat is standing still",
+   "question": "Is the child in the blue coat standing still?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the green hat points",
+   "question": "Is the woman in the green hat pointing?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is looking at the woman in the green hat",
+   "question": "Is the man in the red scarf looking at the woman in the green hat?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child in the blue coat is next to the woman in the green hat",
+   "question": "Is the child in the blue coat next to the woman in the green hat?"
+  },
+  {
+   "id": "no_tree",
+   "type": "absent",
+   "desc": "tree",
+   "question": "Are there any trees in the image?"
+  },
+  {
+   "id": "woman_direction",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the green hat points toward the right",
+   "question": "Is the woman in the green hat pointing toward the right?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0019",
+ "prompt": "This flat vector illustration depicts a snowy town square. On the left, a child in a blue coat stands still. In the center, a woman in a green hat points toward the right. On the right, a man in a red scarf looks at the pointing woman. The child in the blue coat is next to the woman in the green hat. There is no tree.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

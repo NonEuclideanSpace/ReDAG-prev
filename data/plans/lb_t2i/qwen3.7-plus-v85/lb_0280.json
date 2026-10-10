@@ -1,0 +1,656 @@
+{
+ "style": "surreal photorealistic, moody lighting, bruised purple and deep orange palette, atmospheric fog",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal outdoor scene with an oak tree canopy of bruised purple and deep orange leaves, a gravel path, and a screen door",
+   "question": "Does the image show a surreal outdoor scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "porch",
+   "type": "entity",
+   "class": "wooden porch",
+   "plural": "wooden porches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a splintered, weathered wooden porch",
+   "question": "Is there a splintered, weathered wooden porch?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child no older than eight",
+   "question": "Is there a child no older than eight?",
+   "box": [
+    350,
+    550,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    600,
+    650,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "husks_pile",
+   "type": "entity",
+   "class": "corn husks",
+   "plural": "corn husks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pile of dried corn husks",
+   "question": "Is there a pile of dried corn husks?",
+   "box": [
+    800,
+    700,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "jars_row",
+   "type": "entity",
+   "class": "mason jar",
+   "plural": "mason jars",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several empty mason jars",
+   "question": "Are there several empty mason jars?",
+   "box": [
+    100,
+    750,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty garden hose",
+   "question": "Is there a rusty garden hose?",
+   "box": [
+    320,
+    780,
+    450,
+    880
+   ]
+  },
+  {
+   "id": "boots",
+   "type": "entity",
+   "class": "boots",
+   "plural": "boots",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of boots",
+   "question": "Are there two boots?",
+   "box": [
+    50,
+    850,
+    150,
+    950
+   ]
+  },
+  {
+   "id": "birdcage",
+   "type": "entity",
+   "class": "birdcage",
+   "plural": "birdcages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wind-up metal birdcage",
+   "question": "Is there a wind-up metal birdcage?",
+   "box": [
+    180,
+    880,
+    280,
+    980
+   ]
+  },
+  {
+   "id": "leaf_bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bird made of pressed leaves",
+   "question": "Is there a bird?",
+   "box": [
+    200,
+    850,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "floating_jar",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jar floating midair",
+   "question": "Is there a jar floating in midair?",
+   "box": [
+    700,
+    400,
+    780,
+    480
+   ]
+  },
+  {
+   "id": "firefly_jar",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jar",
+   "question": "Is there a jar?",
+   "box": [
+    850,
+    300,
+    930,
+    380
+   ]
+  },
+  {
+   "id": "okra",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child holds a butter knife and an okra stalk",
+   "question": "Is the child holding a butter knife?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child sits cross-legged",
+   "question": "Is the child sitting cross-legged?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat crouches",
+   "question": "Is the tabby cat crouching?"
+  },
+  {
+   "id": "boots_upside_down",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boots are upside down",
+   "question": "Are the boots upside down?"
+  },
+  {
+   "id": "child_on_porch",
+   "type": "relation",
+   "of": [
+    "child",
+    "porch"
+   ],
+   "desc": "the child sits on the wooden porch",
+   "question": "Is the child sitting on the wooden porch?"
+  },
+  {
+   "id": "cat_near_child",
+   "type": "relation",
+   "of": [
+    "cat",
+    "child"
+   ],
+   "desc": "the tabby cat is near the child",
+   "question": "Is the tabby cat near the child?"
+  },
+  {
+   "id": "husks_beside_cat",
+   "type": "relation",
+   "of": [
+    "husks_pile",
+    "cat"
+   ],
+   "desc": "the pile of dried corn husks is beside the tabby cat",
+   "question": "Is the pile of dried corn husks beside the tabby cat?"
+  },
+  {
+   "id": "jars_on_porch",
+   "type": "relation",
+   "of": [
+    "jars_row",
+    "porch"
+   ],
+   "desc": "the row of mason jars lines the edge of the porch",
+   "question": "Do the mason jars line the edge of the porch?"
+  },
+  {
+   "id": "hose_between_jars",
+   "type": "relation",
+   "of": [
+    "hose",
+    "jars_row"
+   ],
+   "desc": "the rusty garden hose is between the mason jars",
+   "question": "Is the rusty garden hose positioned between the mason jars?"
+  },
+  {
+   "id": "boots_on_gravel",
+   "type": "state",
+   "of": "boots",
+   "desc": "the boots sit on the gravel path",
+   "question": "Are the boots sitting on the gravel path?"
+  },
+  {
+   "id": "birdcage_on_gravel",
+   "type": "state",
+   "of": "birdcage",
+   "desc": "the birdcage sits on the gravel path",
+   "question": "Is the birdcage sitting on the gravel path?"
+  },
+  {
+   "id": "leaf_bird_near_cage",
+   "type": "relation",
+   "of": [
+    "leaf_bird",
+    "birdcage"
+   ],
+   "desc": "the leaf bird is near the birdcage",
+   "question": "Is the leaf bird near the birdcage?"
+  },
+  {
+   "id": "floating_jar_midair",
+   "type": "state",
+   "of": "floating_jar",
+   "desc": "the jar floats in midair",
+   "question": "Is the jar floating in midair?"
+  },
+  {
+   "id": "firefly_jar_on_branch",
+   "type": "state",
+   "of": "firefly_jar",
+   "desc": "the jar with fireflies is held by a branch of the oak tree",
+   "question": "Is the jar with fireflies held by a branch of the oak tree?"
+  },
+  {
+   "id": "steam_from_okra",
+   "type": "state",
+   "of": "child",
+   "desc": "wisps of steam rise from the okra being peeled by the child",
+   "question": "Do wisps of steam rise from the okra being peeled by the child?"
+  },
+  {
+   "id": "okra_ribbons",
+   "type": "entity",
+   "class": "okra ribbon",
+   "plural": "okra ribbons",
+   "count": 2,
+   "count_exact": false,
+   "desc": "fibrous okra ribbons",
+   "question": "Are there fibrous okra ribbons?",
+   "box": [
+    450,
+    400,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "fog",
+   "type": "entity",
+   "class": "fog",
+   "plural": "fog patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin fog under the oak canopy",
+   "question": "Is there a thin fog under the oak canopy?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "corn_silk",
+   "type": "entity",
+   "class": "corn silk",
+   "plural": "corn silk strands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a string of corn silk",
+   "question": "Is there a string of corn silk?",
+   "box": [
+    600,
+    300,
+    700,
+    400
+   ]
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat's tail is flicking",
+   "question": "Is the tabby cat's tail flicking?"
+  },
+  {
+   "id": "husks_swaying",
+   "type": "state",
+   "of": "husks_pile",
+   "desc": "the pile of dried corn husks is swaying",
+   "question": "Is the pile of dried corn husks swaying?"
+  },
+  {
+   "id": "stray_husks_drifting",
+   "type": "state",
+   "of": "husks_pile",
+   "desc": "stray husks are drifting through the air",
+   "question": "Are stray husks drifting through the air?"
+  },
+  {
+   "id": "hose_shuddering",
+   "type": "state",
+   "of": "hose",
+   "desc": "the rusty garden hose is shuddering",
+   "question": "Is the rusty garden hose shuddering?"
+  },
+  {
+   "id": "leaf_bird_singing",
+   "type": "state",
+   "of": "leaf_bird",
+   "desc": "the leaf bird is singing",
+   "question": "Is the leaf bird singing?"
+  },
+  {
+   "id": "floating_jar_suspended",
+   "type": "relation",
+   "of": [
+    "floating_jar",
+    "corn_silk"
+   ],
+   "desc": "the floating jar is suspended by the string of corn silk",
+   "question": "Is the floating jar suspended by the string of corn silk?"
+  },
+  {
+   "id": "corn_silk_tangles_cat",
+   "type": "relation",
+   "of": [
+    "corn_silk",
+    "cat"
+   ],
+   "desc": "the string of corn silk tangles with the cat's tail",
+   "question": "Does the string of corn silk tangle with the cat's tail?"
+  },
+  {
+   "id": "cat_tangles_hose",
+   "type": "relation",
+   "of": [
+    "cat",
+    "hose"
+   ],
+   "desc": "the cat's tail tangles with the garden hose",
+   "question": "Does the cat's tail tangle with the garden hose?"
+  },
+  {
+   "id": "cat_swats_air",
+   "type": "action",
+   "of": [
+    "cat",
+    "fog"
+   ],
+   "desc": "the tabby cat swats at the fog",
+   "question": "Is the tabby cat swatting at the fog?"
+  },
+  {
+   "id": "fog_ripples",
+   "type": "state",
+   "of": "fog",
+   "desc": "the fog pulses and ripples outward",
+   "question": "Does the fog pulse and ripple outward?"
+  },
+  {
+   "id": "screen_door",
+   "type": "entity",
+   "class": "screen door",
+   "plural": "screen doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a screen door",
+   "question": "Is there a screen door?",
+   "box": [
+    400,
+    100,
+    624,
+    500
+   ]
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "tree branch",
+   "plural": "tree branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nearby branch of the oak tree",
+   "question": "Is there a nearby branch of the oak tree?",
+   "box": [
+    700,
+    300,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "screen_door_moving",
+   "type": "state",
+   "of": "screen_door",
+   "desc": "the screen door is creaking open and shut",
+   "question": "Is the screen door creaking open and shut?"
+  },
+  {
+   "id": "firefly_jar_held_by_branch",
+   "type": "relation",
+   "of": [
+    "firefly_jar",
+    "branch"
+   ],
+   "desc": "the jar filled with fireflies is held by the nearby branch",
+   "question": "Is the jar filled with fireflies held by the nearby branch?"
+  },
+  {
+   "id": "hose_tangles_branch",
+   "type": "relation",
+   "of": [
+    "hose",
+    "branch"
+   ],
+   "desc": "the rusty garden hose tangles with the nearby branch",
+   "question": "Does the rusty garden hose tangle with the nearby branch?"
+  },
+  {
+   "id": "knife_dull",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the butter knife held by the child has a dull edge",
+   "question": "Does the butter knife held by the child have a dull edge?"
+  },
+  {
+   "id": "cat_pupils",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat's pupils are contracting and expanding",
+   "question": "Are the tabby cat's pupils contracting and expanding?"
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oak tree with skeletal branches and leaves in shades of bruised purples and deep oranges",
+   "question": "Is there an oak tree with leaves in shades of bruised purples and deep oranges?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "gravel_path",
+   "type": "entity",
+   "class": "gravel path",
+   "plural": "gravel paths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gravel path winding away from the porch",
+   "question": "Is there a gravel path winding away from the porch?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "child_okra_stalk",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child holds an okra stalk",
+   "question": "Is the child holding an okra stalk?"
+  },
+  {
+   "id": "cat_stripes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat has mottled shadows and stripes",
+   "question": "Does the tabby cat have mottled shadows and stripes?"
+  },
+  {
+   "id": "jars_in_row",
+   "type": "state",
+   "of": "jars_row",
+   "desc": "the empty mason jars are arranged in a row",
+   "question": "Are the empty mason jars arranged in a row?"
+  },
+  {
+   "id": "hose_spiral",
+   "type": "state",
+   "of": "hose",
+   "desc": "the rusty garden hose is coiled in a perfect spiral",
+   "question": "Is the rusty garden hose coiled in a perfect spiral?"
+  },
+  {
+   "id": "bird_material",
+   "type": "attribute",
+   "of": "leaf_bird",
+   "desc": "the bird is made of pressed leaves",
+   "question": "Is the bird made of pressed leaves?"
+  },
+  {
+   "id": "jar_contents",
+   "type": "attribute",
+   "of": "firefly_jar",
+   "desc": "the jar is filled with fireflies",
+   "question": "Is the jar filled with fireflies?"
+  },
+  {
+   "id": "ribbons_spiraling",
+   "type": "state",
+   "of": "okra_ribbons",
+   "desc": "the fibrous okra ribbons are spiraling in the air",
+   "question": "Are the fibrous okra ribbons spiraling in the air?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "porch",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "porch",
+   "to": "jars_row",
+   "kind": "support"
+  },
+  {
+   "from": "porch",
+   "to": "hose",
+   "kind": "support"
+  },
+  {
+   "from": "branch",
+   "to": "firefly_jar",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0280",
+ "prompt": "The air hangs thick with the musk of rain-soaked earth and the faint tang of iron, as if the world itself has been rusted from the inside out. A child, no older than eight, sits cross-legged on a splintered, weathered wooden porch that creaks like an old man groaning in his sleep. In one small hand, they cradle a butter knife, its dull edge gliding over a fibrous okra stalk with the careful deliberation of a sculptor chiseling stone. A tabby cat, mottled in shadows and stripes of dappled sunlight, crouches nearby, its tail flicking in measured pulses as if it's not just watching the child but calculating the next move in a game only it understands. Beside it, a pile of dried corn husks sways gently, as though responding to some unseen current, while a few stray husks drift lazily through the air, caught in the slow, swirling dance of an invisible breeze. \n\nAbove, the oak tree casts its skeletal fingers across the sky, its leaves not green but varying shades of bruised purples and deep oranges, their edges curled like ancient scrolls. Sunlight filters through this surreal canopy in shards, creating shifting, stained-glass patterns on the ground and on a row of empty mason jars that line the edge of the porch. These jars are not merely still—they are humming, faintly, as if each one holds a whisper from the past, or a memory that wants to escape. Between them, a rusty garden hose coils in a perfect spiral, its metallic sheen catching the light in a way that suggests it is both object and living thing, as if it might uncoil and slither off into the distance if left alone for too long.\n\nThe child’s knife work has taken on a strange rhythm, each peel of the okra sending a fibrous ribbon spiraling into the air. These ribbons do not fall; instead, they hover briefly, then melt into wisps of steam that rise to join a thin fog forming under the oak’s canopy. The cat’s eyes follow these trails, pupils contracting and expanding as if reading the steam’s message. Occasionally, it swats at the air with a paw, and each time it does, the fog pulses and ripples outward like the shockwave of an unseen event.\n\nNearby, the gravel path that winds away from the porch is dotted with objects that seem to have wandered there from unrelated worlds. A pair of boots, one left and one right, sit upside down as if waiting for someone who has forgotten them. A wind-up birdcage ticks softly, its metal gears winding and unwinding in an endless loop, while a single bird made of pressed leaves sings in a voice that is neither bird nor man. The song lingers, weaving through the scene, curling around the child’s fingers, the cat’s tail, the humming jars, until it dissolves into the rusted garden hose, which shudders and whirs like it might begin to flow with something other than water.\n\nIn the background, a screen door creaks open and shut on its own, as if it’s deciding whether to remain in the present or escape into another time. A jar that once held pickles now floats midair, suspended by a string of corn silk that tangles with the tail of the cat, which tangles in turn with the garden hose, which tangles with a nearby branch that is itself holding a jar filled with fireflies that blink in perfect sync with the ticking birdcage. The entire scene is an intricate knot of motion and stillness, causality and coincidence, where each element is both anchor and anchorless, where the line between the real and the surreal is not only blurred but constantly redefined by the shifting shadows and whispered echoes of things yet to come.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "facts_pass": {
+   "n_facts": 53,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 9,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 7,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

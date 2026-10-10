@@ -1,0 +1,449 @@
+{
+ "style": "surreal photorealistic, soft amber lighting, dusty atmosphere, decaying textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with warped floorboards and a window with a cracked pane showing dripping ink-like clouds",
+   "question": "Does the image show a room with warped floorboards and a window with a cracked pane showing dripping ink-like clouds?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden windowsill",
+   "question": "Is there a wooden windowsill?",
+   "box": [
+    0,
+    400,
+    1024,
+    550
+   ]
+  },
+  {
+   "id": "gloves",
+   "type": "entity",
+   "class": "glove",
+   "plural": "gloves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "worn leather gloves",
+   "question": "Are there worn leather gloves?",
+   "box": [
+    100,
+    420,
+    300,
+    520
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "clay pot",
+   "plural": "clay pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clay pot containing a basil plant",
+   "question": "Is there a clay pot containing a basil plant?",
+   "box": [
+    350,
+    450,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "soil",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the soil in the pot shimmers with flecks of metal",
+   "question": "Does the soil in the pot shimmer with flecks of metal?"
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "rusted key",
+   "plural": "rusted keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted key, half-buried in the soil",
+   "question": "Is there a rusted key half-buried in the soil?",
+   "box": [
+    480,
+    576,
+    540,
+    624
+   ]
+  },
+  {
+   "id": "palm_print",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "a faint palm print impression in the soil beside the key",
+   "question": "Is there a faint palm print impression in the soil beside the key?"
+  },
+  {
+   "id": "gear",
+   "type": "entity",
+   "class": "brass gear",
+   "plural": "brass gears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass gear",
+   "question": "Is there a brass gear?",
+   "box": [
+    900,
+    410,
+    1000,
+    510
+   ]
+  },
+  {
+   "id": "cobweb",
+   "type": "attribute",
+   "of": "gear",
+   "desc": "a translucent cobweb weaving from the gear to the key, pot, and gloves",
+   "question": "Is there a translucent cobweb connecting the gear, key, pot, and gloves?"
+  },
+  {
+   "id": "watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch with a tangled chain and cracked glass, lying face-down",
+   "question": "Is there a face-down pocket watch with a tangled chain and cracked glass?",
+   "box": [
+    380,
+    850,
+    480,
+    950
+   ]
+  },
+  {
+   "id": "paper",
+   "type": "entity",
+   "class": "sheet of paper",
+   "plural": "sheets of paper",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellowed sheet of paper",
+   "question": "Is there a yellowed sheet of paper?",
+   "box": [
+    360,
+    920,
+    500,
+    1000
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "mechanical bird",
+   "plural": "mechanical birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mechanical bird with mirror eyes",
+   "question": "Is there a small mechanical bird with mirror eyes?",
+   "box": [
+    420,
+    430,
+    480,
+    490
+   ]
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unnaturally long and thin shadow",
+   "question": "Is there an unnaturally long and thin shadow?",
+   "box": [
+    850,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "gloves_on_sill",
+   "type": "relation",
+   "of": [
+    "gloves",
+    "windowsill"
+   ],
+   "desc": "the gloves lie on the windowsill",
+   "question": "Do the gloves lie on the windowsill?"
+  },
+  {
+   "id": "gloves_above_pot",
+   "type": "relation",
+   "of": [
+    "gloves",
+    "pot"
+   ],
+   "desc": "the gloves are positioned just above the pot",
+   "question": "Are the gloves positioned just above the pot?"
+  },
+  {
+   "id": "key_in_soil",
+   "type": "relation",
+   "of": [
+    "key",
+    "pot"
+   ],
+   "desc": "the key lies in the soil at the edge of the pot",
+   "question": "Does the key lie in the soil at the edge of the pot?"
+  },
+  {
+   "id": "gear_on_sill",
+   "type": "relation",
+   "of": [
+    "gear",
+    "windowsill"
+   ],
+   "desc": "the gear rests on the edge of the windowsill",
+   "question": "Does the gear rest on the edge of the windowsill?"
+  },
+  {
+   "id": "watch_on_floor",
+   "type": "state",
+   "of": "watch",
+   "desc": "the watch lies on the floorboards near the pot",
+   "question": "Does the watch lie on the floorboards near the pot?"
+  },
+  {
+   "id": "paper_at_watch",
+   "type": "relation",
+   "of": [
+    "paper",
+    "watch"
+   ],
+   "desc": "the paper lies at the base of the watch",
+   "question": "Does the paper lie at the base of the watch?"
+  },
+  {
+   "id": "bird_on_pot",
+   "type": "relation",
+   "of": [
+    "bird",
+    "pot"
+   ],
+   "desc": "the mechanical bird sits atop the pot",
+   "question": "Does the mechanical bird sit atop the pot?"
+  },
+  {
+   "id": "bird_entangled",
+   "type": "relation",
+   "of": [
+    "bird",
+    "pot"
+   ],
+   "desc": "the bird's leg is entangled in the plant's roots",
+   "question": "Is the bird's leg entangled in the plant's roots?"
+  },
+  {
+   "id": "bird_eye_reflection",
+   "type": "attribute",
+   "of": "bird",
+   "desc": "the mechanical bird's mirror eye reflects a fragmented image of a locked door in a hallway",
+   "question": "Does the mechanical bird's mirror eye reflect a fragmented image of a locked door in a hallway?"
+  },
+  {
+   "id": "watch_chain_tangled",
+   "type": "attribute",
+   "of": "watch",
+   "desc": "the pocket watch's chain is tangled with roots",
+   "question": "Is the pocket watch's chain tangled with roots?"
+  },
+  {
+   "id": "paper_unrolled",
+   "type": "state",
+   "of": "paper",
+   "desc": "the sheet of paper is half-unrolled",
+   "question": "Is the sheet of paper half-unrolled?"
+  },
+  {
+   "id": "bird_wings_frozen",
+   "type": "state",
+   "of": "bird",
+   "desc": "the mechanical bird's wings are frozen mid-flutter",
+   "question": "Are the mechanical bird's wings frozen mid-flutter?"
+  },
+  {
+   "id": "shadow_corner",
+   "type": "state",
+   "of": "shadow",
+   "desc": "the shadow is in the far corner of the room",
+   "question": "Is the shadow in the far corner of the room?"
+  },
+  {
+   "id": "cobweb_connections",
+   "type": "relation",
+   "of": [
+    "gear",
+    "key",
+    "pot",
+    "gloves"
+   ],
+   "desc": "a cobweb weaves from the gear to the key, across the pot, and into the gloves",
+   "question": "Does a cobweb connect the gear, the key, the pot, and the gloves?"
+  },
+  {
+   "id": "soil_disturbed",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the soil around the pot is loose",
+   "question": "Is the soil around the pot loose?"
+  },
+  {
+   "id": "gloves_on_floorboards",
+   "type": "state",
+   "of": "gloves",
+   "desc": "the floorboards are beneath the gloves",
+   "question": "Are the floorboards beneath the gloves?"
+  },
+  {
+   "id": "key_on_floorboards",
+   "type": "state",
+   "of": "key",
+   "desc": "the floorboards are beneath the key",
+   "question": "Are the floorboards beneath the key?"
+  },
+  {
+   "id": "pot_near_gloves",
+   "type": "relation",
+   "of": [
+    "pot",
+    "gloves"
+   ],
+   "desc": "the pot is near the gloves",
+   "question": "Is the pot near the gloves?"
+  },
+  {
+   "id": "gloves_folded",
+   "type": "state",
+   "of": "gloves",
+   "desc": "the gloves are folded",
+   "question": "Are the gloves folded?"
+  },
+  {
+   "id": "gloves_cracked",
+   "type": "attribute",
+   "of": "gloves",
+   "desc": "the surface of the gloves is cracked with age",
+   "question": "Is the surface of the gloves cracked with age?"
+  },
+  {
+   "id": "plant_drooping",
+   "type": "state",
+   "of": "pot",
+   "desc": "the basil plant inside the pot is drooping and wilting",
+   "question": "Is the basil plant inside the pot drooping and wilting?"
+  },
+  {
+   "id": "gear_teeth",
+   "type": "attribute",
+   "of": "gear",
+   "desc": "the teeth of the brass gear are jagged and worn",
+   "question": "Are the teeth of the brass gear jagged and worn?"
+  },
+  {
+   "id": "soil_glass_flecks",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the soil in the pot contains flecks of glass",
+   "question": "Does the soil in the pot contain flecks of glass?"
+  },
+  {
+   "id": "paper_keyhole_symbols",
+   "type": "attribute",
+   "of": "paper",
+   "desc": "the sheet of paper has keyhole symbols",
+   "question": "Does the sheet of paper have keyhole symbols?"
+  },
+  {
+   "id": "watch_chain_vines",
+   "type": "attribute",
+   "of": "watch",
+   "desc": "the pocket watch's chain is tangled with vines",
+   "question": "Is the pocket watch's chain tangled with vines?"
+  },
+  {
+   "id": "soil_disturbed_state",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the soil around the pot is disturbed",
+   "question": "Is the soil around the pot disturbed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "gloves",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "gear",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "watch",
+   "kind": "support"
+  },
+  {
+   "from": "pot",
+   "to": "bird",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0188",
+ "prompt": "Beneath the soft amber glow of an afternoon sun filtered through dusty glass, a tangle of objects occupies a room suspended between decay and rebirth. The worn leather gloves lie folded on a wooden windowsill, their surface cracked with age, as if they had once belonged to someone who toiled with both hands and aching purpose. Their fingertips hover just above a clay pot, the soil around it loose and disturbed, a small basil plant inside drooping under the weight of its own wilting. The soil is not natural in its texture—it shimmers faintly with flecks of metal and glass, as though the earth had been sifted or poured rather than dug from the ground. Nestled within the spill of soil at the pot’s edge lies a rusted key, half-buried and gleaming faintly in the light. The key is not alone; beside it, the faint impression of a palm print in the soil suggests a recent, intimate contact—perhaps a hand that reached, took, or tried to open something long sealed. The window above is not just a source of light but an aperture into a strange world beyond, where the sky seems to bleed slowly from a cracked pane, the clouds not moving in the sky but dripping like liquid ink into the room. A brass gear, its teeth jagged and worn, rests precariously on the edge of the sill, as if caught between falling and balancing on some invisible fulcrum. A thread of cobweb, translucent and glistening with moisture, weaves from the gear down through the key, across the pot, and into the folds of the gloves, binding them all in a fragile, spiderweb-like network. A pocket watch, its chain tangled with roots and vines, lies face-down on the floorboards near the pot, the glass cracked but still showing a time that seems impossibly distant—perhaps from a future that has not yet arrived. A single sheet of paper, yellowed and ink-stained, lies half-unrolled at the base of the watch, its words smudged and illegible except for a recurring symbol—a keyhole—that appears in varying forms across the page, as if written by multiple hands or minds. A small, mechanical bird, its wings frozen mid-flutter, sits atop the pot, one of its legs entangled in the root system, suggesting it had either tried to escape or been lured into the trap of the plant. The bird’s eye is a polished mirror, reflecting not the room, but a fragmented image of a locked door in a hallway that doesn’t exist in the current space. The floorboards beneath the gloves and the key are warped and warped not by time alone but by a subtle, pulsing motion, as if the wood itself is breathing in rhythm with the dripping clouds. In the far corner of the room, a shadow stretches unnaturally long and thin, its shape shifting as though trying to mimic the movements of a person who isn’t there. The scene is one of quiet tension, where every object seems to be holding its breath, waiting for the next shift in a narrative written in soil, rust, and reflected glass. The gloves, the key, the plant, the bird, the watch, and the impossible sky form a loop of causality that defies logic but makes perfect sense in the silent language of this room—where time is a locked door, memory a spilling root, and escape a bird frozen in flight.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 82,
+   "n_uncovered": 4,
+   "proposed": 4,
+   "ungrounded": 0,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

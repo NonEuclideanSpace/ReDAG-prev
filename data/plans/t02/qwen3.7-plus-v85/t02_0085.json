@@ -1,0 +1,110 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    570,
+    200,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a clipboard",
+   "question": "Is the man in a red scarf holding a clipboard?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue overalls is standing",
+   "question": "Is the woman in blue overalls standing?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in blue overalls looks at the man in a red scarf",
+   "question": "Is the woman in blue overalls looking at the man in a red scarf?"
+  },
+  {
+   "id": "handing_pen",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf hands a pen to the woman in blue overalls",
+   "question": "Is the man in a red scarf handing a pen to the woman in blue overalls?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the background?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0085",
+ "prompt": "In an anime style scene at a shipyard dock, a man in a red scarf stands on the left holding a clipboard. A woman in blue overalls stands on the right looking at the man. The man is handing a pen to the woman. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

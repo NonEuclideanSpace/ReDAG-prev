@@ -1,0 +1,552 @@
+{
+ "style": "photorealistic, bright classroom lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an elementary school classroom with colorful student artwork on the walls, rows of small desks, bright yellow chairs, a green chalkboard with alphabet letters on the border above it, and a bulletin board with gold star stickers and certificates",
+   "question": "Does the image show an elementary school classroom with colorful student artwork on the walls, rows of small desks, bright yellow chairs, a green chalkboard with alphabet letters on the border above it, and a bulletin board with gold star stickers and certificates?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "teacher_desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher's desk",
+   "question": "Is there a teacher's desk?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "whiteboard",
+   "type": "entity",
+   "class": "whiteboard",
+   "plural": "whiteboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large whiteboard",
+   "question": "Is there a large whiteboard?",
+   "box": [
+    400,
+    100,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "windowsill_area",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a windowsill",
+   "question": "Is there a windowsill?",
+   "box": [
+    800,
+    200,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "corner_table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a corner table",
+   "question": "Is there a corner table?",
+   "box": [
+    800,
+    700,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red apple",
+   "question": "Is there a red apple?",
+   "box": [
+    100,
+    650,
+    150,
+    700
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee mug",
+   "question": "Is there a coffee mug?",
+   "box": [
+    160,
+    640,
+    210,
+    710
+   ]
+  },
+  {
+   "id": "pencils",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scattered pencils",
+   "question": "Are there scattered pencils?",
+   "box": [
+    220,
+    660,
+    300,
+    720
+   ]
+  },
+  {
+   "id": "plants",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "potted plants",
+   "question": "Are there potted plants?",
+   "box": [
+    820,
+    250,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "tissues",
+   "type": "entity",
+   "class": "tissue box",
+   "plural": "tissue boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "boxes of tissues",
+   "question": "Are there boxes of tissues?",
+   "box": [
+    910,
+    300,
+    980,
+    380
+   ]
+  },
+  {
+   "id": "sanitizer",
+   "type": "entity",
+   "class": "hand sanitizer",
+   "plural": "hand sanitizers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "hand sanitizer",
+   "question": "Is there hand sanitizer?",
+   "box": [
+    916,
+    390,
+    964,
+    450
+   ]
+  },
+  {
+   "id": "bins",
+   "type": "entity",
+   "class": "plastic bin",
+   "plural": "plastic bins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "plastic bins",
+   "question": "Are there plastic bins?",
+   "box": [
+    400,
+    800,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "globe",
+   "type": "entity",
+   "class": "globe",
+   "plural": "globes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a globe",
+   "question": "Is there a globe?",
+   "box": [
+    850,
+    720,
+    920,
+    820
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "picture book",
+   "plural": "picture books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacks of picture books",
+   "question": "Are there stacks of picture books?",
+   "box": [
+    930,
+    750,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "backpacks",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "students' backpacks hanging on hooks",
+   "question": "Are there students' backpacks hanging on hooks?",
+   "box": [
+    100,
+    200,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "windowsill_near_windows",
+   "type": "state",
+   "of": "windowsill_area",
+   "desc": "the windowsill is near the windows",
+   "question": "Is the windowsill near the windows?"
+  },
+  {
+   "id": "apple_on_desk",
+   "type": "relation",
+   "of": [
+    "apple",
+    "teacher_desk"
+   ],
+   "desc": "the red apple is on the teacher's desk",
+   "question": "Is the red apple on the teacher's desk?"
+  },
+  {
+   "id": "mug_on_desk",
+   "type": "relation",
+   "of": [
+    "mug",
+    "teacher_desk"
+   ],
+   "desc": "the coffee mug is on the teacher's desk",
+   "question": "Is the coffee mug on the teacher's desk?"
+  },
+  {
+   "id": "pencils_on_desk",
+   "type": "relation",
+   "of": [
+    "pencils",
+    "teacher_desk"
+   ],
+   "desc": "the scattered pencils are on the teacher's desk",
+   "question": "Are the scattered pencils on the teacher's desk?"
+  },
+  {
+   "id": "plants_on_sill",
+   "type": "relation",
+   "of": [
+    "plants",
+    "windowsill_area"
+   ],
+   "desc": "the potted plants are on the windowsill",
+   "question": "Are the potted plants on the windowsill?"
+  },
+  {
+   "id": "tissues_on_sill",
+   "type": "relation",
+   "of": [
+    "tissues",
+    "windowsill_area"
+   ],
+   "desc": "the boxes of tissues are on the windowsill",
+   "question": "Are the boxes of tissues on the windowsill?"
+  },
+  {
+   "id": "sanitizer_on_sill",
+   "type": "relation",
+   "of": [
+    "sanitizer",
+    "windowsill_area"
+   ],
+   "desc": "the hand sanitizer is on the windowsill",
+   "question": "Is the hand sanitizer on the windowsill?"
+  },
+  {
+   "id": "tissues_next_to_sanitizer",
+   "type": "relation",
+   "of": [
+    "tissues",
+    "sanitizer"
+   ],
+   "desc": "the boxes of tissues are next to the hand sanitizer",
+   "question": "Are the boxes of tissues next to the hand sanitizer?"
+  },
+  {
+   "id": "globe_on_table",
+   "type": "relation",
+   "of": [
+    "globe",
+    "corner_table"
+   ],
+   "desc": "the globe is on the corner table",
+   "question": "Is the globe on the corner table?"
+  },
+  {
+   "id": "books_next_to_globe",
+   "type": "relation",
+   "of": [
+    "books",
+    "globe"
+   ],
+   "desc": "the stacks of picture books are beside the globe",
+   "question": "Are the stacks of picture books beside the globe?"
+  },
+  {
+   "id": "no_tablets",
+   "type": "absent",
+   "desc": "electronic tablets",
+   "question": "Are there any electronic tablets in the image?"
+  },
+  {
+   "id": "no_instruments",
+   "type": "absent",
+   "desc": "musical instruments like drums or guitars",
+   "question": "Are there any musical instruments like drums or guitars in the image?"
+  },
+  {
+   "id": "crayons",
+   "type": "entity",
+   "class": "crayon",
+   "plural": "crayons",
+   "count": 2,
+   "count_exact": false,
+   "desc": "crayons in plastic bins",
+   "question": "Are there crayons in the plastic bins?",
+   "box": [
+    100,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "scissors",
+   "type": "entity",
+   "class": "scissors",
+   "plural": "scissors",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scissors in plastic bins",
+   "question": "Are there scissors in the plastic bins?",
+   "box": [
+    150,
+    620,
+    350,
+    820
+   ]
+  },
+  {
+   "id": "glue_sticks",
+   "type": "entity",
+   "class": "glue stick",
+   "plural": "glue sticks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glue sticks in plastic bins",
+   "question": "Are there glue sticks in the plastic bins?",
+   "box": [
+    200,
+    640,
+    400,
+    840
+   ]
+  },
+  {
+   "id": "construction_paper",
+   "type": "entity",
+   "class": "construction paper",
+   "plural": "sheets of construction paper",
+   "count": 2,
+   "count_exact": false,
+   "desc": "colorful construction paper",
+   "question": "Is there colorful construction paper?",
+   "box": [
+    250,
+    660,
+    450,
+    860
+   ]
+  },
+  {
+   "id": "bins_contain_supplies",
+   "type": "relation",
+   "of": [
+    "bins",
+    "crayons"
+   ],
+   "desc": "the plastic bins contain crayons, scissors, glue sticks, and construction paper",
+   "question": "Do the plastic bins contain crayons, scissors, glue sticks, and construction paper?"
+  },
+  {
+   "id": "backpacks_on_hooks",
+   "type": "state",
+   "of": "backpacks",
+   "desc": "the students' backpacks hang on hooks",
+   "question": "Are the students' backpacks hanging on hooks?"
+  },
+  {
+   "id": "lesson_plan",
+   "type": "attribute",
+   "of": "whiteboard",
+   "desc": "today's lesson plan written in blue marker on the whiteboard",
+   "question": "Is today's lesson plan written in blue marker on the whiteboard?"
+  },
+  {
+   "id": "bins_overflowing",
+   "type": "relation",
+   "of": [
+    "bins",
+    "crayons"
+   ],
+   "desc": "art supplies overflow from the plastic bins",
+   "question": "Do art supplies overflow from the plastic bins?"
+  },
+  {
+   "id": "no_computers",
+   "type": "absent",
+   "desc": "computers",
+   "question": "Are there any computers in the image?"
+  },
+  {
+   "id": "paper_in_bins",
+   "type": "relation",
+   "of": [
+    "construction_paper",
+    "bins"
+   ],
+   "desc": "the construction paper is in the plastic bins",
+   "question": "Is the construction paper in the plastic bins?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "teacher_desk",
+   "to": "apple",
+   "kind": "support"
+  },
+  {
+   "from": "teacher_desk",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "teacher_desk",
+   "to": "pencils",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill_area",
+   "to": "plants",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill_area",
+   "to": "tissues",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill_area",
+   "to": "sanitizer",
+   "kind": "support"
+  },
+  {
+   "from": "corner_table",
+   "to": "globe",
+   "kind": "support"
+  },
+  {
+   "from": "corner_table",
+   "to": "books",
+   "kind": "support"
+  },
+  {
+   "from": "bins",
+   "to": "crayons",
+   "kind": "support"
+  },
+  {
+   "from": "bins",
+   "to": "scissors",
+   "kind": "support"
+  },
+  {
+   "from": "bins",
+   "to": "glue_sticks",
+   "kind": "support"
+  },
+  {
+   "from": "bins",
+   "to": "construction_paper",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_003",
+ "prompt": "A lively elementary school classroom during art period, where colorful student artwork decorates the walls above rows of small desks and bright yellow chairs. The teacher's desk holds a red apple, coffee mug, and scattered pencils, while a large whiteboard displays today's lesson plan written in blue marker. Near the windows, potted plants thrive on the windowsill next to boxes of tissues and hand sanitizer. Art supplies overflow from plastic bins: crayons, scissors, glue sticks, and construction paper in every imaginable color. However, you won't find any electronic tablets or computers in this traditional classroom, as the school maintains a hands-on learning approach. There are also no musical instruments like drums or guitars present, keeping the focus purely on visual arts. Students' backpacks hang on hooks along the back wall, while a globe sits prominently on a corner table beside stacks of picture books. The bulletin board showcases gold star stickers and student certificates, and alphabet letters march along the wall border above the green chalkboard.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

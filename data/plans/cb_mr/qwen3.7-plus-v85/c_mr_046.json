@@ -1,0 +1,409 @@
+{
+ "style": "photorealistic, vibrant colors, Renaissance fair atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling Renaissance fair scene",
+   "question": "Does the image depict a bustling Renaissance fair?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tournament tent",
+   "plural": "tournament tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brightly colored tournament tent",
+   "question": "Is there a brightly colored tournament tent?",
+   "box": [
+    500,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "knight",
+   "type": "entity",
+   "class": "knight",
+   "plural": "knights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knight in full polished plate armor holding a large lance",
+   "question": "Is there a knight in full polished plate armor?",
+   "box": [
+    300,
+    150,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "dummy",
+   "type": "entity",
+   "class": "practice dummy",
+   "plural": "practice dummies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a practice dummy with a shield hanging on it",
+   "question": "Is there a practice dummy with a shield hanging on it?",
+   "box": [
+    700,
+    400,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "jester",
+   "type": "entity",
+   "class": "jester",
+   "plural": "jesters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jester juggling three balls",
+   "question": "Is there a jester?",
+   "box": [
+    100,
+    300,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "merchant",
+   "type": "entity",
+   "class": "merchant",
+   "plural": "merchants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a merchant holding up a leather pouch",
+   "question": "Is there a merchant?",
+   "box": [
+    50,
+    350,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "wooden stall",
+   "plural": "wooden stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rustic wooden stall",
+   "question": "Is there a rustic wooden stall?",
+   "box": [
+    20,
+    400,
+    200,
+    850
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potential customer",
+   "question": "Is there a potential customer?",
+   "box": [
+    220,
+    400,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "hay_bale",
+   "type": "entity",
+   "class": "hay bale",
+   "plural": "hay bales",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hay bale",
+   "question": "Is there a hay bale?",
+   "box": [
+    400,
+    600,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "king",
+   "type": "entity",
+   "class": "king",
+   "plural": "kings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a king sitting on a throne holding a scepter",
+   "question": "Is there a king?",
+   "box": [
+    400,
+    50,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "throne",
+   "type": "entity",
+   "class": "throne",
+   "plural": "thrones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a throne on a raised platform",
+   "question": "Is there a throne?",
+   "box": [
+    420,
+    100,
+    580,
+    350
+   ]
+  },
+  {
+   "id": "guards",
+   "type": "entity",
+   "class": "guard",
+   "plural": "guards",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two guards surrounding the king",
+   "question": "Are there two guards?",
+   "box": [
+    350,
+    80,
+    650,
+    320
+   ]
+  },
+  {
+   "id": "knight_standing",
+   "type": "state",
+   "of": "knight",
+   "desc": "the knight is standing",
+   "question": "Is the knight standing?"
+  },
+  {
+   "id": "knight_facing_shield",
+   "type": "state",
+   "of": "knight",
+   "desc": "the knight is looking at the shield",
+   "question": "Is the knight looking at the shield?"
+  },
+  {
+   "id": "lance_pointing",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the knight's lance tip points at the shield",
+   "question": "Does the tip of the knight's lance point at the shield?"
+  },
+  {
+   "id": "jester_juggling",
+   "type": "state",
+   "of": "jester",
+   "desc": "the jester is juggling three balls",
+   "question": "Is the jester juggling three balls?"
+  },
+  {
+   "id": "jester_facing_crowd",
+   "type": "state",
+   "of": "jester",
+   "desc": "the jester is facing the crowd",
+   "question": "Is the jester facing the crowd?"
+  },
+  {
+   "id": "merchant_holding_pouch",
+   "type": "attribute",
+   "of": "merchant",
+   "desc": "the merchant holds up a leather pouch",
+   "question": "Is the merchant holding up a leather pouch?"
+  },
+  {
+   "id": "king_sitting",
+   "type": "state",
+   "of": "king",
+   "desc": "the king is sitting",
+   "question": "Is the king sitting?"
+  },
+  {
+   "id": "king_holding_scepter",
+   "type": "attribute",
+   "of": "king",
+   "desc": "the king holds a scepter",
+   "question": "Is the king holding a scepter?"
+  },
+  {
+   "id": "throne_on_platform",
+   "type": "state",
+   "of": "throne",
+   "desc": "the throne is on a raised platform",
+   "question": "Is the throne on a raised platform?"
+  },
+  {
+   "id": "knight_in_front_tent",
+   "type": "relation",
+   "of": [
+    "knight",
+    "tent"
+   ],
+   "desc": "the knight stands in front of the tent",
+   "question": "Is the knight standing in front of the tournament tent?"
+  },
+  {
+   "id": "jester_next_to_knight",
+   "type": "relation",
+   "of": [
+    "jester",
+    "knight"
+   ],
+   "desc": "the jester is next to the knight",
+   "question": "Is the jester next to the knight?"
+  },
+  {
+   "id": "merchant_behind_stall",
+   "type": "relation",
+   "of": [
+    "merchant",
+    "stall"
+   ],
+   "desc": "the merchant is behind the wooden stall",
+   "question": "Is the merchant behind the wooden stall?"
+  },
+  {
+   "id": "stall_left_of_tent",
+   "type": "relation",
+   "of": [
+    "stall",
+    "tent"
+   ],
+   "desc": "the wooden stall is to the left of the tent",
+   "question": "Is the wooden stall to the left of the tournament tent?"
+  },
+  {
+   "id": "merchant_holding_to_customer",
+   "type": "action",
+   "of": [
+    "merchant",
+    "customer"
+   ],
+   "desc": "the merchant holds up a leather pouch to the customer",
+   "question": "Is the merchant holding up a leather pouch to the customer?"
+  },
+  {
+   "id": "knight_taller_jester",
+   "type": "relation",
+   "of": [
+    "knight",
+    "jester"
+   ],
+   "desc": "the knight is taller than the jester",
+   "question": "Is the knight taller than the jester?"
+  },
+  {
+   "id": "king_behind_knight",
+   "type": "relation",
+   "of": [
+    "king",
+    "knight"
+   ],
+   "desc": "the king is behind the knight",
+   "question": "Is the king behind the knight?"
+  },
+  {
+   "id": "guards_surround_king",
+   "type": "relation",
+   "of": [
+    "guards",
+    "king"
+   ],
+   "desc": "the guards surround the king",
+   "question": "Do the guards surround the king?"
+  },
+  {
+   "id": "stall_between_knight_hay",
+   "type": "relation",
+   "of": [
+    "stall",
+    "knight",
+    "hay_bale"
+   ],
+   "desc": "the stall is between the knight and the hay bale",
+   "question": "Is the wooden stall positioned between the knight and the hay bale?"
+  },
+  {
+   "id": "flags_2",
+   "type": "entity",
+   "class": "flag",
+   "plural": "flags",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six flags decorating the tent",
+   "question": "Are there six flags decorating the tent?",
+   "box": [
+    500,
+    50,
+    900,
+    200
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "throne",
+   "to": "king",
+   "kind": "support"
+  },
+  {
+   "from": "tent",
+   "to": "flags_2",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_046",
+ "prompt": "At a bustling Renaissance fair, a knight in full plate armor is standing in front of a brightly colored tournament tent. The knight is holding a large lance, with its tip pointing at a shield hanging on a practice dummy. Next to the knight, a jester is juggling three balls and facing the crowd. A merchant is behind a wooden stall to the left of the tent, holding up a leather pouch to a potential customer. The knight is taller than the jester. The knight's polished plate armor looks newer and more pristine than the merchant's rustic wooden stall. A king is sitting on a throne on a raised platform behind the knight. Several flags decorate the tent, and their number is twice the number of balls the jester is juggling. The king is surrounded by his guards, and the number of guards is one less than the number of balls. The knight is looking at the shield on the dummy. The merchant's stall is between the knight and a hay bale. The king is holding a scepter.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "flags",
+     "flags_2"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

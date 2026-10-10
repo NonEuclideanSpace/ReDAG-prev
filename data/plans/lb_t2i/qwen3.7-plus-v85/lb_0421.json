@@ -1,0 +1,522 @@
+{
+ "style": "surreal underwater photography, ethereal lighting, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an underwater scene with turquoise water",
+   "question": "Does the image show an underwater scene with turquoise water?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dolphin",
+   "type": "entity",
+   "class": "dolphin",
+   "plural": "dolphins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young dolphin",
+   "question": "Is there a young dolphin?",
+   "box": [
+    300,
+    200,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "diver",
+   "type": "entity",
+   "class": "diver",
+   "plural": "divers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a diver in a blue wetsuit",
+   "question": "Is there a diver in a blue wetsuit?",
+   "box": [
+    700,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camera",
+   "question": "Is there a camera?",
+   "box": [
+    750,
+    550,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "sardines",
+   "type": "entity",
+   "class": "sardine",
+   "plural": "sardines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a school of silver sardines",
+   "question": "Is there a school of silver sardines?",
+   "box": [
+    650,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "manta_rays",
+   "type": "entity",
+   "class": "manta ray",
+   "plural": "manta rays",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a school of manta rays",
+   "question": "Is there a school of manta rays?",
+   "box": [
+    100,
+    50,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "reef_life",
+   "type": "entity",
+   "class": "sea urchin",
+   "plural": "sea urchins",
+   "count": 1,
+   "count_exact": false,
+   "desc": "urchins",
+   "question": "Are there urchins?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "phantom_dolphin",
+   "type": "entity",
+   "class": "dolphin",
+   "plural": "dolphins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a phantom dolphin",
+   "question": "Is there a phantom dolphin?",
+   "box": [
+    200,
+    300,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "lens_installation",
+   "type": "entity",
+   "class": "installation",
+   "plural": "installations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an intricate lattice",
+   "question": "Is there an intricate lattice?",
+   "box": [
+    150,
+    400,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "jellyfish",
+   "type": "entity",
+   "class": "jellyfish",
+   "plural": "jellyfish",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a ribbon of phosphorescent jellyfish",
+   "question": "Is there a ribbon of phosphorescent jellyfish?",
+   "box": [
+    400,
+    500,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "dolphin_arcing",
+   "type": "state",
+   "of": "dolphin",
+   "desc": "the young dolphin is arcing through the water",
+   "question": "Is the young dolphin arcing through the water?"
+  },
+  {
+   "id": "diver_hovering",
+   "type": "state",
+   "of": "diver",
+   "desc": "the diver is hovering motionless",
+   "question": "Is the diver hovering motionless?"
+  },
+  {
+   "id": "diver_holding_camera",
+   "type": "action",
+   "of": [
+    "diver",
+    "camera"
+   ],
+   "desc": "the diver holds the camera in outstretched hands",
+   "question": "Is the diver holding the camera in outstretched hands?"
+  },
+  {
+   "id": "sardines_swirling",
+   "type": "state",
+   "of": "sardines",
+   "desc": "the sardines are swirling in hypnotic patterns",
+   "question": "Are the sardines swirling in hypnotic patterns?"
+  },
+  {
+   "id": "sardine_near_lens",
+   "type": "relation",
+   "of": [
+    "sardines",
+    "camera"
+   ],
+   "desc": "one sardine is close to the camera lens",
+   "question": "Is one sardine close to the camera lens?"
+  },
+  {
+   "id": "manta_rays_gliding",
+   "type": "state",
+   "of": "manta_rays",
+   "desc": "the manta rays are gliding silently",
+   "question": "Are the manta rays gliding silently?"
+  },
+  {
+   "id": "eel_watching",
+   "type": "action",
+   "of": [
+    "reef_life",
+    "dolphin"
+   ],
+   "desc": "the moray eel is watching the dolphin",
+   "question": "Is the moray eel watching the dolphin?"
+  },
+  {
+   "id": "phantom_behind_real",
+   "type": "relation",
+   "of": [
+    "phantom_dolphin",
+    "dolphin"
+   ],
+   "desc": "the phantom dolphin is behind the real dolphin",
+   "question": "Is the phantom dolphin behind the real dolphin?"
+  },
+  {
+   "id": "lens_part_of_installation",
+   "type": "relation",
+   "of": [
+    "lens_installation",
+    "phantom_dolphin"
+   ],
+   "desc": "the lens installation creates the phantom dolphin",
+   "question": "Does the lens installation appear to create the phantom dolphin?"
+  },
+  {
+   "id": "jellyfish_between",
+   "type": "relation",
+   "of": [
+    "jellyfish",
+    "diver",
+    "phantom_dolphin"
+   ],
+   "desc": "the jellyfish are between the diver and the phantom dolphin",
+   "question": "Are the jellyfish between the diver and the phantom dolphin?"
+  },
+  {
+   "id": "phantom_duplicates",
+   "type": "state",
+   "of": "phantom_dolphin",
+   "desc": "the phantom dolphin splits into a dozen duplicates",
+   "question": "Does the phantom dolphin split into a dozen duplicates?"
+  },
+  {
+   "id": "duplicate_face",
+   "type": "attribute",
+   "of": "phantom_dolphin",
+   "desc": "one duplicate has a face like liquid mercury with kelp hair",
+   "question": "Does one duplicate have a face like liquid mercury with kelp hair?"
+  },
+  {
+   "id": "camera_attribute",
+   "type": "attribute",
+   "of": "diver",
+   "desc": "the diver cradles the camera in outstretched hands",
+   "question": "Is the diver cradling the camera in outstretched hands?"
+  },
+  {
+   "id": "sardine_grazing",
+   "type": "action",
+   "of": [
+    "sardines",
+    "camera"
+   ],
+   "desc": "one sardine grazes the camera lens",
+   "question": "Is one sardine grazing the camera lens?"
+  },
+  {
+   "id": "urchins_rolling",
+   "type": "state",
+   "of": "reef_life",
+   "desc": "the urchins are rolling across the rocks",
+   "question": "Are the urchins rolling across the rocks?"
+  },
+  {
+   "id": "anemones_pulsing",
+   "type": "state",
+   "of": "reef_life",
+   "desc": "the anemones are pulsing in time with the current",
+   "question": "Are the anemones pulsing in time with the current?"
+  },
+  {
+   "id": "eel_peeking",
+   "type": "state",
+   "of": "reef_life",
+   "desc": "the moray eel is peeking from a crevice",
+   "question": "Is the moray eel peeking from a crevice?"
+  },
+  {
+   "id": "lens_hanging",
+   "type": "relation",
+   "of": [
+    "lens_installation",
+    "reef_life"
+   ],
+   "desc": "the lens installation hangs from a chain of coral and kelp",
+   "question": "Does the lens installation hang from a chain of coral and kelp?"
+  },
+  {
+   "id": "jellyfish_pulsing",
+   "type": "relation",
+   "of": [
+    "jellyfish",
+    "sardines"
+   ],
+   "desc": "the jellyfish are pulsing in rhythm with the sardines",
+   "question": "Are the jellyfish pulsing in rhythm with the sardines?"
+  },
+  {
+   "id": "duplicate_rotating",
+   "type": "action",
+   "of": [
+    "phantom_dolphin",
+    "diver"
+   ],
+   "desc": "one duplicate of the phantom dolphin approaches the diver and rotates",
+   "question": "Is one duplicate of the phantom dolphin approaching the diver and rotating?"
+  },
+  {
+   "id": "dolphin_skin",
+   "type": "attribute",
+   "of": "dolphin",
+   "desc": "the young dolphin has iridescent skin that catches the golden sunlight like polished pearls",
+   "question": "Does the young dolphin have iridescent skin that catches the golden sunlight like polished pearls?"
+  },
+  {
+   "id": "diver_camera_hands",
+   "type": "state",
+   "of": "diver",
+   "desc": "the diver's hands are outstretched",
+   "question": "Are the diver's hands outstretched?"
+  },
+  {
+   "id": "sardine_flash_reflection",
+   "type": "attribute",
+   "of": "sardines",
+   "desc": "one sardine's scales reflect the camera's flash",
+   "question": "Do the scales of one sardine reflect the camera's flash?"
+  },
+  {
+   "id": "phantom_dolphin_refracted",
+   "type": "attribute",
+   "of": "phantom_dolphin",
+   "desc": "the phantom dolphin is a mirror-image made of water and light, refracted through a submerged lens",
+   "question": "Is the phantom dolphin a mirror-image made of water and light, refracted through a submerged lens?"
+  },
+  {
+   "id": "lens_chain",
+   "type": "attribute",
+   "of": "lens_installation",
+   "desc": "the lens installation hangs from a chain of coral and kelp",
+   "question": "Does the lens installation hang from a chain of coral and kelp?"
+  },
+  {
+   "id": "jellyfish_glow",
+   "type": "attribute",
+   "of": "jellyfish",
+   "desc": "the jellyfish have translucent bodies glowing like underwater lanterns in eerie blues and greens",
+   "question": "Do the jellyfish have translucent bodies glowing like underwater lanterns in eerie blues and greens?"
+  },
+  {
+   "id": "duplicate_face_details",
+   "type": "attribute",
+   "of": "phantom_dolphin",
+   "desc": "one duplicate has eyes like liquid mercury, hair streaming like kelp, and a flickering smile",
+   "question": "Does one duplicate of the phantom dolphin have eyes like liquid mercury, hair streaming like kelp, and a flickering smile?"
+  },
+  {
+   "id": "camera_viewfinder_glow",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera's viewfinder glows faintly",
+   "question": "Does the camera's viewfinder glow faintly?"
+  },
+  {
+   "id": "eel_below_dolphin",
+   "type": "relation",
+   "of": [
+    "reef_life",
+    "dolphin"
+   ],
+   "desc": "the moray eel is below the dolphin",
+   "question": "Is the moray eel located below the young dolphin?"
+  },
+  {
+   "id": "installation_near_phantom",
+   "type": "relation",
+   "of": [
+    "lens_installation",
+    "phantom_dolphin"
+   ],
+   "desc": "the installation is near the phantom dolphin",
+   "question": "Is the intricate lattice of glass prisms and polished shells near the phantom dolphin?"
+  },
+  {
+   "id": "bg_reef",
+   "type": "entity",
+   "class": "coral reef",
+   "plural": "coral reefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coral reef",
+   "question": "Is there a coral reef?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "anemones",
+   "type": "entity",
+   "class": "anemone",
+   "plural": "anemones",
+   "count": 1,
+   "count_exact": false,
+   "desc": "anemones",
+   "question": "Are there anemones?",
+   "box": [
+    350,
+    850,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "moray_eel",
+   "type": "entity",
+   "class": "moray eel",
+   "plural": "moray eels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moray eel",
+   "question": "Is there a moray eel?",
+   "box": [
+    600,
+    850,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "phantom_composition",
+   "type": "attribute",
+   "of": "phantom_dolphin",
+   "desc": "the phantom dolphin is made of water and light",
+   "question": "Is the phantom dolphin made of water and light?"
+  },
+  {
+   "id": "lattice_materials",
+   "type": "attribute",
+   "of": "lens_installation",
+   "desc": "the lattice is made of glass prisms and polished shells",
+   "question": "Is the lattice made of glass prisms and polished shells?"
+  },
+  {
+   "id": "viewfinder_inner_light",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera's viewfinder has an inner light",
+   "question": "Does the camera's viewfinder have an inner light?"
+  }
+ ],
+ "edges": [],
+ "id": "lb_0421",
+ "prompt": "The sun pierces the turquoise surface in shimmering shafts, casting fractured light across the coral reef that seems to breathe beneath the ocean’s glassy hush. A young dolphin arcs through the crystalline waters with the grace of a leaping dancer, its iridescent skin catching the golden sunlight like polished pearls, each ripple of its sleek form sending ripples through the underwater ballet unfolding around it. Just beyond the dolphin’s arc, a diver in a blue wetsuit hovers motionless, camera cradled in outstretched hands, capturing the moment with reverent stillness. The diver’s breathing is steady and slow, a careful mimicry of the ocean’s rhythm, as if they are trying to become part of the sea itself. Around the diver’s legs, a school of silver sardines swirls in hypnotic patterns, their bodies flashing like shattered mirrors as they weave in and out of the currents with an intelligence that feels almost architectural. One of the sardines darts close enough to graze the diver’s camera lens, its scales reflecting the camera’s flash in a momentary, dazzling echo. The diver’s presence seems to anchor the entire scene, their silhouette the only stable point in a world of shifting light and fluid motion. Above, a school of manta rays glides silently, their wide wings slicing through the water like silent, ancient kites, their shadows flickering across the coral below as they pass. Below, the reef teems with life—urchins roll like small armored beetles across the rocks, anemones pulse in time with the current, and a curious moray eel peeks from a crevice, watching the dolphin with something like recognition. The dolphin itself is not alone in its leap; behind it, another figure emerges—this one not flesh and blood but a mirror-image made of water and light, its form refracted through a submerged lens that hangs from a chain of coral and kelp. This phantom dolphin seems to ripple and fade with each movement, a living echo of the real one, its arc bending in ways that defy the natural curve of water. The lens, it turns out, is part of a strange installation—an intricate lattice of glass prisms and polished shells that floats like a submerged cathedral, capturing and bending light into impossible patterns that dance across the reef like spectral fish. Between the diver and the phantom dolphin, a ribbon of phosphorescent jellyfish pulses in rhythm with the sardines, their translucent bodies glowing like underwater lanterns, illuminating the scene in eerie blues and greens. The jellyfish trail a current that seems to pull the sardines into spirals, creating the illusion of a vortex that swirls gently but unyieldingly, as if the water itself is a living, breathing being. Within this vortex, the phantom dolphin begins to take on a second form, its mirrored body now split into a dozen duplicates, each one swimming in a different direction, their arcs intersecting and overlapping in a complex, recursive dance. One of these duplicates approaches the diver and begins to rotate, revealing a face that is somehow both the diver’s and not—eyes like liquid mercury, hair streaming like kelp, and a smile that seems to flicker with the memory of a forgotten song. As the duplicates spin and scatter, they leave trails of light that entwine with the jellyfish’s glow, creating a web of color and motion that blurs the boundary between illusion and reality. Meanwhile, the diver remains frozen in place, their camera capturing it all, its viewfinder glowing faintly with an inner light as if the scene itself is aware of being observed. The coral reef pulses in time with the shifting shadows, its colors deepening and lightening as if it, too, is caught in the rhythm of the dance. In this surreal, entangled moment, every creature, every ripple, every flicker of light feels like part of a larger, unspoken narrative, one that seems to bend the very laws of space and time, yet remains somehow entirely coherent in the strange, shimmering logic of the deep.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 59,
+   "n_uncovered": 5,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "phantom_duplicates_count",
+     "phantom_duplicates"
+    ]
+   ]
+  }
+ }
+}

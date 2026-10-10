@@ -1,0 +1,244 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse structure",
+   "question": "Does the image show a botanical greenhouse structure?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall fern in a terracotta pot",
+   "question": "Is there a tall fern in a terracotta pot?",
+   "box": [
+    400,
+    150,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray hat",
+   "question": "Is there an elderly man in a gray hat?",
+   "box": [
+    700,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    680,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    850,
+    750,
+    980,
+    880
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in green overalls",
+   "question": "Is there a young boy in green overalls?",
+   "box": [
+    450,
+    250,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "woman_holding_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a watering can",
+   "question": "Is the woman in the blue dress holding a watering can?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in the gray hat is sitting",
+   "question": "Is the elderly man in the gray hat sitting?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is curled up",
+   "question": "Is the small orange cat curled up?"
+  },
+  {
+   "id": "boy_leaning",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in green overalls leans forward",
+   "question": "Is the young boy in green overalls leaning forward?"
+  },
+  {
+   "id": "woman_looking_fern",
+   "type": "action",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in the blue dress looks at the tall fern",
+   "question": "Is the woman in the blue dress looking at the tall fern?"
+  },
+  {
+   "id": "man_pointing_cat",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the elderly man in the gray hat points at the small orange cat",
+   "question": "Is the elderly man in the gray hat pointing at the small orange cat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the elderly man in the gray hat sits on the wooden bench",
+   "question": "Is the elderly man in the gray hat sitting on the wooden bench?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the small orange cat is next to the elderly man in the gray hat",
+   "question": "Is the small orange cat next to the elderly man in the gray hat?"
+  },
+  {
+   "id": "boy_behind_fern",
+   "type": "relation",
+   "of": [
+    "boy",
+    "fern"
+   ],
+   "desc": "the young boy in green overalls is behind the tall fern",
+   "question": "Is the young boy in green overalls behind the tall fern?"
+  },
+  {
+   "id": "no_reflection",
+   "type": "absent",
+   "desc": "glass reflection on the greenhouse structure",
+   "question": "Is there any glass reflection visible on the greenhouse structure?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "cat_asleep",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is asleep",
+   "question": "Is the small orange cat asleep?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0139",
+ "prompt": "In a pencil sketch with light color wash, a botanical greenhouse frames five distinct entities. On the left, a woman in a blue dress stands holding a watering can. In the center, a tall fern rises from a terracotta pot. To the right, an elderly man in a gray hat sits on a wooden bench. Next to him, a small orange cat curls up asleep. Behind the fern, a young boy in green overalls leans forward. The woman in the blue dress is looking at the tall fern. The elderly man in the gray hat is pointing at the small orange cat. There is no glass reflection visible on the structure.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

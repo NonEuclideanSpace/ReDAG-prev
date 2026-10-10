@@ -1,0 +1,248 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling shipyard dock",
+   "question": "Does the background show a bustling shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with blue hair",
+   "question": "Is there a woman with blue hair?",
+   "box": [
+    380,
+    180,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "steel crane",
+   "plural": "steel cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large steel crane",
+   "question": "Is there a large steel crane?",
+   "box": [
+    600,
+    50,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    600,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of wooden crates",
+   "question": "Is there a stack of wooden crates?",
+   "box": [
+    800,
+    700,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a clipboard",
+   "question": "Is the man in the red scarf holding a clipboard?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with blue hair is pointing",
+   "question": "Is the woman with blue hair pointing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with blue hair is standing",
+   "question": "Is the woman with blue hair standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is looking up",
+   "question": "Is the brown dog looking up?"
+  },
+  {
+   "id": "woman_next_to_crane",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crane"
+   ],
+   "desc": "the woman with blue hair stands next to the large steel crane",
+   "question": "Is the woman with blue hair standing next to the large steel crane?"
+  },
+  {
+   "id": "dog_beside_crates",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crates"
+   ],
+   "desc": "the brown dog sits beside the stack of wooden crates",
+   "question": "Is the brown dog sitting beside the stack of wooden crates?"
+  },
+  {
+   "id": "dog_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog looks at the woman with blue hair",
+   "question": "Is the brown dog looking at the woman with blue hair?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf looks at the woman with blue hair",
+   "question": "Is the man in the red scarf looking at the woman with blue hair?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "no_extra_characters",
+   "type": "absent",
+   "desc": "additional characters",
+   "question": "Are there any additional characters besides the man, the woman, and the dog?"
+  },
+  {
+   "id": "ships",
+   "type": "entity",
+   "class": "ship",
+   "plural": "ships",
+   "count": 2,
+   "count_exact": false,
+   "desc": "towering ships",
+   "question": "Are there towering ships?",
+   "box": [
+    50,
+    50,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "industrial_equipment",
+   "type": "entity",
+   "class": "industrial equipment",
+   "plural": "industrial equipment",
+   "count": 2,
+   "count_exact": false,
+   "desc": "industrial equipment",
+   "question": "Is there industrial equipment?",
+   "box": [
+    800,
+    300,
+    1024,
+    600
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t03_0018",
+ "prompt": "In a vibrant anime style scene at a bustling shipyard dock, a man in a red scarf stands on the left holding a clipboard firmly. In the center, a woman with blue hair points decisively toward the horizon while standing next to a large steel crane. On the right, a brown dog sits patiently beside a stack of wooden crates, looking up at the woman. The man in the red scarf looks directly at the woman with blue hair, creating a clear line of interaction between them. The background features towering ships and industrial equipment, but there is no water visible in the frame. The composition focuses strictly on these three distinct figures and their immediate surroundings without any additional characters or distracting elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

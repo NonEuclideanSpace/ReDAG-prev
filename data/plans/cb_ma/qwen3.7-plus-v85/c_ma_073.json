@@ -1,0 +1,174 @@
+{
+ "style": "neutral studio lighting, photorealistic product photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral studio background",
+   "question": "Is the background a neutral studio setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "plinth",
+   "type": "entity",
+   "class": "plinth",
+   "plural": "plinths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a felt-lined plinth of forest green",
+   "question": "Is there a forest green felt-lined plinth?",
+   "box": [
+    312,
+    600,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "chess board",
+   "plural": "chess boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a marble chess board",
+   "question": "Is there a marble chess board?",
+   "box": [
+    200,
+    500,
+    824,
+    800
+   ]
+  },
+  {
+   "id": "knight",
+   "type": "entity",
+   "class": "chess knight",
+   "plural": "chess knights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single chess knight",
+   "question": "Is there a single chess knight?",
+   "box": [
+    412,
+    250,
+    612,
+    650
+   ]
+  },
+  {
+   "id": "knight_ridges",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the knight's mane bears six crisp ridges",
+   "question": "Does the knight's mane bear six crisp ridges?"
+  },
+  {
+   "id": "knight_ears",
+   "type": "state",
+   "of": "knight",
+   "desc": "the knight's ears stand sharply upright",
+   "question": "Do the knight's ears stand sharply upright?"
+  },
+  {
+   "id": "knight_band",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "a thin silver band trims the circular base of the knight",
+   "question": "Does a thin silver band trim the circular base of the knight?"
+  },
+  {
+   "id": "knight_eye",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "a sapphire cabochon serves as the eye of the knight",
+   "question": "Does a sapphire cabochon serve as the eye of the knight?"
+  },
+  {
+   "id": "knight_on_plinth",
+   "type": "relation",
+   "of": [
+    "knight",
+    "plinth"
+   ],
+   "desc": "the knight stands on the plinth",
+   "question": "Is the knight standing on the plinth?"
+  },
+  {
+   "id": "plinth_on_board",
+   "type": "relation",
+   "of": [
+    "plinth",
+    "board"
+   ],
+   "desc": "the plinth is placed on the marble board",
+   "question": "Is the plinth placed on the marble board?"
+  },
+  {
+   "id": "no_chips",
+   "type": "absent",
+   "desc": "chips on the sculpture",
+   "question": "Are there any chips on the sculpture?"
+  },
+  {
+   "id": "no_paint",
+   "type": "absent",
+   "desc": "paint on the sculpture",
+   "question": "Is there any paint on the sculpture?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden material in the scene",
+   "question": "Is there any wooden material in the scene?"
+  },
+  {
+   "id": "knight_alabaster",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the chess knight is sculpted from pure white alabaster streaked with faint translucence",
+   "question": "Is the chess knight sculpted from pure white alabaster streaked with faint translucence?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "board",
+   "to": "plinth",
+   "kind": "support"
+  },
+  {
+   "from": "plinth",
+   "to": "knight",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_073",
+ "prompt": "Render a single alabaster chess knight placed on a marble board under neutral studio light. The knight is sculpted from pure white alabaster streaked with faint translucence. Its mane bears six crisp ridges, and its ears stand sharply upright. A thin silver band trims the circular base, and a sapphire cabochon serves as the eye. The figure stands on a felt-lined plinth of forest green. The sculpture shows no chips, no paint, and contains no wooden material.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

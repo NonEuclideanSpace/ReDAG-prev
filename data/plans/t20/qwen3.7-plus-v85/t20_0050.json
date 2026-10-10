@@ -1,0 +1,573 @@
+{
+ "style": "photorealistic photo, indoor artificial lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school hallway with a back wall and sterile atmosphere",
+   "question": "Does the image show a school hallway with a back wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "volcano_model",
+   "type": "entity",
+   "class": "model volcano",
+   "plural": "model volcanoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a model volcano",
+   "question": "Is there a model volcano?",
+   "box": [
+    350,
+    400,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "girl_yellow",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow dress",
+   "question": "Is there a girl in a yellow dress?",
+   "box": [
+    250,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "boy_blue",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a blue cap",
+   "question": "Is there a boy in a blue cap?",
+   "box": [
+    100,
+    220,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "teacher_grey",
+   "type": "entity",
+   "class": "teacher",
+   "plural": "teachers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a grey suit",
+   "question": "Is there a teacher in a grey suit?",
+   "box": [
+    50,
+    180,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "woman_green",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green coat",
+   "question": "Is there a woman in a green coat?",
+   "box": [
+    750,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "folding chair",
+   "plural": "folding chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding chair",
+   "question": "Is there a folding chair?",
+   "box": [
+    760,
+    600,
+    940,
+    950
+   ]
+  },
+  {
+   "id": "dog_brown",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    780,
+    700,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "man_red",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    600,
+    150,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "student_white",
+   "type": "entity",
+   "class": "student",
+   "plural": "students",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a student in a white lab coat",
+   "question": "Is there a student in a white lab coat?",
+   "box": [
+    150,
+    100,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "table_microscope",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    100,
+    500,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "microscope",
+   "type": "entity",
+   "class": "microscope",
+   "plural": "microscopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a microscope",
+   "question": "Is there a microscope?",
+   "box": [
+    200,
+    450,
+    300,
+    550
+   ]
+  },
+  {
+   "id": "student_plaid",
+   "type": "entity",
+   "class": "student",
+   "plural": "students",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a student wearing glasses",
+   "question": "Is there a student wearing glasses?",
+   "box": [
+    350,
+    120,
+    550,
+    620
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted fern",
+   "question": "Is there a large potted fern?",
+   "box": [
+    900,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "girl_proud",
+   "type": "state",
+   "of": "girl_yellow",
+   "desc": "the girl in the yellow dress stands proudly",
+   "question": "Is the girl in the yellow dress standing proudly?"
+  },
+  {
+   "id": "volcano_erupting",
+   "type": "state",
+   "of": "volcano_model",
+   "desc": "the model volcano is erupting",
+   "question": "Is the model volcano erupting?"
+  },
+  {
+   "id": "boy_leaning",
+   "type": "state",
+   "of": "boy_blue",
+   "desc": "the boy in the blue cap leans forward",
+   "question": "Is the boy in the blue cap leaning forward?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy_blue",
+    "volcano_model"
+   ],
+   "desc": "the boy in the blue cap points at the bubbling mixture in the volcano",
+   "question": "Is the boy in the blue cap pointing at the bubbling mixture in the volcano?"
+  },
+  {
+   "id": "teacher_smiling",
+   "type": "state",
+   "of": "teacher_grey",
+   "desc": "the teacher in the grey suit has a gentle smile",
+   "question": "Does the teacher in the grey suit have a gentle smile?"
+  },
+  {
+   "id": "teacher_holding_clipboard",
+   "type": "attribute",
+   "of": "teacher_grey",
+   "desc": "the teacher in the grey suit holds a clipboard",
+   "question": "Is the teacher in the grey suit holding a clipboard?"
+  },
+  {
+   "id": "teacher_nodding",
+   "type": "state",
+   "of": "teacher_grey",
+   "desc": "the teacher in the grey suit nods slightly",
+   "question": "Is the teacher in the grey suit nodding slightly?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "relation",
+   "of": [
+    "woman_green",
+    "chair"
+   ],
+   "desc": "the woman in the green coat sits on the folding chair",
+   "question": "Is the woman in the green coat sitting on the folding chair?"
+  },
+  {
+   "id": "woman_holding_cup",
+   "type": "attribute",
+   "of": "woman_green",
+   "desc": "the woman in the green coat holds a paper cup",
+   "question": "Is the woman in the green coat holding a paper cup?"
+  },
+  {
+   "id": "woman_stroking_dog",
+   "type": "action",
+   "of": [
+    "woman_green",
+    "dog_brown"
+   ],
+   "desc": "the woman in the green coat strokes the fur of the small brown dog",
+   "question": "Is the woman in the green coat stroking the fur of the small brown dog?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "relation",
+   "of": [
+    "dog_brown",
+    "woman_green"
+   ],
+   "desc": "the small brown dog rests its head on the woman's knee",
+   "question": "Is the small brown dog resting its head on the woman's knee?"
+  },
+  {
+   "id": "man_walking",
+   "type": "state",
+   "of": "man_red",
+   "desc": "the man in the red scarf walks past",
+   "question": "Is the man in the red scarf walking past?"
+  },
+  {
+   "id": "man_carrying_brochures",
+   "type": "attribute",
+   "of": "man_red",
+   "desc": "the man in the red scarf carries a stack of brochures",
+   "question": "Is the man in the red scarf carrying a stack of brochures?"
+  },
+  {
+   "id": "man_glancing",
+   "type": "action",
+   "of": [
+    "man_red",
+    "volcano_model"
+   ],
+   "desc": "the man in the red scarf glances at the volcano",
+   "question": "Is the man in the red scarf glancing at the volcano?"
+  },
+  {
+   "id": "student_white_adjusting",
+   "type": "action",
+   "of": [
+    "student_white",
+    "microscope"
+   ],
+   "desc": "the student in the white lab coat adjusts the microscope",
+   "question": "Is the student in the white lab coat adjusting the microscope?"
+  },
+  {
+   "id": "student_plaid_handing",
+   "type": "action",
+   "of": [
+    "student_plaid",
+    "student_white"
+   ],
+   "desc": "the student in the plaid shirt hands a slide to the student in the white lab coat",
+   "question": "Is the student in the plaid shirt handing a slide to the student in the white lab coat?"
+  },
+  {
+   "id": "student_white_placing_slide",
+   "type": "action",
+   "of": [
+    "student_white",
+    "microscope"
+   ],
+   "desc": "the student in the white lab coat places a glass slide onto the microscope stage",
+   "question": "Is the student in the white lab coat placing a glass slide onto the microscope stage?"
+  },
+  {
+   "id": "student_plaid_watching",
+   "type": "state",
+   "of": "student_plaid",
+   "desc": "the student in the plaid shirt watches intently",
+   "question": "Is the student in the plaid shirt watching intently?"
+  },
+  {
+   "id": "girl_boy_eye_contact",
+   "type": "relation",
+   "of": [
+    "girl_yellow",
+    "boy_blue"
+   ],
+   "desc": "the girl in the yellow dress maintains eye contact with the boy in the blue cap",
+   "question": "Is the girl in the yellow dress maintaining eye contact with the boy in the blue cap?"
+  },
+  {
+   "id": "teacher_looking",
+   "type": "relation",
+   "of": [
+    "teacher_grey",
+    "volcano_model"
+   ],
+   "desc": "the teacher in the grey suit looks at the demonstration",
+   "question": "Is the teacher in the grey suit looking at the demonstration?"
+  },
+  {
+   "id": "woman_watching",
+   "type": "relation",
+   "of": [
+    "woman_green",
+    "volcano_model"
+   ],
+   "desc": "the woman in the green coat watches the scene",
+   "question": "Is the woman in the green coat watching the scene?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy_blue",
+    "girl_yellow"
+   ],
+   "desc": "the boy in the blue cap is to the left of the girl in the yellow dress",
+   "question": "Is the boy in the blue cap to the left of the girl in the yellow dress?"
+  },
+  {
+   "id": "teacher_beside_boy",
+   "type": "relation",
+   "of": [
+    "teacher_grey",
+    "boy_blue"
+   ],
+   "desc": "the teacher in the grey suit is beside the boy in the blue cap",
+   "question": "Is the teacher in the grey suit beside the boy in the blue cap?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog_brown",
+    "woman_green"
+   ],
+   "desc": "the small brown dog is next to the woman in the green coat",
+   "question": "Is the small brown dog next to the woman in the green coat?"
+  },
+  {
+   "id": "man_behind_group",
+   "type": "relation",
+   "of": [
+    "man_red",
+    "girl_yellow"
+   ],
+   "desc": "the man in the red scarf is behind the main group",
+   "question": "Is the man in the red scarf behind the main group?"
+  },
+  {
+   "id": "student_white_at_table",
+   "type": "relation",
+   "of": [
+    "student_white",
+    "table_microscope"
+   ],
+   "desc": "the student in the white lab coat is at the table",
+   "question": "Is the student in the white lab coat at the table?"
+  },
+  {
+   "id": "microscope_on_table",
+   "type": "relation",
+   "of": [
+    "microscope",
+    "table_microscope"
+   ],
+   "desc": "the microscope is on the table",
+   "question": "Is the microscope on the table?"
+  },
+  {
+   "id": "student_plaid_beside_microscope",
+   "type": "relation",
+   "of": [
+    "student_plaid",
+    "microscope"
+   ],
+   "desc": "the student in the plaid shirt stands beside the microscope",
+   "question": "Is the student in the plaid shirt standing beside the microscope?"
+  },
+  {
+   "id": "table_near_wall",
+   "type": "state",
+   "of": "table_microscope",
+   "desc": "the table is near the back wall",
+   "question": "Is the table near the back wall?"
+  },
+  {
+   "id": "fern_in_corner",
+   "type": "state",
+   "of": "fern",
+   "desc": "the large potted fern is in the far corner",
+   "question": "Is the large potted fern in the far corner?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows with sunlight streaming through",
+   "question": "Are there any windows with sunlight streaming through in the image?"
+  },
+  {
+   "id": "no_screens",
+   "type": "absent",
+   "desc": "digital screens on tables",
+   "question": "Are there any digital screens visible on any of the tables?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl_yellow",
+   "desc": "the girl in the yellow dress stands",
+   "question": "Is the girl in the yellow dress standing?"
+  },
+  {
+   "id": "student_plaid_standing",
+   "type": "state",
+   "of": "student_plaid",
+   "desc": "the student wearing glasses is standing",
+   "question": "Is the student wearing glasses standing?"
+  },
+  {
+   "id": "fake_lava",
+   "type": "attribute",
+   "of": "volcano_model",
+   "desc": "the model volcano has fake lava",
+   "question": "Does the model volcano have fake lava?"
+  },
+  {
+   "id": "student_plaid_shirt",
+   "type": "attribute",
+   "of": "student_plaid",
+   "desc": "the student wearing glasses wears a plaid shirt",
+   "question": "Does the student wearing glasses wear a plaid shirt?"
+  },
+  {
+   "id": "no_computers",
+   "type": "absent",
+   "desc": "computers on tables",
+   "question": "Are there any computers visible on any of the tables?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman_green",
+   "kind": "support"
+  },
+  {
+   "from": "table_microscope",
+   "to": "microscope",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0050",
+ "prompt": "A photorealistic photo captures the bustling energy of a school science fair. In the center, a girl in a yellow dress stands proudly next to her project, a model volcano erupting with fake lava. To her left, a boy in a blue cap leans forward, pointing at the bubbling mixture with intense curiosity. Beside him, a teacher in a grey suit looks at the demonstration with a gentle smile, holding a clipboard loosely in one hand. On the right side of the frame, a woman in a green coat sits on a folding chair, watching the scene unfold while holding a paper cup. Next to her, a small brown dog rests its head on her knee, seemingly bored by the academic displays. Behind the main group, a man in a red scarf walks past, carrying a stack of brochures. Near the back wall, a student in a white lab coat adjusts a microscope on a nearby table. Another student, wearing glasses and a plaid shirt, stands beside the microscope, handing a slide to the first student. A large potted fern sits in the far corner, adding a touch of nature to the sterile hallway. There is no sunlight streaming through windows, as the event takes place indoors under artificial lights. There is no digital screen or computer visible on any of the tables, emphasizing hands-on experimentation. The girl in the yellow dress maintains eye contact with the boy in the blue cap, creating a focal point of shared discovery. The teacher in the grey suit nods slightly, acknowledging the effort put into the project. The woman in the green coat strokes the fur of the small brown dog absentmindedly. The man in the red scarf glances briefly at the volcano before continuing his path down the corridor. The student in the white lab coat carefully places the glass slide onto the microscope stage. The student in the plaid shirt watches intently, ensuring the alignment is correct. The model volcano remains the central object of interest, drawing the gaze of multiple participants. The folding chair supports the weight of the seated woman comfortably. The potted fern remains still, contrasting with the dynamic human interactions around it. The artificial lighting casts soft shadows, highlighting the textures of the clothing and the materials used in the projects. The atmosphere is one of focused engagement and educational enthusiasm.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

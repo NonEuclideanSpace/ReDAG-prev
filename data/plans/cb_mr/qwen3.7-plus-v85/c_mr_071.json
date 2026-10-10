@@ -1,0 +1,404 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a zoo enclosure",
+   "question": "Does the image show a zoo enclosure?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lion",
+   "type": "entity",
+   "class": "lion",
+   "plural": "lions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lion",
+   "question": "Is there a lion?",
+   "box": [
+    300,
+    500,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "tiger",
+   "type": "entity",
+   "class": "tiger",
+   "plural": "tigers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiger",
+   "question": "Is there a tiger?",
+   "box": [
+    350,
+    450,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence",
+   "plural": "fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fence",
+   "question": "Is there a fence?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "platform",
+   "type": "entity",
+   "class": "platform",
+   "plural": "platforms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a raised platform",
+   "question": "Is there a raised platform?",
+   "box": [
+    700,
+    300,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "visitors",
+   "type": "entity",
+   "class": "visitor",
+   "plural": "visitors",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three visitors",
+   "question": "Are there three visitors?",
+   "box": [
+    750,
+    200,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "zookeeper",
+   "type": "entity",
+   "class": "zookeeper",
+   "plural": "zookeepers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a zookeeper",
+   "question": "Is there a zookeeper?",
+   "box": [
+    100,
+    250,
+    250,
+    550
+   ]
+  },
+  {
+   "id": "signs",
+   "type": "entity",
+   "class": "sign",
+   "plural": "signs",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four signs",
+   "question": "Are there four signs?",
+   "box": [
+    50,
+    420,
+    900,
+    480
+   ]
+  },
+  {
+   "id": "buckets",
+   "type": "entity",
+   "class": "water bucket",
+   "plural": "water buckets",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two large water buckets",
+   "question": "Are there two large water buckets?",
+   "box": [
+    50,
+    550,
+    200,
+    650
+   ]
+  },
+  {
+   "id": "trough",
+   "type": "entity",
+   "class": "feeding trough",
+   "plural": "feeding troughs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a feeding trough",
+   "question": "Is there a feeding trough?",
+   "box": [
+    650,
+    550,
+    800,
+    650
+   ]
+  },
+  {
+   "id": "pond",
+   "type": "entity",
+   "class": "water pond",
+   "plural": "water ponds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a water pond",
+   "question": "Is there a water pond?",
+   "box": [
+    200,
+    600,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "map_sign",
+   "type": "entity",
+   "class": "sign",
+   "plural": "signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large sign",
+   "question": "Is there a large sign?",
+   "box": [
+    900,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "lion_pacing",
+   "type": "state",
+   "of": "lion",
+   "desc": "the lion is pacing",
+   "question": "Is the lion pacing?"
+  },
+  {
+   "id": "tiger_resting",
+   "type": "state",
+   "of": "tiger",
+   "desc": "the tiger is resting",
+   "question": "Is the tiger resting?"
+  },
+  {
+   "id": "visitors_standing",
+   "type": "state",
+   "of": "visitors",
+   "desc": "the visitors are standing",
+   "question": "Are the visitors standing?"
+  },
+  {
+   "id": "visitors_looking",
+   "type": "action",
+   "of": [
+    "visitors",
+    "lion"
+   ],
+   "desc": "the visitors are looking at the lion",
+   "question": "Are the visitors looking at the lion?"
+  },
+  {
+   "id": "zookeeper_feeding",
+   "type": "action",
+   "of": [
+    "zookeeper",
+    "tiger"
+   ],
+   "desc": "the zookeeper is feeding the tiger through an opening in the fence",
+   "question": "Is the zookeeper feeding the tiger through an opening in the fence?"
+  },
+  {
+   "id": "lion_front_shelter",
+   "type": "relation",
+   "of": [
+    "lion",
+    "shelter"
+   ],
+   "desc": "the lion is in front of the rocky shelter",
+   "question": "Is the lion in front of the rocky shelter?"
+  },
+  {
+   "id": "tiger_behind_lion",
+   "type": "relation",
+   "of": [
+    "tiger",
+    "lion"
+   ],
+   "desc": "the tiger is behind the lion",
+   "question": "Is the tiger behind the lion?"
+  },
+  {
+   "id": "fence_between_animals_platform",
+   "type": "relation",
+   "of": [
+    "fence",
+    "lion",
+    "platform"
+   ],
+   "desc": "the fence separates the animals from the raised platform",
+   "question": "Is the fence separating the animals from the raised platform?"
+  },
+  {
+   "id": "visitors_on_platform",
+   "type": "relation",
+   "of": [
+    "visitors",
+    "platform"
+   ],
+   "desc": "the visitors are on the raised platform",
+   "question": "Are the visitors on the raised platform?"
+  },
+  {
+   "id": "signs_on_fence",
+   "type": "relation",
+   "of": [
+    "signs",
+    "fence"
+   ],
+   "desc": "the signs are on the fence",
+   "question": "Are the signs on the fence?"
+  },
+  {
+   "id": "buckets_next_to_zookeeper",
+   "type": "relation",
+   "of": [
+    "buckets",
+    "zookeeper"
+   ],
+   "desc": "the water buckets are next to the zookeeper",
+   "question": "Are the water buckets next to the zookeeper?"
+  },
+  {
+   "id": "trough_beside_shelter",
+   "type": "relation",
+   "of": [
+    "trough",
+    "shelter"
+   ],
+   "desc": "the feeding trough is beside the rocky shelter",
+   "question": "Is the feeding trough beside the rocky shelter?"
+  },
+  {
+   "id": "pond_between",
+   "type": "relation",
+   "of": [
+    "pond",
+    "fence",
+    "lion"
+   ],
+   "desc": "the water pond is between the fence and the animals",
+   "question": "Is the water pond between the fence and the animals?"
+  },
+  {
+   "id": "map_sign_next_to_platform",
+   "type": "relation",
+   "of": [
+    "map_sign",
+    "platform"
+   ],
+   "desc": "the large sign with a map is next to the platform",
+   "question": "Is the large sign with a map next to the platform?"
+  },
+  {
+   "id": "lion_larger",
+   "type": "relation",
+   "of": [
+    "lion",
+    "tiger"
+   ],
+   "desc": "the lion is larger than the tiger",
+   "question": "Is the lion larger than the tiger?"
+  },
+  {
+   "id": "zookeeper_taller",
+   "type": "relation",
+   "of": [
+    "zookeeper",
+    "visitors"
+   ],
+   "desc": "the zookeeper is taller than the visitors",
+   "question": "Is the zookeeper taller than the visitors?"
+  },
+  {
+   "id": "map_sign_taller",
+   "type": "relation",
+   "of": [
+    "map_sign",
+    "zookeeper"
+   ],
+   "desc": "the large sign with a map is taller than the zookeeper",
+   "question": "Is the large sign with a map taller than the zookeeper?"
+  },
+  {
+   "id": "shelter",
+   "type": "entity",
+   "class": "rocky shelter",
+   "plural": "rocky shelters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rocky shelter",
+   "question": "Is there a rocky shelter?",
+   "box": [
+    100,
+    100,
+    400,
+    500
+   ]
+  },
+  {
+   "id": "map_on_sign",
+   "type": "attribute",
+   "of": "map_sign",
+   "desc": "the large sign has a map",
+   "question": "Does the large sign have a map?"
+  }
+ ],
+ "edges": [],
+ "id": "c_mr_071",
+ "prompt": "A zoo enclosure featuring a rocky shelter. A lion is pacing in front of the shelter, while a tiger rests behind the lion. The lion is larger than the tiger. A fence separates the animals from a raised platform where three visitors are standing and looking at the lion. A zookeeper, who is taller than the visitors, is feeding the tiger through an opening in the fence. On the fence, there are some signs, and their number is one more than the number of visitors. Next to the zookeeper are two large water buckets, and their number is one less than the number of visitors. A feeding trough is positioned beside the shelter, and a water pond is between the fence and the animals. A large sign with a map is mounted next to the platform, and it is taller than the zookeeper.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

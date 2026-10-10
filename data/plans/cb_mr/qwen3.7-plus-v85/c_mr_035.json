@@ -1,0 +1,527 @@
+{
+ "style": "photorealistic, chaotic kitchen scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior with cabinets",
+   "question": "Does the image show a kitchen interior with cabinets?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "countertop",
+   "type": "entity",
+   "class": "countertop",
+   "plural": "countertops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a messy kitchen countertop",
+   "question": "Is there a messy kitchen countertop?",
+   "box": [
+    0,
+    500,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef",
+   "question": "Is there a chef?",
+   "box": [
+    300,
+    100,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ginger cat",
+   "question": "Is there a ginger cat?",
+   "box": [
+    700,
+    450,
+    900,
+    650
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pot of boiling water",
+   "question": "Is there a pot of boiling water?",
+   "box": [
+    100,
+    450,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "stove",
+   "plural": "stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stove",
+   "question": "Is there a stove?",
+   "box": [
+    50,
+    550,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "cutting_board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cutting board",
+   "question": "Is there a cutting board?",
+   "box": [
+    400,
+    550,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "tomatoes",
+   "type": "entity",
+   "class": "tomato",
+   "plural": "tomatoes",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four red tomatoes",
+   "question": "Are there four red tomatoes?",
+   "box": [
+    560,
+    580,
+    700,
+    640
+   ]
+  },
+  {
+   "id": "rolling_pin",
+   "type": "entity",
+   "class": "rolling pin",
+   "plural": "rolling pins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling pin",
+   "question": "Is there a rolling pin?",
+   "box": [
+    650,
+    520,
+    800,
+    580
+   ]
+  },
+  {
+   "id": "flour_bag",
+   "type": "entity",
+   "class": "bag of flour",
+   "plural": "bags of flour",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knocked-over bag of flour",
+   "question": "Is there a knocked-over bag of flour?",
+   "box": [
+    500,
+    500,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "spoon_holder",
+   "type": "entity",
+   "class": "spoon holder",
+   "plural": "spoon holders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spoon holder",
+   "question": "Is there a spoon holder?",
+   "box": [
+    580,
+    520,
+    640,
+    580
+   ]
+  },
+  {
+   "id": "mouse",
+   "type": "entity",
+   "class": "mouse",
+   "plural": "mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single mouse",
+   "question": "Is there a single mouse?",
+   "box": [
+    200,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "cabinet_door",
+   "type": "entity",
+   "class": "cabinet door",
+   "plural": "cabinet doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cabinet door",
+   "question": "Is there a cabinet door?",
+   "box": [
+    150,
+    800,
+    350,
+    1000
+   ]
+  },
+  {
+   "id": "chef_hat_tall",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef's hat is taller than the pot",
+   "question": "Is the chef's hat visibly taller than the pot?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "chef_behind_counter",
+   "type": "relation",
+   "of": [
+    "chef",
+    "countertop"
+   ],
+   "desc": "the chef stands behind the countertop",
+   "question": "Is the chef standing behind the countertop?"
+  },
+  {
+   "id": "chef_holding_knife",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a large knife",
+   "question": "Is the chef holding a large knife?"
+  },
+  {
+   "id": "chef_chopping",
+   "type": "action",
+   "of": [
+    "chef",
+    "cutting_board"
+   ],
+   "desc": "the chef is chopping vegetables on the cutting board",
+   "question": "Is the chef chopping vegetables on the cutting board?"
+  },
+  {
+   "id": "cat_on_counter",
+   "type": "relation",
+   "of": [
+    "cat",
+    "countertop"
+   ],
+   "desc": "the cat is sitting on top of the counter",
+   "question": "Is the cat sitting on top of the counter?"
+  },
+  {
+   "id": "cat_right_of_chef",
+   "type": "relation",
+   "of": [
+    "cat",
+    "chef"
+   ],
+   "desc": "the cat is to the chef's right",
+   "question": "Is the cat to the chef's right?"
+  },
+  {
+   "id": "tomatoes_next_to_board",
+   "type": "relation",
+   "of": [
+    "tomatoes",
+    "cutting_board"
+   ],
+   "desc": "the tomatoes are next to the cutting board",
+   "question": "Are the tomatoes next to the cutting board?"
+  },
+  {
+   "id": "cat_batting_pin",
+   "type": "action",
+   "of": [
+    "cat",
+    "rolling_pin"
+   ],
+   "desc": "the cat is batting at the rolling pin",
+   "question": "Is the cat batting at the rolling pin?"
+  },
+  {
+   "id": "pin_lying",
+   "type": "state",
+   "of": "rolling_pin",
+   "desc": "the rolling pin is lying on the counter",
+   "question": "Is the rolling pin lying on the counter?"
+  },
+  {
+   "id": "pin_thicker",
+   "type": "attribute",
+   "of": "rolling_pin",
+   "desc": "the rolling pin is thicker than the knife's handle",
+   "question": "Is the rolling pin thicker than the knife's handle?"
+  },
+  {
+   "id": "counter_between",
+   "type": "relation",
+   "of": [
+    "countertop",
+    "chef",
+    "pot"
+   ],
+   "desc": "the countertop is between the chef and the pot",
+   "question": "Is the countertop positioned between the chef and the pot?"
+  },
+  {
+   "id": "pot_on_stove",
+   "type": "relation",
+   "of": [
+    "pot",
+    "stove"
+   ],
+   "desc": "the pot is on the stove",
+   "question": "Is the pot on the stove?"
+  },
+  {
+   "id": "flour_on_counter",
+   "type": "relation",
+   "of": [
+    "flour_bag",
+    "countertop"
+   ],
+   "desc": "flour from the bag covers a section of the counter",
+   "question": "Is flour from the bag covering a section of the counter?"
+  },
+  {
+   "id": "flour_left_of_cat",
+   "type": "relation",
+   "of": [
+    "flour_bag",
+    "cat"
+   ],
+   "desc": "the flour spill is to the left of the cat",
+   "question": "Is the flour spill to the left of the cat?"
+  },
+  {
+   "id": "holder_behind_tomatoes",
+   "type": "relation",
+   "of": [
+    "spoon_holder",
+    "tomatoes"
+   ],
+   "desc": "the spoon holder is positioned behind the tomatoes",
+   "question": "Is the spoon holder positioned behind the tomatoes?"
+  },
+  {
+   "id": "spoons_count",
+   "type": "attribute",
+   "of": "spoon_holder",
+   "desc": "the spoon holder contains two spoons",
+   "question": "Does the spoon holder contain exactly two spoons?"
+  },
+  {
+   "id": "mouse_peeking",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "cabinet_door"
+   ],
+   "desc": "the mouse is peeking out from behind the cabinet door",
+   "question": "Is the mouse peeking out from behind the cabinet door?"
+  },
+  {
+   "id": "mouse_under_counter",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "countertop"
+   ],
+   "desc": "the mouse is under the counter",
+   "question": "Is the mouse under the counter?"
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "pot",
+   "desc": "the pot is releasing a large amount of steam",
+   "question": "Is the pot releasing a large amount of steam?"
+  },
+  {
+   "id": "knobs_count",
+   "type": "attribute",
+   "of": "stove",
+   "desc": "the stove has five control knobs on its front panel",
+   "question": "Does the stove have exactly five control knobs on its front panel?"
+  },
+  {
+   "id": "cat_knocking_spoon",
+   "type": "action",
+   "of": [
+    "cat",
+    "spoon_holder"
+   ],
+   "desc": "the cat is knocking a spoon from the holder with its paw",
+   "question": "Is the cat knocking a spoon from the holder with its paw?"
+  },
+  {
+   "id": "pin_between",
+   "type": "relation",
+   "of": [
+    "rolling_pin",
+    "cat",
+    "pot"
+   ],
+   "desc": "the rolling pin is between the cat and the pot",
+   "question": "Is the rolling pin positioned between the cat and the pot?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the ginger cat is sitting",
+   "question": "Is the ginger cat sitting?"
+  },
+  {
+   "id": "cat_facing_pin",
+   "type": "state",
+   "of": "cat",
+   "desc": "the ginger cat is facing the rolling pin",
+   "question": "Is the ginger cat facing the rolling pin?"
+  },
+  {
+   "id": "chef_hat",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef wears a tall white hat",
+   "question": "Is the chef wearing a tall white hat?"
+  },
+  {
+   "id": "chef_apron",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef wears a food-stained apron",
+   "question": "Is the chef wearing a food-stained apron?"
+  },
+  {
+   "id": "tomatoes_line",
+   "type": "state",
+   "of": "tomatoes",
+   "desc": "the four red tomatoes are arranged in a line",
+   "question": "Are the four red tomatoes arranged in a line?"
+  },
+  {
+   "id": "spoons_in_holder",
+   "type": "attribute",
+   "of": "spoon_holder",
+   "desc": "the spoon holder contains spoons",
+   "question": "Does the spoon holder contain spoons?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "countertop",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "cutting_board",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "tomatoes",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "rolling_pin",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "flour_bag",
+   "kind": "support"
+  },
+  {
+   "from": "countertop",
+   "to": "spoon_holder",
+   "kind": "support"
+  },
+  {
+   "from": "stove",
+   "to": "pot",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_035",
+ "prompt": "A chaotic kitchen scene. A chef wearing a tall white hat and a food-stained apron is standing behind a messy countertop. The chef's hat is taller than the pot of boiling water. A ginger cat is sitting on top of the counter, to the chef's right. The chef is holding a large knife and is in the middle of chopping vegetables on a cutting board. Next to the cutting board, four red tomatoes are arranged in a line. The cat is batting at a rolling pin that is lying on the counter; the rolling pin is thicker than the knife's handle. The countertop is between the chef and a pot of boiling water on a stove. A bag of flour has been knocked over, and flour is covering a section of the counter to the left of the cat. A spoon holder on the counter, positioned behind the tomatoes, contains a few spoons; their number is two less than the number of tomatoes. The cat is facing the rolling pin. Under the counter, a single mouse is peeking out from behind a cabinet door. The pot of water is releasing a large amount of steam. The stove has several control knobs on its front panel, and the number of knobs is one more than the number of tomatoes. The cat is knocking a spoon with its paw. The rolling pin is between the cat and the pot of water.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

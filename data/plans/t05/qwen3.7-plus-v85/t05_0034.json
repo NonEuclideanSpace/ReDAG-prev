@@ -1,0 +1,324 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral coat",
+   "question": "Is there an elderly woman in a floral coat?",
+   "box": [
+    320,
+    250,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    350,
+    500,
+    520,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    450,
+    300,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    750,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    900,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier",
+   "question": "Is there a small terrier?",
+   "box": [
+    780,
+    750,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "nurse_paper",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a paper",
+   "question": "Is the nurse in blue scrubs holding a paper?"
+  },
+  {
+   "id": "man_watch",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a grey suit checks his wristwatch",
+   "question": "Is the man in a grey suit looking at his wristwatch?"
+  },
+  {
+   "id": "terrier_leash",
+   "type": "attribute",
+   "of": "terrier",
+   "desc": "the small terrier is on a leash",
+   "question": "Is the small terrier on a leash?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral coat is sitting",
+   "question": "Is the elderly woman in a floral coat sitting?"
+  },
+  {
+   "id": "woman_looking_nurse",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "nurse"
+   ],
+   "desc": "the elderly woman in a floral coat is looking at the nurse",
+   "question": "Is the elderly woman in a floral coat looking towards the nurse?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a striped shirt is pointing",
+   "question": "Is the young boy in a striped shirt pointing?"
+  },
+  {
+   "id": "boy_looking_machine",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a striped shirt is looking at the vending machine",
+   "question": "Is the young boy in a striped shirt looking towards the vending machine?"
+  },
+  {
+   "id": "terrier_standing",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier is standing",
+   "question": "Is the small terrier standing?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the nurse in blue scrubs hands a paper to the elderly woman in a floral coat",
+   "question": "Is the nurse in blue scrubs handing a paper to the elderly woman in a floral coat?"
+  },
+  {
+   "id": "woman_beside_nurse",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "nurse"
+   ],
+   "desc": "the elderly woman in a floral coat is beside the nurse in blue scrubs",
+   "question": "Is the elderly woman in a floral coat beside the nurse in blue scrubs?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman in a floral coat sits on the plastic chair",
+   "question": "Is the elderly woman in a floral coat sitting on the plastic chair?"
+  },
+  {
+   "id": "boy_next_to_machine",
+   "type": "relation",
+   "of": [
+    "boy",
+    "vending_machine"
+   ],
+   "desc": "the young boy in a striped shirt points at the vending machine against the wall",
+   "question": "Is the young boy in a striped shirt pointing at the vending machine against the wall?"
+  },
+  {
+   "id": "man_next_to_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a grey suit stands next to the potted fern",
+   "question": "Is the man in a grey suit standing next to the potted fern?"
+  },
+  {
+   "id": "terrier_near_man",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "man"
+   ],
+   "desc": "the small terrier stands near the man's feet",
+   "question": "Is the small terrier standing near the feet of the man in a grey suit?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a grey suit stands",
+   "question": "Is the man in a grey suit standing?"
+  },
+  {
+   "id": "vending_machine",
+   "type": "entity",
+   "class": "vending machine",
+   "plural": "vending machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vending machine against the wall",
+   "question": "Is there a vending machine against the wall?",
+   "box": [
+    350,
+    200,
+    674,
+    800
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0034",
+ "prompt": "In a photorealistic photo of a sterile hospital corridor, a nurse in blue scrubs stands on the left holding a clipboard. Beside her, an elderly woman in a floral coat sits on a plastic chair, looking at the nurse. In the center, a young boy in a striped shirt points at a vending machine against the wall. To the right, a man in a grey suit stands next to a potted fern, checking his wristwatch. A small terrier on a leash stands near the man's feet. The nurse is handing a paper to the elderly woman. The boy is looking at the vending machine. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,318 @@
+{
+ "style": "flat vector illustration, bold solid colors, clean lines, no shading or gradients",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a green field during harvest",
+   "question": "Does the image show a green field during harvest?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a blue flannel shirt",
+   "question": "Is there a farmer in a blue flannel shirt?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    200,
+    400,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow sunhat",
+   "question": "Is there a woman in a yellow sunhat?",
+   "box": [
+    400,
+    450,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "pumpkin",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fallen pumpkin",
+   "question": "Is there a fallen pumpkin?",
+   "box": [
+    480,
+    750,
+    580,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in green overalls",
+   "question": "Is there a small child in green overalls?",
+   "box": [
+    620,
+    500,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright red tractor",
+   "question": "Is there a bright red tractor?",
+   "box": [
+    750,
+    400,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    820,
+    380,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a large wicker basket",
+   "question": "Is the farmer holding a large wicker basket?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "woman_bending",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman bends over",
+   "question": "Is the woman bending over?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child points excitedly",
+   "question": "Is the child pointing excitedly?"
+  },
+  {
+   "id": "cat_narrowed_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat has narrowed eyes",
+   "question": "Does the black cat have narrowed eyes?"
+  },
+  {
+   "id": "dog_behind_farmer",
+   "type": "relation",
+   "of": [
+    "dog",
+    "farmer"
+   ],
+   "desc": "the brown dog is slightly behind the farmer",
+   "question": "Is the brown dog positioned slightly behind the farmer?"
+  },
+  {
+   "id": "woman_right_of_farmer",
+   "type": "relation",
+   "of": [
+    "woman",
+    "farmer"
+   ],
+   "desc": "the woman is to the right of the farmer",
+   "question": "Is the woman to the right of the farmer?"
+  },
+  {
+   "id": "child_right_of_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child is to the right of the woman",
+   "question": "Is the child to the right of the woman?"
+  },
+  {
+   "id": "tractor_right_of_child",
+   "type": "relation",
+   "of": [
+    "tractor",
+    "child"
+   ],
+   "desc": "the tractor is to the right of the child",
+   "question": "Is the tractor to the right of the child?"
+  },
+  {
+   "id": "cat_on_tractor",
+   "type": "relation",
+   "of": [
+    "cat",
+    "tractor"
+   ],
+   "desc": "the black cat is perched atop the tractor's hood",
+   "question": "Is the black cat perched atop the tractor's hood?"
+  },
+  {
+   "id": "farmer_looking_at_woman",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the farmer looks toward the woman",
+   "question": "Is the farmer looking toward the woman?"
+  },
+  {
+   "id": "child_pointing_at_tractor",
+   "type": "action",
+   "of": [
+    "child",
+    "tractor"
+   ],
+   "desc": "the child points at the tractor",
+   "question": "Is the child pointing at the tractor?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child stands next to the brown dog",
+   "question": "Is the child standing next to the brown dog?"
+  },
+  {
+   "id": "no_sky",
+   "type": "absent",
+   "desc": "sky",
+   "question": "Is there any sky visible in the image?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a blue flannel shirt stands",
+   "question": "Is the farmer in a blue flannel shirt standing?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in green overalls stands",
+   "question": "Is the small child in green overalls standing?"
+  },
+  {
+   "id": "wheat_in_basket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the large wicker basket held by the farmer is filled with golden wheat",
+   "question": "Is the large wicker basket held by the farmer filled with golden wheat?"
+  },
+  {
+   "id": "dog_tail_curled",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog has its tail curled around its paws",
+   "question": "Does the brown dog have its tail curled around its paws?"
+  },
+  {
+   "id": "tractor_wheels",
+   "type": "attribute",
+   "of": "tractor",
+   "desc": "the bright red tractor has large black wheels",
+   "question": "Does the bright red tractor have large black wheels?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tractor",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0052",
+ "prompt": "This flat vector illustration depicts a vibrant farm scene during the height of harvest. On the left stands a farmer in a blue flannel shirt, holding a large wicker basket filled with golden wheat. Next to him, slightly behind, is a brown dog sitting patiently with its tail curled around its paws. In the center, a woman in a yellow sunhat bends over to pick up a fallen pumpkin, her posture indicating effort and focus. To her right, a small child in green overalls points excitedly at a bright red tractor parked nearby. The tractor itself sits idle on the right side of the composition, its large black wheels contrasting with the green field. Perched atop the tractor's hood is a black cat, observing the scene with narrowed eyes. The farmer in the blue flannel shirt looks toward the woman in the yellow sunhat, acknowledging her work. Meanwhile, the child in green overalls stands next to the brown dog, creating a sense of companionship between the young human and the animal. There is no sky visible in the image, keeping the focus entirely on the ground-level activities and characters. The colors are bold and solid, typical of the style, with clean lines defining each figure and object without any shading or gradients. The arrangement creates a balanced narrative of rural life, capturing a moment of shared labor and quiet observation among the distinct figures and their environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

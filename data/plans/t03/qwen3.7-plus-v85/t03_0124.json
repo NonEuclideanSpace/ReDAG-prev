@@ -1,0 +1,174 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a hospital corridor",
+   "question": "Does the image show a hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    400,
+    250,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    380,
+    600,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted fern",
+   "question": "Is there a small potted fern?",
+   "box": [
+    750,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard",
+   "question": "Is the nurse holding a clipboard?"
+  },
+  {
+   "id": "nurse_pointing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is pointing at the clipboard",
+   "question": "Is the nurse pointing at the clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "nurse"
+   ],
+   "desc": "the elderly man is looking at the nurse",
+   "question": "Is the elderly man looking at the nurse?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man sits on the bench",
+   "question": "Is the elderly man sitting on the bench?"
+  },
+  {
+   "id": "fern_next_to_bench",
+   "type": "relation",
+   "of": [
+    "fern",
+    "bench"
+   ],
+   "desc": "the potted fern is next to the bench",
+   "question": "Is the potted fern next to the bench?"
+  },
+  {
+   "id": "no_ceiling_light",
+   "type": "absent",
+   "desc": "ceiling light fixture",
+   "question": "Is there a ceiling light fixture visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "fern_on_floor",
+   "type": "state",
+   "of": "fern",
+   "desc": "the small potted fern rests on the floor",
+   "question": "Does the small potted fern rest on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0124",
+ "prompt": "In a watercolor illustration of a hospital corridor, a nurse in blue scrubs stands on the left holding a clipboard. In the center, an elderly man in a gray coat sits on a bench looking at the nurse. On the right, a small potted fern rests on the floor next to the bench. The nurse is pointing at the clipboard while the elderly man observes her gesture. There is no ceiling light fixture visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

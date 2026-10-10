@@ -1,0 +1,149 @@
+{
+ "style": "oil painting with thick brushstrokes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush botanical greenhouse with rich green foliage",
+   "question": "Does the image depict a lush botanical greenhouse with rich green foliage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "terracotta pot",
+   "plural": "terracotta pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large terracotta pot containing a vibrant fern",
+   "question": "Is there a large terracotta pot containing a vibrant fern?",
+   "box": [
+    380,
+    400,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green apron",
+   "question": "Is there a man in a green apron?",
+   "box": [
+    670,
+    200,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small watering can",
+   "question": "Is the woman in a blue dress holding a small watering can?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green apron is standing",
+   "question": "Is the man in a green apron standing?"
+  },
+  {
+   "id": "woman_looking_fern",
+   "type": "relation",
+   "of": [
+    "woman",
+    "pot"
+   ],
+   "desc": "the woman in a blue dress is looking at the fern in the terracotta pot",
+   "question": "Is the woman in a blue dress looking at the fern in the terracotta pot?"
+  },
+  {
+   "id": "man_observing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green apron is observing the scene",
+   "question": "Is the man in a green apron observing the scene?"
+  },
+  {
+   "id": "man_right_of_pot",
+   "type": "relation",
+   "of": [
+    "man",
+    "pot"
+   ],
+   "desc": "the man in a green apron is to the right of the terracotta pot",
+   "question": "Is the man in a green apron to the right of the terracotta pot?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "a glass roof",
+   "question": "Is there a glass roof visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "pot_sitting",
+   "type": "state",
+   "of": "pot",
+   "desc": "the large terracotta pot containing a vibrant fern is sitting",
+   "question": "Is the large terracotta pot containing a vibrant fern sitting?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0047",
+ "prompt": "An oil painting depicts a lush botanical greenhouse. On the left stands a woman in a blue dress, holding a small watering can. In the center sits a large terracotta pot containing a vibrant fern. The woman is looking at the fern. To the right of the pot stands a man in a green apron, observing the scene. There is no glass roof visible above them. The thick brushstrokes capture the humidity and rich greens of the foliage surrounding the figures and the central plant.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

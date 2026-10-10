@@ -1,0 +1,208 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim theatre backstage",
+   "question": "Does the image depict a dim theatre backstage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tuxedo",
+   "question": "Is there a man in a tuxedo?",
+   "box": [
+    380,
+    200,
+    680,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    400,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    650,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "woman_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a script",
+   "question": "Is the woman in the blue dress holding a script?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo is sitting",
+   "question": "Is the man in the tuxedo sitting?"
+  },
+  {
+   "id": "man_weary",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo looks weary",
+   "question": "Does the man in the tuxedo look weary?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "dog_calm",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is calm",
+   "question": "Does the golden retriever appear calm?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress hands the script to the man in the tuxedo",
+   "question": "Is the woman in the blue dress handing a script to the man in the tuxedo?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the tuxedo sits on the wooden crate",
+   "question": "Is the man in the tuxedo sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "relation",
+   "of": [
+    "dog",
+    "floorboards"
+   ],
+   "desc": "the golden retriever lies on the floorboards",
+   "question": "Is the golden retriever lying on the floorboards?"
+  },
+  {
+   "id": "no_mirror",
+   "type": "absent",
+   "desc": "mirror",
+   "question": "Is there a mirror visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "floorboards",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden floorboards",
+   "question": "Are there wooden floorboards?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0137",
+ "prompt": "An oil painting depicts a dim theatre backstage. On the left, a woman in a blue dress stands holding a script. In the center, a man in a tuxedo sits on a wooden crate, looking weary. To the right, a golden retriever lies calmly on the floorboards. The woman in the blue dress is handing the script to the man in the tuxedo. There is no mirror visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

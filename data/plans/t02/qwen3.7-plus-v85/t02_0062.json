@@ -1,0 +1,143 @@
+{
+ "style": "cinematic film still, gritty industrial atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gritty shipyard dock",
+   "question": "Does the image show a gritty shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hard hat",
+   "question": "Is there a woman in a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "metal crate",
+   "plural": "metal crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal crate",
+   "question": "Is there a rusted metal crate?",
+   "box": [
+    400,
+    400,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat is standing",
+   "question": "Is the woman in the yellow hard hat standing?"
+  },
+  {
+   "id": "crate_sitting",
+   "type": "state",
+   "of": "crate",
+   "desc": "the rusted metal crate sits on the wooden planks",
+   "question": "Is the rusted metal crate sitting?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the woman in the yellow hard hat is pointing at the rusted metal crate",
+   "question": "Is the woman in the yellow hard hat pointing at the rusted metal crate?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "crate_on_planks",
+   "type": "relation",
+   "of": [
+    "crate",
+    "planks"
+   ],
+   "desc": "the rusted metal crate sits on the wooden planks",
+   "question": "Is the rusted metal crate sitting on the wooden planks?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden planks",
+   "question": "Are there wooden planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0062",
+ "prompt": "A cinematic film still captures a gritty shipyard dock. On the left, a woman in a yellow hard hat stands firmly. In the center, a rusted metal crate sits heavily on the wooden planks. The woman in the yellow hard hat is pointing directly at the rusted metal crate. There is no water visible in the frame. The scene focuses strictly on these two distinct entities and their specific spatial relationship within the industrial setting, avoiding any additional background distractions or superfluous elements that might clutter the visual narrative.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

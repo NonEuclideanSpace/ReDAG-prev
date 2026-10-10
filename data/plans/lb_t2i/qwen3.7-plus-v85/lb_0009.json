@@ -1,0 +1,491 @@
+{
+ "style": "surreal photorealistic, dreamlike atmosphere, soft fog, iridescent lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park path with damp earth and an old oak tree with gnarled branches",
+   "question": "Does the image show a park path with damp earth and an old oak tree?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hydrant",
+   "type": "entity",
+   "class": "fire hydrant",
+   "plural": "fire hydrants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty red fire hydrant",
+   "question": "Is there a rusty red fire hydrant?",
+   "box": [
+    350,
+    400,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    380,
+    350,
+    520,
+    500
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wobbly bicycle with peeling handlebar tape",
+   "question": "Is there a wobbly bicycle with peeling handlebar tape?",
+   "box": [
+    600,
+    500,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in overalls",
+   "question": "Is there a boy in overalls?",
+   "box": [
+    700,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bird feathered in impossible hues",
+   "question": "Is there a bird feathered in impossible hues?",
+   "box": [
+    520,
+    450,
+    600,
+    550
+   ]
+  },
+  {
+   "id": "hydrant_canted",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the top of the fire hydrant is ajar",
+   "question": "Is the top of the fire hydrant ajar?"
+  },
+  {
+   "id": "hydrant_seeping",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the rusty red fire hydrant is seeping a thin iridescent liquid",
+   "question": "Is the rusty red fire hydrant seeping a thin iridescent liquid?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sitting perched",
+   "question": "Is the tabby cat sitting perched?"
+  },
+  {
+   "id": "cat_licking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is licking one paw",
+   "question": "Is the tabby cat licking one paw?"
+  },
+  {
+   "id": "bicycle_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the wheels of the wobbly bicycle are turning",
+   "question": "Are the wheels of the wobbly bicycle turning?"
+  },
+  {
+   "id": "boy_holding_bottle",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy holds a soda bottle",
+   "question": "Is the boy holding a soda bottle?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "relation",
+   "of": [
+    "boy",
+    "cat"
+   ],
+   "desc": "the boy in overalls is looking towards the cat and hydrant",
+   "question": "Is the boy in overalls looking towards the cat and hydrant?"
+  },
+  {
+   "id": "woman_sweeping",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman sweeps the air with her birch broom",
+   "question": "Is the woman sweeping the air with her birch broom?"
+  },
+  {
+   "id": "cat_on_hydrant",
+   "type": "relation",
+   "of": [
+    "cat",
+    "hydrant"
+   ],
+   "desc": "the tabby cat is perched on the corroded cap of the rusty red fire hydrant",
+   "question": "Is the tabby cat perched on the corroded cap of the rusty red fire hydrant?"
+  },
+  {
+   "id": "bicycle_under_tree",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the wobbly bicycle is sheltered by the old oak tree",
+   "question": "Is the wobbly bicycle sheltered by the old oak tree?"
+  },
+  {
+   "id": "boy_behind_bicycle",
+   "type": "relation",
+   "of": [
+    "boy",
+    "bicycle"
+   ],
+   "desc": "the boy in overalls is behind the wobbly bicycle",
+   "question": "Is the boy in overalls behind the wobbly bicycle?"
+  },
+  {
+   "id": "bird_on_hydrant",
+   "type": "relation",
+   "of": [
+    "bird",
+    "hydrant"
+   ],
+   "desc": "the bird feathered in impossible hues is landed on the arm of the rusty red fire hydrant",
+   "question": "Is the bird feathered in impossible hues landed on the arm of the rusty red fire hydrant?"
+  },
+  {
+   "id": "fog_around_objects",
+   "type": "state",
+   "of": "boy",
+   "desc": "low-hanging fog curls around the boy's shoes",
+   "question": "Does low-hanging fog curl around the boy's shoes?"
+  },
+  {
+   "id": "fog",
+   "type": "entity",
+   "class": "fog",
+   "plural": "fogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "low-hanging fog",
+   "question": "Is there low-hanging fog?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "liquid_flowing",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "iridescent liquid flows in rivules from the hydrant over the grass",
+   "question": "Is iridescent liquid flowing in rivules from the hydrant over the grass?"
+  },
+  {
+   "id": "cat_tail_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat's tail is twitching",
+   "question": "Is the tabby cat's tail twitching?"
+  },
+  {
+   "id": "bottle_slipping",
+   "type": "state",
+   "of": "boy",
+   "desc": "the soda bottle slips slightly in the boy's grip",
+   "question": "Is the soda bottle slipping slightly in the boy's grip?"
+  },
+  {
+   "id": "bird_beak_open",
+   "type": "state",
+   "of": "bird",
+   "desc": "the bird's beak is open",
+   "question": "Is the bird's beak open?"
+  },
+  {
+   "id": "woman_stopped",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with the birch broom has halted her sweeping",
+   "question": "Has the woman with the birch broom halted her sweeping?"
+  },
+  {
+   "id": "boy_frozen",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in overalls freezes",
+   "question": "Is the boy in overalls frozen in place?"
+  },
+  {
+   "id": "fog_deepening",
+   "type": "state",
+   "of": "fog",
+   "desc": "the fog deepens",
+   "question": "Does the fog deepen?"
+  },
+  {
+   "id": "boy_looking_hydrant",
+   "type": "relation",
+   "of": [
+    "boy",
+    "hydrant"
+   ],
+   "desc": "the boy in overalls looks towards the hydrant",
+   "question": "Is the boy in overalls looking towards the hydrant?"
+  },
+  {
+   "id": "fog_around_cat",
+   "type": "relation",
+   "of": [
+    "fog",
+    "cat"
+   ],
+   "desc": "the fog curls around the cat's paws",
+   "question": "Does the fog curl around the cat's paws?"
+  },
+  {
+   "id": "fog_thickening_around_woman",
+   "type": "relation",
+   "of": [
+    "fog",
+    "woman"
+   ],
+   "desc": "the air around the woman thickens",
+   "question": "Does the air around the woman thicken?"
+  },
+  {
+   "id": "liquid_evaporating",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the iridescent liquid from the hydrant evaporates into shimmering vapor in the crevices of the path",
+   "question": "Does the iridescent liquid from the hydrant evaporate into shimmering vapor in the path crevices?"
+  },
+  {
+   "id": "wind",
+   "type": "entity",
+   "class": "wind effect",
+   "plural": "wind effects",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wind tugging objects",
+   "question": "Is there a visible effect of a small wind?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_behind_boy",
+   "type": "relation",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman with the birch broom is behind the boy in overalls",
+   "question": "Is the woman with the birch broom behind the boy in overalls?"
+  },
+  {
+   "id": "hydrant_embedded",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the fire hydrant is half-embedded in the damp earth",
+   "question": "Is the fire hydrant half-embedded in the ground?"
+  },
+  {
+   "id": "boy_knee_scraped",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy has one knee scraped raw",
+   "question": "Does the boy have one knee scraped raw?"
+  },
+  {
+   "id": "woman_broom",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds a broom made of birch twigs",
+   "question": "Does the woman hold a broom made of birch twigs?"
+  },
+  {
+   "id": "hydrant_canted_left",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the top of the fire hydrant is canted to the left",
+   "question": "Is the top of the fire hydrant canted to the left?"
+  },
+  {
+   "id": "bottle_label",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the soda bottle held by the boy has a curled label",
+   "question": "Does the soda bottle held by the boy have a curled label?"
+  },
+  {
+   "id": "cat_colors",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat is mottled with grays and golds",
+   "question": "Is the tabby cat mottled with grays and golds?"
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a basket overflowing with autumn leaves",
+   "question": "Is there a basket overflowing with autumn leaves?",
+   "box": [
+    600,
+    520,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "basket_on_bicycle",
+   "type": "relation",
+   "of": [
+    "basket",
+    "bicycle"
+   ],
+   "desc": "the basket is on the bicycle",
+   "question": "Is the basket on the bicycle?"
+  },
+  {
+   "id": "liquid_on_path",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "iridescent liquid flows into the crevices of the path",
+   "question": "Is iridescent liquid flowing into the crevices of the path?"
+  },
+  {
+   "id": "fog_around_shoes_paws",
+   "type": "relation",
+   "of": [
+    "fog",
+    "boy",
+    "cat"
+   ],
+   "desc": "the fog curls around the boy's shoes and the cat's paws",
+   "question": "Does the fog curl around the boy's shoes and the cat's paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "hydrant",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hydrant",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0009",
+ "prompt": "The rusty red fire hydrant, half-embedded in the damp earth of the park path, exudes a quiet sense of neglect. Its top is ajar, slightly canted to the left, as if the lid had been recently manipulated by an unseen hand or paw. A tabby cat—mottled with grays and golds—sits perched on the hydrant’s corroded cap, its tongue flicking idly over one paw as if cleansing it of dust or memory. Above it, a low-hanging fog curls through the branches of an old oak tree, distorting the boundaries between the real and the imagined. The tree, gnarled and leaning, shelters a wobbly bicycle with peeling handlebar tape and a basket overflowing with autumn leaves that refuse to decay, shimmering faintly as if suspended in a different time. Behind the bicycle, the boy in overalls approaches slowly, one knee scraped raw from a tumble, the other dragging slightly as he walks. In his hands, he cradles a warm soda bottle, its label curled at the edges, and his eyes flicker between the cat and the hydrant, as if calculating whether to flee or offer peace. A small wind rises, tugging the bottle’s cap loose just as a flicker of movement in the fog reveals the silhouette of a second figure—a woman with a broom made of birch twigs, sweeping the air itself, her strokes brushing invisible dust into patterns that ripple like oil on water. The hydrant, seemingly sensing the shift, emits a low hiss and begins to seep a thin, iridescent liquid that flows in rivulets over the grass and into the crevices of the path, where it evaporates into shimmering vapor. The cat pauses, its tail twitching in the current, as the soda bottle slips slightly in the boy’s grip, its contents sloshing against the glass in rhythm with the hissing sound. A bird—feathered in impossible hues—lands on the hydrant’s arm, its beak opening just enough to catch a drop of the iridescent liquid before it vanishes. At the same moment, the bicycle’s wheels begin to turn of their own accord, spinning slowly in the direction of the tree, which bends its branches in response, forming a living archway. The boy freezes, caught between curiosity and fear, as the woman with the birch broom halts her sweeping, the air around her thickening into a moment suspended between cause and consequence. The fog deepens, curling around the boy’s shoes and the cat’s paws, binding the objects and figures in a fragile web of causality—each motion rippling outward in subtle, unseen connections. The hydrant, now quiet, reflects the shifting light of a sun that seems both distant and impossibly close, as if the park had become a lens bending time and gravity into a single, surreal frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 76,
+   "n_uncovered": 6,
+   "proposed": 6,
+   "ungrounded": 3,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "fog_entity",
+     "fog"
+    ]
+   ],
+   "dropped": [
+    [
+     "woman_stopped_sweeping",
+     "woman_stopped"
+    ]
+   ]
+  }
+ }
+}

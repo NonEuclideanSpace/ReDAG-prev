@@ -1,0 +1,177 @@
+{
+ "style": "oil painting style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for an oil painting",
+   "question": "Is the image rendered in an oil painting style?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    380,
+    400,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue coat",
+   "question": "Is there a child in a blue coat?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "hose",
+   "plural": "hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coiled hose",
+   "question": "Is there a coiled hose?",
+   "box": [
+    150,
+    500,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear is standing",
+   "question": "Is the firefighter in yellow gear standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots is sitting",
+   "question": "Is the dalmatian with black spots sitting?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a blue coat is standing",
+   "question": "Is the child in a blue coat standing?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "dalmatian"
+   ],
+   "desc": "the child in a blue coat is looking at the dog",
+   "question": "Is the child in a blue coat looking at the dog?"
+  },
+  {
+   "id": "firefighter_holding_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear holds the coiled hose",
+   "question": "Is the firefighter in yellow gear holding the coiled hose?"
+  },
+  {
+   "id": "dalmatian_next_to_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian with black spots is next to the firefighter in yellow gear",
+   "question": "Is the dalmatian with black spots next to the firefighter in yellow gear?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "child"
+   ],
+   "desc": "the firefighter in yellow gear is handing the end of the hose to the child in a blue coat",
+   "question": "Is the firefighter in yellow gear handing the end of the hose to the child in a blue coat?"
+  },
+  {
+   "id": "no_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the scene?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0136",
+ "prompt": "In an oil painting style, a firefighter in yellow gear stands on the left holding a coiled hose. A dalmatian with black spots sits in the center next to the firefighter. A child in a blue coat stands on the right looking at the dog. The firefighter is handing the end of the hose to the child. There is no fire truck visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

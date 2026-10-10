@@ -1,0 +1,382 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling shipyard dock with concrete ground and industrial steel structures",
+   "question": "Does the image show a bustling shipyard dock with concrete ground and industrial steel structures?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crane_operator",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man",
+   "question": "Is there a tall man?",
+   "box": [
+    50,
+    100,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "container",
+   "type": "entity",
+   "class": "shipping container",
+   "plural": "shipping containers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal shipping container",
+   "question": "Is there a rusted metal shipping container?",
+   "box": [
+    260,
+    400,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman",
+   "question": "Is there a young woman?",
+   "box": [
+    400,
+    300,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "dockworker",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a burly man",
+   "question": "Is there a burly man?",
+   "box": [
+    620,
+    320,
+    820,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    850,
+    550,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    840,
+    700,
+    990,
+    950
+   ]
+  },
+  {
+   "id": "ship",
+   "type": "entity",
+   "class": "cargo ship",
+   "plural": "cargo ships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive cargo ship with a deep navy blue hull and visible rivets",
+   "question": "Is there a massive cargo ship with a deep navy blue hull and visible rivets?",
+   "box": [
+    600,
+    50,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "operator_arm_raised",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall man wearing a yellow hard hat has his arm raised in a signaling gesture",
+   "question": "Does the tall man wearing a yellow hard hat have his arm raised?"
+  },
+  {
+   "id": "operator_looking_ship",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall man wearing a yellow hard hat is looking toward the cargo ship",
+   "question": "Is the tall man wearing a yellow hard hat looking toward the cargo ship?"
+  },
+  {
+   "id": "woman_holding_clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the young woman with short blue hair holds a clipboard tightly against her chest",
+   "question": "Is the young woman with short blue hair holding a clipboard?"
+  },
+  {
+   "id": "woman_focused",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman with short blue hair has her eyes focused intently on the documents",
+   "question": "Are the eyes of the young woman with short blue hair focused intently on the documents?"
+  },
+  {
+   "id": "woman_nodding",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman with short blue hair is nodding",
+   "question": "Is the young woman with short blue hair nodding?"
+  },
+  {
+   "id": "dockworker_looking_down",
+   "type": "state",
+   "of": "dockworker",
+   "desc": "the burly man wearing a grease-stained white tank top looks down with a furrowed brow",
+   "question": "Does the burly man wearing a grease-stained white tank top look down?"
+  },
+  {
+   "id": "dockworker_pointing",
+   "type": "state",
+   "of": "dockworker",
+   "desc": "the burly man wearing a grease-stained white tank top is pointing at a specific line on the clipboard",
+   "question": "Is the burly man wearing a grease-stained white tank top pointing at a specific line on the clipboard?"
+  },
+  {
+   "id": "cat_still",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is still with its tail wrapped neatly around its paws",
+   "question": "Is the small black cat still?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat watches the activity with wide curious eyes",
+   "question": "Is the small black cat watching the activity?"
+  },
+  {
+   "id": "operator_next_to_container",
+   "type": "relation",
+   "of": [
+    "crane_operator",
+    "container"
+   ],
+   "desc": "the tall man wearing a yellow hard hat stands next to the rusted metal shipping container",
+   "question": "Is the tall man wearing a yellow hard hat standing next to the rusted metal shipping container?"
+  },
+  {
+   "id": "dockworker_beside_woman",
+   "type": "relation",
+   "of": [
+    "dockworker",
+    "woman"
+   ],
+   "desc": "the burly man wearing a grease-stained white tank top is beside the young woman with short blue hair",
+   "question": "Is the burly man wearing a grease-stained white tank top beside the young woman with short blue hair?"
+  },
+  {
+   "id": "handover_pen",
+   "type": "action",
+   "of": [
+    "woman",
+    "dockworker"
+   ],
+   "desc": "the young woman with short blue hair is handing a pen to the burly man wearing a grease-stained white tank top",
+   "question": "Is the young woman with short blue hair handing a pen to the burly man wearing a grease-stained white tank top?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small black cat perches atop the wooden crate",
+   "question": "Is the small black cat perching atop the wooden crate?"
+  },
+  {
+   "id": "crate_right",
+   "type": "relation",
+   "of": [
+    "crate",
+    "woman"
+   ],
+   "desc": "the wooden crate is to the right of the young woman with short blue hair",
+   "question": "Is the wooden crate to the right of the young woman with short blue hair?"
+  },
+  {
+   "id": "ship_behind_cat",
+   "type": "relation",
+   "of": [
+    "ship",
+    "cat"
+   ],
+   "desc": "the massive cargo ship is behind the small black cat",
+   "question": "Is the massive cargo ship behind the small black cat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "operator_standing",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall man wearing a yellow hard hat stands",
+   "question": "Is the tall man wearing a yellow hard hat standing?"
+  },
+  {
+   "id": "container_sitting",
+   "type": "state",
+   "of": "container",
+   "desc": "the rusted metal shipping container sits heavily",
+   "question": "Is the rusted metal shipping container sitting heavily?"
+  },
+  {
+   "id": "operator_signaling_gesture",
+   "type": "attribute",
+   "of": "crane_operator",
+   "desc": "the tall man wearing a yellow hard hat makes a signaling gesture with his raised arm",
+   "question": "Is the tall man wearing a yellow hard hat making a signaling gesture with his raised arm?"
+  },
+  {
+   "id": "clipboard_against_chest",
+   "type": "state",
+   "of": "woman",
+   "desc": "the clipboard is held tightly against the chest of the young woman with short blue hair",
+   "question": "Is the clipboard held tightly against the chest of the young woman with short blue hair?"
+  },
+  {
+   "id": "dockworker_furrowed_brow",
+   "type": "attribute",
+   "of": "dockworker",
+   "desc": "the burly man wearing a grease-stained white tank top has a furrowed brow",
+   "question": "Does the burly man wearing a grease-stained white tank top have a furrowed brow?"
+  },
+  {
+   "id": "cat_tail_wrapped",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small black cat has its tail wrapped neatly around its paws",
+   "question": "Does the small black cat have its tail wrapped neatly around its paws?"
+  },
+  {
+   "id": "cat_wide_curious_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small black cat has wide, curious green eyes",
+   "question": "Does the small black cat have wide, curious green eyes?"
+  },
+  {
+   "id": "container_on_dock",
+   "type": "state",
+   "of": "container",
+   "desc": "the rusted metal shipping container sits on the concrete dock",
+   "question": "Is the rusted metal shipping container sitting on the concrete dock?"
+  },
+  {
+   "id": "operator_yellow_hard_hat",
+   "type": "attribute",
+   "of": "crane_operator",
+   "desc": "the tall man wears a yellow hard hat",
+   "question": "Does the tall man wear a yellow hard hat?"
+  },
+  {
+   "id": "container_peeling_paint",
+   "type": "attribute",
+   "of": "container",
+   "desc": "the rusted metal shipping container has peeling paint",
+   "question": "Does the rusted metal shipping container have peeling paint?"
+  },
+  {
+   "id": "woman_short_blue_hair",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the young woman has short blue hair",
+   "question": "Does the young woman have short blue hair?"
+  },
+  {
+   "id": "dockworker_grease_stained_tank_top",
+   "type": "attribute",
+   "of": "dockworker",
+   "desc": "the burly man wears a grease-stained white tank top",
+   "question": "Does the burly man wear a grease-stained white tank top?"
+  },
+  {
+   "id": "cat_green_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small black cat has green eyes",
+   "question": "Does the small black cat have green eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0085",
+ "prompt": "In an anime style illustration, a bustling shipyard dock serves as the backdrop for a vivid scene. On the left stands a tall crane operator wearing a yellow hard hat, his arm raised in a signaling gesture. Next to him, a rusted metal shipping container sits heavily on the concrete, its surface marked by peeling paint and age. In the center foreground, a young woman with short blue hair holds a clipboard tightly against her chest, her eyes focused intently on the documents. She is handing a pen to a burly dockworker beside her, who wears a grease-stained white tank top and looks down at the paper with a furrowed brow. To the right, a small black cat perches atop a wooden crate, watching the activity with wide, curious green eyes. Behind the cat, a massive cargo ship looms in the background, its hull painted a deep navy blue with visible rivets. The dockworker is pointing at a specific line on the clipboard while the woman nods in agreement. There is no water visible in the frame, only the industrial solidity of steel and stone. The crane operator is looking toward the ship, ensuring the path is clear. The cat remains still, its tail wrapped neatly around its paws. The interaction between the woman and the dockworker suggests a moment of critical verification before loading begins. The rusted container provides a textural contrast to the sleek modernity of the ship. The yellow hard hat catches the ambient light, drawing attention to the height of the operation. The grease stains on the tank top tell a story of hard labor. The blue hair of the woman adds a splash of color to the otherwise muted industrial palette.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse interior",
+   "question": "Does the image show the interior of a botanical greenhouse?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench in the image?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green apron",
+   "question": "Is there a woman wearing a green apron?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat in the image?",
+   "box": [
+    400,
+    550,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a tweed cap",
+   "question": "Is there an elderly man wearing a tweed cap?",
+   "box": [
+    700,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fern plant",
+   "question": "Is there a fern plant in the image?",
+   "box": [
+    850,
+    400,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "woman_trowel",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the green apron holds a small trowel",
+   "question": "Is the woman in the green apron holding a small trowel?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the green apron is standing",
+   "question": "Is the woman in the green apron standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is sitting",
+   "question": "Is the tabby cat sitting?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the tabby cat rests on the wooden bench",
+   "question": "Is the tabby cat resting on the wooden bench?"
+  },
+  {
+   "id": "woman_looks_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the green apron looks at the tabby cat",
+   "question": "Is the woman in the green apron looking at the tabby cat?"
+  },
+  {
+   "id": "man_points_fern",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the elderly man in the tweed cap points at the fern",
+   "question": "Is the elderly man in the tweed cap pointing at the fern?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "glass roof",
+   "question": "Is a glass roof visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0139",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene unfolds in a botanical greenhouse. On the left stands a woman in a green apron holding a small trowel. In the center sits a tabby cat resting on a wooden bench. To the right is an elderly man in a tweed cap pointing at a fern. The woman looks at the cat. The man points at the fern. There is no glass roof visible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

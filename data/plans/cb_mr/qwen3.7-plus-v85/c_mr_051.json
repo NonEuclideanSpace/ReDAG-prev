@@ -1,0 +1,481 @@
+{
+ "style": "cinematic dramatic illustration, stormy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stormy sea with dark waves and rain",
+   "question": "Does the image show a stormy sea with dark waves and rain?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "galleon",
+   "type": "entity",
+   "class": "ship",
+   "plural": "ships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large pirate galleon",
+   "question": "Is there a large pirate galleon?",
+   "box": [
+    50,
+    300,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "brig",
+   "type": "entity",
+   "class": "ship",
+   "plural": "ships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smaller naval brig",
+   "question": "Is there a smaller naval brig?",
+   "box": [
+    650,
+    350,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "kraken",
+   "type": "entity",
+   "class": "kraken",
+   "plural": "krakens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a giant kraken",
+   "question": "Is there a giant kraken?",
+   "box": [
+    300,
+    200,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "captain",
+   "type": "entity",
+   "class": "pirate captain",
+   "plural": "pirate captains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pirate captain",
+   "question": "Is there a pirate captain?",
+   "box": [
+    200,
+    400,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "officer",
+   "type": "entity",
+   "class": "naval officer",
+   "plural": "naval officers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a naval officer",
+   "question": "Is there a naval officer?",
+   "box": [
+    700,
+    450,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "cannons",
+   "type": "entity",
+   "class": "cannon",
+   "plural": "cannons",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four cannons",
+   "question": "Are there exactly four cannons?",
+   "box": [
+    100,
+    600,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a parrot",
+   "question": "Is there a parrot?",
+   "box": [
+    280,
+    380,
+    340,
+    450
+   ]
+  },
+  {
+   "id": "chest",
+   "type": "entity",
+   "class": "treasure chest",
+   "plural": "treasure chests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a treasure chest",
+   "question": "Is there a treasure chest?",
+   "box": [
+    150,
+    650,
+    250,
+    720
+   ]
+  },
+  {
+   "id": "other_pirates",
+   "type": "entity",
+   "class": "pirate",
+   "plural": "pirates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "additional pirates",
+   "question": "Are there additional pirates?",
+   "box": [
+    100,
+    500,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "sailors",
+   "type": "entity",
+   "class": "sailor",
+   "plural": "sailors",
+   "count": 1,
+   "count_exact": false,
+   "desc": "naval sailors",
+   "question": "Are there naval sailors?",
+   "box": [
+    700,
+    500,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "galleon_next_to_brig",
+   "type": "relation",
+   "of": [
+    "galleon",
+    "brig"
+   ],
+   "desc": "the large pirate galleon is next to the smaller naval brig",
+   "question": "Is the large pirate galleon next to the smaller naval brig?"
+  },
+  {
+   "id": "kraken_between_ships",
+   "type": "relation",
+   "of": [
+    "kraken",
+    "galleon",
+    "brig"
+   ],
+   "desc": "the giant kraken is between the two ships",
+   "question": "Is the giant kraken positioned between the two ships?"
+  },
+  {
+   "id": "tentacle_wrapping_mast",
+   "type": "action",
+   "of": [
+    "kraken",
+    "brig"
+   ],
+   "desc": "the kraken wraps a massive tentacle around the brig's main mast",
+   "question": "Is the kraken wrapping a massive tentacle around the brig's main mast?"
+  },
+  {
+   "id": "mast_broken",
+   "type": "state",
+   "of": "brig",
+   "desc": "the brig's main mast is broken",
+   "question": "Is the brig's main mast broken?"
+  },
+  {
+   "id": "captain_at_wheel",
+   "type": "relation",
+   "of": [
+    "captain",
+    "galleon"
+   ],
+   "desc": "the pirate captain stands at the galleon's wheel",
+   "question": "Is the pirate captain standing at the galleon's wheel?"
+  },
+  {
+   "id": "captain_pointing_sword",
+   "type": "action",
+   "of": [
+    "captain",
+    "officer"
+   ],
+   "desc": "the pirate captain points a sword at the naval officer",
+   "question": "Is the pirate captain pointing a sword at the naval officer?"
+  },
+  {
+   "id": "cannon_firing",
+   "type": "relation",
+   "of": [
+    "cannons",
+    "brig"
+   ],
+   "desc": "one of the cannons is firing towards the brig",
+   "question": "Is one of the cannons firing towards the brig?"
+  },
+  {
+   "id": "parrot_on_captain",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "captain"
+   ],
+   "desc": "the parrot is perched on the pirate captain's shoulder",
+   "question": "Is the parrot perched on the pirate captain's shoulder?"
+  },
+  {
+   "id": "parrot_snatching",
+   "type": "action",
+   "of": [
+    "parrot",
+    "captain"
+   ],
+   "desc": "the parrot is trying to snatch gold coins from the pirate captain",
+   "question": "Is the parrot trying to snatch gold coins from the pirate captain?"
+  },
+  {
+   "id": "officer_holding_telescope",
+   "type": "attribute",
+   "of": "officer",
+   "desc": "the naval officer is holding a telescope",
+   "question": "Is the naval officer holding a telescope?"
+  },
+  {
+   "id": "officer_looking",
+   "type": "action",
+   "of": [
+    "officer",
+    "captain"
+   ],
+   "desc": "the naval officer is looking at the pirate captain",
+   "question": "Is the naval officer looking at the pirate captain?"
+  },
+  {
+   "id": "chest_on_deck",
+   "type": "relation",
+   "of": [
+    "chest",
+    "galleon"
+   ],
+   "desc": "the treasure chest sits on the galleon's deck",
+   "question": "Is the treasure chest sitting on the galleon's deck?"
+  },
+  {
+   "id": "chest_chained",
+   "type": "relation",
+   "of": [
+    "chest",
+    "galleon"
+   ],
+   "desc": "the treasure chest is chained to the base of the galleon's main mast",
+   "question": "Is the treasure chest chained to the base of the galleon's main mast?"
+  },
+  {
+   "id": "kraken_pushing_galleon",
+   "type": "action",
+   "of": [
+    "kraken",
+    "galleon"
+   ],
+   "desc": "the kraken is pushing the galleon with another tentacle",
+   "question": "Is the kraken pushing the galleon with another tentacle?"
+  },
+  {
+   "id": "officer_in_front_mast",
+   "type": "relation",
+   "of": [
+    "officer",
+    "brig"
+   ],
+   "desc": "the naval officer is standing in front of the brig's broken mast",
+   "question": "Is the naval officer standing in front of the brig's broken mast?"
+  },
+  {
+   "id": "kraken_looking_galleon",
+   "type": "action",
+   "of": [
+    "kraken",
+    "galleon"
+   ],
+   "desc": "the kraken is looking at the galleon",
+   "question": "Is the kraken looking at the galleon?"
+  },
+  {
+   "id": "other_pirates_on_galleon",
+   "type": "relation",
+   "of": [
+    "other_pirates",
+    "galleon"
+   ],
+   "desc": "the additional pirates are on the galleon's deck",
+   "question": "Are the additional pirates on the galleon's deck?"
+  },
+  {
+   "id": "sailors_on_brig",
+   "type": "relation",
+   "of": [
+    "sailors",
+    "brig"
+   ],
+   "desc": "the naval sailors are on the brig's deck",
+   "question": "Are the naval sailors on the brig's deck?"
+  },
+  {
+   "id": "captain_standing",
+   "type": "state",
+   "of": "captain",
+   "desc": "the pirate captain with a hook for a hand is standing",
+   "question": "Is the pirate captain with a hook for a hand standing?"
+  },
+  {
+   "id": "officer_standing",
+   "type": "state",
+   "of": "officer",
+   "desc": "the naval officer is standing",
+   "question": "Is the naval officer standing?"
+  },
+  {
+   "id": "captain_taller",
+   "type": "relation",
+   "of": [
+    "captain",
+    "officer"
+   ],
+   "desc": "the pirate captain with a hook for a hand is taller than the naval officer",
+   "question": "Is the pirate captain with a hook for a hand taller than the naval officer?"
+  },
+  {
+   "id": "galleon_longer",
+   "type": "relation",
+   "of": [
+    "galleon",
+    "brig"
+   ],
+   "desc": "the large pirate galleon is longer than the smaller naval brig",
+   "question": "Is the large pirate galleon longer than the smaller naval brig?"
+  },
+  {
+   "id": "tentacle_thicker",
+   "type": "relation",
+   "of": [
+    "kraken",
+    "brig"
+   ],
+   "desc": "the kraken's tentacle wrapping the mast is thicker than the brig's main mast",
+   "question": "Is the kraken's tentacle wrapping the mast thicker than the brig's main mast?"
+  },
+  {
+   "id": "sword_longer",
+   "type": "relation",
+   "of": [
+    "captain",
+    "officer"
+   ],
+   "desc": "the pirate captain's sword is longer than the naval officer's telescope",
+   "question": "Is the pirate captain's sword longer than the naval officer's telescope?"
+  },
+  {
+   "id": "more_pirates",
+   "type": "relation",
+   "of": [
+    "other_pirates",
+    "sailors"
+   ],
+   "desc": "there are more additional pirates on the galleon's deck than naval sailors on the brig's deck",
+   "question": "Are there more additional pirates on the galleon's deck than naval sailors on the brig's deck?"
+  },
+  {
+   "id": "captain_hook",
+   "type": "attribute",
+   "of": "captain",
+   "desc": "the pirate captain has a hook for a hand",
+   "question": "Does the pirate captain have a hook for a hand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "galleon",
+   "to": "cannons",
+   "kind": "support"
+  },
+  {
+   "from": "galleon",
+   "to": "chest",
+   "kind": "support"
+  },
+  {
+   "from": "galleon",
+   "to": "captain",
+   "kind": "support"
+  },
+  {
+   "from": "galleon",
+   "to": "other_pirates",
+   "kind": "support"
+  },
+  {
+   "from": "brig",
+   "to": "officer",
+   "kind": "support"
+  },
+  {
+   "from": "brig",
+   "to": "sailors",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_051",
+ "prompt": "A chaotic pirate ship battle on a stormy sea. A large pirate galleon is next to a smaller naval brig; the galleon is longer than the brig. A giant kraken has surfaced between the two ships, wrapping a massive tentacle around the brig's main mast and breaking it. The tentacle is thicker than the mast. The pirate captain, who has a hook for a hand and is taller than the naval officer, stands at the galleon's wheel. He has two gold coins in his pocket. He is pointing a sword at a naval officer on the brig's deck. On the galleon's deck are four cannons, and their number is twice the number of gold coins in the captain's pocket. One of the cannons is firing towards the brig. A parrot is perched on the pirate captain's shoulder, trying to snatch one of the gold coins. The naval officer is holding a telescope, which is shorter than the pirate captain's sword, and is looking at the pirate captain. A treasure chest sits on the deck, chained to the base of the galleon's main mast. The kraken is pushing the galleon with another tentacle. The naval officer is standing in front of his ship's broken mast. There are more pirates on the galleon's deck than naval sailors on the brig's deck. The kraken is looking at the galleon.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,300 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dock scene with wooden planks",
+   "question": "Does the image show a dock scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog with a white patch",
+   "question": "Is there a brown dog with a white patch?",
+   "box": [
+    280,
+    400,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hard hat",
+   "question": "Is there a woman in a yellow hard hat?",
+   "box": [
+    450,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "anchor_chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor chain coiled up",
+   "question": "Is there a large rusted anchor chain coiled up?",
+   "box": [
+    600,
+    500,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in blue overalls",
+   "question": "Is there a boy in blue overalls?",
+   "box": [
+    550,
+    300,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "sailor",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a grey coat",
+   "question": "Is there an old man in a grey coat?",
+   "box": [
+    100,
+    150,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    500,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "man_blueprint",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf holds a rolled blueprint",
+   "question": "Is the man in the red scarf holding a rolled blueprint?"
+  },
+  {
+   "id": "dog_head_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog rests its head on the surface",
+   "question": "Is the brown dog resting its head on the surface?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat is pointing",
+   "question": "Is the woman in the yellow hard hat pointing?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in blue overalls is looking at someone",
+   "question": "Is the boy in blue overalls looking at someone?"
+  },
+  {
+   "id": "sailor_watching",
+   "type": "state",
+   "of": "sailor",
+   "desc": "the old man in the grey coat is watching the group",
+   "question": "Is the old man in the grey coat watching the group?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in blue overalls is standing",
+   "question": "Is the boy in blue overalls standing?"
+  },
+  {
+   "id": "sailor_leaning",
+   "type": "state",
+   "of": "sailor",
+   "desc": "the old man in the grey coat is leaning",
+   "question": "Is the old man in the grey coat leaning?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man_red_scarf"
+   ],
+   "desc": "the brown dog sits next to the man in the red scarf",
+   "question": "Is the brown dog sitting next to the man in the red scarf?"
+  },
+  {
+   "id": "woman_points_at_chain",
+   "type": "action",
+   "of": [
+    "woman",
+    "anchor_chain"
+   ],
+   "desc": "the woman in the yellow hard hat points toward the large rusted anchor chain",
+   "question": "Is the woman in the yellow hard hat pointing toward the large rusted anchor chain?"
+  },
+  {
+   "id": "boy_behind_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in blue overalls stands just behind the woman in the yellow hard hat",
+   "question": "Is the boy in blue overalls standing just behind the woman in the yellow hard hat?"
+  },
+  {
+   "id": "sailor_against_crate",
+   "type": "relation",
+   "of": [
+    "sailor",
+    "crate"
+   ],
+   "desc": "the old man in the grey coat leans against the wooden crate",
+   "question": "Is the old man in the grey coat leaning against the wooden crate?"
+  },
+  {
+   "id": "handover_pencil",
+   "type": "action",
+   "of": [
+    "man_red_scarf",
+    "woman"
+   ],
+   "desc": "the man in the red scarf hands a pencil to the woman in the yellow hard hat",
+   "question": "Is the man in the red scarf handing a pencil to the woman in the yellow hard hat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "dock_planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden dock planks",
+   "question": "Are there wooden dock planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  },
+  {
+   "from": "dock_planks",
+   "to": "crate",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0091",
+ "prompt": "In this oil painting, a man in a red scarf stands on the left, holding a rolled blueprint. Next to him on the right sits a brown dog with a white patch, resting its head on the dock planks. In the center, a woman in a yellow hard hat points toward a large rusted anchor chain coiled nearby. A boy in blue overalls looks at the woman, standing just behind her shoulder. Further back on the left, an old sailor in a grey coat leans against a wooden crate, watching the group. The man in the red scarf hands a pencil to the woman in the yellow hard hat. The brown dog sits next to the man in the red scarf. There is no water visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

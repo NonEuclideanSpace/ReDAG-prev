@@ -1,0 +1,460 @@
+{
+ "style": "photorealistic photo, high-definition clarity, realistic textures, cool white lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile industrial facility with rows of identical machinery in the background and a polished concrete floor",
+   "question": "Does the image show a sterile industrial facility?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "robot_arm_left",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver robotic arm",
+   "question": "Is there a silver robotic arm?",
+   "box": [
+    50,
+    200,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "gear",
+   "type": "entity",
+   "class": "gear",
+   "plural": "gears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metallic gear",
+   "question": "Is there a metallic gear?",
+   "box": [
+    300,
+    400,
+    400,
+    500
+   ]
+  },
+  {
+   "id": "conveyor_belt",
+   "type": "entity",
+   "class": "conveyor belt",
+   "plural": "conveyor belts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conveyor belt",
+   "question": "Is there a conveyor belt?",
+   "box": [
+    300,
+    500,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "chassis",
+   "type": "entity",
+   "class": "chassis",
+   "plural": "chassis",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a partially assembled chassis",
+   "question": "Is there a partially assembled chassis?",
+   "box": [
+    450,
+    520,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "technician",
+   "type": "entity",
+   "class": "technician",
+   "plural": "technicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a technician in a blue jumpsuit",
+   "question": "Is there a technician in a blue jumpsuit?",
+   "box": [
+    250,
+    250,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "tablet",
+   "type": "entity",
+   "class": "tablet",
+   "plural": "tablets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tablet",
+   "question": "Is there a tablet?",
+   "box": [
+    320,
+    450,
+    380,
+    520
+   ]
+  },
+  {
+   "id": "worker_right",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in an orange vest",
+   "question": "Is there a worker in an orange vest?",
+   "box": [
+    750,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "control_panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control panel",
+   "question": "Is there a control panel?",
+   "box": [
+    700,
+    500,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red toolbox",
+   "question": "Is there a red toolbox?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "tools_inside",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "wrenches and screwdrivers arranged neatly inside the red toolbox",
+   "question": "Are wrenches arranged neatly inside the red toolbox?"
+  },
+  {
+   "id": "safety_barrier",
+   "type": "entity",
+   "class": "safety barrier",
+   "plural": "safety barriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow safety barrier",
+   "question": "Is there a yellow safety barrier?",
+   "box": [
+    0,
+    900,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "robot_arm_back",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third robot arm",
+   "question": "Is there a third robot arm?",
+   "box": [
+    500,
+    150,
+    700,
+    400
+   ]
+  },
+  {
+   "id": "welding_torch",
+   "type": "entity",
+   "class": "welding torch",
+   "plural": "welding torches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a welding torch",
+   "question": "Is there a welding torch?",
+   "box": [
+    550,
+    350,
+    650,
+    450
+   ]
+  },
+  {
+   "id": "metal_sheets",
+   "type": "entity",
+   "class": "metal sheet",
+   "plural": "metal sheets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of gray metal sheets",
+   "question": "Is there a stack of gray metal sheets?",
+   "box": [
+    900,
+    200,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "robot_extends_gear",
+   "type": "action",
+   "of": [
+    "robot_arm_left",
+    "gear"
+   ],
+   "desc": "the silver robotic arm extends the metallic gear",
+   "question": "Is the silver robotic arm extending the metallic gear?"
+  },
+  {
+   "id": "gear_toward_conveyor",
+   "type": "relation",
+   "of": [
+    "gear",
+    "conveyor_belt"
+   ],
+   "desc": "the metallic gear is toward the central conveyor belt",
+   "question": "Is the metallic gear positioned toward the central conveyor belt?"
+  },
+  {
+   "id": "chassis_on_conveyor",
+   "type": "relation",
+   "of": [
+    "chassis",
+    "conveyor_belt"
+   ],
+   "desc": "the partially assembled chassis rests on the central conveyor belt",
+   "question": "Does the partially assembled chassis rest on the central conveyor belt?"
+  },
+  {
+   "id": "technician_holds_tablet",
+   "type": "attribute",
+   "of": "technician",
+   "desc": "the technician in a blue jumpsuit holds a tablet",
+   "question": "Is the technician in a blue jumpsuit holding a tablet?"
+  },
+  {
+   "id": "technician_points_robot",
+   "type": "action",
+   "of": [
+    "technician",
+    "robot_arm_left"
+   ],
+   "desc": "the technician in a blue jumpsuit points at the silver robotic arm's joint",
+   "question": "Is the technician in a blue jumpsuit pointing at the silver robotic arm's joint?"
+  },
+  {
+   "id": "technician_looks_screen",
+   "type": "relation",
+   "of": [
+    "technician",
+    "tablet"
+   ],
+   "desc": "the technician in a blue jumpsuit looks intently at the tablet screen",
+   "question": "Is the technician in a blue jumpsuit looking intently at the tablet screen?"
+  },
+  {
+   "id": "worker_leans_panel",
+   "type": "relation",
+   "of": [
+    "worker_right",
+    "control_panel"
+   ],
+   "desc": "the worker in an orange vest leans over the control panel",
+   "question": "Is the worker in an orange vest leaning over the control panel?"
+  },
+  {
+   "id": "worker_presses_buttons",
+   "type": "action",
+   "of": [
+    "worker_right",
+    "control_panel"
+   ],
+   "desc": "the worker in an orange vest presses buttons on the control panel",
+   "question": "Is the worker in an orange vest pressing buttons on the control panel?"
+  },
+  {
+   "id": "toolbox_on_floor",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "floor"
+   ],
+   "desc": "the red toolbox sits on the floor",
+   "question": "Is the red toolbox sitting on the floor?"
+  },
+  {
+   "id": "toolbox_open",
+   "type": "state",
+   "of": "toolbox",
+   "desc": "the red toolbox is open",
+   "question": "Is the red toolbox open?"
+  },
+  {
+   "id": "barrier_bottom",
+   "type": "state",
+   "of": "safety_barrier",
+   "desc": "the yellow safety barrier runs along the bottom edge",
+   "question": "Does the yellow safety barrier run along the bottom edge of the image?"
+  },
+  {
+   "id": "robot_behind_chassis",
+   "type": "relation",
+   "of": [
+    "robot_arm_back",
+    "chassis"
+   ],
+   "desc": "the third robot arm is behind the partially assembled chassis",
+   "question": "Is the third robot arm behind the partially assembled chassis?"
+  },
+  {
+   "id": "robot_holds_torch",
+   "type": "attribute",
+   "of": "robot_arm_back",
+   "desc": "the third robot arm holds a welding torch",
+   "question": "Is the third robot arm holding a welding torch?"
+  },
+  {
+   "id": "robot_inactive",
+   "type": "state",
+   "of": "robot_arm_back",
+   "desc": "the third robot arm is poised but inactive",
+   "question": "Is the third robot arm poised but inactive?"
+  },
+  {
+   "id": "sheets_lean_wall",
+   "type": "state",
+   "of": "metal_sheets",
+   "desc": "the stack of gray metal sheets leans against the back wall",
+   "question": "Does the stack of gray metal sheets lean against the back wall?"
+  },
+  {
+   "id": "technician_standing",
+   "type": "state",
+   "of": "technician",
+   "desc": "the technician in a blue jumpsuit stands",
+   "question": "Is the technician in a blue jumpsuit standing?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker_right",
+   "desc": "the worker in an orange vest stands",
+   "question": "Is the worker in an orange vest standing?"
+  },
+  {
+   "id": "machinery_bg",
+   "type": "entity",
+   "class": "machinery",
+   "plural": "machines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of identical machinery fading into perspective",
+   "question": "Are there rows of identical machinery fading into perspective?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "concrete floor",
+   "plural": "floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished concrete floor",
+   "question": "Is there a polished concrete floor?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "screwdrivers_inside",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "screwdrivers arranged neatly inside the red toolbox",
+   "question": "Are screwdrivers arranged neatly inside the red toolbox?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "conveyor_belt",
+   "to": "chassis",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "toolbox",
+   "kind": "support"
+  },
+  {
+   "from": "floor",
+   "to": "toolbox",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0005",
+ "prompt": "In a sterile industrial facility, a silver robotic arm on the left extends a metallic gear toward a central conveyor belt where a partially assembled chassis rests. A technician in a blue jumpsuit stands center-left, holding a tablet and pointing at the robot's joint while looking intently at the screen. To the right, another worker in an orange vest leans over a control panel, pressing buttons with focused determination. In the foreground, a red toolbox sits open on the floor, revealing wrenches and screwdrivers arranged neatly inside. A yellow safety barrier runs along the bottom edge, separating the viewer from the active zone. Behind the central chassis, a third robot arm holds a welding torch, poised but inactive. A stack of gray metal sheets leans against the back wall on the far right. Overhead, bright fluorescent lights cast sharp shadows on the polished concrete floor, highlighting dust motes in the air. The background features rows of identical machinery fading into perspective under cool white lighting. The image captures the precise moment of human-machine collaboration with high-definition clarity and realistic textures. This is a photorealistic photo.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

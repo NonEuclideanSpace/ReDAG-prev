@@ -1,0 +1,179 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite scene",
+   "question": "Does the image show a mountain campsite scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a log",
+   "question": "Is there a log in the image?",
+   "box": [
+    50,
+    600,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    100,
+    300,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green jacket",
+   "question": "Is there a man in a green jacket?",
+   "box": [
+    450,
+    250,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange tent",
+   "question": "Is there a small orange tent?",
+   "box": [
+    400,
+    100,
+    650,
+    350
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue beanie is sitting",
+   "question": "Is the woman in a blue beanie sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green jacket is standing",
+   "question": "Is the man in a green jacket standing?"
+  },
+  {
+   "id": "man_holding_mug",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a green jacket holds a metal mug",
+   "question": "Is the man in a green jacket holding a metal mug?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue beanie looks at the man in a green jacket",
+   "question": "Is the woman in a blue beanie looking at the man in a green jacket?"
+  },
+  {
+   "id": "man_handing_mug",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green jacket hands the metal mug to the woman in a blue beanie",
+   "question": "Is the man in a green jacket handing a metal mug to the woman in a blue beanie?"
+  },
+  {
+   "id": "woman_on_log",
+   "type": "relation",
+   "of": [
+    "woman",
+    "log"
+   ],
+   "desc": "the woman in a blue beanie sits on the log",
+   "question": "Is the woman in a blue beanie sitting on the log?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green jacket is to the right of the woman in a blue beanie",
+   "question": "Is the man in a green jacket to the right of the woman in a blue beanie?"
+  },
+  {
+   "id": "tent_behind_people",
+   "type": "relation",
+   "of": [
+    "tent",
+    "woman",
+    "man"
+   ],
+   "desc": "the small orange tent is behind the woman and the man",
+   "question": "Is the small orange tent behind the woman and the man?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0089",
+ "prompt": "A photorealistic photo captures a mountain campsite scene. On the left, a woman in a blue beanie sits on a log. To her right, a man in a green jacket stands holding a metal mug. The woman looks at the man as he hands her the mug. A small orange tent is pitched in the center background behind them. There is no fire visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

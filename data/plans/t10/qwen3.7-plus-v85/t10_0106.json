@@ -1,0 +1,370 @@
+{
+ "style": "soft watercolor illustration, warm autumn hues",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rural farm landscape with green grass and a setting sun",
+   "question": "Does the image show a rural farm landscape?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    150,
+    400,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    50,
+    300,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    160,
+    380,
+    240,
+    450
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a straw hat",
+   "question": "Is there an old man wearing a straw hat?",
+   "box": [
+    400,
+    350,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black and white cow",
+   "question": "Is there a black and white cow?",
+   "box": [
+    560,
+    450,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in yellow overalls",
+   "question": "Is there a young boy wearing yellow overalls?",
+   "box": [
+    800,
+    350,
+    920,
+    800
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    700,
+    320,
+    820,
+    800
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a woven basket filled with bright orange pumpkins",
+   "question": "Is the woman in the blue apron holding a woven basket?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat is sitting",
+   "question": "Is the spotted cat sitting?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat is looking forward with interest",
+   "question": "Is the spotted cat looking forward attentively?"
+  },
+  {
+   "id": "man_bending",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in the straw hat is bending over",
+   "question": "Is the old man in the straw hat bending over?"
+  },
+  {
+   "id": "man_sack",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the old man in the straw hat holds a heavy sack of grain",
+   "question": "Is the old man in the straw hat holding a heavy sack of grain?"
+  },
+  {
+   "id": "cow_grazing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the black and white cow grazes with its head lowered",
+   "question": "Is the black and white cow grazing?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in yellow overalls points toward the horizon",
+   "question": "Is the young boy in yellow overalls pointing toward the horizon?"
+  },
+  {
+   "id": "farmer_smiling",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer wearing a red scarf is smiling gently",
+   "question": "Is the farmer wearing a red scarf smiling gently?"
+  },
+  {
+   "id": "farmer_looking_boy",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "boy"
+   ],
+   "desc": "the farmer wearing a red scarf looks at the young boy in yellow overalls",
+   "question": "Is the farmer wearing a red scarf looking at the young boy in yellow overalls?"
+  },
+  {
+   "id": "woman_handing_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue apron hands a small apple to the spotted cat",
+   "question": "Is the woman in the blue apron handing a small apple to the spotted cat?"
+  },
+  {
+   "id": "cat_leaning",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat leans forward slightly",
+   "question": "Is the spotted cat leaning forward slightly?"
+  },
+  {
+   "id": "woman_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue apron is next to the spotted cat",
+   "question": "Is the woman in the blue apron next to the spotted cat?"
+  },
+  {
+   "id": "cat_on_post",
+   "type": "relation",
+   "of": [
+    "cat",
+    "fence_post"
+   ],
+   "desc": "the spotted cat sits on the wooden fence post",
+   "question": "Is the spotted cat sitting on the wooden fence post?"
+  },
+  {
+   "id": "man_next_to_cow",
+   "type": "relation",
+   "of": [
+    "man",
+    "cow"
+   ],
+   "desc": "the old man in the straw hat stands next to the black and white cow",
+   "question": "Is the old man in the straw hat standing next to the black and white cow?"
+  },
+  {
+   "id": "farmer_near_boy",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "boy"
+   ],
+   "desc": "the farmer wearing a red scarf stands near the young boy in yellow overalls",
+   "question": "Is the farmer wearing a red scarf standing near the young boy in yellow overalls?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "machinery or modern equipment",
+   "question": "Are there any machines or modern equipment visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in the straw hat is standing",
+   "question": "Is the old man in the straw hat standing?"
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "patches of grass",
+   "count": 2,
+   "count_exact": false,
+   "desc": "green patches of grass",
+   "question": "Are there green patches of grass?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sun",
+   "type": "entity",
+   "class": "sun",
+   "plural": "suns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the setting sun",
+   "question": "Is the sun setting on the horizon?",
+   "box": [
+    800,
+    50,
+    950,
+    200
+   ]
+  },
+  {
+   "id": "cow_head_down",
+   "type": "state",
+   "of": "cow",
+   "desc": "the black and white cow has its head lowered",
+   "question": "Is the black and white cow's head lowered?"
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright orange pumpkins",
+   "question": "Are there bright orange pumpkins?",
+   "box": [
+    100,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "basket_contains_pumpkins",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "woman"
+   ],
+   "desc": "the pumpkins are in the basket held by the woman",
+   "question": "Are the bright orange pumpkins in the basket held by the woman in the blue apron?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fence_post",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0106",
+ "prompt": "In a soft watercolor illustration, the golden hues of autumn fill a bustling farm scene. On the left, a woman in a blue apron stands holding a woven basket filled with bright orange pumpkins. Next to her, a spotted cat sits calmly on a wooden fence post, watching the activity with keen interest. In the center, an old man in a straw hat bends over to pick up a heavy sack of grain, his posture showing the weight of the harvest. Beside him, a black and white cow grazes peacefully on the remaining green patches of grass, its head lowered. To the right, a young boy in yellow overalls points excitedly toward the horizon where the sun begins to set. Standing near the boy, a farmer in a red scarf looks at the pointing child with a gentle smile, acknowledging the end of the day's work. The woman in the blue apron is handing a small apple to the spotted cat, which leans forward slightly to accept the treat. The old man in the straw hat is standing next to the black and white cow, creating a sense of shared labor between human and animal. There is no machinery or modern equipment visible in this timeless rural setting, preserving the traditional atmosphere of the harvest. The soft edges of the watercolor style blend the figures into the warm background, emphasizing the connection between the people, animals, and the land they tend.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

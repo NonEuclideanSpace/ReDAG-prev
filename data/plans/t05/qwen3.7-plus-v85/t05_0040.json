@@ -1,0 +1,275 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station",
+   "question": "Does the image show the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in yellow gear",
+   "question": "Is there a tall firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a blue coat",
+   "question": "Is there a small child in a blue coat?",
+   "box": [
+    400,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a green dress",
+   "question": "Is there an older woman in a green dress?",
+   "box": [
+    750,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    500,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dalmatian",
+   "plural": "dalmatians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black dalmatian dog",
+   "question": "Is there a black dalmatian dog?",
+   "box": [
+    650,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "fire hose",
+   "plural": "fire hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red fire hose coiled neatly",
+   "question": "Is there a large red fire hose coiled neatly?",
+   "box": [
+    400,
+    50,
+    650,
+    250
+   ]
+  },
+  {
+   "id": "firefighter_helmet",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the tall firefighter in yellow gear holds a helmet",
+   "question": "Is the tall firefighter in yellow gear holding a helmet?"
+  },
+  {
+   "id": "firefighter_pointing",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "hose"
+   ],
+   "desc": "the tall firefighter in yellow gear points toward the large red fire hose",
+   "question": "Is the tall firefighter in yellow gear pointing toward the large red fire hose?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a blue coat is sitting",
+   "question": "Is the small child in a blue coat sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the small child in a blue coat looks at the black dalmatian dog",
+   "question": "Is the small child in a blue coat looking at the black dalmatian dog?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the older woman in a green dress is sitting",
+   "question": "Is the older woman in a green dress sitting?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman",
+   "desc": "the older woman in a green dress is leaning",
+   "question": "Is the older woman in a green dress leaning?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the black dalmatian dog is lying down",
+   "question": "Is the black dalmatian dog lying down?"
+  },
+  {
+   "id": "child_on_bench",
+   "type": "relation",
+   "of": [
+    "child",
+    "bench"
+   ],
+   "desc": "the small child in a blue coat sits on the wooden bench",
+   "question": "Is the small child in a blue coat sitting on the wooden bench?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the older woman in a green dress sits on the wooden bench",
+   "question": "Is the older woman in a green dress sitting on the wooden bench?"
+  },
+  {
+   "id": "woman_beside_child",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the older woman in a green dress is beside the small child in a blue coat",
+   "question": "Is the older woman in a green dress beside the small child in a blue coat?"
+  },
+  {
+   "id": "dog_next_to_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the black dalmatian dog is next to the wooden bench",
+   "question": "Is the black dalmatian dog next to the wooden bench?"
+  },
+  {
+   "id": "hose_above",
+   "type": "relation",
+   "of": [
+    "hose",
+    "firefighter"
+   ],
+   "desc": "the large red fire hose hangs above the tall firefighter in yellow gear",
+   "question": "Does the large red fire hose hang above the tall firefighter in yellow gear?"
+  },
+  {
+   "id": "firefighter_next_to_hose",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "hose"
+   ],
+   "desc": "the tall firefighter in yellow gear stands next to the large red fire hose",
+   "question": "Is the tall firefighter in yellow gear standing next to the large red fire hose?"
+  },
+  {
+   "id": "no_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the background?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the tall firefighter in yellow gear stands",
+   "question": "Is the tall firefighter in yellow gear standing?"
+  },
+  {
+   "id": "woman_leaning_against_wall",
+   "type": "state",
+   "of": "woman",
+   "desc": "the older woman in a green dress leans against the wall",
+   "question": "Does the older woman in a green dress lean against the wall of the fire station?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0040",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene unfolds inside a fire station. On the left stands a tall firefighter in yellow gear holding a helmet. In the center sits a small child in a blue coat on a wooden bench. To the right leans an older woman in a green dress against a wall. Next to the bench rests a black dalmatian dog lying down calmly. Above them hangs a large red fire hose coiled neatly. The tall firefighter is pointing toward the hanging hose. The small child is looking at the black dalmatian dog. The older woman is sitting on the wooden bench beside the child. The tall firefighter stands next to the hanging hose. There is no fire truck visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

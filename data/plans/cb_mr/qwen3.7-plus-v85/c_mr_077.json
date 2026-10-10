@@ -1,0 +1,461 @@
+{
+ "style": "photorealistic outdoor photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pitched tent",
+   "question": "Is there a pitched tent?",
+   "box": [
+    500,
+    300,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "campfire",
+   "type": "entity",
+   "class": "campfire",
+   "plural": "campfires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a burning campfire",
+   "question": "Is there a campfire?",
+   "box": [
+    550,
+    650,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree",
+   "question": "Is there a tree?",
+   "box": [
+    100,
+    50,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a backpack",
+   "question": "Is there a backpack?",
+   "box": [
+    150,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "boots",
+   "type": "entity",
+   "class": "hiking boot",
+   "plural": "hiking boots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of hiking boots",
+   "question": "Is there a pair of hiking boots?",
+   "box": [
+    180,
+    860,
+    320,
+    950
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rock",
+   "question": "Is there a rock?",
+   "box": [
+    600,
+    700,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spread map",
+   "question": "Is there a map?",
+   "box": [
+    620,
+    720,
+    780,
+    780
+   ]
+  },
+  {
+   "id": "water_bottles",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two water bottles",
+   "question": "Are there two water bottles?",
+   "box": [
+    200,
+    860,
+    300,
+    980
+   ]
+  },
+  {
+   "id": "granola_bars",
+   "type": "entity",
+   "class": "granola bar",
+   "plural": "granola bars",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four granola bars",
+   "question": "Are there four granola bars?",
+   "box": [
+    160,
+    800,
+    340,
+    850
+   ]
+  },
+  {
+   "id": "sleeping_bag",
+   "type": "entity",
+   "class": "sleeping bag",
+   "plural": "sleeping bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolled up sleeping bag",
+   "question": "Is there a sleeping bag?",
+   "box": [
+    550,
+    450,
+    750,
+    550
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lantern",
+   "question": "Is there a lantern?",
+   "box": [
+    600,
+    200,
+    700,
+    350
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wide cooler",
+   "question": "Is there a wide cooler?",
+   "box": [
+    500,
+    850,
+    800,
+    980
+   ]
+  },
+  {
+   "id": "campfire_burning",
+   "type": "state",
+   "of": "campfire",
+   "desc": "the campfire is burning",
+   "question": "Is the campfire burning?"
+  },
+  {
+   "id": "backpack_leaning",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack is leaning",
+   "question": "Is the backpack leaning?"
+  },
+  {
+   "id": "map_spread",
+   "type": "state",
+   "of": "map",
+   "desc": "the map is spread out",
+   "question": "Is the map spread out?"
+  },
+  {
+   "id": "sleeping_bag_rolled",
+   "type": "state",
+   "of": "sleeping_bag",
+   "desc": "the sleeping bag is rolled up",
+   "question": "Is the sleeping bag rolled up?"
+  },
+  {
+   "id": "water_bottles_standing",
+   "type": "state",
+   "of": "water_bottles",
+   "desc": "the water bottles are standing",
+   "question": "Are the water bottles standing?"
+  },
+  {
+   "id": "tent_on_clearing",
+   "type": "relation",
+   "of": [
+    "tent",
+    "clearing"
+   ],
+   "desc": "the tent is pitched on the flat clearing",
+   "question": "Is the tent pitched on the flat clearing?"
+  },
+  {
+   "id": "campfire_in_front_of_tent",
+   "type": "relation",
+   "of": [
+    "campfire",
+    "tent"
+   ],
+   "desc": "the campfire is in front of the tent",
+   "question": "Is the campfire in front of the tent?"
+  },
+  {
+   "id": "backpack_against_tree",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "tree"
+   ],
+   "desc": "the backpack leans against the tree",
+   "question": "Does the backpack lean against the tree?"
+  },
+  {
+   "id": "tree_left_of_tent",
+   "type": "relation",
+   "of": [
+    "tree",
+    "tent"
+   ],
+   "desc": "the tree is to the left of the tent",
+   "question": "Is the tree to the left of the tent?"
+  },
+  {
+   "id": "boots_beside_backpack",
+   "type": "relation",
+   "of": [
+    "boots",
+    "backpack"
+   ],
+   "desc": "the hiking boots are beside the backpack",
+   "question": "Are the hiking boots beside the backpack?"
+  },
+  {
+   "id": "map_on_rock",
+   "type": "relation",
+   "of": [
+    "map",
+    "rock"
+   ],
+   "desc": "the map is spread on the rock",
+   "question": "Is the map spread on the rock?"
+  },
+  {
+   "id": "rock_near_campfire",
+   "type": "relation",
+   "of": [
+    "rock",
+    "campfire"
+   ],
+   "desc": "the rock is near the campfire",
+   "question": "Is the rock near the campfire?"
+  },
+  {
+   "id": "bottles_next_to_boots",
+   "type": "relation",
+   "of": [
+    "water_bottles",
+    "boots"
+   ],
+   "desc": "the water bottles are next to the hiking boots",
+   "question": "Are the water bottles next to the hiking boots?"
+  },
+  {
+   "id": "granola_near_backpack",
+   "type": "relation",
+   "of": [
+    "granola_bars",
+    "backpack"
+   ],
+   "desc": "the granola bars are near the backpack",
+   "question": "Are the granola bars near the backpack?"
+  },
+  {
+   "id": "sleeping_bag_inside_tent",
+   "type": "relation",
+   "of": [
+    "sleeping_bag",
+    "tent"
+   ],
+   "desc": "the sleeping bag is inside the tent",
+   "question": "Is the sleeping bag inside the tent?"
+  },
+  {
+   "id": "lantern_hangs_from_branch",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "tree"
+   ],
+   "desc": "the lantern hangs from a branch of the tree",
+   "question": "Does the lantern hang from a branch of the tree?"
+  },
+  {
+   "id": "lantern_above_campfire",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "campfire"
+   ],
+   "desc": "the lantern is above the campfire",
+   "question": "Is the lantern above the campfire?"
+  },
+  {
+   "id": "cooler_behind_fire",
+   "type": "relation",
+   "of": [
+    "cooler",
+    "campfire"
+   ],
+   "desc": "the cooler is placed behind the campfire",
+   "question": "Is the cooler placed behind the campfire?"
+  },
+  {
+   "id": "tree_taller_than_tent",
+   "type": "relation",
+   "of": [
+    "tree",
+    "tent"
+   ],
+   "desc": "the tree is taller than the tent",
+   "question": "Is the tree taller than the tent?"
+  },
+  {
+   "id": "cooler_wider_than_backpack",
+   "type": "relation",
+   "of": [
+    "cooler",
+    "backpack"
+   ],
+   "desc": "the cooler is wider than the backpack",
+   "question": "Is the cooler wider than the backpack?"
+  },
+  {
+   "id": "clearing",
+   "type": "entity",
+   "class": "clearing",
+   "plural": "clearings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flat clearing",
+   "question": "Is there a flat clearing?",
+   "box": [
+    0,
+    500,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "tent",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tree",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "rock",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "campfire",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cooler",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_077",
+ "prompt": "A mountain campsite with a tent pitched on a flat clearing. A campfire is burning in front of the tent. A backpack leans against a tree to the left of the tent. A pair of hiking boots is beside the backpack. A map is spread on a rock near the campfire. The tree is taller than the tent. Two water bottles are standing next to the boots. Near the backpack are some granola bars, and the number of granola bars is twice the number of water bottles. A sleeping bag is rolled up inside the tent. A lantern hangs from a branch above the campfire. A cooler, which is wider than the backpack, is placed behind the fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

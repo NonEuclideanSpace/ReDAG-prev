@@ -1,0 +1,498 @@
+{
+ "style": "surreal photorealistic, dreamlike haze, impossible blue sky",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sun-bleached dock with splintered planks, a harbor with shallow mirrored water, and an impossible blue sky with a soft dreamlike haze",
+   "question": "Does the image show a sun-bleached dock, a harbor with shallow mirrored water, and an impossible blue sky with a soft dreamlike haze?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lobster",
+   "type": "entity",
+   "class": "lobster",
+   "plural": "lobsters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red lobster",
+   "question": "Is there a red lobster?",
+   "box": [
+    300,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "plastic cooler",
+   "plural": "plastic coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic cooler half-filled with ice and glistening with condensation",
+   "question": "Is there a plastic cooler half-filled with ice and glistening with condensation?",
+   "box": [
+    600,
+    550,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "net_dock",
+   "type": "entity",
+   "class": "fishing net",
+   "plural": "fishing nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered fishing net",
+   "question": "Is there a weathered fishing net?",
+   "box": [
+    580,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "hook",
+   "type": "entity",
+   "class": "fishing hook",
+   "plural": "fishing hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted fishing hook",
+   "question": "Is there a rusted fishing hook?",
+   "box": [
+    700,
+    550,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "mackerel",
+   "type": "entity",
+   "class": "mackerel",
+   "plural": "mackerels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single mackerel",
+   "question": "Is there a single mackerel?",
+   "box": [
+    100,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "tide_pool",
+   "type": "entity",
+   "class": "tide pool",
+   "plural": "tide pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tide pool",
+   "question": "Is there a small tide pool?",
+   "box": [
+    50,
+    700,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "duck",
+   "type": "entity",
+   "class": "rubber duck",
+   "plural": "rubber ducks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s yellow rubber duck with peeling paint",
+   "question": "Is there a child’s yellow rubber duck with peeling paint?",
+   "box": [
+    150,
+    750,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "boats",
+   "type": "entity",
+   "class": "fishing boat",
+   "plural": "fishing boats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several fishing boats",
+   "question": "Are there several fishing boats?",
+   "box": [
+    0,
+    300,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "gull",
+   "type": "entity",
+   "class": "gull",
+   "plural": "gulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gull",
+   "question": "Is there a gull?",
+   "box": [
+    400,
+    350,
+    500,
+    450
+   ]
+  },
+  {
+   "id": "lobster_crawling",
+   "type": "state",
+   "of": "lobster",
+   "desc": "the red lobster is crawling sideways",
+   "question": "Is the red lobster crawling sideways?"
+  },
+  {
+   "id": "lobster_paused",
+   "type": "state",
+   "of": "net_dock",
+   "desc": "the nets are frozen in time, not moving",
+   "question": "Are the nets frozen in time, appearing still?"
+  },
+  {
+   "id": "gull_perched",
+   "type": "state",
+   "of": "gull",
+   "desc": "the gull is perched",
+   "question": "Is the gull perched?"
+  },
+  {
+   "id": "mackerel_arched",
+   "type": "state",
+   "of": "mackerel",
+   "desc": "the mackerel is arched in a frozen leap",
+   "question": "Is the mackerel arched in a frozen leap?"
+  },
+  {
+   "id": "duck_upside_down",
+   "type": "state",
+   "of": "duck",
+   "desc": "the rubber duck is floating upside down",
+   "question": "Is the rubber duck floating upside down?"
+  },
+  {
+   "id": "net_on_cooler",
+   "type": "relation",
+   "of": [
+    "net_dock",
+    "cooler"
+   ],
+   "desc": "the fishing net is tangled around the plastic cooler",
+   "question": "Is the fishing net tangled around the plastic cooler?"
+  },
+  {
+   "id": "hook_on_cooler",
+   "type": "relation",
+   "of": [
+    "hook",
+    "cooler"
+   ],
+   "desc": "the rusted fishing hook protrudes from the cooler’s lid",
+   "question": "Does the rusted fishing hook protrude from the cooler’s lid?"
+  },
+  {
+   "id": "hook_catches_net",
+   "type": "relation",
+   "of": [
+    "hook",
+    "net_dock"
+   ],
+   "desc": "the hook catches a thread from the net, holding it taut",
+   "question": "Does the hook catch a thread from the net, holding it taut?"
+  },
+  {
+   "id": "mackerel_in_sand",
+   "type": "state",
+   "of": "mackerel",
+   "desc": "the mackerel lies half-buried in the sand at the water’s edge",
+   "question": "Is the mackerel lying half-buried in the sand at the water’s edge?"
+  },
+  {
+   "id": "duck_in_pool",
+   "type": "relation",
+   "of": [
+    "duck",
+    "tide_pool"
+   ],
+   "desc": "the rubber duck floats in the tide pool",
+   "question": "Does the rubber duck float in the tide pool?"
+  },
+  {
+   "id": "gull_on_boat",
+   "type": "relation",
+   "of": [
+    "gull",
+    "boats"
+   ],
+   "desc": "the gull perches on the edge of a swaying boat",
+   "question": "Is the gull perching on the edge of a swaying boat?"
+  },
+  {
+   "id": "lobster_looks_gull",
+   "type": "action",
+   "of": [
+    "lobster",
+    "gull"
+   ],
+   "desc": "the lobster turns its eye toward the gull",
+   "question": "Is the lobster turning its eye toward the gull?"
+  },
+  {
+   "id": "boats_in_harbor",
+   "type": "state",
+   "of": "boats",
+   "desc": "the fishing boats rock gently in the harbor",
+   "question": "Are the fishing boats rocking gently in the harbor?"
+  },
+  {
+   "id": "lobster_eye",
+   "type": "attribute",
+   "of": "lobster",
+   "desc": "the red lobster has an eye shaped like a polished stone",
+   "question": "Does the red lobster have an eye shaped like a polished stone?"
+  },
+  {
+   "id": "gull_foot_hovering",
+   "type": "state",
+   "of": "gull",
+   "desc": "one clawed foot of the gull is hovering just above the hull",
+   "question": "Is one clawed foot of the gull hovering just above the hull?"
+  },
+  {
+   "id": "gull_feathers_preening",
+   "type": "state",
+   "of": "gull",
+   "desc": "the feathers of the gull are caught mid-preen",
+   "question": "Are the feathers of the gull caught mid-preen?"
+  },
+  {
+   "id": "tide_pool_reflection",
+   "type": "attribute",
+   "of": "tide_pool",
+   "desc": "the tide pool reflects twisted trees and alien flora",
+   "question": "Does the tide pool reflect twisted trees and alien flora?"
+  },
+  {
+   "id": "duck_paint_peeling",
+   "type": "attribute",
+   "of": "duck",
+   "desc": "the yellow paint of the rubber duck is peeling to reveal an iridescent pattern",
+   "question": "Is the yellow paint of the rubber duck peeling to reveal an iridescent pattern?"
+  },
+  {
+   "id": "boats_nets_dripping",
+   "type": "attribute",
+   "of": "boats",
+   "desc": "the nets of the fishing boats drip slow trails of moisture",
+   "question": "Do the nets of the fishing boats drip slow trails of moisture?"
+  },
+  {
+   "id": "net_dripping",
+   "type": "attribute",
+   "of": "net_dock",
+   "desc": "the fishing net is damp",
+   "question": "Is the fishing net damp?"
+  },
+  {
+   "id": "boats_horizon_loop",
+   "type": "state",
+   "of": "boats",
+   "desc": "the row of fishing boats circles eternally near a horizon that bends into a loop",
+   "question": "Do the fishing boats appear to circle near a horizon that bends into a loop?"
+  },
+  {
+   "id": "lobster_glistening",
+   "type": "attribute",
+   "of": "lobster",
+   "desc": "the red lobster's carapace is glistening with brine",
+   "question": "Is the red lobster's carapace glistening with brine?"
+  },
+  {
+   "id": "cooler_ice",
+   "type": "attribute",
+   "of": "cooler",
+   "desc": "the plastic cooler is half-filled with ice",
+   "question": "Is the plastic cooler half-filled with ice?"
+  },
+  {
+   "id": "cooler_condensation",
+   "type": "attribute",
+   "of": "cooler",
+   "desc": "the plastic cooler is glistening with condensation",
+   "question": "Is the plastic cooler glistening with condensation?"
+  },
+  {
+   "id": "net_damp",
+   "type": "attribute",
+   "of": "net_dock",
+   "desc": "the fishing net is damp from the sea",
+   "question": "Is the fishing net damp from the sea?"
+  },
+  {
+   "id": "net_strands_draping",
+   "type": "state",
+   "of": "net_dock",
+   "desc": "ghostly strands of the fishing net curl into the air",
+   "question": "Do ghostly strands of the fishing net curl into the air?"
+  },
+  {
+   "id": "boats_hulls_stained",
+   "type": "attribute",
+   "of": "boats",
+   "desc": "the hulls of the fishing boats are barnacled",
+   "question": "Are the hulls of the fishing boats barnacled?"
+  },
+  {
+   "id": "boats_nets_hanging",
+   "type": "state",
+   "of": "boats",
+   "desc": "nets hang like heavy curtains from the stern of the fishing boats",
+   "question": "Do nets hang like heavy curtains from the stern of the fishing boats?"
+  },
+  {
+   "id": "gull_wings_outstretched",
+   "type": "state",
+   "of": "gull",
+   "desc": "the gull has its wings outstretched",
+   "question": "Does the gull have its wings outstretched?"
+  },
+  {
+   "id": "hook_protrudes",
+   "type": "relation",
+   "of": [
+    "hook",
+    "net_dock"
+   ],
+   "desc": "the rusted fishing hook protrudes from the cooler’s lid",
+   "question": "Does the rusted fishing hook protrude from the cooler’s lid?"
+  },
+  {
+   "id": "mackerel_scales_shimmering",
+   "type": "attribute",
+   "of": "mackerel",
+   "desc": "the mackerel's scales shimmer like shards of glass",
+   "question": "Do the mackerel's scales shimmer like shards of glass?"
+  },
+  {
+   "id": "tide_pool_reflection_dock",
+   "type": "attribute",
+   "of": "tide_pool",
+   "desc": "the tide pool reflects a version of the dock turned upside down",
+   "question": "Does the tide pool reflect a version of the dock turned upside down?"
+  },
+  {
+   "id": "duck_iridescent",
+   "type": "attribute",
+   "of": "duck",
+   "desc": "the peeling paint of the rubber duck reveals an iridescent pattern",
+   "question": "Does the peeling paint of the rubber duck reveal an iridescent pattern?"
+  },
+  {
+   "id": "cooler_dripping",
+   "type": "relation",
+   "of": [
+    "cooler",
+    "net_dock"
+   ],
+   "desc": "water dripping from the cooler in crystalline beads",
+   "question": "Is water dripping from the cooler in crystalline beads?"
+  },
+  {
+   "id": "hook_arc",
+   "type": "attribute",
+   "of": "hook",
+   "desc": "the rusted fishing hook is bent in a curious arc",
+   "question": "Is the rusted fishing hook bent in a curious arc?"
+  },
+  {
+   "id": "net_on_cooler_edge",
+   "type": "relation",
+   "of": [
+    "net_dock",
+    "cooler"
+   ],
+   "desc": "ghostly strands of the fishing net drape over the cooler’s edge",
+   "question": "Do ghostly strands of the fishing net drape over the cooler’s edge?"
+  },
+  {
+   "id": "boats_hulls_seaweed",
+   "type": "attribute",
+   "of": "boats",
+   "desc": "the hulls of the fishing boats are stained with seaweed",
+   "question": "Are the hulls of the fishing boats stained with seaweed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cooler",
+   "to": "hook",
+   "kind": "support"
+  },
+  {
+   "from": "cooler",
+   "to": "net_dock",
+   "kind": "support"
+  },
+  {
+   "from": "boats",
+   "to": "gull",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0338",
+ "prompt": "A red lobster crawls sideways across a sun-bleached dock, its carapace glistening with the brine of the morning tide, claws clicking rhythmically against splintered planks as if playing a percussion solo for a phantom audience. Nearby, a weathered fishing net lies tangled around a plastic cooler half-filled with ice and glistening with condensation, the water dripping down in crystalline beads that glint in the pale light like tiny diamonds. The net, still damp from the sea, dangles with ghostly strands that drape over the cooler’s edge and curl into the salt air, as if reaching for the waves that receded just hours ago. In the background, a row of fishing boats rocks gently in the harbor, their hulls barnacled and stained with seaweed, their nets hanging like heavy curtains from the stern, dripping slow trails of moisture that fall like raindrops into the shallow, mirrored water beneath them. Above, the sky is an impossible blue, tinged with a soft, dreamlike haze that distorts the shapes of the boats, warping them slightly as if the world were underwater. A gull perches on the edge of a swaying boat, its wings outstretched not in flight but in some strange, stilled moment of balance, the feathers caught mid-preen, one clawed foot hovering just above the hull. On the dock, a rusted fishing hook protrudes from the cooler’s lid, bent in a curious arc that catches a thread from the net, drawing it taut and holding it like a violin string vibrating with the weight of silence. A single mackerel lies half-buried in the sand at the water’s edge, its body arched in a final, frozen leap, scales shimmering like shards of glass as the sun passes overhead. A small tide pool nearby reflects not the sky, but a different world entirely—twisted trees, alien flora, and a version of the dock turned upside down, the lobster crawling upward into a mirrored horizon. The plastic cooler, now a relic of modernity in this surreal tableau, seems to pulse faintly, as if the ice inside is not just melting but breathing, each condensation drop a bead of life in a world suspended between sea and dream. The lobster, now pausing mid-step, turns its eye—shaped like a polished stone—toward the gull, as if both acknowledge an unspoken truth about their transient existence in this liminal space. The nets ripple with the wind but do not move, frozen in time like a held breath, each knot and tangle a story waiting to be unraveled. A child’s rubber duck floats upside down in the tide pool, its cheerful yellow paint peeling to reveal a strange iridescent pattern beneath, the kind of thing you might find only in a world where physics bowed slightly to poetry. And there, just beyond the last boat, the horizon bends into a loop, folding the sky into itself like origami, the boats circling eternally in a dance that never begins and never ends.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 13,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 43,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 1,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 13,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 9,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

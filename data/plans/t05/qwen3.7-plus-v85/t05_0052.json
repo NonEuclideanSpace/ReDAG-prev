@@ -1,0 +1,298 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a vibrant farm harvest scene",
+   "question": "Does the image depict a vibrant farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hat",
+   "question": "Is there a woman in a yellow hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    380,
+    180,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in green overalls",
+   "question": "Is there a child in green overalls?",
+   "box": [
+    700,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cow",
+   "question": "Is there a spotted cow?",
+   "box": [
+    850,
+    400,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person",
+   "question": "Is there an elderly person?",
+   "box": [
+    650,
+    250,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    650,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    600,
+    600,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow hat holds a woven basket",
+   "question": "Is the woman in the yellow hat holding a woven basket?"
+  },
+  {
+   "id": "man_pumpkin",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man with the blue shirt holds a large orange pumpkin",
+   "question": "Is the man with the blue shirt holding a large orange pumpkin?"
+  },
+  {
+   "id": "woman_apple",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow hat holds a red apple",
+   "question": "Is the woman in the yellow hat holding a red apple?"
+  },
+  {
+   "id": "woman_to_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow hat is handing the red apple to the man with the blue shirt",
+   "question": "Is the woman in the yellow hat handing a red apple to the man with the blue shirt?"
+  },
+  {
+   "id": "child_points_cow",
+   "type": "action",
+   "of": [
+    "child",
+    "cow"
+   ],
+   "desc": "the child in green overalls points at the spotted cow",
+   "question": "Is the child in green overalls pointing at the spotted cow?"
+  },
+  {
+   "id": "child_looks_cow",
+   "type": "action",
+   "of": [
+    "child",
+    "cow"
+   ],
+   "desc": "the child in green overalls is looking at the spotted cow",
+   "question": "Is the child in green overalls looking at the spotted cow?"
+  },
+  {
+   "id": "cow_grazing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the spotted cow is grazing",
+   "question": "Is the spotted cow grazing?"
+  },
+  {
+   "id": "elderly_sits",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person is sitting",
+   "question": "Is the elderly person sitting?"
+  },
+  {
+   "id": "dog_lies",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "elderly_on_crate",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "crate"
+   ],
+   "desc": "the elderly person with gray hair sits on the wooden crate",
+   "question": "Is the elderly person with gray hair sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_next_to_elderly",
+   "type": "relation",
+   "of": [
+    "dog",
+    "elderly_person"
+   ],
+   "desc": "the brown dog lies next to the seated elderly person",
+   "question": "Is the brown dog lying next to the seated elderly person?"
+  },
+  {
+   "id": "child_behind_elderly",
+   "type": "relation",
+   "of": [
+    "child",
+    "elderly_person"
+   ],
+   "desc": "the child in green overalls is in front of the elderly person (elderly person is behind child)",
+   "question": "Is the elderly person with gray hair positioned behind the child in green overalls?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hat stands",
+   "question": "Is the woman in the yellow hat standing?"
+  },
+  {
+   "id": "man_carries",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is carrying a large orange pumpkin",
+   "question": "Is the man carrying a large orange pumpkin?"
+  },
+  {
+   "id": "man_blue_shirt",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a blue shirt",
+   "question": "Does the man wear a blue shirt?"
+  },
+  {
+   "id": "elderly_gray_hair",
+   "type": "attribute",
+   "of": "elderly_person",
+   "desc": "the elderly person has gray hair",
+   "question": "Does the elderly person have gray hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "elderly_person",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0052",
+ "prompt": "This flat vector illustration depicts a vibrant farm harvest scene. On the left stands a woman in a yellow hat holding a woven basket. In the center, a man with a blue shirt carries a large orange pumpkin. To the right, a child in green overalls points at a spotted cow grazing nearby. Behind the child, an elderly person with gray hair sits on a wooden crate. A brown dog lies next to the seated figure. The woman in the yellow hat is handing a red apple to the man with the blue shirt. The child in green overalls is looking at the spotted cow. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

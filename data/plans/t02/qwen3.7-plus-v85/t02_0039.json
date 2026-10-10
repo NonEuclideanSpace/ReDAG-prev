@@ -1,0 +1,217 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with a fire pit",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large log",
+   "question": "Is there a large log in the scene?",
+   "box": [
+    50,
+    600,
+    974,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange tent",
+   "question": "Is there a small orange tent?",
+   "box": [
+    362,
+    200,
+    662,
+    500
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with blue hair",
+   "question": "Is there a girl with blue hair?",
+   "box": [
+    100,
+    350,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a green jacket",
+   "question": "Is there a boy wearing a green jacket?",
+   "box": [
+    550,
+    300,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with blue hair holds a metal cup",
+   "question": "Is the girl with blue hair holding a metal cup?"
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue hair is sitting",
+   "question": "Is the girl with blue hair sitting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing a green jacket is standing",
+   "question": "Is the boy wearing a green jacket standing?"
+  },
+  {
+   "id": "girl_on_log",
+   "type": "relation",
+   "of": [
+    "girl",
+    "log"
+   ],
+   "desc": "the girl with blue hair sits on the log",
+   "question": "Is the girl with blue hair sitting on the log?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy wearing a green jacket stands next to the girl with blue hair",
+   "question": "Is the boy wearing a green jacket standing next to the girl with blue hair?"
+  },
+  {
+   "id": "tent_behind_them",
+   "type": "relation",
+   "of": [
+    "tent",
+    "girl",
+    "boy"
+   ],
+   "desc": "the small orange tent is pitched behind the girl and the boy",
+   "question": "Is the small orange tent pitched behind the girl and the boy?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with blue hair hands the metal cup to the boy wearing a green jacket",
+   "question": "Is the girl with blue hair handing the metal cup to the boy wearing a green jacket?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire burning in the pit",
+   "question": "Is there a fire burning in the pit?"
+  },
+  {
+   "id": "fire_pit",
+   "type": "entity",
+   "class": "fire pit",
+   "plural": "fire pits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fire pit",
+   "question": "Is there a fire pit?",
+   "box": [
+    400,
+    800,
+    624,
+    950
+   ]
+  },
+  {
+   "id": "girl_left_side",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue hair is on the left side of the log",
+   "question": "Is the girl with blue hair positioned on the left side of the log?"
+  },
+  {
+   "id": "boy_right_side",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing a green jacket is on the right side of the girl",
+   "question": "Is the boy wearing a green jacket positioned on the right side of the girl?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing a green jacket reaches out to take the cup",
+   "question": "Is the boy wearing a green jacket reaching out to take the cup?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "girl",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0039",
+ "prompt": "In an anime style scene at a mountain campsite, a girl with blue hair sits on the left side of a log. Next to her on the right stands a boy wearing a green jacket. The girl is holding a metal cup in her hands. She is handing the cup to the boy, who reaches out to take it. A small orange tent is pitched in the center background behind them. There is no fire burning in the pit.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

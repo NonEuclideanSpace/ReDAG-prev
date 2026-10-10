@@ -1,0 +1,269 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a train dining car interior",
+   "question": "Does the image show a train dining car interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "seat",
+   "type": "entity",
+   "class": "velvet seat",
+   "plural": "velvet seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet seat",
+   "question": "Is there a velvet seat?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    80,
+    200,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    380,
+    180,
+    620,
+    880
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver menu",
+   "question": "Is there a silver menu?",
+   "box": [
+    550,
+    450,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    680,
+    180,
+    920,
+    880
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wooden table",
+   "question": "Is there a small wooden table?",
+   "box": [
+    700,
+    550,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "bag",
+   "type": "entity",
+   "class": "leather bag",
+   "plural": "leather bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown leather bag",
+   "question": "Is there a brown leather bag?",
+   "box": [
+    100,
+    850,
+    250,
+    980
+   ]
+  },
+  {
+   "id": "wine_glass",
+   "type": "entity",
+   "class": "wine glass",
+   "plural": "wine glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass of red wine",
+   "question": "Is there a glass of red wine?",
+   "box": [
+    780,
+    520,
+    850,
+    620
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "menu"
+   ],
+   "desc": "the man in the gray suit points at the silver menu",
+   "question": "Is the man in the gray suit pointing at the silver menu?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the black vest is standing",
+   "question": "Is the waiter in the black vest standing?"
+  },
+  {
+   "id": "woman_on_seat",
+   "type": "relation",
+   "of": [
+    "woman",
+    "seat"
+   ],
+   "desc": "the woman in the blue dress sits on the velvet seat",
+   "question": "Is the woman in the blue dress sitting on the velvet seat?"
+  },
+  {
+   "id": "waiter_next_to_table",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "table"
+   ],
+   "desc": "the waiter in the black vest stands next to the small wooden table",
+   "question": "Is the waiter in the black vest standing next to the small wooden table?"
+  },
+  {
+   "id": "bag_near_woman",
+   "type": "relation",
+   "of": [
+    "bag",
+    "woman"
+   ],
+   "desc": "the brown leather bag rests near the woman in the blue dress",
+   "question": "Is the brown leather bag near the woman in the blue dress?"
+  },
+  {
+   "id": "wine_on_table",
+   "type": "relation",
+   "of": [
+    "wine_glass",
+    "table"
+   ],
+   "desc": "the glass of red wine sits on the small wooden table",
+   "question": "Is the glass of red wine sitting on the small wooden table?"
+  },
+  {
+   "id": "man_looking_at_waiter",
+   "type": "action",
+   "of": [
+    "man",
+    "waiter"
+   ],
+   "desc": "the man in the gray suit looks at the waiter in the black vest",
+   "question": "Is the man in the gray suit looking at the waiter in the black vest?"
+  },
+  {
+   "id": "waiter_handing_napkin",
+   "type": "action",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter in the black vest hands a napkin to the woman in the blue dress",
+   "question": "Is the waiter in the black vest handing a napkin to the woman in the blue dress?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "bag_on_floor",
+   "type": "state",
+   "of": "bag",
+   "desc": "the brown leather bag rests on the floor",
+   "question": "Is the brown leather bag resting on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "seat",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "wine_glass",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0104",
+ "prompt": "A photorealistic photo captures a train dining car scene. On the left, a woman in a blue dress sits on a velvet seat. In the center, a man in a gray suit points at a silver menu. To his right, a waiter in a black vest stands next to a small wooden table. A brown leather bag rests on the floor near the woman. A glass of red wine sits on the table surface. The man in the gray suit is looking at the waiter in the black vest. The waiter in the black vest is handing a napkin to the woman in the blue dress. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

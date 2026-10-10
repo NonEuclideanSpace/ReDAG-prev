@@ -1,0 +1,366 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, soft golden lighting, intricate details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a parched field with cracked earth and a surreal spiraling horizon where sky and ground merge",
+   "question": "Does the image show a parched field with cracked earth and a surreal spiraling horizon?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow puddle",
+   "question": "Is there a shallow puddle?",
+   "box": [
+    300,
+    600,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "antelope",
+   "type": "entity",
+   "class": "antelope",
+   "plural": "antelopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dust-coated antelope with damp fur",
+   "question": "Is there a dust-coated antelope with damp fur?",
+   "box": [
+    350,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "plow",
+   "type": "entity",
+   "class": "farming plow",
+   "plural": "farming plows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted farming plow with a bent blade",
+   "question": "Is there a rusted farming plow with a bent blade?",
+   "box": [
+    100,
+    500,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "hawks",
+   "type": "entity",
+   "class": "hawk",
+   "plural": "hawks",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two hawks with wide wings",
+   "question": "Are there two hawks with wide wings?",
+   "box": [
+    200,
+    50,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "silver vine",
+   "plural": "silver vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin silver vine with tendrils",
+   "question": "Is there a thin silver vine with tendrils?",
+   "box": [
+    150,
+    700,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "mirror_shards",
+   "type": "entity",
+   "class": "mirror shard",
+   "plural": "mirror shards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shattered pieces of a broken mirror embedded in the earth",
+   "question": "Are there shattered pieces of a broken mirror embedded in the earth?",
+   "box": [
+    850,
+    850,
+    1000,
+    1000
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single translucent moth",
+   "question": "Is there a single translucent moth?",
+   "box": [
+    250,
+    550,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "puddle_on_earth",
+   "type": "relation",
+   "of": [
+    "puddle",
+    "plow"
+   ],
+   "desc": "the puddle is on the cracked earth",
+   "question": "Is the puddle on the cracked earth?"
+  },
+  {
+   "id": "antelope_bending",
+   "type": "state",
+   "of": "antelope",
+   "desc": "the antelope is bending low",
+   "question": "Is the antelope bending low?"
+  },
+  {
+   "id": "antelope_drinking",
+   "type": "action",
+   "of": [
+    "antelope",
+    "puddle"
+   ],
+   "desc": "the antelope drinks from the puddle",
+   "question": "Is the antelope drinking from the puddle?"
+  },
+  {
+   "id": "breath_fog",
+   "type": "attribute",
+   "of": "antelope",
+   "desc": "fog from the antelope's breath visible in the air",
+   "question": "Is fog from the antelope's breath visible in the air?"
+  },
+  {
+   "id": "plow_angle",
+   "type": "state",
+   "of": "plow",
+   "desc": "the plow lies at a strange angle",
+   "question": "Does the plow lie at a strange angle?"
+  },
+  {
+   "id": "hawks_circling",
+   "type": "state",
+   "of": "hawks",
+   "desc": "the hawks circle in overlapping arcs",
+   "question": "Do the hawks circle in overlapping arcs?"
+  },
+  {
+   "id": "vine_touching_antelope",
+   "type": "relation",
+   "of": [
+    "vine",
+    "antelope"
+   ],
+   "desc": "the vine's tendrils brush the tips of the antelope's ears",
+   "question": "Do the vine's tendrils brush the tips of the antelope's ears?"
+  },
+  {
+   "id": "vine_touching_plow",
+   "type": "relation",
+   "of": [
+    "vine",
+    "plow"
+   ],
+   "desc": "the vine's tips brush the plow’s blade",
+   "question": "Do the vine's tips brush the plow’s blade?"
+  },
+  {
+   "id": "puddle_reflections",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "faint reflections in the puddle showing glass towers, fire, and birds",
+   "question": "Are there faint reflections in the puddle showing glass towers, fire, and birds?"
+  },
+  {
+   "id": "mirror_reflections",
+   "type": "attribute",
+   "of": "mirror_shards",
+   "desc": "the mirror shards reflect different times or places, such as lush fields or sand",
+   "question": "Do the mirror shards reflect different times or places, such as lush fields or sand?"
+  },
+  {
+   "id": "moth_hovering",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth hovers between the plow and the puddle",
+   "question": "Is the moth hovering between the plow and the puddle?"
+  },
+  {
+   "id": "moth_trail",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "a faint trail of light traces the moth's path",
+   "question": "Is there a faint trail of light tracing the moth's path?"
+  },
+  {
+   "id": "antelope_ears_twitch",
+   "type": "state",
+   "of": "antelope",
+   "desc": "the antelope's ears twitch",
+   "question": "Are the antelope's ears twitching?"
+  },
+  {
+   "id": "hawk_shadows",
+   "type": "relation",
+   "of": [
+    "hawks",
+    "plow"
+   ],
+   "desc": "shadows of the hawks drift over the plow",
+   "question": "Do shadows of the hawks drift over the plow?"
+  },
+  {
+   "id": "hawk_shadows_antelope",
+   "type": "relation",
+   "of": [
+    "hawks",
+    "antelope"
+   ],
+   "desc": "the shadows of the hawks drift over the antelope",
+   "question": "Do the shadows of the hawks drift over the dust-coated antelope?"
+  },
+  {
+   "id": "dust_motes",
+   "type": "entity",
+   "class": "dust mote",
+   "plural": "dust motes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "suspended dust motes catching sunlight",
+   "question": "Are there suspended dust motes catching sunlight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "plow_on_earth",
+   "type": "state",
+   "of": "plow",
+   "desc": "the rusted farming plow is half-buried in the cracked earth",
+   "question": "Is the rusted farming plow half-buried in the cracked earth?"
+  },
+  {
+   "id": "mirror_shards_on_earth",
+   "type": "state",
+   "of": "mirror_shards",
+   "desc": "the shattered mirror pieces are embedded in the earth",
+   "question": "Are the shattered mirror pieces embedded in the earth?"
+  },
+  {
+   "id": "moth_between_plow_puddle",
+   "type": "relation",
+   "of": [
+    "moth",
+    "plow",
+    "puddle"
+   ],
+   "desc": "the moth hovers between the plow and the puddle",
+   "question": "Is the moth hovering between the plow and the puddle?"
+  },
+  {
+   "id": "mirror_in_corner",
+   "type": "state",
+   "of": "mirror_shards",
+   "desc": "the broken mirror lies in the far corner of the scene",
+   "question": "Is the broken mirror in the far corner of the scene?"
+  },
+  {
+   "id": "plow_handles_warped",
+   "type": "attribute",
+   "of": "plow",
+   "desc": "the wooden handles of the plow are warped",
+   "question": "Are the wooden handles of the plow warped?"
+  },
+  {
+   "id": "moth_patterns",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth's wings have shifting patterns",
+   "question": "Do the moth's wings have shifting patterns?"
+  },
+  {
+   "id": "antelope_head_tilt",
+   "type": "state",
+   "of": "antelope",
+   "desc": "the antelope is tilting its head",
+   "question": "Is the antelope tilting its head?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "puddle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plow",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mirror_shards",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0397",
+ "prompt": "In the still hush of a morning suspended between dream and drought, a dust-coated antelope bends low to drink from a shallow puddle, its breath fogging the air like a living cloud, the last vestiges of a vanished storm trapped in the cracks of a parched field. The fur along its back glistens with a fine sheen of dampness, catching the weak gold of the sun as it breaks through the haze, casting fractured light across the cracked earth. A rusted farming plow, its blade bent and half-buried, lies at a strange angle, as if it had been halted mid-motion by an unseen force, its wooden handles warped by time and heat, yet still whispering of the furrows it once cut through fertile soil. Overhead, two hawks circle in lazy, overlapping arcs, their wide wings slicing the sky in slow spirals, their shadows drifting like ghosts over the plow and the drinking antelope, momentarily merging before diverging again, as if choreographed by some invisible hand. In the distance, the horizon curves unnaturally, bending back in on itself like a painted illusion, where fields and sky meet not in a line but in a slow spiral, creating a dizzying illusion of infinite rolling plains and impossible depths. The air is thick with suspended dust motes, each one catching the sunlight in tiny halos, while a thin, silver vine creeps from the base of the plow, its tendrils winding through the air as if drawn toward the antelope, brushing the tips of its ears before curling back in a spiral of its own. Beneath the puddle, faint reflections shimmer with images that do not match the world above—a city of glass towers, a river of fire, a flock of birds that never flew. The antelope pauses, tilting its head, as if it, too, sees the reflections and hesitates between the real and the possible. In the far corner of the scene, a mirror lies broken, its shattered pieces embedded in the earth like glinting teeth, each fragment reflecting a different time or place—some show the field as it once was, lush and green, others reveal it as it will be, swallowed by sand. A wind rises, faint but insistent, stirring the dust and sending the vines trembling, their tips brushing the plow’s blade and causing it to vibrate with a low, resonant hum that ripples through the ground like a heartbeat. The antelope’s ears twitch, its muscles tensing, as the hum syncs with the distant circling of the hawks, the air itself seeming to pulse in rhythm. Between the plow and the puddle, a single, translucent moth hovers, its wings painted with shifting patterns that flicker between images of the hawks, the antelope, and the vine, each beat of its wings dissolving one into the next. The moth spirals slowly downward, its path traced by a faint trail of light that seems to fuse the separate elements into a single flowing thread. The scene is not frozen but alive with subtle transformations, each object connected by threads of light, shadow, and sound, a fragile, interwoven tapestry of past, present, and potential, where every movement hints at a larger, unfolding story.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node plow: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

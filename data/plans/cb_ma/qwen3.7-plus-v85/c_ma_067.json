@@ -1,0 +1,165 @@
+{
+ "style": "photorealistic, sleek, softly lit studio photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a softly lit studio interior",
+   "question": "Is the background a softly lit studio interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished wooden table",
+   "question": "Is there a polished wooden table?",
+   "box": [
+    0,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "robot_cat",
+   "type": "entity",
+   "class": "robotic cat",
+   "plural": "robotic cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek silver robotic cat",
+   "question": "Is there a sleek silver robotic cat?",
+   "box": [
+    300,
+    200,
+    724,
+    600
+   ]
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "robot_cat",
+    "table"
+   ],
+   "desc": "the robotic cat is perched on the table",
+   "question": "Is the robotic cat perched on the table?"
+  },
+  {
+   "id": "tail_curled",
+   "type": "state",
+   "of": "robot_cat",
+   "desc": "segmented tail curls upright",
+   "question": "Does the robotic cat have a segmented tail that curls upright?"
+  },
+  {
+   "id": "eyes_green",
+   "type": "attribute",
+   "of": "robot_cat",
+   "desc": "emerald-green LED eyes",
+   "question": "Does the robotic cat have emerald-green LED eyes?"
+  },
+  {
+   "id": "eyes_shining",
+   "type": "state",
+   "of": "robot_cat",
+   "desc": "the emerald-green LED eyes shine steadily",
+   "question": "Are the emerald-green LED eyes shining steadily?"
+  },
+  {
+   "id": "paw_lights",
+   "type": "attribute",
+   "of": "robot_cat",
+   "desc": "pale-blue lights beneath each paw",
+   "question": "Are there pale-blue lights beneath each paw of the robotic cat?"
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "robot_cat",
+   "desc": "a faint plume of white steam escaping a central vent on the back",
+   "question": "Is a faint plume of white steam escaping from a central vent on the robotic cat's back?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the robotic cat",
+   "question": "Is there any rust on the robotic cat?"
+  },
+  {
+   "id": "no_fur",
+   "type": "absent",
+   "desc": "fur on the robotic cat",
+   "question": "Is there any fur on the robotic cat?"
+  },
+  {
+   "id": "paw_reflection",
+   "type": "relation",
+   "of": [
+    "robot_cat",
+    "table"
+   ],
+   "desc": "the pale-blue lights beneath the robotic cat's paws reflect on the table surface",
+   "question": "Do the pale-blue lights beneath the robotic cat's paws reflect on the table surface?"
+  },
+  {
+   "id": "cat_panels",
+   "type": "attribute",
+   "of": "robot_cat",
+   "desc": "smooth metal panels etched with luminous blue circuit patterns",
+   "question": "Does the robotic cat have smooth metal panels etched with luminous blue circuit patterns?"
+  },
+  {
+   "id": "tail_sections",
+   "type": "attribute",
+   "of": "robot_cat",
+   "desc": "tail has three visible sections",
+   "question": "Does the robotic cat's tail have three visible sections?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "robot_cat",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_067",
+ "prompt": "Design a sleek silver robotic cat perched on a polished wooden table in a softly lit studio. Smooth metal panels are etched with luminous blue circuit patterns, and its segmented tail curls upright with three visible sections. Emerald-green LED eyes shine steadily, while pale-blue lights glow beneath each paw, reflecting on the table surface. A faint plume of white steam escapes a central vent on the cat’s back. The machine shows no rust and features no fur anywhere.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node robot_cat: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

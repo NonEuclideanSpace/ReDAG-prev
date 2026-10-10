@@ -1,0 +1,323 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large gray crane",
+   "question": "Is there a large gray crane?",
+   "box": [
+    200,
+    0,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow hard hat",
+   "question": "Is there a man in a yellow hard hat?",
+   "box": [
+    400,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "pipes",
+   "type": "entity",
+   "class": "metal pipe",
+   "plural": "metal pipes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of rusted metal pipes",
+   "question": "Is there a stack of rusted metal pipes?",
+   "box": [
+    600,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    650,
+    450,
+    750,
+    550
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a striped shirt",
+   "question": "Is there a boy in a striped shirt?",
+   "box": [
+    800,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    850,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "woman_holding",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in blue overalls holds a clipboard",
+   "question": "Is the woman in blue overalls holding a clipboard?"
+  },
+  {
+   "id": "crane_hook",
+   "type": "state",
+   "of": "crane",
+   "desc": "the large gray crane has its hook lowered",
+   "question": "Is the hook of the large gray crane lowered?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the yellow hard hat is pointing",
+   "question": "Is the man in the yellow hard hat pointing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is sitting",
+   "question": "Is the small black cat sitting?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is looking down",
+   "question": "Is the small black cat looking down?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_eating",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is eating a sandwich",
+   "question": "Is the brown dog eating a sandwich?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in blue overalls is looking at the man in the yellow hard hat",
+   "question": "Is the woman in blue overalls looking at the man in the yellow hard hat?"
+  },
+  {
+   "id": "crane_next_to_woman",
+   "type": "relation",
+   "of": [
+    "crane",
+    "woman"
+   ],
+   "desc": "the large gray crane is next to the woman in blue overalls",
+   "question": "Is the large gray crane next to the woman in blue overalls?"
+  },
+  {
+   "id": "man_beside_pipes",
+   "type": "relation",
+   "of": [
+    "man",
+    "pipes"
+   ],
+   "desc": "the man in the yellow hard hat stands beside the stack of rusted metal pipes",
+   "question": "Is the man in the yellow hard hat standing beside the stack of rusted metal pipes?"
+  },
+  {
+   "id": "cat_on_pipes",
+   "type": "relation",
+   "of": [
+    "cat",
+    "pipes"
+   ],
+   "desc": "the small black cat sits atop the highest pipe",
+   "question": "Is the small black cat sitting atop the highest pipe?"
+  },
+  {
+   "id": "boy_handing",
+   "type": "action",
+   "of": [
+    "boy",
+    "dog"
+   ],
+   "desc": "the boy in a striped shirt hands a sandwich to the brown dog",
+   "question": "Is the boy in a striped shirt handing a sandwich to the brown dog?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue overalls is standing",
+   "question": "Is the woman in blue overalls standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the yellow hard hat is standing",
+   "question": "Is the man in the yellow hard hat standing?"
+  },
+  {
+   "id": "water",
+   "type": "entity",
+   "class": "water",
+   "plural": "waters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "water",
+   "question": "Is there water visible in the scene?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wooden_planks",
+   "type": "entity",
+   "class": "wooden planks",
+   "plural": "wooden planks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wooden planks forming the dock surface",
+   "question": "Are there wooden planks forming the dock surface?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "pipes",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "wooden_planks",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0085",
+ "prompt": "In an anime style scene at a shipyard dock, a woman in blue overalls stands on the left holding a clipboard. Next to her, a large gray crane looms overhead with its hook lowered. In the center, a man in a yellow hard hat points toward the water while standing beside a stack of rusted metal pipes. A small black cat sits atop the highest pipe, looking down at the activity below. On the right, a boy in a striped shirt hands a sandwich to a brown dog sitting patiently on the wooden planks. The woman in blue overalls is looking at the man in the yellow hard hat. The brown dog is eating the sandwich given by the boy. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

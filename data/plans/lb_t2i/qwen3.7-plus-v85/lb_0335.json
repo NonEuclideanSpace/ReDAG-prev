@@ -1,0 +1,615 @@
+{
+ "style": "surreal magical realism, dim honeyed lighting, atmospheric, detailed",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim room with an ancient bookshelf carved with mythological figures and mirrors tilting at impossible angles",
+   "question": "Does the image show a dim room with an ancient bookshelf carved with mythological figures and mirrors tilting at impossible angles?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient bookshelf carved with mythological figures",
+   "question": "Is there an ancient bookshelf carved with mythological figures?",
+   "box": [
+    50,
+    100,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small parrot",
+   "question": "Is there a small parrot?",
+   "box": [
+    200,
+    120,
+    300,
+    220
+   ]
+  },
+  {
+   "id": "sketchbook",
+   "type": "entity",
+   "class": "sketchbook",
+   "plural": "sketchbooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open sketchbook",
+   "question": "Is there an open sketchbook?",
+   "box": [
+    220,
+    180,
+    350,
+    250
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dappled cat",
+   "question": "Is there a dappled cat?",
+   "box": [
+    500,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "armchair",
+   "type": "entity",
+   "class": "wicker armchair",
+   "plural": "wicker armchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker armchair",
+   "question": "Is there a wicker armchair?",
+   "box": [
+    850,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "side_table",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a side table",
+   "question": "Is there a side table?",
+   "box": [
+    750,
+    650,
+    880,
+    850
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-full porcelain teacup",
+   "question": "Is there a half-full porcelain teacup?",
+   "box": [
+    780,
+    660,
+    830,
+    710
+   ]
+  },
+  {
+   "id": "steam_face",
+   "type": "entity",
+   "class": "steam shape",
+   "plural": "steam shapes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "steam rising from the teacup forming a face shape",
+   "question": "Is there steam rising from the teacup forming a face shape?",
+   "box": [
+    780,
+    600,
+    830,
+    660
+   ]
+  },
+  {
+   "id": "pendulum",
+   "type": "entity",
+   "class": "pendulum",
+   "plural": "pendulums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pendulum hanging from the ceiling",
+   "question": "Is there a pendulum hanging from the ceiling?",
+   "box": [
+    450,
+    0,
+    550,
+    400
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "stone pedestal",
+   "plural": "stone pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone pedestal",
+   "question": "Is there a stone pedestal?",
+   "box": [
+    400,
+    700,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "magic_book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a book bound in cracked leather",
+   "question": "Is there a book bound in cracked leather?",
+   "box": [
+    450,
+    720,
+    550,
+    780
+   ]
+  },
+  {
+   "id": "key_shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow shaped like a key",
+   "question": "Is there a shadow shaped like a key?",
+   "box": [
+    300,
+    850,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    0,
+    200,
+    100,
+    500
+   ]
+  },
+  {
+   "id": "parrot_perched",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot is perched",
+   "question": "Is the parrot perched?"
+  },
+  {
+   "id": "parrot_pecking",
+   "type": "action",
+   "of": [
+    "parrot",
+    "sketchbook"
+   ],
+   "desc": "the parrot pecks at the corner of the sketchbook",
+   "question": "Is the parrot pecking at the corner of the sketchbook?"
+  },
+  {
+   "id": "cat_lying",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is lying stretched out",
+   "question": "Is the cat lying stretched out?"
+  },
+  {
+   "id": "cat_paw_flicking",
+   "type": "action",
+   "of": [
+    "cat",
+    "armchair"
+   ],
+   "desc": "the cat's paw flicks the leg of the wicker armchair",
+   "question": "Is the cat's paw flicking the leg of the wicker armchair?"
+  },
+  {
+   "id": "teacup_on_table",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "side_table"
+   ],
+   "desc": "the teacup sits on the side table",
+   "question": "Is the teacup sitting on the side table?"
+  },
+  {
+   "id": "table_beside_chair",
+   "type": "relation",
+   "of": [
+    "side_table",
+    "armchair"
+   ],
+   "desc": "the side table is beside the wicker armchair",
+   "question": "Is the side table beside the wicker armchair?"
+  },
+  {
+   "id": "parrot_on_shelf",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "bookshelf"
+   ],
+   "desc": "the parrot is on the topmost shelf of the bookshelf",
+   "question": "Is the parrot on the topmost shelf of the bookshelf?"
+  },
+  {
+   "id": "cat_near_chair",
+   "type": "relation",
+   "of": [
+    "cat",
+    "armchair"
+   ],
+   "desc": "the cat is near the wicker armchair",
+   "question": "Is the cat near the wicker armchair?"
+  },
+  {
+   "id": "book_on_pedestal",
+   "type": "relation",
+   "of": [
+    "magic_book",
+    "pedestal"
+   ],
+   "desc": "the book lies on the stone pedestal",
+   "question": "Is the book lying on the stone pedestal?"
+  },
+  {
+   "id": "pages_fluttering",
+   "type": "state",
+   "of": "magic_book",
+   "desc": "the pages of the book are fluttering",
+   "question": "Are the pages of the book fluttering?"
+  },
+  {
+   "id": "pendulum_swinging",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the pendulum is swinging",
+   "question": "Is the pendulum swinging?"
+  },
+  {
+   "id": "shadow_on_floor",
+   "type": "state",
+   "of": "key_shadow",
+   "desc": "the key-shaped shadow is on the floor",
+   "question": "Is the key-shaped shadow on the floor?"
+  },
+  {
+   "id": "dust_motes",
+   "type": "entity",
+   "class": "dust motes",
+   "plural": "dust motes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dust motes dancing in the sunlight",
+   "question": "Are there dust motes visible in the sunlight?",
+   "box": [
+    400,
+    100,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "pendulum_ceiling",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the pendulum hangs from the ceiling",
+   "question": "Does the pendulum hang from the ceiling?"
+  },
+  {
+   "id": "pedestal_floor",
+   "type": "state",
+   "of": "pedestal",
+   "desc": "the stone pedestal lies on the floor",
+   "question": "Is the stone pedestal on the floor?"
+  },
+  {
+   "id": "shadow_between",
+   "type": "relation",
+   "of": [
+    "key_shadow",
+    "bookshelf",
+    "pedestal"
+   ],
+   "desc": "the key-shaped shadow is on the floor between the bookshelf and the pedestal",
+   "question": "Is the key-shaped shadow on the floor between the bookshelf and the pedestal?"
+  },
+  {
+   "id": "bookshelf_top_shelf",
+   "type": "attribute",
+   "of": "bookshelf",
+   "desc": "the topmost shelf of the ancient bookshelf",
+   "question": "Is there a topmost shelf on the ancient bookshelf?"
+  },
+  {
+   "id": "parrot_beak_light",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot's beak catches the light",
+   "question": "Does the parrot's beak catch the light?"
+  },
+  {
+   "id": "sketchbook_drawing",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "a half-finished drawing of a winged staircase spiraling into nowhere in the open sketchbook",
+   "question": "Does the open sketchbook contain a half-finished drawing of a winged staircase spiraling into nowhere?"
+  },
+  {
+   "id": "cat_fur_glow",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's dappled fur glows in the morning's glow",
+   "question": "Does the cat's dappled fur glow in the morning's glow?"
+  },
+  {
+   "id": "cat_body_arching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's long body is arching with slow grace",
+   "question": "Is the cat's long body arching with slow grace?"
+  },
+  {
+   "id": "teacup_steam_ribbon",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "a thin ribbon of steam curling upward from the teacup",
+   "question": "Is a thin ribbon of steam curling upward from the teacup?"
+  },
+  {
+   "id": "steam_spiral_face",
+   "type": "state",
+   "of": "steam_face",
+   "desc": "the steam spirals upward forming the vague shape of a floating face with lips parted in silent laughter",
+   "question": "Does the steam spiral upward forming the vague shape of a floating face with lips parted in silent laughter?"
+  },
+  {
+   "id": "pendulum_vines_beads",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the pendulum is made of woven vines",
+   "question": "Is the pendulum made of woven vines?"
+  },
+  {
+   "id": "book_pages_scenes",
+   "type": "attribute",
+   "of": "magic_book",
+   "desc": "pages revealing scenes of a forest at twilight, a desert of glass, and a sky split by lightning that pulse and flicker",
+   "question": "Do the pages of the book reveal scenes of a forest at twilight, a desert of glass, and a sky split by lightning that pulse and flicker?"
+  },
+  {
+   "id": "key_shadow_floats",
+   "type": "state",
+   "of": "key_shadow",
+   "desc": "the key-shaped shadow floats and shimmers",
+   "question": "Does the key-shaped shadow float and shimmer?"
+  },
+  {
+   "id": "key_shadow_merges_cat",
+   "type": "action",
+   "of": [
+    "key_shadow",
+    "cat"
+   ],
+   "desc": "the key-shaped shadow merges with the cat's shadow",
+   "question": "Does the key-shaped shadow merge with the cat's shadow?"
+  },
+  {
+   "id": "thread_teacup_sketchbook",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "sketchbook"
+   ],
+   "desc": "an invisible thread connects the teacup to the sketchbook",
+   "question": "Is there an invisible thread connecting the teacup to the sketchbook?"
+  },
+  {
+   "id": "thread_sketchbook_parrot",
+   "type": "relation",
+   "of": [
+    "sketchbook",
+    "parrot"
+   ],
+   "desc": "an invisible thread connects the sketchbook to the parrot",
+   "question": "Is there an invisible thread connecting the sketchbook to the parrot?"
+  },
+  {
+   "id": "thread_parrot_cat_tail",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "cat"
+   ],
+   "desc": "an invisible thread connects the parrot to the cat's tail",
+   "question": "Is there an invisible thread connecting the parrot to the cat's tail?"
+  },
+  {
+   "id": "parrot_trill",
+   "type": "state",
+   "of": "parrot",
+   "desc": "the parrot lets out a trill",
+   "question": "Is the parrot letting out a trill?"
+  },
+  {
+   "id": "mirrors_behind_parrot",
+   "type": "state",
+   "of": "parrot",
+   "desc": "mirrors are behind the parrot",
+   "question": "Are there mirrors behind the parrot?"
+  },
+  {
+   "id": "pedestal_beneath_pendulum",
+   "type": "relation",
+   "of": [
+    "pendulum",
+    "pedestal"
+   ],
+   "desc": "the stone pedestal is beneath the pendulum",
+   "question": "Is the stone pedestal beneath the pendulum?"
+  },
+  {
+   "id": "parrot_plumage",
+   "type": "attribute",
+   "of": "parrot",
+   "desc": "the parrot has emerald and cobalt plumage",
+   "question": "Does the parrot have emerald and cobalt plumage?"
+  },
+  {
+   "id": "sketchbook_drawing_2",
+   "type": "attribute",
+   "of": "sketchbook",
+   "desc": "the sketchbook contains a drawing of a winged staircase",
+   "question": "Does the sketchbook contain a drawing of a winged staircase?"
+  },
+  {
+   "id": "teacup_dented",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup body is dented",
+   "question": "Is the teacup body dented?"
+  },
+  {
+   "id": "teacup_chipped",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup handle is chipped",
+   "question": "Is the teacup handle chipped?"
+  },
+  {
+   "id": "face_lips_parted",
+   "type": "attribute",
+   "of": "steam_face",
+   "desc": "the face shape has parted lips",
+   "question": "Does the face shape in the steam have parted lips?"
+  },
+  {
+   "id": "book_pages_scenes_2",
+   "type": "attribute",
+   "of": "magic_book",
+   "desc": "the book pages show scenes of a forest, desert, and lightning sky",
+   "question": "Do the book pages show scenes of a forest, desert, and lightning sky?"
+  },
+  {
+   "id": "sunlight_slanting",
+   "type": "state",
+   "of": "window",
+   "desc": "sunlight slants through the window",
+   "question": "Does sunlight slant through the window?"
+  },
+  {
+   "id": "pendulum_silver_beads",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the pendulum has silver beads",
+   "question": "Does the pendulum have silver beads?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bookshelf",
+   "to": "parrot",
+   "kind": "support"
+  },
+  {
+   "from": "side_table",
+   "to": "teacup",
+   "kind": "support"
+  },
+  {
+   "from": "pedestal",
+   "to": "magic_book",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0335",
+ "prompt": "In the heart of a dim, honeyed-lit room, time seems to breathe differently, thick with the scent of aged paper and bergamot tea. A small parrot, its plumage a patchwork of emerald and cobalt, perches precariously on the topmost shelf of an ancient, creaking bookshelf carved with mythological figures. It pecks gently at the corner of an open sketchbook, its beak catching the light as it nibbles at a half-finished drawing of a winged staircase spiraling into nowhere. Sunlight slants through the only window in the room, its rays catching dust motes that dance like fireflies above a stretched-out cat whose dappled fur glows in the morning’s glow. The cat lies half in shadow, half in light, its long body arching with a slow, dreamlike grace as one lazy paw flicks at the leg of a wicker armchair nearby, which sways slightly, as if stirred by the cat’s will. On a side table beside the chair sits a half-full teacup, its porcelain dented with age and its handle chipped, from which a thin ribbon of steam curls upward, weaving itself into the golden haze of the sunbeam. But this steam does not simply vanish—it spirals upward, forming the vague shape of a floating face, lips parted in silent laughter, as if the cup itself is whispering secrets to the air. Behind the parrot, a series of mirrors tilt at impossible angles, their reflections multiplying the room into an endless hall of shifting versions, each one subtly different: in one, the cat stands on two legs, in another, the sketchbook becomes a living sketchpad, drawing itself in loops and spirals. A pendulum swings from the ceiling, not of clockwork, but of woven vines and silver beads, its rhythm echoing the ticking of an invisible clock. Beneath the pendulum lies a stone pedestal supporting a book bound in cracked leather, its pages fluttering as if winded by the parrot’s movement, though no wind enters the room. The pages turn slowly, each revealing not text, but a scene: a forest at twilight, a desert of glass, a sky split by lightning—scenes that pulse and flicker like a heartbeat. On the floor, between the bookshelf and the pedestal, lies a patch of shadow that refuses to conform to the sun’s logic. It is shaped like a key, but it floats and shimmers, occasionally merging with the cat’s shadow before slipping back into itself. A single thread, invisible to the eye but visible in the way the shadows move, seems to connect the teacup to the sketchbook, the sketchbook to the parrot, and the parrot to the cat’s tail, forming a silent web of unseen cause and effect. The room is not just filled with objects—it is alive with them, each influencing the next in a slow, deliberate dance that feels both accidental and deliberate, as if the space itself were an actor in a story it has written. The cat stretches again, the chair creaks in response, the pendulum swings just a little faster, and the parrot lets out a trill that echoes oddly in the stillness, as though it has said something important, something the shadows remember but the light cannot hear.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node steam_face: entity question is long (18 words); should only ask presence + identifying look",
+   "node magic_book: entity question is long (19 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 18,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 62,
+   "n_uncovered": 3,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

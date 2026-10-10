@@ -1,0 +1,169 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "cobblestone ground and sky",
+   "question": "Does the image show cobblestone ground and a sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue shawl",
+   "question": "Is there a woman wearing a blue shawl?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey hat",
+   "question": "Is there a man wearing a grey hat?",
+   "box": [
+    670,
+    150,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a striped cat",
+   "question": "Is there a striped cat?",
+   "box": [
+    380,
+    500,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    550,
+    600,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue shawl holds a woven basket",
+   "question": "Is the woman in the blue shawl holding a woven basket?"
+  },
+  {
+   "id": "man_chin",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey hat rests his chin on his hand",
+   "question": "Is the man in the grey hat resting his chin on his hand?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue shawl looks at the striped cat",
+   "question": "Is the woman in the blue shawl looking at the striped cat?"
+  },
+  {
+   "id": "man_next_to_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the grey hat sits next to the wooden crate",
+   "question": "Is the man in the grey hat sitting next to the wooden crate?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue shawl stands",
+   "question": "Is the woman in the blue shawl standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey hat sits",
+   "question": "Is the man in the grey hat sitting?"
+  },
+  {
+   "id": "cat_walking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat walks",
+   "question": "Is the striped cat walking?"
+  },
+  {
+   "id": "cat_between",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman",
+    "man"
+   ],
+   "desc": "the striped cat is between the woman in the blue shawl and the man in the grey hat",
+   "question": "Is the striped cat positioned between the woman in the blue shawl and the man in the grey hat?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0110",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue shawl stands on the left holding a woven basket. A man in a grey hat sits on the right resting his chin on his hand. Between them, a striped cat walks across the cobblestones. The woman looks at the cat. The man sits next to a wooden crate. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

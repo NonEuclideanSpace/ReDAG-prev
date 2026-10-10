@@ -1,0 +1,343 @@
+{
+ "style": "flat vector illustration with clean lines and solid colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station garage with a large open bay door",
+   "question": "Does the image show the interior of a fire station garage with a large open bay door?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in a yellow helmet",
+   "question": "Is there a tall firefighter in a yellow helmet?",
+   "box": [
+    50,
+    150,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny red fire truck",
+   "question": "Is there a shiny red fire truck?",
+   "box": [
+    300,
+    300,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    450,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic in blue overalls?",
+   "box": [
+    720,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    850,
+    650,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green jacket",
+   "question": "Is there a woman in a green jacket?",
+   "box": [
+    750,
+    200,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "firefighter_serious",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter has a serious expression",
+   "question": "Does the firefighter have a serious expression?"
+  },
+  {
+   "id": "firefighter_holding",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a clipboard",
+   "question": "Is the firefighter holding a clipboard?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is grooming its paw",
+   "question": "Is the cat grooming its paw?"
+  },
+  {
+   "id": "mechanic_kneeling",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is kneeling",
+   "question": "Is the mechanic kneeling?"
+  },
+  {
+   "id": "mechanic_focused",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic has a focused gaze",
+   "question": "Does the mechanic have a focused gaze?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman points toward the ceiling",
+   "question": "Is the woman pointing toward the ceiling?"
+  },
+  {
+   "id": "firefighter_looking",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "woman"
+   ],
+   "desc": "the firefighter looks at the woman",
+   "question": "Is the firefighter looking at the woman?"
+  },
+  {
+   "id": "mechanic_petting",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "dog"
+   ],
+   "desc": "the mechanic reaches out to pat the dog",
+   "question": "Is the mechanic reaching out to pat the dog?"
+  },
+  {
+   "id": "cat_on_bumper",
+   "type": "relation",
+   "of": [
+    "cat",
+    "truck"
+   ],
+   "desc": "the cat is perched on the front bumper of the truck",
+   "question": "Is the cat perched on the front bumper of the truck?"
+  },
+  {
+   "id": "mechanic_next_to_dog",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "dog"
+   ],
+   "desc": "the mechanic is next to the dog",
+   "question": "Is the mechanic next to the dog?"
+  },
+  {
+   "id": "mechanic_inspecting_tire",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic inspects the rear tire of the truck",
+   "question": "Is the mechanic inspecting the rear tire of the truck?"
+  },
+  {
+   "id": "no_smoke_fire",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in a yellow helmet stands",
+   "question": "Is the firefighter in a yellow helmet standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a green jacket stands",
+   "question": "Is the woman in a green jacket standing?"
+  },
+  {
+   "id": "mechanic_right_of_truck",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "truck"
+   ],
+   "desc": "the mechanic in blue overalls is to the right of the shiny red fire truck",
+   "question": "Is the mechanic in blue overalls to the right of the shiny red fire truck?"
+  },
+  {
+   "id": "dog_next_to_mechanic",
+   "type": "relation",
+   "of": [
+    "dog",
+    "mechanic"
+   ],
+   "desc": "the golden retriever is next to the mechanic in blue overalls",
+   "question": "Is the golden retriever next to the mechanic in blue overalls?"
+  },
+  {
+   "id": "woman_behind_group",
+   "type": "relation",
+   "of": [
+    "woman",
+    "mechanic"
+   ],
+   "desc": "the woman in a green jacket is behind the mechanic and the dog",
+   "question": "Is the woman in a green jacket behind the mechanic and the dog?"
+  },
+  {
+   "id": "no_chaos",
+   "type": "absent",
+   "desc": "chaos",
+   "question": "Is there any chaos depicted in the image?"
+  },
+  {
+   "id": "hose_reel",
+   "type": "entity",
+   "class": "hose reel",
+   "plural": "hose reels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging hose reel",
+   "question": "Is there a hanging hose reel?",
+   "box": [
+    600,
+    50,
+    800,
+    250
+   ]
+  },
+  {
+   "id": "truck_bumper",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the fire truck has a chrome bumper",
+   "question": "Does the fire truck have a chrome bumper?"
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever has its tail wrapped around its paws",
+   "question": "Is the golden retriever's tail wrapped around its paws?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "no_emergency",
+   "type": "absent",
+   "desc": "emergency",
+   "question": "Is there any emergency depicted in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0014",
+ "prompt": "This flat vector illustration depicts the interior of a fire station garage with clean lines and solid colors. On the left stands a tall firefighter in a yellow helmet, holding a clipboard with a serious expression. In the center, a shiny red fire truck is parked, its chrome bumper gleaming under the indoor lights. Perched on the front bumper of the truck is a small orange cat, grooming its paw with casual indifference. To the right of the truck, a mechanic in blue overalls kneels on the floor, inspecting the rear tire with a focused gaze. Standing next to the mechanic is a golden retriever, sitting patiently with its tail wrapped around its paws. Behind the group, near the large open bay door, a woman in a green jacket points toward the ceiling, directing attention to a hanging hose reel. The firefighter in the yellow helmet looks at the woman in the green jacket, acknowledging her signal. The mechanic in blue overalls reaches out to pat the golden retriever, offering a brief moment of affection amidst the work. The small orange cat remains aloof, ignoring the humans entirely. The scene is orderly and calm, with no smoke or fire visible anywhere in the frame. There is no chaos or emergency depicted, only routine maintenance and preparation. The spatial arrangement places the firefighter on the far left, the truck and cat in the middle, and the mechanic, dog, and woman on the right side of the composition. Each character is distinct by their clothing or species, ensuring clear visual separation without the need for labels or text.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

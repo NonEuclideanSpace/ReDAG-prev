@@ -1,0 +1,154 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene background",
+   "question": "Does the image show an indoor scene background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    380,
+    150,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    700,
+    500,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue hat is sitting",
+   "question": "Is the woman in a blue hat sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a grey suit is standing",
+   "question": "Is the man in a grey suit standing?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue hat is looking at the man in a grey suit",
+   "question": "Is the woman in a blue hat looking at the man in a grey suit?"
+  },
+  {
+   "id": "man_holding_teapot",
+   "type": "action",
+   "of": [
+    "man",
+    "teapot"
+   ],
+   "desc": "the man in a grey suit is holding the silver teapot",
+   "question": "Is the man in a grey suit holding the silver teapot?"
+  },
+  {
+   "id": "teapot_next_to_woman",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "woman"
+   ],
+   "desc": "the silver teapot is next to the woman in a blue hat",
+   "question": "Is the silver teapot next to the woman in a blue hat?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "woman_hat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue hat",
+   "question": "Does the woman wear a blue hat?"
+  },
+  {
+   "id": "man_suit",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a grey suit",
+   "question": "Does the man wear a grey suit?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0011",
+ "prompt": "In this oil painting, a woman in a blue hat sits on the left. A man in a grey suit stands in the center. A silver teapot rests on the right. The woman in a blue hat is looking at the man in a grey suit. The man in a grey suit is holding the silver teapot. The silver teapot is next to the woman in a blue hat. There is no window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

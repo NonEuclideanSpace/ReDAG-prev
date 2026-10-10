@@ -1,0 +1,147 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background without a crowd",
+   "question": "Is the background free of any crowd?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a blue dress",
+   "question": "Is there a girl in a blue dress?",
+   "box": [
+    50,
+    150,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in green glasses",
+   "question": "Is there a boy in green glasses?",
+   "box": [
+    574,
+    150,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "poster_board",
+   "type": "entity",
+   "class": "poster board",
+   "plural": "poster boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a poster board",
+   "question": "Is there a poster board?",
+   "box": [
+    300,
+    200,
+    724,
+    800
+   ]
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in a blue dress is standing",
+   "question": "Is the girl in a blue dress standing?"
+  },
+  {
+   "id": "girl_holding",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in a blue dress holds the poster board upright",
+   "question": "Is the girl in a blue dress holding the poster board upright?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "poster_board"
+   ],
+   "desc": "the boy in green glasses points at the center of the poster board",
+   "question": "Is the boy in green glasses pointing at the center of the poster board?"
+  },
+  {
+   "id": "looking_together",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl and the boy look at the diagram together",
+   "question": "Are the girl and the boy looking at the diagram together?"
+  },
+  {
+   "id": "girl_beside_boy",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl is beside the boy",
+   "question": "Is the girl beside the boy?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "a crowd in the background",
+   "question": "Is there a crowd in the background?"
+  },
+  {
+   "id": "poster_diagram",
+   "type": "attribute",
+   "of": "poster_board",
+   "desc": "the poster board has a diagram",
+   "question": "Does the poster board have a diagram?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0076",
+ "prompt": "In a watercolor illustration, a girl in a blue dress stands on the left beside a boy in green glasses positioned on the right. The girl holds a poster board upright while the boy points at its center. They are looking at the diagram together. There is no crowd in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

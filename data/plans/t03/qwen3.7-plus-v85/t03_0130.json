@@ -1,0 +1,173 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    700,
+    500,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with blue hair",
+   "question": "Is there a girl with blue hair?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in glasses",
+   "question": "Is there a boy in glasses?",
+   "box": [
+    380,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "calico cat",
+   "plural": "calico cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a calico cat",
+   "question": "Is there a calico cat?",
+   "box": [
+    720,
+    450,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with blue hair holds a thick book",
+   "question": "Is the girl with blue hair holding a thick book?"
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with blue hair is sitting",
+   "question": "Is the girl with blue hair sitting?"
+  },
+  {
+   "id": "boy_leaning",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in glasses leans forward",
+   "question": "Is the boy in glasses leaning forward?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in glasses points at the page the girl with blue hair reads",
+   "question": "Is the boy in glasses pointing at the page the girl with blue hair reads?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat sleeps peacefully",
+   "question": "Is the calico cat sleeping peacefully?"
+  },
+  {
+   "id": "cat_on_chair",
+   "type": "relation",
+   "of": [
+    "cat",
+    "chair"
+   ],
+   "desc": "the calico cat is on the wooden chair",
+   "question": "Is the calico cat on the wooden chair?"
+  },
+  {
+   "id": "no_computer",
+   "type": "absent",
+   "desc": "a computer",
+   "question": "Is there a computer visible in the image?"
+  },
+  {
+   "id": "book_open",
+   "type": "state",
+   "of": "girl",
+   "desc": "the book held by the girl with blue hair is open",
+   "question": "Is the book held by the girl with blue hair open?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0130",
+ "prompt": "In an anime style library reading room, a girl with blue hair sits on the left, holding a thick book open. In the center, a boy in glasses leans forward, pointing at the page she reads. On the right, a calico cat sleeps peacefully on a wooden chair. The boy in glasses interacts with the girl with blue hair by pointing at her book. There is no computer visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

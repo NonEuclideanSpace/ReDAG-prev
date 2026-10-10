@@ -1,0 +1,276 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush botanical greenhouse interior with ceiling structure",
+   "question": "Does the image show a lush botanical greenhouse interior with a visible ceiling structure?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green apron",
+   "question": "Is there a woman wearing a green apron?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue shirt",
+   "question": "Is there a man wearing a blue shirt?",
+   "box": [
+    350,
+    400,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern",
+   "question": "Is there a large fern?",
+   "box": [
+    450,
+    300,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a beige hat",
+   "question": "Is there an elderly person wearing a beige hat?",
+   "box": [
+    750,
+    350,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    720,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tabby cat",
+   "question": "Is there a small tabby cat?",
+   "box": [
+    800,
+    820,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "terrarium",
+   "type": "entity",
+   "class": "glass terrarium",
+   "plural": "glass terrariums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging glass terrarium",
+   "question": "Is there a hanging glass terrarium?",
+   "box": [
+    400,
+    50,
+    600,
+    250
+   ]
+  },
+  {
+   "id": "woman_watering_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the green apron holds a silver watering can",
+   "question": "Is the woman in the green apron holding a silver watering can?"
+  },
+  {
+   "id": "man_kneeling",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue shirt is kneeling",
+   "question": "Is the man in the blue shirt kneeling?"
+  },
+  {
+   "id": "man_examining",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the blue shirt examines the fronds of the large fern",
+   "question": "Is the man in the blue shirt examining the fronds of the large fern?"
+  },
+  {
+   "id": "elderly_sitting",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person in the beige hat is sitting",
+   "question": "Is the elderly person in the beige hat sitting?"
+  },
+  {
+   "id": "elderly_watching",
+   "type": "action",
+   "of": [
+    "elderly_person",
+    "man"
+   ],
+   "desc": "the elderly person in the beige hat watches the scene involving the man and the fern",
+   "question": "Is the elderly person in the beige hat watching the man and the fern?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small tabby cat is grooming its paw",
+   "question": "Is the small tabby cat grooming its paw?"
+  },
+  {
+   "id": "terrarium_swinging",
+   "type": "state",
+   "of": "terrarium",
+   "desc": "the hanging glass terrarium is swinging",
+   "question": "Is the hanging glass terrarium swinging?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the green apron hands a trowel to the man in the blue shirt",
+   "question": "Is the woman in the green apron handing a trowel to the man in the blue shirt?"
+  },
+  {
+   "id": "elderly_looking_cat",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "cat"
+   ],
+   "desc": "the elderly person in the beige hat looks at the small tabby cat",
+   "question": "Is the elderly person in the beige hat looking at the small tabby cat?"
+  },
+  {
+   "id": "man_beside_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the blue shirt is beside the large fern",
+   "question": "Is the man in the blue shirt beside the large fern?"
+  },
+  {
+   "id": "elderly_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "bench"
+   ],
+   "desc": "the elderly person in the beige hat sits on the wooden bench",
+   "question": "Is the elderly person in the beige hat sitting on the wooden bench?"
+  },
+  {
+   "id": "cat_next_to_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the small tabby cat is next to the wooden bench",
+   "question": "Is the small tabby cat next to the wooden bench?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "digital technology",
+   "question": "Is there any digital technology visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the green apron is standing",
+   "question": "Is the woman in the green apron standing?"
+  },
+  {
+   "id": "cat_on_floor",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small tabby cat rests on the floor",
+   "question": "Is the small tabby cat resting on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_person",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0081",
+ "prompt": "A cinematic film still captures a lush botanical greenhouse interior. On the left, a woman in a green apron stands holding a silver watering can. In the center, a man in a blue shirt kneels beside a large fern, examining its fronds closely. To the right, an elderly person in a beige hat sits on a wooden bench, watching the scene. Next to the bench, a small tabby cat rests on the floor, grooming its paw. Above them, a hanging glass terrarium swings gently from the ceiling structure. The woman in the green apron is handing a trowel to the man in the blue shirt. The elderly person in the beige hat is looking at the small tabby cat. There is no digital technology visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "style": "photorealistic photo, high resolution, soft cool lighting, wet surfaces glistening",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fishing harbor at dawn with mist over wet wooden docks, calm water, and a sky with a gradient of purple and pink",
+   "question": "Does the image show a fishing harbor at dawn with mist, wet wooden docks, calm water, and a purple-pink sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fisherman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fisherman in yellow rubber boots",
+   "question": "Is there a man wearing yellow rubber boots?",
+   "box": [
+    300,
+    500,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "deckhand",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a younger man in a blue jacket",
+   "question": "Is there a younger man wearing a blue jacket?",
+   "box": [
+    200,
+    520,
+    350,
+    880
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "fishing net",
+   "plural": "fishing nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy fishing net filled with silvery fish",
+   "question": "Is there a heavy fishing net filled with silvery fish?",
+   "box": [
+    350,
+    600,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open crate of ice",
+   "question": "Is there an open crate containing ice?",
+   "box": [
+    50,
+    650,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker",
+   "question": "Is there a worker?",
+   "box": [
+    100,
+    550,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "cod",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 2,
+   "count_exact": false,
+   "desc": "freshly caught cod",
+   "question": "Are there freshly caught cod visible?",
+   "box": [
+    150,
+    750,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seagull",
+   "question": "Is there a seagull?",
+   "box": [
+    320,
+    450,
+    380,
+    520
+   ]
+  },
+  {
+   "id": "bollard",
+   "type": "entity",
+   "class": "bollard",
+   "plural": "bollards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dock bollard",
+   "question": "Is there a dock bollard?",
+   "box": [
+    326,
+    500,
+    374,
+    550
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a pink raincoat",
+   "question": "Is there a woman wearing a pink raincoat?",
+   "box": [
+    750,
+    500,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a wool sweater",
+   "question": "Is there a man wearing a wool sweater?",
+   "box": [
+    850,
+    520,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "lobster",
+   "type": "entity",
+   "class": "lobster",
+   "plural": "lobsters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lobster",
+   "question": "Is there a lobster?",
+   "box": [
+    800,
+    700,
+    860,
+    780
+   ]
+  },
+  {
+   "id": "boats",
+   "type": "entity",
+   "class": "fishing boat",
+   "plural": "fishing boats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several fishing boats with peeling paint",
+   "question": "Are there several fishing boats with peeling paint?",
+   "box": [
+    100,
+    100,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "winch",
+   "type": "entity",
+   "class": "winch",
+   "plural": "winches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty winch",
+   "question": "Is there a rusty winch?",
+   "box": [
+    900,
+    600,
+    1000,
+    750
+   ]
+  },
+  {
+   "id": "worker_shovel",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker holds a shovel",
+   "question": "Is the worker holding a shovel?"
+  },
+  {
+   "id": "fisherman_pulling",
+   "type": "action",
+   "of": [
+    "fisherman",
+    "net"
+   ],
+   "desc": "the fisherman in yellow rubber boots pulls the heavy net",
+   "question": "Is the man in yellow rubber boots pulling the heavy net?"
+  },
+  {
+   "id": "deckhand_assisting",
+   "type": "action",
+   "of": [
+    "deckhand",
+    "fisherman"
+   ],
+   "desc": "the younger man in the blue jacket assists the fisherman in yellow rubber boots",
+   "question": "Is the younger man in the blue jacket assisting the man in yellow rubber boots?"
+  },
+  {
+   "id": "worker_shoveling",
+   "type": "action",
+   "of": [
+    "worker",
+    "cod"
+   ],
+   "desc": "the worker shovels ice over the freshly caught cod",
+   "question": "Is the worker shoveling ice over the freshly caught cod?"
+  },
+  {
+   "id": "seagull_perched",
+   "type": "relation",
+   "of": [
+    "seagull",
+    "bollard"
+   ],
+   "desc": "the seagull perches on the bollard",
+   "question": "Is the seagull perched on the bollard?"
+  },
+  {
+   "id": "seagull_eying",
+   "type": "action",
+   "of": [
+    "seagull",
+    "net"
+   ],
+   "desc": "the seagull eyes the catch in the net",
+   "question": "Is the seagull looking closely at the catch in the net?"
+  },
+  {
+   "id": "woman_inspecting",
+   "type": "action",
+   "of": [
+    "woman",
+    "lobster"
+   ],
+   "desc": "the woman in the pink raincoat inspects the lobster",
+   "question": "Is the woman in the pink raincoat inspecting the lobster?"
+  },
+  {
+   "id": "vendor_holding",
+   "type": "action",
+   "of": [
+    "vendor",
+    "lobster"
+   ],
+   "desc": "the man in the wool sweater holds the lobster",
+   "question": "Is the man in the wool sweater holding the lobster?"
+  },
+  {
+   "id": "boats_moored",
+   "type": "state",
+   "of": "boats",
+   "desc": "the fishing boats are moored",
+   "question": "Are the fishing boats moored?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bollard",
+   "to": "seagull",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0028",
+ "prompt": "At a busy fishing harbor at dawn, mist hangs low over the wet wooden docks. In the foreground, a fisherman in yellow rubber boots pulls a heavy net filled with silvery fish onto the planks, assisted by a younger deckhand in a blue jacket. To their left, a crate of ice sits open, with another worker shoveling ice over freshly caught cod. A seagull perches on a nearby bollard, eyeing the catch closely. On the right, a woman in a pink raincoat inspects a lobster held by a vendor wearing a wool sweater. Behind them, several fishing boats with peeling paint are moored, their masts reflecting in the calm water. A rusty winch stands idle near the edge of the dock. The lighting is soft and cool, with the rising sun casting long, pale orange reflections on the water surface. Wet surfaces glisten with moisture, enhancing the realism of the scene. The sky is a gradient of purple and pink, indicating early morning. This image is a photorealistic photo with high resolution, capturing every droplet of water and scale on the fish with meticulous clarity and natural color balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 2,
+  "warnings": []
+ }
+}

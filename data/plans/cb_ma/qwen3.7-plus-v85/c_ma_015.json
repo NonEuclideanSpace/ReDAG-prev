@@ -1,0 +1,289 @@
+{
+ "style": "photorealistic, cinematic lighting, ancient atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a torch-lit burial chamber",
+   "question": "Is the scene set in a torch-lit burial chamber?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sarcophagus",
+   "type": "entity",
+   "class": "sarcophagus",
+   "plural": "sarcophagi",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall mummy-shaped sarcophagus",
+   "question": "Is there a tall mummy-shaped sarcophagus?",
+   "box": [
+    362,
+    100,
+    662,
+    900
+   ]
+  },
+  {
+   "id": "face_mask",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "a polished gold face mask on the sarcophagus",
+   "question": "Does the sarcophagus have a polished gold face mask?"
+  },
+  {
+   "id": "painted_sides",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "colorful painted scenes depicting the journey to the afterlife using traditional pigments in red, green, and yellow on the sides",
+   "question": "Are the sides of the sarcophagus decorated with colorful painted scenes depicting the journey to the afterlife using traditional pigments in red, green, and yellow?"
+  },
+  {
+   "id": "golden_bands",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "elaborate golden bands circling the sarcophagus",
+   "question": "Are there elaborate golden bands circling the sarcophagus?"
+  },
+  {
+   "id": "wear_marks",
+   "type": "state",
+   "of": "sarcophagus",
+   "desc": "visible wear marks on the surface",
+   "question": "Does the surface of the sarcophagus show visible wear marks?"
+  },
+  {
+   "id": "cracks",
+   "type": "state",
+   "of": "sarcophagus",
+   "desc": "tiny cracks running through some of the painted areas",
+   "question": "Do tiny cracks run through some of the painted areas of the sarcophagus?"
+  },
+  {
+   "id": "jar_human",
+   "type": "entity",
+   "class": "canopic jar",
+   "plural": "canopic jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white limestone canopic jar",
+   "question": "Is there a white limestone canopic jar?",
+   "box": [
+    280,
+    750,
+    360,
+    900
+   ]
+  },
+  {
+   "id": "jar_baboon",
+   "type": "entity",
+   "class": "canopic jar",
+   "plural": "canopic jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second white limestone canopic jar",
+   "question": "Is there a second white limestone canopic jar?",
+   "box": [
+    664,
+    750,
+    744,
+    900
+   ]
+  },
+  {
+   "id": "jar_jackal",
+   "type": "entity",
+   "class": "canopic jar",
+   "plural": "canopic jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third white limestone canopic jar",
+   "question": "Is there a third white limestone canopic jar?",
+   "box": [
+    300,
+    800,
+    380,
+    950
+   ]
+  },
+  {
+   "id": "jar_falcon",
+   "type": "entity",
+   "class": "canopic jar",
+   "plural": "canopic jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fourth white limestone canopic jar",
+   "question": "Is there a fourth white limestone canopic jar?",
+   "box": [
+    644,
+    800,
+    724,
+    950
+   ]
+  },
+  {
+   "id": "jars_surround_base",
+   "type": "relation",
+   "of": [
+    "jar_human",
+    "jar_baboon",
+    "jar_jackal",
+    "jar_falcon",
+    "sarcophagus"
+   ],
+   "desc": "the four canopic jars surround the base of the sarcophagus",
+   "question": "Do the four canopic jars surround the base of the sarcophagus?"
+  },
+  {
+   "id": "no_glass",
+   "type": "absent",
+   "desc": "glass components in the sarcophagus",
+   "question": "Are there any glass components in the sarcophagus?"
+  },
+  {
+   "id": "no_restoration",
+   "type": "absent",
+   "desc": "signs of recent restoration on the sarcophagus",
+   "question": "Are there any signs of recent restoration on the sarcophagus?"
+  },
+  {
+   "id": "sarcophagus_upright",
+   "type": "state",
+   "of": "sarcophagus",
+   "desc": "the sarcophagus is standing upright",
+   "question": "Is the sarcophagus standing upright?"
+  },
+  {
+   "id": "sarcophagus_material",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "the sarcophagus is carved from black granite",
+   "question": "Is the sarcophagus carved from black granite?"
+  },
+  {
+   "id": "sarcophagus_inscriptions",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "intricate carved inscriptions covering every surface of the sarcophagus",
+   "question": "Are there intricate carved inscriptions covering every surface of the sarcophagus?"
+  },
+  {
+   "id": "face_mask_expression",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "the face mask features the calm expression of a pharaoh",
+   "question": "Does the face mask feature the calm expression of a pharaoh?"
+  },
+  {
+   "id": "face_mask_eyes",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "the face mask has blue lapis lazuli eyes",
+   "question": "Does the face mask have blue lapis lazuli eyes?"
+  },
+  {
+   "id": "golden_bands_positions",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "the golden bands are at the shoulders, waist, and ankles",
+   "question": "Are the golden bands at the shoulders, waist, and ankles?"
+  },
+  {
+   "id": "golden_bands_patterns",
+   "type": "attribute",
+   "of": "sarcophagus",
+   "desc": "each golden band is engraved with decorative patterns",
+   "question": "Is each golden band engraved with decorative patterns?"
+  },
+  {
+   "id": "jar_human_head",
+   "type": "attribute",
+   "of": "jar_human",
+   "desc": "the canopic jar is topped with a human head",
+   "question": "Is the canopic jar topped with a human head?"
+  },
+  {
+   "id": "jar_baboon_head",
+   "type": "attribute",
+   "of": "jar_baboon",
+   "desc": "the second canopic jar is topped with a baboon head",
+   "question": "Is the second canopic jar topped with a baboon head?"
+  },
+  {
+   "id": "jar_jackal_head",
+   "type": "attribute",
+   "of": "jar_jackal",
+   "desc": "the third canopic jar is topped with a jackal head",
+   "question": "Is the third canopic jar topped with a jackal head?"
+  },
+  {
+   "id": "jar_falcon_head",
+   "type": "attribute",
+   "of": "jar_falcon",
+   "desc": "the fourth canopic jar is topped with a falcon head",
+   "question": "Is the fourth canopic jar topped with a falcon head?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "sarcophagus",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "jar_human",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "jar_baboon",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "jar_jackal",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "jar_falcon",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_015",
+ "prompt": "A single ancient Egyptian sarcophagus standing upright in a torch-lit burial chamber. The coffin is tall and mummy-shaped, carved from black granite with intricate carved inscriptions covering every surface. Its face mask is crafted from polished gold and features the calm expression of a pharaoh with blue lapis lazuli eyes. The sarcophagus is not modern, displaying authentic ancient craftsmanship throughout. Four canopic jars surround its base, each topped with different animal heads - a human, a baboon, a jackal, and a falcon - all carved from white limestone. The coffin's sides are decorated with colorful painted scenes depicting the journey to the afterlife, using traditional pigments in red, green, and yellow. Elaborate golden bands circle the sarcophagus at the shoulders, waist, and ankles, each engraved with decorative patterns. The surface shows visible wear marks, while tiny cracks run through some of the painted areas. The sarcophagus contains no glass components and shows no signs of recent restoration, maintaining its original ancient appearance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node sarcophagus: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

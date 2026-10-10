@@ -1,0 +1,397 @@
+{
+ "style": "watercolor illustration, soft washes, ethereal quality, gentle brushstrokes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theatre backstage with dim ambient light and clutter",
+   "question": "Does the image depict a theatre backstage with dim ambient light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue velvet dress",
+   "question": "Is there a woman in a blue velvet dress?",
+   "box": [
+    50,
+    150,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    320,
+    600,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    330,
+    700,
+    490,
+    900
+   ]
+  },
+  {
+   "id": "mask",
+   "type": "entity",
+   "class": "golden mask",
+   "plural": "golden masks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large golden mask",
+   "question": "Is there a large golden mask?",
+   "box": [
+    450,
+    100,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "rope",
+   "type": "entity",
+   "class": "thin rope",
+   "plural": "thin ropes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin rope suspending the mask",
+   "question": "Is there a thin rope suspending the mask?",
+   "box": [
+    501,
+    0,
+    549,
+    120
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green vest",
+   "question": "Is there a man in a green vest?",
+   "box": [
+    620,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "scripts",
+   "type": "entity",
+   "class": "script",
+   "plural": "scripts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a tall stack of yellow scripts",
+   "question": "Is there a tall stack of yellow scripts?",
+   "box": [
+    860,
+    600,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in striped pajamas",
+   "question": "Is there a young boy in striped pajamas?",
+   "box": [
+    700,
+    750,
+    900,
+    980
+   ]
+  },
+  {
+   "id": "shoes",
+   "type": "entity",
+   "class": "tap shoe",
+   "plural": "tap shoes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "tap shoes",
+   "question": "Are there tap shoes?",
+   "box": [
+    750,
+    900,
+    850,
+    980
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds a silver mirror",
+   "question": "Is the woman holding a silver mirror?"
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman has a rigid posture",
+   "question": "Does the woman have a rigid posture?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is grooming itself",
+   "question": "Is the black cat grooming itself?"
+  },
+  {
+   "id": "mask_hanging",
+   "type": "state",
+   "of": "mask",
+   "desc": "the golden mask is hanging",
+   "question": "Is the golden mask hanging?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is leaning",
+   "question": "Is the man leaning?"
+  },
+  {
+   "id": "man_looking",
+   "type": "state",
+   "of": "man",
+   "desc": "the man has an expression of anticipation",
+   "question": "Does the man have an expression of anticipation?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is sitting on the floor",
+   "question": "Is the young boy sitting on the floor?"
+  },
+  {
+   "id": "shoes_on_boy",
+   "type": "relation",
+   "of": [
+    "shoes",
+    "boy"
+   ],
+   "desc": "the tap shoes are on the young boy",
+   "question": "Are the tap shoes on the young boy?"
+  },
+  {
+   "id": "boy_tying",
+   "type": "action",
+   "of": [
+    "boy",
+    "shoes"
+   ],
+   "desc": "the young boy is tying the laces of his tap shoes",
+   "question": "Is the young boy tying the laces of his tap shoes?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "mask"
+   ],
+   "desc": "the woman is pointing at the large golden mask",
+   "question": "Is the woman pointing at the large golden mask?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man is looking at the woman in the blue velvet dress",
+   "question": "Is the man looking at the woman in the blue velvet dress?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat is on the wooden crate",
+   "question": "Is the black cat on the wooden crate?"
+  },
+  {
+   "id": "cat_next_to_woman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman"
+   ],
+   "desc": "the black cat is next to the woman",
+   "question": "Is the black cat next to the woman?"
+  },
+  {
+   "id": "mask_near_man",
+   "type": "relation",
+   "of": [
+    "mask",
+    "man"
+   ],
+   "desc": "the large golden mask is near the man",
+   "question": "Is the large golden mask near the man?"
+  },
+  {
+   "id": "scripts_next_to_man",
+   "type": "relation",
+   "of": [
+    "scripts",
+    "man"
+   ],
+   "desc": "the stack of yellow scripts is beside the man",
+   "question": "Is the stack of yellow scripts beside the man?"
+  },
+  {
+   "id": "boy_next_to_scripts",
+   "type": "relation",
+   "of": [
+    "boy",
+    "scripts"
+   ],
+   "desc": "the young boy is next to the stack of yellow scripts",
+   "question": "Is the young boy next to the stack of yellow scripts?"
+  },
+  {
+   "id": "no_spotlight",
+   "type": "absent",
+   "desc": "a spotlight illuminating the stage area",
+   "question": "Is there a spotlight illuminating the stage area?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue velvet dress stands",
+   "question": "Is the woman in a blue velvet dress standing?"
+  },
+  {
+   "id": "mask_suspended_by_rope",
+   "type": "relation",
+   "of": [
+    "mask",
+    "rope"
+   ],
+   "desc": "the large golden mask is suspended by the thin rope",
+   "question": "Is the large golden mask suspended by the thin rope?"
+  },
+  {
+   "id": "man_near_mask",
+   "type": "relation",
+   "of": [
+    "man",
+    "mask"
+   ],
+   "desc": "the man in a green vest is near the large golden mask",
+   "question": "Is the man in a green vest near the large golden mask?"
+  },
+  {
+   "id": "scripts_on_floor",
+   "type": "state",
+   "of": "scripts",
+   "desc": "the tall stack of yellow scripts rests on the floor",
+   "question": "Does the tall stack of yellow scripts rest on the floor?"
+  },
+  {
+   "id": "cat_white_paws",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the black cat has white paws",
+   "question": "Does the black cat have white paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0075",
+ "prompt": "In a watercolor illustration of a theatre backstage, the scene is bustling with quiet preparation. On the left stands a woman in a blue velvet dress, her posture rigid as she holds a silver mirror. Next to her, on the right, sits a black cat with white paws, grooming itself calmly on a wooden crate. In the center hangs a large golden mask, suspended by a thin rope, catching the dim ambient light. A man in a green vest leans against the wall near the mask, looking at the woman in the blue velvet dress with an expression of anticipation. Beside him, a tall stack of yellow scripts rests precariously on the floor. The woman in the blue velvet dress is pointing at the large golden mask, drawing the attention of the man in the green vest. Nearby, a young boy in striped pajamas sits on the floor, tying the laces of his tap shoes. He is positioned next to the stack of yellow scripts, seemingly oblivious to the adults. The black cat with white paws remains still, ignoring the activity around it. There is no spotlight illuminating the stage area, keeping the focus entirely on the backstage clutter and characters. The soft washes of color blend the background shadows into the foreground figures, creating a cohesive yet detailed narrative of pre-show nerves. The textures of the velvet, wood, and paper are suggested through gentle brushstrokes rather than sharp lines, maintaining the ethereal quality of the medium while clearly defining each distinct element within the cramped space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "boy_on_floor",
+     "boy_sitting"
+    ]
+   ]
+  }
+ }
+}

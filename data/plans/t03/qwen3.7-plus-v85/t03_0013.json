@@ -1,0 +1,184 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with white walls having faint pale green watercolor hints and floor tiles fading into soft graphite lines",
+   "question": "Does the image show a sterile hospital corridor with white walls having faint pale green watercolor hints and floor tiles fading into soft graphite lines?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray cardigan",
+   "question": "Is there an elderly man in a gray cardigan?",
+   "box": [
+    400,
+    350,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier with floppy ears",
+   "question": "Is there a small terrier with floppy ears?",
+   "box": [
+    700,
+    650,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard tightly against her chest",
+   "question": "Is the nurse holding a clipboard tightly against her chest?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "man_slumped",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man has a posture slumped forward in exhaustion",
+   "question": "Is the elderly man's posture slumped forward in exhaustion?"
+  },
+  {
+   "id": "terrier_sitting",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the terrier sits patiently",
+   "question": "Is the terrier sitting patiently?"
+  },
+  {
+   "id": "terrier_gazing",
+   "type": "action",
+   "of": [
+    "terrier",
+    "elderly_man"
+   ],
+   "desc": "the terrier gazes up at the elderly man",
+   "question": "Is the terrier gazing up at the elderly man?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse looks at the elderly man",
+   "question": "Is the nurse looking at the elderly man?"
+  },
+  {
+   "id": "terrier_beside_bench",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "bench"
+   ],
+   "desc": "the terrier is beside the bench",
+   "question": "Is the terrier beside the bench?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man is on the bench",
+   "question": "Is the elderly man on the bench?"
+  },
+  {
+   "id": "no_medical_equipment",
+   "type": "absent",
+   "desc": "medical equipment",
+   "question": "Is there any medical equipment visible in the scene?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0013",
+ "prompt": "In a pencil sketch with light color wash, a sterile hospital corridor unfolds. On the left stands a nurse in blue scrubs, holding a clipboard tightly against her chest. In the center sits an elderly man in a gray cardigan on a metal bench, his posture slumped forward in exhaustion. To the right, a small terrier with floppy ears sits patiently beside the bench, gazing up at the seated figure. The nurse is looking at the elderly man, creating a quiet moment of observation between them. The floor tiles fade into soft graphite lines, while the walls remain stark white with faint watercolor hints of pale green. There is no medical equipment visible in the scene, keeping the focus strictly on these three distinct figures and their subtle connection within the empty hallway space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

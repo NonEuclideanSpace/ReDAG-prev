@@ -1,0 +1,167 @@
+{
+ "style": "cyberpunk digital art, neon lighting, rainy night atmosphere, high contrast, reflective surfaces",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neon-lit cyberpunk cityscape at night with rain",
+   "question": "Does the image show a neon-lit cyberpunk cityscape at night with rain?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hover_car",
+   "type": "entity",
+   "class": "hover car",
+   "plural": "hover cars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a streamlined glossy black hover car",
+   "question": "Is there a streamlined glossy black hover car?",
+   "box": [
+    200,
+    300,
+    824,
+    650
+   ]
+  },
+  {
+   "id": "car_floating",
+   "type": "state",
+   "of": "hover_car",
+   "desc": "the hover car is floating in the air",
+   "question": "Is the hover car floating in the air?"
+  },
+  {
+   "id": "car_windshield",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "the hover car has a dark blue tinted curved windshield",
+   "question": "Does the hover car have a dark blue tinted curved windshield?"
+  },
+  {
+   "id": "car_pods",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "the hover car has four circular glowing violet pods instead of wheels",
+   "question": "Does the hover car have four circular glowing violet pods instead of wheels?"
+  },
+  {
+   "id": "car_wings",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "two extended wing panels on the hover car",
+   "question": "Does the hover car have two extended wing panels?"
+  },
+  {
+   "id": "car_logo",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "the hover car has a bright rotating logo on its hood",
+   "question": "Does the hover car have a bright rotating logo on its hood?"
+  },
+  {
+   "id": "car_headlights",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "the hover car has narrow LED strip headlights pulsing with white light",
+   "question": "Does the hover car have narrow LED strip headlights pulsing with white light?"
+  },
+  {
+   "id": "car_reflections",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "the hover car has a mirror-like surface reflecting surrounding neon signs",
+   "question": "Does the hover car have a mirror-like surface reflecting surrounding neon signs?"
+  },
+  {
+   "id": "car_steam",
+   "type": "state",
+   "of": "hover_car",
+   "desc": "steam rises from the rear exhaust vents of the hover car",
+   "question": "Does steam rise from the rear exhaust vents of the hover car?"
+  },
+  {
+   "id": "car_glow",
+   "type": "relation",
+   "of": [
+    "hover_car",
+    "pavement"
+   ],
+   "desc": "the hover car casts a blue glow on the wet pavement below",
+   "question": "Does the hover car cast a blue glow on the wet pavement below?"
+  },
+  {
+   "id": "car_pristine",
+   "type": "state",
+   "of": "hover_car",
+   "desc": "the hover car is pristine and undamaged",
+   "question": "Is the hover car pristine and undamaged?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust or wear on the hover car",
+   "question": "Is there any rust or wear visible on the hover car?"
+  },
+  {
+   "id": "car_cyan_lines",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "glowing cyan accent lines tracing the contours of the hover car",
+   "question": "Does the hover car have glowing cyan accent lines tracing its contours?"
+  },
+  {
+   "id": "pavement",
+   "type": "entity",
+   "class": "pavement",
+   "plural": "pavements",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wet pavement",
+   "question": "Is there wet pavement in the image?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "car_thrusters",
+   "type": "attribute",
+   "of": "hover_car",
+   "desc": "small glowing orange thruster ports on the wing panels",
+   "question": "Do the wing panels have small glowing orange thruster ports?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_007",
+ "prompt": "A single floating hover car floating in a neon-lit cyberpunk cityscape during a rainy night. The vehicle is streamlined with a glossy black exterior and glowing cyan accent lines that trace its contours. Its windshield is tinted dark blue and curved into the body design. The car has no visible wheels, instead featuring four circular glowing pods that emit soft violet light. The car is not damaged, maintaining its pristine appearance. Two extended wing panels extend from the sides, each equipped with small thruster ports that glow orange when active. The car's hood displays a bright rotating logo, and its headlights are narrow LED strips that pulse with white light. The vehicle's surface is mirror-like, creating clear reflections of the surrounding neon signs. Steam rises from the car's rear exhaust vents, and the entire vehicle casts a blue glow on the wet pavement below. The car shows no signs of rust or wear.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,234 @@
+{
+ "style": "fantasy digital art, mystical atmosphere, moonlit",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mystical forest clearing with a moonlit fairy ring",
+   "question": "Does the image show a mystical forest clearing?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "main_mushroom",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an enormous mushroom",
+   "question": "Is there an enormous mushroom?",
+   "box": [
+    360,
+    200,
+    664,
+    850
+   ]
+  },
+  {
+   "id": "satellite_mushrooms",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three smaller mushrooms",
+   "question": "Are there three smaller mushrooms?",
+   "box": [
+    300,
+    750,
+    724,
+    950
+   ]
+  },
+  {
+   "id": "cap_dots",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the bright purple cap is covered in white polka dots",
+   "question": "Is the bright purple cap covered in white polka dots?"
+  },
+  {
+   "id": "stem_spiral",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the ivory-colored stem is twisted in a spiral pattern",
+   "question": "Is the ivory-colored stem twisted in a spiral pattern?"
+  },
+  {
+   "id": "gills_colorful",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the underside of the mushroom reveals detailed gill patterns with multiple colors",
+   "question": "Does the underside of the mushroom reveal detailed gill patterns with multiple colors?"
+  },
+  {
+   "id": "surface_shiny",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the mushroom's surface is smooth",
+   "question": "Is the mushroom's surface smooth?"
+  },
+  {
+   "id": "dots_pulsing",
+   "type": "state",
+   "of": "main_mushroom",
+   "desc": "the white polka dots are pulsing with light",
+   "question": "Are the white polka dots pulsing with light?"
+  },
+  {
+   "id": "mushroom_healthy",
+   "type": "state",
+   "of": "main_mushroom",
+   "desc": "the mushroom is vibrant and healthy, not withered",
+   "question": "Is the mushroom vibrant and healthy, not withered?"
+  },
+  {
+   "id": "sparkles_falling",
+   "type": "state",
+   "of": "main_mushroom",
+   "desc": "tiny sparkles of golden dust are falling from the cap's edge",
+   "question": "Are tiny sparkles of golden dust falling from the cap's edge?"
+  },
+  {
+   "id": "mist_curling",
+   "type": "state",
+   "of": "main_mushroom",
+   "desc": "wispy tendrils of blue mist are curling around the base",
+   "question": "Are wispy tendrils of blue mist curling around the base?"
+  },
+  {
+   "id": "satellites_at_base",
+   "type": "relation",
+   "of": [
+    "satellite_mushrooms",
+    "main_mushroom"
+   ],
+   "desc": "the three smaller mushrooms grow at the base of the enormous mushroom",
+   "question": "Do the three smaller mushrooms grow at the base of the enormous mushroom?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic material on the mushroom",
+   "question": "Is there any plastic material visible on the mushroom?"
+  },
+  {
+   "id": "no_decay",
+   "type": "absent",
+   "desc": "signs of decay on the mushroom",
+   "question": "Are there any signs of decay on the mushroom?"
+  },
+  {
+   "id": "fairy_ring",
+   "type": "entity",
+   "class": "fairy ring",
+   "plural": "fairy rings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moonlit fairy ring",
+   "question": "Is there a moonlit fairy ring in the clearing?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "cap_purple",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the mushroom has a bright purple cap",
+   "question": "Does the enormous mushroom have a bright purple cap?"
+  },
+  {
+   "id": "stem_ivory",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the mushroom has an ivory-colored stem",
+   "question": "Does the enormous mushroom have an ivory-colored stem?"
+  },
+  {
+   "id": "sat_caps_green",
+   "type": "attribute",
+   "of": "satellite_mushrooms",
+   "desc": "the three smaller mushrooms have fluorescent green caps",
+   "question": "Do the three smaller mushrooms have fluorescent green caps?"
+  },
+  {
+   "id": "sat_stems_pale",
+   "type": "attribute",
+   "of": "satellite_mushrooms",
+   "desc": "the three smaller mushrooms have pale stems",
+   "question": "Do the three smaller mushrooms have pale stems?"
+  },
+  {
+   "id": "stem_veins",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the ivory-colored stem has thin silver veins running along its surface",
+   "question": "Does the ivory-colored stem have thin silver veins running along its surface?"
+  },
+  {
+   "id": "dots_glowing",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the white polka dots are glowing",
+   "question": "Are the white polka dots glowing?"
+  },
+  {
+   "id": "surface_reflective",
+   "type": "attribute",
+   "of": "main_mushroom",
+   "desc": "the mushroom's surface is shiny and reflects moonlight",
+   "question": "Is the mushroom's surface shiny and reflecting moonlight?"
+  },
+  {
+   "id": "no_damage",
+   "type": "absent",
+   "desc": "signs of damage on the mushroom",
+   "question": "Are there any signs of damage on the mushroom?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fairy_ring",
+   "to": "main_mushroom",
+   "kind": "support"
+  },
+  {
+   "from": "fairy_ring",
+   "to": "satellite_mushrooms",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_006",
+ "prompt": "A single glowing mushroom growing in a moonlit fairy ring within a mystical forest clearing. The mushroom is enormous with a bright purple cap covered in glowing white polka dots that pulse with soft light. Its stem is thick and ivory-colored, twisted in a spiral pattern with thin silver veins running along its surface. The mushroom is not withered, displaying vibrant health and magical vitality. Three smaller satellite mushrooms grow at its base, each with fluorescent green caps and pale stems. The main mushroom's underside reveals detailed gill patterns that display multiple colors. Tiny sparkles of golden dust fall continuously from the cap's edge, and wispy tendrils of blue mist curl around the base. The mushroom's surface appears smooth and has a shiny reflective quality that reflects the surrounding moonlight. The mushroom contains no plastic and shows no signs of decay or damage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 9,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

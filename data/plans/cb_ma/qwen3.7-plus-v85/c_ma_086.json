@@ -1,0 +1,187 @@
+{
+ "style": "product photography, high detail, macro",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background with a slate tile",
+   "question": "Is there a slate tile in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "entity",
+   "class": "pocket knife",
+   "plural": "pocket knives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a matte-black titanium pocket knife",
+   "question": "Is there a matte-black titanium pocket knife?",
+   "box": [
+    200,
+    300,
+    824,
+    724
+   ]
+  },
+  {
+   "id": "knife_open",
+   "type": "state",
+   "of": "knife",
+   "desc": "the pocket knife is open",
+   "question": "Is the pocket knife open?"
+  },
+  {
+   "id": "knife_on_tile",
+   "type": "relation",
+   "of": [
+    "knife",
+    "tile"
+   ],
+   "desc": "the pocket knife rests on the slate tile",
+   "question": "Is the pocket knife resting on the slate tile?"
+  },
+  {
+   "id": "handle_scales",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the handle consists of two titanium scales with chevron-pattern knurling",
+   "question": "Does the handle consist of two titanium scales?"
+  },
+  {
+   "id": "handle_accents",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "anodised midnight-purple accents along the spine of the handle",
+   "question": "Are there anodised midnight-purple accents along the spine of the handle?"
+  },
+  {
+   "id": "clip",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "a deep-carry stainless clip mounted on one side",
+   "question": "Is there a deep-carry stainless clip mounted on one side?"
+  },
+  {
+   "id": "blade_material",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the blade is made of stone-washed CPM-S35VN steel",
+   "question": "Is the blade made of stone-washed steel?"
+  },
+  {
+   "id": "blade_features",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the blade features a swedge and a hollow grind",
+   "question": "Does the blade feature a swedge?"
+  },
+  {
+   "id": "logo",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "a small laser-etched wolf logo near the pivot screw",
+   "question": "Is there a small laser-etched wolf logo near the pivot screw?"
+  },
+  {
+   "id": "washers",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "phosphor-bronze washers visible in the open liner",
+   "question": "Are phosphor-bronze washers visible in the open liner?"
+  },
+  {
+   "id": "no_fingerprints",
+   "type": "absent",
+   "desc": "fingerprints on the knife",
+   "question": "Are there any fingerprints on the knife?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the knife",
+   "question": "Is there any rust on the knife?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden handle scales",
+   "question": "Are there any wooden handle scales?"
+  },
+  {
+   "id": "tile",
+   "type": "entity",
+   "class": "slate tile",
+   "plural": "slate tiles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slate tile",
+   "question": "Is there a slate tile?",
+   "box": [
+    200,
+    400,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "handle_knurling",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the titanium scales have chevron-pattern knurling",
+   "question": "Do the titanium scales have chevron-pattern knurling?"
+  },
+  {
+   "id": "blade_steel_grade",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the blade is made of CPM-S35VN steel",
+   "question": "Is the blade made of CPM-S35VN steel?"
+  },
+  {
+   "id": "blade_hollow_grind",
+   "type": "attribute",
+   "of": "knife",
+   "desc": "the blade features a hollow grind",
+   "question": "Does the blade feature a hollow grind?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tile",
+   "to": "knife",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_086",
+ "prompt": "Depict a single matte-black titanium pocket-knife resting open on a slate tile. The handle consists of two titanium scales with chevron-pattern knurling and anodised midnight-purple accents along the spine. A deep-carry stainless clip is mounted on one side. The blade is stone-washed CPM-S35VN steel, featuring a swedge and a hollow grind. A small laser-etched wolf logo sits near the pivot screw. Phosphor-bronze washers are visible in the open liner. The knife shows no fingerprints, no rust, and absolutely no wooden handle scales.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

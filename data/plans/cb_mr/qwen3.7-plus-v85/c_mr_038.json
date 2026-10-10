@@ -1,0 +1,414 @@
+{
+ "style": "dramatic medieval fantasy illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dramatic medieval battle scene ground and sky",
+   "question": "Does the image depict a dramatic medieval battle scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "knight",
+   "type": "entity",
+   "class": "knight",
+   "plural": "knights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a knight in full plate armor",
+   "question": "Is there a knight in full plate armor?",
+   "box": [
+    150,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "horse",
+   "type": "entity",
+   "class": "horse",
+   "plural": "horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white horse",
+   "question": "Is there a white horse?",
+   "box": [
+    100,
+    400,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "dragon",
+   "type": "entity",
+   "class": "dragon",
+   "plural": "dragons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red dragon",
+   "question": "Is there a large red dragon?",
+   "box": [
+    500,
+    100,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "tower",
+   "type": "entity",
+   "class": "castle tower",
+   "plural": "castle towers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall castle tower",
+   "question": "Is there a tall castle tower?",
+   "box": [
+    600,
+    50,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "catapult",
+   "type": "entity",
+   "class": "catapult",
+   "plural": "catapults",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a catapult",
+   "question": "Is there a catapult?",
+   "box": [
+    450,
+    600,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rock",
+   "question": "Is there a large rock in the air?",
+   "box": [
+    550,
+    400,
+    650,
+    500
+   ]
+  },
+  {
+   "id": "archers",
+   "type": "entity",
+   "class": "archer",
+   "plural": "archers",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four archers",
+   "question": "Are there four archers?",
+   "box": [
+    620,
+    300,
+    780,
+    400
+   ]
+  },
+  {
+   "id": "soldiers",
+   "type": "entity",
+   "class": "soldier",
+   "plural": "soldiers",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two soldiers operating the catapult",
+   "question": "Are there two soldiers operating the catapult?",
+   "box": [
+    460,
+    700,
+    590,
+    850
+   ]
+  },
+  {
+   "id": "flag",
+   "type": "entity",
+   "class": "flag",
+   "plural": "flags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unfurled flag",
+   "question": "Is there an unfurled flag?",
+   "box": [
+    676,
+    20,
+    724,
+    80
+   ]
+  },
+  {
+   "id": "lance",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the knight holds a lance",
+   "question": "Is the knight holding a lance?"
+  },
+  {
+   "id": "shield",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the knight holds a shield on his left arm",
+   "question": "Is the knight holding a shield on his left arm?"
+  },
+  {
+   "id": "saddle",
+   "type": "attribute",
+   "of": "horse",
+   "desc": "the horse has a saddle on its back",
+   "question": "Does the horse have a saddle on its back?"
+  },
+  {
+   "id": "horse_rearing",
+   "type": "state",
+   "of": "horse",
+   "desc": "the horse is rearing up",
+   "question": "Is the horse rearing up?"
+  },
+  {
+   "id": "dragon_mouth_open",
+   "type": "state",
+   "of": "dragon",
+   "desc": "the dragon has its mouth open",
+   "question": "Is the dragon's mouth open?"
+  },
+  {
+   "id": "dragon_fire",
+   "type": "state",
+   "of": "dragon",
+   "desc": "the dragon is breathing fire",
+   "question": "Is the dragon breathing fire?"
+  },
+  {
+   "id": "dragon_claw_ground",
+   "type": "state",
+   "of": "dragon",
+   "desc": "the dragon is breaking the ground with its claw",
+   "question": "Is the dragon breaking the ground with its claw?"
+  },
+  {
+   "id": "flag_waving",
+   "type": "state",
+   "of": "flag",
+   "desc": "the flag is waving",
+   "question": "Is the flag waving?"
+  },
+  {
+   "id": "knight_on_horse",
+   "type": "relation",
+   "of": [
+    "knight",
+    "horse"
+   ],
+   "desc": "the knight is on the horse",
+   "question": "Is the knight on the horse?"
+  },
+  {
+   "id": "knight_facing_dragon",
+   "type": "relation",
+   "of": [
+    "knight",
+    "dragon"
+   ],
+   "desc": "the knight is facing the dragon",
+   "question": "Is the knight facing the dragon?"
+  },
+  {
+   "id": "tower_behind_dragon",
+   "type": "relation",
+   "of": [
+    "tower",
+    "dragon"
+   ],
+   "desc": "the tower stands behind the dragon",
+   "question": "Is the tower behind the dragon?"
+  },
+  {
+   "id": "lance_pointing_chest",
+   "type": "action",
+   "of": [
+    "knight",
+    "dragon"
+   ],
+   "desc": "the knight points the lance at the dragon's chest",
+   "question": "Is the knight pointing the lance at the dragon's chest?"
+  },
+  {
+   "id": "fire_towards_knight",
+   "type": "action",
+   "of": [
+    "dragon",
+    "knight"
+   ],
+   "desc": "the dragon breathes fire towards the knight",
+   "question": "Is the dragon breathing fire towards the knight?"
+  },
+  {
+   "id": "shield_blocking_fire",
+   "type": "action",
+   "of": [
+    "knight",
+    "dragon"
+   ],
+   "desc": "the knight blocks some of the fire with the shield",
+   "question": "Is the knight blocking some of the fire with the shield?"
+  },
+  {
+   "id": "catapult_between",
+   "type": "relation",
+   "of": [
+    "catapult",
+    "knight",
+    "tower"
+   ],
+   "desc": "the catapult is positioned between the knight and the tower",
+   "question": "Is the catapult positioned between the knight and the tower?"
+  },
+  {
+   "id": "catapult_launching",
+   "type": "action",
+   "of": [
+    "catapult",
+    "rock"
+   ],
+   "desc": "the catapult is launching the rock",
+   "question": "Is the catapult launching the rock?"
+  },
+  {
+   "id": "rock_at_dragon",
+   "type": "action",
+   "of": [
+    "rock",
+    "dragon"
+   ],
+   "desc": "the rock is moving at the dragon",
+   "question": "Is the rock moving towards the dragon?"
+  },
+  {
+   "id": "archers_on_tower",
+   "type": "relation",
+   "of": [
+    "archers",
+    "tower"
+   ],
+   "desc": "the archers are on the tower wall",
+   "question": "Are the archers on the tower wall?"
+  },
+  {
+   "id": "flag_above_archers",
+   "type": "relation",
+   "of": [
+    "flag",
+    "archers"
+   ],
+   "desc": "the flag is above the archers",
+   "question": "Is the flag above the archers?"
+  },
+  {
+   "id": "soldiers_operating_catapult",
+   "type": "action",
+   "of": [
+    "soldiers",
+    "catapult"
+   ],
+   "desc": "the soldiers are operating the catapult",
+   "question": "Are the soldiers operating the catapult?"
+  },
+  {
+   "id": "shield_crest",
+   "type": "attribute",
+   "of": "knight",
+   "desc": "the shield has a crest painted on its front",
+   "question": "Does the shield held by the knight have a crest painted on its front?"
+  },
+  {
+   "id": "horse_hooves_air",
+   "type": "state",
+   "of": "horse",
+   "desc": "the horse's front hooves are in the air",
+   "question": "Are the horse's front hooves in the air?"
+  },
+  {
+   "id": "tower_taller_dragon",
+   "type": "relation",
+   "of": [
+    "tower",
+    "dragon"
+   ],
+   "desc": "the tower is taller than the dragon is long",
+   "question": "Is the castle tower taller than the dragon is long?"
+  },
+  {
+   "id": "dragon_larger_knight_horse",
+   "type": "relation",
+   "of": [
+    "dragon",
+    "knight",
+    "horse"
+   ],
+   "desc": "the dragon is much larger than the knight and horse combined",
+   "question": "Is the dragon much larger than the knight and horse combined?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "horse",
+   "to": "knight",
+   "kind": "support"
+  },
+  {
+   "from": "tower",
+   "to": "archers",
+   "kind": "support"
+  },
+  {
+   "from": "tower",
+   "to": "flag",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_038",
+ "prompt": "A dramatic medieval battle scene. A knight in full plate armor is on a white horse, facing a large, red dragon. A tall castle tower stands behind the dragon, and the tower is taller than the dragon is long. The dragon is much larger than the knight and horse combined. The knight is pointing a lance at the dragon's chest; the lance is longer than the knight's shield. The horse is rearing up, with its front hooves in the air. The dragon is opening its mouth, breathing fire towards the knight. The castle tower has an unfurled flag on its top, waving above four archers on the tower wall. The knight is holding a shield on his left arm, blocking some of the fire. A catapult is positioned between the knight and the castle tower, and it is launching a large rock at the dragon. The number of soldiers operating the catapult is half the number of archers on the tower wall. The dragon is breaking the ground with its claw. The horse has a saddle on its back. The shield has a crest painted on its front.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 2,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "style": "photorealistic photo, sunlit, natural light, dust motes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse with a glass ceiling",
+   "question": "Does the image show a botanical greenhouse with a glass ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man with gray hair",
+   "question": "Is there a man with gray hair?",
+   "box": [
+    450,
+    200,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "woman_pot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a small terracotta pot",
+   "question": "Is the woman in a blue apron holding a small terracotta pot?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair is standing",
+   "question": "Is the man with gray hair standing?"
+  },
+  {
+   "id": "man_looking",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with gray hair is looking intently",
+   "question": "Is the man with gray hair looking intently?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man with gray hair stands next to the woman in a blue apron",
+   "question": "Is the man with gray hair standing next to the woman in a blue apron?"
+  },
+  {
+   "id": "man_looks_at_plant",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man with gray hair looks at the plant inside the pot held by the woman in a blue apron",
+   "question": "Is the man with gray hair looking at the plant inside the pot held by the woman in a blue apron?"
+  },
+  {
+   "id": "no_bench",
+   "type": "absent",
+   "desc": "bench",
+   "question": "Is there a bench visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "ferns",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tall ferns",
+   "question": "Are there tall ferns?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "vines",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hanging vines",
+   "question": "Are there hanging vines?",
+   "box": [
+    700,
+    0,
+    1024,
+    600
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t02_0086",
+ "prompt": "A photorealistic photo captures a sunlit botanical greenhouse. On the left, a woman in a blue apron holds a small terracotta pot. In the center, a man with gray hair stands next to her, looking intently at the plant inside the pot she holds. The lush greenery surrounds them, with tall ferns and hanging vines filling the background. There is no bench visible in the scene. The natural light filters through the glass ceiling, illuminating the dust motes dancing in the air around the two figures as they share this quiet moment of gardening observation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

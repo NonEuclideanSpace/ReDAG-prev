@@ -1,0 +1,216 @@
+{
+ "style": "cinematic film still, gritty atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gritty shipyard dock scene",
+   "question": "Does the image show a gritty shipyard dock scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hard hat",
+   "question": "Is there a woman wearing a yellow hard hat?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted anchor chain coiled tightly",
+   "question": "Is there a rusted anchor chain coiled tightly?",
+   "box": [
+    350,
+    600,
+    670,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in blue overalls",
+   "question": "Is there a man wearing blue overalls?",
+   "box": [
+    700,
+    200,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    850,
+    500,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat has a rigid posture",
+   "question": "Does the woman in the yellow hard hat have a rigid posture?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls is sitting",
+   "question": "Is the man in blue overalls sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls is leaning back casually",
+   "question": "Is the man in blue overalls leaning back casually?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "chain"
+   ],
+   "desc": "the woman in the yellow hard hat is pointing directly at the rusted anchor chain",
+   "question": "Is the woman in the yellow hard hat pointing directly at the rusted anchor chain?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in blue overalls is looking intently at the woman in the yellow hard hat",
+   "question": "Is the man in blue overalls looking intently at the woman in the yellow hard hat?"
+  },
+  {
+   "id": "man_against_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in blue overalls is leaning against the crate",
+   "question": "Is the man in blue overalls leaning against the crate?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat is standing",
+   "question": "Is the woman in the yellow hard hat standing?"
+  },
+  {
+   "id": "concrete_ground",
+   "type": "entity",
+   "class": "ground",
+   "plural": "grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wet concrete ground",
+   "question": "Is there wet concrete ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_alert",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat has an alert expression",
+   "question": "Does the woman in the yellow hard hat have an alert expression?"
+  },
+  {
+   "id": "chain_on_concrete",
+   "type": "relation",
+   "of": [
+    "chain",
+    "concrete_ground"
+   ],
+   "desc": "the rusted anchor chain rests on the wet concrete ground",
+   "question": "Does the rusted anchor chain rest on the wet concrete ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "concrete_ground",
+   "to": "chain",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0062",
+ "prompt": "A cinematic film still captures a gritty shipyard dock scene. On the left stands a woman in a yellow hard hat, her posture rigid and alert. In the center rests a rusted anchor chain, coiled tightly on the wet concrete. To the right sits a man in blue overalls, leaning back casually against a crate. The woman in the yellow hard hat is pointing directly at the rusted anchor chain in the center. The man in blue overalls is looking intently at the woman in the yellow hard hat. There is no water visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

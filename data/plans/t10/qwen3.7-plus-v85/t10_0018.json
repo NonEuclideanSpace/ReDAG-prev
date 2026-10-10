@@ -1,0 +1,380 @@
+{
+ "style": "vibrant anime style, clean lines, expressive details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with massive steel structures, a bright sky, dry dock floor and distant warehouse walls",
+   "question": "Does the image show a shipyard dock with massive steel structures, a bright sky, dry dock floor and distant warehouse walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal railing",
+   "question": "Is there a metal railing?",
+   "box": [
+    50,
+    400,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "crane_operator",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall worker in a yellow hard hat",
+   "question": "Is there a tall worker in a yellow hard hat?",
+   "box": [
+    80,
+    200,
+    220,
+    700
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young worker in blue overalls",
+   "question": "Is there a young worker in blue overalls?",
+   "box": [
+    400,
+    300,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "cargo_ship_hull",
+   "type": "entity",
+   "class": "ship hull",
+   "plural": "ship hulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large cargo ship hull",
+   "question": "Is there a large cargo ship hull?",
+   "box": [
+    300,
+    100,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "barrels",
+   "type": "entity",
+   "class": "barrel",
+   "plural": "barrels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of rusted metal barrels",
+   "question": "Is there a stack of rusted metal barrels?",
+   "box": [
+    350,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a striped vest",
+   "question": "Is there a worker in a striped vest?",
+   "box": [
+    750,
+    350,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    850,
+    700,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tabby cat",
+   "question": "Is there a small tabby cat?",
+   "box": [
+    860,
+    650,
+    960,
+    750
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in grease-stained coveralls",
+   "question": "Is there a worker in grease-stained coveralls?",
+   "box": [
+    560,
+    320,
+    700,
+    820
+   ]
+  },
+  {
+   "id": "machinery",
+   "type": "entity",
+   "class": "machinery",
+   "plural": "machinery",
+   "count": 1,
+   "count_exact": true,
+   "desc": "industrial machinery",
+   "question": "Is there industrial machinery?",
+   "box": [
+    650,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "operator_leaning",
+   "type": "relation",
+   "of": [
+    "crane_operator",
+    "railing"
+   ],
+   "desc": "the tall worker in a yellow hard hat leans against the railing",
+   "question": "Is the tall worker in a yellow hard hat leaning against the railing?"
+  },
+  {
+   "id": "engineer_holding_blueprint",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the young worker in blue overalls holds a rolled-up blueprint tightly",
+   "question": "Is the young worker in blue overalls holding a rolled-up blueprint tightly?"
+  },
+  {
+   "id": "engineer_looking",
+   "type": "state",
+   "of": "engineer",
+   "desc": "the young worker in blue overalls looks intently",
+   "question": "Does the young worker in blue overalls look intently?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman points firmly toward the water",
+   "question": "Does the foreman point firmly?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small tabby cat sits on the wooden crate",
+   "question": "Is the small tabby cat sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_grooming",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small tabby cat grooms its paw",
+   "question": "Is the small tabby cat grooming its paw?"
+  },
+  {
+   "id": "mechanic_looking",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic looks at the tool with focused determination",
+   "question": "Does the mechanic look at the tool?"
+  },
+  {
+   "id": "operator_watching",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall worker in a yellow hard hat watches the exchange",
+   "question": "Is the tall worker in a yellow hard hat watching the exchange?"
+  },
+  {
+   "id": "engineer_behind_ship",
+   "type": "relation",
+   "of": [
+    "engineer",
+    "cargo_ship_hull"
+   ],
+   "desc": "the large cargo ship hull rises behind the young worker in blue overalls",
+   "question": "Does the large cargo ship hull rise behind the young worker in blue overalls?"
+  },
+  {
+   "id": "barrels_behind_engineer",
+   "type": "relation",
+   "of": [
+    "barrels",
+    "engineer"
+   ],
+   "desc": "the stack of rusted metal barrels is behind the young worker in blue overalls",
+   "question": "Is the stack of rusted metal barrels behind the young worker in blue overalls?"
+  },
+  {
+   "id": "cat_next_to_foreman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "foreman"
+   ],
+   "desc": "the small tabby cat is next to the worker in a striped vest",
+   "question": "Is the small tabby cat next to the worker in a striped vest?"
+  },
+  {
+   "id": "mechanic_beside_engineer",
+   "type": "relation",
+   "of": [
+    "mechanic",
+    "engineer"
+   ],
+   "desc": "the worker in grease-stained coveralls stands beside the young worker in blue overalls",
+   "question": "Does the worker in grease-stained coveralls stand beside the young worker in blue overalls?"
+  },
+  {
+   "id": "handover_wrench",
+   "type": "action",
+   "of": [
+    "engineer",
+    "mechanic"
+   ],
+   "desc": "the young worker in blue overalls hands a silver wrench to the worker in grease-stained coveralls",
+   "question": "Is the young worker in blue overalls handing a silver wrench to the worker in grease-stained coveralls?"
+  },
+  {
+   "id": "foreman_pointing_water",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the worker in a striped vest points toward the water",
+   "question": "Does the worker in a striped vest point toward the water?"
+  },
+  {
+   "id": "no_ocean",
+   "type": "absent",
+   "desc": "ocean",
+   "question": "Is there an ocean visible in the background?"
+  },
+  {
+   "id": "crane_operator_standing",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall worker in a yellow hard hat stands",
+   "question": "Is the tall worker in a yellow hard hat standing?"
+  },
+  {
+   "id": "mechanic_standing",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the worker in grease-stained coveralls stands",
+   "question": "Is the worker in grease-stained coveralls standing?"
+  },
+  {
+   "id": "foreman_next_to_cat",
+   "type": "relation",
+   "of": [
+    "foreman",
+    "cat"
+   ],
+   "desc": "the worker in a striped vest is next to the small tabby cat",
+   "question": "Is the worker in a striped vest next to the small tabby cat?"
+  },
+  {
+   "id": "foreman_pointing_direction",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman points toward the water",
+   "question": "Is the foreman pointing toward the water?"
+  },
+  {
+   "id": "operator_arm_crossed",
+   "type": "state",
+   "of": "crane_operator",
+   "desc": "the tall worker in a yellow hard hat has one arm crossed",
+   "question": "Does the tall worker in a yellow hard hat have one arm crossed?"
+  },
+  {
+   "id": "mechanic_expression",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic has an expression of focused determination",
+   "question": "Does the mechanic have an expression of focused determination?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0018",
+ "prompt": "In a vibrant anime style, the scene unfolds at a bustling shipyard dock where massive steel structures loom against a bright sky. On the left stands a tall crane operator in a yellow hard hat, leaning casually against the railing with one arm crossed. In the center, a young engineer in blue overalls holds a rolled-up blueprint tightly, looking intently at the large cargo ship hull rising behind them. To the right, a foreman in a striped vest points firmly toward the water, directing attention to the ongoing work. Next to the foreman sits a small tabby cat on a wooden crate, grooming its paw with calm indifference. Behind the engineer, a stack of rusted metal barrels creates a textured backdrop, adding industrial grit to the setting. The engineer hands a silver wrench to a mechanic in grease-stained coveralls who stands just beside them, ready to tighten a loose bolt on the nearby machinery. The mechanic looks at the tool with focused determination, preparing for the task ahead. There is no ocean visible in the background, only the dry dock floor and distant warehouse walls. The crane operator watches the exchange from their elevated position, while the tabby cat remains oblivious to the human activity. The foreman continues to gesture, ensuring the workflow proceeds without interruption. The rusted barrels stand silent witness to the daily labor, their surfaces weathered by time and salt air. Each character displays distinct features that define their role within this busy industrial environment, captured with clean lines and expressive details typical of the genre.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

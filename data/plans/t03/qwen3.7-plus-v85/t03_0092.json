@@ -1,0 +1,252 @@
+{
+ "style": "flat vector illustration, bold colors, clean lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite setting",
+   "question": "Does the image depict a mountain campsite setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green tent",
+   "question": "Is there a green tent?",
+   "box": [
+    50,
+    100,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    100,
+    400,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with blue hair",
+   "question": "Is there a woman with blue hair?",
+   "box": [
+    400,
+    350,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    500,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    850,
+    550,
+    1000,
+    750
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paper map",
+   "question": "Is there a paper map?",
+   "box": [
+    300,
+    500,
+    450,
+    650
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with blue hair is standing",
+   "question": "Is the woman with blue hair standing?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog lies calmly",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "man_holding_map",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds the map",
+   "question": "Is the man in the red scarf holding the map?"
+  },
+  {
+   "id": "woman_holding_map",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman with blue hair holds the map steady",
+   "question": "Is the woman with blue hair holding the map?"
+  },
+  {
+   "id": "man_adjusting_scarf",
+   "type": "state",
+   "of": "man",
+   "desc": "the man adjusts his scarf",
+   "question": "Is the man adjusting his scarf?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "map"
+   ],
+   "desc": "the woman points at the map",
+   "question": "Is the woman pointing at the map?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man looks at the woman",
+   "question": "Is the man looking at the woman?"
+  },
+  {
+   "id": "man_on_tent",
+   "type": "relation",
+   "of": [
+    "man",
+    "tent"
+   ],
+   "desc": "the man sits on the left side of the tent",
+   "question": "Is the man sitting on the left side of the tent?"
+  },
+  {
+   "id": "dog_next_to_crate",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crate"
+   ],
+   "desc": "the dog lies next to the wooden crate",
+   "question": "Is the dog lying next to the wooden crate?"
+  },
+  {
+   "id": "no_fire_pit",
+   "type": "absent",
+   "desc": "a fire pit",
+   "question": "Is there a fire pit visible in the scene?"
+  },
+  {
+   "id": "woman_gesturing",
+   "type": "action",
+   "of": [
+    "woman",
+    "map"
+   ],
+   "desc": "the woman with blue hair gestures toward the map",
+   "question": "Is the woman with blue hair gesturing toward the map?"
+  },
+  {
+   "id": "woman_boots",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman with blue hair wears hiking boots",
+   "question": "Does the woman with blue hair wear hiking boots?"
+  },
+  {
+   "id": "dog_head_on_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog rests its head on its paws",
+   "question": "Does the brown dog rest its head on its paws?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0092",
+ "prompt": "In a flat vector illustration, a man in a red scarf sits on the left side of a green tent. A woman with blue hair stands in the center, pointing at a map held by the man. To the right, a brown dog lies calmly next to a wooden crate. The man is looking at the woman while she gestures toward the paper. There is no fire pit visible in the scene. The tent anchors the background behind the group. The dog rests its head on its paws near the crate. The woman wears hiking boots and holds the map steady. The man adjusts his scarf slightly as he observes the route. The composition remains simple with bold colors and clean lines throughout the mountain campsite setting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

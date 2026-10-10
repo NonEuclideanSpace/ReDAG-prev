@@ -1,0 +1,419 @@
+{
+ "style": "surreal photorealism, golden hour lighting, high detail, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park with oak and sycamore trees, mossy ground, fallen leaves, sunlight and shadows",
+   "question": "Does the image show a park setting with oak and sycamore trees, moss, and fallen leaves under sunlight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "park bench",
+   "plural": "park benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mossy park bench",
+   "question": "Is there a mossy park bench?",
+   "box": [
+    100,
+    500,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "binoculars",
+   "type": "entity",
+   "class": "binoculars",
+   "plural": "binoculars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of weathered binoculars",
+   "question": "Is there a pair of weathered binoculars?",
+   "box": [
+    300,
+    520,
+    450,
+    600
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "entity",
+   "class": "hot-air balloon",
+   "plural": "hot-air balloons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hot-air balloon",
+   "question": "Is there a hot-air balloon?",
+   "box": [
+    400,
+    50,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "sandwich",
+   "type": "entity",
+   "class": "sandwich",
+   "plural": "sandwiches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten sandwich",
+   "question": "Is there a half-eaten sandwich?",
+   "box": [
+    500,
+    550,
+    600,
+    620
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly",
+   "question": "Is there a fly?",
+   "box": [
+    506,
+    516,
+    554,
+    564
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red unzipped backpack",
+   "question": "Is there a red unzipped backpack?",
+   "box": [
+    150,
+    520,
+    280,
+    650
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded map with worn creases and charcoal annotations",
+   "question": "Is there a folded map with worn creases and charcoal annotations?",
+   "box": [
+    160,
+    580,
+    250,
+    640
+   ]
+  },
+  {
+   "id": "canteen",
+   "type": "entity",
+   "class": "canteen",
+   "plural": "canteens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a canteen with a dangling hose",
+   "question": "Is there a canteen with a dangling hose?",
+   "box": [
+    200,
+    550,
+    260,
+    620
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a trail of ants",
+   "question": "Are there ants?",
+   "box": [
+    300,
+    700,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "binoculars_on_bench",
+   "type": "relation",
+   "of": [
+    "binoculars",
+    "bench"
+   ],
+   "desc": "the binoculars rest upon the bench",
+   "question": "Do the binoculars rest upon the bench?"
+  },
+  {
+   "id": "binoculars_upward",
+   "type": "state",
+   "of": "binoculars",
+   "desc": "the binoculars are fixed upward",
+   "question": "Are the binoculars angled upward?"
+  },
+  {
+   "id": "balloon_above_trees",
+   "type": "state",
+   "of": "balloon",
+   "desc": "the balloon glides above the canopy of trees",
+   "question": "Is the balloon positioned above the tree canopy?"
+  },
+  {
+   "id": "sandwich_on_bench",
+   "type": "relation",
+   "of": [
+    "sandwich",
+    "bench"
+   ],
+   "desc": "the sandwich lies on the bench",
+   "question": "Does the sandwich lie on the bench?"
+  },
+  {
+   "id": "fly_near_sandwich",
+   "type": "relation",
+   "of": [
+    "fly",
+    "sandwich"
+   ],
+   "desc": "the fly hovers near the sandwich",
+   "question": "Is the fly hovering near the sandwich?"
+  },
+  {
+   "id": "backpack_beside_binoculars",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "binoculars"
+   ],
+   "desc": "the backpack is beside the binoculars",
+   "question": "Is the backpack beside the binoculars?"
+  },
+  {
+   "id": "map_in_backpack",
+   "type": "relation",
+   "of": [
+    "map",
+    "backpack"
+   ],
+   "desc": "the map spills out of the backpack",
+   "question": "Is the map spilling out of the backpack?"
+  },
+  {
+   "id": "canteen_in_backpack",
+   "type": "relation",
+   "of": [
+    "canteen",
+    "backpack"
+   ],
+   "desc": "the canteen spills out of the backpack",
+   "question": "Is the canteen spilling out of the backpack?"
+  },
+  {
+   "id": "canteen_hose_dangling",
+   "type": "state",
+   "of": "canteen",
+   "desc": "the canteen's hose is dangling",
+   "question": "Is the canteen's hose dangling?"
+  },
+  {
+   "id": "canteen_mist",
+   "type": "state",
+   "of": "canteen",
+   "desc": "the canteen emits a plume of mist",
+   "question": "Is the canteen emitting a plume of mist?"
+  },
+  {
+   "id": "ants_carrying",
+   "type": "action",
+   "of": [
+    "ants",
+    "sandwich"
+   ],
+   "desc": "the ants carry crumbs and paper bits from the sandwich area",
+   "question": "Are the ants carrying crumbs and paper bits?"
+  },
+  {
+   "id": "ants_on_ground",
+   "type": "state",
+   "of": "ants",
+   "desc": "the ants weave through the ground debris",
+   "question": "Are the ants weaving through the ground debris?"
+  },
+  {
+   "id": "no_passengers",
+   "type": "absent",
+   "desc": "passengers in the balloon",
+   "question": "Are there any passengers visible in the hot-air balloon?"
+  },
+  {
+   "id": "backpack_contents_map_canteen",
+   "type": "attribute",
+   "of": "backpack",
+   "desc": "the backpack spills out a folded map",
+   "question": "Does the red unzipped backpack spill out a folded map?"
+  },
+  {
+   "id": "map_star_balloon",
+   "type": "relation",
+   "of": [
+    "map",
+    "balloon"
+   ],
+   "desc": "a star marked in red on the map points directly at the drifting balloon",
+   "question": "Does a star marked in red on the map point directly at the drifting balloon?"
+  },
+  {
+   "id": "canteen_hose_earth",
+   "type": "state",
+   "of": "canteen",
+   "desc": "the canteen's hose dangles just shy of the damp earth",
+   "question": "Does the canteen's hose dangle just shy of the damp earth?"
+  },
+  {
+   "id": "sandwich_mustard",
+   "type": "attribute",
+   "of": "sandwich",
+   "desc": "the sandwich has a dollop of mustard running down the edge",
+   "question": "Does the sandwich have mustard running down its edge?"
+  },
+  {
+   "id": "fly_hovering",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly is hovering",
+   "question": "Is the fly hovering?"
+  },
+  {
+   "id": "backpack_unzipped",
+   "type": "state",
+   "of": "backpack",
+   "desc": "the backpack is unzipped",
+   "question": "Is the backpack unzipped?"
+  },
+  {
+   "id": "map_annotated",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map is annotated with cryptic symbols",
+   "question": "Is the map annotated with cryptic symbols?"
+  },
+  {
+   "id": "ants_carrying_crumbs",
+   "type": "action",
+   "of": [
+    "ants",
+    "sandwich"
+   ],
+   "desc": "the ants carry crumbs from the sandwich",
+   "question": "Are the ants carrying crumbs from the sandwich?"
+  },
+  {
+   "id": "bench_worn_slats",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench slats are worn smooth",
+   "question": "Are the slats of the mossy park bench worn smooth?"
+  },
+  {
+   "id": "binoculars_clouded_lenses",
+   "type": "attribute",
+   "of": "binoculars",
+   "desc": "the binoculars have clouded lenses",
+   "question": "Do the weathered binoculars have clouded lenses?"
+  },
+  {
+   "id": "sandwich_softened_crust",
+   "type": "attribute",
+   "of": "sandwich",
+   "desc": "the sandwich has a softened crust",
+   "question": "Does the half-eaten sandwich have a softened crust?"
+  },
+  {
+   "id": "sandwich_mustard_rivulets",
+   "type": "attribute",
+   "of": "sandwich",
+   "desc": "mustard runs in rivules down the sandwich edge",
+   "question": "Does mustard run in rivules down the edge of the half-eaten sandwich?"
+  },
+  {
+   "id": "balloon_iridescent",
+   "type": "attribute",
+   "of": "balloon",
+   "desc": "the balloon is painted in swirling iridescent colors",
+   "question": "Is the hot-air balloon painted in swirling iridescent colors?"
+  },
+  {
+   "id": "backpack_spills_canteen",
+   "type": "attribute",
+   "of": "backpack",
+   "desc": "the backpack spills out a canteen",
+   "question": "Does the red unzipped backpack spill out a canteen?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "binoculars",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "sandwich",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "backpack",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0257",
+ "prompt": "The mossy park bench, its slats worn smooth by seasons of sun and rain, bears silent witness to a moment suspended in the amber of an eternal afternoon. Resting upon it are a pair of weathered binoculars, their lenses clouded with time, fixed upward toward a hot-air balloon that glides like a dream above the canopy of oak and sycamore. The balloon, painted in swirling, iridescent colors that seem to shift with the angle of the sun, carries no passengers but instead sways gently as if guided by some unseen spirit. Below, a half-eaten sandwich lies in partial ruin, its crust softened by the afternoon heat, a dollop of mustard running in slow rivulets down the bread’s edge. A fly, drawn by the scent and rhythm of decay, hovers with the patient persistence of an old friend, landing and lifting with the steady cadence of a metronome. Beside the binoculars, a red backpack, unzipped as if caught mid-reveal, spills out its contents: a folded map, its creases worn and annotated with cryptic symbols, and a canteen, its hose dangling and just shy of the damp earth, as if waiting for a touch that will never come. The ground beneath is a patchwork of sunlight and shadow, moss and fallen leaves blending in a mosaic of organic design. A narrow trail of ants weaves through the chaos, carrying crumbs and bits of paper, each step a small rebellion against the stagnation. The map, though folded, seems to unfurl its meaning across the scene itself—routes drawn in charcoal align with the winding path the ants follow, and a star marked in red points directly at the drifting balloon. The canteen, despite the stillness, emits a faint plume of mist that rises in spirals and lingers like a thought just remembered. The binoculars, despite their disuse, seem to draw the eye upward, as if their gaze were a gravitational pull toward the balloon, which, in turn, reflects the sky’s blue in the lenses, creating an infinite recursion of heavens within glass. The backpack’s zipper, still slightly ajar, catches the breeze and gives the illusion of breathing, as though the scene itself is waiting for something—perhaps a hand to close it, or a gust to send it tumbling into the underbrush. In the distance, a low hum resonates, not quite mechanical nor entirely natural, as if the park is humming with a story not yet told, its characters scattered in objects that have not yet begun to move. Each item seems to occupy a role in an unfolding drama, their stillness a suspension of action, a pause in a world poised between memory and invention. The interplay of sun and shadow stretches and shifts with the hour, casting the bench in a soft, golden light that suggests both arrival and departure, as though this scene exists in the space between moments, where time folds and things begin to dream.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

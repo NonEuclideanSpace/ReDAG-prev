@@ -1,0 +1,129 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with a winter backdrop",
+   "question": "Does the image show a snowy town square with a winter backdrop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue coat",
+   "question": "Is there a child in a blue coat?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    400,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "child_hand_out",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a blue coat holds out a mittened hand",
+   "question": "Is the child in a blue coat holding out a mittened hand?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "dog_looking_at_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the golden retriever looks directly at the offered hand of the child in a blue coat",
+   "question": "Is the golden retriever looking directly at the offered hand of the child in a blue coat?"
+  },
+  {
+   "id": "no_snowman",
+   "type": "absent",
+   "desc": "a snowman",
+   "question": "Is there a snowman visible in the background?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a blue coat stands",
+   "question": "Is the child in a blue coat standing?"
+  },
+  {
+   "id": "ground",
+   "type": "entity",
+   "class": "ground",
+   "plural": "grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "white ground",
+   "question": "Is there white ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t02_0003",
+ "prompt": "This flat vector illustration depicts a snowy town square. On the left, a child in a blue coat stands holding out a mittened hand. In the center, a golden retriever sits patiently on the white ground. The dog is looking directly at the offered hand of the child. There is no snowman visible in the background. The scene remains minimal with only these two figures against the winter backdrop.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

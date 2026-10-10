@@ -1,0 +1,494 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, soft lighting, intricate details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit kitchen with an arched frosted window",
+   "question": "Does the image show a sunlit kitchen with an arched frosted window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless steel counter",
+   "question": "Is there a stainless steel counter?",
+   "box": [
+    0,
+    600,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "coffee_machine",
+   "type": "entity",
+   "class": "coffee machine",
+   "plural": "coffee machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red coffee machine",
+   "question": "Is there a red coffee machine?",
+   "box": [
+    300,
+    450,
+    500,
+    650
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white mug",
+   "question": "Is there a white mug?",
+   "box": [
+    520,
+    580,
+    620,
+    680
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dull silver spoon",
+   "question": "Is there a dull silver spoon?",
+   "box": [
+    550,
+    556,
+    650,
+    604
+   ]
+  },
+  {
+   "id": "crumb",
+   "type": "entity",
+   "class": "crumb",
+   "plural": "crumbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an indigo crumb of toast",
+   "question": "Is there an indigo crumb of toast?",
+   "box": [
+    566,
+    556,
+    614,
+    604
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with emerald eyes",
+   "question": "Is there a cat with emerald eyes?",
+   "box": [
+    100,
+    550,
+    280,
+    750
+   ]
+  },
+  {
+   "id": "sunflower",
+   "type": "entity",
+   "class": "sunflower",
+   "plural": "sunflowers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten sunflower",
+   "question": "Is there a half-eaten sunflower?",
+   "box": [
+    150,
+    650,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "fly",
+   "type": "entity",
+   "class": "fly",
+   "plural": "flies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fly",
+   "question": "Is there a fly?",
+   "box": [
+    400,
+    300,
+    450,
+    350
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slightly ajar door",
+   "question": "Is there a slightly ajar door?",
+   "box": [
+    700,
+    200,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "back_window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small round window",
+   "question": "Is there a small round window?",
+   "box": [
+    800,
+    100,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "machine_steam",
+   "type": "state",
+   "of": "coffee_machine",
+   "desc": "steam rises from the red coffee machine in spirals shaped like giraffes",
+   "question": "Does steam rise from the red coffee machine in spirals shaped like giraffes?"
+  },
+  {
+   "id": "mug_tilt",
+   "type": "state",
+   "of": "mug",
+   "desc": "the white mug tilting forward",
+   "question": "Is the white mug tilting forward?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam curling upward from the white mug",
+   "question": "Is steam curling upward from the white mug?"
+  },
+  {
+   "id": "spoon_position",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the spoon resting halfway in the rim of the mug",
+   "question": "Is the spoon resting halfway in the rim of the mug?"
+  },
+  {
+   "id": "cat_watch",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat watching unblinking",
+   "question": "Is the cat watching unblinking?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail curled around the sunflower",
+   "question": "Is the cat's tail curled around the sunflower?"
+  },
+  {
+   "id": "machine_on_counter",
+   "type": "relation",
+   "of": [
+    "coffee_machine",
+    "counter"
+   ],
+   "desc": "the red coffee machine sits atop the stainless steel counter",
+   "question": "Is the red coffee machine sitting atop the stainless steel counter?"
+  },
+  {
+   "id": "mug_beside_machine",
+   "type": "relation",
+   "of": [
+    "mug",
+    "coffee_machine"
+   ],
+   "desc": "the white mug is beside the red coffee machine",
+   "question": "Is the white mug beside the red coffee machine?"
+  },
+  {
+   "id": "crumb_on_spoon",
+   "type": "relation",
+   "of": [
+    "crumb",
+    "spoon"
+   ],
+   "desc": "the indigo crumb is on the spoon",
+   "question": "Is the indigo crumb on the spoon?"
+  },
+  {
+   "id": "cat_on_sill",
+   "type": "relation",
+   "of": [
+    "cat",
+    "windowsill"
+   ],
+   "desc": "the cat is on the windowsill",
+   "question": "Is the cat on the windowsill?"
+  },
+  {
+   "id": "sunflower_by_cat",
+   "type": "relation",
+   "of": [
+    "sunflower",
+    "cat"
+   ],
+   "desc": "the sunflower is beside the cat",
+   "question": "Is the sunflower beside the cat?"
+  },
+  {
+   "id": "door_behind_counter",
+   "type": "relation",
+   "of": [
+    "door",
+    "counter"
+   ],
+   "desc": "the door is behind the counter",
+   "question": "Is the door behind the counter?"
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden windowsill",
+   "question": "Is there a wooden windowsill?",
+   "box": [
+    50,
+    400,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "fly_wings",
+   "type": "state",
+   "of": "fly",
+   "desc": "the fly's wings slicing the air in slow arcs",
+   "question": "Are the fly's wings depicted slicing the air in slow arcs?"
+  },
+  {
+   "id": "cat_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat's fur shimmering like woven shadow and smoke, partially translucent",
+   "question": "Does the cat's fur appear to shimmer like woven shadow and smoke, being partially translucent?"
+  },
+  {
+   "id": "sunflower_petals",
+   "type": "state",
+   "of": "sunflower",
+   "desc": "the sunflower's petals wilting into a soft glowing mist",
+   "question": "Are the sunflower's petals wilting into a soft glowing mist?"
+  },
+  {
+   "id": "door_corridor",
+   "type": "attribute",
+   "of": "door",
+   "desc": "the door reveals a corridor lined with identical coffee machines",
+   "question": "Does the door reveal a corridor lined with identical coffee machines?"
+  },
+  {
+   "id": "back_window_view",
+   "type": "attribute",
+   "of": "back_window",
+   "desc": "the window shows a vast overcast meadow with coffee beans growing like blueberries",
+   "question": "Does the window show a vast overcast meadow with coffee beans growing like blueberries?"
+  },
+  {
+   "id": "spoon_crumb",
+   "type": "attribute",
+   "of": "spoon",
+   "desc": "a crumb of toast on the blade of the spoon",
+   "question": "Is there a crumb of toast on the blade of the spoon?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "emerald eyes on the cat",
+   "question": "Does the cat have emerald eyes?"
+  },
+  {
+   "id": "spoon_crumb_color",
+   "type": "attribute",
+   "of": "crumb",
+   "desc": "the crumb has crisp and golden edges",
+   "question": "Does the crumb have crisp and golden edges?"
+  },
+  {
+   "id": "cat_translucent_overlap",
+   "type": "relation",
+   "of": [
+    "cat",
+    "spoon"
+   ],
+   "desc": "the cat is partially translucent where it overlaps with the spoon's reflection",
+   "question": "Is the cat partially translucent where it overlaps with the spoon's reflection?"
+  },
+  {
+   "id": "machine_ember",
+   "type": "entity",
+   "class": "coffee machine",
+   "plural": "coffee machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee machine in the corridor emitting soft glowing embers",
+   "question": "Is there a coffee machine in the corridor emitting soft glowing embers?",
+   "box": [
+    850,
+    400,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "silver buckets suspended by invisible strings",
+   "question": "Are there silver buckets suspended by invisible strings?",
+   "box": [
+    700,
+    300,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "floor_tiles",
+   "type": "entity",
+   "class": "tile",
+   "plural": "tiles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "mismatched floor tiles depicting different stages of the day",
+   "question": "Are there mismatched floor tiles depicting different stages of the day?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sunflower_core",
+   "type": "attribute",
+   "of": "sunflower",
+   "desc": "the sunflower's core is a spiral of tiny clocks",
+   "question": "Is the sunflower's core a spiral of tiny clocks?"
+  },
+  {
+   "id": "crumb_indigo",
+   "type": "attribute",
+   "of": "crumb",
+   "desc": "the crumb is indigo",
+   "question": "Is the crumb indigo?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "coffee_machine",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "crumb",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0230",
+ "prompt": "The sun slants through an arched, frosted window in a sunlit kitchen that exists in the curious interstice between days—like the hour just before reality hardens. A red coffee machine hums steadily, its steam rising in sinuous spirals that twist into the shapes of miniature, translucent giraffes before vanishing into the air. It sits atop a stainless steel counter, its surface reflecting not just the room but fragments of an adjacent, unseen dimension: a shadowy corridor with doors swinging open into starfields, a garden where trees bloom in reverse, and a clocktower with no numbers but ticking in sync with the coffee machine’s motor. Beside it, a white mug tilts precariously forward, steam curling upward in thin filaments, not from heat alone but from the ghostly breath of a nameless dream. The handle is still warm from a hand that left moments ago, but now the space around it feels charged with anticipation, as if the room remembers the motion and longs for its return. A spoon rests halfway in the rim, the silver dull and pitted with time, its surface catching light in ways that flicker—each gleam a different memory. On the blade of the spoon, a crumb of yesterday’s toast remains, its edges crisp and golden, yet the bread is now a shade of indigo, suggesting it had been dipped in something between a recipe and a secret. The air is heavy with the aroma of coffee and something else—something metallic, like rain just before it falls, or the scent of a city that only exists in your periphery. From the windowsill, a cat watches, unblinking, its emerald eyes following the movement of steam and light. Its tail curls protectively around a half-eaten sunflower, the petals already wilting into a soft, glowing mist that seeps into the cracks of the wooden sill. The sunflower’s core is not a center but a spiral of tiny clocks, each ticking forward and backward at once, their gears interlocked with those of the coffee machine, the spoon, and the mug. The cat’s fur shimmers in the sunlight, not as if it were made of fur but of woven shadow and featherlight smoke, its body partially translucent where it overlaps with the spoon’s reflection. A fly buzzes lazily through the scene, its wings slicing the air in slow, deliberate arcs, each flap creating ripples in the room’s geometry, as if the kitchen were not a space but a surface on the skin of a deeper world. Behind the counter, a door slightly ajar reveals a corridor lined with identical coffee machines, each one humming in a different key, their steam spirals forming constellations in the air. One machine has no steam but instead exudes a low hum and emits soft, glowing embers that swirl like autumn leaves before vanishing into the wall. A small, round window in the back of the kitchen offers a view of a vast, overcast meadow where coffee beans grow like blueberries, their pulp ripening into liquid time that drips into silver buckets suspended by invisible strings. The floor beneath the counter is not wood but a patchwork of mismatched tiles, each depicting a different stage of the day—dawn, noon, dusk, and the in-between hour where nothing is what it seems. One tile shows a hand holding the very mug that now sits on the counter, while another depicts the same cat curled up beside a clock with no face. The room breathes with quiet contradictions: the coffee machine is both ancient and new, the mug is both full and empty, the cat is both present and absent. Light shifts as if thinking, and shadows stretch not only on the floor but upward, hanging like curtains in a silent performance. Every object seems to exist in relation to the others, each pulling and tugging the narrative forward like threads in a tapestry woven from time, memory, and the slow, inexorable passage of morning. The spoon trembles, as if about to stir the mug or fall into it, and in that instant, the entire room holds its breath—waiting for the sound of time to ripple through the stillness.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 45,
+   "n_uncovered": 5,
+   "proposed": 2,
+   "ungrounded": 1,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cat_on_sill_rel",
+     "cat_on_sill"
+    ]
+   ]
+  }
+ }
+}

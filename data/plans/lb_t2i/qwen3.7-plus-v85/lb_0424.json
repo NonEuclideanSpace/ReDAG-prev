@@ -1,0 +1,666 @@
+{
+ "style": "surreal digital art, dim amber lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wooden kitchen interior with wooden beams overhead and a counter",
+   "question": "Does the image show a wooden kitchen interior with wooden beams and a counter?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "stove",
+   "plural": "stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient warped wooden stove",
+   "question": "Is there an ancient warped wooden stove?",
+   "box": [
+    100,
+    500,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "kettle",
+   "type": "entity",
+   "class": "kettle",
+   "plural": "kettles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red kettle",
+   "question": "Is there a red kettle?",
+   "box": [
+    150,
+    450,
+    250,
+    550
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "hanging basket",
+   "plural": "hanging baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging basket",
+   "question": "Is there a hanging basket?",
+   "box": [
+    600,
+    100,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "bananas",
+   "type": "entity",
+   "class": "banana",
+   "plural": "bananas",
+   "count": 2,
+   "count_exact": false,
+   "desc": "green bananas",
+   "question": "Are there green bananas?",
+   "box": [
+    650,
+    150,
+    750,
+    250
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped mug",
+   "question": "Is there a chipped mug?",
+   "box": [
+    450,
+    600,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slightly ajar window",
+   "question": "Is there a slightly ajar window?",
+   "box": [
+    800,
+    200,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "raindrop",
+   "type": "entity",
+   "class": "raindrop",
+   "plural": "raindrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single large raindrop suspended in mid-air",
+   "question": "Is there a single large raindrop suspended in mid-air?",
+   "box": [
+    686,
+    486,
+    734,
+    534
+   ]
+  },
+  {
+   "id": "radio",
+   "type": "entity",
+   "class": "radio",
+   "plural": "radios",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a radio half-submerged in a puddle",
+   "question": "Is there a radio half-submerged in a puddle?",
+   "box": [
+    300,
+    800,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern twisted into the shape of a spiral staircase",
+   "question": "Is there a potted fern twisted into the shape of a spiral staircase?",
+   "box": [
+    820,
+    600,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "island",
+   "type": "entity",
+   "class": "floating island",
+   "plural": "floating islands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating island of moss and roots hovering outside the window",
+   "question": "Is there a floating island of moss and roots hovering outside the window?",
+   "box": [
+    850,
+    100,
+    1000,
+    180
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with hands spinning counterclockwise",
+   "question": "Is there a clock with hands spinning counterclockwise?",
+   "box": [
+    50,
+    850,
+    150,
+    950
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a red coat",
+   "question": "Is there a child in a red coat?",
+   "box": [
+    900,
+    250,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "kettle",
+   "desc": "steam spiraling from the red kettle",
+   "question": "Is steam spiraling from the red kettle?"
+  },
+  {
+   "id": "kettle_silent",
+   "type": "state",
+   "of": "kettle",
+   "desc": "the red kettle is not whistling",
+   "question": "Is the red kettle silent (not whistling)?"
+  },
+  {
+   "id": "bananas_glowing",
+   "type": "state",
+   "of": "bananas",
+   "desc": "the bananas are glowing brightly with cyan light",
+   "question": "Are the bananas glowing brightly with cyan light?"
+  },
+  {
+   "id": "coffee_helix",
+   "type": "relation",
+   "of": [
+    "mug",
+    "vapor_cloud"
+   ],
+   "desc": "liquid rising from the mug in a helix shape",
+   "question": "Is liquid rising from the mug in a helix shape?"
+  },
+  {
+   "id": "crystals_glowing",
+   "type": "state",
+   "of": "stove",
+   "desc": "the crystalline growths on the stove are glowing pale blue",
+   "question": "Are the crystalline growths on the stove glowing pale blue?"
+  },
+  {
+   "id": "radio_silent",
+   "type": "state",
+   "of": "radio",
+   "desc": "the radio is silent",
+   "question": "Is the radio silent?"
+  },
+  {
+   "id": "clock_frozen",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock's hands are frozen mid-turn",
+   "question": "Are the clock's hands frozen mid-turn?"
+  },
+  {
+   "id": "kettle_next_to_mug",
+   "type": "relation",
+   "of": [
+    "kettle",
+    "mug"
+   ],
+   "desc": "the red kettle is next to the chipped mug",
+   "question": "Is the red kettle next to the chipped mug?"
+  },
+  {
+   "id": "basket_above_stove",
+   "type": "relation",
+   "of": [
+    "basket",
+    "stove"
+   ],
+   "desc": "the hanging basket is above the stove area",
+   "question": "Is the hanging basket positioned above the stove area?"
+  },
+  {
+   "id": "bananas_in_basket",
+   "type": "relation",
+   "of": [
+    "bananas",
+    "basket"
+   ],
+   "desc": "the bananas are in the hanging basket",
+   "question": "Are the bananas in the hanging basket?"
+  },
+  {
+   "id": "steam_toward_bananas",
+   "type": "relation",
+   "of": [
+    "kettle",
+    "bananas"
+   ],
+   "desc": "steam from the kettle moves toward the bananas",
+   "question": "Does steam from the kettle move toward the bananas?"
+  },
+  {
+   "id": "helix_merges_steam",
+   "type": "relation",
+   "of": [
+    "mug",
+    "kettle"
+   ],
+   "desc": "the liquid helix from the mug merges with the steam from the kettle",
+   "question": "Does the liquid helix from the mug merge with the steam from the kettle?"
+  },
+  {
+   "id": "cables_connect_kettle_radio",
+   "type": "relation",
+   "of": [
+    "stove",
+    "radio"
+   ],
+   "desc": "vine-like cables from the stove connect to the radio",
+   "question": "Do vine-like cables from the stove connect to the radio?"
+  },
+  {
+   "id": "fern_on_windowsill",
+   "type": "relation",
+   "of": [
+    "fern",
+    "window"
+   ],
+   "desc": "the fern is on the windowsill",
+   "question": "Is the fern on the windowsill?"
+  },
+  {
+   "id": "island_outside_window",
+   "type": "relation",
+   "of": [
+    "island",
+    "window"
+   ],
+   "desc": "the floating island is outside the window",
+   "question": "Is the floating island outside the window?"
+  },
+  {
+   "id": "child_outside_window",
+   "type": "relation",
+   "of": [
+    "child",
+    "window"
+   ],
+   "desc": "the child is outside the window",
+   "question": "Is the child outside the window?"
+  },
+  {
+   "id": "clock_on_floor",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock is on the floor",
+   "question": "Is the clock on the floor?"
+  },
+  {
+   "id": "no_other_windows",
+   "type": "absent",
+   "desc": "additional windows",
+   "question": "Are there any additional windows besides the one described?"
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle on the counter",
+   "question": "Is there a puddle on the counter?",
+   "box": [
+    700,
+    650,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "raindrops_queue",
+   "type": "entity",
+   "class": "raindrop",
+   "plural": "raindrops",
+   "count": 2,
+   "count_exact": false,
+   "desc": "multiple raindrops hovering in a vertical queue outside",
+   "question": "Are there multiple raindrops hovering in a vertical queue outside?",
+   "box": [
+    0,
+    0,
+    200,
+    1024
+   ]
+  },
+  {
+   "id": "field_clocks",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "multiple clocks in a sun-drenched field",
+   "question": "Are there multiple clocks in a sun-drenched field?",
+   "box": [
+    800,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "radio_on_puddle",
+   "type": "relation",
+   "of": [
+    "radio",
+    "puddle"
+   ],
+   "desc": "the radio is half-submerged in the puddle",
+   "question": "Is the radio half-submerged in the puddle?"
+  },
+  {
+   "id": "raindrop_position",
+   "type": "relation",
+   "of": [
+    "raindrop",
+    "window",
+    "mug"
+   ],
+   "desc": "the single raindrop is suspended between the windowpane and the mug’s edge",
+   "question": "Is the single raindrop suspended between the windowpane and the mug’s edge?"
+  },
+  {
+   "id": "clock_gears_vines",
+   "type": "relation",
+   "of": [
+    "clock",
+    "stove"
+   ],
+   "desc": "the clock's gears interlock with the vine-like cables from the stove",
+   "question": "Do the clock's gears interlock with the vine-like cables from the stove?"
+  },
+  {
+   "id": "clock_gears_antennas",
+   "type": "relation",
+   "of": [
+    "clock",
+    "radio"
+   ],
+   "desc": "the clock's gears interlock with the radio’s antennas",
+   "question": "Do the clock's gears interlock with the radio’s antennas?"
+  },
+  {
+   "id": "seed_pods_drifting",
+   "type": "state",
+   "of": "bananas",
+   "desc": "the bananas release tiny seed-pods that drift like lanterns",
+   "question": "Are the bananas releasing tiny seed-pods that drift like lanterns?"
+  },
+  {
+   "id": "coffee",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the chipped mug contains a half-finished cup of coffee",
+   "question": "Does the chipped mug contain a half-finished cup of coffee?"
+  },
+  {
+   "id": "window_ajar",
+   "type": "state",
+   "of": "window",
+   "desc": "the window is slightly ajar",
+   "question": "Is the window slightly ajar?"
+  },
+  {
+   "id": "kettle_whistling_past",
+   "type": "state",
+   "of": "kettle",
+   "desc": "the red kettle has stopped whistling",
+   "question": "Has the red kettle stopped whistling (is it silent now after whistling)?"
+  },
+  {
+   "id": "bananas_suspended",
+   "type": "state",
+   "of": "bananas",
+   "desc": "the bananas are suspended in the air",
+   "question": "Are the bananas suspended in the air?"
+  },
+  {
+   "id": "floorboards",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden floorboards",
+   "question": "Are there wooden floorboards?",
+   "box": [
+    0,
+    900,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "vapor_cloud",
+   "type": "entity",
+   "class": "vapor",
+   "plural": "vapors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vapor cloud",
+   "question": "Is there a vapor cloud?",
+   "box": [
+    400,
+    300,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "plume_drifting",
+   "type": "action",
+   "of": [
+    "mug",
+    "vapor_cloud"
+   ],
+   "desc": "the feathered plume from the mug drifts into the vapor cloud",
+   "question": "Does the feathered plume from the mug drift into the vapor cloud?"
+  },
+  {
+   "id": "island_tilting",
+   "type": "state",
+   "of": "island",
+   "desc": "the floating island is tilting",
+   "question": "Is the floating island tilting?"
+  },
+  {
+   "id": "stove_crystals",
+   "type": "attribute",
+   "of": "stove",
+   "desc": "a lattice of crystalline growths on the stove",
+   "question": "Does the stove have a lattice of crystalline growths?"
+  },
+  {
+   "id": "stove_cables",
+   "type": "attribute",
+   "of": "stove",
+   "desc": "vine-like cables sprouting from the stove",
+   "question": "Are there vine-like cables sprouting from the stove?"
+  },
+  {
+   "id": "bananas_veins",
+   "type": "attribute",
+   "of": "bananas",
+   "desc": "soft cyan bioluminescent veins on the bananas",
+   "question": "Do the bananas have soft cyan bioluminescent veins?"
+  },
+  {
+   "id": "bananas_rotten",
+   "type": "state",
+   "of": "bananas",
+   "desc": "the bananas are half-rotten",
+   "question": "Are the bananas half-rotten?"
+  },
+  {
+   "id": "mug_beak",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug is reshaping into a bird’s beak",
+   "question": "Is the mug reshaping into a bird’s beak?"
+  },
+  {
+   "id": "mug_plume",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "a feathered plume drifting from the mug",
+   "question": "Is there a feathered plume drifting from the mug?"
+  },
+  {
+   "id": "field_clocks_visible",
+   "type": "relation",
+   "of": [
+    "field_clocks",
+    "window"
+   ],
+   "desc": "the clocks in the sun-drenched field are visible through the window",
+   "question": "Are the clocks in the sun-drenched field visible through the window?"
+  },
+  {
+   "id": "vapor_merger",
+   "type": "relation",
+   "of": [
+    "vapor_cloud",
+    "kettle",
+    "mug"
+   ],
+   "desc": "the vapor cloud is formed by merging steam from the kettle and liquid helix from the mug",
+   "question": "Is the vapor cloud formed by merging steam from the kettle and liquid helix from the mug?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stove",
+   "to": "kettle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "radio",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "fern",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "puddle",
+   "to": "radio",
+   "kind": "support"
+  },
+  {
+   "from": "window",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0424",
+ "prompt": "In the dim amber glow of a rain-lashed afternoon, the red kettle on the wooden kitchen stove whistles with an almost mechanical urgency, its steam spiraling lazily toward the hanging basket of green bananas, each one subtly pulsing with bioluminescent veins of soft cyan that respond to the kettle’s hiss like a living circuit. The bananas sway slightly in their suspension, casting fractured shadows that ripple across the wooden beams overhead as the wind, damp and insistent, sneaks through a slightly ajar window. Next to the kettle, a chipped mug cradles a half-finished cup of coffee, its surface rippling not just from heat but from the spectral shimmer of an invisible breeze that seems to emanate from the bananas themselves. A single raindrop, mid-fall, is frozen in time, suspended between the windowpane and the mug’s edge, as if the world has caught its breath in anticipation. The coffee inside the mug begins to rise—not spill, but rise—as though pulled by a gravitational anomaly, forming a liquid helix that twines upward, merging with the kettle’s steam and the glowing fruit, creating a vapor that smells faintly of cinnamon and ozone. The wooden stove, ancient and warped, has grown a lattice of crystalline growths where fire should be, glowing faintly in a pale blue, their heat source unknown but palpable, and from them sprout tendrils of vine-like cables that snake along the walls, connecting the kettle to a radio that sits half-submerged in a puddle on the counter. The radio crackles to life as the kettle’s steam reaches it, playing a backwards recording of a child humming an unknown lullaby. On the windowsill, a potted fern has twisted itself into the shape of a spiral staircase, each leaf a step leading upward toward the window where, impossibly, a floating island of moss and roots hovers just beyond the glass, casting a shadow that seems to stretch backward rather than forward. The raindrops outside do not fall; they hover in a vertical queue, like pearls on a string, each one reflecting a different version of the kitchen within—some with no bananas, some with only one, some with the bananas turned to stone. The floorboards creak under the weight of a clock whose hands spin counterclockwise, its gears interlocking with the vines and the radio’s antennas in a tangle of copper and time. The chipped mug, now nearly empty, begins to reshape itself—its ceramic reassembling into a bird’s beak, its dregs transforming into a feathered plume that drifts into the vapor cloud, where it vanishes in a puff of iridescent mist. The bananas, now half-rotten and glowing brighter, release tiny seed-pods that drift like lanterns through the kitchen, their glow intensifying with each passing second until the entire room pulses with an impossible rhythm, as if the scene itself were a living, breathing entity. The kettle stops whistling. The radio goes silent. The clock’s hands freeze mid-turn. The raindrops hang still, the floating island tilts, and for the briefest instant, the world outside the window flickers—replacing the gray sky with a sun-drenched field of clocks, each ticking in reverse, and a child in a red coat, staring back, humming the same lullaby.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 49,
+   "n_uncovered": 6,
+   "proposed": 5,
+   "ungrounded": 0,
+   "added": 5,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

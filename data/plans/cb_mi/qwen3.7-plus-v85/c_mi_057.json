@@ -1,0 +1,451 @@
+{
+ "style": "cinematic noir photography, dim lighting, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a 1920s speakeasy backroom",
+   "question": "Does the image show a 1920s speakeasy backroom?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "poker_table",
+   "type": "entity",
+   "class": "poker table",
+   "plural": "poker tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an overturned poker table",
+   "question": "Is there an overturned poker table?",
+   "box": [
+    300,
+    400,
+    724,
+    800
+   ]
+  },
+  {
+   "id": "cards_chips",
+   "type": "entity",
+   "class": "playing card",
+   "plural": "playing cards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scattered playing cards",
+   "question": "Are there scattered playing cards?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "whiskey_bottle",
+   "type": "entity",
+   "class": "whiskey bottle",
+   "plural": "whiskey bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spilled whiskey bottle",
+   "question": "Is there a spilled whiskey bottle?",
+   "box": [
+    150,
+    700,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "broken_glass",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken glass",
+   "question": "Is there a broken glass?",
+   "box": [
+    260,
+    720,
+    340,
+    820
+   ]
+  },
+  {
+   "id": "fedora",
+   "type": "entity",
+   "class": "fedora",
+   "plural": "fedoras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fedora hat",
+   "question": "Is there a fedora hat?",
+   "box": [
+    800,
+    750,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "trumpet_case",
+   "type": "entity",
+   "class": "instrument case",
+   "plural": "instrument cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open trumpet case",
+   "question": "Is there an open trumpet case?",
+   "box": [
+    50,
+    500,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "trumpet",
+   "type": "entity",
+   "class": "trumpet",
+   "plural": "trumpets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a trumpet inside the case",
+   "question": "Is there a trumpet inside the open case?",
+   "box": [
+    70,
+    520,
+    180,
+    680
+   ]
+  },
+  {
+   "id": "tommy_gun",
+   "type": "entity",
+   "class": "submachine gun",
+   "plural": "submachine guns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tommy gun",
+   "question": "Is there a tommy gun propped against the wall?",
+   "box": [
+    900,
+    300,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "side_table",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small side table",
+   "question": "Is there a small side table?",
+   "box": [
+    750,
+    550,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "ashtray",
+   "type": "entity",
+   "class": "ashtray",
+   "plural": "ashtrays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ashtray",
+   "question": "Is there an ashtray?",
+   "box": [
+    780,
+    556,
+    840,
+    604
+   ]
+  },
+  {
+   "id": "cigar",
+   "type": "entity",
+   "class": "cigar",
+   "plural": "cigars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lit cigar",
+   "question": "Is there a lit cigar?",
+   "box": [
+    786,
+    556,
+    834,
+    604
+   ]
+  },
+  {
+   "id": "telephone",
+   "type": "entity",
+   "class": "telephone",
+   "plural": "telephones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage telephone",
+   "question": "Is there a vintage telephone off its hook?",
+   "box": [
+    400,
+    200,
+    500,
+    350
+   ]
+  },
+  {
+   "id": "table_overturned",
+   "type": "state",
+   "of": "poker_table",
+   "desc": "the poker table is overturned",
+   "question": "Is the poker table overturned?"
+  },
+  {
+   "id": "bottle_next_to_glass",
+   "type": "relation",
+   "of": [
+    "whiskey_bottle",
+    "broken_glass"
+   ],
+   "desc": "the spilled whiskey bottle is next to the broken glass",
+   "question": "Is the spilled whiskey bottle next to the broken glass?"
+  },
+  {
+   "id": "trumpet_in_case",
+   "type": "relation",
+   "of": [
+    "trumpet",
+    "trumpet_case"
+   ],
+   "desc": "the trumpet is inside the open case",
+   "question": "Is the trumpet inside the open case?"
+  },
+  {
+   "id": "gun_against_wall",
+   "type": "relation",
+   "of": [
+    "tommy_gun",
+    "wall_entity"
+   ],
+   "desc": "the tommy gun is propped against the wall",
+   "question": "Is the tommy gun propped against the wall?"
+  },
+  {
+   "id": "ashtray_on_table",
+   "type": "relation",
+   "of": [
+    "ashtray",
+    "side_table"
+   ],
+   "desc": "the ashtray is on the small side table",
+   "question": "Is the ashtray on the small side table?"
+  },
+  {
+   "id": "cigar_in_ashtray",
+   "type": "relation",
+   "of": [
+    "cigar",
+    "ashtray"
+   ],
+   "desc": "the lit cigar is in the ashtray",
+   "question": "Is the lit cigar in the ashtray?"
+  },
+  {
+   "id": "fedora_on_floor",
+   "type": "state",
+   "of": "fedora",
+   "desc": "the fedora hat is on the floor",
+   "question": "Is the fedora hat on the floor?"
+  },
+  {
+   "id": "no_people",
+   "type": "absent",
+   "desc": "people",
+   "question": "Are there any people in the image?"
+  },
+  {
+   "id": "no_neon_sign",
+   "type": "absent",
+   "desc": "neon bar sign",
+   "question": "Is there a neon 'bar' sign in the image?"
+  },
+  {
+   "id": "no_modern_items",
+   "type": "absent",
+   "desc": "credit cards",
+   "question": "Are there any credit cards in the image?"
+  },
+  {
+   "id": "cards_chips_on_floor",
+   "type": "state",
+   "of": "cards_chips",
+   "desc": "the playing cards are scattered across the floor",
+   "question": "Are the playing cards scattered across the floor?"
+  },
+  {
+   "id": "whiskey_bottle_spilled",
+   "type": "state",
+   "of": "whiskey_bottle",
+   "desc": "the whiskey bottle is spilled",
+   "question": "Is the whiskey bottle spilled?"
+  },
+  {
+   "id": "broken_glass_state",
+   "type": "state",
+   "of": "broken_glass",
+   "desc": "the glass is broken",
+   "question": "Is the glass broken?"
+  },
+  {
+   "id": "fedora_left",
+   "type": "state",
+   "of": "fedora",
+   "desc": "the fedora hat has been left on the floor",
+   "question": "Has the fedora hat been left on the floor?"
+  },
+  {
+   "id": "trumpet_case_open",
+   "type": "state",
+   "of": "trumpet_case",
+   "desc": "the trumpet case is open",
+   "question": "Is the trumpet case open?"
+  },
+  {
+   "id": "cigar_lit",
+   "type": "state",
+   "of": "cigar",
+   "desc": "the cigar is lit",
+   "question": "Is the cigar lit?"
+  },
+  {
+   "id": "telephone_off_hook",
+   "type": "state",
+   "of": "telephone",
+   "desc": "the vintage telephone is off its hook",
+   "question": "Is the vintage telephone off its hook?"
+  },
+  {
+   "id": "wall_entity",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall in the speakeasy backroom",
+   "question": "Is there a wall in the speakeasy backroom?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "bare_bulb",
+   "type": "entity",
+   "class": "light bulb",
+   "plural": "light bulbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single bare light bulb hanging from the ceiling",
+   "question": "Is there a single bare light bulb hanging from the ceiling?",
+   "box": [
+    480,
+    0,
+    544,
+    100
+   ]
+  },
+  {
+   "id": "poker_chips",
+   "type": "entity",
+   "class": "poker chip",
+   "plural": "poker chips",
+   "count": 2,
+   "count_exact": false,
+   "desc": "scattered poker chips",
+   "question": "Are there scattered poker chips?",
+   "box": [
+    100,
+    700,
+    924,
+    924
+   ]
+  },
+  {
+   "id": "no_digital_watch",
+   "type": "absent",
+   "desc": "digital watches",
+   "question": "Are there any digital watches in the image?"
+  },
+  {
+   "id": "chips_on_floor",
+   "type": "state",
+   "of": "poker_chips",
+   "desc": "the poker chips are scattered across the floor",
+   "question": "Are the poker chips scattered across the floor?"
+  },
+  {
+   "id": "cigar_smoldering",
+   "type": "state",
+   "of": "cigar",
+   "desc": "the cigar is smoldering",
+   "question": "Is the cigar smoldering?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "side_table",
+   "to": "ashtray",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_057",
+ "prompt": "The scene of a hasty escape from a 1920s speakeasy backroom. An overturned poker table lies in the center of the room, with playing cards and poker chips scattered across the floor. A spilled whiskey bottle is next to a broken glass. A fedora hat has been left on the floor. In a corner, an open trumpet case reveals its instrument. A tommy gun is propped against the wall. A single lit cigar smolders in an ashtray on a small side table. The room is dimly lit by a single bare bulb hanging from the ceiling. A vintage telephone is off its hook. The place was cleared out in a hurry, so there are no people, neither patrons nor police officers. The clandestine nature of the place means there are no large, obvious signs like a neon 'bar' sign, and it's an old establishment, so modern items like a credit card or a digital watch are nowhere to be found.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 9,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "tommy_gun_propped",
+     "gun_against_wall"
+    ]
+   ]
+  }
+ }
+}

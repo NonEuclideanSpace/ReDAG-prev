@@ -1,0 +1,503 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, high contrast, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a desolate courtyard with a cracked stone wall, gravel ground, and a sky streaked with purples and golds",
+   "question": "Does the image show a desolate courtyard with a cracked stone wall, gravel ground, and a sunset sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bicycle",
+   "question": "Is there a rusted bicycle?",
+   "box": [
+    300,
+    400,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "stone wall",
+   "plural": "stone walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked stone wall",
+   "question": "Is there a cracked stone wall?",
+   "box": [
+    0,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "clay pot",
+   "plural": "clay pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked clay pot filled with dry okra pods",
+   "question": "Is there a cracked clay pot filled with dry okra pods?",
+   "box": [
+    620,
+    750,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    550,
+    700,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vine with bioluminescent flowers",
+   "question": "Is there a vine with glowing flowers?",
+   "box": [
+    700,
+    200,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a suspended mirror",
+   "question": "Is there a suspended mirror?",
+   "box": [
+    750,
+    150,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle of water",
+   "question": "Is there a puddle of water?",
+   "box": [
+    100,
+    850,
+    400,
+    1000
+   ]
+  },
+  {
+   "id": "pipes",
+   "type": "entity",
+   "class": "copper pipes",
+   "plural": "copper pipes",
+   "count": 1,
+   "count_exact": false,
+   "desc": "copper pipes embedded in the wall",
+   "question": "Are there copper pipes?",
+   "box": [
+    800,
+    400,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter",
+   "question": "Is there a typewriter?",
+   "box": [
+    400,
+    450,
+    500,
+    550
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken clock half-buried in gravel",
+   "question": "Is there a broken clock?",
+   "box": [
+    200,
+    900,
+    300,
+    1000
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    800,
+    250,
+    850,
+    300
+   ]
+  },
+  {
+   "id": "gutter",
+   "type": "entity",
+   "class": "gutter",
+   "plural": "gutters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gutter with ink flowing into it",
+   "question": "Is there a gutter with dark liquid flowing into it?",
+   "box": [
+    850,
+    500,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the rusted bicycle is leaning",
+   "question": "Is the rusted bicycle leaning?"
+  },
+  {
+   "id": "okra_scattered",
+   "type": "state",
+   "of": "pot",
+   "desc": "dry okra pods are spilling from the pot",
+   "question": "Are dry okra pods spilling from the clay pot?"
+  },
+  {
+   "id": "cat_pawing",
+   "type": "action",
+   "of": [
+    "cat",
+    "bicycle"
+   ],
+   "desc": "the tabby cat paws at the bicycle tire",
+   "question": "Is the tabby cat pawing at the bicycle tire?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "action",
+   "of": [
+    "cat",
+    "mirror"
+   ],
+   "desc": "the tabby cat looks at the mirror",
+   "question": "Is the tabby cat looking at the suspended mirror?"
+  },
+  {
+   "id": "vine_on_wall",
+   "type": "relation",
+   "of": [
+    "vine",
+    "wall"
+   ],
+   "desc": "the vine grows on the cracked stone wall",
+   "question": "Does the vine grow on the cracked stone wall?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects a room with another cat",
+   "question": "Does the mirror reflect a room containing another cat?"
+  },
+  {
+   "id": "puddle_reflection",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects a sky with alien stars",
+   "question": "Does the puddle reflect a sky filled with stars instead of the sunset?"
+  },
+  {
+   "id": "ink_flow",
+   "type": "relation",
+   "of": [
+    "pipes",
+    "gutter"
+   ],
+   "desc": "ink flows from the copper pipes into the gutter",
+   "question": "Does ink flow from the copper pipes into the gutter?"
+  },
+  {
+   "id": "typewriter_on_bike",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "bicycle"
+   ],
+   "desc": "the typewriter is on the bicycle handlebars",
+   "question": "Is the typewriter positioned on the bicycle handlebars?"
+  },
+  {
+   "id": "paper_text",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the paper from the typewriter has shifting words",
+   "question": "Does the paper emerging from the typewriter have visible text?"
+  },
+  {
+   "id": "clock_hands",
+   "type": "state",
+   "of": "clock",
+   "desc": "the broken clock hands are positioned backwards",
+   "question": "Are the hands of the broken clock positioned backwards?"
+  },
+  {
+   "id": "moth_ripple",
+   "type": "action",
+   "of": [
+    "moth",
+    "mirror"
+   ],
+   "desc": "the moth causes ripples in the mirror surface",
+   "question": "Does the moth appear to be impacting the mirror, causing distortion?"
+  },
+  {
+   "id": "bicycle_against_wall",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "wall"
+   ],
+   "desc": "the bicycle leans against the wall",
+   "question": "Is the bicycle leaning against the stone wall?"
+  },
+  {
+   "id": "pot_on_ground",
+   "type": "state",
+   "of": "pot",
+   "desc": "the pot sits on the ground",
+   "question": "Is the clay pot sitting on the ground?"
+  },
+  {
+   "id": "no_child",
+   "type": "absent",
+   "desc": "a child",
+   "question": "Is there a child present in the image?"
+  },
+  {
+   "id": "okra_in_tire",
+   "type": "relation",
+   "of": [
+    "pot",
+    "bicycle"
+   ],
+   "desc": "dry okra pods from the pot are caught in the bicycle's tire tread",
+   "question": "Are dry okra pods from the cracked clay pot caught in the rusted bicycle's tire tread?"
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is curled around the base of the wall",
+   "question": "Is the tabby cat curled around the base of the cracked stone wall?"
+  },
+  {
+   "id": "okra_in_gravel",
+   "type": "relation",
+   "of": [
+    "pot",
+    "clock"
+   ],
+   "desc": "dry okra pods from the pot roll into the gravel",
+   "question": "Do dry okra pods from the pot roll into the gravel?"
+  },
+  {
+   "id": "ink_drips",
+   "type": "relation",
+   "of": [
+    "pipes",
+    "stones"
+   ],
+   "desc": "ink drips from the hollowed stones into the copper pipes",
+   "question": "Does ink drip from the hollowed stones into the copper pipes?"
+  },
+  {
+   "id": "keys_trembling",
+   "type": "state",
+   "of": "typewriter",
+   "desc": "the typewriter keys are trembling",
+   "question": "Are the typewriter keys trembling?"
+  },
+  {
+   "id": "stones",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hollowed stones",
+   "question": "Are there hollowed stones?",
+   "box": [
+    100,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "pot_beside_bicycle",
+   "type": "relation",
+   "of": [
+    "pot",
+    "bicycle"
+   ],
+   "desc": "the clay pot is beside the rusted bicycle",
+   "question": "Is the clay pot beside the rusted bicycle?"
+  },
+  {
+   "id": "cat_gaze_wall",
+   "type": "relation",
+   "of": [
+    "cat",
+    "wall"
+   ],
+   "desc": "the tabby cat's gaze is directed at the wall",
+   "question": "Is the tabby cat's gaze directed at the wall?"
+  },
+  {
+   "id": "bicycle_seat_lowered",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle seat is lowered",
+   "question": "Is the bicycle seat lowered?"
+  },
+  {
+   "id": "cat_muddy_paws",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the tabby cat has muddy paws",
+   "question": "Does the tabby cat have muddy paws?"
+  },
+  {
+   "id": "mirror_angle",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror hangs at an impossible angle without support",
+   "question": "Does the mirror hang at an angle without visible support?"
+  },
+  {
+   "id": "stones_ink_filled",
+   "type": "attribute",
+   "of": "stones",
+   "desc": "the hollowed stones are filled with ink",
+   "question": "Are the hollowed stones filled with ink?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wall",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clock",
+   "kind": "support"
+  },
+  {
+   "from": "bicycle",
+   "to": "typewriter",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0049",
+ "prompt": "The sun dips low behind a sky streaked with bruised purples and smoldering golds, casting long shadows over a desolate courtyard where the past and present blur like ink in water. A rusted bicycle, leaning precariously against a cracked stone wall, seems to hold the weight of forgotten summers; its seat lowered just enough for a child to reach, though no child is near—only a ghost of play lingers in the way the spokes still hum with phantom motion, catching and twisting the light as if spinning through unseen forces. Beside it, a clay pot sits on the ground, cracked with age and filled with the remains of what was once a garden—now spilling dry okra pods that scatter like brittle whispers, some caught in the tire’s tread, others rolling into the gravel and vanishing into the earth as if swallowed by time. A tabby cat, coat dappled with the color of twilight and mystery, paws idly at the bicycle’s tire, leaving muddy prints that blend into the dust, its movements deliberate, as if tracing a map only it understands. The cat’s gaze flicks upward, not at the bicycle, but at the wall itself, where a vine has twisted its way up the cracks, blooming with bioluminescent flowers that pulse faintly, their light reflecting off a suspended mirror hanging at an impossible angle—no string, no support, just a reflection of a room within a room that cannot exist. In that reflected room, another cat mirrors the first, and in the next reflection, the scene repeats, receding into infinity like a recursive dream. Below, a puddle of water—unseasonably present—mirrors the sky, but the reflection shows not a sunset, but a sky streaked with alien stars, as if this courtyard exists between two worlds. The gravel underfoot is not just gravel; some stones are hollowed, filled with ink that drips into a nearby gutter, where the ink flows through a series of copper pipes embedded in the wall, leading to a typewriter perched precariously on the bicycle’s handlebars, keys trembling as if being typed by unseen fingers. The paper that emerges from the typewriter is not blank—it is filled with the story of the scene itself, but the words shift and rearrange as the page is read, the narrative never stable, never finished. A moth, drawn to the bioluminescent vines, crashes into the mirror, causing ripples that distort the reflections, briefly warping the reflected cat into a different shape, before the image snaps back. The air is thick with the scent of earth and old iron, but also of something sweet and unplaceable, as if the courtyard is breathing. A broken clock rests half-buried in the gravel, its hands spinning backward, though no one seems to notice, not even the cat, which curls around the base of the wall, now staring into the mirror as if waiting for the other cat to emerge and join it in a dance that will only make sense when the story catches up to the moment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 51,
+   "n_uncovered": 4,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

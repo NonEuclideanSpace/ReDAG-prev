@@ -1,0 +1,262 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a chaotic restaurant kitchen",
+   "question": "Does the image show a chaotic restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    380,
+    220,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "cooking pot",
+   "plural": "cooking pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming cooking pot",
+   "question": "Is there a steaming cooking pot?",
+   "box": [
+    450,
+    600,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a green coat",
+   "question": "Is there a customer in a green coat?",
+   "box": [
+    700,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    750,
+    700,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "wall clock",
+   "plural": "wall clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large copper wall clock",
+   "question": "Is there a large copper wall clock?",
+   "box": [
+    400,
+    50,
+    624,
+    250
+   ]
+  },
+  {
+   "id": "chef_ladle",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a silver ladle",
+   "question": "Is the chef holding a silver ladle?"
+  },
+  {
+   "id": "chef_plate",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a plate of food",
+   "question": "Is the chef holding a plate of food?"
+  },
+  {
+   "id": "waiter_pointing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is pointing urgently",
+   "question": "Is the waiter pointing urgently?"
+  },
+  {
+   "id": "customer_looking",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer is looking intently",
+   "question": "Is the customer looking intently?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting",
+   "question": "Is the cat sitting?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is observing",
+   "question": "Is the cat observing the scene?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef hands a plate of food to the waiter",
+   "question": "Is the chef handing a plate of food to the waiter?"
+  },
+  {
+   "id": "waiter_gestures_pot",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "pot"
+   ],
+   "desc": "the waiter gestures toward the pot",
+   "question": "Is the waiter gesturing toward the pot?"
+  },
+  {
+   "id": "customer_watches",
+   "type": "relation",
+   "of": [
+    "customer",
+    "pot"
+   ],
+   "desc": "the customer watches the pot",
+   "question": "Is the customer watching the pot?"
+  },
+  {
+   "id": "cat_next_to_customer",
+   "type": "relation",
+   "of": [
+    "cat",
+    "customer"
+   ],
+   "desc": "the cat is next to the customer",
+   "question": "Is the cat next to the customer?"
+  },
+  {
+   "id": "clock_above",
+   "type": "relation",
+   "of": [
+    "clock",
+    "chef"
+   ],
+   "desc": "the clock is above the chef",
+   "question": "Is the clock above the chef?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in a white hat stands",
+   "question": "Is the chef in a white hat standing?"
+  },
+  {
+   "id": "waiter_pointing_pot",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "pot"
+   ],
+   "desc": "the waiter in a blue apron points at the steaming cooking pot",
+   "question": "Is the waiter in a blue apron pointing at the steaming cooking pot?"
+  },
+  {
+   "id": "clock_time",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the large copper wall clock shows five o'clock",
+   "question": "Does the large copper wall clock show five o'clock?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0025",
+ "prompt": "In a vibrant anime style, the scene captures a chaotic restaurant kitchen. On the left stands a chef in a white hat holding a silver ladle. In the center, a waiter in a blue apron points urgently at a steaming pot. To the right, a customer in a green coat looks intently at the cooking process. Next to the customer sits a small black cat observing the chaos. Above them all hangs a large copper clock showing five o'clock. The chef hands a plate of food to the waiter. The waiter gestures toward the pot while the customer watches closely. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

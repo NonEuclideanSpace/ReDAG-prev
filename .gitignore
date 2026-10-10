@@ -1,0 +1,36 @@
+# secrets and per-machine files
+secrets.env
+env.local.sh
+configs/machine.json
+configs/models.json
+gates/preflight_*.json
+
+# weights, environments, caches, scratch
+models/
+envs/
+cache/
+tmp/
+logs/
+queue/
+.sync/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# run outputs: only the draft-pool index, contact sheets and three sample prompts are tracked
+runs/*
+!runs/pool_s0/
+runs/pool_s0/img/*
+!runs/pool_s0/img/c_ma_005/
+!runs/pool_s0/img/c_ma_016/
+!runs/pool_s0/img/lb_0374/
+*.state.jsonl
+*.stop
+*.claim
+
+# generated labelling pages (large, rebuilt by scripts/make_sheet.py)
+labels/*/sheet*.html
+
+# OS
+.DS_Store
+._*

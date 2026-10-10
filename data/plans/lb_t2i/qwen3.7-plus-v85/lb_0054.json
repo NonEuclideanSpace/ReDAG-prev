@@ -1,0 +1,536 @@
+{
+ "style": "surreal fantasy, dreamlike atmosphere, intricate details, muted parchment tones with iridescent highlights",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sky the color of old parchment with a hazy glow of a setting sun, and a river with an iridescent sheen reflecting disjointed shards",
+   "question": "Does the background show a parchment-colored sky with a hazy sunset glow and a river with an iridescent, reflective surface?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "drum",
+   "type": "entity",
+   "class": "drum",
+   "plural": "drums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered, ancient drum",
+   "question": "Is there a weathered, ancient drum?",
+   "box": [
+    400,
+    400,
+    624,
+    650
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted bicycle",
+   "question": "Is there a rusted bicycle?",
+   "box": [
+    250,
+    350,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "willow",
+   "type": "entity",
+   "class": "willow tree",
+   "plural": "willow trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gnarled willow tree",
+   "question": "Is there a gnarled willow tree?",
+   "box": [
+    600,
+    100,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "clay mug",
+   "plural": "clay mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked clay mug",
+   "question": "Is there a cracked clay mug?",
+   "box": [
+    100,
+    700,
+    200,
+    850
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "clockwork sparrow",
+   "plural": "clockwork sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clockwork sparrow",
+   "question": "Is there a clockwork sparrow?",
+   "box": [
+    450,
+    300,
+    550,
+    380
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter missing its keys and overgrown with lichen",
+   "question": "Is there a typewriter missing its keys and overgrown with lichen?",
+   "box": [
+    50,
+    800,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "telescope",
+   "type": "entity",
+   "class": "telescope",
+   "plural": "telescopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shattered telescope",
+   "question": "Is there a shattered telescope?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "quilt",
+   "type": "entity",
+   "class": "patchwork quilt",
+   "plural": "patchwork quilts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a frayed and stained patchwork quilt",
+   "question": "Is there a frayed and stained patchwork quilt?",
+   "box": [
+    300,
+    850,
+    500,
+    1000
+   ]
+  },
+  {
+   "id": "mechanism",
+   "type": "entity",
+   "class": "mechanism",
+   "plural": "mechanisms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hidden mechanism",
+   "question": "Is there a hidden mechanism?",
+   "box": [
+    650,
+    750,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle is leaning awkwardly",
+   "question": "Is the bicycle leaning awkwardly?"
+  },
+  {
+   "id": "wheel_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "one wheel of the bicycle is spinning",
+   "question": "Is one wheel of the bicycle spinning?"
+  },
+  {
+   "id": "mug_liquid",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug contains a slow-moving liquid that glows faintly blue",
+   "question": "Does the mug contain a slow-moving liquid that glows faintly blue?"
+  },
+  {
+   "id": "sparrow_listening",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the clockwork sparrow is still",
+   "question": "Is the clockwork sparrow still?"
+  },
+  {
+   "id": "typewriter_vibrating",
+   "type": "state",
+   "of": "typewriter",
+   "desc": "the typewriter frame is vibrating faintly",
+   "question": "Is the typewriter frame vibrating faintly?"
+  },
+  {
+   "id": "ribbon_light",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "a ribbon of light wraps around the spokes of the bicycle wheel",
+   "question": "Is there a ribbon of light wrapping around the spokes of the bicycle wheel?"
+  },
+  {
+   "id": "threads_light",
+   "type": "attribute",
+   "of": "sparrow",
+   "desc": "threads of light connect the sparrow to other objects",
+   "question": "Are there threads of light connecting the sparrow to other objects?"
+  },
+  {
+   "id": "bicycle_against_drum",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "drum"
+   ],
+   "desc": "the bicycle leans against the drum",
+   "question": "Is the bicycle leaning against the drum?"
+  },
+  {
+   "id": "willow_around_drum",
+   "type": "relation",
+   "of": [
+    "willow",
+    "drum"
+   ],
+   "desc": "the willow trunk has grown around the base of the drum",
+   "question": "Has the willow trunk grown around the base of the drum?"
+  },
+  {
+   "id": "willow_in_water",
+   "type": "state",
+   "of": "willow",
+   "desc": "the willow branches drape into the water",
+   "question": "Do the willow branches drape into the water?"
+  },
+  {
+   "id": "mug_in_earth",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug is half-buried in the damp earth of the riverbank",
+   "question": "Is the mug half-buried in the damp earth of the riverbank?"
+  },
+  {
+   "id": "sparrow_above_drum",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "drum"
+   ],
+   "desc": "the sparrow is suspended in the air just above the drum’s rim",
+   "question": "Is the sparrow suspended in the air just above the drum’s rim?"
+  },
+  {
+   "id": "mechanism_beneath_roots",
+   "type": "relation",
+   "of": [
+    "mechanism",
+    "willow"
+   ],
+   "desc": "the mechanism is buried beneath the roots of the willow",
+   "question": "Is the mechanism buried beneath the roots of the willow?"
+  },
+  {
+   "id": "objects_on_bank",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "riverbank"
+   ],
+   "desc": "the typewriter is on the riverbank",
+   "question": "Is the typewriter on the riverbank?"
+  },
+  {
+   "id": "telescope_on_bank",
+   "type": "relation",
+   "of": [
+    "telescope",
+    "riverbank"
+   ],
+   "desc": "the telescope is on the riverbank",
+   "question": "Is the telescope on the riverbank?"
+  },
+  {
+   "id": "quilt_on_bank",
+   "type": "relation",
+   "of": [
+    "quilt",
+    "riverbank"
+   ],
+   "desc": "the quilt is on the riverbank",
+   "question": "Is the quilt on the riverbank?"
+  },
+  {
+   "id": "quilt_unfolding",
+   "type": "state",
+   "of": "quilt",
+   "desc": "the patchwork quilt is half-unfolding",
+   "question": "Is the patchwork quilt half-unfolding?"
+  },
+  {
+   "id": "drum_head_taut",
+   "type": "attribute",
+   "of": "drum",
+   "desc": "the drum has a taut leather head",
+   "question": "Does the drum have a taut leather head?"
+  },
+  {
+   "id": "bicycle_handlebars_twisted",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has handlebars twisted upward",
+   "question": "Are the bicycle's handlebars twisted upward?"
+  },
+  {
+   "id": "willow_trunk_gnarled",
+   "type": "attribute",
+   "of": "willow",
+   "desc": "the willow has a gnarled trunk",
+   "question": "Is the willow's trunk gnarled?"
+  },
+  {
+   "id": "mug_cracked_clay",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug is made of cracked clay",
+   "question": "Is the mug made of cracked clay?"
+  },
+  {
+   "id": "sparrow_clockwork",
+   "type": "attribute",
+   "of": "sparrow",
+   "desc": "the sparrow is a clockwork bird",
+   "question": "Is the sparrow a clockwork bird?"
+  },
+  {
+   "id": "typewriter_keys_missing",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter is missing its keys",
+   "question": "Is the typewriter missing its keys?"
+  },
+  {
+   "id": "telescope_lens_cracked",
+   "type": "attribute",
+   "of": "telescope",
+   "desc": "the telescope has a cracked and clouded lens",
+   "question": "Does the telescope have a cracked and clouded lens?"
+  },
+  {
+   "id": "quilt_frayed_stained",
+   "type": "attribute",
+   "of": "quilt",
+   "desc": "the quilt is frayed and stained",
+   "question": "Is the quilt frayed and stained?"
+  },
+  {
+   "id": "mechanism_cogs_wires_lenses",
+   "type": "attribute",
+   "of": "mechanism",
+   "desc": "the mechanism consists of cogs, wires, and glass lenses",
+   "question": "Does the mechanism consist of cogs, wires, and glass lenses?"
+  },
+  {
+   "id": "mechanism_blinking_whirring",
+   "type": "state",
+   "of": "mechanism",
+   "desc": "the mechanism's glass lenses blink and whir",
+   "question": "Do the glass lenses of the mechanism blink and whir?"
+  },
+  {
+   "id": "riverbank",
+   "type": "entity",
+   "class": "riverbank",
+   "plural": "riverbanks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mossy riverbank",
+   "question": "Is there a mossy riverbank?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "drum_on_bank",
+   "type": "relation",
+   "of": [
+    "drum",
+    "riverbank"
+   ],
+   "desc": "the drum perches on the mossy riverbank",
+   "question": "Is the drum perched on the mossy riverbank?"
+  },
+  {
+   "id": "mug_nearby",
+   "type": "relation",
+   "of": [
+    "mug",
+    "drum"
+   ],
+   "desc": "the cracked clay mug is nearby the drum",
+   "question": "Is the cracked clay mug nearby the drum?"
+  },
+  {
+   "id": "sparrow_twitching",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the clockwork sparrow has an occasional twitch of its wing",
+   "question": "Does the clockwork sparrow have an occasional twitch of its wing?"
+  },
+  {
+   "id": "willow_half_drowned",
+   "type": "state",
+   "of": "willow",
+   "desc": "the willow is half-drowned and half-terrestrial",
+   "question": "Is the willow tree depicted as half-submerged in water and half on land?"
+  },
+  {
+   "id": "typewriter_lichen",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter is overgrown with lichen and moss",
+   "question": "Is the typewriter overgrown with lichen and moss?"
+  },
+  {
+   "id": "willow_branches_long",
+   "type": "attribute",
+   "of": "willow",
+   "desc": "the willow has long fibrous branches",
+   "question": "Does the willow have long fibrous branches?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "drum",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "willow",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "typewriter",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "telescope",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "quilt",
+   "kind": "support"
+  },
+  {
+   "from": "riverbank",
+   "to": "drum",
+   "kind": "support"
+  },
+  {
+   "from": "riverbank",
+   "to": "typewriter",
+   "kind": "support"
+  },
+  {
+   "from": "riverbank",
+   "to": "telescope",
+   "kind": "support"
+  },
+  {
+   "from": "riverbank",
+   "to": "quilt",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0054",
+ "prompt": "Beneath a sky the color of old parchment and tinged with the hazy glow of a setting sun that never quite sets, the weathered drum perches like a sentinel on a mossy riverbank, its taut leather head trembling with each whisper of wind. The drum, ancient and timeworn, is no mere instrument but a keystone in an elaborate, living system. A rusted bicycle, leaning awkwardly against it, seems caught in a perpetual state of being ridden and abandoned—its handlebars twisted upward as if reaching for something just beyond the horizon. One of its wheels, suspended in mid-rotation, spins lazily, propelled by a current of air that flows not from above but from below, rising in invisible spirals through the roots of a gnarled willow whose trunk has grown around the base of the drum. The willow, half-drowned and half-terrestrial, drapes its long, fibrous fingers into the water, which runs with an iridescent sheen—its surface broken by the reflections of a dozen different times, as if the river itself is caught in an endless feedback loop. Nearby, a cracked clay mug half-buried in the damp earth is not empty, but full of a slow-moving liquid that glows faintly blue. It pulses in rhythm with the flutter of the drumhead, as if the drum is both source and sink in a silent, shared heartbeat. The air hums with an eerie resonance, not just from the wind but from the hum of a hidden mechanism buried beneath the roots—cogs and wires and glass lenses that blink and whir in tandem with the spinning wheel. The wheel itself, though rusted, appears to be powered by something more than air—a ribbon of light wraps around its spokes, a spectral tether connecting it to a clockwork sparrow suspended in the air just above the drum’s rim. The bird, still and motionless save for the occasional twitch of its wing, appears to be listening, as if awaiting a signal from somewhere unseen. The sparrow is part of a larger constellation of objects, all subtly connected by threads of light, sound, and time—each object a node in a delicate, invisible network. The riverbank is littered with other fragments of this world: a typewriter missing its keys, now overgrown with lichen and moss, its frame still vibrating faintly with the last sentence typed before the world shifted; a shattered telescope, its lens cracked and clouded, reflecting the sky in disjointed, kaleidoscopic shards; and a patchwork quilt, once vibrant, now frayed and stained, half-unfolding itself as if remembering the warmth of a body it once wrapped. All of these objects coexist in a fragile equilibrium, their interactions neither random nor predetermined, but part of a slow, deliberate dance choreographed by forces unseen. The drum’s rhythm seems to dictate the flow of the river, the river reflects the sky, the sky mirrors the clock, and the clock hums in time with the wheel. There is no beginning and no end to this system—only a continuous, breathing present where the past lingers and the future whispers just out of reach. It is a place where time bends and objects dream, and the air itself seems to hold its breath, waiting for the next pulse of energy to ripple through the web.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 44,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "typewriter_on_bank",
+     "objects_on_bank"
+    ]
+   ]
+  }
+ }
+}

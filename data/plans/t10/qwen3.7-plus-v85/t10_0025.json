@@ -1,0 +1,399 @@
+{
+ "style": "vibrant anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a chaotic restaurant kitchen",
+   "question": "Does the image show a chaotic restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall chef",
+   "question": "Is there a tall chef?",
+   "box": [
+    50,
+    100,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "line_cook",
+   "type": "entity",
+   "class": "cook",
+   "plural": "cooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a line cook",
+   "question": "Is there a line cook?",
+   "box": [
+    280,
+    200,
+    480,
+    750
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large stainless steel pot",
+   "question": "Is there a large stainless steel pot?",
+   "box": [
+    450,
+    600,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "waitress",
+   "type": "entity",
+   "class": "waitress",
+   "plural": "waitresses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young waitress in a pink dress",
+   "question": "Is there a young waitress in a pink dress?",
+   "box": [
+    680,
+    300,
+    880,
+    900
+   ]
+  },
+  {
+   "id": "dishwasher",
+   "type": "entity",
+   "class": "dishwasher",
+   "plural": "dishwashers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly dishwasher in a gray cap",
+   "question": "Is there an elderly dishwasher in a gray cap?",
+   "box": [
+    850,
+    250,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    850,
+    50,
+    980,
+    180
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of crates",
+   "question": "Is there a stack of crates?",
+   "box": [
+    820,
+    150,
+    1000,
+    300
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cutting board",
+   "question": "Is there a wooden cutting board?",
+   "box": [
+    300,
+    650,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "chef_stern",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef has a stern expression",
+   "question": "Does the chef have a stern expression?"
+  },
+  {
+   "id": "chef_arms_crossed",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef has his arms crossed tightly over his chest",
+   "question": "Are the chef's arms crossed tightly over his chest?"
+  },
+  {
+   "id": "cook_sweating",
+   "type": "state",
+   "of": "line_cook",
+   "desc": "sweat beads are visible on the line cook's forehead",
+   "question": "Are sweat beads visible on the line cook's forehead?"
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "pot",
+   "desc": "thick swirling clouds of steam rise from the pot",
+   "question": "Do thick swirling clouds of steam rise from the pot?"
+  },
+  {
+   "id": "waitress_leaning",
+   "type": "state",
+   "of": "waitress",
+   "desc": "the waitress leans forward eagerly",
+   "question": "Is the waitress leaning forward eagerly?"
+  },
+  {
+   "id": "waitress_hand_extended",
+   "type": "state",
+   "of": "waitress",
+   "desc": "the waitress has her hand extended",
+   "question": "Is the waitress's hand extended?"
+  },
+  {
+   "id": "dishwasher_smiling",
+   "type": "state",
+   "of": "dishwasher",
+   "desc": "the dishwasher has a gentle smile",
+   "question": "Does the dishwasher have a gentle smile?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat has wide curious eyes",
+   "question": "Does the small orange cat have wide curious eyes?"
+  },
+  {
+   "id": "chef_pointing",
+   "type": "action",
+   "of": [
+    "chef",
+    "line_cook"
+   ],
+   "desc": "the chef points sharply at the line cook",
+   "question": "Is the chef pointing sharply at the line cook?"
+  },
+  {
+   "id": "cook_chopping",
+   "type": "action",
+   "of": [
+    "line_cook",
+    "board"
+   ],
+   "desc": "the line cook chops vegetables on the wooden board",
+   "question": "Is the line cook chopping vegetables on the wooden board?"
+  },
+  {
+   "id": "cook_handing_plate",
+   "type": "action",
+   "of": [
+    "line_cook",
+    "waitress"
+   ],
+   "desc": "the line cook hands a steaming plate to the waitress",
+   "question": "Is the line cook handing a steaming plate to the waitress?"
+  },
+  {
+   "id": "dishwasher_holding_glass",
+   "type": "attribute",
+   "of": "dishwasher",
+   "desc": "the dishwasher holds a clean glass up to the light",
+   "question": "Is the dishwasher holding a clean glass up to the light?"
+  },
+  {
+   "id": "chef_next_to_cook",
+   "type": "relation",
+   "of": [
+    "chef",
+    "line_cook"
+   ],
+   "desc": "the chef stands next to the line cook",
+   "question": "Is the chef standing next to the line cook?"
+  },
+  {
+   "id": "pot_right_of_waitress",
+   "type": "relation",
+   "of": [
+    "pot",
+    "waitress"
+   ],
+   "desc": "the pot is to the left of the waitress",
+   "question": "Is the pot to the left of the waitress?"
+  },
+  {
+   "id": "dishwasher_behind_waitress",
+   "type": "relation",
+   "of": [
+    "dishwasher",
+    "waitress"
+   ],
+   "desc": "the dishwasher is behind the waitress",
+   "question": "Is the dishwasher behind the waitress?"
+  },
+  {
+   "id": "cat_on_crates",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crates"
+   ],
+   "desc": "the cat is perched atop the stack of crates",
+   "question": "Is the cat perched atop the stack of crates?"
+  },
+  {
+   "id": "dishwasher_looking_at_waitress",
+   "type": "relation",
+   "of": [
+    "dishwasher",
+    "waitress"
+   ],
+   "desc": "the dishwasher looks at the waitress",
+   "question": "Is the dishwasher looking at the waitress?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic equipment like tablets",
+   "question": "Are there any electronic equipment like tablets in the image?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the tall chef in a pristine white uniform stands",
+   "question": "Is the tall chef in a pristine white uniform standing?"
+  },
+  {
+   "id": "burner",
+   "type": "entity",
+   "class": "burner",
+   "plural": "burners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a burner",
+   "question": "Is there a burner?",
+   "box": [
+    400,
+    650,
+    624,
+    750
+   ]
+  },
+  {
+   "id": "pot_on_burner",
+   "type": "relation",
+   "of": [
+    "pot",
+    "burner"
+   ],
+   "desc": "the large stainless steel pot sits on the burner",
+   "question": "Is the large stainless steel pot sitting on the burner?"
+  },
+  {
+   "id": "crates_on_floor",
+   "type": "state",
+   "of": "crates",
+   "desc": "the stack of crates is in the kitchen",
+   "question": "Is the stack of crates present in the kitchen scene?"
+  },
+  {
+   "id": "cat_tail_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat's tail is twitching",
+   "question": "Is the small orange cat's tail twitching?"
+  },
+  {
+   "id": "no_digital_screens",
+   "type": "absent",
+   "desc": "digital screens",
+   "question": "Are there any digital screens in the image?"
+  },
+  {
+   "id": "chef_white_uniform",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the tall chef wears a pristine white uniform",
+   "question": "Does the tall chef wear a pristine white uniform?"
+  },
+  {
+   "id": "cook_blue_apron",
+   "type": "attribute",
+   "of": "line_cook",
+   "desc": "the line cook wears a stained blue apron",
+   "question": "Does the line cook wear a stained blue apron?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crates",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "burner",
+   "to": "pot",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0025",
+ "prompt": "In a vibrant anime style illustration, a chaotic restaurant kitchen buzzes with energy. On the far left stands a tall chef in a pristine white uniform, his arms crossed tightly over his chest as he observes the chaos with a stern expression. Next to him, slightly toward the center, a frantic line cook in a stained blue apron is frantically chopping vegetables on a wooden board, sweat beads visible on his forehead. In the center foreground, a large stainless steel pot sits on a burner, steam rising in thick, swirling clouds that obscure the background slightly. To the right of the pot, a young waitress in a pink dress leans forward eagerly, her hand extended to receive a plate from the line cook. Behind her, near the right edge, an elderly dishwasher in a gray cap looks at the waitress with a gentle smile, holding a clean glass up to the light. Perched atop a stack of crates in the upper right corner, a small orange cat watches the scene with wide, curious eyes, its tail twitching slowly. The chef on the left is pointing sharply at the line cook, indicating a missed order, while the line cook is handing a steaming plate to the waitress in the pink dress. There is no electronic equipment like tablets or digital screens visible anywhere in the kitchen, maintaining a traditional culinary atmosphere despite the modern anime aesthetic.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

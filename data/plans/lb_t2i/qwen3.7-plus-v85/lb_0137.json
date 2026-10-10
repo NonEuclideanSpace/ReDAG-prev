@@ -1,0 +1,516 @@
+{
+ "style": "surrealist digital painting, dreamlike, paradoxical, charcoal and pastel textures, warped perspective",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sun-dappled yard with undulating ground like stretched parchment, faint sketches of oceanic depths and desert dunes beneath the surface",
+   "question": "Does the image show a sun-dappled yard with undulating ground and faint underlying sketches of other landscapes?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence",
+   "plural": "fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low fence",
+   "question": "Is there a low fence?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "dog_present",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the front half of a golden retriever mid-air",
+   "question": "Is the front half of a golden retriever visible mid-air?",
+   "box": [
+    300,
+    200,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "dog_past",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the rear half of a golden retriever",
+   "question": "Is the rear half of a golden retriever visible?",
+   "box": [
+    100,
+    450,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    700,
+    350,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "metronome",
+   "type": "entity",
+   "class": "metronome",
+   "plural": "metronomes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ticking metronome",
+   "question": "Is there a metronome?",
+   "box": [
+    820,
+    320,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "notes",
+   "type": "entity",
+   "class": "musical note",
+   "plural": "musical notes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny glowing musical notes",
+   "question": "Are there tiny glowing musical notes?",
+   "box": [
+    850,
+    400,
+    950,
+    550
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child crouching",
+   "question": "Is there a child crouching?",
+   "box": [
+    100,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small bucket",
+   "question": "Is there a small bucket?",
+   "box": [
+    250,
+    750,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "trowel_violin",
+   "type": "entity",
+   "class": "object",
+   "plural": "objects",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an object resembling a trowel morphing into a violin",
+   "question": "Is there an object resembling a trowel morphing into a violin?",
+   "box": [
+    276,
+    776,
+    324,
+    824
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "wicker basket",
+   "plural": "wicker baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wicker basket",
+   "question": "Is there a wicker basket?",
+   "box": [
+    50,
+    700,
+    150,
+    850
+   ]
+  },
+  {
+   "id": "paper_leaves",
+   "type": "entity",
+   "class": "paper scraps",
+   "plural": "paper scraps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "fluttering paper scraps resembling receipts and letters",
+   "question": "Are there fluttering paper scraps resembling documents?",
+   "box": [
+    400,
+    300,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "dog_state",
+   "type": "state",
+   "of": "dog_present",
+   "desc": "the front half of the dog is paused at the peak of its arc",
+   "question": "Is the front half of the dog positioned at the peak of a leap?"
+  },
+  {
+   "id": "dog_bark_ripples",
+   "type": "attribute",
+   "of": "dog_present",
+   "desc": "visual ripples of color warping the air around the dog's mouth",
+   "question": "Are there visual ripples of color emanating from the dog's mouth?"
+  },
+  {
+   "id": "cat_blinking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is blinking slowly",
+   "question": "Is the cat blinking slowly?"
+  },
+  {
+   "id": "cat_tail_flicking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is flicking",
+   "question": "Is the cat's tail flicking?"
+  },
+  {
+   "id": "child_expression",
+   "type": "state",
+   "of": "child",
+   "desc": "the child has an expression of wonder",
+   "question": "Does the child have an expression of wonder?"
+  },
+  {
+   "id": "child_peering",
+   "type": "action",
+   "of": [
+    "child",
+    "trowel_violin"
+   ],
+   "desc": "the child peers at the trowel-violin in the bucket",
+   "question": "Is the child looking closely at the object in the bucket?"
+  },
+  {
+   "id": "dog_over_fence",
+   "type": "relation",
+   "of": [
+    "dog_present",
+    "fence"
+   ],
+   "desc": "the dog leaps over the fence",
+   "question": "Is the dog leaping over the fence?"
+  },
+  {
+   "id": "cat_on_fence",
+   "type": "relation",
+   "of": [
+    "cat",
+    "fence"
+   ],
+   "desc": "the cat is perched atop the fence",
+   "question": "Is the cat perched on top of the fence?"
+  },
+  {
+   "id": "metronome_behind_cat",
+   "type": "relation",
+   "of": [
+    "metronome",
+    "cat"
+   ],
+   "desc": "the metronome is mounted behind the cat",
+   "question": "Is the metronome located behind the cat?"
+  },
+  {
+   "id": "notes_from_tail",
+   "type": "relation",
+   "of": [
+    "notes",
+    "cat"
+   ],
+   "desc": "the glowing notes emit from the cat's tail",
+   "question": "Do the glowing notes appear to come from the cat's tail?"
+  },
+  {
+   "id": "child_beside_bucket",
+   "type": "relation",
+   "of": [
+    "child",
+    "bucket"
+   ],
+   "desc": "the child crouches beside the bucket",
+   "question": "Is the child crouching next to the bucket?"
+  },
+  {
+   "id": "trowel_in_bucket",
+   "type": "relation",
+   "of": [
+    "trowel_violin",
+    "bucket"
+   ],
+   "desc": "the trowel-violin is submerged in the bucket",
+   "question": "Is the trowel-violin inside the bucket?"
+  },
+  {
+   "id": "leaves_suspended",
+   "type": "relation",
+   "of": [
+    "paper_leaves",
+    "fence"
+   ],
+   "desc": "the paper leaves are suspended near the fence",
+   "question": "Are the paper leaves suspended near the fence?"
+  },
+  {
+   "id": "dog_mouth_mirror",
+   "type": "attribute",
+   "of": "dog_present",
+   "desc": "the dog's mouth holds a mirror reflecting a swapped yard",
+   "question": "Does the dog's mouth contain a mirror reflecting a distorted scene?"
+  },
+  {
+   "id": "dog_past_state",
+   "type": "state",
+   "of": "dog_past",
+   "desc": "the rear half of the golden retriever is running with its tail tucked",
+   "question": "Is the rear half of the golden retriever running with its tail tucked?"
+  },
+  {
+   "id": "basket_breathing",
+   "type": "state",
+   "of": "basket",
+   "desc": "the wicker basket is flexing and breathing",
+   "question": "Is the wicker basket flexing and breathing?"
+  },
+  {
+   "id": "metronome_spinning",
+   "type": "state",
+   "of": "metronome",
+   "desc": "the metronome is spinning in reverse",
+   "question": "Is the metronome spinning in reverse?"
+  },
+  {
+   "id": "pebbles_cascading",
+   "type": "state",
+   "of": "bucket",
+   "desc": "pebbles are cascading sideways from the bucket",
+   "question": "Are pebbles cascading sideways from the bucket?"
+  },
+  {
+   "id": "leaves_dissolving",
+   "type": "state",
+   "of": "paper_leaves",
+   "desc": "the paper leaves are dissolving into light particles",
+   "question": "Are the paper leaves dissolving into light particles?"
+  },
+  {
+   "id": "child_watching",
+   "type": "action",
+   "of": [
+    "child",
+    "dog_present"
+   ],
+   "desc": "the child watches the dog",
+   "question": "Is the child watching the dog?"
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "ball",
+   "plural": "balls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a new jelly-like ball",
+   "question": "Is there a new jelly-like ball?",
+   "box": [
+    800,
+    650,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "child_reaching",
+   "type": "action",
+   "of": [
+    "child",
+    "basket"
+   ],
+   "desc": "the child reaches into the wicker basket for a new ball",
+   "question": "Is the child reaching into the wicker basket for a new ball?"
+  },
+  {
+   "id": "leaves_fluttering",
+   "type": "state",
+   "of": "paper_leaves",
+   "desc": "the paper leaves are fluttering",
+   "question": "Are the paper leaves fluttering?"
+  },
+  {
+   "id": "trowel_strings_plucking",
+   "type": "state",
+   "of": "trowel_violin",
+   "desc": "the tines of the trowel-violin are plucking themselves",
+   "question": "Are the tines of the trowel-violin plucking themselves?"
+  },
+  {
+   "id": "leaves_are_blueprints",
+   "type": "attribute",
+   "of": "paper_leaves",
+   "desc": "the paper leaves include blueprints",
+   "question": "Do the paper leaves include blueprints?"
+  },
+  {
+   "id": "dog_mouth_ball",
+   "type": "attribute",
+   "of": "dog_present",
+   "desc": "the dog's mouth is full of a ball on one side of the split air",
+   "question": "Is the dog's mouth full of a ball on one side of the split air?"
+  },
+  {
+   "id": "fence_morphing",
+   "type": "attribute",
+   "of": "fence",
+   "desc": "the fence planks appear to morph between wood, glass, and mercury",
+   "question": "Do the fence planks appear to morph between wood, glass, and mercury?"
+  },
+  {
+   "id": "dog_past_running",
+   "type": "state",
+   "of": "dog_past",
+   "desc": "the rear half of the dog is running with its tail tucked",
+   "question": "Is the rear half of the dog running with its tail tucked?"
+  },
+  {
+   "id": "notes_hovering",
+   "type": "state",
+   "of": "notes",
+   "desc": "the glowing musical notes are hovering in the air",
+   "question": "Are the glowing musical notes hovering in the air?"
+  },
+  {
+   "id": "trowel_material",
+   "type": "attribute",
+   "of": "trowel_violin",
+   "desc": "the trowel-violin is made of bone and copper wire",
+   "question": "Is the trowel-violin made of bone and copper wire?"
+  },
+  {
+   "id": "basket_alive",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the wicker basket appears alive with flexing reeds",
+   "question": "Does the wicker basket appear alive with flexing reeds?"
+  },
+  {
+   "id": "basket_contents",
+   "type": "attribute",
+   "of": "basket",
+   "desc": "the basket contains colorful jelly-like balls",
+   "question": "Does the basket contain colorful jelly-like balls?"
+  },
+  {
+   "id": "child_calculation",
+   "type": "state",
+   "of": "child",
+   "desc": "the child has an expression of calculation",
+   "question": "Does the child have an expression of calculation?"
+  },
+  {
+   "id": "ball_pulsing",
+   "type": "state",
+   "of": "ball",
+   "desc": "the jelly-like ball pulses like a heart",
+   "question": "Does the jelly-like ball pulse like a heart?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fence",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "fence",
+   "to": "metronome",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0137",
+ "prompt": "The golden retriever bounds through a sun-dappled yard where time seems to have unspooled itself in a tangle of paradoxes and impossible convergences. Its leap over the low wooden fence is both graceful and fractured—half of its body exists in the present, mid-air, while the other half lingers in a previous moment, still running, the tail still tucked beneath it. The cat perched atop the fence blinks slowly, as if accustomed to such disruptions; it’s tail, now flicking in rhythm with a ticking metronome mounted behind it, emits tiny, glowing notes that hover like chimes in the air. The yard itself is not flat but undulates subtly, as though the ground is made of stretched parchment, and beneath it, faint sketches of other landscapes flicker—oceanic depths with floating coral cities, desert dunes with glass towers, all rendered in delicate charcoal and smudged pastel. The child crouches beside the small bucket, peering at the submerged garden trowel, which is slowly morphing into a violin made of bone and copper wire, the tines now strings that pluck themselves in response to the dog’s motion. Nearby, the wicker basket from which the child reaches for a new ball is not a static object but a living thing—its reeds flex and breathe, shifting between holding balls of all colors and sizes, some made of jelly that pulse like hearts. A wind rises from nowhere, carrying with it paper leaves that are not leaves at all but old receipts, love letters, and blueprints, which flutter into the fence and are momentarily suspended by the magnetic bars of a hidden machine. The fence itself is not just wooden but a hybrid of reality—its planks morph between oak, glass, and liquid mercury, reflecting and refracting not just the yard but entire rooms from elsewhere: a kitchen with no ceiling, a clockwork birdcage, a pond where shadows swim upwards. The retriever’s leap now splits the air in two—on one side it is still mid-pursuit, but on the other, it has already caught the ball, and now it’s mouth is full of a mirror that reflects a version of the yard where the cat has taken the form of a child and the child has become a cat. The dog pauses at the peak of its arc, mid-leap, and in that suspended moment, it begins to bark—not in sound but in visual ripples that warp the air into concentric waves of color, bending the fence and sending the cat’s metronome spinning into reverse. The garden trowel-violin hums in resonance, and the paper leaves dissolve into light particles that rise in spirals. The bucket, once still, now overflows with pebbles that fall not downward but sideways, cascading along the warped terrain like water sliding up a hill. The child watches, face lit with a mix of wonder and calculation, as the wicker basket emits a low, melodic sigh, and the fence trembles under the weight of a thousand simultaneous timelines. The dog barks again, and this time, the world flickers—everything shifts, reorders, but remains whole.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 63,
+   "n_uncovered": 8,
+   "proposed": 6,
+   "ungrounded": 0,
+   "added": 5,
+   "dropped": 1
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

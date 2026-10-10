@@ -1,0 +1,273 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunny beach volleyball court with sand",
+   "question": "Does the image show a sunny beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue visor",
+   "question": "Is there a woman in a blue visor?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in striped shorts",
+   "question": "Is there a man in striped shorts?",
+   "box": [
+    400,
+    100,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white volleyball",
+   "question": "Is there a white volleyball?",
+   "box": [
+    550,
+    50,
+    700,
+    200
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a yellow shirt",
+   "question": "Is there a referee in a yellow shirt?",
+   "box": [
+    700,
+    200,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "tall chair",
+   "plural": "tall chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall chair",
+   "question": "Is there a tall chair?",
+   "box": [
+    720,
+    400,
+    880,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    850,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a green hat",
+   "question": "Is there a child in a green hat?",
+   "box": [
+    100,
+    700,
+    350,
+    1000
+   ]
+  },
+  {
+   "id": "woman_knees",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue visor has knees bent",
+   "question": "Does the woman in the blue visor have her knees bent?"
+  },
+  {
+   "id": "man_leaping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in striped shorts is leaping high",
+   "question": "Is the man in striped shorts leaping high?"
+  },
+  {
+   "id": "man_spiking",
+   "type": "action",
+   "of": [
+    "man",
+    "ball"
+   ],
+   "desc": "the man in striped shorts spikes the white volleyball",
+   "question": "Is the man in striped shorts spiking the white volleyball?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the yellow shirt watches intently",
+   "question": "Is the referee in the yellow shirt watching intently?"
+  },
+  {
+   "id": "referee_on_chair",
+   "type": "relation",
+   "of": [
+    "referee",
+    "chair"
+   ],
+   "desc": "the referee in the yellow shirt sits on the tall chair",
+   "question": "Is the referee in the yellow shirt sitting on the tall chair?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits patiently",
+   "question": "Is the brown dog sitting patiently?"
+  },
+  {
+   "id": "dog_on_sand",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits on the sand",
+   "question": "Is the brown dog sitting on the sand?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in the green hat points at the man in striped shorts",
+   "question": "Is the child in the green hat pointing at the man in striped shorts?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue visor looks at the man in striped shorts",
+   "question": "Is the woman in the blue visor looking at the man in striped shorts?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in the green hat sits next to the brown dog",
+   "question": "Is the child in the green hat sitting next to the brown dog?"
+  },
+  {
+   "id": "dog_next_to_referee",
+   "type": "relation",
+   "of": [
+    "dog",
+    "referee"
+   ],
+   "desc": "the brown dog is next to the referee in the yellow shirt",
+   "question": "Is the brown dog next to the referee in the yellow shirt?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue visor stands",
+   "question": "Is the woman in the blue visor standing?"
+  },
+  {
+   "id": "referee_sitting",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the yellow shirt sits",
+   "question": "Is the referee in the yellow shirt sitting?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the green hat sits",
+   "question": "Is the child in the green hat sitting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "referee",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0105",
+ "prompt": "In the style of an oil painting, a beach volleyball tournament unfolds under bright sun. On the left, a woman in a blue visor stands ready with knees bent. In the center, a man in striped shorts leaps high to spike the white ball. To his right, a referee in a yellow shirt watches intently from a tall chair. Next to the referee, a brown dog sits patiently on the sand. In the foreground, a child in a green hat points excitedly at the airborne player. The woman in the blue visor looks at the jumping man. The child in the green hat sits next to the brown dog. There is no net visible in this specific frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,419 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair with a tiled floor",
+   "question": "Does the image show a school science fair setting with a tiled floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    50,
+    600,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with braided hair",
+   "question": "Is there a girl with braided hair?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a striped shirt",
+   "question": "Is there a boy in a striped shirt?",
+   "box": [
+    300,
+    220,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with silver glasses",
+   "question": "Is there a woman with silver glasses?",
+   "box": [
+    450,
+    180,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    750,
+    550,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern with lush green leaves",
+   "question": "Is there a potted fern with lush green leaves?",
+   "box": [
+    850,
+    400,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "janitor",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue uniform",
+   "question": "Is there a man in a blue uniform?",
+   "box": [
+    100,
+    100,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass beaker containing blue liquid",
+   "question": "Is there a glass beaker?",
+   "box": [
+    200,
+    650,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    500,
+    450,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "broom",
+   "type": "entity",
+   "class": "broom",
+   "plural": "brooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broom",
+   "question": "Is there a broom?",
+   "box": [
+    150,
+    400,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "girl_leaning",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with braided hair is leaning forward",
+   "question": "Is the girl with braided hair leaning forward?"
+  },
+  {
+   "id": "girl_looking",
+   "type": "relation",
+   "of": [
+    "girl",
+    "beaker"
+   ],
+   "desc": "the girl with braided hair has her eyes fixed on the beaker",
+   "question": "Is the girl with braided hair looking intently at the beaker?"
+  },
+  {
+   "id": "liquid_bubbling",
+   "type": "state",
+   "of": "beaker",
+   "desc": "the blue liquid in the beaker is bubbling",
+   "question": "Is the blue liquid in the beaker bubbling?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the striped shirt is pointing a finger",
+   "question": "Is the boy in the striped shirt pointing a finger?"
+  },
+  {
+   "id": "boy_mouth_open",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the striped shirt has his mouth open",
+   "question": "Is the boy in the striped shirt's mouth open?"
+  },
+  {
+   "id": "teacher_holding_clipboard",
+   "type": "attribute",
+   "of": "teacher",
+   "desc": "the woman with silver glasses holds a clipboard against her chest",
+   "question": "Is the woman with silver glasses holding a clipboard?"
+  },
+  {
+   "id": "teacher_nodding",
+   "type": "state",
+   "of": "teacher",
+   "desc": "the woman with silver glasses is nodding",
+   "question": "Is the woman with silver glasses nodding?"
+  },
+  {
+   "id": "rabbit_sitting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit is sitting",
+   "question": "Is the small white rabbit sitting?"
+  },
+  {
+   "id": "rabbit_nose_twitching",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit's nose is twitching",
+   "question": "Is the small white rabbit's nose twitching?"
+  },
+  {
+   "id": "janitor_sweeping",
+   "type": "action",
+   "of": [
+    "janitor",
+    "broom"
+   ],
+   "desc": "the man in the blue uniform sweeps the floor with the broom",
+   "question": "Is the man in the blue uniform sweeping the floor with the broom?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in the striped shirt stands next to the girl with braided hair",
+   "question": "Is the boy in the striped shirt standing next to the girl with braided hair?"
+  },
+  {
+   "id": "boy_explaining_to_teacher",
+   "type": "action",
+   "of": [
+    "boy",
+    "teacher"
+   ],
+   "desc": "the boy in the striped shirt explains the reaction to the woman with silver glasses",
+   "question": "Is the boy in the striped shirt explaining something to the woman with silver glasses?"
+  },
+  {
+   "id": "teacher_observing",
+   "type": "action",
+   "of": [
+    "teacher",
+    "beaker"
+   ],
+   "desc": "the woman with silver glasses observes the experiment in the beaker",
+   "question": "Is the woman with silver glasses observing the experiment in the beaker?"
+  },
+  {
+   "id": "rabbit_right_of_teacher",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "teacher"
+   ],
+   "desc": "the small white rabbit is to the right of the woman with silver glasses",
+   "question": "Is the small white rabbit to the right of the woman with silver glasses?"
+  },
+  {
+   "id": "rabbit_on_table",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "table"
+   ],
+   "desc": "the small white rabbit sits on the wooden table",
+   "question": "Is the small white rabbit sitting on the wooden table?"
+  },
+  {
+   "id": "fern_beside_rabbit",
+   "type": "relation",
+   "of": [
+    "fern",
+    "rabbit"
+   ],
+   "desc": "the potted fern is beside the small white rabbit",
+   "question": "Is the potted fern beside the small white rabbit?"
+  },
+  {
+   "id": "fern_on_table",
+   "type": "relation",
+   "of": [
+    "fern",
+    "table"
+   ],
+   "desc": "the potted fern stands on the wooden table",
+   "question": "Is the potted fern standing on the wooden table?"
+  },
+  {
+   "id": "janitor_behind_group",
+   "type": "relation",
+   "of": [
+    "janitor",
+    "teacher"
+   ],
+   "desc": "the man in the blue uniform is behind the woman with silver glasses",
+   "question": "Is the man in the blue uniform behind the woman with silver glasses?"
+  },
+  {
+   "id": "girl_hand_on_table",
+   "type": "relation",
+   "of": [
+    "girl",
+    "table"
+   ],
+   "desc": "the girl with braided hair rests her hand on the edge of the wooden table",
+   "question": "Is the girl with braided hair resting her hand on the edge of the wooden table?"
+  },
+  {
+   "id": "no_screen",
+   "type": "absent",
+   "desc": "digital screens or computer monitors",
+   "question": "Are there any digital screens in the image?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the striped shirt is standing",
+   "question": "Is the boy in the striped shirt standing?"
+  },
+  {
+   "id": "liquid_blue",
+   "type": "attribute",
+   "of": "beaker",
+   "desc": "the liquid in the beaker is blue",
+   "question": "Is the liquid in the beaker blue?"
+  },
+  {
+   "id": "clipboard_position",
+   "type": "attribute",
+   "of": "teacher",
+   "desc": "the clipboard is held against the woman's chest",
+   "question": "Is the clipboard held against the woman's chest?"
+  },
+  {
+   "id": "no_monitor",
+   "type": "absent",
+   "desc": "computer monitors",
+   "question": "Are there any computer monitors in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "beaker",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "rabbit",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0116",
+ "prompt": "A photorealistic photo captures a bustling school science fair. On the left, a girl with braided hair leans forward intently, her eyes fixed on a bubbling blue liquid inside a glass beaker. Next to her stands a boy in a striped shirt, who is pointing a finger at the swirling mixture while explaining the chemical reaction. In the center, a teacher with silver glasses observes the experiment closely, holding a clipboard against her chest. To the right of the teacher, a small white rabbit sits calmly on a wooden table, its nose twitching slightly as it watches the activity. Beside the rabbit, a potted fern with lush green leaves adds a touch of nature to the scientific display. Behind the group, a janitor in a blue uniform sweeps the floor, pushing a broom across the tiled surface. There is no digital screen or computer monitor visible in the scene, emphasizing the hands-on nature of the projects. The girl with braided hair rests her hand on the table edge, stabilizing herself as she peers into the beaker. The boy in the striped shirt gestures animatedly, his mouth open mid-sentence. The teacher with silver glasses nods slightly, acknowledging the students' effort. The small white rabbit remains still, contrasting with the dynamic human interactions. The potted fern stands tall, its leaves casting soft shadows on the table. The janitor in the blue uniform works diligently in the background, ensuring the area remains clean. The composition balances the focused foreground activity with the subtle background maintenance, creating a lively yet organized atmosphere typical of an educational event.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,339 @@
+{
+ "style": "photorealistic photo, high-tech aesthetic, cool LED lighting, sharp reflections",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a space station module with metallic walls",
+   "question": "Does the image show the interior of a space station module with metallic walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "astronaut_blue",
+   "type": "entity",
+   "class": "astronaut",
+   "plural": "astronauts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an astronaut in a blue flight suit",
+   "question": "Is there an astronaut in a blue flight suit?",
+   "box": [
+    350,
+    300,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "control_panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control panel",
+   "question": "Is there a control panel?",
+   "box": [
+    600,
+    250,
+    800,
+    450
+   ]
+  },
+  {
+   "id": "astronaut_white",
+   "type": "entity",
+   "class": "astronaut",
+   "plural": "astronauts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second astronaut in a white suit",
+   "question": "Is there a second astronaut in a white suit?",
+   "box": [
+    50,
+    250,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "tablet",
+   "type": "entity",
+   "class": "tablet",
+   "plural": "tablets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tablet displaying data",
+   "question": "Is there a tablet displaying data?",
+   "box": [
+    150,
+    400,
+    250,
+    500
+   ]
+  },
+  {
+   "id": "robotic_arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic arm",
+   "question": "Is there a robotic arm?",
+   "box": [
+    750,
+    0,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "tool_kit",
+   "type": "entity",
+   "class": "tool kit",
+   "plural": "tool kits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating tool kit",
+   "question": "Is there a floating tool kit?",
+   "box": [
+    800,
+    450,
+    900,
+    550
+   ]
+  },
+  {
+   "id": "water_bubble",
+   "type": "entity",
+   "class": "water bubble",
+   "plural": "water bubbles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a water bubble reflecting the curved horizon",
+   "question": "Is there a water bubble reflecting the curved horizon?",
+   "box": [
+    400,
+    700,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "camera_lens",
+   "type": "entity",
+   "class": "camera lens",
+   "plural": "camera lenses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camera lens",
+   "question": "Is there a camera lens?",
+   "box": [
+    300,
+    800,
+    600,
+    1024
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted plant",
+   "question": "Is there a small potted plant?",
+   "box": [
+    850,
+    100,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "control_panel_on_wall",
+   "type": "state",
+   "of": "control_panel",
+   "desc": "the control panel is on the wall",
+   "question": "Is the control panel on the wall?"
+  },
+  {
+   "id": "camera_lens_foreground",
+   "type": "state",
+   "of": "camera_lens",
+   "desc": "the camera lens is in the foreground",
+   "question": "Is the camera lens in the foreground?"
+  },
+  {
+   "id": "astronaut_blue_horizontal",
+   "type": "state",
+   "of": "astronaut_blue",
+   "desc": "the astronaut in the blue flight suit floats horizontally",
+   "question": "Is the astronaut in the blue flight suit floating horizontally?"
+  },
+  {
+   "id": "astronaut_blue_adjusting",
+   "type": "action",
+   "of": [
+    "astronaut_blue",
+    "control_panel"
+   ],
+   "desc": "the astronaut in the blue flight suit adjusts the control panel",
+   "question": "Is the astronaut in the blue flight suit adjusting the control panel?"
+  },
+  {
+   "id": "astronaut_white_holding",
+   "type": "attribute",
+   "of": "astronaut_white",
+   "desc": "the second astronaut holds the tablet",
+   "question": "Is the second astronaut holding the tablet?"
+  },
+  {
+   "id": "astronaut_white_pointing",
+   "type": "action",
+   "of": [
+    "astronaut_white",
+    "tablet"
+   ],
+   "desc": "the second astronaut points at the data on the tablet screen",
+   "question": "Is the second astronaut pointing at the data on the tablet screen?"
+  },
+  {
+   "id": "astronaut_white_looking",
+   "type": "action",
+   "of": [
+    "astronaut_white",
+    "astronaut_blue"
+   ],
+   "desc": "the second astronaut looks at the astronaut in the blue flight suit",
+   "question": "Is the second astronaut looking at the astronaut in the blue flight suit?"
+  },
+  {
+   "id": "arm_gripping_kit",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "tool_kit"
+   ],
+   "desc": "the robotic arm grips the tool kit",
+   "question": "Is the robotic arm gripping the tool kit?"
+  },
+  {
+   "id": "bubble_near_lens",
+   "type": "relation",
+   "of": [
+    "water_bubble",
+    "camera_lens"
+   ],
+   "desc": "the water bubble is near the camera lens",
+   "question": "Is the water bubble near the camera lens?"
+  },
+  {
+   "id": "plant_near_window",
+   "type": "relation",
+   "of": [
+    "plant",
+    "window"
+   ],
+   "desc": "the potted plant is near the window",
+   "question": "Is the potted plant near the window?"
+  },
+  {
+   "id": "astronaut_blue_floating",
+   "type": "state",
+   "of": "astronaut_blue",
+   "desc": "the astronaut in the blue flight suit is floating",
+   "question": "Is the astronaut in the blue flight suit floating?"
+  },
+  {
+   "id": "robotic_arm_ceiling",
+   "type": "state",
+   "of": "robotic_arm",
+   "desc": "the robotic arm extends from the ceiling",
+   "question": "Does the robotic arm extend from the ceiling of the module?"
+  },
+  {
+   "id": "plant_leaves",
+   "type": "state",
+   "of": "plant",
+   "desc": "the leaves of the small potted plant are spreading out",
+   "question": "Are the leaves of the small potted plant spreading out?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window showing Earth and stars",
+   "question": "Is there a large window showing Earth and stars?",
+   "box": [
+    700,
+    50,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "cables_instruments",
+   "type": "entity",
+   "class": "cable and instrument",
+   "plural": "cables and instruments",
+   "count": 2,
+   "count_exact": false,
+   "desc": "various cables and instruments neatly arranged along the walls",
+   "question": "Are there various cables and instruments neatly arranged along the walls?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "xl_0059",
+ "prompt": "This photorealistic photo shows the interior of a space station module, illuminated by cool LED strips and the bright glow of Earth visible through a large window. In the center, an astronaut in a blue flight suit floats horizontally, adjusting a control panel on the wall. To the left, another astronaut in a white suit holds a tablet, pointing at data displayed on the screen while looking at their colleague. On the right, a robotic arm extends from the ceiling, gripping a floating tool kit securely. In the foreground, a water bubble drifts slowly near a camera lens, reflecting the curved horizon of the planet outside. Various cables and instruments are neatly arranged along the walls, contributing to the high-tech aesthetic. A small potted plant floats near the window, its leaves spreading out in zero gravity. The background reveals the vastness of space, dotted with stars, contrasting with the confined, functional interior. The lighting creates sharp reflections on the metallic surfaces and the astronauts' visors, emphasizing the precision and isolation of life in orbit, while the composition balances human activity with technological elements seamlessly.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "plant_window",
+     "plant_near_window"
+    ]
+   ]
+  }
+ }
+}

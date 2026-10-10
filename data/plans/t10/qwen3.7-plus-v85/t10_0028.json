@@ -1,0 +1,343 @@
+{
+ "style": "cinematic film still, dramatic lighting, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station bay with an open garage door revealing a rainy street",
+   "question": "Does the image show a fire station bay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "engine",
+   "type": "entity",
+   "class": "fire engine",
+   "plural": "fire engines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gleaming red fire engine",
+   "question": "Is there a gleaming red fire engine?",
+   "box": [
+    0,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in soot-stained gear",
+   "question": "Is there a firefighter in soot-stained gear?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a crisp blue uniform",
+   "question": "Is there a woman in a crisp blue uniform?",
+   "box": [
+    400,
+    100,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow raincoat",
+   "question": "Is there a young boy in a yellow raincoat?",
+   "box": [
+    700,
+    600,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dalmatian",
+   "plural": "dalmatians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    650,
+    650,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "older_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a gray sweater",
+   "question": "Is there an older man in a gray sweater?",
+   "box": [
+    750,
+    200,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "small_child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a pink hat",
+   "question": "Is there a small child in a pink hat?",
+   "box": [
+    850,
+    300,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a crisp blue uniform holds a silver clipboard against her chest",
+   "question": "Is the woman in a crisp blue uniform holding a silver clipboard against her chest?"
+  },
+  {
+   "id": "teddy_bear",
+   "type": "attribute",
+   "of": "small_child",
+   "desc": "the small child in a pink hat clutches a worn teddy bear",
+   "question": "Is the small child in a pink hat clutching a worn teddy bear?"
+  },
+  {
+   "id": "firefighter_leaning",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in soot-stained gear is slumped with exhaustion",
+   "question": "Is the firefighter in soot-stained gear slumped with exhaustion?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a crisp blue uniform stands rigidly upright",
+   "question": "Is the woman in a crisp blue uniform standing rigidly upright?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a yellow raincoat sits cross-legged",
+   "question": "Is the young boy in a yellow raincoat sitting cross-legged?"
+  },
+  {
+   "id": "boy_staring",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a yellow raincoat stares wide-eyed",
+   "question": "Is the young boy in a yellow raincoat staring wide-eyed?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dalmatian rests its head",
+   "question": "Is the dalmatian resting its head?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "small_child",
+   "desc": "the small child in a pink hat looks up with curiosity",
+   "question": "Is the small child in a pink hat looking up with curiosity?"
+  },
+  {
+   "id": "firefighter_against_engine",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "engine"
+   ],
+   "desc": "the firefighter in soot-stained gear leans against the red fire engine",
+   "question": "Is the firefighter in soot-stained gear leaning against the red fire engine?"
+  },
+  {
+   "id": "dog_on_boy",
+   "type": "relation",
+   "of": [
+    "dog",
+    "boy"
+   ],
+   "desc": "the dalmatian rests its head on the young boy's knee",
+   "question": "Is the dalmatian resting its head on the young boy's knee?"
+  },
+  {
+   "id": "boy_near_tires",
+   "type": "relation",
+   "of": [
+    "boy",
+    "engine"
+   ],
+   "desc": "the young boy in a yellow raincoat is near the massive tires of the engine",
+   "question": "Is the young boy in a yellow raincoat near the massive tires of the engine?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "older_man",
+   "desc": "the older man in a gray sweater points",
+   "question": "Is the older man in a gray sweater pointing?"
+  },
+  {
+   "id": "child_next_to_man",
+   "type": "relation",
+   "of": [
+    "small_child",
+    "older_man"
+   ],
+   "desc": "the small child in a pink hat is next to the older man in a gray sweater",
+   "question": "Is the small child in a pink hat next to the older man in a gray sweater?"
+  },
+  {
+   "id": "no_flame_smoke",
+   "type": "absent",
+   "desc": "visible flame",
+   "question": "Is there any visible flame in the image?"
+  },
+  {
+   "id": "man_pointing_door",
+   "type": "relation",
+   "of": [
+    "older_man",
+    "garage_door"
+   ],
+   "desc": "the older man in a gray sweater points toward the open garage door",
+   "question": "Is the older man in a gray sweater pointing toward the open garage door?"
+  },
+  {
+   "id": "garage_door",
+   "type": "entity",
+   "class": "garage door",
+   "plural": "garage doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open garage door",
+   "question": "Is there an open garage door?",
+   "box": [
+    700,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "rainy_street",
+   "type": "entity",
+   "class": "street",
+   "plural": "streets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rainy street outside",
+   "question": "Is there a rainy street visible outside?",
+   "box": [
+    750,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "door_reveals_street",
+   "type": "relation",
+   "of": [
+    "garage_door",
+    "rainy_street"
+   ],
+   "desc": "the open garage door reveals the rainy street",
+   "question": "Does the open garage door reveal the rainy street?"
+  },
+  {
+   "id": "dog_calm",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dalmatian looks calm",
+   "question": "Does the dalmatian look calm?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "visible smoke",
+   "question": "Is there any visible smoke in the image?"
+  },
+  {
+   "id": "man_pointing_emphatically",
+   "type": "state",
+   "of": "older_man",
+   "desc": "the older man in a gray sweater points emphatically",
+   "question": "Is the older man in a gray sweater pointing emphatically?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "engine",
+   "to": "firefighter",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0028",
+ "prompt": "A cinematic film still captures the quiet intensity of a fire station bay. On the left, a firefighter in soot-stained gear leans heavily against a gleaming red engine, his posture slumped with exhaustion. In the center, a woman in a crisp blue uniform stands rigidly upright, holding a silver clipboard tightly against her chest as she surveys the scene. To her right, a young boy in a yellow raincoat sits cross-legged on the cold concrete floor, staring wide-eyed at the massive tires. A dalmatian with black spots rests its head calmly on the boy's knee, creating a tender moment of connection between species. Behind them, an older man in a gray sweater points emphatically toward the open garage door, directing attention to the rainy street outside. Next to him, a small child in a pink hat clutches a worn teddy bear, looking up at the pointing man with curiosity. The interaction between the dog and the boy is gentle, while the man in the sweater engages the child in pink through his gesture. There is no visible flame or smoke in the image, emphasizing the calm after the storm. The red engine dominates the left side, anchoring the composition, while the woman in blue commands the center space with her authoritative stance. The boy in yellow occupies the lower right foreground, providing a human scale to the industrial setting. The scene is devoid of chaos, focusing instead on the distinct characters and their subtle relationships within the structured environment of the station.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

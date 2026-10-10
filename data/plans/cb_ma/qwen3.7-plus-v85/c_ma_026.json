@@ -1,0 +1,245 @@
+{
+ "style": "fantasy digital art, majestic, crystalline, glowing aurora",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a frozen Arctic landscape under the dancing aurora borealis",
+   "question": "Does the image show a frozen Arctic landscape under the dancing aurora borealis?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "palace",
+   "type": "entity",
+   "class": "ice palace",
+   "plural": "ice palaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a majestic ice palace constructed from translucent blue ice blocks with soaring spires and ornate flying buttresses",
+   "question": "Is there a majestic ice palace constructed from translucent blue ice blocks with soaring spires and ornate flying buttresses?",
+   "box": [
+    200,
+    100,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "columns",
+   "type": "entity",
+   "class": "ice column",
+   "plural": "ice columns",
+   "count": 5,
+   "count_exact": true,
+   "desc": "towering ice columns",
+   "question": "Are there five towering ice columns?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "staircases",
+   "type": "entity",
+   "class": "ice staircase",
+   "plural": "ice staircases",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three grand ice staircases",
+   "question": "Are there three grand ice staircases?",
+   "box": [
+    150,
+    700,
+    874,
+    950
+   ]
+  },
+  {
+   "id": "foundation",
+   "type": "entity",
+   "class": "snow base",
+   "plural": "snow bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a base of white compressed snow",
+   "question": "Is there a base of white compressed snow?",
+   "box": [
+    180,
+    850,
+    844,
+    1024
+   ]
+  },
+  {
+   "id": "palace_solid",
+   "type": "state",
+   "of": "palace",
+   "desc": "the ice palace is not melting",
+   "question": "Is the ice palace not melting?"
+  },
+  {
+   "id": "palace_uncracked",
+   "type": "state",
+   "of": "palace",
+   "desc": "the ice palace shows no signs of cracking",
+   "question": "Does the ice palace show no signs of cracking?"
+  },
+  {
+   "id": "walls_reflective",
+   "type": "attribute",
+   "of": "palace",
+   "desc": "the palace walls have a smooth, glass-like surface",
+   "question": "Do the palace walls have a smooth, glass-like surface?"
+  },
+  {
+   "id": "windows_ice",
+   "type": "attribute",
+   "of": "palace",
+   "desc": "the palace windows are carved directly from single ice sheets",
+   "question": "Are the palace windows carved directly from single ice sheets?"
+  },
+  {
+   "id": "roof_spires",
+   "type": "attribute",
+   "of": "palace",
+   "desc": "the palace roof features decorative ice spires that spiral skyward",
+   "question": "Does the palace roof feature decorative ice spires that spiral skyward?"
+  },
+  {
+   "id": "staircase_steps",
+   "type": "attribute",
+   "of": "staircases",
+   "desc": "the steps of the ice staircases are carved with decorative ridged patterns",
+   "question": "Are the steps of the ice staircases carved with decorative ridged patterns?"
+  },
+  {
+   "id": "staircase_railings",
+   "type": "attribute",
+   "of": "staircases",
+   "desc": "the ice staircases are bordered by ornate ice railings shaped like frozen vines",
+   "question": "Are the ice staircases bordered by ornate ice railings shaped like frozen vines?"
+  },
+  {
+   "id": "columns_support_entrance",
+   "type": "relation",
+   "of": [
+    "columns",
+    "palace"
+   ],
+   "desc": "the five ice columns support the main entrance of the palace",
+   "question": "Do the five ice columns support the main entrance of the palace?"
+  },
+  {
+   "id": "staircases_lead_palace",
+   "type": "relation",
+   "of": [
+    "staircases",
+    "palace"
+   ],
+   "desc": "the three grand ice staircases lead to different levels of the palace",
+   "question": "Do the three grand ice staircases lead to different levels of the palace?"
+  },
+  {
+   "id": "palace_on_foundation",
+   "type": "relation",
+   "of": [
+    "palace",
+    "foundation"
+   ],
+   "desc": "the palace rests on the base of white compressed snow",
+   "question": "Does the palace rest on the base of white compressed snow?"
+  },
+  {
+   "id": "no_heating",
+   "type": "absent",
+   "desc": "artificial heating systems",
+   "question": "Are there any artificial heating systems in the image?"
+  },
+  {
+   "id": "columns_patterns",
+   "type": "attribute",
+   "of": "columns",
+   "desc": "the ice columns are carved with intricate snowflake patterns",
+   "question": "Are the ice columns carved with intricate snowflake patterns?"
+  },
+  {
+   "id": "columns_crystals",
+   "type": "attribute",
+   "of": "columns",
+   "desc": "the ice columns are embedded with glowing white crystals",
+   "question": "Are the ice columns embedded with glowing white crystals?"
+  },
+  {
+   "id": "palace_frozen_state",
+   "type": "state",
+   "of": "palace",
+   "desc": "the ice palace maintains its solid frozen state",
+   "question": "Does the ice palace maintain its solid frozen state?"
+  },
+  {
+   "id": "walls_reflect_landscape",
+   "type": "attribute",
+   "of": "palace",
+   "desc": "the palace walls reflect the surrounding landscape like mirrors",
+   "question": "Do the palace walls reflect the surrounding landscape like mirrors?"
+  },
+  {
+   "id": "windows_no_glass",
+   "type": "attribute",
+   "of": "palace",
+   "desc": "the palace windows have no glass panes",
+   "question": "Do the palace windows have no glass panes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "foundation",
+   "to": "palace",
+   "kind": "support"
+  },
+  {
+   "from": "palace",
+   "to": "columns",
+   "kind": "support"
+  },
+  {
+   "from": "palace",
+   "to": "staircases",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_026",
+ "prompt": "A single majestic ice palace rising from a frozen Arctic landscape under the dancing aurora borealis. The structure is crystalline and entirely constructed from translucent blue ice blocks tightly fitted together. Its architecture features soaring spires and ornate flying buttresses that catch and refract the colorful northern lights. The palace is not melting, maintaining its solid frozen state despite the magical energy radiating from within. Five towering ice columns support the main entrance, each carved with intricate snowflake patterns and embedded with glowing white crystals. The palace walls display a smooth, glass-like surface that reflects the surrounding landscape like mirrors, while its windows are carved directly from single ice sheets with no glass panes. Three grand ice staircases lead to different levels, their steps carved with decorative ridged patterns and bordered by ornate ice railings shaped like frozen vines. The palace's roof features decorative ice spires that spiral skyward, and its foundation rests on a base of white compressed snow. The structure shows no signs of cracking and contains no artificial heating systems, existing in perfect harmony with its frigid environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node palace: entity question is long (19 words); should only ask presence + identifying look",
+   "node columns: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

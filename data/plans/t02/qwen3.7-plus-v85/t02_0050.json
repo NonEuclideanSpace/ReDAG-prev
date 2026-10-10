@@ -1,0 +1,184 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room interior",
+   "question": "Does the image show a room interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white table",
+   "question": "Is there a white table?",
+   "box": [
+    0,
+    600,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a blue apron",
+   "question": "Is there a girl in a blue apron?",
+   "box": [
+    100,
+    200,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a yellow shirt",
+   "question": "Is there a boy in a yellow shirt?",
+   "box": [
+    500,
+    200,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in a blue apron holds a beaker",
+   "question": "Is the girl in a blue apron holding a beaker?"
+  },
+  {
+   "id": "mixture_bubbling",
+   "type": "state",
+   "of": "boy",
+   "desc": "the mixture the boy looks at is bubbling",
+   "question": "Is the mixture visible to the boy bubbling?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "action",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in a yellow shirt looks at the mixture held by the girl",
+   "question": "Is the boy in a yellow shirt looking at the mixture held by the girl?"
+  },
+  {
+   "id": "girl_next_to_boy",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl is next to the boy",
+   "question": "Is the girl next to the boy?"
+  },
+  {
+   "id": "students_behind_table",
+   "type": "relation",
+   "of": [
+    "girl",
+    "table"
+   ],
+   "desc": "the girl stands behind the table",
+   "question": "Is the girl standing behind the table?"
+  },
+  {
+   "id": "boy_behind_table",
+   "type": "relation",
+   "of": [
+    "boy",
+    "table"
+   ],
+   "desc": "the boy stands behind the table",
+   "question": "Is the boy standing behind the table?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in a blue apron is standing",
+   "question": "Is the girl in a blue apron standing?"
+  },
+  {
+   "id": "charts",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the white table is covered with charts",
+   "question": "Is the white table covered with charts?"
+  },
+  {
+   "id": "beaker_liquid",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the beaker held by the girl contains green liquid",
+   "question": "Does the beaker held by the girl contain green liquid?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "girl",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "boy",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0050",
+ "prompt": "In a photorealistic photo, a girl in a blue apron stands on the left, holding a beaker with green liquid. To her right, a boy in a yellow shirt looks at the bubbling mixture inside the glass. The two students are positioned next to each other behind a white table covered with charts. There is no fire in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

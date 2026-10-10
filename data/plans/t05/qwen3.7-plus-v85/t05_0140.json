@@ -1,0 +1,261 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate seating area",
+   "question": "Does the image show an airport gate seating area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "woman_blue_coat",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    380,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "child_yellow_shirt",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    450,
+    450,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man_gray_hat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray hat",
+   "question": "Is there an elderly man in a gray hat?",
+   "box": [
+    750,
+    280,
+    980,
+    820
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large black suitcase",
+   "question": "Is there a large black suitcase?",
+   "box": [
+    850,
+    600,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    800,
+    750,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf has a silver laptop resting on his knees",
+   "question": "Does the man in the red scarf have a silver laptop resting on his knees?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "man_looking_laptop",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf is looking at the silver laptop",
+   "question": "Is the man in the red scarf looking at the silver laptop?"
+  },
+  {
+   "id": "woman_pointing_screen",
+   "type": "state",
+   "of": "woman_blue_coat",
+   "desc": "the woman in the blue coat is pointing at the departure screen",
+   "question": "Is the woman in the blue coat pointing at the departure screen?"
+  },
+  {
+   "id": "child_holding_woman_hand",
+   "type": "action",
+   "of": [
+    "child_yellow_shirt",
+    "woman_blue_coat"
+   ],
+   "desc": "the child in the yellow shirt is holding the hand of the woman in the blue coat",
+   "question": "Is the child in the yellow shirt holding the hand of the woman in the blue coat?"
+  },
+  {
+   "id": "elderly_man_leaning_suitcase",
+   "type": "relation",
+   "of": [
+    "elderly_man_gray_hat",
+    "suitcase"
+   ],
+   "desc": "the elderly man in the gray hat leans against the large black suitcase",
+   "question": "Is the elderly man in the gray hat leaning against the large black suitcase?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is on the floor",
+   "question": "Is the small brown dog on the floor?"
+  },
+  {
+   "id": "no_food",
+   "type": "absent",
+   "desc": "food",
+   "question": "Is there any food visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_blue_coat",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman_blue_coat",
+    "man_red_scarf"
+   ],
+   "desc": "the woman in the blue coat is next to the man in the red scarf",
+   "question": "Is the woman in the blue coat next to the man in the red scarf?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child_yellow_shirt",
+    "woman_blue_coat"
+   ],
+   "desc": "the child in the yellow shirt is next to the woman in the blue coat",
+   "question": "Is the child in the yellow shirt next to the woman in the blue coat?"
+  },
+  {
+   "id": "dog_next_to_elderly_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "elderly_man_gray_hat"
+   ],
+   "desc": "the small brown dog is beside the elderly man in the gray hat",
+   "question": "Is the small brown dog beside the elderly man in the gray hat?"
+  },
+  {
+   "id": "departure_screen",
+   "type": "entity",
+   "class": "departure screen",
+   "plural": "departure screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure screen mounted on the wall",
+   "question": "Is there a departure screen mounted on the wall?",
+   "box": [
+    300,
+    50,
+    724,
+    250
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t05_0140",
+ "prompt": "In this photorealistic photo, a man in a red scarf sits on the left side of the airport gate seating area. He is looking at a silver laptop resting on his knees. Next to him stands a woman in a blue coat who is pointing at the departure screen mounted on the wall. In the center, a child in a yellow shirt is holding the hand of the woman in the blue coat. To the right, an elderly man in a gray hat leans against a large black suitcase. Beside the elderly man, a small brown dog sits calmly on the floor. There is no food visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

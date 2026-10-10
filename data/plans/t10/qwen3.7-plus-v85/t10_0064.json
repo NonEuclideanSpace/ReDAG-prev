@@ -1,0 +1,421 @@
+{
+ "style": "vibrant anime style, clean lines, expressive features",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy airport gate with large glass windows and a departure board above",
+   "question": "Does the image show a busy airport gate?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_raincoat",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow raincoat",
+   "question": "Is there a woman in a yellow raincoat?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small gray cat",
+   "question": "Is there a small gray cat?",
+   "box": [
+    260,
+    550,
+    380,
+    700
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue suitcase",
+   "question": "Is there a blue suitcase?",
+   "box": [
+    250,
+    650,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    400,
+    250,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child with green hair",
+   "question": "Is there a child with green hair?",
+   "box": [
+    580,
+    350,
+    720,
+    800
+   ]
+  },
+  {
+   "id": "lady",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly lady in a floral dress",
+   "question": "Is there an elderly lady in a floral dress?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    700,
+    600,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    780,
+    750,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "trash_can",
+   "type": "entity",
+   "class": "trash can",
+   "plural": "trash cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large silver trash can",
+   "question": "Is there a large silver trash can?",
+   "box": [
+    900,
+    500,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "woman_upright",
+   "type": "state",
+   "of": "woman_raincoat",
+   "desc": "the woman in the yellow raincoat has an upright posture",
+   "question": "Does the woman in the yellow raincoat have an upright posture?"
+  },
+  {
+   "id": "woman_holding_pass",
+   "type": "attribute",
+   "of": "woman_raincoat",
+   "desc": "the woman in the yellow raincoat clutches a boarding pass",
+   "question": "Is the woman in the yellow raincoat clutching a boarding pass?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small gray cat is sitting",
+   "question": "Is the small gray cat sitting?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small gray cat has its tail curled around its paws",
+   "question": "Is the small gray cat's tail curled around its paws?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_scarf",
+   "desc": "the man in the red scarf leans forward",
+   "question": "Does the man in the red scarf lean forward?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "relation",
+   "of": [
+    "man_scarf",
+    "board"
+   ],
+   "desc": "the man in the red scarf points toward the departure board",
+   "question": "Is the man in the red scarf pointing toward the departure board?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the child with green hair looks up with wide curious eyes",
+   "question": "Does the child with green hair look up?"
+  },
+  {
+   "id": "lady_sitting",
+   "type": "state",
+   "of": "lady",
+   "desc": "the elderly lady in the floral dress is sitting",
+   "question": "Is the elderly lady in the floral dress sitting?"
+  },
+  {
+   "id": "lady_handing_sandwich",
+   "type": "action",
+   "of": [
+    "lady",
+    "dog"
+   ],
+   "desc": "the elderly lady in the floral dress hands a wrapped sandwich to the brown dog",
+   "question": "Is the elderly lady in the floral dress handing a wrapped sandwich to the brown dog?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting patiently",
+   "question": "Is the brown dog sitting patiently?"
+  },
+  {
+   "id": "trash_can_empty",
+   "type": "state",
+   "of": "trash_can",
+   "desc": "the large silver trash can is empty",
+   "question": "Is the large silver trash can empty?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman_raincoat",
+    "cat"
+   ],
+   "desc": "the woman in the yellow raincoat is on the left next to the cat",
+   "question": "Is the woman in the yellow raincoat on the left next to the cat?"
+  },
+  {
+   "id": "cat_on_suitcase",
+   "type": "relation",
+   "of": [
+    "cat",
+    "suitcase"
+   ],
+   "desc": "the small gray cat is on the blue suitcase",
+   "question": "Is the small gray cat on the blue suitcase?"
+  },
+  {
+   "id": "man_center",
+   "type": "relation",
+   "of": [
+    "man_scarf",
+    "child"
+   ],
+   "desc": "the man in the red scarf is in the center beside the child",
+   "question": "Is the man in the red scarf in the center beside the child?"
+  },
+  {
+   "id": "lady_right",
+   "type": "relation",
+   "of": [
+    "lady",
+    "bench"
+   ],
+   "desc": "the elderly lady in the floral dress is to the right on the bench",
+   "question": "Is the elderly lady in the floral dress to the right on the bench?"
+  },
+  {
+   "id": "dog_at_feet",
+   "type": "relation",
+   "of": [
+    "dog",
+    "lady"
+   ],
+   "desc": "the brown dog is at the feet of the elderly lady in the floral dress",
+   "question": "Is the brown dog at the feet of the elderly lady in the floral dress?"
+  },
+  {
+   "id": "trash_can_near_bench",
+   "type": "relation",
+   "of": [
+    "trash_can",
+    "bench"
+   ],
+   "desc": "the large silver trash can is near the bench",
+   "question": "Is the large silver trash can near the bench?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane visible through the windows",
+   "question": "Is there an airplane visible through the windows?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman_raincoat",
+   "desc": "the woman in the yellow raincoat stands",
+   "question": "Is the woman in the yellow raincoat standing?"
+  },
+  {
+   "id": "child_looks_board",
+   "type": "relation",
+   "of": [
+    "child",
+    "board"
+   ],
+   "desc": "the child with green hair looks up at the departure board",
+   "question": "Is the child with green hair looking up at the departure board?"
+  },
+  {
+   "id": "dog_accepts",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog accepts the offering with a soft gaze",
+   "question": "Does the brown dog have a soft gaze while accepting the offering?"
+  },
+  {
+   "id": "windows",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": false,
+   "desc": "large glass windows",
+   "question": "Are there large glass windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure board",
+   "question": "Is there a departure board?",
+   "box": [
+    300,
+    50,
+    724,
+    250
+   ]
+  },
+  {
+   "id": "child_eyes",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child with green hair has wide curious eyes",
+   "question": "Does the child with green hair have wide curious eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "suitcase",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "lady",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0064",
+ "prompt": "In a vibrant anime style, the scene unfolds at a busy airport gate where six distinct entities occupy the space. On the left stands a woman in a yellow raincoat, her posture upright as she clutches a boarding pass tightly. Next to her sits a small gray cat on a blue suitcase, its tail curled neatly around its paws. In the center, a man in a red scarf leans forward, pointing decisively toward the departure board above. Beside him, a child with green hair looks up at the board with wide, curious eyes, mirroring the man's focus. To the right, an elderly lady in a floral dress sits on a bench, gently handing a wrapped sandwich to a brown dog sitting patiently at her feet. The dog accepts the offering with a soft gaze, creating a tender moment amidst the travel chaos. A large silver trash can stands empty near the bench, reflecting the overhead lights. There is no airplane visible through the large glass windows, keeping the focus entirely on the passengers and their immediate surroundings. The composition balances the dynamic energy of the pointing man and the child with the calm stillness of the woman in the yellow raincoat and the resting cat. The interactions are clear: the man points for the child, and the lady feeds the dog. Each character is defined by their unique attire or species, ensuring they are easily distinguishable without labels. The scene captures a fleeting moment of connection and anticipation before departure, rendered with clean lines and expressive features typical of the genre.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "man_points_board",
+     "man_pointing"
+    ]
+   ]
+  }
+ }
+}

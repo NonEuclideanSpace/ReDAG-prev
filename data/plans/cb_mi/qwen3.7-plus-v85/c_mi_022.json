@@ -1,0 +1,434 @@
+{
+ "style": "photorealistic wide-angle interior shot",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a spacious fitness center with rubber floor mats, wall-mounted televisions displaying motivational content, water fountains, locker rooms with combination locks and wooden benches, towel dispensers, and spray bottles",
+   "question": "Does the image show a spacious fitness center with rubber floor mats, wall-mounted televisions, water fountains, locker areas, and cleaning supplies?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "treadmills",
+   "type": "entity",
+   "class": "treadmill",
+   "plural": "treadmills",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of treadmills",
+   "question": "Are there rows of treadmills visible?",
+   "box": [
+    50,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "ellipticals",
+   "type": "entity",
+   "class": "elliptical machine",
+   "plural": "elliptical machines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of elliptical machines",
+   "question": "Are there rows of elliptical machines visible?",
+   "box": [
+    450,
+    300,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "weight_racks",
+   "type": "entity",
+   "class": "weight rack",
+   "plural": "weight racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weight rack organizing dumbbells and barbells by size",
+   "question": "Is there a weight rack?",
+   "box": [
+    820,
+    200,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "bench_press",
+   "type": "entity",
+   "class": "bench press station",
+   "plural": "bench press stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench press station with safety collars and weight plates",
+   "question": "Is there a bench press station?",
+   "box": [
+    100,
+    650,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "pull_up_bars",
+   "type": "entity",
+   "class": "pull-up bar",
+   "plural": "pull-up bars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "pull-up bars",
+   "question": "Are there pull-up bars visible?",
+   "box": [
+    50,
+    100,
+    200,
+    250
+   ]
+  },
+  {
+   "id": "resistance_bands",
+   "type": "entity",
+   "class": "resistance band",
+   "plural": "resistance bands",
+   "count": 2,
+   "count_exact": false,
+   "desc": "resistance bands",
+   "question": "Are there resistance bands visible?",
+   "box": [
+    220,
+    150,
+    300,
+    250
+   ]
+  },
+  {
+   "id": "trainer",
+   "type": "entity",
+   "class": "personal trainer",
+   "plural": "personal trainers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a personal trainer",
+   "question": "Is there a personal trainer?",
+   "box": [
+    500,
+    400,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "client",
+   "type": "entity",
+   "class": "gym client",
+   "plural": "gym clients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gym client",
+   "question": "Is there a gym client?",
+   "box": [
+    660,
+    420,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "first_aid",
+   "type": "entity",
+   "class": "first aid station",
+   "plural": "first aid stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a first aid station",
+   "question": "Is there a first aid station visible?",
+   "box": [
+    850,
+    750,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "yoga_mats",
+   "type": "entity",
+   "class": "yoga mat",
+   "plural": "yoga mats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "yoga mats in the stretching area",
+   "question": "Are there yoga mats in the stretching area?",
+   "box": [
+    700,
+    800,
+    840,
+    950
+   ]
+  },
+  {
+   "id": "foam_rollers",
+   "type": "entity",
+   "class": "foam roller",
+   "plural": "foam rollers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "foam rollers in the stretching area",
+   "question": "Are there foam rollers in the stretching area?",
+   "box": [
+    720,
+    820,
+    820,
+    900
+   ]
+  },
+  {
+   "id": "trainer_equipment",
+   "type": "attribute",
+   "of": "trainer",
+   "desc": "the personal trainer holds a clipboard",
+   "question": "Is the personal trainer holding a clipboard?"
+  },
+  {
+   "id": "treadmills_face_tv",
+   "type": "state",
+   "of": "treadmills",
+   "desc": "the treadmills face the wall-mounted televisions",
+   "question": "Do the treadmills face the wall-mounted televisions?"
+  },
+  {
+   "id": "ellipticals_face_tv",
+   "type": "state",
+   "of": "ellipticals",
+   "desc": "the elliptical machines face the wall-mounted televisions",
+   "question": "Do the elliptical machines face the wall-mounted televisions?"
+  },
+  {
+   "id": "trainer_guides_client",
+   "type": "action",
+   "of": [
+    "trainer",
+    "client"
+   ],
+   "desc": "the personal trainer guides the gym client through a workout routine",
+   "question": "Is the personal trainer guiding the gym client through a workout routine?"
+  },
+  {
+   "id": "no_kitchen_appliances",
+   "type": "absent",
+   "desc": "kitchen appliances like blenders or toasters",
+   "question": "Are there any kitchen appliances like blenders or toasters in the image?"
+  },
+  {
+   "id": "no_office_supplies",
+   "type": "absent",
+   "desc": "office supplies such as staplers or paper clips",
+   "question": "Are there any office supplies such as staplers or paper clips in the image?"
+  },
+  {
+   "id": "dumbbells",
+   "type": "entity",
+   "class": "dumbbell",
+   "plural": "dumbbells",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dumbbells organized by size",
+   "question": "Are there dumbbells organized by size?",
+   "box": [
+    100,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "barbells",
+   "type": "entity",
+   "class": "barbell",
+   "plural": "barbells",
+   "count": 2,
+   "count_exact": false,
+   "desc": "barbells organized by size",
+   "question": "Are there barbells organized by size?",
+   "box": [
+    320,
+    400,
+    520,
+    600
+   ]
+  },
+  {
+   "id": "lifters",
+   "type": "entity",
+   "class": "lifter",
+   "plural": "lifters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a serious lifter",
+   "question": "Is there a serious lifter?",
+   "box": [
+    550,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "weight_racks_dumbbells",
+   "type": "relation",
+   "of": [
+    "weight_racks",
+    "dumbbells"
+   ],
+   "desc": "the weight racks organize the dumbbells",
+   "question": "Do the weight racks organize the dumbbells?"
+  },
+  {
+   "id": "weight_racks_barbells",
+   "type": "relation",
+   "of": [
+    "weight_racks",
+    "barbells"
+   ],
+   "desc": "the weight racks organize the barbells",
+   "question": "Do the weight racks organize the barbells?"
+  },
+  {
+   "id": "lifters_use_bench",
+   "type": "relation",
+   "of": [
+    "lifters",
+    "bench_press"
+   ],
+   "desc": "the lifters use the bench press station",
+   "question": "Do the lifters use the bench press station?"
+  },
+  {
+   "id": "yoga_mats_in_stretching",
+   "type": "relation",
+   "of": [
+    "yoga_mats",
+    "first_aid"
+   ],
+   "desc": "yoga mats are in the stretching area near the first aid station",
+   "question": "Are yoga mats in the stretching area near the first aid station?"
+  },
+  {
+   "id": "foam_rollers_in_stretching",
+   "type": "relation",
+   "of": [
+    "foam_rollers",
+    "first_aid"
+   ],
+   "desc": "foam rollers are in the stretching area near the first aid station",
+   "question": "Are foam rollers in the stretching area near the first aid station?"
+  },
+  {
+   "id": "trainer_carries_clipboard",
+   "type": "attribute",
+   "of": "trainer",
+   "desc": "the personal trainer carries a clipboard",
+   "question": "Does the personal trainer carry a clipboard?"
+  },
+  {
+   "id": "trainer_carries_stopwatch",
+   "type": "attribute",
+   "of": "trainer",
+   "desc": "the personal trainer carries a stopwatch",
+   "question": "Does the personal trainer carry a stopwatch?"
+  },
+  {
+   "id": "no_blenders",
+   "type": "absent",
+   "desc": "blenders",
+   "question": "Are there any blenders in the image?"
+  },
+  {
+   "id": "no_toasters",
+   "type": "absent",
+   "desc": "toasters",
+   "question": "Are there any toasters in the image?"
+  },
+  {
+   "id": "no_staplers",
+   "type": "absent",
+   "desc": "staplers",
+   "question": "Are there any staplers in the image?"
+  },
+  {
+   "id": "no_paper_clips",
+   "type": "absent",
+   "desc": "paper clips",
+   "question": "Are there any paper clips in the image?"
+  },
+  {
+   "id": "rack_organizes_by_size",
+   "type": "attribute",
+   "of": "weight_racks",
+   "desc": "the weight rack organizes dumbbells and barbells by size",
+   "question": "Does the weight rack organize dumbbells and barbells by size?"
+  },
+  {
+   "id": "bench_has_collars_plates",
+   "type": "attribute",
+   "of": "bench_press",
+   "desc": "the bench press station has safety collars and weight plates",
+   "question": "Does the bench press station have safety collars and weight plates?"
+  },
+  {
+   "id": "lifter_uses_collars_plates",
+   "type": "state",
+   "of": "lifters",
+   "desc": "the serious lifter uses safety collars and weight plates",
+   "question": "Is the serious lifter using safety collars and weight plates?"
+  },
+  {
+   "id": "mats_near_pullup",
+   "type": "state",
+   "of": "pull_up_bars",
+   "desc": "rubber floor mats are near the pull-up bars",
+   "question": "Are rubber floor mats near the pull-up bars?"
+  },
+  {
+   "id": "mats_near_bands",
+   "type": "state",
+   "of": "resistance_bands",
+   "desc": "rubber floor mats are near the resistance bands",
+   "question": "Are rubber floor mats near the resistance bands?"
+  }
+ ],
+ "edges": [],
+ "id": "c_mi_022",
+ "prompt": "A busy fitness center during peak workout hours, where rows of treadmills and elliptical machines face wall-mounted televisions displaying motivational content. Weight racks organize dumbbells and barbells by size while bench press stations accommodate serious lifters using safety collars and weight plates. Rubber floor mats cushion high-impact areas near pull-up bars and resistance bands, while water fountains provide hydration stations throughout the spacious facility. Locker rooms feature combination locks and wooden benches, while towel dispensers and spray bottles maintain equipment cleanliness. However, this athletic environment excludes any kitchen appliances like blenders or toasters, keeping the space dedicated purely to fitness rather than food preparation. You won't discover any office supplies such as staplers or paper clips either, maintaining the gym's focus on physical wellness rather than administrative tasks. Personal trainers carry clipboards and stopwatches while guiding clients through workout routines, and first aid stations remain accessible near the stretching area equipped with yoga mats and foam rollers for recovery sessions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 16,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

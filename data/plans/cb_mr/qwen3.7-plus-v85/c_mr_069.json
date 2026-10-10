@@ -1,0 +1,338 @@
+{
+ "style": "photorealistic laboratory photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral laboratory background",
+   "question": "Is the background a neutral laboratory setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "laboratory bench",
+   "plural": "laboratory benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a laboratory bench",
+   "question": "Is there a laboratory bench?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "microscope",
+   "type": "entity",
+   "class": "microscope",
+   "plural": "microscopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a microscope",
+   "question": "Is there a microscope?",
+   "box": [
+    100,
+    500,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "test tube rack",
+   "plural": "test tube racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a test tube rack",
+   "question": "Is there a test tube rack?",
+   "box": [
+    400,
+    480,
+    600,
+    720
+   ]
+  },
+  {
+   "id": "flasks",
+   "type": "entity",
+   "class": "flask",
+   "plural": "flasks",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two blue flasks",
+   "question": "Are there two blue flasks?",
+   "box": [
+    650,
+    550,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "beakers",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four green beakers",
+   "question": "Are there four green beakers?",
+   "box": [
+    200,
+    580,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "pipette",
+   "type": "entity",
+   "class": "pipette",
+   "plural": "pipettes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pipette",
+   "question": "Is there a pipette?",
+   "box": [
+    250,
+    400,
+    350,
+    550
+   ]
+  },
+  {
+   "id": "burner",
+   "type": "entity",
+   "class": "bunsen burner",
+   "plural": "bunsen burners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a Bunsen burner",
+   "question": "Is there a Bunsen burner?",
+   "box": [
+    700,
+    650,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "goggles",
+   "type": "entity",
+   "class": "safety goggles",
+   "plural": "safety goggles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "safety goggles",
+   "question": "Are there safety goggles?",
+   "box": [
+    750,
+    600,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "lab notebook",
+   "plural": "lab notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white lab notebook",
+   "question": "Is there a white lab notebook?",
+   "box": [
+    900,
+    620,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "microscope_left_rack",
+   "type": "relation",
+   "of": [
+    "microscope",
+    "rack"
+   ],
+   "desc": "the microscope is to the left of the test tube rack",
+   "question": "Is the microscope to the left of the test tube rack?"
+  },
+  {
+   "id": "flasks_next_to_rack",
+   "type": "relation",
+   "of": [
+    "flasks",
+    "rack"
+   ],
+   "desc": "the blue flasks are next to the test tube rack",
+   "question": "Are the blue flasks next to the test tube rack?"
+  },
+  {
+   "id": "pipette_above_beaker",
+   "type": "relation",
+   "of": [
+    "pipette",
+    "beakers"
+   ],
+   "desc": "the pipette is above one of the green beakers",
+   "question": "Is the pipette above one of the green beakers?"
+  },
+  {
+   "id": "burner_under_flask",
+   "type": "relation",
+   "of": [
+    "burner",
+    "flasks"
+   ],
+   "desc": "the Bunsen burner is under a blue flask",
+   "question": "Is the Bunsen burner under a blue flask?"
+  },
+  {
+   "id": "goggles_between",
+   "type": "relation",
+   "of": [
+    "goggles",
+    "burner",
+    "notebook"
+   ],
+   "desc": "the safety goggles are between the Bunsen burner and the white lab notebook",
+   "question": "Are the safety goggles positioned between the Bunsen burner and the white lab notebook?"
+  },
+  {
+   "id": "notebook_right_end",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "bench"
+   ],
+   "desc": "the white lab notebook is on the right end of the bench",
+   "question": "Is the white lab notebook on the right end of the bench?"
+  },
+  {
+   "id": "pipette_dripping",
+   "type": "action",
+   "of": [
+    "pipette",
+    "beakers"
+   ],
+   "desc": "the pipette is dripping into one of the green beakers",
+   "question": "Is the pipette dripping liquid into one of the green beakers?"
+  },
+  {
+   "id": "burner_heating",
+   "type": "action",
+   "of": [
+    "burner",
+    "flasks"
+   ],
+   "desc": "the Bunsen burner is heating a blue flask",
+   "question": "Is the Bunsen burner heating a blue flask?"
+  },
+  {
+   "id": "microscope_shorter",
+   "type": "attribute",
+   "of": "microscope",
+   "desc": "the microscope is shorter than the test tube rack",
+   "question": "Is the microscope visibly shorter than the test tube rack?"
+  },
+  {
+   "id": "pipette_longer",
+   "type": "attribute",
+   "of": "pipette",
+   "desc": "the pipette is longer than the test tubes are tall",
+   "question": "Is the pipette longer than the height of the test tubes in the rack?"
+  },
+  {
+   "id": "beakers_larger",
+   "type": "attribute",
+   "of": "beakers",
+   "desc": "the green beakers are larger than the blue flasks",
+   "question": "Are the green beakers larger than the blue flasks?"
+  },
+  {
+   "id": "burner_taller",
+   "type": "attribute",
+   "of": "burner",
+   "desc": "the Bunsen burner is taller than the white lab notebook",
+   "question": "Is the Bunsen burner taller than the white lab notebook?"
+  },
+  {
+   "id": "tubes_in_rack",
+   "type": "attribute",
+   "of": "rack",
+   "desc": "the test tube rack holds five test tubes",
+   "question": "Does the test tube rack hold five test tubes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "microscope",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "rack",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "flasks",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "beakers",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "burner",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "goggles",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_069",
+ "prompt": "A laboratory bench supporting several items. On the bench, a microscope is to the left of a test tube rack that holds five test tubes. The microscope is shorter than the test tube rack. Next to the rack, there are some blue flasks, and the number of flasks is three less than the number of test tubes. A pipette is above one of the green beakers on the bench, and the pipette is longer than the test tubes are tall. The green beakers are larger than the blue flasks. There are two more beakers than there are flasks. A Bunsen burner is under a flask. Safety goggles are between the Bunsen burner and a white lab notebook. The burner is taller than the notebook. The notebook is on the right end of the bench. The pipette is dripping into the beaker. The burner is heating the flask.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

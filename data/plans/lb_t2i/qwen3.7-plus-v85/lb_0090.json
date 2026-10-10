@@ -1,0 +1,522 @@
+{
+ "style": "cinematic, moody, atmospheric, soft lighting, shallow depth of field",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a narrow sushi bar interior with a wooden counter, tatami mats, and a window looking out onto a rainy garden",
+   "question": "Does the image show a narrow sushi bar interior with a wooden counter, tatami mats, and a window looking out onto a rainy garden?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white coat",
+   "question": "Is there a chef wearing a white coat?",
+   "box": [
+    350,
+    200,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    800,
+    550,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn wooden counter",
+   "question": "Is there a worn wooden counter?",
+   "box": [
+    0,
+    600,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flickering lantern",
+   "question": "Is there a flickering lantern?",
+   "box": [
+    450,
+    50,
+    574,
+    200
+   ]
+  },
+  {
+   "id": "scroll",
+   "type": "entity",
+   "class": "hanging scroll",
+   "plural": "hanging scrolls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging scroll",
+   "question": "Is there a hanging scroll?",
+   "box": [
+    380,
+    100,
+    644,
+    400
+   ]
+  },
+  {
+   "id": "fan",
+   "type": "entity",
+   "class": "fan",
+   "plural": "fans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a motionless fan",
+   "question": "Is there a motionless fan?",
+   "box": [
+    50,
+    100,
+    200,
+    300
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "paper crane",
+   "plural": "paper cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-formed paper crane",
+   "question": "Is there a half-formed paper crane?",
+   "box": [
+    100,
+    150,
+    250,
+    300
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a delicate teapot",
+   "question": "Is there a delicate teapot?",
+   "box": [
+    500,
+    620,
+    600,
+    720
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "soy sauce bowl",
+   "plural": "soy sauce bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porcelain soy sauce bowl",
+   "question": "Is there a porcelain soy sauce bowl?",
+   "box": [
+    820,
+    680,
+    900,
+    740
+   ]
+  },
+  {
+   "id": "whisk",
+   "type": "entity",
+   "class": "bamboo whisk",
+   "plural": "bamboo whisks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bamboo whisk",
+   "question": "Is there a bamboo whisk?",
+   "box": [
+    550,
+    450,
+    650,
+    550
+   ]
+  },
+  {
+   "id": "nigiri",
+   "type": "entity",
+   "class": "nigiri",
+   "plural": "nigiri",
+   "count": 2,
+   "count_exact": false,
+   "desc": "pieces of nigiri",
+   "question": "Are there pieces of nigiri?",
+   "box": [
+    400,
+    650,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "chef_white_coat",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef's coat is white",
+   "question": "Is the chef's coat white?"
+  },
+  {
+   "id": "cat_amber_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has amber eyes",
+   "question": "Does the cat have amber eyes?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is perched",
+   "question": "Is the cat perched?"
+  },
+  {
+   "id": "cat_tail_coiled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is coiled around the rim of the soy sauce bowl",
+   "question": "Is the cat's tail coiled around the rim of the soy sauce bowl?"
+  },
+  {
+   "id": "teapot_tilting",
+   "type": "state",
+   "of": "teapot",
+   "desc": "the teapot is tilting",
+   "question": "Is the teapot tilting?"
+  },
+  {
+   "id": "steam_teapot",
+   "type": "state",
+   "of": "teapot",
+   "desc": "steam curls from the teapot",
+   "question": "Is steam curling from the teapot?"
+  },
+  {
+   "id": "chef_holding_whisk",
+   "type": "action",
+   "of": [
+    "chef",
+    "whisk"
+   ],
+   "desc": "the chef holds the bamboo whisk",
+   "question": "Is the chef holding the bamboo whisk?"
+  },
+  {
+   "id": "cat_batting_chopstick",
+   "type": "action",
+   "of": [
+    "cat",
+    "bowl"
+   ],
+   "desc": "the cat bats a chopstick into the soy sauce bowl",
+   "question": "Is the cat batting a chopstick into the soy sauce bowl?"
+  },
+  {
+   "id": "chef_behind_counter",
+   "type": "relation",
+   "of": [
+    "chef",
+    "counter"
+   ],
+   "desc": "the chef stands behind the counter",
+   "question": "Is the chef standing behind the counter?"
+  },
+  {
+   "id": "cat_on_counter",
+   "type": "relation",
+   "of": [
+    "cat",
+    "counter"
+   ],
+   "desc": "the cat is at the far end of the counter",
+   "question": "Is the cat at the far end of the counter?"
+  },
+  {
+   "id": "lantern_above_counter",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "counter"
+   ],
+   "desc": "the lantern hangs above the counter",
+   "question": "Does the lantern hang above the counter?"
+  },
+  {
+   "id": "scroll_behind_chef",
+   "type": "relation",
+   "of": [
+    "scroll",
+    "chef"
+   ],
+   "desc": "the hanging scroll is behind the chef",
+   "question": "Is the hanging scroll behind the chef?"
+  },
+  {
+   "id": "teapot_on_counter",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "counter"
+   ],
+   "desc": "the teapot is on the counter",
+   "question": "Is the teapot on the counter?"
+  },
+  {
+   "id": "bowl_on_counter",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "counter"
+   ],
+   "desc": "the soy sauce bowl is on the counter",
+   "question": "Is the soy sauce bowl on the counter?"
+  },
+  {
+   "id": "nigiri_on_counter",
+   "type": "relation",
+   "of": [
+    "nigiri",
+    "counter"
+   ],
+   "desc": "the nigiri are on the counter",
+   "question": "Are the nigiri on the counter?"
+  },
+  {
+   "id": "crane_near_window",
+   "type": "state",
+   "of": "crane",
+   "desc": "the paper crane is near the window",
+   "question": "Is the paper crane near the window?"
+  },
+  {
+   "id": "chopstick",
+   "type": "entity",
+   "class": "chopstick",
+   "plural": "chopsticks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chopstick",
+   "question": "Is there a chopstick?",
+   "box": [
+    480,
+    650,
+    540,
+    750
+   ]
+  },
+  {
+   "id": "chef_resting_chopstick",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef has left a chopstick resting in mid-motion",
+   "question": "Has the chef left a chopstick resting in mid-motion?"
+  },
+  {
+   "id": "chopstick_in_bowl",
+   "type": "relation",
+   "of": [
+    "chopstick",
+    "bowl"
+   ],
+   "desc": "the chopstick is in the soy sauce bowl",
+   "question": "Is the chopstick in the soy sauce bowl?"
+  },
+  {
+   "id": "chopstick_resting",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef has a chopstick resting in mid-motion",
+   "question": "Does the chef have a chopstick resting in mid-motion?"
+  },
+  {
+   "id": "fan_in_corner",
+   "type": "state",
+   "of": "fan",
+   "desc": "the fan is in the corner of the room",
+   "question": "Is the fan in the corner of the room?"
+  },
+  {
+   "id": "chef_shaping_nigiri",
+   "type": "action",
+   "of": [
+    "chef",
+    "nigiri"
+   ],
+   "desc": "the chef shapes the nigiri",
+   "question": "Is the chef shaping the nigiri?"
+  },
+  {
+   "id": "cypress_trees",
+   "type": "entity",
+   "class": "cypress tree",
+   "plural": "cypress trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "blurred cypress trees in the garden",
+   "question": "Are there blurred cypress trees visible through the window?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "mossy_stones",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 2,
+   "count_exact": false,
+   "desc": "mossy stones in the garden",
+   "question": "Are there mossy stones visible through the window?",
+   "box": [
+    350,
+    300,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "chef_coat_luminous",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef's coat appears luminous",
+   "question": "Does the chef's coat appear luminous?"
+  },
+  {
+   "id": "whisk_wasabi",
+   "type": "attribute",
+   "of": "whisk",
+   "desc": "the bamboo whisk has wasabi on its tines",
+   "question": "Does the bamboo whisk have wasabi on its tines?"
+  },
+  {
+   "id": "nigiri_translucent_fish",
+   "type": "attribute",
+   "of": "nigiri",
+   "desc": "the nigiri is draped with translucent slices of fish",
+   "question": "Is the nigiri draped with translucent slices of fish?"
+  },
+  {
+   "id": "scroll_black_ink",
+   "type": "attribute",
+   "of": "scroll",
+   "desc": "the hanging scroll has black ink strokes",
+   "question": "Does the hanging scroll have black ink strokes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "teapot",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "bowl",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "nigiri",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "cypress_trees",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "mossy_stones",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0090",
+ "prompt": "The rain clung to the window like a secret, blurring the cypress trees and mossy stones of the garden into a ghostly silhouette, as if the world beyond had been smudged by a trembling hand. Inside the narrow confines of the sushi bar, the flickering lantern above the wooden counter cast shifting shadows that danced like restless spirits across the worn grain, illuminating the precise, ritualistic movements of the chef whose white coat was as luminous as fresh-fallen snow. With the quiet intensity of a calligrapher, he shaped each piece of nigiri—pressed rice like pressed sunlight, draped with translucent slices of fish that glistened as if they had just emerged from the sea’s breath. A cat perched at the far end of the counter, its tail coiled lazily around the rim of a porcelain soy sauce bowl, watched the process with the patience of a deity, its amber eyes reflecting the golden glow and the flickering of fish scales caught in the chef’s practiced hand. Between the two figures, a delicate teapot balanced on the edge of the counter, steam curling in slow spirals around a chopstick that the chef had left resting in mid-motion, frozen as if time itself had paused to admire the moment. Beyond the counter, the tatami mats absorbed the dim, damp air, their woven texture mottled with patches of shadow and light that shifted as the lantern swayed, casting ripples across the floor as though it were water. Behind the chef, a hanging scroll, inked with the kanji for “now,” seemed to pulse faintly in the dimness, its black strokes bleeding into the surrounding wood as if it were a living thing. The garden outside was no longer just a garden—it was a reflection, a mirror world where the rain fell in reverse, ascending in silver droplets toward a sky that shimmered like the inside of a shell. A paper crane, half-formed and quivering in the humid air, fluttered near the window, its wings catching both the rain and the lantern’s glow, as if caught between two opposing forces. The chef reached for a bamboo whisk, its tines tangled with a ribbon of wasabi, and as he did, the cat batted the chopstick off the counter, sending it tumbling into the soy sauce bowl, where it bobbed like a miniature vessel in an ink-dark sea. The whisk, lifted in mid-air, seemed to catch a glint from the crane’s wings, creating a fleeting moment of recursive light that flickered between the counter and the glass. The teapot, now tilting as if moved by an unseen hand, released a hiss of steam that coiled upward in perfect symmetry with the crane’s arc. In the corner of the room, a fan hung motionless, its blades catching the faint tremor of air displaced by the steam, yet still, it seemed to whisper a lullaby in a language only the shadows could understand. Every object was a thread in a web of subtle causality—raindrops, shadows, breath, and brushstrokes all bound together in a single, impossible moment where time curled in on itself, and the boundaries between art, food, and dream dissolved into a shimmering, golden hush.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 28,
+   "n_uncovered": 4,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

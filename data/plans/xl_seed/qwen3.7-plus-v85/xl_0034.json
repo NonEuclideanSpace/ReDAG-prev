@@ -1,0 +1,389 @@
+{
+ "style": "photorealistic photo, sterile and professional atmosphere, bright even illumination, high fidelity details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a modern chemistry laboratory with a clean tiled floor",
+   "question": "Does the image show a modern chemistry laboratory with a clean tiled floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless steel workbench",
+   "question": "Is there a stainless steel workbench?",
+   "box": [
+    300,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "scientist_left",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scientist in a white lab coat",
+   "question": "Is there a scientist in a white lab coat?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "colleague_center",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second scientist",
+   "question": "Is there a second scientist?",
+   "box": [
+    380,
+    180,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "researcher_right",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third scientist",
+   "question": "Is there a third scientist?",
+   "box": [
+    700,
+    150,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "test_tube",
+   "type": "entity",
+   "class": "test tube",
+   "plural": "test tubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a test tube",
+   "question": "Is there a test tube?",
+   "box": [
+    150,
+    300,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    450,
+    450,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "distillation_apparatus",
+   "type": "entity",
+   "class": "distillation apparatus",
+   "plural": "distillation apparatuses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a complex distillation apparatus with glass tubing and flasks",
+   "question": "Is there a complex distillation apparatus with glass tubing and flasks?",
+   "box": [
+    400,
+    300,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "robotic_arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic arm",
+   "question": "Is there a robotic arm?",
+   "box": [
+    550,
+    100,
+    750,
+    400
+   ]
+  },
+  {
+   "id": "microscope",
+   "type": "entity",
+   "class": "microscope",
+   "plural": "microscopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a microscope",
+   "question": "Is there a microscope?",
+   "box": [
+    750,
+    500,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "scientist_left_holding",
+   "type": "attribute",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat holds the test tube",
+   "question": "Is the scientist in a white lab coat holding the test tube?"
+  },
+  {
+   "id": "scientist_left_examining",
+   "type": "state",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat examines the test tube",
+   "question": "Is the scientist in a white lab coat examining the test tube?"
+  },
+  {
+   "id": "colleague_writing",
+   "type": "action",
+   "of": [
+    "colleague_center",
+    "clipboard"
+   ],
+   "desc": "the second scientist writes notes on the clipboard",
+   "question": "Is the second scientist writing notes on the clipboard?"
+  },
+  {
+   "id": "colleague_leaning",
+   "type": "relation",
+   "of": [
+    "colleague_center",
+    "workbench"
+   ],
+   "desc": "the second scientist leans against the stainless steel workbench",
+   "question": "Is the second scientist leaning against the stainless steel workbench?"
+  },
+  {
+   "id": "robotic_arm_adjusting",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "distillation_apparatus"
+   ],
+   "desc": "the robotic arm adjusts a valve on the distillation apparatus",
+   "question": "Is the robotic arm adjusting a valve on the distillation apparatus?"
+  },
+  {
+   "id": "researcher_right_operating",
+   "type": "action",
+   "of": [
+    "researcher_right",
+    "microscope"
+   ],
+   "desc": "the third scientist operates the microscope",
+   "question": "Is the third scientist operating the microscope?"
+  },
+  {
+   "id": "researcher_right_peering",
+   "type": "relation",
+   "of": [
+    "researcher_right",
+    "microscope"
+   ],
+   "desc": "the third scientist peers into the eyepiece of the microscope",
+   "question": "Is the third scientist peering into the eyepiece of the microscope?"
+  },
+  {
+   "id": "researcher_right_adjusting",
+   "type": "action",
+   "of": [
+    "researcher_right",
+    "microscope"
+   ],
+   "desc": "the third scientist adjusts the focus knob of the microscope",
+   "question": "Is the third scientist adjusting the focus knob of the microscope?"
+  },
+  {
+   "id": "colleague_next_to_scientist",
+   "type": "relation",
+   "of": [
+    "colleague_center",
+    "scientist_left"
+   ],
+   "desc": "the second scientist is next to the scientist in a white lab coat and safety goggles",
+   "question": "Is the second scientist next to the scientist in a white lab coat and safety goggles?"
+  },
+  {
+   "id": "no_clutter",
+   "type": "absent",
+   "desc": "clutter on the floor",
+   "question": "Is there any clutter on the floor?"
+  },
+  {
+   "id": "scientist_left_standing",
+   "type": "state",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat and safety goggles is standing",
+   "question": "Is the scientist in a white lab coat and safety goggles standing?"
+  },
+  {
+   "id": "colleague_center_standing",
+   "type": "state",
+   "of": "colleague_center",
+   "desc": "the second scientist is standing",
+   "question": "Is the second scientist standing?"
+  },
+  {
+   "id": "researcher_right_standing",
+   "type": "state",
+   "of": "researcher_right",
+   "desc": "the third scientist is standing",
+   "question": "Is the third scientist standing?"
+  },
+  {
+   "id": "distillation_apparatus_bubbling",
+   "type": "state",
+   "of": "distillation_apparatus",
+   "desc": "the complex distillation apparatus is bubbling",
+   "question": "Is the complex distillation apparatus bubbling?"
+  },
+  {
+   "id": "scientist_left_goggles",
+   "type": "attribute",
+   "of": "scientist_left",
+   "desc": "the scientist in a white lab coat wears safety goggles",
+   "question": "Does the scientist in a white lab coat wear safety goggles?"
+  },
+  {
+   "id": "test_tube_liquid",
+   "type": "attribute",
+   "of": "test_tube",
+   "desc": "the test tube contains purple liquid",
+   "question": "Does the test tube contain purple liquid?"
+  },
+  {
+   "id": "distillation_fluid",
+   "type": "attribute",
+   "of": "distillation_apparatus",
+   "desc": "the distillation apparatus contains clear fluid",
+   "question": "Does the distillation apparatus contain clear fluid?"
+  },
+  {
+   "id": "safety_signs",
+   "type": "entity",
+   "class": "safety sign",
+   "plural": "safety signs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "safety signs",
+   "question": "Are there safety signs?",
+   "box": [
+    50,
+    50,
+    974,
+    200
+   ]
+  },
+  {
+   "id": "chemical_cabinets",
+   "type": "entity",
+   "class": "chemical storage cabinet",
+   "plural": "chemical storage cabinets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "chemical storage cabinets",
+   "question": "Are there chemical storage cabinets?",
+   "box": [
+    50,
+    200,
+    974,
+    500
+   ]
+  },
+  {
+   "id": "signs_on_wall",
+   "type": "state",
+   "of": "safety_signs",
+   "desc": "the safety signs are on the back wall",
+   "question": "Are the safety signs on the back wall?"
+  },
+  {
+   "id": "cabinets_on_wall",
+   "type": "state",
+   "of": "chemical_cabinets",
+   "desc": "the chemical storage cabinets are along the back wall",
+   "question": "Are the chemical storage cabinets along the back wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "distillation_apparatus",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "microscope",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "colleague_center",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0034",
+ "prompt": "A photorealistic photo presents a modern chemistry laboratory with precise scientific equipment and focused researchers. On the left, a scientist in a white lab coat and safety goggles examines a test tube containing a purple liquid, holding it up to the light. Next to her, a colleague writes notes on a clipboard, leaning against a stainless steel workbench. In the center, a complex distillation apparatus bubbles with clear fluid, connected by glass tubing to various flasks. A robotic arm adjusts a valve on the setup, demonstrating advanced technology. To the right, another researcher operates a microscope, peering intently into the eyepiece while adjusting the focus knob. Safety signs and chemical storage cabinets line the back wall, organized neatly. Overhead fluorescent lights provide bright, even illumination, reflecting off the polished surfaces. The floor is clean and tiled, with no clutter. The atmosphere is sterile and professional, emphasizing precision and safety. Each instrument is rendered with high fidelity, showing metallic sheens and glass transparency. The composition balances human activity with technological complexity. The style is a photorealistic photo, capturing the intricate details of a scientific environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

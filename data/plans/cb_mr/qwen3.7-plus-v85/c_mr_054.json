@@ -1,0 +1,403 @@
+{
+ "style": "photorealistic wildlife photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunny African savanna",
+   "question": "Does the image show a sunny African savanna?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "acacia_tree",
+   "type": "entity",
+   "class": "acacia tree",
+   "plural": "acacia trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall acacia tree",
+   "question": "Is there a tall acacia tree?",
+   "box": [
+    300,
+    50,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "bull_elephant",
+   "type": "entity",
+   "class": "elephant",
+   "plural": "elephants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large bull elephant",
+   "question": "Is there a large bull elephant?",
+   "box": [
+    350,
+    400,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "female_elephant",
+   "type": "entity",
+   "class": "elephant",
+   "plural": "elephants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smaller female elephant",
+   "question": "Is there a smaller female elephant?",
+   "box": [
+    200,
+    450,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "baby_elephant",
+   "type": "entity",
+   "class": "elephant",
+   "plural": "elephants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a baby elephant",
+   "question": "Is there a baby elephant?",
+   "box": [
+    150,
+    550,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "jeep",
+   "type": "entity",
+   "class": "safari jeep",
+   "plural": "safari jeeps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a safari jeep with a spare tire on its back and two more on its roof",
+   "question": "Is there a safari jeep with a spare tire on its back and two more on its roof?",
+   "box": [
+    50,
+    500,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "tourist",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tourist inside the jeep",
+   "question": "Is there a tourist inside the jeep?",
+   "box": [
+    100,
+    520,
+    180,
+    650
+   ]
+  },
+  {
+   "id": "lion",
+   "type": "entity",
+   "class": "lion",
+   "plural": "lions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lion",
+   "question": "Is there a lion?",
+   "box": [
+    280,
+    600,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "hyenas",
+   "type": "entity",
+   "class": "hyena",
+   "plural": "hyenas",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pack of hyenas",
+   "question": "Are there exactly two hyenas?",
+   "box": [
+    800,
+    300,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "bull_under_tree",
+   "type": "relation",
+   "of": [
+    "bull_elephant",
+    "acacia_tree"
+   ],
+   "desc": "the bull elephant stands under the acacia tree",
+   "question": "Is the bull elephant standing under the acacia tree?"
+  },
+  {
+   "id": "bull_pulling_leaves",
+   "type": "action",
+   "of": [
+    "bull_elephant",
+    "acacia_tree"
+   ],
+   "desc": "the bull elephant uses its trunk to pull leaves from a high branch of the acacia tree",
+   "question": "Is the bull elephant using its trunk to pull leaves from a high branch of the acacia tree?"
+  },
+  {
+   "id": "female_behind_bull",
+   "type": "relation",
+   "of": [
+    "female_elephant",
+    "bull_elephant"
+   ],
+   "desc": "the female elephant stands behind the bull elephant",
+   "question": "Is the female elephant standing behind the bull elephant?"
+  },
+  {
+   "id": "baby_next_to_female",
+   "type": "relation",
+   "of": [
+    "baby_elephant",
+    "female_elephant"
+   ],
+   "desc": "the baby elephant is next to the female elephant",
+   "question": "Is the baby elephant next to the female elephant?"
+  },
+  {
+   "id": "baby_pushing_female",
+   "type": "action",
+   "of": [
+    "baby_elephant",
+    "female_elephant"
+   ],
+   "desc": "the baby elephant is pushing against the leg of the female elephant",
+   "question": "Is the baby elephant pushing against the leg of the female elephant?"
+  },
+  {
+   "id": "jeep_in_front_of_elephants",
+   "type": "relation",
+   "of": [
+    "jeep",
+    "bull_elephant"
+   ],
+   "desc": "the jeep is parked in front of the elephant group",
+   "question": "Is the jeep parked in front of the elephant group?"
+  },
+  {
+   "id": "tourist_pointing_camera",
+   "type": "action",
+   "of": [
+    "tourist",
+    "bull_elephant"
+   ],
+   "desc": "the tourist points a camera at the bull elephant",
+   "question": "Is the tourist pointing a camera at the bull elephant?"
+  },
+  {
+   "id": "lion_crouching",
+   "type": "state",
+   "of": "lion",
+   "desc": "the lion is crouching in the tall grass",
+   "question": "Is the lion crouching in the tall grass?"
+  },
+  {
+   "id": "lion_watching_baby",
+   "type": "action",
+   "of": [
+    "lion",
+    "baby_elephant"
+   ],
+   "desc": "the lion is watching the baby elephant",
+   "question": "Is the lion watching the baby elephant?"
+  },
+  {
+   "id": "hyenas_lurking",
+   "type": "state",
+   "of": "hyenas",
+   "desc": "the hyenas are lurking",
+   "question": "Are the hyenas lurking?"
+  },
+  {
+   "id": "tree_taller_than_bull",
+   "type": "relation",
+   "of": [
+    "acacia_tree",
+    "bull_elephant"
+   ],
+   "desc": "the acacia tree is taller than the bull elephant",
+   "question": "Is the acacia tree taller than the bull elephant?"
+  },
+  {
+   "id": "baby_smaller_than_female",
+   "type": "relation",
+   "of": [
+    "baby_elephant",
+    "female_elephant"
+   ],
+   "desc": "the baby elephant is smaller than the female elephant",
+   "question": "Is the baby elephant smaller than the female elephant?"
+  },
+  {
+   "id": "lion_between_jeep_and_elephants",
+   "type": "relation",
+   "of": [
+    "lion",
+    "jeep",
+    "bull_elephant"
+   ],
+   "desc": "the lion is between the jeep and the elephants",
+   "question": "Is the lion positioned between the jeep and the elephants?"
+  },
+  {
+   "id": "lion_lower_than_baby",
+   "type": "relation",
+   "of": [
+    "lion",
+    "baby_elephant"
+   ],
+   "desc": "the lion is positioned lower to the ground than the baby elephant",
+   "question": "Is the lion positioned lower to the ground than the baby elephant?"
+  },
+  {
+   "id": "bull_standing",
+   "type": "state",
+   "of": "bull_elephant",
+   "desc": "the large bull elephant is standing",
+   "question": "Is the large bull elephant standing?"
+  },
+  {
+   "id": "female_standing",
+   "type": "state",
+   "of": "female_elephant",
+   "desc": "the smaller female elephant is standing",
+   "question": "Is the smaller female elephant standing?"
+  },
+  {
+   "id": "jeep_parked",
+   "type": "state",
+   "of": "jeep",
+   "desc": "the safari jeep is parked",
+   "question": "Is the safari jeep parked?"
+  },
+  {
+   "id": "hyenas_count",
+   "type": "attribute",
+   "of": "hyenas",
+   "desc": "the pack of hyenas consists of exactly two hyenas",
+   "question": "Are there exactly two hyenas in the pack?"
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "grasses",
+   "count": 1,
+   "count_exact": false,
+   "desc": "tall dry grass",
+   "question": "Is there tall dry grass?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rocks",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": false,
+   "desc": "distant rocks",
+   "question": "Are there distant rocks?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "bull_skin",
+   "type": "attribute",
+   "of": "bull_elephant",
+   "desc": "wrinkled, weathered skin",
+   "question": "Does the bull elephant have wrinkled, weathered skin?"
+  },
+  {
+   "id": "female_skin",
+   "type": "attribute",
+   "of": "female_elephant",
+   "desc": "smoother skin",
+   "question": "Does the female elephant have smoother skin?"
+  },
+  {
+   "id": "lion_coat",
+   "type": "relation",
+   "of": [
+    "lion",
+    "grass"
+   ],
+   "desc": "coat similar in color to the dry grass",
+   "question": "Is the lion's coat similar in color to the dry grass?"
+  },
+  {
+   "id": "hyenas_behind_rocks",
+   "type": "relation",
+   "of": [
+    "hyenas",
+    "rocks"
+   ],
+   "desc": "the hyenas are behind the distant rocks",
+   "question": "Are the hyenas behind the distant rocks?"
+  }
+ ],
+ "edges": [],
+ "id": "c_mr_054",
+ "prompt": "On a sunny African savanna, a large bull elephant with wrinkled, weathered skin stands under a tall acacia tree, using its trunk to pull leaves from a high branch. A smaller, female elephant with smoother skin stands behind the bull elephant. Next to the female elephant, a baby elephant is pushing against her leg. A safari jeep is parked a short distance away, in front of the elephant group; the jeep has a spare tire on its back and two more on its roof. A tourist in the jeep is pointing a camera at the bull elephant. A lion is crouching in the tall grass, watching the baby elephant. The lion's coat is a similar color to the dry grass it is in. Behind some distant rocks, a pack of hyenas is lurking. The number of hyenas is one less than the total number of spare tires on the jeep. The acacia tree is taller than the bull elephant. The baby elephant is smaller than the female elephant. The lion is between the jeep and the elephants. The lion is positioned lower to the ground than the baby elephant.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node jeep: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

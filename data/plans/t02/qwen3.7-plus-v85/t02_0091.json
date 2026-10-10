@@ -1,0 +1,121 @@
+{
+ "style": "oil painting, textured brushwork, heavy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with weathered wooden planks and an industrial backdrop",
+   "question": "Does the image show a shipyard dock with weathered wooden planks and an industrial backdrop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    500,
+    300,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "man_wrench",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds a rusted wrench",
+   "question": "Is the man holding a rusted wrench?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is standing",
+   "question": "Is the man standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_looking_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man looks directly at the brown dog",
+   "question": "Is the man looking directly at the brown dog?"
+  },
+  {
+   "id": "dog_right_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is to the right of the man",
+   "question": "Is the brown dog to the right of the man?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0091",
+ "prompt": "In an oil painting of a shipyard dock, a man in a red scarf stands on the left holding a rusted wrench. To his right, a brown dog sits calmly on the wooden planks. The man looks directly at the dog, creating a quiet moment of connection amidst the industrial backdrop. There is no water visible in the scene. The composition focuses strictly on these two figures and their immediate surroundings, capturing the texture of the weathered wood and the heavy atmosphere of the yard without any additional distractions or background elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,509 @@
+{
+ "style": "moody cinematic photography, high contrast, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit room interior with peeling wallpaper and a window looking out onto a storm-lit street",
+   "question": "Does the image show a dimly lit room interior with peeling wallpaper and a window looking out onto a storm-lit street?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden windowsill",
+   "question": "Is there a wooden windowsill?",
+   "box": [
+    0,
+    400,
+    1024,
+    550
+   ]
+  },
+  {
+   "id": "lighter",
+   "type": "entity",
+   "class": "lighter",
+   "plural": "lighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted lighter",
+   "question": "Is there a rusted lighter?",
+   "box": [
+    200,
+    420,
+    280,
+    480
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty coffee mug with steam rising and a cracked handle",
+   "question": "Is there a half-empty coffee mug with steam rising and a cracked handle?",
+   "box": [
+    350,
+    410,
+    450,
+    520
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered map with curled edges",
+   "question": "Is there a weathered map with curled edges?",
+   "box": [
+    500,
+    430,
+    700,
+    540
+   ]
+  },
+  {
+   "id": "compass",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass compass",
+   "question": "Is there a brass compass?",
+   "box": [
+    750,
+    420,
+    830,
+    500
+   ]
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a curtain",
+   "question": "Is there a curtain?",
+   "box": [
+    850,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked vase",
+   "question": "Is there a cracked vase?",
+   "box": [
+    100,
+    850,
+    200,
+    980
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter with worn keys",
+   "question": "Is there a typewriter with worn keys?",
+   "box": [
+    300,
+    750,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "birdcage",
+   "type": "entity",
+   "class": "birdcage",
+   "plural": "birdcages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small rusted unlocked birdcage",
+   "question": "Is there a small rusted unlocked birdcage?",
+   "box": [
+    700,
+    50,
+    850,
+    250
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    216,
+    376,
+    264,
+    424
+   ]
+  },
+  {
+   "id": "water_trail",
+   "type": "entity",
+   "class": "water trail",
+   "plural": "water trails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a trail of water beads",
+   "question": "Is there a trail of water beads?",
+   "box": [
+    50,
+    900,
+    300,
+    1024
+   ]
+  },
+  {
+   "id": "lighter_flame",
+   "type": "state",
+   "of": "lighter",
+   "desc": "the rusted lighter has a flickering flame",
+   "question": "Does the rusted lighter have a flickering flame?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam curls upward from the coffee mug",
+   "question": "Does steam curl upward from the coffee mug?"
+  },
+  {
+   "id": "compass_spinning",
+   "type": "state",
+   "of": "compass",
+   "desc": "the brass compass needle is trembling",
+   "question": "Is the brass compass needle trembling?"
+  },
+  {
+   "id": "moth_fluttering",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth is fluttering",
+   "question": "Is the moth fluttering?"
+  },
+  {
+   "id": "curtain_moving",
+   "type": "state",
+   "of": "curtain",
+   "desc": "the curtain is moving or billowing",
+   "question": "Is the curtain moving or billowing?"
+  },
+  {
+   "id": "map_unrolled",
+   "type": "state",
+   "of": "map",
+   "desc": "the weathered map is lying half-unrolled",
+   "question": "Is the weathered map lying half-unrolled?"
+  },
+  {
+   "id": "lighter_on_windowsill",
+   "type": "relation",
+   "of": [
+    "lighter",
+    "windowsill"
+   ],
+   "desc": "the rusted lighter rests on the windowsill",
+   "question": "Does the rusted lighter rest on the windowsill?"
+  },
+  {
+   "id": "mug_beside_lighter",
+   "type": "relation",
+   "of": [
+    "mug",
+    "lighter"
+   ],
+   "desc": "the coffee mug is beside the rusted lighter",
+   "question": "Is the coffee mug beside the rusted lighter?"
+  },
+  {
+   "id": "map_beside_mug",
+   "type": "relation",
+   "of": [
+    "map",
+    "mug"
+   ],
+   "desc": "the weathered map lies beside the coffee mug",
+   "question": "Does the weathered map lie beside the coffee mug?"
+  },
+  {
+   "id": "compass_beside_lighter",
+   "type": "relation",
+   "of": [
+    "compass",
+    "lighter"
+   ],
+   "desc": "the brass compass is perched on the windowsill beside the rusted lighter",
+   "question": "Is the brass compass perched on the windowsill beside the rusted lighter?"
+  },
+  {
+   "id": "vase_on_floor",
+   "type": "state",
+   "of": "vase",
+   "desc": "the cracked vase is on the floor beneath the window",
+   "question": "Is the cracked vase on the floor beneath the window?"
+  },
+  {
+   "id": "typewriter_on_floor",
+   "type": "state",
+   "of": "typewriter",
+   "desc": "the typewriter sits on the floor nearby",
+   "question": "Does the typewriter sit on the floor nearby?"
+  },
+  {
+   "id": "birdcage_hanging",
+   "type": "state",
+   "of": "birdcage",
+   "desc": "the birdcage hangs from the ceiling",
+   "question": "Does the birdcage hang from the ceiling?"
+  },
+  {
+   "id": "moth_near_lighter",
+   "type": "relation",
+   "of": [
+    "moth",
+    "lighter"
+   ],
+   "desc": "the moth flutters around the lighter flame",
+   "question": "Does the moth flutter around the lighter flame?"
+  },
+  {
+   "id": "water_trail_on_floor",
+   "type": "state",
+   "of": "water_trail",
+   "desc": "the trail of water beads is on the floor",
+   "question": "Is the trail of water beads on the floor?"
+  },
+  {
+   "id": "letters",
+   "type": "entity",
+   "class": "letter",
+   "plural": "letters",
+   "count": 2,
+   "count_exact": false,
+   "desc": "yellowed letters",
+   "question": "Are there yellowed letters?",
+   "box": [
+    100,
+    850,
+    400,
+    980
+   ]
+  },
+  {
+   "id": "paper",
+   "type": "entity",
+   "class": "paper",
+   "plural": "papers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sheet of paper with repeating lines",
+   "question": "Is there a sheet of paper with repeating lines?",
+   "box": [
+    150,
+    860,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "typewriter_on_letters",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "letters"
+   ],
+   "desc": "the typewriter sits in the pile of yellowed letters",
+   "question": "Is the typewriter sitting in the pile of yellowed letters?"
+  },
+  {
+   "id": "paper_in_typewriter",
+   "type": "relation",
+   "of": [
+    "paper",
+    "typewriter"
+   ],
+   "desc": "the paper is jammed in the typewriter rollers",
+   "question": "Is the paper jammed in the typewriter rollers?"
+  },
+  {
+   "id": "window_frame",
+   "type": "entity",
+   "class": "window frame",
+   "plural": "window frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden window frame",
+   "question": "Is there a wooden window frame?",
+   "box": [
+    300,
+    100,
+    724,
+    500
+   ]
+  },
+  {
+   "id": "street",
+   "type": "entity",
+   "class": "street",
+   "plural": "streets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a storm-lit street with neon signs",
+   "question": "Is there a storm-lit street with neon signs visible outside?",
+   "box": [
+    350,
+    350,
+    674,
+    480
+   ]
+  },
+  {
+   "id": "dandelion_fluff",
+   "type": "attribute",
+   "of": "vase",
+   "desc": "the wilting dandelion has white fluff",
+   "question": "Does the wilting dandelion have white fluff?"
+  },
+  {
+   "id": "water_trail_to_vase",
+   "type": "relation",
+   "of": [
+    "water_trail",
+    "vase"
+   ],
+   "desc": "the trail of water beads winds toward the cracked vase",
+   "question": "Does the trail of water beads wind toward the cracked vase?"
+  },
+  {
+   "id": "curtain_tugged_by_wind",
+   "type": "state",
+   "of": "curtain",
+   "desc": "the wind tugs at the curtain",
+   "question": "Is the wind tugging at the curtain?"
+  },
+  {
+   "id": "mug_handle_chipped",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee mug has a chipped handle",
+   "question": "Is the handle of the coffee mug chipped?"
+  },
+  {
+   "id": "map_ink_smudged",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the ink on the weathered map is smudged",
+   "question": "Is the ink on the weathered map smudged?"
+  },
+  {
+   "id": "typewriter_ribbon_frayed",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the ribbon of the typewriter is frayed",
+   "question": "Is the ribbon of the typewriter frayed?"
+  },
+  {
+   "id": "street_puddles",
+   "type": "attribute",
+   "of": "street",
+   "desc": "the storm-lit street has puddles",
+   "question": "Does the storm-lit street have puddles?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "lighter",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "map",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "compass",
+   "kind": "support"
+  },
+  {
+   "from": "letters",
+   "to": "typewriter",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0374",
+ "prompt": "The storm outside howls like a chorus of distant ghosts, its breath rattling the wooden window frame as if trying to escape rather than intrude. Inside, the air is thick with the mingled scents of burnt coffee, aged paper, and ozone from the rain-laden wind. A rusted lighter rests on the windowsill, its flickering flame trembling in response to each gust, casting long, wavering shadows across the peeling wallpaper. These shadows dance with those of a half-empty coffee mug, its steam curling upward like a hesitant sigh, briefly obscuring the cracked handle that seems to have been chipped by both time and use. Beside the mug, a weathered map—its edges curled like burnt parchment—lies half-unrolled, as if frozen in the act of being studied, the ink slightly smudged from a careless finger or a stray raindrop that had dared to cross the glass and touch the surface. The wind, sneaking through the gap in the window, tugs at the curtain with a rhythm that mimics a slow heartbeat, revealing and then concealing the storm-lit street below, where neon signs flicker erratically, reflecting in puddles that pulse with the rhythm of falling rain. A brass compass, perched precariously on the windowsill beside the lighter, spins slightly in the draft, its needle trembling between north and nowhere, caught in some indecision between the real and the imagined. A single moth flutters around the flame, not drawn by its warmth but by the suggestion of light in a world dimmed by the gloom, its wings catching and reflecting the glow in iridescent shivers. On the floor beneath the window, a trail of water beads has formed, winding like a miniature river toward a cracked vase holding a wilting dandelion, its white fluff catching motes of dust that swirl like stardust in the air. Nearby, a typewriter sits half-buried in a pile of yellowed letters, its keys worn smooth, as if the writer had been typing not words but prayers. The ribbon is frayed, and the paper jammed between the rollers is not blank but covered in repeating lines that fade in and out, like a mirage of language. A small birdcage, rusted and unlocked, hangs from the ceiling, empty but not abandoned, as if waiting for a return that may never come. The wind carries with it the sound of a distant radio, a static-laced voice speaking in a language that seems both familiar and lost, the words threading through the silence like threads in a tapestry no one has yet begun to weave. Every object in the room seems to pulse with a quiet urgency, as if each were holding its breath, caught between the storm and the calm, the known and the unknowable, the moment before and the one that will follow.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 66,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  }
+ }
+}

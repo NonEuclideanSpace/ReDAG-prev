@@ -1,0 +1,280 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image depict a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    400,
+    150,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    150,
+    180,
+    380,
+    820
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    700,
+    200,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    800,
+    500,
+    920,
+    650
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    750,
+    450,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cake_stand",
+   "type": "entity",
+   "class": "cake stand",
+   "plural": "cake stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver cake stand",
+   "question": "Is there a silver cake stand?",
+   "box": [
+    300,
+    700,
+    700,
+    1024
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "cake",
+   "plural": "cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a multi-tiered cake",
+   "question": "Is there a multi-tiered cake?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride in a white gown holds a bouquet tightly",
+   "question": "Is the bride in a white gown holding a bouquet tightly?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo has a gentle smile",
+   "question": "Does the groom in a black tuxedo have a gentle smile?"
+  },
+  {
+   "id": "groom_looking",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom in a black tuxedo looks at the bride in a white gown",
+   "question": "Is the groom in a black tuxedo looking at the bride in a white gown?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman_blue",
+    "bride",
+    "groom"
+   ],
+   "desc": "the woman in a blue dress points toward the couple excitedly",
+   "question": "Is the woman in a blue dress pointing excitedly toward the bride and groom?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is looking up attentively",
+   "question": "Is the small brown dog looking up attentively?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "groom_handing",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom in a black tuxedo is handing a glass of champagne to the bride in a white gown",
+   "question": "Is the groom in a black tuxedo handing a glass of champagne to the bride in a white gown?"
+  },
+  {
+   "id": "woman_next_to_dog",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "dog"
+   ],
+   "desc": "the woman in a blue dress is next to the small brown dog",
+   "question": "Is the woman in a blue dress next to the small brown dog?"
+  },
+  {
+   "id": "dog_on_chair",
+   "type": "relation",
+   "of": [
+    "dog",
+    "chair"
+   ],
+   "desc": "the small brown dog is on the chair",
+   "question": "Is the small brown dog on the chair?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "chair"
+   ],
+   "desc": "the woman in a blue dress is on the chair",
+   "question": "Is the woman in a blue dress on the chair?"
+  },
+  {
+   "id": "cake_on_stand",
+   "type": "relation",
+   "of": [
+    "cake",
+    "cake_stand"
+   ],
+   "desc": "the multi-tiered cake is on the silver cake stand",
+   "question": "Is the multi-tiered cake on the silver cake stand?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white gown stands",
+   "question": "Is the bride in a white gown standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "chair",
+   "to": "woman_blue",
+   "kind": "support"
+  },
+  {
+   "from": "cake_stand",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0082",
+ "prompt": "In an anime style wedding reception scene, a bride in a white gown stands center, holding a bouquet tightly. To her left, a groom in a black tuxedo looks at her with a gentle smile. On the right, a woman in a blue dress points toward the couple excitedly. Next to the woman in the blue dress sits a small brown dog on a chair, looking up attentively. In the foreground, a silver cake stand holds a multi-tiered cake, positioned slightly off-center. The groom is handing a glass of champagne to the bride. The woman in the blue dress is sitting on the chair next to the dog. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

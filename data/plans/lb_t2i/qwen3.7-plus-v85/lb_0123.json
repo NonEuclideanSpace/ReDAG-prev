@@ -1,0 +1,558 @@
+{
+ "style": "surreal, dimly lit, cinematic, high contrast, moody atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cramped apartment interior with chipped porcelain floor and a warped fogged window",
+   "question": "Does the image show a cramped apartment interior with a chipped porcelain floor and a warped fogged window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bulb",
+   "type": "entity",
+   "class": "incandescent bulb",
+   "plural": "incandescent bulbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an incandescent bulb",
+   "question": "Is there an incandescent bulb?",
+   "box": [
+    480,
+    50,
+    544,
+    114
+   ]
+  },
+  {
+   "id": "radiator",
+   "type": "entity",
+   "class": "radiator",
+   "plural": "radiators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty old radiator",
+   "question": "Is there a rusty old radiator?",
+   "box": [
+    800,
+    400,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "armchair",
+   "type": "entity",
+   "class": "armchair",
+   "plural": "armchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded green armchair",
+   "question": "Is there a faded green armchair?",
+   "box": [
+    100,
+    450,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "spider",
+   "type": "entity",
+   "class": "spider",
+   "plural": "spiders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spider",
+   "question": "Is there a spider?",
+   "box": [
+    316,
+    596,
+    364,
+    644
+   ]
+  },
+  {
+   "id": "web",
+   "type": "entity",
+   "class": "spider web",
+   "plural": "spider webs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glistening spider web",
+   "question": "Is there a glistening spider web?",
+   "box": [
+    340,
+    200,
+    500,
+    580
+   ]
+  },
+  {
+   "id": "shoes",
+   "type": "entity",
+   "class": "shoe",
+   "plural": "shoes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of wet shoes",
+   "question": "Are there two wet shoes?",
+   "box": [
+    400,
+    850,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "smudges",
+   "type": "entity",
+   "class": "footprint",
+   "plural": "footprints",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dark smudges",
+   "question": "Are there dark smudges?",
+   "box": [
+    550,
+    880,
+    750,
+    980
+   ]
+  },
+  {
+   "id": "mold",
+   "type": "entity",
+   "class": "mold patch",
+   "plural": "mold patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of black mold",
+   "question": "Is there a patch of black mold?",
+   "box": [
+    820,
+    720,
+    900,
+    780
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf",
+   "question": "Is there a shelf?",
+   "box": [
+    100,
+    300,
+    300,
+    350
+   ]
+  },
+  {
+   "id": "phonograph",
+   "type": "entity",
+   "class": "phonograph",
+   "plural": "phonographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a phonograph playing a record",
+   "question": "Is there a phonograph playing a record?",
+   "box": [
+    150,
+    250,
+    250,
+    300
+   ]
+  },
+  {
+   "id": "mobile",
+   "type": "entity",
+   "class": "mobile",
+   "plural": "mobiles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging mobile made of old clock gears",
+   "question": "Is there a hanging mobile made of old clock gears?",
+   "box": [
+    450,
+    150,
+    650,
+    350
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small puddle",
+   "question": "Is there a small puddle?",
+   "box": [
+    300,
+    800,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "reflection_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a suit made of shadow",
+   "question": "Is there a man in a suit made of shadow?",
+   "box": [
+    350,
+    820,
+    400,
+    880
+   ]
+  },
+  {
+   "id": "steam_radiator",
+   "type": "state",
+   "of": "radiator",
+   "desc": "steam rising from the rusty old radiator",
+   "question": "Is steam rising from the rusty old radiator?"
+  },
+  {
+   "id": "condensation_radiator",
+   "type": "attribute",
+   "of": "radiator",
+   "desc": "condensation on the rusty old radiator",
+   "question": "Is there condensation on the rusty old radiator?"
+  },
+  {
+   "id": "drips",
+   "type": "state",
+   "of": "radiator",
+   "desc": "condensation drips steadily from the rusty old radiator",
+   "question": "Is condensation dripping steadily from the rusty old radiator?"
+  },
+  {
+   "id": "armchair_angle",
+   "type": "state",
+   "of": "armchair",
+   "desc": "the faded green armchair sits at an awkward angle",
+   "question": "Is the faded green armchair sitting at an awkward angle?"
+  },
+  {
+   "id": "spider_on_seam",
+   "type": "relation",
+   "of": [
+    "spider",
+    "armchair"
+   ],
+   "desc": "the spider is on the split seam of the faded green armchair",
+   "question": "Is the spider on the split seam of the faded green armchair?"
+  },
+  {
+   "id": "web_stretch",
+   "type": "relation",
+   "of": [
+    "web",
+    "armchair"
+   ],
+   "desc": "the glistening spider web stretches from the faded green armchair to the ceiling",
+   "question": "Does the glistening spider web stretch from the faded green armchair to the ceiling?"
+  },
+  {
+   "id": "shoes_on_floor",
+   "type": "relation",
+   "of": [
+    "shoes",
+    "footprints"
+   ],
+   "desc": "the pair of wet shoes sit on the floor",
+   "question": "Do the pair of wet shoes sit on the floor?"
+  },
+  {
+   "id": "smudges_trail",
+   "type": "relation",
+   "of": [
+    "smudges",
+    "radiator"
+   ],
+   "desc": "the dark smudges trail toward the rusty old radiator",
+   "question": "Do the dark smudges trail toward the rusty old radiator?"
+  },
+  {
+   "id": "mold_on_floor",
+   "type": "relation",
+   "of": [
+    "mold",
+    "footprints"
+   ],
+   "desc": "the patch of black mold is on the floor",
+   "question": "Is the patch of black mold on the floor?"
+  },
+  {
+   "id": "window_above_radiator",
+   "type": "state",
+   "of": "radiator",
+   "desc": "the warped fogged window is above the rusty old radiator",
+   "question": "Is the warped fogged window above the rusty old radiator?"
+  },
+  {
+   "id": "phonograph_on_shelf",
+   "type": "relation",
+   "of": [
+    "phonograph",
+    "shelf"
+   ],
+   "desc": "the phonograph sits atop the shelf",
+   "question": "Does the phonograph sit atop the shelf?"
+  },
+  {
+   "id": "mobile_above_phonograph",
+   "type": "relation",
+   "of": [
+    "mobile",
+    "phonograph"
+   ],
+   "desc": "the hanging mobile is above the phonograph",
+   "question": "Is the hanging mobile above the phonograph?"
+  },
+  {
+   "id": "puddle_between",
+   "type": "relation",
+   "of": [
+    "puddle",
+    "shoes"
+   ],
+   "desc": "the small puddle is on the floor between the pair of wet shoes and the faded green armchair",
+   "question": "Is the small puddle on the floor between the pair of wet shoes and the faded green armchair?"
+  },
+  {
+   "id": "man_in_reflection",
+   "type": "relation",
+   "of": [
+    "reflection_man",
+    "puddle"
+   ],
+   "desc": "the man in a suit made of shadow is in the reflection of the small puddle",
+   "question": "Is the man in a suit made of shadow in the reflection of the small puddle?"
+  },
+  {
+   "id": "man_staring",
+   "type": "state",
+   "of": "reflection_man",
+   "desc": "the man in a suit made of shadow is staring directly at the viewer",
+   "question": "Is the man in a suit made of shadow staring directly at the viewer?"
+  },
+  {
+   "id": "steam_coiling",
+   "type": "state",
+   "of": "radiator",
+   "desc": "a single thread of steam from the rusty old radiator coils through the air",
+   "question": "Is a single thread of steam from the rusty old radiator coiling through the air?"
+  },
+  {
+   "id": "steam_touches_mobile",
+   "type": "relation",
+   "of": [
+    "radiator",
+    "mobile"
+   ],
+   "desc": "the steam from the rusty old radiator brushes against the hanging mobile",
+   "question": "Does the steam from the rusty old radiator brush against the hanging mobile?"
+  },
+  {
+   "id": "ceiling",
+   "type": "entity",
+   "class": "ceiling",
+   "plural": "ceilings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceiling",
+   "question": "Is there a ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    150
+   ]
+  },
+  {
+   "id": "web_to_ceiling",
+   "type": "relation",
+   "of": [
+    "web",
+    "ceiling"
+   ],
+   "desc": "the glistening spider web stretches to the suspended thread on the ceiling",
+   "question": "Does the glistening spider web stretch to the suspended thread on the ceiling?"
+  },
+  {
+   "id": "radiator_corner",
+   "type": "state",
+   "of": "radiator",
+   "desc": "the rusty old radiator is in the corner of the room",
+   "question": "Is the rusty old radiator located in a corner of the room?"
+  },
+  {
+   "id": "mold_breathing",
+   "type": "state",
+   "of": "mold",
+   "desc": "patch of black mold appearing to breathe",
+   "question": "Does the patch of black mold appear to be breathing?"
+  },
+  {
+   "id": "spider_spinning",
+   "type": "state",
+   "of": "spider",
+   "desc": "the spider is spinning a web",
+   "question": "Is the spider actively spinning a web?"
+  },
+  {
+   "id": "mobile_spinning",
+   "type": "state",
+   "of": "mobile",
+   "desc": "the hanging mobile made of old clock gears is rotating",
+   "question": "Is the hanging mobile made of old clock gears rotating?"
+  },
+  {
+   "id": "man_winking",
+   "type": "state",
+   "of": "reflection_man",
+   "desc": "the man in a suit made of shadow is winking",
+   "question": "Is the man in a suit made of shadow winking?"
+  },
+  {
+   "id": "trees",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "trees visible outside the window",
+   "question": "Are there trees visible outside the window?",
+   "box": [
+    400,
+    50,
+    624,
+    250
+   ]
+  },
+  {
+   "id": "armchair_beside_radiator",
+   "type": "relation",
+   "of": [
+    "armchair",
+    "radiator"
+   ],
+   "desc": "the faded green armchair is beside the rusty old radiator",
+   "question": "Is the faded green armchair beside the rusty old radiator?"
+  },
+  {
+   "id": "footprints",
+   "type": "entity",
+   "class": "footprint",
+   "plural": "footprints",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a labyrinth of footprints on the damp floor",
+   "question": "Are there footprints on the floor forming a looping pattern?",
+   "box": [
+    100,
+    800,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "bulb_glowing",
+   "type": "state",
+   "of": "bulb",
+   "desc": "the incandescent bulb is glowing",
+   "question": "Is the incandescent bulb glowing?"
+  },
+  {
+   "id": "armchair_stuffing",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "stuffing spilling from a split seam of the faded green armchair",
+   "question": "Is stuffing spilling from a split seam of the faded green armchair?"
+  },
+  {
+   "id": "trees_bending",
+   "type": "state",
+   "of": "trees",
+   "desc": "the trees outside appear to be bending inward",
+   "question": "Do the trees outside appear to be bending inward?"
+  },
+  {
+   "id": "radiator_surface_slick",
+   "type": "attribute",
+   "of": "radiator",
+   "desc": "slick metal surface of the radiator",
+   "question": "Is the metal surface of the radiator slick?"
+  },
+  {
+   "id": "thread_suspended",
+   "type": "attribute",
+   "of": "ceiling",
+   "desc": "suspended thread on the ceiling",
+   "question": "Is there a suspended thread on the ceiling?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "shelf",
+   "to": "phonograph",
+   "kind": "support"
+  },
+  {
+   "from": "ceiling",
+   "to": "mobile",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0123",
+ "prompt": "The dim glow of a flickering incandescent bulb casts long, wavering shadows across the cramped apartment, where time seems to pool and thicken like tar. A rusty old radiator hisses and steams in the corner, its metal surface slick with condensation that drips steadily onto the chipped porcelain floor, each drop echoing like a ticking clock before it vanishes into a patch of black mold that breathes faintly in rhythm with the radiator’s sighs. Beside it, a faded green armchair sits at an awkward angle, as if pushed aside in a hurry, its stuffing beginning to spill through a split seam where a spider has woven a glistening net that stretches from the chair to a suspended thread on the ceiling. On the floor nearby, a pair of wet shoes sit in uneasy stillness, their soles leaving dark smudges that trail toward the radiator like ink from a pen—each step etched in a pattern that somehow loops back on itself, creating a labyrinth of footprints in the damp. A window above the radiator, warped and fogged, frames a world that seems to pulse in and out of focus, where the trees outside bend inward, as if the room itself is drawing the outside world in, leaf by leaf. Inside the room, a phonograph sits atop a shelf, playing a record that seems to change every time it loops, its melodies shifting from a lullaby to a warning, then to a lullaby again, the needle gliding over grooves that rearrange themselves mid-play. Above it, a hanging mobile made of old clock gears spins lazily, though no breeze touches the room, its slow rotation synchronized with the heartbeat of the radiator, its ticking mirrored in the rhythmic flicker of the bulb. On the floor, between the shoes and the armchair, a small puddle ripples with no source, its surface reflecting not the room, but glimpses of other spaces—each reflection a doorway to a world that collapses the moment you try to step through. In one of those flickering reflections, a man stands, dressed in a suit made of shadow, staring directly at the viewer, his eyes flickering like a broken film reel. A single thread of steam from the radiator rises, coiling through the air until it brushes against the mobile, sending it spinning faster, its motion pulling the reflections into a vortex that swallows the bulb’s light, plunging the room into near darkness. From the shadows, a faint hum emerges, like a song half-remembered, and the spider on the chair’s seam begins to spin again—not web, but time, its legs moving backward, reversing the sequence of drips on the floor and smoothing the cracks in the porcelain. The shoes dry in reverse, their soles lifting the smudges back into air, while the chair rights itself and the radiator’s steam vanishes, leaving behind only the memory of hiss. Yet, even as the room returns to a stillness that feels almost natural, the reflections on the puddle pulse once more, the man in shadow winking just before the light returns, and the phonograph clicks again, its needle dancing on the threshold of something real, something just beyond.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 52,
+   "n_uncovered": 5,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

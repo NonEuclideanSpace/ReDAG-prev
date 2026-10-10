@@ -1,0 +1,195 @@
+{
+ "style": "simple and clean cartoon style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wooden surface",
+   "question": "Is there a wooden surface in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "alarm clock",
+   "plural": "alarm clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a whimsical alarm clock",
+   "question": "Is there a whimsical alarm clock?",
+   "box": [
+    362,
+    200,
+    662,
+    800
+   ]
+  },
+  {
+   "id": "clock_yellow",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock's body is made of bright yellow plastic",
+   "question": "Is the alarm clock's body made of bright yellow plastic?"
+  },
+  {
+   "id": "clock_face",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock has a single circular face",
+   "question": "Does the alarm clock have a single circular face?"
+  },
+  {
+   "id": "clock_expression",
+   "type": "state",
+   "of": "clock",
+   "desc": "the alarm clock has a happy expression",
+   "question": "Does the alarm clock have a happy expression?"
+  },
+  {
+   "id": "clock_glass",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock's face is protected by a cracked glass cover",
+   "question": "Is the alarm clock's face protected by a cracked glass cover?"
+  },
+  {
+   "id": "clock_bells",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock has two round metallic red bells on top",
+   "question": "Does the alarm clock have two round metallic red bells on top?"
+  },
+  {
+   "id": "clock_legs",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock has two legs shaped like boots",
+   "question": "Does the alarm clock have two legs shaped like boots?"
+  },
+  {
+   "id": "clock_pose",
+   "type": "state",
+   "of": "clock",
+   "desc": "the alarm clock is posed in a walking motion",
+   "question": "Is the alarm clock posed in a walking motion?"
+  },
+  {
+   "id": "clock_key",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "a spiral-shaped winding key is visible on the back of the alarm clock",
+   "question": "Is a spiral-shaped winding key visible on the back of the alarm clock?"
+  },
+  {
+   "id": "clock_on_surface",
+   "type": "state",
+   "of": "clock",
+   "desc": "the alarm clock stands on the wooden surface",
+   "question": "Is the alarm clock standing on the wooden surface?"
+  },
+  {
+   "id": "no_digital",
+   "type": "absent",
+   "desc": "a digital display",
+   "question": "Is there a digital display on the alarm clock?"
+  },
+  {
+   "id": "no_dirty",
+   "type": "absent",
+   "desc": "the alarm clock being dirty",
+   "question": "Is the alarm clock dirty?"
+  },
+  {
+   "id": "no_sad",
+   "type": "absent",
+   "desc": "a sad expression on the alarm clock",
+   "question": "Does the alarm clock have a sad expression?"
+  },
+  {
+   "id": "clock_numbers",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the numbers on the alarm clock's face are large and blue",
+   "question": "Are the numbers on the alarm clock's face large and blue?"
+  },
+  {
+   "id": "clock_hands",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock's hands are white",
+   "question": "Are the alarm clock's hands white?"
+  },
+  {
+   "id": "clock_shiny",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock's body is shiny and reflective",
+   "question": "Is the alarm clock's body shiny and reflective?"
+  },
+  {
+   "id": "clock_eyes",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the alarm clock has two large expressive eyes",
+   "question": "Does the alarm clock have two large expressive eyes?"
+  },
+  {
+   "id": "clock_mouth",
+   "type": "state",
+   "of": "clock",
+   "desc": "the alarm clock has a smiling mouth",
+   "question": "Does the alarm clock have a smiling mouth?"
+  },
+  {
+   "id": "clock_hammer",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "there is a single hammer between the bells of the alarm clock",
+   "question": "Is there a single hammer between the bells of the alarm clock?"
+  },
+  {
+   "id": "no_worn",
+   "type": "absent",
+   "desc": "the alarm clock being worn-out",
+   "question": "Is the alarm clock worn-out?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "clock",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_038",
+ "prompt": "A single, pristine, whimsical alarm clock in a cartoon style, standing on a wooden surface. The clock's body is made of shiny, reflective bright yellow plastic. It has a single, circular face with a happy expression, including two large, expressive eyes and a smiling mouth. The clock face is protected by a cracked glass cover. On top, it has two round, metallic red bells with a single hammer between them. The clock has two legs shaped like boots and is posed in a walking motion. Its hands are white and the numbers on its face are large and blue. A spiral-shaped winding key is visible on its back. The overall style appears simple and clean. The clock is not realistic, it does not show a digital display, it is not dirty or worn-out, its expression is not sad.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node clock: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

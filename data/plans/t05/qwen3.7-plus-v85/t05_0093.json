@@ -1,0 +1,241 @@
+{
+ "style": "cinematic film still, gritty, dusk lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gritty shipyard dock at dusk",
+   "question": "Does the image show a gritty shipyard dock at dusk?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hard hat",
+   "question": "Is there a woman in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "hook",
+   "type": "entity",
+   "class": "crane hook",
+   "plural": "crane hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted crane hook",
+   "question": "Is there a rusted crane hook?",
+   "box": [
+    400,
+    100,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in blue overalls",
+   "question": "Is there a man in blue overalls?",
+   "box": [
+    700,
+    350,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of wooden crates",
+   "question": "Is there a stack of wooden crates?",
+   "box": [
+    750,
+    600,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    780,
+    550,
+    920,
+    650
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat is standing",
+   "question": "Is the woman in the yellow hard hat standing?"
+  },
+  {
+   "id": "hook_suspended",
+   "type": "state",
+   "of": "hook",
+   "desc": "the rusted crane hook is suspended in mid-air",
+   "question": "Is the rusted crane hook suspended in mid-air?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls is leaning",
+   "question": "Is the man in blue overalls leaning?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "woman_pointing_hook",
+   "type": "action",
+   "of": [
+    "woman",
+    "hook"
+   ],
+   "desc": "the woman in the yellow hard hat is pointing toward the rusted crane hook",
+   "question": "Is the woman in the yellow hard hat pointing toward the rusted crane hook?"
+  },
+  {
+   "id": "man_looking_cat",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the man in blue overalls is looking at the black cat",
+   "question": "Is the man in blue overalls looking at the black cat?"
+  },
+  {
+   "id": "man_against_crates",
+   "type": "relation",
+   "of": [
+    "man",
+    "crates"
+   ],
+   "desc": "the man in blue overalls leans against the stack of wooden crates",
+   "question": "Is the man in blue overalls leaning against the stack of wooden crates?"
+  },
+  {
+   "id": "cat_on_crates",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crates"
+   ],
+   "desc": "the black cat sits on the top crate",
+   "question": "Is the black cat sitting on the top crate?"
+  },
+  {
+   "id": "ship_behind_group",
+   "type": "state",
+   "of": "woman",
+   "desc": "the cargo ship is behind the group",
+   "question": "Is the cargo ship behind the people and objects in the foreground?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "woman_on_concrete",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat stands on the concrete",
+   "question": "Is the woman in the yellow hard hat standing on the concrete?"
+  },
+  {
+   "id": "cat_alert",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is alert",
+   "question": "Is the black cat alert?"
+  },
+  {
+   "id": "ship",
+   "type": "entity",
+   "class": "cargo ship",
+   "plural": "cargo ships",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large cargo ship",
+   "question": "Is there a large cargo ship?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "crates",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0093",
+ "prompt": "A cinematic film still captures a gritty shipyard dock at dusk. On the left, a woman in a yellow hard hat stands firmly on the concrete. In the center, a rusted crane hook hangs suspended in mid-air. To the right, a man in blue overalls leans casually against a stack of wooden crates. Next to him, a black cat sits alertly on the top crate. Behind the group, a large cargo ship looms in the background. The woman in the yellow hard hat is pointing toward the rusted crane hook. The man in blue overalls is looking at the black cat. The scene is sharp and detailed, focusing on these specific elements. There is no water visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "style": "cinematic film still, soft lighting, snowy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet snowy town square with snow-covered cobblestones",
+   "question": "Does the image show a quiet snowy town square with snow-covered cobblestones?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "stone bench",
+   "plural": "stone benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone bench",
+   "question": "Is there a stone bench?",
+   "box": [
+    750,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue coat",
+   "question": "Is there an old woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow hat",
+   "question": "Is there a small child in a yellow hat?",
+   "box": [
+    400,
+    300,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "black dog",
+   "plural": "black dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black dog",
+   "question": "Is there a black dog?",
+   "box": [
+    700,
+    500,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "woman_hands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the old woman has her hands clasped tightly",
+   "question": "Does the old woman have her hands clasped tightly?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is pointing toward the right",
+   "question": "Is the small child pointing toward the right?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the small child is looking at the black dog",
+   "question": "Is the small child looking at the black dog?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the black dog is sitting",
+   "question": "Is the black dog sitting?"
+  },
+  {
+   "id": "dog_next_to_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the black dog is next to the stone bench",
+   "question": "Is the black dog next to the stone bench?"
+  },
+  {
+   "id": "no_traffic",
+   "type": "absent",
+   "desc": "traffic or vehicles",
+   "question": "Are there any traffic visible in the background?"
+  },
+  {
+   "id": "no_signage",
+   "type": "absent",
+   "desc": "modern signage or advertisements",
+   "question": "Are there any modern signage or advertisements in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the old woman in a blue coat stands",
+   "question": "Is the old woman in a blue coat standing?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow hat stands",
+   "question": "Is the small child in a yellow hat standing?"
+  },
+  {
+   "id": "no_vehicles",
+   "type": "absent",
+   "desc": "vehicles",
+   "question": "Are there any vehicles visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bench",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0066",
+ "prompt": "A cinematic film still captures a quiet snowy town square. On the left, an old woman in a blue coat stands with her hands clasped tightly. In the center, a small child in a yellow hat points toward the right side of the frame. On the right, a black dog sits calmly on the snow-covered ground next to a stone bench. The child is looking at the dog while pointing. There is no traffic or vehicles visible in the background. The scene is devoid of any modern signage or advertisements. The snow falls gently around them, covering the cobblestones entirely. The composition focuses strictly on these three figures and their immediate surroundings without any distractions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

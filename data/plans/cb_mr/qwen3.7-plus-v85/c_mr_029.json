@@ -1,0 +1,436 @@
+{
+ "style": "photorealistic photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a photography studio",
+   "question": "Does the image show a photography studio?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tripod",
+   "type": "entity",
+   "class": "tripod",
+   "plural": "tripods",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camera tripod",
+   "question": "Is there a camera tripod?",
+   "box": [
+    350,
+    400,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a professional camera",
+   "question": "Is there a professional camera?",
+   "box": [
+    450,
+    380,
+    574,
+    500
+   ]
+  },
+  {
+   "id": "photographer",
+   "type": "entity",
+   "class": "photographer",
+   "plural": "photographers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older photographer",
+   "question": "Is there an older photographer?",
+   "box": [
+    300,
+    200,
+    724,
+    850
+   ]
+  },
+  {
+   "id": "model",
+   "type": "entity",
+   "class": "model",
+   "plural": "models",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young model in a designer dress",
+   "question": "Is there a young model in a designer dress?",
+   "box": [
+    100,
+    150,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "assistant",
+   "type": "entity",
+   "class": "assistant",
+   "plural": "assistants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lighting assistant",
+   "question": "Is there a lighting assistant?",
+   "box": [
+    700,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "studio_lights",
+   "type": "entity",
+   "class": "studio light",
+   "plural": "studio lights",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four studio lights",
+   "question": "Are there four studio lights?",
+   "box": [
+    0,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "reflectors",
+   "type": "entity",
+   "class": "reflector",
+   "plural": "reflectors",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three reflectors",
+   "question": "Are there three reflectors?",
+   "box": [
+    50,
+    500,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "makeup_artist",
+   "type": "entity",
+   "class": "makeup artist",
+   "plural": "makeup artists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a makeup artist",
+   "question": "Is there a makeup artist?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "compact_mirror",
+   "type": "entity",
+   "class": "compact mirror",
+   "plural": "compact mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a compact mirror",
+   "question": "Is there a compact mirror?",
+   "box": [
+    180,
+    450,
+    230,
+    500
+   ]
+  },
+  {
+   "id": "stylist",
+   "type": "entity",
+   "class": "stylist",
+   "plural": "stylists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stylist",
+   "question": "Is there a stylist?",
+   "box": [
+    800,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    750,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "jewelry_box",
+   "type": "entity",
+   "class": "jewelry box",
+   "plural": "jewelry boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jewelry box",
+   "question": "Is there a jewelry box?",
+   "box": [
+    800,
+    620,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "necklaces",
+   "type": "entity",
+   "class": "necklace",
+   "plural": "necklaces",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two necklaces",
+   "question": "Are there two necklaces?",
+   "box": [
+    810,
+    630,
+    890,
+    680
+   ]
+  },
+  {
+   "id": "rings",
+   "type": "entity",
+   "class": "ring",
+   "plural": "rings",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four rings",
+   "question": "Are there four rings?",
+   "box": [
+    810,
+    640,
+    890,
+    690
+   ]
+  },
+  {
+   "id": "camera_on_tripod",
+   "type": "relation",
+   "of": [
+    "camera",
+    "tripod"
+   ],
+   "desc": "the professional camera is mounted on the tripod",
+   "question": "Is the professional camera mounted on the tripod?"
+  },
+  {
+   "id": "photographer_adjusting",
+   "type": "action",
+   "of": [
+    "photographer",
+    "camera"
+   ],
+   "desc": "the older photographer is adjusting the camera",
+   "question": "Is the older photographer adjusting the camera?"
+  },
+  {
+   "id": "photographer_behind_tripod",
+   "type": "relation",
+   "of": [
+    "photographer",
+    "tripod"
+   ],
+   "desc": "the older photographer stands behind the tripod",
+   "question": "Is the older photographer standing behind the tripod?"
+  },
+  {
+   "id": "model_in_front_backdrop",
+   "type": "relation",
+   "of": [
+    "model",
+    "backdrop"
+   ],
+   "desc": "the young model poses in front of the white backdrop",
+   "question": "Is the young model posing in front of the white backdrop?"
+  },
+  {
+   "id": "assistant_positioning_lights",
+   "type": "action",
+   "of": [
+    "assistant",
+    "studio_lights"
+   ],
+   "desc": "the lighting assistant is positioning the studio lights",
+   "question": "Is the lighting assistant positioning the studio lights?"
+  },
+  {
+   "id": "photographer_pointing_model",
+   "type": "action",
+   "of": [
+    "photographer",
+    "model"
+   ],
+   "desc": "the older photographer points at the young model",
+   "question": "Is the older photographer pointing at the young model?"
+  },
+  {
+   "id": "makeup_artist_touching_up",
+   "type": "action",
+   "of": [
+    "makeup_artist",
+    "model"
+   ],
+   "desc": "the makeup artist is touching up the young model's lipstick",
+   "question": "Is the makeup artist touching up the young model's lipstick?"
+  },
+  {
+   "id": "makeup_artist_holding_mirror",
+   "type": "attribute",
+   "of": "makeup_artist",
+   "desc": "the makeup artist holds a compact mirror",
+   "question": "Is the makeup artist holding a compact mirror?"
+  },
+  {
+   "id": "stylist_arranging_props",
+   "type": "action",
+   "of": [
+    "stylist",
+    "table"
+   ],
+   "desc": "the stylist is arranging props on the table",
+   "question": "Is the stylist arranging props on the table?"
+  },
+  {
+   "id": "stylist_selecting_accessories",
+   "type": "action",
+   "of": [
+    "stylist",
+    "jewelry_box"
+   ],
+   "desc": "the stylist is selecting accessories from the jewelry box",
+   "question": "Is the stylist selecting accessories from the jewelry box?"
+  },
+  {
+   "id": "necklaces_in_box",
+   "type": "relation",
+   "of": [
+    "necklaces",
+    "jewelry_box"
+   ],
+   "desc": "the two necklaces are in the jewelry box",
+   "question": "Are the two necklaces in the jewelry box?"
+  },
+  {
+   "id": "rings_in_box",
+   "type": "relation",
+   "of": [
+    "rings",
+    "jewelry_box"
+   ],
+   "desc": "the four rings are in the jewelry box",
+   "question": "Are the four rings in the jewelry box?"
+  },
+  {
+   "id": "photographer_standing",
+   "type": "state",
+   "of": "photographer",
+   "desc": "the older photographer is standing",
+   "question": "Is the older photographer standing?"
+  },
+  {
+   "id": "model_wearing_dress",
+   "type": "attribute",
+   "of": "model",
+   "desc": "the young model is wearing a designer dress",
+   "question": "Is the young model wearing a designer dress?"
+  },
+  {
+   "id": "backdrop",
+   "type": "entity",
+   "class": "backdrop",
+   "plural": "backdrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white backdrop",
+   "question": "Is there a white backdrop?",
+   "box": [
+    100,
+    50,
+    924,
+    600
+   ]
+  },
+  {
+   "id": "photographer_older_than_model",
+   "type": "relation",
+   "of": [
+    "photographer",
+    "model"
+   ],
+   "desc": "the older photographer appears older than the young model",
+   "question": "Does the older photographer appear older than the young model?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tripod",
+   "to": "camera",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "jewelry_box",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_029",
+ "prompt": "A photography studio with photographers and models. A photographer is adjusting a camera while standing behind a tripod. The photographer, a seasoned professional, appears older than the young model. A model is posing in front of a white backdrop while wearing a designer dress. A lighting assistant is positioning studio lights while the photographer points at the model. The studio contains three reflectors and a number of lights that is one more than the number of reflectors. A makeup artist is touching up the model's lipstick while holding a compact mirror. A stylist is arranging props on a table while selecting accessories from a jewelry box. The jewelry box contains two necklaces and a number of rings that is twice the number of necklaces.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 1,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

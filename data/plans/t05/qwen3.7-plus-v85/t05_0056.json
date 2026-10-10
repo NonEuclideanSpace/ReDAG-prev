@@ -1,0 +1,300 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor stretching into the distance with walls",
+   "question": "Does the image show a sterile hospital corridor stretching into the distance?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    350,
+    300,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "wheelchair",
+   "type": "entity",
+   "class": "wheelchair",
+   "plural": "wheelchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelchair",
+   "question": "Is there a wheelchair?",
+   "box": [
+    380,
+    400,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    620,
+    350,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "tablet",
+   "type": "entity",
+   "class": "tablet",
+   "plural": "tablets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tablet screen",
+   "question": "Is there a tablet screen?",
+   "box": [
+    700,
+    500,
+    820,
+    650
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    800,
+    200,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern in a terracotta pot",
+   "question": "Is there a potted fern in a terracotta pot?",
+   "box": [
+    850,
+    600,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman is sitting",
+   "question": "Is the elderly woman sitting?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "relation",
+   "of": [
+    "boy",
+    "tablet"
+   ],
+   "desc": "the young boy is looking at the tablet",
+   "question": "Is the young boy looking at the tablet?"
+  },
+  {
+   "id": "boy_sitting_footrests",
+   "type": "relation",
+   "of": [
+    "boy",
+    "wheelchair"
+   ],
+   "desc": "the young boy is sitting on the wheelchair footrests",
+   "question": "Is the young boy sitting on the wheelchair footrests?"
+  },
+  {
+   "id": "doctor_pointing",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "tablet"
+   ],
+   "desc": "the doctor in a white coat is pointing at the screen",
+   "question": "Is the doctor in a white coat pointing at the screen?"
+  },
+  {
+   "id": "nurse_left",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "woman"
+   ],
+   "desc": "the nurse in blue scrubs is to the left of the elderly woman",
+   "question": "Is the nurse in blue scrubs to the left of the elderly woman?"
+  },
+  {
+   "id": "boy_right",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the young boy is to the right of the elderly woman",
+   "question": "Is the young boy to the right of the elderly woman?"
+  },
+  {
+   "id": "doctor_next_to_boy",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "boy"
+   ],
+   "desc": "the doctor in a white coat stands next to the young boy",
+   "question": "Is the doctor in a white coat standing next to the young boy?"
+  },
+  {
+   "id": "fern_behind",
+   "type": "relation",
+   "of": [
+    "fern",
+    "boy"
+   ],
+   "desc": "the potted fern is behind the young boy and the doctor",
+   "question": "Is the potted fern behind the young boy?"
+  },
+  {
+   "id": "handover_pen",
+   "type": "action",
+   "of": [
+    "nurse",
+    "doctor"
+   ],
+   "desc": "the nurse in blue scrubs is handing a pen to the doctor in a white coat",
+   "question": "Is the nurse in blue scrubs handing a pen to the doctor in a white coat?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "doctor_standing",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor in a white coat stands",
+   "question": "Is the doctor in a white coat standing?"
+  },
+  {
+   "id": "fern_against_wall",
+   "type": "state",
+   "of": "fern",
+   "desc": "the potted fern rests against the wall",
+   "question": "Does the potted fern rest against the wall?"
+  },
+  {
+   "id": "woman_blanket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the elderly woman has a gray blanket",
+   "question": "Does the elderly woman have a gray blanket?"
+  },
+  {
+   "id": "fern_behind_doctor",
+   "type": "relation",
+   "of": [
+    "fern",
+    "doctor"
+   ],
+   "desc": "the potted fern is behind the doctor",
+   "question": "Is the potted fern behind the doctor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wheelchair",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0056",
+ "prompt": "In the style of a cinematic film still, a sterile hospital corridor stretches into the distance. On the left stands a nurse in blue scrubs holding a clipboard. In the center sits an elderly woman on a wheelchair with a gray blanket. To her right is a young boy in a striped shirt looking at a tablet. Next to the boy stands a doctor in a white coat pointing at the screen. A potted fern in a terracotta pot rests against the wall behind them. The nurse is handing a pen to the doctor. The boy is sitting on the wheelchair footrests. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

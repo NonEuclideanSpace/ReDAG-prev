@@ -1,0 +1,352 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform with tiled walls and tracks",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "pillar",
+   "type": "entity",
+   "class": "pillar",
+   "plural": "pillars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a structural pillar",
+   "question": "Is there a structural pillar?",
+   "box": [
+    850,
+    100,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "poster",
+   "type": "entity",
+   "class": "poster",
+   "plural": "posters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful poster",
+   "question": "Is there a colorful poster?",
+   "box": [
+    700,
+    200,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man with a gray beard",
+   "question": "Is there an elderly man with a gray beard?",
+   "box": [
+    400,
+    300,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow shirt",
+   "question": "Is there a young boy in a yellow shirt?",
+   "box": [
+    650,
+    400,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat with white paws",
+   "question": "Is there a black cat with white paws?",
+   "box": [
+    700,
+    750,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "cyclist",
+   "type": "entity",
+   "class": "cyclist",
+   "plural": "cyclists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cyclist in a green helmet",
+   "question": "Is there a cyclist in a green helmet?",
+   "box": [
+    880,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "woman_briefcase",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a silver briefcase",
+   "question": "Is the woman in a blue coat holding a silver briefcase?"
+  },
+  {
+   "id": "man_newspaper",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the elderly man with a gray beard holds a newspaper",
+   "question": "Is the elderly man with a gray beard holding a newspaper?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man with a gray beard is sitting",
+   "question": "Is the elderly man with a gray beard sitting?"
+  },
+  {
+   "id": "man_looking_newspaper",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man with a gray beard is looking at the newspaper",
+   "question": "Is the elderly man with a gray beard looking at the newspaper?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat with white paws is sitting",
+   "question": "Is the black cat with white paws sitting?"
+  },
+  {
+   "id": "cyclist_leaning",
+   "type": "state",
+   "of": "cyclist",
+   "desc": "the cyclist in a green helmet is leaning",
+   "question": "Is the cyclist in a green helmet leaning?"
+  },
+  {
+   "id": "cyclist_watching",
+   "type": "state",
+   "of": "cyclist",
+   "desc": "the cyclist in a green helmet is watching the tracks",
+   "question": "Is the cyclist in a green helmet watching the tracks?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue coat is to the left of the elderly man",
+   "question": "Is the woman in a blue coat to the left of the elderly man?"
+  },
+  {
+   "id": "boy_right_man",
+   "type": "relation",
+   "of": [
+    "boy",
+    "man"
+   ],
+   "desc": "the young boy is to the right of the elderly man",
+   "question": "Is the young boy to the right of the elderly man?"
+  },
+  {
+   "id": "boy_points_poster",
+   "type": "action",
+   "of": [
+    "boy",
+    "poster"
+   ],
+   "desc": "the young boy points at the colorful poster",
+   "question": "Is the young boy pointing at the colorful poster?"
+  },
+  {
+   "id": "cat_next_to_boy",
+   "type": "relation",
+   "of": [
+    "cat",
+    "boy"
+   ],
+   "desc": "the black cat is next to the young boy",
+   "question": "Is the black cat next to the young boy?"
+  },
+  {
+   "id": "cyclist_right",
+   "type": "relation",
+   "of": [
+    "cyclist",
+    "boy"
+   ],
+   "desc": "the cyclist is to the right of the young boy",
+   "question": "Is the cyclist to the right of the young boy?"
+  },
+  {
+   "id": "cyclist_against_pillar",
+   "type": "relation",
+   "of": [
+    "cyclist",
+    "pillar"
+   ],
+   "desc": "the cyclist leans against the pillar",
+   "question": "Is the cyclist leaning against the pillar?"
+  },
+  {
+   "id": "woman_hands_ticket",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman hands a ticket to the elderly man",
+   "question": "Is the woman handing a ticket to the elderly man?"
+  },
+  {
+   "id": "boy_looks_cat",
+   "type": "action",
+   "of": [
+    "boy",
+    "cat"
+   ],
+   "desc": "the young boy looks at the black cat",
+   "question": "Is the young boy looking at the black cat?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train",
+   "question": "Is there a train visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "tiled_wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiled wall",
+   "question": "Is there a tiled wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "tracks",
+   "type": "entity",
+   "class": "track",
+   "plural": "tracks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "subway tracks",
+   "question": "Are there subway tracks?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0007",
+ "prompt": "A watercolor illustration depicts a subway platform. On the left, a woman in a blue coat stands holding a silver briefcase. In the center, an elderly man with a gray beard sits on a wooden bench, looking at a newspaper. To his right, a young boy in a yellow shirt points at a colorful poster on the tiled wall. Next to the boy, a black cat with white paws sits calmly on the floor. On the far right, a cyclist in a green helmet leans against a pillar, watching the tracks. The woman hands a ticket to the elderly man. The boy looks at the black cat. There is no train visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception hall",
+   "question": "Does the image show a wedding reception hall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    380,
+    150,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    700,
+    400,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    720,
+    500,
+    920,
+    900
+   ]
+  },
+  {
+   "id": "bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a bouquet",
+   "question": "Is the bride holding a bouquet?"
+  },
+  {
+   "id": "cake_slice",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the bride holds a slice of cake",
+   "question": "Is the bride holding a slice of cake?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride is standing",
+   "question": "Is the bride standing?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom has a gentle smile",
+   "question": "Does the groom have a gentle smile?"
+  },
+  {
+   "id": "groom_looking",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom looks at the bride",
+   "question": "Is the groom looking at the bride?"
+  },
+  {
+   "id": "handing_cake",
+   "type": "action",
+   "of": [
+    "bride",
+    "groom"
+   ],
+   "desc": "the bride hands a slice of cake to the groom",
+   "question": "Is the bride handing a slice of cake to the groom?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is sitting",
+   "question": "Is the dog sitting?"
+  },
+  {
+   "id": "dog_on_chair",
+   "type": "relation",
+   "of": [
+    "dog",
+    "chair"
+   ],
+   "desc": "the dog sits on the chair",
+   "question": "Is the dog sitting on the chair?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "dog_bowtie",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small brown dog wears a tiny bow tie",
+   "question": "Does the small brown dog wear a tiny bow tie?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0082",
+ "prompt": "In an anime style wedding reception, a bride in a white gown stands on the left holding a bouquet. In the center, a groom in a black tuxedo looks at her with a gentle smile. On the right, a small brown dog sits on a chair wearing a tiny bow tie. The bride is handing a slice of cake to the groom. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

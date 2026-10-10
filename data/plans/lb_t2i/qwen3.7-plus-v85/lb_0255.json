@@ -1,0 +1,405 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, soft lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room interior with a wall and a rain-streaked window showing a parking lot with puddles",
+   "question": "Does the image show a room interior with a wall and a rain-streaked window looking out onto a parking lot with puddles?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden desk etched with grooves",
+   "question": "Is there a wooden desk etched with grooves?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a desk lamp",
+   "question": "Is there a desk lamp?",
+   "box": [
+    750,
+    400,
+    900,
+    650
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open laptop",
+   "question": "Is there an open laptop?",
+   "box": [
+    300,
+    550,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming coffee mug",
+   "question": "Is there a steaming coffee mug?",
+   "box": [
+    150,
+    650,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "red apple",
+   "plural": "red apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plump red apple",
+   "question": "Is there a plump red apple?",
+   "box": [
+    500,
+    680,
+    580,
+    760
+   ]
+  },
+  {
+   "id": "notes",
+   "type": "entity",
+   "class": "sticky note",
+   "plural": "sticky notes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of sticky notes",
+   "question": "Is there a pile of sticky notes?",
+   "box": [
+    600,
+    700,
+    700,
+    780
+   ]
+  },
+  {
+   "id": "airplane",
+   "type": "entity",
+   "class": "paper airplane",
+   "plural": "paper airplanes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paper airplane made from a sticky note",
+   "question": "Is there a paper airplane made from a sticky note?",
+   "box": [
+    800,
+    300,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pencil",
+   "question": "Is there a pencil?",
+   "box": [
+    200,
+    706,
+    280,
+    754
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "wall clock",
+   "plural": "wall clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    100,
+    100,
+    250,
+    250
+   ]
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam rising from the coffee mug",
+   "question": "Is steam rising from the coffee mug?"
+  },
+  {
+   "id": "lamp_glow",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the desk lamp bulb is glowing softly",
+   "question": "Is the desk lamp bulb glowing softly?"
+  },
+  {
+   "id": "laptop_code",
+   "type": "state",
+   "of": "laptop",
+   "desc": "translucent lines of code floating from the laptop screen",
+   "question": "Are translucent lines of code floating from the laptop screen?"
+  },
+  {
+   "id": "apple_trail",
+   "type": "state",
+   "of": "apple",
+   "desc": "a trail of golden motes behind the red apple",
+   "question": "Is there a trail of golden motes behind the red apple?"
+  },
+  {
+   "id": "lamp_on_desk",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "desk"
+   ],
+   "desc": "the desk lamp is on the wooden desk",
+   "question": "Is the desk lamp on the wooden desk?"
+  },
+  {
+   "id": "laptop_on_desk",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "desk"
+   ],
+   "desc": "the open laptop is on the wooden desk",
+   "question": "Is the open laptop on the wooden desk?"
+  },
+  {
+   "id": "mug_on_desk",
+   "type": "relation",
+   "of": [
+    "mug",
+    "desk"
+   ],
+   "desc": "the coffee mug is on the wooden desk",
+   "question": "Is the coffee mug on the wooden desk?"
+  },
+  {
+   "id": "apple_on_desk",
+   "type": "relation",
+   "of": [
+    "apple",
+    "desk"
+   ],
+   "desc": "the red apple is on the wooden desk",
+   "question": "Is the red apple on the wooden desk?"
+  },
+  {
+   "id": "notes_on_desk",
+   "type": "relation",
+   "of": [
+    "notes",
+    "desk"
+   ],
+   "desc": "the pile of sticky notes is on the wooden desk",
+   "question": "Is the pile of sticky notes on the wooden desk?"
+  },
+  {
+   "id": "pencil_on_desk",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "desk"
+   ],
+   "desc": "the pencil is on the wooden desk",
+   "question": "Is the pencil on the wooden desk?"
+  },
+  {
+   "id": "clock_on_wall",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock is on the wall",
+   "question": "Is the clock on the wall?"
+  },
+  {
+   "id": "apple_nudges_notes",
+   "type": "action",
+   "of": [
+    "apple",
+    "notes"
+   ],
+   "desc": "the red apple nudges the pile of sticky notes",
+   "question": "Is the red apple nudging the pile of sticky notes?"
+  },
+  {
+   "id": "patterns_on_wall",
+   "type": "state",
+   "of": "lamp",
+   "desc": "kaleidoscopic light patterns from the lamp are cast on the wall",
+   "question": "Are kaleidoscopic light patterns from the lamp cast on the wall?"
+  },
+  {
+   "id": "notes_detail",
+   "type": "attribute",
+   "of": "notes",
+   "desc": "the sticky notes are scrawled with urgent to-dos and dreams",
+   "question": "Are the sticky notes scrawled with writing?"
+  },
+  {
+   "id": "airplane_state",
+   "type": "state",
+   "of": "airplane",
+   "desc": "the paper airplane is hovering mid-flight",
+   "question": "Is the paper airplane hovering in the air?"
+  },
+  {
+   "id": "mug_empty",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee mug is empty",
+   "question": "Is the coffee mug empty?"
+  },
+  {
+   "id": "clock_reverse",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock ticks in reverse",
+   "question": "Does the clock appear to be ticking in reverse?"
+  },
+  {
+   "id": "pencil_tip",
+   "type": "state",
+   "of": "pencil",
+   "desc": "the pencil tip is twitching",
+   "question": "Is the tip of the pencil twitching?"
+  },
+  {
+   "id": "notes_beside_laptop",
+   "type": "relation",
+   "of": [
+    "notes",
+    "laptop"
+   ],
+   "desc": "the pile of sticky notes is beside the open laptop",
+   "question": "Is the pile of sticky notes beside the open laptop?"
+  },
+  {
+   "id": "desk_drawings",
+   "type": "attribute",
+   "of": "desk",
+   "desc": "tiny constellations drawn on the wooden desk surface",
+   "question": "Are there tiny constellation drawings on the wooden desk surface?"
+  },
+  {
+   "id": "lamp_bulb_glowing",
+   "type": "state",
+   "of": "lamp",
+   "desc": "the desk lamp bulb is glowing",
+   "question": "Is the desk lamp bulb glowing?"
+  },
+  {
+   "id": "notes_writing",
+   "type": "attribute",
+   "of": "notes",
+   "desc": "the sticky notes have writing on them",
+   "question": "Do the sticky notes have writing on them?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "apple",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "notes",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "pencil",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0255",
+ "prompt": "In the heart of a room suspended between reality and memory, a steaming mug of coffee breathes life into the quiet space, its warm fog unfurling like ghostly tendrils toward a desk lamp whose bulb pulses with the faint rhythm of a heartbeat. The lamp’s soft glow illuminates a wooden desk etched with the grooves of countless stories, each one etched in the faint scent of old paper and worn fingers. Beside it, an open laptop flickers with a screen that seems to stretch infinitely inward, its digital contents spilling into the physical world as translucent lines of code float and curl around the furniture. A red apple, plump and luminous, rolls with an almost sentient grace across the desk’s surface, leaving a thin trail of dew that evaporates into golden motes of light before they reach the edge. It nudges a pile of sticky notes—each one scrawled with urgent to-dos, half-remembered dreams, and the scribbles of a mind unraveling in the quiet storm of productivity—sending one drifting like a leaf to the corner, where it levitates momentarily before folding itself into a paper airplane and soaring into the air. Outside the rain-dappled window, the parking lot is not just half-empty but half-alive, with puddles rippling in perfect synchrony with the heartbeat of the lamp, each ripple birthing a fleeting reflection of the room inside it. The glass, perpetually blurred, reflects not just the present but glimpses of the past and future—flickering moments of the same room as it might have been, or might yet become. A clock on the wall ticks in reverse, each tick a ripple in time that causes a domino effect in the scene: the coffee cools, warms, and cools again; the apple grows, shrinks, and grows once more; the lamp dims, flares, and dims as if breathing in sync with an unseen world. The desk lamp’s light refracts through the rain-streaked glass, casting kaleidoscopic patterns onto the wall, where they shift and evolve like living tapestries, each color bleeding into the next with the logic of a dream. A pencil rests on the desk, its tip twitching as if alive, drawing tiny constellations in invisible ink that fade just as quickly as they appear. The sticky note airplane hovers mid-flight, suspended in a loop that begins and ends in the same flicker, while the coffee mug, somehow now empty, emits a faint hum that resonates with the ticking clock and the sigh of the apple as it pauses at the edge of the desk. A faint breeze, originating from nowhere and everywhere, stirs the air, carrying the scent of coffee, old books, and something just out of reach—a whisper of a forgotten name or a long-ago summer. The room breathes in unison with the storm beyond the glass, each element bound in a dance of impossible yet seamless logic, where time is elastic and memory lingers like the last drop of steam curling toward the infinite glow of the lamp.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 27,
+   "n_uncovered": 3,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,307 @@
+{
+ "style": "watercolor illustration, soft washes, no sharp lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop terrace under a dark night sky",
+   "question": "Does the image show a rooftop terrace under a dark night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "man_green",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green suit",
+   "question": "Is there a man in a green suit?",
+   "box": [
+    260,
+    300,
+    460,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    400,
+    500,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    420,
+    700,
+    580,
+    900
+   ]
+  },
+  {
+   "id": "child_yellow",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    550,
+    350,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a railing",
+   "question": "Is there a railing?",
+   "box": [
+    500,
+    400,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "elderly_grey",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a grey coat",
+   "question": "Is there an elderly person in a grey coat?",
+   "box": [
+    800,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress holds a champagne flute",
+   "question": "Is the woman in a blue dress holding a champagne flute?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_green",
+   "desc": "the man in a green suit is pointing",
+   "question": "Is the man in a green suit pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "child_leaning",
+   "type": "state",
+   "of": "child_yellow",
+   "desc": "the child in a yellow raincoat is leaning",
+   "question": "Is the child in a yellow raincoat leaning?"
+  },
+  {
+   "id": "child_looking_stars",
+   "type": "state",
+   "of": "child_yellow",
+   "desc": "the child in a yellow raincoat is looking up at the stars",
+   "question": "Is the child in a yellow raincoat looking up at the stars?"
+  },
+  {
+   "id": "elderly_gift",
+   "type": "attribute",
+   "of": "elderly_grey",
+   "desc": "the elderly person in a grey coat holds a small gift box",
+   "question": "Is the elderly person in a grey coat holding a small gift box?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_green",
+    "woman_blue"
+   ],
+   "desc": "the man in a green suit is next to the woman in a blue dress",
+   "question": "Is the man in a green suit next to the woman in a blue dress?"
+  },
+  {
+   "id": "dog_on_crate",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crate"
+   ],
+   "desc": "the golden retriever is on the wooden crate",
+   "question": "Is the golden retriever on the wooden crate?"
+  },
+  {
+   "id": "child_behind_dog",
+   "type": "relation",
+   "of": [
+    "child_yellow",
+    "dog"
+   ],
+   "desc": "the child in a yellow raincoat is behind the golden retriever",
+   "question": "Is the child in a yellow raincoat behind the golden retriever?"
+  },
+  {
+   "id": "child_against_railing",
+   "type": "relation",
+   "of": [
+    "child_yellow",
+    "railing"
+   ],
+   "desc": "the child in a yellow raincoat leans against the railing",
+   "question": "Is the child in a yellow raincoat leaning against the railing?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "elderly_grey",
+    "woman_blue"
+   ],
+   "desc": "the elderly person in a grey coat hands the gift box to the woman in a blue dress",
+   "question": "Is the elderly person in a grey coat handing a gift box to the woman in a blue dress?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "man_pointing_city",
+   "type": "relation",
+   "of": [
+    "man_green",
+    "city_lights"
+   ],
+   "desc": "the man in a green suit points toward the distant city lights",
+   "question": "Is the man in a green suit pointing toward the distant city lights?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is watching the scene",
+   "question": "Is the golden retriever watching the scene?"
+  },
+  {
+   "id": "city_lights",
+   "type": "entity",
+   "class": "city lights",
+   "plural": "city lights",
+   "count": 1,
+   "count_exact": false,
+   "desc": "distant city lights",
+   "question": "Are there distant city lights visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "dog_gentle_eyes",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the golden retriever has gentle eyes",
+   "question": "Does the golden retriever have gentle eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0100",
+ "prompt": "In a watercolor illustration, a rooftop party unfolds under the night sky. On the left, a woman in a blue dress stands holding a champagne flute. Next to her on the right, a man in a green suit points toward the distant city lights. In the center, a golden retriever sits calmly on a wooden crate, watching the scene with gentle eyes. Behind the dog, a child in a yellow raincoat leans against a railing, looking at the stars above. To the far right, an elderly person in a grey coat hands a small gift box to the woman in the blue dress. There is no moon visible in the dark sky. The soft washes of color blend the figures into the urban backdrop, capturing the quiet energy of the gathering without sharp lines or harsh contrasts. The composition balances the five distinct entities across the frame, emphasizing their simple poses and connections through subtle gestures and shared space on the elevated terrace.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

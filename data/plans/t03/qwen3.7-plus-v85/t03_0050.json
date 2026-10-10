@@ -1,0 +1,172 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a school science fair setting",
+   "question": "Does the image show a school science fair setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a blue cap",
+   "question": "Is there a boy wearing a blue cap?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with pigtails",
+   "question": "Is there a girl?",
+   "box": [
+    350,
+    200,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "teacher",
+   "plural": "teachers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a gray suit",
+   "question": "Is there a teacher wearing a gray suit?",
+   "box": [
+    700,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass beaker",
+   "question": "Is there a glass beaker?",
+   "box": [
+    480,
+    600,
+    580,
+    750
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy in the blue cap holds a clipboard",
+   "question": "Is the boy in the blue cap holding a clipboard?"
+  },
+  {
+   "id": "boy_next_to_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy is next to the girl",
+   "question": "Is the boy next to the girl?"
+  },
+  {
+   "id": "girl_points_beaker",
+   "type": "action",
+   "of": [
+    "girl",
+    "beaker"
+   ],
+   "desc": "the girl points at the beaker",
+   "question": "Is the girl pointing at the beaker?"
+  },
+  {
+   "id": "teacher_looks_beaker",
+   "type": "action",
+   "of": [
+    "teacher",
+    "beaker"
+   ],
+   "desc": "the teacher looks at the beaker",
+   "question": "Is the teacher looking at the beaker?"
+  },
+  {
+   "id": "no_cat",
+   "type": "absent",
+   "desc": "a cat",
+   "question": "Is there a cat in the image?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in the blue cap is standing",
+   "question": "Is the boy in the blue cap standing?"
+  },
+  {
+   "id": "beaker_green_liquid",
+   "type": "attribute",
+   "of": "beaker",
+   "desc": "the glass beaker is filled with green liquid",
+   "question": "Is the glass beaker filled with green liquid?"
+  },
+  {
+   "id": "girl_pigtails",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has pigtails",
+   "question": "Does the girl have pigtails?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0050",
+ "prompt": "A photorealistic photo captures a school science fair. On the left, a boy in a blue cap stands holding a clipboard. In the center, a girl with pigtails points at a glass beaker filled with green liquid. On the right, a teacher in a gray suit looks at the beaker. The boy is next to the girl. There is no cat.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

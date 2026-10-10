@@ -1,0 +1,277 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market at dawn with cobblestones",
+   "question": "Does the image show a village market scene at dawn with cobblestone ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    280,
+    500,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man",
+   "question": "Is there an old man?",
+   "box": [
+    400,
+    180,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "oranges",
+   "type": "entity",
+   "class": "orange",
+   "plural": "oranges",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of bright oranges",
+   "question": "Is there a stack of bright oranges?",
+   "box": [
+    600,
+    400,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a green cap",
+   "question": "Is there a young boy wearing a green cap?",
+   "box": [
+    550,
+    350,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with black stripes",
+   "question": "Is there a cat with black stripes?",
+   "box": [
+    800,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    780,
+    650,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a basket",
+   "question": "Is the woman in a blue apron holding a basket?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man with a white beard is pointing",
+   "question": "Is the old man with a white beard pointing?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a green cap looks with wide eyes",
+   "question": "Does the young boy in a green cap have wide eyes?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat with black stripes is sleeping",
+   "question": "Is the cat with black stripes sleeping?"
+  },
+  {
+   "id": "woman_next_to_dog",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the brown dog is next to the woman in a blue apron",
+   "question": "Is the brown dog next to the woman in a blue apron?"
+  },
+  {
+   "id": "man_points_oranges",
+   "type": "action",
+   "of": [
+    "old_man",
+    "oranges"
+   ],
+   "desc": "the old man with a white beard points toward the stack of bright oranges",
+   "question": "Is the old man with a white beard pointing toward the stack of bright oranges?"
+  },
+  {
+   "id": "boy_looks_oranges",
+   "type": "action",
+   "of": [
+    "boy",
+    "oranges"
+   ],
+   "desc": "the young boy in a green cap looks at the stack of bright oranges",
+   "question": "Is the young boy in a green cap looking at the stack of bright oranges?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the cat with black stripes is atop the wooden crate",
+   "question": "Is the cat with black stripes atop the wooden crate?"
+  },
+  {
+   "id": "woman_gives_coin",
+   "type": "action",
+   "of": [
+    "woman",
+    "old_man"
+   ],
+   "desc": "the woman in a blue apron hands a coin to the old man with a white beard",
+   "question": "Is the woman in a blue apron handing a coin to the old man with a white beard?"
+  },
+  {
+   "id": "dog_near_boy",
+   "type": "relation",
+   "of": [
+    "dog",
+    "boy"
+   ],
+   "desc": "the brown dog rests its head near the foot of the young boy in a green cap",
+   "question": "Is the brown dog's head near the foot of the young boy in a green cap?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is the sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "old_man_beard",
+   "type": "attribute",
+   "of": "old_man",
+   "desc": "the old man has a white beard",
+   "question": "Does the old man have a white beard?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0125",
+ "prompt": "In an anime style village market at dawn, a woman in a blue apron stands on the left holding a basket. Next to her, a brown dog sits calmly on the cobblestones. In the center, an old man with a white beard points toward a stack of bright oranges. A young boy in a green cap looks at the fruit with wide eyes. On the right, a cat with black stripes sleeps atop a wooden crate. The woman hands a coin to the old man. The brown dog rests its head near the boy's foot. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

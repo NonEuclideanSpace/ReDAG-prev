@@ -1,0 +1,191 @@
+{
+ "style": "photorealistic photo, winter atmosphere, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with blurred historic buildings in the background",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    380,
+    450,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue coat",
+   "question": "Is there a woman wearing a blue coat?",
+   "box": [
+    680,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf is standing",
+   "question": "Is the man wearing a red scarf standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman wearing a blue coat is looking intently",
+   "question": "Is the woman wearing a blue coat looking intently?"
+  },
+  {
+   "id": "man_treat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a small treat",
+   "question": "Is the man wearing a red scarf holding a small treat?"
+  },
+  {
+   "id": "dog_eyes_treat",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog eyes the treat with anticipation",
+   "question": "Is the brown dog looking at the treat with anticipation?"
+  },
+  {
+   "id": "dog_beside_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is beside the man wearing a red scarf",
+   "question": "Is the brown dog beside the man wearing a red scarf?"
+  },
+  {
+   "id": "woman_looks_at_dog",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman wearing a blue coat looks at the brown dog",
+   "question": "Is the woman wearing a blue coat looking at the brown dog?"
+  },
+  {
+   "id": "man_offers_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man wearing a red scarf offers the treat to the brown dog",
+   "question": "Is the man wearing a red scarf offering the treat to the brown dog?"
+  },
+  {
+   "id": "no_bird",
+   "type": "absent",
+   "desc": "a bird flying overhead",
+   "question": "Is there a bird flying overhead in the image?"
+  },
+  {
+   "id": "buildings_bg",
+   "type": "entity",
+   "class": "building",
+   "plural": "buildings",
+   "count": 2,
+   "count_exact": false,
+   "desc": "blurred historic buildings",
+   "question": "Are there blurred historic buildings?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "dog_snow",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the brown dog has fur dusted with fresh snowflakes",
+   "question": "Is the brown dog's fur dusted with fresh snowflakes?"
+  },
+  {
+   "id": "man_hand_extended",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf has his hand extended",
+   "question": "Is the man wearing a red scarf extending his hand?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0036",
+ "prompt": "A photorealistic photo captures a snowy town square. On the left, a man in a red scarf stands firmly on the icy pavement. In the center, a brown dog sits patiently beside him, its fur dusted with fresh snowflakes. To the right, a woman in a blue coat looks intently at the animal. The man extends his hand toward the dog, offering a small treat that the creature eyes with anticipation. The scene is quiet and still, focused entirely on this brief moment of connection amidst the winter chill. There is no bird flying overhead to distract from the central trio. The background features blurred historic buildings, emphasizing the three main subjects in the foreground. The snow covers the ground uniformly, creating a soft white base for the figures.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor setting",
+   "question": "Does the image show an indoor setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    670,
+    150,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    400,
+    250,
+    620,
+    900
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver laptop",
+   "question": "Is there a silver laptop?",
+   "box": [
+    550,
+    500,
+    750,
+    650
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "woman_holding_passport",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a black passport",
+   "question": "Is the woman in the blue coat holding a black passport?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the gray suit is sitting",
+   "question": "Is the man in the gray suit sitting?"
+  },
+  {
+   "id": "man_looking_laptop",
+   "type": "relation",
+   "of": [
+    "man",
+    "laptop"
+   ],
+   "desc": "the man in the gray suit looks at the silver laptop",
+   "question": "Is the man in the gray suit looking at the silver laptop?"
+  },
+  {
+   "id": "child_pointing_screen",
+   "type": "action",
+   "of": [
+    "child",
+    "laptop"
+   ],
+   "desc": "the child in the yellow hat points at the screen of the silver laptop",
+   "question": "Is the child in the yellow hat pointing at the screen of the silver laptop?"
+  },
+  {
+   "id": "woman_handing_child",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in the blue coat hands the black passport to the child in the yellow hat",
+   "question": "Is the woman in the blue coat handing the black passport to the child in the yellow hat?"
+  },
+  {
+   "id": "no_luggage",
+   "type": "absent",
+   "desc": "luggage",
+   "question": "Is there any luggage visible in the image?"
+  },
+  {
+   "id": "child_between",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman",
+    "man"
+   ],
+   "desc": "the child in the yellow hat is between the woman in the blue coat and the man in the gray suit",
+   "question": "Is the child in the yellow hat positioned between the woman in the blue coat and the man in the gray suit?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0140",
+ "prompt": "In a photorealistic photo, a woman in a blue coat stands on the left holding a black passport. A man in a gray suit sits on the right looking at a silver laptop. Between them in the center, a child in a yellow hat points at the screen of the laptop. The woman is handing the passport to the child. There is no luggage visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

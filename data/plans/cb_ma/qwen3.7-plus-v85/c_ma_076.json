@@ -1,0 +1,157 @@
+{
+ "style": "photorealistic product photography, clean lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for product photography",
+   "question": "Is the background neutral and suitable for product photography?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white porcelain plate",
+   "question": "Is there a white porcelain plate?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "cube",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single metallic cube-shaped music box",
+   "question": "Is there a single metallic cube-shaped music box?",
+   "box": [
+    350,
+    300,
+    674,
+    624
+   ]
+  },
+  {
+   "id": "cube_patterns",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "fractal geometric patterns etched on each face of the cube",
+   "question": "Are fractal geometric patterns etched on each face of the cube?"
+  },
+  {
+   "id": "cube_window",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "a sapphire-glass window on the top of the cube revealing brass cylinders and pins",
+   "question": "Does the top of the cube have a sapphire-glass window revealing brass cylinders and pins?"
+  },
+  {
+   "id": "cube_dial",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "a recessed indigo-enamel dial on the front of the cube",
+   "question": "Is there a recessed indigo-enamel dial on the front of the cube?"
+  },
+  {
+   "id": "cube_key",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "a slender silver winding key protruding from the right face of the cube",
+   "question": "Is there a slender silver winding key protruding from the right face of the cube?"
+  },
+  {
+   "id": "cube_lights",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "subtle lavender LED strips trace every edge of the cube",
+   "question": "Do subtle lavender LED strips trace every edge of the cube?"
+  },
+  {
+   "id": "cube_on_plate",
+   "type": "relation",
+   "of": [
+    "cube",
+    "plate"
+   ],
+   "desc": "the metallic music-box cube rests on the white porcelain plate",
+   "question": "Is the metallic music-box cube resting on the white porcelain plate?"
+  },
+  {
+   "id": "no_fingerprints",
+   "type": "absent",
+   "desc": "fingerprints on the cube",
+   "question": "Are there any fingerprints on the cube?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the cube",
+   "question": "Is there any rust on the cube?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden elements in the scene",
+   "question": "Are there any wooden elements in the scene?"
+  },
+  {
+   "id": "cube_dial_numerals",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "silver numerals on the indigo-enamel dial",
+   "question": "Are there silver numerals on the indigo-enamel dial?"
+  },
+  {
+   "id": "cube_lights_emitting",
+   "type": "state",
+   "of": "cube",
+   "desc": "the lavender LED strips are emitting uniform light",
+   "question": "Are the lavender LED strips emitting uniform light?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "plate",
+   "to": "cube",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_076",
+ "prompt": "Illustrate a single metallic music-box cube resting on a white porcelain plate. Each face is etched with fractal geometric patterns; the top contains a sapphire-glass window revealing brass cylinders and pins. A recessed indigo-enamel dial with silver numerals decorates the front, while a slender silver winding key protrudes from the right face. Subtle lavender LED strips trace every edge, emitting uniform light. The cube shows no fingerprints, no rust, and includes no wooden elements.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

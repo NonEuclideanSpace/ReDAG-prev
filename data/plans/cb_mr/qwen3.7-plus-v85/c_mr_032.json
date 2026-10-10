@@ -1,0 +1,432 @@
+{
+ "style": "fantasy digital painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fantasy forest clearing with a river flowing in the background",
+   "question": "Does the image show a fantasy forest clearing with a river flowing in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elf",
+   "type": "entity",
+   "class": "elf",
+   "plural": "elves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elf with a bow",
+   "question": "Is there an elf with a bow?",
+   "box": [
+    350,
+    200,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "goblin",
+   "type": "entity",
+   "class": "goblin",
+   "plural": "goblins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a goblin",
+   "question": "Is there a goblin?",
+   "box": [
+    600,
+    350,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "mushroom",
+   "type": "entity",
+   "class": "mushroom",
+   "plural": "mushrooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a giant luminous mushroom",
+   "question": "Is there a giant luminous mushroom?",
+   "box": [
+    200,
+    100,
+    450,
+    600
+   ]
+  },
+  {
+   "id": "chest",
+   "type": "entity",
+   "class": "treasure chest",
+   "plural": "treasure chests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large empty treasure chest with a large lock on its front",
+   "question": "Is there a large empty treasure chest with a large lock on its front?",
+   "box": [
+    650,
+    500,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "sword",
+   "type": "entity",
+   "class": "broken sword",
+   "plural": "broken swords",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken sword",
+   "question": "Is there a broken sword?",
+   "box": [
+    450,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "rock_1",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rock",
+   "question": "Is there a large rock?",
+   "box": [
+    100,
+    600,
+    200,
+    700
+   ]
+  },
+  {
+   "id": "rock_2",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second large rock",
+   "question": "Is there a second large rock?",
+   "box": [
+    200,
+    650,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small bird",
+   "question": "Is there a small bird?",
+   "box": [
+    300,
+    80,
+    350,
+    130
+   ]
+  },
+  {
+   "id": "root",
+   "type": "entity",
+   "class": "tree root",
+   "plural": "tree roots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick tree root",
+   "question": "Is there a thick tree root?",
+   "box": [
+    380,
+    780,
+    520,
+    850
+   ]
+  },
+  {
+   "id": "twig",
+   "type": "entity",
+   "class": "twig",
+   "plural": "twigs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thin twig",
+   "question": "Is there a thin twig?",
+   "box": [
+    676,
+    726,
+    724,
+    774
+   ]
+  },
+  {
+   "id": "shield",
+   "type": "attribute",
+   "of": "goblin",
+   "desc": "the goblin holds a wooden shield",
+   "question": "Is the goblin holding a wooden shield?"
+  },
+  {
+   "id": "arrow",
+   "type": "attribute",
+   "of": "elf",
+   "desc": "the elf holds an arrow nocked to the bow",
+   "question": "Is the elf holding an arrow nocked to the bow?"
+  },
+  {
+   "id": "elf_facing_goblin",
+   "type": "state",
+   "of": "elf",
+   "desc": "the elf is facing the goblin",
+   "question": "Is the elf facing the goblin?"
+  },
+  {
+   "id": "goblin_pushing_chest",
+   "type": "action",
+   "of": [
+    "goblin",
+    "chest"
+   ],
+   "desc": "the goblin is pushing the treasure chest towards the elf",
+   "question": "Is the goblin pushing the treasure chest towards the elf?"
+  },
+  {
+   "id": "elf_pointing_at_goblin",
+   "type": "action",
+   "of": [
+    "elf",
+    "goblin"
+   ],
+   "desc": "the elf is pointing the arrow at the goblin",
+   "question": "Is the elf pointing the arrow at the goblin?"
+  },
+  {
+   "id": "elf_behind_mushroom",
+   "type": "relation",
+   "of": [
+    "elf",
+    "mushroom"
+   ],
+   "desc": "the elf is positioned in front of the giant luminous mushroom",
+   "question": "Is the elf positioned in front of the giant luminous mushroom?"
+  },
+  {
+   "id": "sword_between_elf_goblin",
+   "type": "relation",
+   "of": [
+    "sword",
+    "elf",
+    "goblin"
+   ],
+   "desc": "the broken sword lies between the elf and the goblin",
+   "question": "Does the broken sword lie between the elf and the goblin?"
+  },
+  {
+   "id": "rocks_near_each_other",
+   "type": "relation",
+   "of": [
+    "rock_1",
+    "rock_2"
+   ],
+   "desc": "the two rocks are near each other",
+   "question": "Are the two rocks near each other?"
+  },
+  {
+   "id": "bird_on_mushroom",
+   "type": "relation",
+   "of": [
+    "bird",
+    "mushroom"
+   ],
+   "desc": "the bird is perched on top of the giant mushroom",
+   "question": "Is the bird perched on top of the giant mushroom?"
+  },
+  {
+   "id": "chest_behind_goblin",
+   "type": "relation",
+   "of": [
+    "chest",
+    "goblin"
+   ],
+   "desc": "the treasure chest is behind the goblin",
+   "question": "Is the treasure chest behind the goblin?"
+  },
+  {
+   "id": "river_behind_mushroom",
+   "type": "state",
+   "of": "mushroom",
+   "desc": "the river flows behind the giant mushroom",
+   "question": "Does the river flow behind the giant mushroom?"
+  },
+  {
+   "id": "elf_on_root",
+   "type": "relation",
+   "of": [
+    "elf",
+    "root"
+   ],
+   "desc": "the elf is stepping on the tree root",
+   "question": "Is the elf stepping on the tree root?"
+  },
+  {
+   "id": "goblin_breaking_twig",
+   "type": "action",
+   "of": [
+    "goblin",
+    "twig"
+   ],
+   "desc": "the goblin is breaking the twig under its foot",
+   "question": "Is the goblin breaking the twig under its foot?"
+  },
+  {
+   "id": "bird_facing_away",
+   "type": "relation",
+   "of": [
+    "bird",
+    "elf"
+   ],
+   "desc": "the bird is facing away from the elf",
+   "question": "Is the bird facing away from the elf?"
+  },
+  {
+   "id": "sword_pointing_chest",
+   "type": "state",
+   "of": "sword",
+   "desc": "the broken sword is pointing towards the treasure chest",
+   "question": "Is the broken sword pointing towards the treasure chest?"
+  },
+  {
+   "id": "elf_taller",
+   "type": "relation",
+   "of": [
+    "elf",
+    "goblin"
+   ],
+   "desc": "the tall elf is taller than the short goblin",
+   "question": "Is the tall elf taller than the short goblin?"
+  },
+  {
+   "id": "mushroom_taller",
+   "type": "relation",
+   "of": [
+    "mushroom",
+    "elf"
+   ],
+   "desc": "the giant luminous mushroom is taller than the tall elf",
+   "question": "Is the giant luminous mushroom taller than the tall elf?"
+  },
+  {
+   "id": "root_thicker",
+   "type": "relation",
+   "of": [
+    "root",
+    "twig"
+   ],
+   "desc": "the thick tree root is thicker than the thin twig",
+   "question": "Is the thick tree root thicker than the thin twig?"
+  },
+  {
+   "id": "elf_tall",
+   "type": "attribute",
+   "of": "elf",
+   "desc": "the elf is tall",
+   "question": "Is the elf tall?"
+  },
+  {
+   "id": "goblin_short",
+   "type": "attribute",
+   "of": "goblin",
+   "desc": "the goblin is short",
+   "question": "Is the goblin short?"
+  },
+  {
+   "id": "rock_2_runes",
+   "type": "relation",
+   "of": [
+    "rock_2",
+    "rock_1"
+   ],
+   "desc": "glowing runes are carved into the second rock",
+   "question": "Are glowing runes carved into the second rock?"
+  },
+  {
+   "id": "shield_boss",
+   "type": "attribute",
+   "of": "goblin",
+   "desc": "the wooden shield has a small metal boss",
+   "question": "Does the wooden shield have a small metal boss?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "rock_1",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "rock_2",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "sword",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "root",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "twig",
+   "kind": "support"
+  },
+  {
+   "from": "mushroom",
+   "to": "bird",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_032",
+ "prompt": "In a fantasy forest clearing, a tall elf with a bow is facing a short goblin. The elf is taller than the goblin. The goblin is holding a wooden shield and pushing a large, empty treasure chest towards the elf. The elf is positioned in front of a giant, luminous mushroom, which is taller than the elf. The treasure chest has a large lock on its front, which is bigger than the small metal boss on the goblin's shield. The elf is pointing an arrow at the goblin. Between the elf and the goblin lies a broken sword on the ground. There are two large rocks near each other in the clearing. Some glowing runes are carved into the rocks, and their number is three times the number of rocks. A small bird is perched on top of the giant mushroom. The treasure chest is behind the goblin. A river flows behind the giant mushroom. The treasure chest is larger than the goblin's shield. The elf is stepping on a tree root. The goblin is breaking a twig under its foot, and the tree root the elf is stepping on is thicker than the twig the goblin is breaking. The bird is facing away from the elf. The broken sword is pointing towards the treasure chest.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 2,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

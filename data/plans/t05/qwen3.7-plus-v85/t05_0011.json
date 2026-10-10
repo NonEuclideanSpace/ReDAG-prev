@@ -1,0 +1,365 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a train dining car interior with rich textures",
+   "question": "Does the image show a train dining car interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "dining table",
+   "plural": "dining tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    200,
+    600,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "seat_left",
+   "type": "entity",
+   "class": "velvet seat",
+   "plural": "velvet seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet seat",
+   "question": "Is there a velvet seat?",
+   "box": [
+    50,
+    500,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "seat_right",
+   "type": "entity",
+   "class": "velvet seat",
+   "plural": "velvet seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet seat",
+   "question": "Is there a velvet seat?",
+   "box": [
+    674,
+    500,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    100,
+    200,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter wearing a white apron",
+   "question": "Is there a waiter wearing a white apron?",
+   "box": [
+    450,
+    150,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue hat",
+   "question": "Is there a woman wearing a blue hat?",
+   "box": [
+    700,
+    200,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    720,
+    450,
+    880,
+    600
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plate",
+   "question": "Is there a plate?",
+   "box": [
+    150,
+    650,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds a fork",
+   "question": "Is the man holding a fork?"
+  },
+  {
+   "id": "glass",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter holds a glass of water",
+   "question": "Is the waiter holding a glass?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man is sitting",
+   "question": "Is the man sitting?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is standing",
+   "question": "Is the waiter standing?"
+  },
+  {
+   "id": "waiter_leaning",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is leaning slightly forward",
+   "question": "Is the waiter leaning slightly forward?"
+  },
+  {
+   "id": "woman_hands_lap",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman's hands are resting on her lap",
+   "question": "Are the woman's hands resting on her lap?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is sitting",
+   "question": "Is the dog sitting?"
+  },
+  {
+   "id": "dog_gazing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is gazing up",
+   "question": "Is the dog gazing up?"
+  },
+  {
+   "id": "man_on_seat_left",
+   "type": "relation",
+   "of": [
+    "man",
+    "seat_left"
+   ],
+   "desc": "the man sits on the velvet seat on the left",
+   "question": "Is the man sitting on the velvet seat on the left?"
+  },
+  {
+   "id": "woman_on_seat_right",
+   "type": "relation",
+   "of": [
+    "woman",
+    "seat_right"
+   ],
+   "desc": "the woman sits on the velvet seat on the right",
+   "question": "Is the woman sitting on the velvet seat on the right?"
+  },
+  {
+   "id": "dog_on_seat_right",
+   "type": "relation",
+   "of": [
+    "dog",
+    "seat_right"
+   ],
+   "desc": "the dog sits on the velvet seat on the right",
+   "question": "Is the dog sitting on the velvet seat on the right?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the dog is next to the woman",
+   "question": "Is the dog next to the woman?"
+  },
+  {
+   "id": "waiter_places_glass",
+   "type": "action",
+   "of": [
+    "waiter",
+    "table"
+   ],
+   "desc": "the waiter places the glass on the table",
+   "question": "Is the waiter placing the glass on the table?"
+  },
+  {
+   "id": "waiter_hands_glass",
+   "type": "action",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter hands the glass to the woman",
+   "question": "Is the waiter handing the glass to the woman?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman looks intently at the man",
+   "question": "Is the woman looking intently at the man?"
+  },
+  {
+   "id": "man_looks_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man looks at the woman",
+   "question": "Is the man looking at the woman?"
+  },
+  {
+   "id": "no_ceiling_fan",
+   "type": "absent",
+   "desc": "ceiling fan",
+   "question": "Is there a ceiling fan visible in the carriage?"
+  },
+  {
+   "id": "window_bg",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window revealing a blurred landscape",
+   "question": "Is there a large window revealing a blurred landscape?",
+   "box": [
+    50,
+    50,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "glass_content",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the glass held by the waiter contains water",
+   "question": "Does the glass held by the waiter contain water?"
+  },
+  {
+   "id": "fork_material",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the fork held by the man is silver",
+   "question": "Is the fork held by the man silver?"
+  },
+  {
+   "id": "fork_position",
+   "type": "state",
+   "of": "man",
+   "desc": "the fork held by the man is poised above his plate",
+   "question": "Is the fork held by the man positioned above his plate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "seat_left",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "seat_right",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "seat_right",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0011",
+ "prompt": "In the style of an oil painting, a train dining car scene unfolds with rich textures. On the left sits a man in a red scarf, holding a silver fork poised above his plate. In the center stands a waiter in a white apron, leaning slightly forward as he places a glass of water on the table. To the right, a woman in a blue hat looks intently at the man in the red scarf, her hands resting calmly on her lap. Next to her, a small brown dog sits quietly on the velvet seat, gazing up at the waiter. Behind them, a large window reveals a blurred landscape rushing by. The waiter is handing the glass to the woman in the blue hat. The man in the red scarf is looking at the woman in the blue hat. There is no ceiling fan visible in the carriage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,461 @@
+{
+ "style": "surreal digital painting, otherworldly dawn, mercury and rose quartz sky, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal landscape with a mirror-still lake and a spiraling dawn sun",
+   "question": "Does the image show a surreal landscape with a mirror-still lake and a spiraling dawn sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dock",
+   "type": "entity",
+   "class": "wooden dock",
+   "plural": "wooden docks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden dock",
+   "question": "Is there a weathered wooden dock?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "boat",
+   "type": "entity",
+   "class": "fishing boat",
+   "plural": "fishing boats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fishing boat with a faded blue hull",
+   "question": "Is there a fishing boat with a faded blue hull?",
+   "box": [
+    500,
+    550,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "fishing net",
+   "plural": "fishing nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled fishing net with shifting knots",
+   "question": "Is there a crumpled fishing net with shifting knots?",
+   "box": [
+    550,
+    600,
+    700,
+    680
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-filled bucket",
+   "question": "Is there a half-filled bucket?",
+   "box": [
+    600,
+    620,
+    680,
+    700
+   ]
+  },
+  {
+   "id": "fish",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 3,
+   "count_exact": false,
+   "desc": "silvery bioluminescent fish",
+   "question": "Are there silvery bioluminescent fish?",
+   "box": [
+    610,
+    640,
+    670,
+    690
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bird made of wind and mist",
+   "question": "Is there a bird made of wind and mist?",
+   "box": [
+    450,
+    400,
+    650,
+    550
+   ]
+  },
+  {
+   "id": "line",
+   "type": "entity",
+   "class": "fishing line",
+   "plural": "fishing lines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fishing line dangling from the boat's bow",
+   "question": "Is there a fishing line dangling from the boat's bow?",
+   "box": [
+    766,
+    650,
+    814,
+    900
+   ]
+  },
+  {
+   "id": "dock_flickering",
+   "type": "state",
+   "of": "dock",
+   "desc": "the wooden dock is flickering in and out of existence",
+   "question": "Is the wooden dock flickering in and out of existence?"
+  },
+  {
+   "id": "boat_rocking",
+   "type": "state",
+   "of": "boat",
+   "desc": "the fishing boat is rocking rhythmically",
+   "question": "Is the fishing boat rocking rhythmically?"
+  },
+  {
+   "id": "fish_blinking",
+   "type": "state",
+   "of": "fish",
+   "desc": "the fish are blinking their eyes",
+   "question": "Are the fish blinking their eyes?"
+  },
+  {
+   "id": "net_on_deck",
+   "type": "relation",
+   "of": [
+    "net",
+    "boat"
+   ],
+   "desc": "the fishing net lies on the deck of the boat",
+   "question": "Is the fishing net lying on the deck of the boat?"
+  },
+  {
+   "id": "bucket_on_deck",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "boat"
+   ],
+   "desc": "the bucket is on the deck of the boat",
+   "question": "Is the bucket on the deck of the boat?"
+  },
+  {
+   "id": "fish_in_bucket",
+   "type": "relation",
+   "of": [
+    "fish",
+    "bucket"
+   ],
+   "desc": "the fish are inside the bucket",
+   "question": "Are the fish inside the bucket?"
+  },
+  {
+   "id": "boat_at_dock_edge",
+   "type": "relation",
+   "of": [
+    "boat",
+    "dock"
+   ],
+   "desc": "the fishing boat is at the farthest edge of the dock",
+   "question": "Is the fishing boat at the farthest edge of the dock?"
+  },
+  {
+   "id": "bird_circling_boat",
+   "type": "action",
+   "of": [
+    "bird",
+    "boat"
+   ],
+   "desc": "the mist bird circles the fishing boat",
+   "question": "Is the mist bird circling the fishing boat?"
+  },
+  {
+   "id": "line_into_reflection",
+   "type": "relation",
+   "of": [
+    "line",
+    "unseen_hand"
+   ],
+   "desc": "the fishing line dangles into the reflection in the lake",
+   "question": "Does the fishing line dangle into the reflection in the lake?"
+  },
+  {
+   "id": "reflection_dock",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reversed and inverted shadow of the dock in the lake",
+   "question": "Is there a reversed and inverted shadow of the dock in the lake?",
+   "box": [
+    0,
+    512,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "unseen_hand",
+   "type": "entity",
+   "class": "hand",
+   "plural": "hands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unseen hand in the reflection",
+   "question": "Is there an indication of an unseen hand in the reflection?",
+   "box": [
+    400,
+    800,
+    624,
+    950
+   ]
+  },
+  {
+   "id": "bucket_runes",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the bucket's rim is etched with runes",
+   "question": "Is the bucket's rim etched with runes?"
+  },
+  {
+   "id": "line_from_bow",
+   "type": "relation",
+   "of": [
+    "line",
+    "boat"
+   ],
+   "desc": "the fishing line dangles from the boat’s bow",
+   "question": "Does the fishing line dangle from the boat’s bow?"
+  },
+  {
+   "id": "hand_pulls_line",
+   "type": "action",
+   "of": [
+    "unseen_hand",
+    "line"
+   ],
+   "desc": "the unseen hand pulls the fishing line",
+   "question": "Is the unseen hand pulling the fishing line?"
+  },
+  {
+   "id": "line_in_reflection",
+   "type": "relation",
+   "of": [
+    "line",
+    "reflection_dock"
+   ],
+   "desc": "the fishing line dangles into the reflection where the dock shadow is",
+   "question": "Does the fishing line dangle into the reflection?"
+  },
+  {
+   "id": "mountain_real",
+   "type": "entity",
+   "class": "mountain",
+   "plural": "mountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a real mountain",
+   "question": "Is there a real mountain?",
+   "box": [
+    300,
+    400,
+    724,
+    600
+   ]
+  },
+  {
+   "id": "vapor_bridge",
+   "type": "entity",
+   "class": "vapor bridge",
+   "plural": "vapor bridges",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shimmering vapor bridge",
+   "question": "Is there a shimmering vapor bridge connecting the two mountains?",
+   "box": [
+    450,
+    300,
+    574,
+    400
+   ]
+  },
+  {
+   "id": "reflection_trees",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "trees stretching out from the mirrored ground in the reflection",
+   "question": "Are there trees stretching out from the mirrored ground in the lake's reflection?",
+   "box": [
+    100,
+    800,
+    924,
+    1024
+   ]
+  },
+  {
+   "id": "dock_reflection_relation",
+   "type": "relation",
+   "of": [
+    "reflection_dock",
+    "dock"
+   ],
+   "desc": "the shadow of the dock is reversed and inverted relative to the dock",
+   "question": "Is the shadow of the dock in the reflection reversed and inverted compared to the real dock?"
+  },
+  {
+   "id": "bird_trails_collect",
+   "type": "action",
+   "of": [
+    "bird",
+    "bucket"
+   ],
+   "desc": "trails of liquid light from the bird collect in the bucket",
+   "question": "Do trails of liquid light from the bird collect in the bucket?"
+  },
+  {
+   "id": "mountain_distance",
+   "type": "attribute",
+   "of": "mountain_real",
+   "desc": "the real mountain is in the distance",
+   "question": "Is the real mountain in the distance?"
+  },
+  {
+   "id": "bucket_water",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the bucket contains water",
+   "question": "Does the half-filled bucket contain water?"
+  },
+  {
+   "id": "mountain_float",
+   "type": "entity",
+   "class": "mountain",
+   "plural": "mountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down floating mountain",
+   "question": "Is there an upside-down floating mountain?",
+   "box": [
+    700,
+    100,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "dock_flickering_2",
+   "type": "state",
+   "of": "dock",
+   "desc": "parts of the dock flicker in and out of existence",
+   "question": "Do parts of the wooden dock appear to flicker or be translucent?"
+  },
+  {
+   "id": "bird_trails",
+   "type": "attribute",
+   "of": "bird",
+   "desc": "the bird leaves trails of liquid light",
+   "question": "Does the bird leave trails of liquid light?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "boat",
+   "to": "net",
+   "kind": "support"
+  },
+  {
+   "from": "boat",
+   "to": "bucket",
+   "kind": "support"
+  },
+  {
+   "from": "mountain_real",
+   "to": "vapor_bridge",
+   "kind": "support"
+  },
+  {
+   "from": "mountain_float",
+   "to": "vapor_bridge",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0165",
+ "prompt": "At the break of an otherworldly dawn, where the sky bleeds through hues of mercury and rose quartz, a weathered wooden dock extends like a cracked rib into the mirror-still lake, its planks worn by the passage of both time and unseen travelers. At the farthest edge, a fishing boat rocks not with the gentle lull of waves, but as if it were breathing—each rise and fall echoing the rhythm of a heartbeat not its own. The boat's faded blue hull reflects the sky with an eerie precision, yet the reflection shifts subtly, as though mirroring a different moment in the same second, layered like translucent sheets of glass. A fishing net lies crumpled on the deck, but the knots and loops shift when viewed from different angles, unraveling and retying themselves with the precision of clockwork. A half-filled bucket, its rim etched with runes in a language of forgotten tides, holds a few silvery fish that shimmer not with reflected light, but with their own bioluminescence—each one glowing with a different emotion: hope, despair, longing. The fish occasionally blink their eyes and whisper to one another in soft, melodic tones that ripple through the air like faint chimes. Above the dock, the sun does not rise—it spirals into view from the corner of the horizon, casting a spiral of dawn that coils over the landscape, folding the sky into itself. In the reflection on the lake, a shadow of the dock appears, but it is reversed and inverted, with trees that never grew here stretching out from the mirrored ground. A bird made of wind and mist circles the boat, its wings leaving behind trails of liquid light that collect in the bucket below, feeding the fish with intangible sustenance. A fishing line dangles from the boat’s bow, not into the lake, but into the reflection, where it is pulled by an unseen hand that does not belong to any living being. The dock itself is not entirely solid—parts of it flicker in and out of existence, replaced by water, then air, then stone, as if the very structure is arguing with itself about its own reality. In the distance, a mountain floats upside down above the real one, connected by a bridge of vapor that shimmers with the scent of salt and ash. The entire scene hums with a quiet tension, as though the world is holding its breath, waiting for the moment when the real and the unreal will fully merge, and the boat will either sail into the sky or sink into a reflection that is no longer a reflection at all.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 56,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "mountain_real_2",
+     "mountain_real"
+    ],
+    [
+     "reflection_trees_2",
+     "reflection_trees"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "style": "flat vector illustration, clean lines, solid colors, no gradients, no shadows, minimal composition",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor fire station garage bay with concrete floors",
+   "question": "Does the image show an indoor fire station garage bay with concrete floors?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    574,
+    300,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "nozzle",
+   "type": "entity",
+   "class": "hose nozzle",
+   "plural": "hose nozzles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny brass hose nozzle",
+   "question": "Is there a shiny brass hose nozzle?",
+   "box": [
+    400,
+    500,
+    624,
+    650
+   ]
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting calmly",
+   "question": "Is the dalmatian sitting calmly?"
+  },
+  {
+   "id": "handing_over",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter is handing the shiny brass hose nozzle to the dalmatian",
+   "question": "Is the firefighter handing the shiny brass hose nozzle to the dalmatian?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the image?"
+  },
+  {
+   "id": "no_other_equipment",
+   "type": "absent",
+   "desc": "other equipment or personnel",
+   "question": "Are there any other equipment visible in the frame besides the firefighter, the dog, and the nozzle?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  },
+  {
+   "id": "no_other_personnel",
+   "type": "absent",
+   "desc": "other personnel",
+   "question": "Are there any other personnel visible in the frame besides the firefighter?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0014",
+ "prompt": "In a flat vector illustration, a firefighter in a yellow helmet stands on the left side of a fire station garage. A dalmatian with black spots sits calmly on the right side. The firefighter is handing a shiny brass hose nozzle to the dog. There is no fire truck visible in the background. The scene features clean lines and solid colors without gradients or shadows. The two figures are the only subjects present in this minimal composition. The interaction is gentle and focused. The setting is clearly an indoor bay with concrete floors. No other equipment or personnel appear in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

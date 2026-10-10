@@ -1,0 +1,394 @@
+{
+ "style": "oil painting, rich textures, deep shadows, intimate and warm atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception hall",
+   "question": "Does the image depict a wedding reception hall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white lace gown",
+   "question": "Is there a bride in a white lace gown?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet chair",
+   "question": "Is there a velvet chair?",
+   "box": [
+    80,
+    400,
+    320,
+    950
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a black tuxedo",
+   "question": "Is there a groom in a black tuxedo?",
+   "box": [
+    360,
+    250,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "flute",
+   "type": "entity",
+   "class": "crystal flute",
+   "plural": "crystal flutes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crystal flute",
+   "question": "Is there a crystal flute?",
+   "box": [
+    450,
+    450,
+    520,
+    600
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "tiered cake",
+   "plural": "tiered cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large tiered cake",
+   "question": "Is there a large tiered cake?",
+   "box": [
+    400,
+    300,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    380,
+    550,
+    670,
+    800
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue vest",
+   "question": "Is there a waiter in a blue vest?",
+   "box": [
+    680,
+    300,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "silver tray",
+   "plural": "silver trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tray",
+   "question": "Is there a silver tray?",
+   "box": [
+    700,
+    500,
+    820,
+    600
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a purple dress",
+   "question": "Is there an elderly woman in a purple dress?",
+   "box": [
+    860,
+    350,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a grey suit",
+   "question": "Is there a young boy in a grey suit?",
+   "box": [
+    880,
+    600,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "bride_sitting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white lace gown is sitting",
+   "question": "Is the bride in a white lace gown sitting?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo is standing",
+   "question": "Is the groom in a black tuxedo standing?"
+  },
+  {
+   "id": "groom_holding_flute",
+   "type": "attribute",
+   "of": "groom",
+   "desc": "the groom in a black tuxedo holds the crystal flute",
+   "question": "Is the groom in a black tuxedo holding the crystal flute?"
+  },
+  {
+   "id": "waiter_walking",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a blue vest is walking",
+   "question": "Is the waiter in a blue vest walking?"
+  },
+  {
+   "id": "waiter_carrying_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a blue vest carries the silver tray",
+   "question": "Is the waiter in a blue vest carrying the silver tray?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "dance_floor"
+   ],
+   "desc": "the elderly woman in a purple dress points toward the dance floor",
+   "question": "Is the elderly woman in a purple dress pointing toward the dance floor?"
+  },
+  {
+   "id": "woman_expression",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a purple dress has an animated expression",
+   "question": "Does the elderly woman in a purple dress have an animated expression?"
+  },
+  {
+   "id": "boy_looking_up",
+   "type": "action",
+   "of": [
+    "boy",
+    "elderly_woman"
+   ],
+   "desc": "the young boy in a grey suit looks up at the elderly woman",
+   "question": "Is the young boy in a grey suit looking up at the elderly woman in a purple dress?"
+  },
+  {
+   "id": "bride_on_chair",
+   "type": "relation",
+   "of": [
+    "bride",
+    "chair"
+   ],
+   "desc": "the bride sits on the velvet chair",
+   "question": "Is the bride sitting on the velvet chair?"
+  },
+  {
+   "id": "groom_beside_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom stands beside the bride",
+   "question": "Is the groom standing beside the bride?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the cake rests on the wooden table",
+   "question": "Is the cake resting on the wooden table?"
+  },
+  {
+   "id": "waiter_past_cake",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "cake"
+   ],
+   "desc": "the waiter walks past the cake",
+   "question": "Is the waiter walking past the cake?"
+  },
+  {
+   "id": "boy_next_to_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "elderly_woman"
+   ],
+   "desc": "the young boy is next to the elderly woman",
+   "question": "Is the young boy next to the elderly woman?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "modern technology such as screens or devices",
+   "question": "Are there any modern technology items like screens or devices visible?"
+  },
+  {
+   "id": "dance_floor",
+   "type": "entity",
+   "class": "dance floor",
+   "plural": "dance floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dance floor",
+   "question": "Is there a dance floor visible?",
+   "box": [
+    300,
+    800,
+    724,
+    950
+   ]
+  },
+  {
+   "id": "champagne_in_flute",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "the crystal flute is filled with champagne",
+   "question": "Is the crystal flute filled with champagne?"
+  },
+  {
+   "id": "cake_roses",
+   "type": "attribute",
+   "of": "cake",
+   "desc": "the tiered cake is adorned with white roses",
+   "question": "Is the tiered cake adorned with white roses?"
+  },
+  {
+   "id": "cake_piping",
+   "type": "attribute",
+   "of": "cake",
+   "desc": "the tiered cake has frosting detailed with intricate piping",
+   "question": "Does the tiered cake have frosting detailed with intricate piping?"
+  },
+  {
+   "id": "hors_doeuvres_on_tray",
+   "type": "attribute",
+   "of": "tray",
+   "desc": "the silver tray is laden with hors d'oeuvres",
+   "question": "Is the silver tray laden with hors d'oeuvres?"
+  },
+  {
+   "id": "woman_joyful",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a purple dress has a joyful expression",
+   "question": "Does the elderly woman in a purple dress have a joyful expression?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "bride",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0041",
+ "prompt": "Rendered in the style of an oil painting, a wedding reception unfolds with rich textures and deep shadows. On the left, a bride in a white lace gown sits gracefully on a velvet chair, her posture relaxed yet elegant. Beside her, to the right, stands a groom in a black tuxedo, holding a crystal flute filled with champagne. In the center background, a large tiered cake adorned with white roses rests on a wooden table, its frosting detailed with intricate piping. A waiter in a blue vest walks past the cake, carrying a silver tray laden with hors d'oeuvres. To the far right, an elderly woman in a purple dress points toward the dance floor, her expression animated and joyful. Next to her, a young boy in a grey suit looks up at her, his attention fully captured by her gesture. The scene is intimate and warm, capturing a fleeting moment of celebration. There is no modern technology visible in the frame, ensuring the timeless quality of the event remains undisturbed by screens or devices. The brushstrokes suggest movement in the fabric of the dresses and the glint of light on the glassware, creating a cohesive narrative within the single frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "woman_pointing_target",
+     "woman_pointing"
+    ]
+   ]
+  }
+ }
+}

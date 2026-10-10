@@ -1,0 +1,211 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor setting",
+   "question": "Does the image show an indoor setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white lace gown",
+   "question": "Is there a woman in a white lace gown?",
+   "box": [
+    50,
+    150,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    380,
+    150,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    100,
+    800,
+    900,
+    1024
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the woman in the white lace gown holds a bouquet of red roses",
+   "question": "Is the woman in the white lace gown holding a bouquet of red roses?"
+  },
+  {
+   "id": "bride_gift",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the woman in the white lace gown holds a small gift box",
+   "question": "Is the woman in the white lace gown holding a small gift box?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the woman in the white lace gown is standing",
+   "question": "Is the woman in the white lace gown standing?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the man in the black tuxedo is smiling",
+   "question": "Is the man in the black tuxedo smiling?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "groom_looking",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the man in the black tuxedo looks at the woman in the white lace gown",
+   "question": "Is the man in the black tuxedo looking at the woman in the white lace gown?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "bride",
+    "groom"
+   ],
+   "desc": "the woman in the white lace gown hands the small gift box to the man in the black tuxedo",
+   "question": "Is the woman in the white lace gown handing a small gift box to the man in the black tuxedo?"
+  },
+  {
+   "id": "dog_next_to_groom",
+   "type": "relation",
+   "of": [
+    "dog",
+    "groom"
+   ],
+   "desc": "the golden retriever is next to the man in the black tuxedo",
+   "question": "Is the golden retriever next to the man in the black tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake on the table",
+   "question": "Is there a cake on the table?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "wooden floor",
+   "plural": "wooden floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden floor",
+   "question": "Is there a wooden floor?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "relation",
+   "of": [
+    "dog",
+    "floor"
+   ],
+   "desc": "the golden retriever sits on the wooden floor",
+   "question": "Is the golden retriever sitting on the wooden floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "floor",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0015",
+ "prompt": "In this photorealistic photo, a bride in a white lace gown stands on the left holding a bouquet of red roses. In the center, a groom in a black tuxedo looks at the bride with a smile. To the right, a golden retriever sits calmly on the wooden floor next to the groom. The bride is handing a small gift box to the groom. There is no cake on the table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,426 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, cinematic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cracked and worn running track under a swirling sky of lavender, bruised orange, and gunmetal gray",
+   "question": "Does the image show a cracked running track under a sky with swirling lavender, orange, and gray colors?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hurdle",
+   "type": "entity",
+   "class": "hurdle",
+   "plural": "hurdles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red hurdle",
+   "question": "Is there a red hurdle?",
+   "box": [
+    100,
+    600,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white water bottle with faded labels",
+   "question": "Is there a white water bottle with faded labels?",
+   "box": [
+    350,
+    650,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "pigeon",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pigeon in mid-flap",
+   "question": "Is there a pigeon in mid-flap?",
+   "box": [
+    300,
+    400,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "shoe",
+   "type": "entity",
+   "class": "running shoe",
+   "plural": "running shoes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lone running shoe",
+   "question": "Is there a lone running shoe?",
+   "box": [
+    700,
+    400,
+    850,
+    550
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "chain-link fence",
+   "plural": "chain-link fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chain-link fence bending slightly, entwined with glowing vines",
+   "question": "Is there a chain-link fence bending slightly and entwined with glowing vines?",
+   "box": [
+    600,
+    0,
+    900,
+    1024
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sideways-growing tree",
+   "question": "Is there a sideways-growing tree?",
+   "box": [
+    800,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "runners",
+   "type": "entity",
+   "class": "runner",
+   "plural": "runners",
+   "count": 2,
+   "count_exact": false,
+   "desc": "flickering outlines of runners",
+   "question": "Are there flickering outlines of runners?",
+   "box": [
+    100,
+    100,
+    300,
+    300
+   ]
+  },
+  {
+   "id": "stone",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small stone with symbols",
+   "question": "Is there a small stone with symbols?",
+   "box": [
+    450,
+    750,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "hurdle_state",
+   "type": "state",
+   "of": "hurdle",
+   "desc": "the hurdle is lying toppled",
+   "question": "Is the hurdle lying toppled?"
+  },
+  {
+   "id": "bottle_state",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the water bottle is tumbling forward",
+   "question": "Is the water bottle depicted as tumbling or rolling forward?"
+  },
+  {
+   "id": "shoe_laces_state",
+   "type": "state",
+   "of": "shoe",
+   "desc": "the shoe laces are tightening and loosening rhythmically",
+   "question": "Are the shoe laces depicted as moving rhythmically, tightening and loosening?"
+  },
+  {
+   "id": "pigeon_shadow_relation",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "bottle"
+   ],
+   "desc": "the pigeon's shadow falls over the water bottle",
+   "question": "Does the pigeon's shadow fall over the water bottle?"
+  },
+  {
+   "id": "bottle_stone_relation",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "stone"
+   ],
+   "desc": "the water bottle bumps into the small stone",
+   "question": "Is the water bottle touching or bumping into the small stone?"
+  },
+  {
+   "id": "shoe_fence_relation",
+   "type": "relation",
+   "of": [
+    "shoe",
+    "fence"
+   ],
+   "desc": "the running shoe is half-embedded in the chain-link fence",
+   "question": "Is the running shoe half-embedded in the chain-link fence?"
+  },
+  {
+   "id": "vines_shoe_relation",
+   "type": "relation",
+   "of": [
+    "fence",
+    "shoe"
+   ],
+   "desc": "vines from the fence curl toward the shoe",
+   "question": "Do vines from the fence curl toward the shoe?"
+  },
+  {
+   "id": "tree_roots_track_relation",
+   "type": "state",
+   "of": "tree",
+   "desc": "the tree's roots sink into the running track",
+   "question": "Do the tree's roots sink into the running track?"
+  },
+  {
+   "id": "no_runner_present",
+   "type": "absent",
+   "desc": "a clearly visible solid runner",
+   "question": "Is there a clearly visible solid runner?"
+  },
+  {
+   "id": "laces",
+   "type": "entity",
+   "class": "shoelace",
+   "plural": "shoelaces",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shoelaces",
+   "question": "Are there shoelaces visible?",
+   "box": [
+    600,
+    600,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "pigeon_track_relation",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon is on the track’s edge",
+   "question": "Is the pigeon positioned on the edge of the running track?"
+  },
+  {
+   "id": "laces_shoe_relation",
+   "type": "relation",
+   "of": [
+    "laces",
+    "shoe"
+   ],
+   "desc": "the shoelaces belong to the lone running shoe",
+   "question": "Do the shoelaces belong to the lone running shoe?"
+  },
+  {
+   "id": "pigeon_inspecting",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon is inspecting the water bottle",
+   "question": "Is the pigeon inspecting the water bottle?"
+  },
+  {
+   "id": "tree_reflections",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the mirrored glass leaves reflect a desert dune, a neon-lit city, and a sunken library",
+   "question": "Do the mirrored glass leaves reflect a desert dune, a neon-lit city, and a sunken library?"
+  },
+  {
+   "id": "fog",
+   "type": "entity",
+   "class": "fog",
+   "plural": "fogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "rolling fog",
+   "question": "Is there rolling fog?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "pebble",
+   "type": "entity",
+   "class": "pebble",
+   "plural": "pebbles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single pebble",
+   "question": "Is there a single pebble?",
+   "box": [
+    400,
+    750,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "hurdle_pebble_relation",
+   "type": "relation",
+   "of": [
+    "hurdle",
+    "pebble"
+   ],
+   "desc": "the red hurdle's metal base clings to the single pebble",
+   "question": "Does the metal base of the red hurdle cling to the single pebble?"
+  },
+  {
+   "id": "pigeon_track_state",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon is paused on the track’s edge",
+   "question": "Is the pigeon paused on the edge of the running track?"
+  },
+  {
+   "id": "pigeon_bottle_relation",
+   "type": "relation",
+   "of": [
+    "pigeon",
+    "bottle"
+   ],
+   "desc": "the pigeon is near the water bottle",
+   "question": "Is the pigeon near the water bottle?"
+  },
+  {
+   "id": "stone_bottle_relation",
+   "type": "relation",
+   "of": [
+    "stone",
+    "bottle"
+   ],
+   "desc": "the small stone is near the water bottle",
+   "question": "Is the small stone near the water bottle?"
+  },
+  {
+   "id": "hurdle_dull",
+   "type": "attribute",
+   "of": "hurdle",
+   "desc": "the red hurdle is dulled by dust",
+   "question": "Is the red hurdle dulled by dust?"
+  },
+  {
+   "id": "shoe_laced",
+   "type": "state",
+   "of": "shoe",
+   "desc": "the running shoe is laced",
+   "question": "Is the running shoe laced?"
+  },
+  {
+   "id": "shoe_lace_dangling",
+   "type": "state",
+   "of": "shoe",
+   "desc": "one lace of the running shoe is dangling",
+   "question": "Is one lace of the running shoe dangling?"
+  },
+  {
+   "id": "tree_leaves",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tree has leaves made of mirrored glass",
+   "question": "Does the tree have leaves made of mirrored glass?"
+  },
+  {
+   "id": "bottle_dirty",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the water bottle is dirty",
+   "question": "Is the water bottle dirty?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "hurdle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "stone",
+   "kind": "support"
+  },
+  {
+   "from": "fence",
+   "to": "shoe",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0365",
+ "prompt": "The running track, cracked and worn from years of exposure, stretches under a sky that refuses to settle on a single hue—lavender, bruised orange, and gunmetal gray swirl together in a celestial maelstrom, as if the sun and moon have both decided to rise at once. A red hurdle lies toppled, its once-vibrant color dulled by dust and rain, but its metal base still clings stubbornly to a single pebble, a tiny relic from the lane where someone had sprinted to a finish now forgotten. Beside it, a water bottle—once white, now streaked with dirt and faded labels—tumbles forward with a sluggish, dreamlike momentum, propelled not by gravity alone but by the fleeting shadow of a pigeon in mid-flap, which has paused briefly on the track’s edge to inspect the bottle as if it were a fellow competitor in a forgotten race. Above, the pigeon’s wings cast shifting silhouettes over the scene, their movement causing the shadows of laces from a lone running shoe to dance like cursive script across the cracked concrete. The shoe, still laced but one side dangling, is half-embedded in a chain-link fence that bends slightly under the weight of an invisible tension, as if the fence itself remembers the moment the runner paused mid-leap and chose instead to let go. The fence’s posts are entwined with vines that glow faintly in the strange light, their tendrils curling toward the shoe as if reaching to reclaim what was left behind. Beyond the fence, the world becomes increasingly surreal—a tree grows sideways, its roots sinking into the track while its branches reach into the sky, sprouting leaves made of mirrored glass that reflect not the track, but fragments of a different reality: a desert dune, a neon-lit city, a sunken library in an ocean floor. In the distance, a fog rolls in that smells of ozone and forgotten memories, and within it, the outlines of runners flicker—figures caught between sprints and stillness, their limbs stretching and retracting as if caught in a loop of motion too fast for the eye to follow. A wind, cold and dry, carries with it the sound of echoing footfalls, though no one moves. The water bottle, still rolling, bumps into a small stone embedded with symbols that pulse gently in response, and for a heartbeat, the entire track ripples as if it were a pond, the pigeon’s shadow warping into the shape of the runner who had once sprinted here. The shoe laces tighten and loosen rhythmically, as if breathing, and the hurdle trembles, as if waiting for the next race to begin, though no starting gun has been fired. In this impossible yet coherent world, everything is connected—not by logic, but by a strange alchemy of moment and memory, where the absence of a runner has become more present than their presence ever was.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 59,
+   "n_uncovered": 4,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

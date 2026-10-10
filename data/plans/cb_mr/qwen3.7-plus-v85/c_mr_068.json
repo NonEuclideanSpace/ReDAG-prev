@@ -1,0 +1,328 @@
+{
+ "style": "photorealistic beach photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sandy beach scene",
+   "question": "Does the image show a sandy beach scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "entity",
+   "class": "umbrella",
+   "plural": "umbrellas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large beach umbrella",
+   "question": "Is there a large beach umbrella?",
+   "box": [
+    300,
+    50,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "towel",
+   "plural": "towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue towel",
+   "question": "Is there a blue towel?",
+   "box": [
+    350,
+    550,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red bucket",
+   "question": "Is there a red bucket?",
+   "box": [
+    720,
+    580,
+    820,
+    680
+   ]
+  },
+  {
+   "id": "shovel",
+   "type": "entity",
+   "class": "shovel",
+   "plural": "shovels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow shovel",
+   "question": "Is there a yellow shovel?",
+   "box": [
+    700,
+    500,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "seashells",
+   "type": "entity",
+   "class": "seashell",
+   "plural": "seashells",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four seashells",
+   "question": "Are there exactly four seashells?",
+   "box": [
+    680,
+    650,
+    850,
+    720
+   ]
+  },
+  {
+   "id": "sandcastle",
+   "type": "entity",
+   "class": "sandcastle",
+   "plural": "sandcastles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sandcastle",
+   "question": "Is there a sandcastle?",
+   "box": [
+    400,
+    600,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seagull",
+   "question": "Is there a seagull?",
+   "box": [
+    450,
+    100,
+    550,
+    200
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "ball",
+   "plural": "balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red ball",
+   "question": "Is there a red ball?",
+   "box": [
+    480,
+    620,
+    540,
+    680
+   ]
+  },
+  {
+   "id": "umbrella_shades_towel",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "towel"
+   ],
+   "desc": "the umbrella shades the blue towel",
+   "question": "Is the large beach umbrella shading the blue towel?"
+  },
+  {
+   "id": "bucket_next_to_umbrella",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "umbrella"
+   ],
+   "desc": "the red bucket is next to the umbrella",
+   "question": "Is the red bucket next to the large beach umbrella?"
+  },
+  {
+   "id": "shovel_next_to_umbrella",
+   "type": "relation",
+   "of": [
+    "shovel",
+    "umbrella"
+   ],
+   "desc": "the yellow shovel is next to the umbrella",
+   "question": "Is the yellow shovel next to the large beach umbrella?"
+  },
+  {
+   "id": "seashells_near_bucket",
+   "type": "relation",
+   "of": [
+    "seashells",
+    "bucket"
+   ],
+   "desc": "the seashells are near the red bucket",
+   "question": "Are the four seashells near the red bucket?"
+  },
+  {
+   "id": "sandcastle_in_front_of_towel",
+   "type": "relation",
+   "of": [
+    "sandcastle",
+    "towel"
+   ],
+   "desc": "the sandcastle is in front of the blue towel",
+   "question": "Is the sandcastle in front of the blue towel?"
+  },
+  {
+   "id": "seagull_on_umbrella",
+   "type": "relation",
+   "of": [
+    "seagull",
+    "umbrella"
+   ],
+   "desc": "the seagull is perched on the umbrella",
+   "question": "Is the seagull perched on the large beach umbrella?"
+  },
+  {
+   "id": "ball_on_towel",
+   "type": "relation",
+   "of": [
+    "ball",
+    "towel"
+   ],
+   "desc": "the red ball is on the blue towel",
+   "question": "Is the red ball on the blue towel?"
+  },
+  {
+   "id": "shovel_leaning_on_bucket",
+   "type": "relation",
+   "of": [
+    "shovel",
+    "bucket"
+   ],
+   "desc": "the yellow shovel is leaning against the red bucket",
+   "question": "Is the yellow shovel leaning against the red bucket?"
+  },
+  {
+   "id": "seagull_facing_sandcastle",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull is facing the sandcastle",
+   "question": "Is the seagull facing the sandcastle?"
+  },
+  {
+   "id": "flags_count",
+   "type": "attribute",
+   "of": "sandcastle",
+   "desc": "the sandcastle has two flags on it",
+   "question": "Does the sandcastle have exactly two flags on it?"
+  },
+  {
+   "id": "palm_tree",
+   "type": "entity",
+   "class": "palm tree",
+   "plural": "palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green palm tree",
+   "question": "Is there a green palm tree?",
+   "box": [
+    850,
+    50,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "sandcastle_flags",
+   "type": "attribute",
+   "of": "sandcastle",
+   "desc": "the sandcastle has flags on it",
+   "question": "Does the sandcastle have flags on it?"
+  },
+  {
+   "id": "umbrella_larger_towel",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "towel"
+   ],
+   "desc": "the umbrella is larger than the towel",
+   "question": "Is the umbrella larger than the towel?"
+  },
+  {
+   "id": "shovel_longer_bucket",
+   "type": "relation",
+   "of": [
+    "shovel",
+    "bucket"
+   ],
+   "desc": "the shovel is longer than the bucket is tall",
+   "question": "Is the shovel longer than the bucket is tall?"
+  },
+  {
+   "id": "sandcastle_taller_bucket",
+   "type": "relation",
+   "of": [
+    "sandcastle",
+    "bucket"
+   ],
+   "desc": "the sandcastle is taller than the bucket",
+   "question": "Is the sandcastle taller than the bucket?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "umbrella",
+   "to": "seagull",
+   "kind": "support"
+  },
+  {
+   "from": "towel",
+   "to": "ball",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_068",
+ "prompt": "A beach scene with a large umbrella shading a blue towel. The umbrella is larger than the towel. Next to the umbrella, there is a red bucket and a yellow shovel. The shovel is longer than the bucket is tall. In the sand near the bucket are four seashells. A sandcastle, which is taller than the bucket, is in front of the towel and has a number of flags on it that is half the number of seashells. A seagull is perched on the umbrella. A green palm tree is in the background. A red ball is on the towel. The shovel is leaning against the bucket. The seagull is facing the sandcastle.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 3,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

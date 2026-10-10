@@ -1,0 +1,397 @@
+{
+ "style": "surreal dreamlike photography, high contrast, golden hour lighting, ethereal atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an attic interior with a checkerboard floor of mirrors and tiles, dusty air with visible sunbeams",
+   "question": "Does the image show an attic interior with a checkerboard floor of mirrors and tiles and visible sunbeams?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bed",
+   "type": "entity",
+   "class": "bed",
+   "plural": "beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ancient, worn wooden bed",
+   "question": "Is there an ancient, worn wooden bed?",
+   "box": [
+    100,
+    400,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "suitcases",
+   "type": "entity",
+   "class": "rusting suitcase",
+   "plural": "rusting suitcases",
+   "count": 3,
+   "count_exact": false,
+   "desc": "a tower of rusting suitcases with vines growing on them",
+   "question": "Is there a tower of rusting suitcases with vines growing on them?",
+   "box": [
+    750,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "tabby cat",
+   "plural": "tabby cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat with emerald eyes",
+   "question": "Is there a tabby cat with emerald eyes?",
+   "box": [
+    300,
+    450,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "rusted ladder",
+   "plural": "rusted ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a precarious, rusted ladder",
+   "question": "Is there a precarious, rusted ladder?",
+   "box": [
+    550,
+    200,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "window_frame",
+   "type": "entity",
+   "class": "window frame",
+   "plural": "window frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open window frame",
+   "question": "Is there an open window frame?",
+   "box": [
+    800,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "fan",
+   "type": "entity",
+   "class": "ceiling fan",
+   "plural": "ceiling fans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceiling fan",
+   "question": "Is there a ceiling fan?",
+   "box": [
+    400,
+    0,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "chandelier",
+   "plural": "chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down chandelier made of broken mirror shards",
+   "question": "Is there an upside-down chandelier made of broken mirror shards?",
+   "box": [
+    450,
+    150,
+    574,
+    300
+   ]
+  },
+  {
+   "id": "gramophone",
+   "type": "entity",
+   "class": "gramophone",
+   "plural": "gramophones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gramophone",
+   "question": "Is there a gramophone?",
+   "box": [
+    50,
+    600,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bookshelf",
+   "question": "Is there a bookshelf?",
+   "box": [
+    0,
+    200,
+    150,
+    600
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacup half-filled with liquid",
+   "question": "Is there a teacup half-filled with liquid?",
+   "box": [
+    250,
+    700,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "bedsheet_ripple",
+   "type": "state",
+   "of": "bed",
+   "desc": "the bedsheet has a shimmering, water-like surface with ripples under the cat",
+   "question": "Does the bedsheet have a shimmering, water-like surface with ripples under the cat?"
+  },
+  {
+   "id": "cat_stretching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the tabby cat is stretching lazily",
+   "question": "Is the tabby cat stretching lazily?"
+  },
+  {
+   "id": "headboard_leans",
+   "type": "relation",
+   "of": [
+    "bed",
+    "suitcases"
+   ],
+   "desc": "the headboard of the bed leans against the tower of suitcases",
+   "question": "Does the headboard of the bed lean against the tower of suitcases?"
+  },
+  {
+   "id": "cat_on_bed",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bed"
+   ],
+   "desc": "the tabby cat is lying across the bed",
+   "question": "Is the tabby cat lying across the bed?"
+  },
+  {
+   "id": "paw_over_ladder",
+   "type": "relation",
+   "of": [
+    "cat",
+    "ladder"
+   ],
+   "desc": "the cat's paw dangles just above the rusted ladder",
+   "question": "Does the cat's paw dangle just above the rusted ladder?"
+  },
+  {
+   "id": "ladder_against_window",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "window_frame"
+   ],
+   "desc": "the rusted ladder leans crookedly against the window frame",
+   "question": "Does the rusted ladder lean crookedly against the window frame?"
+  },
+  {
+   "id": "chandelier_hangs_fan",
+   "type": "relation",
+   "of": [
+    "chandelier",
+    "fan"
+   ],
+   "desc": "the mirror chandelier hangs upside-down from the ceiling fan",
+   "question": "Does the mirror chandelier hang upside-down from the ceiling fan?"
+  },
+  {
+   "id": "no_windows_other",
+   "type": "absent",
+   "desc": "any other windows besides the one showing the forest",
+   "question": "Are there any other windows in the attic besides the one showing the forest?"
+  },
+  {
+   "id": "suitcases_locked",
+   "type": "attribute",
+   "of": "suitcases",
+   "desc": "the tower of rusting suitcases are locked",
+   "question": "Are the rusting suitcases locked?"
+  },
+  {
+   "id": "fan_rotating",
+   "type": "state",
+   "of": "fan",
+   "desc": "the ceiling fan is rotating",
+   "question": "Is the ceiling fan rotating?"
+  },
+  {
+   "id": "suitcases_vines",
+   "type": "attribute",
+   "of": "suitcases",
+   "desc": "vines curling around the edges of the rusting suitcases",
+   "question": "Are there vines curling around the edges of the rusting suitcases?"
+  },
+  {
+   "id": "gramophone_corner",
+   "type": "state",
+   "of": "gramophone",
+   "desc": "the gramophone is in the corner of the attic",
+   "question": "Is the gramophone located in a corner of the attic?"
+  },
+  {
+   "id": "bookshelf_background",
+   "type": "state",
+   "of": "bookshelf",
+   "desc": "the bookshelf looms in the background",
+   "question": "Is the bookshelf located in the background of the attic?"
+  },
+  {
+   "id": "pages_fluttering",
+   "type": "state",
+   "of": "bookshelf",
+   "desc": "the pages of the blank books are fluttering",
+   "question": "Are the pages of the blank books fluttering?"
+  },
+  {
+   "id": "bed_headboard",
+   "type": "attribute",
+   "of": "bed",
+   "desc": "the bed has a headboard",
+   "question": "Does the bed have a headboard?"
+  },
+  {
+   "id": "frozen_forest_view",
+   "type": "attribute",
+   "of": "window_frame",
+   "desc": "the open window frame shows a frozen forest outside",
+   "question": "Does the open window frame show a frozen forest outside?"
+  },
+  {
+   "id": "gramophone_records",
+   "type": "attribute",
+   "of": "gramophone",
+   "desc": "the gramophone has a stack of records",
+   "question": "Does the gramophone have a stack of records?"
+  },
+  {
+   "id": "teacup_steam",
+   "type": "state",
+   "of": "teacup",
+   "desc": "steam rises from the teacup",
+   "question": "Does steam rise from the teacup?"
+  },
+  {
+   "id": "fan_blades",
+   "type": "attribute",
+   "of": "fan",
+   "desc": "the ceiling fan has blades",
+   "question": "Does the ceiling fan have blades?"
+  },
+  {
+   "id": "bookshelf_blank_books",
+   "type": "attribute",
+   "of": "bookshelf",
+   "desc": "the bookshelf is filled with blank books",
+   "question": "Is the bookshelf filled with blank books?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bed",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "suitcases",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "gramophone",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bookshelf",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "teacup",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0273",
+ "prompt": "In the attic of a centuries-old house that breathes like a living thing, time and memory conflate into a single, sun-drenched haze. The wooden bed, ancient and worn, seems suspended not by gravity but by the weight of forgotten dreams. Its slats creak with the slow rhythm of a heart somewhere unseen, and the headboard leans gently against a tower of rusting suitcases—each one locked, each one blooming with vines that curl around their edges as if nature itself seeks to pry them open. A tabby cat, emerald-eyed and draped in shadow and sunlight, stretches lazily across the bed, its paw dangling just above a precarious, rusted ladder that leans crookedly against a dusty window. Through the glass, the world outside blurs and ripples like an old film reel, as though the attic exists in a moment that is neither past nor present. Sunbeams pierce the gloom, slicing through the air in long, golden tendrils that catch the dust like stars caught in mid-fall. A ceiling fan above rotates with a hum that echoes like a lullaby from another dimension, its blades slowly stirring the particles into slow, spiraling orbits. A chandelier of broken mirrors hangs upside-down from the fan’s base, each shard reflecting fragments of the attic in recursive, warping layers. Beneath the cat, the bedsheet shimmers—not with silk, but with the surface tension of water, ripples appearing where the cat’s weight should press down. In the corner, a gramophone plays a song that changes with each listener, its records stacked like books in a library no one dares open. The attic floor is not wood but a checkerboard of mirrors and tiles, each tile a portal to a room the same, yet subtly different—a house within a house, a mirror within a mirror. A teacup sits half-filled with liquid that neither warms nor cools, steam curling into shapes that dissolve before the eye can focus. A bookshelf filled with blank books looms in the background, pages fluttering as though reading themselves. The cat’s breath syncs with the pulse of the fan, and the fan’s hum resonates with the heartbeat of the house. Time here is a liquid thing, pooling and spilling, thick with paradox. A single, open window frame allows the outside to seep in—only the outside is a forest that never changes, trees frozen mid-sway, birds frozen mid-song. The attic is both a cradle and a tomb, a place where past and future are folded into the present like origami, each fold revealing a different reality. The air smells of old wood and rain that has not yet fallen.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 67,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

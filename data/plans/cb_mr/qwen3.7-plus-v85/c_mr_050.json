@@ -1,0 +1,359 @@
+{
+ "style": "cinematic thriller photography, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a high-security bank vault",
+   "question": "Does the image show the interior of a high-security bank vault?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "vault_door",
+   "type": "entity",
+   "class": "vault door",
+   "plural": "vault doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive circular vault door",
+   "question": "Is there a massive circular vault door?",
+   "box": [
+    650,
+    50,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "safecracker",
+   "type": "entity",
+   "class": "thief",
+   "plural": "thieves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a safecracker",
+   "question": "Is there a safecracker?",
+   "box": [
+    450,
+    400,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "getaway_driver",
+   "type": "entity",
+   "class": "thief",
+   "plural": "thieves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second thief, the getaway driver",
+   "question": "Is there a second thief acting as a getaway driver?",
+   "box": [
+    300,
+    250,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "muscle",
+   "type": "entity",
+   "class": "thief",
+   "plural": "thieves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third thief, the muscle",
+   "question": "Is there a third thief acting as muscle?",
+   "box": [
+    100,
+    150,
+    280,
+    950
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tool",
+   "plural": "tools",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three discarded tools in a small pile",
+   "question": "Are there three discarded tools in a small pile?",
+   "box": [
+    700,
+    850,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "gold_stacks",
+   "type": "entity",
+   "class": "stack of gold bars",
+   "plural": "stacks of gold bars",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six stacks of gold bars",
+   "question": "Are there six stacks of gold bars?",
+   "box": [
+    100,
+    100,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "stethoscope",
+   "type": "attribute",
+   "of": "safecracker",
+   "desc": "the safecracker holds a stethoscope",
+   "question": "Is the safecracker holding a stethoscope?"
+  },
+  {
+   "id": "duffel_bag",
+   "type": "attribute",
+   "of": "getaway_driver",
+   "desc": "the getaway driver holds a large duffel bag open",
+   "question": "Is the getaway driver holding a large duffel bag open?"
+  },
+  {
+   "id": "pistol",
+   "type": "attribute",
+   "of": "muscle",
+   "desc": "the muscle holds a silenced pistol",
+   "question": "Is the muscle holding a silenced pistol?"
+  },
+  {
+   "id": "safecracker_kneeling",
+   "type": "state",
+   "of": "safecracker",
+   "desc": "the safecracker is kneeling",
+   "question": "Is the safecracker kneeling?"
+  },
+  {
+   "id": "getaway_driver_standing",
+   "type": "state",
+   "of": "getaway_driver",
+   "desc": "the getaway driver is standing",
+   "question": "Is the getaway driver standing?"
+  },
+  {
+   "id": "muscle_standing",
+   "type": "state",
+   "of": "muscle",
+   "desc": "the muscle is standing",
+   "question": "Is the muscle standing?"
+  },
+  {
+   "id": "muscle_facing_entrance",
+   "type": "relation",
+   "of": [
+    "muscle",
+    "safecracker"
+   ],
+   "desc": "the muscle is facing away from the other thieves, towards the entrance",
+   "question": "Is the muscle facing away from the other thieves, towards the vault entrance?"
+  },
+  {
+   "id": "safecracker_listening",
+   "type": "action",
+   "of": [
+    "safecracker",
+    "vault_door"
+   ],
+   "desc": "the safecracker listens to the vault door with a stethoscope",
+   "question": "Is the safecracker listening to the vault door with a stethoscope?"
+  },
+  {
+   "id": "safecracker_turning_dial",
+   "type": "action",
+   "of": [
+    "safecracker",
+    "vault_door"
+   ],
+   "desc": "the safecracker is turning the combination dial of the vault door",
+   "question": "Is the safecracker turning the combination dial of the vault door?"
+  },
+  {
+   "id": "driver_looking_at_safecracker",
+   "type": "action",
+   "of": [
+    "getaway_driver",
+    "safecracker"
+   ],
+   "desc": "the getaway driver is looking at the safecracker",
+   "question": "Is the getaway driver looking at the safecracker?"
+  },
+  {
+   "id": "safecracker_in_front_of_door",
+   "type": "relation",
+   "of": [
+    "safecracker",
+    "vault_door"
+   ],
+   "desc": "the safecracker is in front of the vault door",
+   "question": "Is the safecracker in front of the vault door?"
+  },
+  {
+   "id": "driver_behind_safecracker",
+   "type": "relation",
+   "of": [
+    "getaway_driver",
+    "safecracker"
+   ],
+   "desc": "the getaway driver is behind the safecracker",
+   "question": "Is the getaway driver behind the safecracker?"
+  },
+  {
+   "id": "muscle_next_to_door",
+   "type": "relation",
+   "of": [
+    "muscle",
+    "vault_door"
+   ],
+   "desc": "the muscle is next to the vault door",
+   "question": "Is the muscle next to the vault door?"
+  },
+  {
+   "id": "driver_between_others",
+   "type": "relation",
+   "of": [
+    "getaway_driver",
+    "safecracker",
+    "muscle"
+   ],
+   "desc": "the getaway driver is between the safecracker and the muscle",
+   "question": "Is the getaway driver positioned between the safecracker and the muscle?"
+  },
+  {
+   "id": "tools_under_hinge",
+   "type": "relation",
+   "of": [
+    "tools",
+    "vault_door"
+   ],
+   "desc": "the pile of tools is under the vault door's hinge",
+   "question": "Is the pile of tools under the vault door's hinge?"
+  },
+  {
+   "id": "gold_on_shelves",
+   "type": "relation",
+   "of": [
+    "gold_stacks",
+    "shelves"
+   ],
+   "desc": "the stacks of gold bars are on the shelves along the back wall",
+   "question": "Are the stacks of gold bars on the shelves along the back wall?"
+  },
+  {
+   "id": "door_taller_than_muscle",
+   "type": "relation",
+   "of": [
+    "vault_door",
+    "muscle"
+   ],
+   "desc": "the vault door is taller than the muscle",
+   "question": "Is the vault door taller than the muscle?"
+  },
+  {
+   "id": "muscle_taller_than_others",
+   "type": "relation",
+   "of": [
+    "muscle",
+    "safecracker",
+    "getaway_driver"
+   ],
+   "desc": "the muscle is taller than the safecracker and the getaway driver",
+   "question": "Is the muscle taller than the safecracker and the getaway driver?"
+  },
+  {
+   "id": "gold_count",
+   "type": "attribute",
+   "of": "gold_stacks",
+   "desc": "the number of stacks of gold bars is six (double the three tools)",
+   "question": "Are there exactly six stacks of gold bars?"
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "shelves along the back wall",
+   "question": "Are there shelves along the back wall?",
+   "box": [
+    50,
+    100,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "door_open",
+   "type": "state",
+   "of": "vault_door",
+   "desc": "the vault door is open",
+   "question": "Is the vault door open?"
+  },
+  {
+   "id": "muscle_pointing_pistol",
+   "type": "action",
+   "of": [
+    "muscle",
+    "vault_door"
+   ],
+   "desc": "the muscle points the silenced pistol towards the entrance of the vault",
+   "question": "Is the muscle pointing the silenced pistol towards the entrance of the vault?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "gold_stacks",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "tools",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "gold_stacks",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_050",
+ "prompt": "Inside a high-security bank vault, a safecracker is kneeling in front of a massive, open circular vault door, listening with a stethoscope held against the door's combination dial. A second thief, the getaway driver, stands behind the safecracker, holding a large duffel bag open. A third thief, the muscle, stands guard next to the vault door, pointing a silenced pistol towards the entrance of the vault. The massive circular vault door is taller than the muscle. The getaway driver is looking at the safecracker. The muscle is taller than the other two thieves. A small pile of three discarded tools is on the floor under the vault door's hinge. The number of thieves is equal to the number of discarded tools. Inside the vault, shelves along the back wall hold several stacks of gold bars. The number of stacks of gold bars is double the number of tools on the floor. The getaway driver is between the safecracker and the muscle. The muscle is facing away from the other thieves, towards the entrance. The safecracker is turning the combination dial.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  }
+ }
+}

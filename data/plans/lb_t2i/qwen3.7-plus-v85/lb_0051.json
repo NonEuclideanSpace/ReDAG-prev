@@ -1,0 +1,491 @@
+{
+ "style": "surreal digital painting, dim amber lighting, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit room with thick, syrupy air",
+   "question": "Does the image depict a dimly lit room with an atmosphere that appears thick or syrupy?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "coffee table",
+   "plural": "coffee tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarred wooden coffee table",
+   "question": "Is there a scarred wooden coffee table?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "encyclopedias",
+   "type": "entity",
+   "class": "encyclopedia",
+   "plural": "encyclopedias",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a stack of old encyclopedias",
+   "question": "Is there a stack of old encyclopedias?",
+   "box": [
+    300,
+    450,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open map of ancient Rome",
+   "question": "Is there an open map of ancient Rome?",
+   "box": [
+    350,
+    480,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming coffee mug",
+   "question": "Is there a steaming coffee mug?",
+   "box": [
+    650,
+    550,
+    750,
+    680
+   ]
+  },
+  {
+   "id": "saucer",
+   "type": "entity",
+   "class": "porcelain saucer",
+   "plural": "porcelain saucers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porcelain saucer etched with faces",
+   "question": "Is there a porcelain saucer etched with small faces?",
+   "box": [
+    640,
+    670,
+    760,
+    720
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern with spiraling leaves",
+   "question": "Is there a potted fern with spiraling leaves?",
+   "box": [
+    150,
+    300,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "bulbs",
+   "type": "entity",
+   "class": "christmas bulb",
+   "plural": "christmas bulbs",
+   "count": 5,
+   "count_exact": false,
+   "desc": "a string of multi-colored Christmas bulbs",
+   "question": "Are there multiple Christmas bulbs of different colors hanging in the scene?",
+   "box": [
+    200,
+    50,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "oil lamp",
+   "plural": "oil lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old oil lamp",
+   "question": "Is there an old oil lamp?",
+   "box": [
+    800,
+    200,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "mouse",
+   "type": "entity",
+   "class": "clockwork mouse",
+   "plural": "clockwork mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clockwork wind-up mouse",
+   "question": "Is there a clockwork wind-up mouse?",
+   "box": [
+    830,
+    250,
+    920,
+    350
+   ]
+  },
+  {
+   "id": "steam_clouds",
+   "type": "entity",
+   "class": "steam cloud",
+   "plural": "steam clouds",
+   "count": 3,
+   "count_exact": false,
+   "desc": "tiny transient clouds formed from steam",
+   "question": "Are there small, cloud-like formations made of steam?",
+   "box": [
+    600,
+    400,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "gears",
+   "type": "entity",
+   "class": "gear",
+   "plural": "gears",
+   "count": 3,
+   "count_exact": false,
+   "desc": "rotating mechanical gears",
+   "question": "Are there visible rotating mechanical gears?",
+   "box": [
+    820,
+    450,
+    930,
+    550
+   ]
+  },
+  {
+   "id": "table_pulsing",
+   "type": "state",
+   "of": "table",
+   "desc": "the wooden table appears to pulse with shifting grain",
+   "question": "Does the wooden table appear to have shifting, living grain patterns?"
+  },
+  {
+   "id": "encyclopedias_teetering",
+   "type": "state",
+   "of": "encyclopedias",
+   "desc": "the stack of encyclopedias teeters at a precarious angle",
+   "question": "Is the stack of encyclopedias tilted at a precarious angle?"
+  },
+  {
+   "id": "pages_fluttering",
+   "type": "state",
+   "of": "encyclopedias",
+   "desc": "the encyclopedia pages are fluttering",
+   "question": "Are the pages of the encyclopedias fluttering?"
+  },
+  {
+   "id": "mug_hovering",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee mug hovers slightly above the saucer",
+   "question": "Is the coffee mug hovering slightly above the saucer without touching it?"
+  },
+  {
+   "id": "leaves_curling",
+   "type": "state",
+   "of": "fern",
+   "desc": "the fern leaves are curling and twisting in spirals",
+   "question": "Are the fern leaves twisting in spiral shapes?"
+  },
+  {
+   "id": "map_on_encyclopedias",
+   "type": "relation",
+   "of": [
+    "map",
+    "encyclopedias"
+   ],
+   "desc": "the map is on the open pages of the encyclopedias",
+   "question": "Is the map located on the open pages of the encyclopedias?"
+  },
+  {
+   "id": "mouse_inside_lamp",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "lamp"
+   ],
+   "desc": "the clockwork mouse is nestled inside the oil lamp's glass",
+   "question": "Is the clockwork mouse located inside the glass enclosure of the oil lamp?"
+  },
+  {
+   "id": "bulbs_suspended_by_fern",
+   "type": "relation",
+   "of": [
+    "bulbs",
+    "fern"
+   ],
+   "desc": "the Christmas bulbs are suspended by threads looped into the fern branches",
+   "question": "Are the Christmas bulbs suspended by threads connected to the fern's branches?"
+  },
+  {
+   "id": "encyclopedias_on_table",
+   "type": "relation",
+   "of": [
+    "encyclopedias",
+    "table"
+   ],
+   "desc": "the encyclopedias stand on the wooden table",
+   "question": "Are the encyclopedias standing on the wooden table?"
+  },
+  {
+   "id": "saucer_on_table",
+   "type": "relation",
+   "of": [
+    "saucer",
+    "table"
+   ],
+   "desc": "the porcelain saucer rests on the wooden table",
+   "question": "Is the porcelain saucer resting on the wooden table?"
+  },
+  {
+   "id": "fern_on_table",
+   "type": "relation",
+   "of": [
+    "fern",
+    "table"
+   ],
+   "desc": "the potted fern sits on the wooden table",
+   "question": "Is the potted fern sitting on the wooden table?"
+  },
+  {
+   "id": "lamp_on_table",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "table"
+   ],
+   "desc": "the oil lamp stands on the wooden table",
+   "question": "Is the oil lamp standing on the wooden table?"
+  },
+  {
+   "id": "steam_over_map",
+   "type": "relation",
+   "of": [
+    "steam_clouds",
+    "map"
+   ],
+   "desc": "the steam clouds drift across the map of ancient Rome",
+   "question": "Are the steam clouds drifting across the map of ancient Rome?"
+  },
+  {
+   "id": "mouse_pulls_steam",
+   "type": "action",
+   "of": [
+    "mouse",
+    "steam_clouds"
+   ],
+   "desc": "the clockwork mouse pulls a strand of steam from the coffee",
+   "question": "Is the clockwork mouse depicted pulling a strand of steam?"
+  },
+  {
+   "id": "gears_drive_bulbs",
+   "type": "relation",
+   "of": [
+    "gears",
+    "bulbs"
+   ],
+   "desc": "the rotating gears drive the Christmas bulbs",
+   "question": "Are the rotating gears mechanically connected to or driving the Christmas bulbs?"
+  },
+  {
+   "id": "cracks_connect_fern_saucer",
+   "type": "relation",
+   "of": [
+    "table",
+    "fern"
+   ],
+   "desc": "capillary cracks run from the fern base through the table to the saucer",
+   "question": "Do crack-like patterns visually connect the base of the fern, the table surface, and the saucer?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee mug is steaming",
+   "question": "Is the coffee mug steaming?"
+  },
+  {
+   "id": "mug_on_saucer",
+   "type": "relation",
+   "of": [
+    "mug",
+    "saucer"
+   ],
+   "desc": "the steaming coffee mug rests on the porcelain saucer",
+   "question": "Is the steaming coffee mug resting on the porcelain saucer?"
+  },
+  {
+   "id": "ink_rippling",
+   "type": "state",
+   "of": "map",
+   "desc": "the faded ink of the ancient Rome map ripples",
+   "question": "Does the faded ink of the ancient Rome map ripple?"
+  },
+  {
+   "id": "bulbs_pulsing",
+   "type": "state",
+   "of": "bulbs",
+   "desc": "the Christmas bulbs pulse in time with the ticking of the mouse",
+   "question": "Do the Christmas bulbs pulse in rhythm?"
+  },
+  {
+   "id": "bulb_intensity",
+   "type": "attribute",
+   "of": "bulbs",
+   "desc": "each bulb emits a different intensity",
+   "question": "Does each Christmas bulb emit a different intensity of light?"
+  },
+  {
+   "id": "mug_spilling",
+   "type": "state",
+   "of": "mug",
+   "desc": "drops of liquid spill from the mug",
+   "question": "Are drops of liquid spilling from the coffee mug?"
+  },
+  {
+   "id": "saucers_collecting",
+   "type": "action",
+   "of": [
+    "fern",
+    "mug"
+   ],
+   "desc": "the tiny saucers on the fern leaves collect the drops spilling from the mug",
+   "question": "Do the tiny saucers on the fern leaves collect the drops spilling from the mug?"
+  },
+  {
+   "id": "table_cracks",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the wooden coffee table has crack patterns resembling roots",
+   "question": "Does the wooden coffee table have crack patterns resembling roots?"
+  },
+  {
+   "id": "fern_tiny_saucers",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "each leaf of the fern is tipped with a tiny porcelain saucer",
+   "question": "Is each leaf of the fern tipped with a tiny porcelain saucer?"
+  },
+  {
+   "id": "encyclopedias_yellowed",
+   "type": "attribute",
+   "of": "encyclopedias",
+   "desc": "the encyclopedias have yellowed pages",
+   "question": "Do the encyclopedias have yellowed pages?"
+  },
+  {
+   "id": "map_faded_ink",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map has faded ink",
+   "question": "Does the map have faded ink?"
+  },
+  {
+   "id": "lamp_glass",
+   "type": "attribute",
+   "of": "lamp",
+   "desc": "the oil lamp has a glass enclosure",
+   "question": "Does the oil lamp have a glass enclosure?"
+  },
+  {
+   "id": "ink_shimmering",
+   "type": "state",
+   "of": "map",
+   "desc": "the faded ink of the ancient Rome map shimmers",
+   "question": "Does the faded ink of the ancient Rome map shimmer?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "encyclopedias",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "saucer",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "fern",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "lamp",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0051",
+ "prompt": "In the dim, amber glow of an old oil lamp that flickers with the breath of a clockwork wind-up mouse nestled inside its glass, the scene is alive with the soft hum of impossible order. The wooden coffee table, scarred with the marks of time and tea, is the fulcrum of this miniature universe. On it, a stack of old encyclopedias teeters at a precarious angle, their yellowed pages whispering the names of lost empires as the warm steam from a steaming mug of coffee curls and coalesces with the light from a hanging string of Christmas bulbs that sway gently like pendulums in a dream. The bulbs are not merely dangling—they are suspended by threads that loop and knot into the branches of a potted fern whose emerald leaves, instead of simply arching, twist in slow spirals as if trying to capture the flickering light in their folds. Each bulb emits a different color and intensity, not just as decoration but as a source of tiny, humming energies that subtly shift the hues of the encyclopedias’ open pages, making the faded ink of the ancient Rome map ripple and shimmer like a mirage. The steam from the coffee doesn’t simply rise; it forms into tiny, transient clouds that drift across the map, obscuring and revealing its lines with a ghostly rhythm, as though the steam is both observer and participant in the scene. The mug, resting on a porcelain saucer etched with the faces of forgotten saints, seems to drink from the table itself, its contents never diminishing, sustained by a network of capillary-like cracks in the wood that run from the base of the potted fern, through the table’s surface, and into the saucer like roots seeking nourishment. The fern, for its part, appears to be fed by the coffee itself—each leaf tipped with a minuscule porcelain saucer that collects the drops of liquid as they spill from the mug, transforming them into nourishment for the plant. The Christmas lights, which are not powered by electricity but by a set of rotating gears driven by the same clockwork mouse, change the air around them into something thick and syrupy, like the surface of a slow-moving pond. Shadows cast by the encyclopedias stretch and fold into themselves, creating layered, recursive patterns that echo the pages they conceal. The wooden table, under this strange influence, seems to pulse subtly, as if it were alive, its grain shifting and reforming like a living organism adapting to its environment. The clockwork mouse, perched inside the lamp like a mechanical muse, winds itself down slowly, not with a visible key but by pulling a thin strand of steam from the coffee, using it as a metaphorical thread of time. As it does, the light dims and the colors shift toward cooler tones, as though the entire scene is breathing in sync with the machine. The air is thick with the scent of coffee, aged paper, and the faint ozone of electricity, creating a heady perfume that lingers like memory. The Christmas lights begin to pulse in time with the ticking of the mouse, their rhythm becoming a metronome for the surreal choreography of the room. The map of ancient Rome on the encyclopedias is no longer just ink on paper—it pulses with the light of the bulbs, the colors shifting as if the city itself is reborn in each flicker, streets glowing and vanishing like constellations. The fern’s leaves respond to the changes, curling inward when the lights grow dim and unfurling when they brighten, as if it knows the time of day by the glow. The entire scene is a delicate dance of interdependent systems—mechanical, organic, and arcane—each element feeding, transforming, and influencing the others in a way that is both impossible and yet perfectly coherent within its own logic. The coffee mug, now half-shadow and half-light, seems to hover just slightly above the saucer, its base suspended by the magnetic tension of the Christmas bulbs’ hum. The encyclopedias, caught between the warm glow and the shifting shadows, appear to breathe in tandem with the table, their pages fluttering not from the wind but from the pulse of the entire scene, as if the knowledge they contain is being read by the room itself. It is a moment frozen in the space between waking and dreaming, where the laws of physics bend to accommodate the poetry of the absurd, and yet, everything remains in perfect balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 45,
+   "n_uncovered": 4,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

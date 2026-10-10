@@ -1,0 +1,119 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site with the skeletal framework of a building",
+   "question": "Does the image depict a construction site with the skeletal framework of a building?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "steel beam",
+   "plural": "steel beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steel beam",
+   "question": "Is there a steel beam?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    320,
+    250,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "engineer",
+   "plural": "engineers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an engineer wearing blue glasses",
+   "question": "Is there an engineer wearing blue glasses?",
+   "box": [
+    580,
+    250,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "blueprint",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer wearing blue glasses holds a rolled blueprint",
+   "question": "Is the engineer wearing blue glasses holding a rolled blueprint?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is standing",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "worker_beside_beam",
+   "type": "relation",
+   "of": [
+    "worker",
+    "beam"
+   ],
+   "desc": "the worker in the yellow hard hat stands beside the steel beam",
+   "question": "Is the worker in the yellow hard hat standing beside the steel beam?"
+  },
+  {
+   "id": "pointing",
+   "type": "action",
+   "of": [
+    "worker",
+    "engineer"
+   ],
+   "desc": "the worker in the yellow hard hat points at the blueprint held by the engineer wearing blue glasses",
+   "question": "Is the worker in the yellow hard hat pointing at the blueprint held by the engineer wearing blue glasses?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery",
+   "question": "Is there any heavy machinery visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0060",
+ "prompt": "A pencil sketch with light color wash depicts a bustling construction site. On the left, a worker in a yellow hard hat stands firmly beside a steel beam. In the center, an engineer wearing blue glasses holds a rolled blueprint. The worker in the yellow hard hat is pointing at the blueprint held by the engineer wearing blue glasses. There is no heavy machinery visible in the background. The scene captures this specific moment of collaboration amidst the skeletal framework of the building, focusing strictly on these two figures and their immediate interaction without any additional distractions or elements present in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

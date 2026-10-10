@@ -1,0 +1,163 @@
+{
+ "style": "cinematic film still, intimate lighting, shallow depth of field",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "interior of a vintage train dining car",
+   "question": "Does the image show the interior of a vintage train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    624,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the grey suit holds a silver fork",
+   "question": "Is the man in the grey suit holding a silver fork?"
+  },
+  {
+   "id": "woman_seated",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is seated",
+   "question": "Is the woman in the blue dress seated?"
+  },
+  {
+   "id": "man_seated",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is seated",
+   "question": "Is the man in the grey suit seated?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress looks at the man in the grey suit",
+   "question": "Is the woman in the blue dress looking at the man in the grey suit?"
+  },
+  {
+   "id": "woman_left_table",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in the blue dress is on the left side of the small table",
+   "question": "Is the woman in the blue dress positioned to the left of the small table?"
+  },
+  {
+   "id": "man_right_table",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in the grey suit is on the right side of the small table",
+   "question": "Is the man in the grey suit positioned to the right of the small table?"
+  },
+  {
+   "id": "man_opposite_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the grey suit sits opposite the woman in the blue dress",
+   "question": "Is the man in the grey suit sitting opposite the woman in the blue dress?"
+  },
+  {
+   "id": "no_food",
+   "type": "absent",
+   "desc": "food on the plates or table surface",
+   "question": "Is there any food visible on the plates?"
+  },
+  {
+   "id": "no_food_table",
+   "type": "absent",
+   "desc": "food on the table surface",
+   "question": "Is there any food visible on the table surface?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0051",
+ "prompt": "A cinematic film still captures a woman in a blue dress seated on the left side of a vintage train dining car. Opposite her, on the right, sits a man in a grey suit holding a silver fork. The woman is looking at the man across the small table between them. The scene is intimate and focused strictly on these two figures. There is no food visible on the plates or table surface.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

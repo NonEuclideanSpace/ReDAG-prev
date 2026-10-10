@@ -1,0 +1,158 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sandy court",
+   "question": "Does the image show a sandy court?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in black shorts",
+   "question": "Is there a man in black shorts?",
+   "box": [
+    624,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    200,
+    450,
+    300,
+    550
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue bikini is standing",
+   "question": "Is the woman in a blue bikini standing?"
+  },
+  {
+   "id": "woman_holding_ball",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue bikini holds a yellow volleyball",
+   "question": "Is the woman in a blue bikini holding a yellow volleyball?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue bikini looks directly at the man in black shorts",
+   "question": "Is the woman in a blue bikini looking directly at the man in black shorts?"
+  },
+  {
+   "id": "no_referee_chair",
+   "type": "absent",
+   "desc": "a referee chair",
+   "question": "Is there a referee chair visible in the background?"
+  },
+  {
+   "id": "net",
+   "type": "entity",
+   "class": "volleyball net",
+   "plural": "volleyball nets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "woman_across_net",
+   "type": "relation",
+   "of": [
+    "woman",
+    "net"
+   ],
+   "desc": "the woman in a blue bikini is across the net from the man",
+   "question": "Is the woman in a blue bikini positioned across the net from the man?"
+  },
+  {
+   "id": "woman_hands_on_ball",
+   "type": "relation",
+   "of": [
+    "woman",
+    "volleyball"
+   ],
+   "desc": "the woman in a blue bikini has both hands on the volleyball",
+   "question": "Does the woman in a blue bikini have both hands on the volleyball?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0087",
+ "prompt": "In this photorealistic photo, a woman in a blue bikini stands on the left side of the sandy court. A man in black shorts is positioned on the right side. The woman holds a yellow volleyball with both hands. She looks directly at the man across the net. There is no referee chair visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an outdoor scene with a sky",
+   "question": "Does the image show an outdoor scene with a sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a striped cat",
+   "question": "Is there a striped cat?",
+   "box": [
+    400,
+    400,
+    624,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    380,
+    550,
+    644,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "old man",
+   "plural": "old men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a grey cap",
+   "question": "Is there an old man in a grey cap?",
+   "box": [
+    700,
+    150,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "stall",
+   "plural": "stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a market stall",
+   "question": "Is there a market stall?",
+   "box": [
+    650,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a wicker basket",
+   "question": "Is the woman in the blue apron holding a wicker basket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat is sitting",
+   "question": "Is the striped cat sitting?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat has its tail curled tightly around its paws",
+   "question": "Does the striped cat have its tail curled tightly around its paws?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in the grey cap is leaning",
+   "question": "Is the old man in the grey cap leaning?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the old man in the grey cap looks at the striped cat",
+   "question": "Is the old man in the grey cap looking at the striped cat?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the striped cat sits on the wooden crate",
+   "question": "Is the striped cat sitting on the wooden crate?"
+  },
+  {
+   "id": "man_against_stall",
+   "type": "relation",
+   "of": [
+    "man",
+    "stall"
+   ],
+   "desc": "the old man in the grey cap leans against the stall",
+   "question": "Is the old man in the grey cap leaning against the stall?"
+  },
+  {
+   "id": "woman_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue apron is next to the striped cat",
+   "question": "Is the woman in the blue apron next to the striped cat?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0055",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue apron stands on the left holding a wicker basket. A striped cat sits on a wooden crate in the center, its tail curled tightly around its paws. An old man in a grey cap leans against a stall on the right, looking at the striped cat. The woman in the blue apron is next to the striped cat. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

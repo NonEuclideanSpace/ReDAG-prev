@@ -1,0 +1,233 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop at night with a dark sky",
+   "question": "Does the image show a rooftop scene at night with a dark sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray crate",
+   "question": "Is there a gray crate?",
+   "box": [
+    50,
+    600,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    60,
+    350,
+    240,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    400,
+    300,
+    580,
+    800
+   ]
+  },
+  {
+   "id": "balloon",
+   "type": "entity",
+   "class": "balloon",
+   "plural": "balloons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow balloon",
+   "question": "Is there a yellow balloon?",
+   "box": [
+    480,
+    150,
+    580,
+    250
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    620,
+    550,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a pink hat",
+   "question": "Is there a girl in a pink hat?",
+   "box": [
+    820,
+    400,
+    960,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in green shorts",
+   "question": "Is there a boy in green shorts?",
+   "box": [
+    900,
+    450,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "soda_can",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy in green shorts holds a soda can",
+   "question": "Is the boy in green shorts holding a soda can?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "man_holding_balloon",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds the yellow balloon",
+   "question": "Is the man in a red scarf holding the yellow balloon?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the woman in a blue dress sits on the gray crate",
+   "question": "Is the woman in a blue dress sitting on the gray crate?"
+  },
+  {
+   "id": "man_next_to_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in a red scarf stands next to the brown dog",
+   "question": "Is the man in a red scarf standing next to the brown dog?"
+  },
+  {
+   "id": "dog_looking_at_balloon",
+   "type": "action",
+   "of": [
+    "dog",
+    "balloon"
+   ],
+   "desc": "the brown dog looks at the yellow balloon",
+   "question": "Is the brown dog looking at the yellow balloon?"
+  },
+  {
+   "id": "girl_pointing_at_dog",
+   "type": "action",
+   "of": [
+    "girl",
+    "dog"
+   ],
+   "desc": "the girl in a pink hat points at the brown dog",
+   "question": "Is the girl in a pink hat pointing at the brown dog?"
+  },
+  {
+   "id": "boy_beside_girl",
+   "type": "relation",
+   "of": [
+    "boy",
+    "girl"
+   ],
+   "desc": "the boy in green shorts is beside the girl in a pink hat",
+   "question": "Is the boy in green shorts beside the girl in a pink hat?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0004",
+ "prompt": "This flat vector illustration depicts a rooftop party at night. On the left, a woman in a blue dress sits on a gray crate. In the center, a man in a red scarf stands holding a yellow balloon. To his right, a brown dog looks at the balloon. Further right, a girl in a pink hat points at the dog. Beside her, a boy in green shorts holds a soda can. The woman is sitting on the crate. The man is standing next to the dog. The girl is pointing at the dog. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

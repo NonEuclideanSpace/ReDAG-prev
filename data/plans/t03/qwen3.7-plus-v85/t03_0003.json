@@ -1,0 +1,170 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue bench",
+   "question": "Is there a blue bench?",
+   "box": [
+    550,
+    600,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    650,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    700,
+    300,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "man_mug",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a mug",
+   "question": "Is the man in a red scarf holding a mug?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_next_to_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the brown dog is next to the blue bench",
+   "question": "Is the brown dog next to the blue bench?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a yellow coat looks at the man in a red scarf",
+   "question": "Is the woman in a yellow coat looking at the man in a red scarf?"
+  },
+  {
+   "id": "man_handing_to_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf hands the steaming mug toward the woman in a yellow coat",
+   "question": "Is the man in a red scarf handing the steaming mug toward the woman in a yellow coat?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "man",
+   "desc": "steam rises from the mug held by the man in a red scarf",
+   "question": "Does steam rise from the mug held by the man in a red scarf?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0003",
+ "prompt": "In a flat vector illustration of a snowy town square, a man in a red scarf stands on the left holding a steaming mug. In the center, a brown dog sits patiently on the cold ground next to a blue bench. On the right, a woman in a yellow coat looks at the man in the red scarf. The man in the red scarf is handing the steaming mug toward the woman in the yellow coat. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

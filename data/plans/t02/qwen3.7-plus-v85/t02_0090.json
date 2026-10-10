@@ -1,0 +1,154 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "dining table",
+   "plural": "dining tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a train dining car table",
+   "question": "Is there a train dining car table?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    100,
+    200,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    574,
+    200,
+    924,
+    700
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a silver teapot",
+   "question": "Is the woman in a blue dress holding a silver teapot?"
+  },
+  {
+   "id": "cup",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a grey suit has a white cup",
+   "question": "Does the man in a grey suit have a white cup?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a grey suit is sitting",
+   "question": "Is the man in a grey suit sitting?"
+  },
+  {
+   "id": "woman_left_table",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in a blue dress sits on the left side of the table",
+   "question": "Is the woman in a blue dress sitting on the left side of the table?"
+  },
+  {
+   "id": "man_right_table",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in a grey suit sits on the right side of the table",
+   "question": "Is the man in a grey suit sitting on the right side of the table?"
+  },
+  {
+   "id": "pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress pours tea from the silver teapot into the man's white cup",
+   "question": "Is the woman in a blue dress pouring tea from a silver teapot into the man's white cup?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0090",
+ "prompt": "In a photorealistic photo, a woman in a blue dress sits on the left side of a train dining car table. A man in a grey suit sits on the right side of the same table. The woman is holding a silver teapot. She is pouring tea into the man's white cup. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

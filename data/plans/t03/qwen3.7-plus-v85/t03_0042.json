@@ -1,0 +1,193 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a train dining car interior",
+   "question": "Does the image show a train dining car interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "dining table",
+   "plural": "dining tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a train dining car table",
+   "question": "Is there a train dining car table?",
+   "box": [
+    100,
+    500,
+    924,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    624,
+    200,
+    974,
+    700
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bowl of ramen",
+   "question": "Is there a bowl of ramen?",
+   "box": [
+    450,
+    550,
+    574,
+    650
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a silver fork upright",
+   "question": "Is the man in a red scarf holding a silver fork upright?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with short blue hair is sitting",
+   "question": "Is the woman with short blue hair sitting?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "ramen_steaming",
+   "type": "state",
+   "of": "bowl",
+   "desc": "the bowl of ramen is steaming",
+   "question": "Is the bowl of ramen steaming?"
+  },
+  {
+   "id": "woman_on_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman with short blue hair sits on the left side of the table",
+   "question": "Is the woman with short blue hair sitting on the left side of the table?"
+  },
+  {
+   "id": "man_on_right",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in a red scarf sits on the right side of the table",
+   "question": "Is the man in a red scarf sitting on the right side of the table?"
+  },
+  {
+   "id": "bowl_in_center",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "table"
+   ],
+   "desc": "the bowl of ramen rests in the center of the table",
+   "question": "Is the bowl of ramen resting in the center of the table?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman with short blue hair is looking at the man in a red scarf",
+   "question": "Is the woman with short blue hair looking at the man in a red scarf?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "woman_hair_color",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman has short blue hair",
+   "question": "Does the woman have short blue hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "bowl",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0042",
+ "prompt": "In anime style, a woman with short blue hair sits on the left side of a train dining car table. A man in a red scarf sits on the right side, holding a silver fork upright. In the center rests a steaming bowl of ramen. The woman is looking at the man. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

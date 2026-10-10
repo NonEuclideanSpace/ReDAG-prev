@@ -1,0 +1,93 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station bay interior",
+   "question": "Does the image show the interior of a fire station bay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter wearing a yellow helmet?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver fire truck",
+   "question": "Is there a silver fire truck?",
+   "box": [
+    550,
+    150,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "firefighter_looking",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "truck"
+   ],
+   "desc": "the firefighter looks at the silver fire truck",
+   "question": "Is the firefighter looking at the silver fire truck?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water spraying from the hose",
+   "question": "Is there water spraying from the hose?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0027",
+ "prompt": "In an oil painting style, a firefighter in a yellow helmet stands on the left side of a fire station bay. A silver fire truck is parked on the right side. The firefighter is holding a coiled hose. The firefighter is looking at the silver fire truck. There is no water spraying from the hose.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

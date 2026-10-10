@@ -1,0 +1,323 @@
+{
+ "style": "vibrant carnival illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a carnival scene",
+   "question": "Does the image depict a carnival scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ferris_wheel",
+   "type": "entity",
+   "class": "ferris wheel",
+   "plural": "ferris wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large Ferris wheel",
+   "question": "Is there a large Ferris wheel?",
+   "box": [
+    350,
+    50,
+    674,
+    600
+   ]
+  },
+  {
+   "id": "ticket_booth",
+   "type": "entity",
+   "class": "ticket booth",
+   "plural": "ticket booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ticket booth",
+   "question": "Is there a ticket booth?",
+   "box": [
+    50,
+    400,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "carousel",
+   "type": "entity",
+   "class": "carousel",
+   "plural": "carousels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a carousel",
+   "question": "Is there a carousel?",
+   "box": [
+    700,
+    300,
+    974,
+    700
+   ]
+  },
+  {
+   "id": "food_stall",
+   "type": "entity",
+   "class": "food stall",
+   "plural": "food stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a food stall",
+   "question": "Is there a food stall?",
+   "box": [
+    300,
+    450,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "clown",
+   "type": "entity",
+   "class": "clown",
+   "plural": "clowns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clown",
+   "question": "Is there a clown?",
+   "box": [
+    350,
+    550,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "balls",
+   "type": "entity",
+   "class": "ball",
+   "plural": "balls",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three juggling balls",
+   "question": "Are there three juggling balls?",
+   "box": [
+    360,
+    600,
+    440,
+    680
+   ]
+  },
+  {
+   "id": "balloons",
+   "type": "entity",
+   "class": "balloon",
+   "plural": "balloons",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four balloons",
+   "question": "Are there four balloons?",
+   "box": [
+    50,
+    350,
+    250,
+    450
+   ]
+  },
+  {
+   "id": "game_stall",
+   "type": "entity",
+   "class": "game stall",
+   "plural": "game stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a game stall",
+   "question": "Is there a game stall?",
+   "box": [
+    300,
+    250,
+    500,
+    450
+   ]
+  },
+  {
+   "id": "cotton_candy_stand",
+   "type": "entity",
+   "class": "cotton candy stand",
+   "plural": "cotton candy stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cotton candy stand",
+   "question": "Is there a cotton candy stand?",
+   "box": [
+    500,
+    250,
+    700,
+    450
+   ]
+  },
+  {
+   "id": "guardrail",
+   "type": "entity",
+   "class": "guardrail",
+   "plural": "guardrails",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guardrail surrounding the Ferris wheel",
+   "question": "Is there a guardrail surrounding the Ferris wheel?",
+   "box": [
+    300,
+    550,
+    724,
+    650
+   ]
+  },
+  {
+   "id": "clown_juggling",
+   "type": "action",
+   "of": [
+    "clown",
+    "balls"
+   ],
+   "desc": "the clown is juggling the three balls",
+   "question": "Is the clown juggling the three balls?"
+  },
+  {
+   "id": "clown_standing",
+   "type": "state",
+   "of": "clown",
+   "desc": "the clown is standing",
+   "question": "Is the clown standing?"
+  },
+  {
+   "id": "ferris_over_ticket",
+   "type": "relation",
+   "of": [
+    "ferris_wheel",
+    "ticket_booth"
+   ],
+   "desc": "the Ferris wheel towers over the ticket booth",
+   "question": "Does the Ferris wheel tower over the ticket booth?"
+  },
+  {
+   "id": "carousel_next_ferris",
+   "type": "relation",
+   "of": [
+    "carousel",
+    "ferris_wheel"
+   ],
+   "desc": "the carousel is next to the Ferris wheel",
+   "question": "Is the carousel next to the Ferris wheel?"
+  },
+  {
+   "id": "food_between_ticket_carousel",
+   "type": "relation",
+   "of": [
+    "food_stall",
+    "ticket_booth",
+    "carousel"
+   ],
+   "desc": "the food stall is between the ticket booth and the carousel",
+   "question": "Is the food stall positioned between the ticket booth and the carousel?"
+  },
+  {
+   "id": "clown_in_front_food",
+   "type": "relation",
+   "of": [
+    "clown",
+    "food_stall"
+   ],
+   "desc": "the clown is in front of the food stall",
+   "question": "Is the clown in front of the food stall?"
+  },
+  {
+   "id": "balloons_tied_ticket",
+   "type": "relation",
+   "of": [
+    "balloons",
+    "ticket_booth"
+   ],
+   "desc": "the balloons are tied to the ticket booth",
+   "question": "Are the balloons tied to the ticket booth?"
+  },
+  {
+   "id": "game_behind_clown",
+   "type": "relation",
+   "of": [
+    "game_stall",
+    "clown"
+   ],
+   "desc": "the game stall is behind the clown",
+   "question": "Is the game stall behind the clown?"
+  },
+  {
+   "id": "cotton_adjacent_game",
+   "type": "relation",
+   "of": [
+    "cotton_candy_stand",
+    "game_stall"
+   ],
+   "desc": "the cotton candy stand is adjacent to the game stall",
+   "question": "Is the cotton candy stand adjacent to the game stall?"
+  },
+  {
+   "id": "game_farther_ferris_than_food",
+   "type": "relation",
+   "of": [
+    "game_stall",
+    "ferris_wheel",
+    "food_stall"
+   ],
+   "desc": "the game stall is farther from the Ferris wheel than from the food stall",
+   "question": "Is the game stall farther from the Ferris wheel than it is from the food stall?"
+  },
+  {
+   "id": "ferris_wheel_taller",
+   "type": "relation",
+   "of": [
+    "ferris_wheel",
+    "carousel"
+   ],
+   "desc": "the Ferris wheel is taller than the carousel",
+   "question": "Is the Ferris wheel taller than the carousel?"
+  },
+  {
+   "id": "carousel_wider",
+   "type": "relation",
+   "of": [
+    "carousel",
+    "food_stall"
+   ],
+   "desc": "the carousel is wider than the food stall",
+   "question": "Is the carousel wider than the food stall?"
+  }
+ ],
+ "edges": [],
+ "id": "c_mr_080",
+ "prompt": "A carnival scene with a Ferris wheel towering over a ticket booth. A carousel is next to the Ferris wheel. The carousel is wider than the food stall. A food stall is between the ticket booth and the carousel. A clown juggling three balls is standing in front of the food stall. There are some balloons tied to the ticket booth, and the number of balloons is one more than the number of balls the clown is juggling. The Ferris wheel is taller than the carousel. A game stall is behind the clown. A cotton candy stand is adjacent to the game stall. A guardrail surrounds the Ferris wheel. The game stall is farther from the Ferris wheel than from the food stall.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

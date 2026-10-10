@@ -1,0 +1,396 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic pottery workshop",
+   "question": "Does the image show a rustic pottery workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "wooden stool",
+   "plural": "wooden stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stool",
+   "question": "Is there a wooden stool?",
+   "box": [
+    100,
+    600,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    150,
+    500,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "clay bowl",
+   "plural": "clay bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clay bowl",
+   "question": "Is there a clay bowl?",
+   "box": [
+    200,
+    450,
+    300,
+    550
+   ]
+  },
+  {
+   "id": "man_glasses",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man with glasses",
+   "question": "Is there a tall man with glasses?",
+   "box": [
+    400,
+    150,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young girl with pigtails",
+   "question": "Is there a young girl with pigtails?",
+   "box": [
+    700,
+    350,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "sponge",
+   "type": "entity",
+   "class": "sponge",
+   "plural": "sponges",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small sponge",
+   "question": "Is there a small sponge?",
+   "box": [
+    750,
+    600,
+    820,
+    680
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray cat",
+   "question": "Is there a gray cat?",
+   "box": [
+    850,
+    500,
+    980,
+    650
+   ]
+  },
+  {
+   "id": "pots_stack",
+   "type": "entity",
+   "class": "terracotta pot",
+   "plural": "terracotta pots",
+   "count": 3,
+   "count_exact": false,
+   "desc": "a stack of finished terracotta pots",
+   "question": "Is there a stack of finished terracotta pots?",
+   "box": [
+    820,
+    600,
+    990,
+    850
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a beige hat",
+   "question": "Is there an elderly man in a beige hat?",
+   "box": [
+    500,
+    100,
+    750,
+    400
+   ]
+  },
+  {
+   "id": "woman_hands_clay",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron has hands covered in wet clay",
+   "question": "Are the hands of the woman in a blue apron covered in wet clay?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is sitting",
+   "question": "Is the woman in a blue apron sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_glasses",
+   "desc": "the man with glasses is standing",
+   "question": "Is the man with glasses standing?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man_glasses",
+    "bowl"
+   ],
+   "desc": "the tall man with glasses points at the clay bowl",
+   "question": "Is the tall man with glasses pointing at the clay bowl?"
+  },
+  {
+   "id": "girl_watching",
+   "type": "state",
+   "of": "girl",
+   "desc": "the young girl with pigtails watches intently",
+   "question": "Is the young girl with pigtails watching intently?"
+  },
+  {
+   "id": "girl_holding_sponge",
+   "type": "relation",
+   "of": [
+    "girl",
+    "sponge"
+   ],
+   "desc": "the young girl with pigtails holds the small sponge",
+   "question": "Is the young girl with pigtails holding the small sponge?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is sleeping peacefully",
+   "question": "Is the gray cat sleeping peacefully?"
+  },
+  {
+   "id": "cat_on_pots",
+   "type": "relation",
+   "of": [
+    "cat",
+    "pots_stack"
+   ],
+   "desc": "the gray cat is on the stack of finished terracotta pots",
+   "question": "Is the gray cat on the stack of finished terracotta pots?"
+  },
+  {
+   "id": "elderly_man_looking",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "shelf"
+   ],
+   "desc": "the elderly man in a beige hat looks at the shelf of dried vases",
+   "question": "Is the elderly man in a beige hat looking at the shelf of dried vases?"
+  },
+  {
+   "id": "woman_handing_tool",
+   "type": "action",
+   "of": [
+    "woman",
+    "man_glasses"
+   ],
+   "desc": "the woman in a blue apron hands a tool to the tall man with glasses",
+   "question": "Is the woman in a blue apron handing a tool to the tall man with glasses?"
+  },
+  {
+   "id": "man_reaching",
+   "type": "action",
+   "of": [
+    "man_glasses",
+    "woman"
+   ],
+   "desc": "the tall man with glasses reaches out to accept the tool from the woman in a blue apron",
+   "question": "Is the tall man with glasses reaching out to accept the tool from the woman in a blue apron?"
+  },
+  {
+   "id": "girl_looking_cat",
+   "type": "action",
+   "of": [
+    "girl",
+    "cat"
+   ],
+   "desc": "the young girl with pigtails looks at the gray cat",
+   "question": "Is the young girl with pigtails looking at the gray cat?"
+  },
+  {
+   "id": "woman_on_stool",
+   "type": "relation",
+   "of": [
+    "woman",
+    "stool"
+   ],
+   "desc": "the woman in a blue apron sits on the wooden stool",
+   "question": "Is the woman in a blue apron sitting on the wooden stool?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "man_glasses",
+    "woman"
+   ],
+   "desc": "the tall man with glasses stands beside the woman in a blue apron",
+   "question": "Is the tall man with glasses standing beside the woman in a blue apron?"
+  },
+  {
+   "id": "girl_next_to_cat",
+   "type": "relation",
+   "of": [
+    "girl",
+    "cat"
+   ],
+   "desc": "the young girl with pigtails is next to the gray cat",
+   "question": "Is the young girl with pigtails next to the gray cat?"
+  },
+  {
+   "id": "no_kiln",
+   "type": "absent",
+   "desc": "an electric kiln",
+   "question": "Is there an electric kiln visible in the image?"
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf of dried vases",
+   "question": "Is there a shelf of dried vases?",
+   "box": [
+    600,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat has its tail curled around its body",
+   "question": "Is the gray cat's tail curled around its body?"
+  },
+  {
+   "id": "man_tall",
+   "type": "attribute",
+   "of": "man_glasses",
+   "desc": "the man with glasses is tall",
+   "question": "Is the man with glasses tall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "pots_stack",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0144",
+ "prompt": "A photorealistic photo captures a bustling pottery workshop scene. On the left, a woman in a blue apron sits on a wooden stool, her hands covered in wet clay as she shapes a bowl on the spinning wheel. In the center, a tall man with glasses stands beside her, pointing at the rotating clay form to offer guidance. To the right, a young girl with pigtails watches intently, holding a small sponge ready to assist. Next to the girl, a gray cat sleeps peacefully on a stack of finished terracotta pots, its tail curled around its body. Behind them, an elderly man in a beige hat looks at a shelf of dried vases, inspecting the craftsmanship. The woman is handing a tool to the man with glasses, who reaches out to accept it. The girl is looking at the cat, observing its calm demeanor. There is no electric kiln visible in the background, keeping the focus on traditional hand-building techniques and natural materials within the rustic space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "elderly_man_looking_shelf",
+     "elderly_man_looking"
+    ]
+   ]
+  }
+ }
+}

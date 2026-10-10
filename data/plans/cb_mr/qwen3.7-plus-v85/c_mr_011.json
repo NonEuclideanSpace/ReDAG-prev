@@ -1,0 +1,747 @@
+{
+ "style": "photorealistic restaurant scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a restaurant interior with a grill station, dining area, bar counter with shelves, and a window",
+   "question": "Does the image show a restaurant interior with a grill station, dining area, bar counter with shelves, and a window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "grill_station",
+   "type": "entity",
+   "class": "grill station",
+   "plural": "grill stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a professional grill station",
+   "question": "Is there a professional grill station?",
+   "box": [
+    50,
+    400,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef wearing an apron",
+   "question": "Is there a chef wearing an apron?",
+   "box": [
+    100,
+    200,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "chef_knife",
+   "type": "relation",
+   "of": [
+    "chef",
+    "grill_station"
+   ],
+   "desc": "the chef has a large professional-grade knife on his station",
+   "question": "Is there a large professional-grade knife on the chef's station?"
+  },
+  {
+   "id": "chef_spatula",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a spatula",
+   "question": "Is the chef holding a spatula?"
+  },
+  {
+   "id": "chef_flipping",
+   "type": "action",
+   "of": [
+    "chef",
+    "burgers"
+   ],
+   "desc": "the chef flips burgers",
+   "question": "Is the chef flipping burgers?"
+  },
+  {
+   "id": "burgers",
+   "type": "entity",
+   "class": "burger",
+   "plural": "burgers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "burgers",
+   "question": "Are there burgers?",
+   "box": [
+    150,
+    550,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "dining_table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    400,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "customer_steak",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer",
+   "question": "Is there a customer?",
+   "box": [
+    450,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "customer_drinking",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second customer",
+   "question": "Is there a second customer?",
+   "box": [
+    600,
+    400,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "steak_knife",
+   "type": "attribute",
+   "of": "customer_steak",
+   "desc": "the customer holds a steak knife smaller than the chef's knife",
+   "question": "Is the customer holding a steak knife that is smaller than the chef's knife?"
+  },
+  {
+   "id": "customer_cutting",
+   "type": "action",
+   "of": [
+    "customer_steak",
+    "steak"
+   ],
+   "desc": "the customer cuts a steak",
+   "question": "Is the customer cutting a steak?"
+  },
+  {
+   "id": "steak",
+   "type": "entity",
+   "class": "steak",
+   "plural": "steaks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steak",
+   "question": "Is there a steak?",
+   "box": [
+    500,
+    650,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "customer_pointing",
+   "type": "action",
+   "of": [
+    "customer_steak",
+    "menu"
+   ],
+   "desc": "the customer points at a menu",
+   "question": "Is the customer pointing at a menu?"
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a menu",
+   "question": "Is there a menu?",
+   "box": [
+    550,
+    620,
+    620,
+    680
+   ]
+  },
+  {
+   "id": "customer_glass",
+   "type": "attribute",
+   "of": "customer_drinking",
+   "desc": "the second customer holds a glass",
+   "question": "Is the second customer holding a glass?"
+  },
+  {
+   "id": "customer_drinking_action",
+   "type": "action",
+   "of": [
+    "customer_drinking",
+    "glass_drink"
+   ],
+   "desc": "the second customer drinks from the glass",
+   "question": "Is the second customer drinking from the glass?"
+  },
+  {
+   "id": "glass_drink",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a drinking glass",
+   "question": "Is there a drinking glass?",
+   "box": [
+    641,
+    500,
+    689,
+    550
+   ]
+  },
+  {
+   "id": "waitress",
+   "type": "entity",
+   "class": "waitress",
+   "plural": "waitresses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waitress",
+   "question": "Is there a waitress?",
+   "box": [
+    350,
+    300,
+    450,
+    600
+   ]
+  },
+  {
+   "id": "waitress_tray",
+   "type": "attribute",
+   "of": "waitress",
+   "desc": "the waitress carries a tray",
+   "question": "Is the waitress carrying a tray?"
+  },
+  {
+   "id": "tray_plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four plates",
+   "question": "Are there four plates?",
+   "box": [
+    360,
+    450,
+    440,
+    500
+   ]
+  },
+  {
+   "id": "tray_glasses",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four glasses",
+   "question": "Are there four glasses?",
+   "box": [
+    360,
+    396,
+    440,
+    444
+   ]
+  },
+  {
+   "id": "busboy",
+   "type": "entity",
+   "class": "busboy",
+   "plural": "busboys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young busboy",
+   "question": "Is there a young busboy?",
+   "box": [
+    800,
+    400,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "busboy_cloth",
+   "type": "attribute",
+   "of": "busboy",
+   "desc": "the busboy holds a cleaning cloth",
+   "question": "Is the busboy holding a cleaning cloth?"
+  },
+  {
+   "id": "busboy_cleaning",
+   "type": "action",
+   "of": [
+    "busboy",
+    "busboy_table"
+   ],
+   "desc": "the busboy cleans a table",
+   "question": "Is the busboy cleaning a table?"
+  },
+  {
+   "id": "busboy_table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second table",
+   "question": "Is there a second table?",
+   "box": [
+    750,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bartender",
+   "type": "entity",
+   "class": "bartender",
+   "plural": "bartenders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bartender",
+   "question": "Is there a bartender?",
+   "box": [
+    50,
+    200,
+    200,
+    500
+   ]
+  },
+  {
+   "id": "bartender_shaker",
+   "type": "attribute",
+   "of": "bartender",
+   "desc": "the bartender holds a cocktail shaker",
+   "question": "Is the bartender holding a cocktail shaker?"
+  },
+  {
+   "id": "bar_counter",
+   "type": "entity",
+   "class": "bar counter",
+   "plural": "bar counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bar counter",
+   "question": "Is there a bar counter?",
+   "box": [
+    0,
+    500,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "bar_shelves",
+   "type": "entity",
+   "class": "shelves",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "shelves",
+   "question": "Are there shelves?",
+   "box": [
+    0,
+    100,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "bar_glasses",
+   "type": "entity",
+   "class": "glass",
+   "plural": "glasses",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three glasses",
+   "question": "Are there three glasses?",
+   "box": [
+    50,
+    150,
+    250,
+    250
+   ]
+  },
+  {
+   "id": "bar_bottles",
+   "type": "entity",
+   "class": "bottle",
+   "plural": "bottles",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six bottles",
+   "question": "Are there six bottles?",
+   "box": [
+    50,
+    260,
+    250,
+    380
+   ]
+  },
+  {
+   "id": "wine_bottle",
+   "type": "entity",
+   "class": "wine bottle",
+   "plural": "wine bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wine bottle",
+   "question": "Is there a wine bottle?",
+   "box": [
+    91,
+    520,
+    139,
+    600
+   ]
+  },
+  {
+   "id": "corkscrew",
+   "type": "entity",
+   "class": "corkscrew",
+   "plural": "corkscrews",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a corkscrew",
+   "question": "Is there a corkscrew?",
+   "box": [
+    126,
+    541,
+    174,
+    589
+   ]
+  },
+  {
+   "id": "musician",
+   "type": "entity",
+   "class": "musician",
+   "plural": "musicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a musician",
+   "question": "Is there a musician?",
+   "box": [
+    850,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "violin",
+   "type": "attribute",
+   "of": "musician",
+   "desc": "the musician plays a violin",
+   "question": "Is the musician playing a violin?"
+  },
+  {
+   "id": "platform",
+   "type": "entity",
+   "class": "platform",
+   "plural": "platforms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small platform",
+   "question": "Is there a small platform?",
+   "box": [
+    820,
+    400,
+    980,
+    450
+   ]
+  },
+  {
+   "id": "chef_at_grill",
+   "type": "relation",
+   "of": [
+    "chef",
+    "grill_station"
+   ],
+   "desc": "the chef stands at the grill station",
+   "question": "Is the chef standing at the grill station?"
+  },
+  {
+   "id": "waitress_toward_table",
+   "type": "relation",
+   "of": [
+    "waitress",
+    "dining_table"
+   ],
+   "desc": "the waitress moves toward the dining table",
+   "question": "Is the waitress moving toward the dining table?"
+  },
+  {
+   "id": "customers_at_table",
+   "type": "relation",
+   "of": [
+    "customer_steak",
+    "dining_table"
+   ],
+   "desc": "the customer sits at the dining table",
+   "question": "Is the customer sitting at the dining table?"
+  },
+  {
+   "id": "customer2_at_table",
+   "type": "relation",
+   "of": [
+    "customer_drinking",
+    "dining_table"
+   ],
+   "desc": "the second customer sits at the dining table",
+   "question": "Is the second customer sitting at the dining table?"
+  },
+  {
+   "id": "menu_on_table",
+   "type": "relation",
+   "of": [
+    "menu",
+    "dining_table"
+   ],
+   "desc": "the menu is on the dining table",
+   "question": "Is the menu on the dining table?"
+  },
+  {
+   "id": "busboy_behind_customers",
+   "type": "relation",
+   "of": [
+    "busboy",
+    "customer_steak"
+   ],
+   "desc": "the busboy is behind the customers",
+   "question": "Is the busboy behind the customers?"
+  },
+  {
+   "id": "bartender_behind_bar",
+   "type": "relation",
+   "of": [
+    "bartender",
+    "bar_counter"
+   ],
+   "desc": "the bartender is behind the bar counter",
+   "question": "Is the bartender behind the bar counter?"
+  },
+  {
+   "id": "shelves_on_bar",
+   "type": "relation",
+   "of": [
+    "bar_shelves",
+    "bar_counter"
+   ],
+   "desc": "the shelves are behind the bar counter",
+   "question": "Are the shelves behind the bar counter?"
+  },
+  {
+   "id": "glasses_on_shelves",
+   "type": "relation",
+   "of": [
+    "bar_glasses",
+    "bar_shelves"
+   ],
+   "desc": "the glasses are on the shelves",
+   "question": "Are the glasses on the shelves?"
+  },
+  {
+   "id": "bottles_on_shelves",
+   "type": "relation",
+   "of": [
+    "bar_bottles",
+    "bar_shelves"
+   ],
+   "desc": "the bottles are on the shelves",
+   "question": "Are the bottles on the shelves?"
+  },
+  {
+   "id": "wine_next_to_corkscrew",
+   "type": "relation",
+   "of": [
+    "wine_bottle",
+    "corkscrew"
+   ],
+   "desc": "the wine bottle is next to the corkscrew",
+   "question": "Is the wine bottle next to the corkscrew?"
+  },
+  {
+   "id": "musician_on_platform",
+   "type": "relation",
+   "of": [
+    "musician",
+    "platform"
+   ],
+   "desc": "the musician stands on the platform",
+   "question": "Is the musician standing on the platform?"
+  },
+  {
+   "id": "platform_near_window",
+   "type": "state",
+   "of": "platform",
+   "desc": "the platform is near the window in the background",
+   "question": "Is the platform near the window in the background?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef wearing an apron is standing",
+   "question": "Is the chef wearing an apron standing?"
+  },
+  {
+   "id": "customer_steak_sitting",
+   "type": "state",
+   "of": "customer_steak",
+   "desc": "the customer is sitting",
+   "question": "Is the customer sitting?"
+  },
+  {
+   "id": "customer_drinking_sitting",
+   "type": "state",
+   "of": "customer_drinking",
+   "desc": "the second customer is sitting",
+   "question": "Is the second customer sitting?"
+  },
+  {
+   "id": "busboy_younger",
+   "type": "relation",
+   "of": [
+    "busboy",
+    "waitress"
+   ],
+   "desc": "the busboy is visibly younger than the waitress",
+   "question": "Is the busboy visibly younger than the waitress?"
+  },
+  {
+   "id": "musician_standing",
+   "type": "state",
+   "of": "musician",
+   "desc": "the musician is standing",
+   "question": "Is the musician standing?"
+  },
+  {
+   "id": "tray_plates_relation",
+   "type": "relation",
+   "of": [
+    "tray_plates",
+    "waitress"
+   ],
+   "desc": "the plates are on the tray carried by the waitress",
+   "question": "Are the plates on the tray carried by the waitress?"
+  },
+  {
+   "id": "tray_glasses_relation",
+   "type": "relation",
+   "of": [
+    "tray_glasses",
+    "waitress"
+   ],
+   "desc": "the glasses are on the tray carried by the waitress",
+   "question": "Are the glasses on the tray carried by the waitress?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "grill_station",
+   "to": "burgers",
+   "kind": "support"
+  },
+  {
+   "from": "dining_table",
+   "to": "steak",
+   "kind": "support"
+  },
+  {
+   "from": "dining_table",
+   "to": "menu",
+   "kind": "support"
+  },
+  {
+   "from": "bar_counter",
+   "to": "wine_bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bar_counter",
+   "to": "corkscrew",
+   "kind": "support"
+  },
+  {
+   "from": "platform",
+   "to": "musician",
+   "kind": "support"
+  },
+  {
+   "from": "waitress",
+   "to": "tray_plates",
+   "kind": "support"
+  },
+  {
+   "from": "waitress",
+   "to": "tray_glasses",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_011",
+ "prompt": "A restaurant scene with staff and customers. A chef is standing at a grill, flipping burgers with a spatula while wearing an apron. The chef's professional-grade knife on his station is larger than the steak knife a customer is using. A waitress is carrying a tray with plates and glasses toward a table where two customers are sitting. The number of plates is two more than the number of customers. The number of glasses is equal to the number of plates. One customer is cutting a steak with a knife while the other is drinking from a glass. The customer with the steak is pointing at a menu on the table. Behind the customers, a busboy is cleaning a table with a cloth. The busboy is visibly younger than the waitress. A bartender is shaking a cocktail shaker behind the bar counter. The bar's shelves display three glasses and a number of bottles. The number of bottles is twice the number of glasses. A musician is playing a violin near the window, standing on a small platform. A wine bottle sits on the bar next to a corkscrew.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 3,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

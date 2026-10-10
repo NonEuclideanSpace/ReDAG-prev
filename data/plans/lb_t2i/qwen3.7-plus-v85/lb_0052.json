@@ -1,0 +1,582 @@
+{
+ "style": "surreal fantasy digital painting, magical realism, bioluminescent lighting, intricate details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal landscape with a mossy stone wall, an oak tree, and a vortex sky",
+   "question": "Does the image show a surreal landscape with a mossy stone wall, an oak tree, and a vortex sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden ladder",
+   "question": "Is there a weathered wooden ladder?",
+   "box": [
+    300,
+    200,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "stone wall",
+   "plural": "stone walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mossy stone wall",
+   "question": "Is there a mossy stone wall?",
+   "box": [
+    0,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shimmering puddle of water",
+   "question": "Is there a shimmering puddle of water?",
+   "box": [
+    250,
+    850,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden hose",
+   "question": "Is there a red garden hose?",
+   "box": [
+    100,
+    700,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "dandelions",
+   "type": "entity",
+   "class": "dandelion",
+   "plural": "dandelions",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a patch of dandelions",
+   "question": "Are there dandelions in the image?",
+   "box": [
+    150,
+    800,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "drop",
+   "type": "entity",
+   "class": "water drop",
+   "plural": "water drops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single large water drop",
+   "question": "Is there a single large water drop?",
+   "box": [
+    441,
+    391,
+    489,
+    439
+   ]
+  },
+  {
+   "id": "oak",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oak tree",
+   "question": "Is there an oak tree?",
+   "box": [
+    600,
+    0,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "swing",
+   "type": "entity",
+   "class": "swing",
+   "plural": "swings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted swing",
+   "question": "Is there a rusted swing?",
+   "box": [
+    700,
+    300,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "roses",
+   "type": "entity",
+   "class": "rose",
+   "plural": "roses",
+   "count": 2,
+   "count_exact": false,
+   "desc": "roses",
+   "question": "Are there roses?",
+   "box": [
+    50,
+    200,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "ivy",
+   "type": "entity",
+   "class": "ivy",
+   "plural": "ivy",
+   "count": 1,
+   "count_exact": true,
+   "desc": "ivy",
+   "question": "Is there ivy?",
+   "box": [
+    300,
+    200,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "moths",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 2,
+   "count_exact": false,
+   "desc": "moths with iridescent wings",
+   "question": "Are there moths with iridescent wings?",
+   "box": [
+    400,
+    100,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "hourglass",
+   "type": "entity",
+   "class": "hourglass",
+   "plural": "hourglasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked hourglass half-buried in the ground",
+   "question": "Is there a cracked hourglass half-buried in the ground?",
+   "box": [
+    500,
+    850,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "tiny figure",
+   "plural": "tiny figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny figure climbing the ladder sideways",
+   "question": "Is there a tiny figure climbing the ladder sideways?",
+   "box": [
+    376,
+    496,
+    424,
+    544
+   ]
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the ladder is leaning precariously",
+   "question": "Is the ladder leaning precariously?"
+  },
+  {
+   "id": "ladder_base_submerged",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "puddle"
+   ],
+   "desc": "the base of the ladder is submerged in the puddle",
+   "question": "Is the base of the ladder submerged in the puddle?"
+  },
+  {
+   "id": "ladder_against_wall",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "wall"
+   ],
+   "desc": "the ladder leans against the mossy stone wall",
+   "question": "Does the ladder lean against the mossy stone wall?"
+  },
+  {
+   "id": "hose_dripping",
+   "type": "state",
+   "of": "hose",
+   "desc": "the hose is dripping water",
+   "question": "Is the hose dripping water?"
+  },
+  {
+   "id": "hose_near_dandelions",
+   "type": "relation",
+   "of": [
+    "hose",
+    "dandelions"
+   ],
+   "desc": "the hose is near the dandelions",
+   "question": "Is the hose near the dandelions?"
+  },
+  {
+   "id": "drop_refracting",
+   "type": "attribute",
+   "of": "drop",
+   "desc": "the water drop refracts a miniature scene",
+   "question": "Does the water drop refract a miniature scene?"
+  },
+  {
+   "id": "swing_hanging",
+   "type": "relation",
+   "of": [
+    "swing",
+    "oak"
+   ],
+   "desc": "the swing hangs from the oak tree",
+   "question": "Does the swing hang from the oak tree?"
+  },
+  {
+   "id": "roses_behind_wall",
+   "type": "relation",
+   "of": [
+    "roses",
+    "wall"
+   ],
+   "desc": "the roses are behind the wall",
+   "question": "Are the roses behind the wall?"
+  },
+  {
+   "id": "ivy_on_ladder",
+   "type": "relation",
+   "of": [
+    "ivy",
+    "ladder"
+   ],
+   "desc": "the ivy climbs the ladder",
+   "question": "Does the ivy climb the ladder?"
+  },
+  {
+   "id": "ivy_on_hose",
+   "type": "relation",
+   "of": [
+    "ivy",
+    "hose"
+   ],
+   "desc": "the ivy curls around the hose",
+   "question": "Does the ivy curl around the hose?"
+  },
+  {
+   "id": "moths_spiraling",
+   "type": "state",
+   "of": "moths",
+   "desc": "the moths fly in a spiral path",
+   "question": "Do the moths fly in a spiral path?"
+  },
+  {
+   "id": "figure_climbing",
+   "type": "action",
+   "of": [
+    "figure",
+    "ladder"
+   ],
+   "desc": "the tiny figure climbs the ladder sideways",
+   "question": "Is the tiny figure climbing the ladder sideways?"
+  },
+  {
+   "id": "hourglass_sand",
+   "type": "state",
+   "of": "hourglass",
+   "desc": "the sand in the cracked hourglass is suspended mid-fall",
+   "question": "Is the sand in the cracked hourglass suspended mid-fall?"
+  },
+  {
+   "id": "oak_leaves_glowing",
+   "type": "state",
+   "of": "oak",
+   "desc": "the oak tree's leaves are glowing",
+   "question": "Are the oak tree's leaves glowing?"
+  },
+  {
+   "id": "swing_chains",
+   "type": "attribute",
+   "of": "swing",
+   "desc": "the rusted swing has chains",
+   "question": "Does the rusted swing have chains?"
+  },
+  {
+   "id": "oak_bark_copper",
+   "type": "attribute",
+   "of": "oak",
+   "desc": "the oak tree's bark is laced with veins of copper",
+   "question": "Is the oak tree's bark laced with veins of copper?"
+  },
+  {
+   "id": "ladder_weathered",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the ladder is sun-worn",
+   "question": "Is the ladder sun-worn?"
+  },
+  {
+   "id": "puddle_rain",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle contains rain clinging to the soil",
+   "question": "Does the puddle show rain clinging to the soil?"
+  },
+  {
+   "id": "hose_unspooling",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose is unspooling",
+   "question": "Is the red garden hose unspooling?"
+  },
+  {
+   "id": "drop_refracts_oak",
+   "type": "attribute",
+   "of": "drop",
+   "desc": "the water drop refracts a miniature version of the oak tree",
+   "question": "Does the water drop refract a miniature version of the oak tree?"
+  },
+  {
+   "id": "oak_behind_wall",
+   "type": "relation",
+   "of": [
+    "oak",
+    "wall"
+   ],
+   "desc": "the oak tree is behind the wall",
+   "question": "Is the oak tree behind the wall?"
+  },
+  {
+   "id": "ivy_defying_gravity",
+   "type": "state",
+   "of": "ivy",
+   "desc": "the ivy guides water upward in defiance of gravity",
+   "question": "Does the ivy appear to guide water upward in defiance of gravity?"
+  },
+  {
+   "id": "hourglass_in_spiral",
+   "type": "relation",
+   "of": [
+    "moths",
+    "hourglass"
+   ],
+   "desc": "the spiral flight path of the moths leads to the hourglass",
+   "question": "Does the spiral flight path of the moths lead to the hourglass?"
+  },
+  {
+   "id": "figure_pebble_size",
+   "type": "attribute",
+   "of": "figure",
+   "desc": "the tiny figure is no taller than a pebble",
+   "question": "Is the tiny figure no taller than a pebble?"
+  },
+  {
+   "id": "ladder_leaning_into_sky",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the ladder leans into the sky",
+   "question": "Does the ladder lean into the sky?"
+  },
+  {
+   "id": "garden",
+   "type": "entity",
+   "class": "garden",
+   "plural": "gardens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hidden garden",
+   "question": "Is there a hidden garden?",
+   "box": [
+    0,
+    0,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "garden_behind_wall",
+   "type": "relation",
+   "of": [
+    "garden",
+    "wall"
+   ],
+   "desc": "the hidden garden is behind the mossy stone wall",
+   "question": "Is the hidden garden behind the mossy stone wall?"
+  },
+  {
+   "id": "hose_converges_puddle",
+   "type": "relation",
+   "of": [
+    "hose",
+    "puddle"
+   ],
+   "desc": "the red garden hose converges with the shimmering puddle",
+   "question": "Does the red garden hose converge with the shimmering puddle?"
+  },
+  {
+   "id": "ladder_splintered",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the ladder is splintered with age",
+   "question": "Is the ladder splintered with age?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose",
+   "desc": "the hose is coiled like a serpent",
+   "question": "Is the hose coiled like a serpent?"
+  },
+  {
+   "id": "oak_translucent_leaves",
+   "type": "attribute",
+   "of": "oak",
+   "desc": "the oak tree has translucent leaves",
+   "question": "Does the oak tree have translucent leaves?"
+  },
+  {
+   "id": "oak_bioluminescent_veins",
+   "type": "attribute",
+   "of": "oak",
+   "desc": "the oak tree's leaves shimmer with bioluminescent veins",
+   "question": "Do the oak tree's leaves shimmer with bioluminescent veins?"
+  },
+  {
+   "id": "drop_suspended",
+   "type": "state",
+   "of": "drop",
+   "desc": "the water drop is suspended in midair",
+   "question": "Is the water drop suspended in midair?"
+  },
+  {
+   "id": "roses_folding",
+   "type": "state",
+   "of": "roses",
+   "desc": "the rose petals are folding inward",
+   "question": "Are the rose petals folding inward?"
+  },
+  {
+   "id": "ivy_looping",
+   "type": "state",
+   "of": "ivy",
+   "desc": "the ivy loops back down",
+   "question": "Does the ivy loop back down?"
+  },
+  {
+   "id": "drop_refracts_wall",
+   "type": "attribute",
+   "of": "drop",
+   "desc": "the refracted scene includes the wall",
+   "question": "Does the refracted scene include the wall?"
+  },
+  {
+   "id": "drop_refracts_ladder",
+   "type": "attribute",
+   "of": "drop",
+   "desc": "the refracted scene includes the ladder",
+   "question": "Does the refracted scene include the ladder?"
+  },
+  {
+   "id": "drop_refracts_swing",
+   "type": "attribute",
+   "of": "drop",
+   "desc": "the refracted scene includes the swing",
+   "question": "Does the refracted scene include the swing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wall",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "oak",
+   "to": "swing",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0052",
+ "prompt": "The morning air is thick with the musk of wet earth and the soft decay of autumn, as a weathered wooden ladder, splintered with age and sun-worn, leans precariously against a mossy stone wall, its base submerged in a shimmering puddle where last night’s rain still clings to the soil like a stubborn ghost. The red garden hose, coiled like a sleeping serpent, unspools itself in a slow, liquid pulse, dripping onto a patch of dandelions that sway not with the wind but with a rhythmic breath, as if the flowers themselves are exhaling. A single drop, caught midair, refracts the scene inside it—revealing a miniature version of the wall, the ladder, and even the creaking swing in the oak tree behind, its chains groaning as though responding to the tremors of some unseen current. The oak itself is no ordinary tree; its bark is laced with veins of copper that pulse with the same slow rhythm as the dandelions, and from its branches hang translucent leaves that shimmer with bioluminescent veins, their glow intensifying as the morning sun peeks over the ridge. Suspended beneath one of these luminous boughs is the rusted swing, swaying with a motion that seems to pull time in two directions at once—backward, toward a past the land forgets, and forward, toward a future that bends toward myth. Behind the wall, a hidden garden sprawls in impossible layers, with roses that bloom in reverse, petals folding inward like hands withdrawing from a memory, and ivy that climbs the ladder but instead of reaching the sky, loops back down, curling around the hose as if guiding the water upward in defiance of gravity. In the air, a flock of moths with iridescent wings the color of forgotten dawns flutter in a synchronized dance, their flight path forming a spiral that leads the eye directly to a cracked hourglass half-buried in the ground, its sand suspended mid-fall, as though the ladder, the swing, the flowers, and even the sky are all held in the delicate tension of a single, suspended moment. At the base of the ladder, where the hose and the puddle converge, a tiny figure no taller than a pebble appears to climb the rungs, not in the vertical direction, but sideways, moving as if the ladder is leaning not on the wall but into the sky, where the horizon is not a line but a vortex of color, spiraling in and out like the turning of a key in an unseen lock. The air is not still but charged, as if something is about to break through—a secret hidden in the angles, in the spaces between the moss and the rust, in the echo of a creak that does not belong to the swing alone but to the very structure of the world that bends and folds in on itself, whispering in the language of impossible geometry.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 36,
+   "n_uncovered": 2,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

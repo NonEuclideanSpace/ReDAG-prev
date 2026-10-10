@@ -1,0 +1,188 @@
+{
+ "style": "oil painting style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden farm field under a pale sky",
+   "question": "Does the image show a golden farm field under a pale sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man with a straw hat",
+   "question": "Is there a man with a straw hat?",
+   "box": [
+    400,
+    350,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black and white cow",
+   "question": "Is there a black and white cow?",
+   "box": [
+    750,
+    400,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a woven basket",
+   "question": "Is the woman in the blue apron holding a woven basket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_bending",
+   "type": "state",
+   "of": "man",
+   "desc": "the man with the straw hat is bending over",
+   "question": "Is the man with the straw hat bending over?"
+  },
+  {
+   "id": "cow_grazing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the black and white cow is grazing",
+   "question": "Is the black and white cow grazing?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue apron looks at the man with the straw hat",
+   "question": "Is the woman in the blue apron looking at the man with the straw hat?"
+  },
+  {
+   "id": "cow_near_fence",
+   "type": "relation",
+   "of": [
+    "cow",
+    "fence"
+   ],
+   "desc": "the black and white cow stands near the fence line",
+   "question": "Is the black and white cow standing near the fence line?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "fence",
+   "plural": "fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fence line",
+   "question": "Is there a fence line?",
+   "box": [
+    700,
+    400,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "wheat_stalks",
+   "type": "entity",
+   "class": "wheat stalk",
+   "plural": "wheat stalks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wheat stalks",
+   "question": "Are there wheat stalks?",
+   "box": [
+    350,
+    600,
+    670,
+    900
+   ]
+  },
+  {
+   "id": "man_gathering",
+   "type": "action",
+   "of": [
+    "man",
+    "wheat_stalks"
+   ],
+   "desc": "the man with the straw hat gathers wheat stalks",
+   "question": "Is the man with the straw hat gathering wheat stalks?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0126",
+ "prompt": "In an oil painting style, a golden farm field stretches under a pale sky during harvest. On the left, a woman in a blue apron stands holding a woven basket. In the center, a man with a straw hat bends over to gather wheat stalks. To the right, a black and white cow stands calmly grazing near the fence line. The woman in the blue apron looks at the man with the straw hat as he works. There is no tractor visible in the scene. The composition captures the rustic essence of rural labor without modern machinery interrupting the timeless atmosphere of the countryside harvest season.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

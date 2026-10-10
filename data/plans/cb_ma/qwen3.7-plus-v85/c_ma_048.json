@@ -1,0 +1,229 @@
+{
+ "style": "photorealistic close-up",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral setting",
+   "question": "Does the image show a neutral setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a flat rock",
+   "question": "Is there a flat rock?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "mask",
+   "type": "entity",
+   "class": "mask",
+   "plural": "masks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a primitive ceremonial mask carved from dark wood",
+   "question": "Is there a primitive ceremonial mask carved from dark wood?",
+   "box": [
+    312,
+    200,
+    712,
+    700
+   ]
+  },
+  {
+   "id": "feathers",
+   "type": "entity",
+   "class": "feather",
+   "plural": "feathers",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three large colorful feathers",
+   "question": "Are there three large colorful feathers?",
+   "box": [
+    350,
+    100,
+    674,
+    250
+   ]
+  },
+  {
+   "id": "mask_wood_cracked",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the mask has visibly cracked wood in several places",
+   "question": "Does the mask have visibly cracked wood in several places?"
+  },
+  {
+   "id": "mask_paint_chipped",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the paint on the mask is red and black",
+   "question": "Is the paint on the mask red and black?"
+  },
+  {
+   "id": "mask_teeth",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "fragments of cracked white ceramic are inlaid to form teeth on the mask",
+   "question": "Are fragments of cracked white ceramic inlaid to form teeth on the mask?"
+  },
+  {
+   "id": "mask_eye_left",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "one eyehole on the mask is a simple circular cutout",
+   "question": "Is one eyehole on the mask a simple circular cutout?"
+  },
+  {
+   "id": "mask_eye_right",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the other eyehole on the mask is covered by a cracked glassy blue lens",
+   "question": "Is the other eyehole on the mask covered by a cracked glassy blue lens?"
+  },
+  {
+   "id": "mask_on_rock",
+   "type": "relation",
+   "of": [
+    "mask",
+    "rock"
+   ],
+   "desc": "the mask rests on the flat rock",
+   "question": "Does the mask rest on the flat rock?"
+  },
+  {
+   "id": "mask_not_symmetrical",
+   "type": "absent",
+   "desc": "symmetry in the mask",
+   "question": "Is the mask symmetrical?"
+  },
+  {
+   "id": "mask_not_metal",
+   "type": "absent",
+   "desc": "the mask being made entirely of metal",
+   "question": "Is the mask made entirely of metal?"
+  },
+  {
+   "id": "mask_not_worn",
+   "type": "absent",
+   "desc": "the mask being worn by a person",
+   "question": "Is the mask being worn by a person?"
+  },
+  {
+   "id": "mask_not_happy",
+   "type": "absent",
+   "desc": "a happy expression on the mask",
+   "question": "Does the mask have a happy expression?"
+  },
+  {
+   "id": "mask_asymmetrical",
+   "type": "state",
+   "of": "mask",
+   "desc": "the mask is highly asymmetrical",
+   "question": "Is the mask highly asymmetrical?"
+  },
+  {
+   "id": "mask_elongated",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the mask has an elongated shape",
+   "question": "Does the mask have an elongated shape?"
+  },
+  {
+   "id": "mask_frightened_face",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the mask depicts a stylized frightened animal face",
+   "question": "Does the mask depict a stylized frightened animal face?"
+  },
+  {
+   "id": "mask_paint_condition",
+   "type": "attribute",
+   "of": "mask",
+   "desc": "the paint on the mask is heavily chipped and faded",
+   "question": "Is the paint on the mask heavily chipped and faded?"
+  },
+  {
+   "id": "feathers_on_mask",
+   "type": "relation",
+   "of": [
+    "feathers",
+    "mask"
+   ],
+   "desc": "the feathers are attached to the top of the mask",
+   "question": "Are the feathers attached to the top of the mask?"
+  },
+  {
+   "id": "feather_blue",
+   "type": "attribute",
+   "of": "feathers",
+   "desc": "one feather is blue",
+   "question": "Is one of the feathers blue?"
+  },
+  {
+   "id": "feather_yellow",
+   "type": "attribute",
+   "of": "feathers",
+   "desc": "one feather is yellow",
+   "question": "Is one of the feathers yellow?"
+  },
+  {
+   "id": "feather_red",
+   "type": "attribute",
+   "of": "feathers",
+   "desc": "one feather is red",
+   "question": "Is one of the feathers red?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "rock",
+   "to": "mask",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_048",
+ "prompt": "A single, primitive, ceremonial mask resting on a flat rock. The mask is carved from dark wood and is highly asymmetrical. It has an elongated shape and is meant to depict a stylized, frightened animal face. Fragments of cracked, white ceramic are inlaid to form teeth. The paint on the mask, which is red and black, is heavily chipped and faded. It has two different eyeholes: one is a simple circular cutout, while the other is covered by a cracked, glassy, blue lens. Exactly three large, colorful feathers are attached to the top; one is blue, one is yellow, and one is red. The wood is visibly cracked in several places. Importantly, the mask is not symmetrical, it is not made entirely of metal, it is not being worn, and its expression is not happy.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node mask: entity question is long (20 words); should only ask presence + identifying look",
+   "node feathers: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

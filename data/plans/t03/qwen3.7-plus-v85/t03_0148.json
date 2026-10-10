@@ -1,0 +1,187 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception hall",
+   "question": "Does the image show a wedding reception hall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table in the image?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white veil",
+   "question": "Is there a woman in a white veil?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue tuxedo",
+   "question": "Is there a man in a blue tuxedo?",
+   "box": [
+    674,
+    150,
+    974,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat",
+   "question": "Is there a small white cat?",
+   "box": [
+    450,
+    550,
+    574,
+    700
+   ]
+  },
+  {
+   "id": "woman_tray",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the white veil holds a silver tray",
+   "question": "Is the woman in the white veil holding a silver tray?"
+  },
+  {
+   "id": "man_arms",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue tuxedo has his arms crossed tightly",
+   "question": "Does the man in the blue tuxedo have his arms crossed tightly?"
+  },
+  {
+   "id": "woman_looks_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the white veil looks directly at the small white cat",
+   "question": "Is the woman in the white veil looking directly at the small white cat?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the small white cat sits next to the man in the blue tuxedo",
+   "question": "Is the small white cat sitting next to the man in the blue tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake on the table",
+   "question": "Is there a cake on the table?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the white veil stands",
+   "question": "Is the woman in the white veil standing?"
+  },
+  {
+   "id": "man_sits",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue tuxedo sits",
+   "question": "Is the man in the blue tuxedo sitting?"
+  },
+  {
+   "id": "cat_sits",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat wearing a pink bow tie sits",
+   "question": "Is the small white cat wearing a pink bow tie sitting?"
+  },
+  {
+   "id": "cat_between",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman",
+    "man"
+   ],
+   "desc": "the small white cat wearing a pink bow tie is centered between the woman in the white veil and the man in the blue tuxedo",
+   "question": "Is the small white cat wearing a pink bow tie centered between the woman in the white veil and the man in the blue tuxedo?"
+  },
+  {
+   "id": "cat_bow_tie",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the small white cat wears a pink bow tie",
+   "question": "Does the small white cat wear a pink bow tie?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0148",
+ "prompt": "In an anime style wedding reception, a woman in a white veil stands on the left holding a silver tray. A man in a blue tuxedo sits on the right with his arms crossed tightly. Centered between them is a small white cat wearing a pink bow tie. The woman in the white veil looks directly at the small white cat. The small white cat sits next to the man in the blue tuxedo. There is no cake on the table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court setting",
+   "question": "Does the image depict a beach volleyball court setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player_blue",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball player in a blue jersey",
+   "question": "Is there a volleyball player in a blue jersey?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    400,
+    250,
+    620,
+    850
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a wide hat",
+   "question": "Is there a spectator in a wide hat?",
+   "box": [
+    750,
+    300,
+    970,
+    800
+   ]
+  },
+  {
+   "id": "whistle",
+   "type": "attribute",
+   "of": "referee",
+   "desc": "the referee in a striped shirt holds a whistle",
+   "question": "Is the referee in a striped shirt holding a whistle?"
+  },
+  {
+   "id": "player_jumping",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the volleyball player in a blue jersey is jumping high",
+   "question": "Is the volleyball player in a blue jersey jumping high?"
+  },
+  {
+   "id": "referee_blowing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt is blowing the whistle",
+   "question": "Is the referee in a striped shirt blowing the whistle?"
+  },
+  {
+   "id": "spectator_clapping",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a wide hat is clapping hands",
+   "question": "Is the spectator in a wide hat clapping hands?"
+  },
+  {
+   "id": "player_looking_referee",
+   "type": "action",
+   "of": [
+    "player_blue",
+    "referee"
+   ],
+   "desc": "the volleyball player in a blue jersey looks at the referee in a striped shirt",
+   "question": "Is the volleyball player in a blue jersey looking at the referee in a striped shirt?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0058",
+ "prompt": "In a pencil sketch with light color wash, a beach volleyball tournament unfolds. On the left, a player in a blue jersey stands ready. In the center, a referee in a striped shirt holds a whistle. On the right, a spectator in a wide hat watches intently. The player in the blue jersey is jumping high. The referee in the striped shirt is blowing the whistle. The spectator in the wide hat is clapping hands. The player in the blue jersey looks at the referee in the striped shirt. There is no net visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

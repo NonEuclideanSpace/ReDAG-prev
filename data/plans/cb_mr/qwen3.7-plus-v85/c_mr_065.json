@@ -1,0 +1,384 @@
+{
+ "style": "photorealistic food photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen countertop",
+   "question": "Does the image show a kitchen countertop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cutting_board",
+   "type": "entity",
+   "class": "cutting board",
+   "plural": "cutting boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cutting board",
+   "question": "Is there a wooden cutting board?",
+   "box": [
+    360,
+    400,
+    660,
+    700
+   ]
+  },
+  {
+   "id": "tomato_halves",
+   "type": "entity",
+   "class": "tomato half",
+   "plural": "tomato halves",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two halves of a red tomato",
+   "question": "Are there two halves of a red tomato?",
+   "box": [
+    450,
+    480,
+    570,
+    580
+   ]
+  },
+  {
+   "id": "cucumbers",
+   "type": "entity",
+   "class": "cucumber",
+   "plural": "cucumbers",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several cucumbers",
+   "question": "Are there several cucumbers?",
+   "box": [
+    680,
+    450,
+    900,
+    650
+   ]
+  },
+  {
+   "id": "lemons",
+   "type": "entity",
+   "class": "lemon",
+   "plural": "lemons",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two yellow lemons",
+   "question": "Are there two yellow lemons?",
+   "box": [
+    300,
+    250,
+    500,
+    380
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "glass bowl",
+   "plural": "glass bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass bowl",
+   "question": "Is there a glass bowl?",
+   "box": [
+    700,
+    350,
+    900,
+    550
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "wooden spoon",
+   "plural": "wooden spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden spoon",
+   "question": "Is there a wooden spoon?",
+   "box": [
+    750,
+    400,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "metal pot",
+   "plural": "metal pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall metal pot",
+   "question": "Is there a tall metal pot?",
+   "box": [
+    720,
+    150,
+    880,
+    340
+   ]
+  },
+  {
+   "id": "carrots",
+   "type": "entity",
+   "class": "carrot",
+   "plural": "carrots",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four carrots",
+   "question": "Are there four carrots?",
+   "box": [
+    100,
+    500,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "onions",
+   "type": "entity",
+   "class": "green onion",
+   "plural": "green onions",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a bunch of green onions",
+   "question": "Is there a bunch of green onions?",
+   "box": [
+    50,
+    550,
+    150,
+    750
+   ]
+  },
+  {
+   "id": "tomato_on_board",
+   "type": "relation",
+   "of": [
+    "tomato_halves",
+    "cutting_board"
+   ],
+   "desc": "the tomato halves are on the cutting board",
+   "question": "Are the tomato halves on the cutting board?"
+  },
+  {
+   "id": "cucumbers_next_to_tomato",
+   "type": "relation",
+   "of": [
+    "cucumbers",
+    "tomato_halves"
+   ],
+   "desc": "the cucumbers are next to the tomato halves",
+   "question": "Are the cucumbers next to the tomato halves?"
+  },
+  {
+   "id": "lemons_behind_board",
+   "type": "relation",
+   "of": [
+    "lemons",
+    "cutting_board"
+   ],
+   "desc": "the lemons are behind the cutting board",
+   "question": "Are the lemons behind the cutting board?"
+  },
+  {
+   "id": "bowl_right_of_board",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "cutting_board"
+   ],
+   "desc": "the glass bowl is to the right of the cutting board",
+   "question": "Is the glass bowl to the right of the cutting board?"
+  },
+  {
+   "id": "spoon_in_bowl",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "bowl"
+   ],
+   "desc": "the wooden spoon is inside the glass bowl",
+   "question": "Is the wooden spoon inside the glass bowl?"
+  },
+  {
+   "id": "pot_behind_bowl",
+   "type": "relation",
+   "of": [
+    "pot",
+    "bowl"
+   ],
+   "desc": "the metal pot is behind the glass bowl",
+   "question": "Is the metal pot behind the glass bowl?"
+  },
+  {
+   "id": "carrots_on_counter",
+   "type": "state",
+   "of": "carrots",
+   "desc": "the carrots are on the countertop",
+   "question": "Are the carrots on the countertop?"
+  },
+  {
+   "id": "onions_next_to_carrots",
+   "type": "relation",
+   "of": [
+    "onions",
+    "carrots"
+   ],
+   "desc": "the green onions are next to the carrots",
+   "question": "Are the green onions next to the carrots?"
+  },
+  {
+   "id": "tomato_sliced",
+   "type": "attribute",
+   "of": "tomato_halves",
+   "desc": "the tomato halves are from a red tomato sliced in half",
+   "question": "Are the tomato halves from a red tomato that has been sliced in half?"
+  },
+  {
+   "id": "cucumbers_count",
+   "type": "attribute",
+   "of": "cucumbers",
+   "desc": "there are more cucumbers than tomatoes",
+   "question": "Are there more cucumbers than tomatoes?"
+  },
+  {
+   "id": "bowl_contents",
+   "type": "attribute",
+   "of": "bowl",
+   "desc": "the glass bowl contains chopped tomato pieces",
+   "question": "Does the glass bowl contain chopped tomato pieces?"
+  },
+  {
+   "id": "pot_taller",
+   "type": "attribute",
+   "of": "pot",
+   "desc": "the metal pot is taller than the glass bowl",
+   "question": "Is the metal pot taller than the glass bowl?"
+  },
+  {
+   "id": "carrots_size",
+   "type": "attribute",
+   "of": "carrots",
+   "desc": "the bunch of carrots is larger than the bunch of green onions",
+   "question": "Is the bunch of carrots larger than the bunch of green onions?"
+  },
+  {
+   "id": "onions_count",
+   "type": "attribute",
+   "of": "onions",
+   "desc": "the number of green onions is half the number of carrots",
+   "question": "Is the number of green onions half the number of carrots?"
+  },
+  {
+   "id": "chopped_tomato",
+   "type": "entity",
+   "class": "tomato piece",
+   "plural": "tomato pieces",
+   "count": 2,
+   "count_exact": false,
+   "desc": "chopped tomato pieces",
+   "question": "Are there chopped tomato pieces?",
+   "box": [
+    720,
+    520,
+    880,
+    680
+   ]
+  },
+  {
+   "id": "tomato_in_bowl",
+   "type": "relation",
+   "of": [
+    "chopped_tomato",
+    "bowl"
+   ],
+   "desc": "the chopped tomato pieces are inside the glass bowl",
+   "question": "Are the chopped tomato pieces inside the glass bowl?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cutting_board",
+   "to": "tomato_halves",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cutting_board",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cucumbers",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "lemons",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bowl",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "carrots",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "onions",
+   "kind": "support"
+  },
+  {
+   "from": "bowl",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "bowl",
+   "to": "chopped_tomato",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_065",
+ "prompt": "A kitchen countertop with a wooden cutting board in the center. A red tomato, which has been sliced in half, is on the cutting board. Next to the tomato are several cucumbers, more than the number of tomatoes. Two yellow lemons are on the counter behind the cutting board. To the right of the cutting board, a glass bowl contains the chopped tomato pieces. A wooden spoon is inside the glass bowl. Behind the bowl is a tall metal pot, which is taller than the glass bowl. There are also four carrots on the countertop. Next to the carrots is a bunch of green onions, and the bunch of carrots is larger than the bunch of green onions. The number of green onions is half the number of carrots.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

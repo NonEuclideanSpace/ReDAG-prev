@@ -1,0 +1,415 @@
+{
+ "style": "photorealistic night photography, high contrast, warm lighting from lanterns",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling city street food market at night",
+   "question": "Does the image show a bustling city street food market at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "food stall",
+   "plural": "food stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a food stall",
+   "question": "Is there a food stall?",
+   "box": [
+    200,
+    300,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a female vendor",
+   "question": "Is there a female vendor?",
+   "box": [
+    350,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a male customer",
+   "question": "Is there a male customer?",
+   "box": [
+    650,
+    350,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "skewers",
+   "type": "entity",
+   "class": "skewer",
+   "plural": "skewers",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two skewers of grilled food",
+   "question": "Are there exactly two skewers?",
+   "box": [
+    450,
+    500,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "coins",
+   "type": "entity",
+   "class": "coin",
+   "plural": "coins",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three coins",
+   "question": "Are there exactly three coins visible?",
+   "box": [
+    600,
+    600,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "wok",
+   "type": "entity",
+   "class": "wok",
+   "plural": "woks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large steaming wok",
+   "question": "Is there a large steaming wok?",
+   "box": [
+    500,
+    550,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "lanterns",
+   "type": "entity",
+   "class": "paper lantern",
+   "plural": "paper lanterns",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four paper lanterns in a string",
+   "question": "Are there exactly four paper lanterns in a string?",
+   "box": [
+    300,
+    50,
+    700,
+    200
+   ]
+  },
+  {
+   "id": "crowd",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a crowd of people surrounding the stall",
+   "question": "Is there a crowd of people surrounding the stall?",
+   "box": [
+    0,
+    200,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tongs",
+   "type": "attribute",
+   "of": "vendor",
+   "desc": "the female vendor holds tongs",
+   "question": "Is the female vendor holding tongs?"
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    400,
+    850,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "vendor_standing",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the female vendor is standing",
+   "question": "Is the female vendor standing?"
+  },
+  {
+   "id": "customer_standing",
+   "type": "state",
+   "of": "customer",
+   "desc": "the male customer is standing",
+   "question": "Is the male customer standing?"
+  },
+  {
+   "id": "wok_steaming",
+   "type": "state",
+   "of": "wok",
+   "desc": "the wok is steaming",
+   "question": "Is the wok steaming?"
+  },
+  {
+   "id": "cat_peeking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the stray cat is peeking out",
+   "question": "Is the stray cat peeking out?"
+  },
+  {
+   "id": "vendor_behind_stall",
+   "type": "relation",
+   "of": [
+    "vendor",
+    "stall"
+   ],
+   "desc": "the female vendor stands behind the food stall",
+   "question": "Is the female vendor standing behind the food stall?"
+  },
+  {
+   "id": "customer_front_stall",
+   "type": "relation",
+   "of": [
+    "customer",
+    "stall"
+   ],
+   "desc": "the male customer stands in front of the food stall",
+   "question": "Is the male customer standing in front of the food stall?"
+  },
+  {
+   "id": "handover_skewer",
+   "type": "action",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the female vendor hands one skewer to the male customer",
+   "question": "Is the female vendor handing one skewer to the male customer?"
+  },
+  {
+   "id": "customer_holding_coins",
+   "type": "action",
+   "of": [
+    "customer",
+    "vendor"
+   ],
+   "desc": "the male customer holds out three coins to the female vendor",
+   "question": "Is the male customer holding out three coins to the female vendor?"
+  },
+  {
+   "id": "wok_on_stall",
+   "type": "relation",
+   "of": [
+    "wok",
+    "stall"
+   ],
+   "desc": "the wok is on the food stall",
+   "question": "Is the wok on the food stall?"
+  },
+  {
+   "id": "wok_between",
+   "type": "relation",
+   "of": [
+    "wok",
+    "vendor",
+    "customer"
+   ],
+   "desc": "the wok is between the female vendor and the male customer",
+   "question": "Is the wok positioned between the female vendor and the male customer?"
+  },
+  {
+   "id": "lanterns_above_stall",
+   "type": "relation",
+   "of": [
+    "lanterns",
+    "stall"
+   ],
+   "desc": "the string of paper lanterns hangs above the food stall",
+   "question": "Do the paper lanterns hang above the food stall?"
+  },
+  {
+   "id": "vendor_looking_customer",
+   "type": "action",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the female vendor looks at the male customer",
+   "question": "Is the female vendor looking at the male customer?"
+  },
+  {
+   "id": "customer_looking_skewer",
+   "type": "action",
+   "of": [
+    "customer",
+    "skewers"
+   ],
+   "desc": "the male customer looks at the food skewer",
+   "question": "Is the male customer looking at the food skewer being handed to him?"
+  },
+  {
+   "id": "crowd_around_stall",
+   "type": "relation",
+   "of": [
+    "crowd",
+    "stall"
+   ],
+   "desc": "the crowd surrounds the food stall",
+   "question": "Does the crowd surround the food stall?"
+  },
+  {
+   "id": "vendor_turning_food",
+   "type": "action",
+   "of": [
+    "vendor",
+    "wok"
+   ],
+   "desc": "the female vendor uses tongs to turn food in the wok",
+   "question": "Is the female vendor using tongs to turn food in the wok?"
+  },
+  {
+   "id": "cat_under_stall",
+   "type": "relation",
+   "of": [
+    "cat",
+    "stall"
+   ],
+   "desc": "the stray cat is under the food stall",
+   "question": "Is the stray cat under the food stall?"
+  },
+  {
+   "id": "vendor_taller",
+   "type": "relation",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the female vendor is taller than the male customer",
+   "question": "Is the female vendor taller than the male customer?"
+  },
+  {
+   "id": "cat_smaller_wok",
+   "type": "relation",
+   "of": [
+    "cat",
+    "wok"
+   ],
+   "desc": "the cat is smaller than the wok",
+   "question": "Is the cat smaller than the wok?"
+  },
+  {
+   "id": "streetlights",
+   "type": "entity",
+   "class": "streetlight",
+   "plural": "streetlights",
+   "count": 2,
+   "count_exact": false,
+   "desc": "plain streetlights",
+   "question": "Are there plain streetlights?",
+   "box": [
+    50,
+    50,
+    200,
+    300
+   ]
+  },
+  {
+   "id": "awning",
+   "type": "attribute",
+   "of": "stall",
+   "desc": "the food stall has a colorful awning",
+   "question": "Does the food stall have a colorful awning?"
+  },
+  {
+   "id": "skewers_grilled",
+   "type": "attribute",
+   "of": "skewers",
+   "desc": "the skewers are of grilled food",
+   "question": "Are the skewers of grilled food?"
+  },
+  {
+   "id": "skewers_display",
+   "type": "state",
+   "of": "skewers",
+   "desc": "the skewers are on display",
+   "question": "Are the skewers on display?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stall",
+   "to": "wok",
+   "kind": "support"
+  },
+  {
+   "from": "stall",
+   "to": "skewers",
+   "kind": "support"
+  },
+  {
+   "from": "stall",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_056",
+ "prompt": "At a bustling city street food market at night, a female vendor is standing behind her food stall, which has a colorful awning. The stall has two skewers of grilled food on display. The vendor is handing one of the skewers to a male customer, who is standing in front of the stall. The customer is holding out three coins to the vendor; the number of coins is one more than the number of skewers on display. A large, steaming wok is on the stall, between the vendor and the customer. A string of paper lanterns is hanging above the stall, providing a brighter light than the plain streetlights nearby. The number of lanterns is twice the number of skewers on display. The vendor is looking at the customer, and the customer is looking at the food skewer. The stall is surrounded by a crowd of people. The vendor is using tongs to turn another piece of food in the wok. A stray cat is under the food stall, peeking out. The vendor is taller than the customer. The cat is smaller than the wok.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

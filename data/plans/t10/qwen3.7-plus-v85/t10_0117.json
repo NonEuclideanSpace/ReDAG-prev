@@ -1,0 +1,342 @@
+{
+ "style": "cinematic film still, twilight lighting, heavy snowfall",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet town square with cobblestones partially covered in snow",
+   "question": "Does the image show a quiet town square with cobblestones partially covered in snow?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a thick wool coat",
+   "question": "Is there an old man in a thick wool coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cane",
+   "type": "entity",
+   "class": "wooden cane",
+   "plural": "wooden canes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cane",
+   "question": "Is there a wooden cane?",
+   "box": [
+    176,
+    600,
+    224,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a bright yellow parka",
+   "question": "Is there a young woman in a bright yellow parka?",
+   "box": [
+    380,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in blue mittens",
+   "question": "Is there a small child in blue mittens?",
+   "box": [
+    620,
+    400,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    500,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "fountain",
+   "plural": "fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fountain",
+   "question": "Is there a stone fountain?",
+   "box": [
+    200,
+    100,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing streetlamp",
+   "question": "Is there a glowing streetlamp?",
+   "box": [
+    850,
+    50,
+    950,
+    500
+   ]
+  },
+  {
+   "id": "man_breath",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man's breath is visible in the cold air",
+   "question": "Is the old man's breath visible in the cold air?"
+  },
+  {
+   "id": "man_holding_cane",
+   "type": "attribute",
+   "of": "old_man",
+   "desc": "the old man holds a wooden cane firmly against the cobblestones",
+   "question": "Is the old man holding a wooden cane firmly against the cobblestones?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man leans slightly forward",
+   "question": "Is the old man leaning slightly forward?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman points toward the horizon with her gloved hand",
+   "question": "Is the young woman pointing toward the horizon with her gloved hand?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child looks up",
+   "question": "Is the small child looking up?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits patiently",
+   "question": "Is the brown dog sitting patiently?"
+  },
+  {
+   "id": "man_left",
+   "type": "relation",
+   "of": [
+    "old_man",
+    "woman"
+   ],
+   "desc": "the old man stands to the left of the young woman",
+   "question": "Is the old man standing to the left of the young woman?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child is next to the young woman on the right",
+   "question": "Is the small child next to the young woman on the right?"
+  },
+  {
+   "id": "dog_beside_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the brown dog sits beside the small child",
+   "question": "Is the brown dog sitting beside the small child?"
+  },
+  {
+   "id": "fountain_behind_group",
+   "type": "relation",
+   "of": [
+    "fountain",
+    "woman"
+   ],
+   "desc": "the stone fountain is behind the young woman",
+   "question": "Is the stone fountain behind the young woman?"
+  },
+  {
+   "id": "streetlamp_back",
+   "type": "relation",
+   "of": [
+    "streetlamp",
+    "fountain"
+   ],
+   "desc": "the streetlamp is further back than the stone fountain",
+   "question": "Is the streetlamp further back than the stone fountain?"
+  },
+  {
+   "id": "no_vehicle",
+   "type": "absent",
+   "desc": "modern vehicle",
+   "question": "Are there any modern vehicles in the image?"
+  },
+  {
+   "id": "woman_horizon",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman points toward the horizon",
+   "question": "Is the young woman pointing toward the horizon?"
+  },
+  {
+   "id": "child_woman_gaze",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child looks up at the young woman",
+   "question": "Is the small child looking up at the young woman?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is watching the scene",
+   "question": "Is the brown dog watching the scene?"
+  },
+  {
+   "id": "woman_gloves",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the young woman wears gloves",
+   "question": "Is the young woman wearing gloves?"
+  },
+  {
+   "id": "dog_fur",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the brown dog has fur dusted with white powder",
+   "question": "Is the brown dog's fur dusted with white powder?"
+  },
+  {
+   "id": "fountain_ice",
+   "type": "attribute",
+   "of": "fountain",
+   "desc": "the stone fountain is frozen solid with ice on its edges",
+   "question": "Is the stone fountain frozen solid with ice on its edges?"
+  },
+  {
+   "id": "child_wide_eyes",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the small child has wide eyes",
+   "question": "Does the small child have wide eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "cane",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "old_man",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "fountain",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "streetlamp",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0117",
+ "prompt": "In a cinematic film still, heavy snowflakes drift through the air of a quiet town square. On the left stands an old man in a thick wool coat, his breath visible in the cold air as he holds a wooden cane firmly against the cobblestones. In the center, a young woman in a bright yellow parka points toward the horizon with her gloved hand, directing attention to something unseen. Next to her on the right, a small child in blue mittens looks up at the woman with wide eyes, captivated by her gesture. A brown dog sits patiently beside the child, its fur dusted with fresh white powder, watching the scene with calm indifference. Behind them, a stone fountain is frozen solid, ice clinging to its carved edges in intricate patterns. Further back, a streetlamp glows warmly against the twilight, casting long shadows across the snow. There is no modern vehicle in sight, preserving the timeless atmosphere of the setting. The old man leans slightly forward, engaging with the group despite the distance. The woman’s pointing finger creates a strong diagonal line leading the eye. The child’s gaze connects directly with the woman’s face. The dog remains still, anchoring the composition. The fountain serves as a static backdrop. The streetlamp provides a subtle source of ambient light. The snow continues to fall gently around all figures. The cobblestones are partially covered but still visible beneath their feet. The scene captures a moment of shared curiosity and quiet connection amidst the winter chill.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

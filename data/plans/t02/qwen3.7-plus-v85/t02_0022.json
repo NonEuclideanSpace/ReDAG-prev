@@ -1,0 +1,100 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral indoor setting",
+   "question": "Does the image show a neutral indoor setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white gown",
+   "question": "Is there a woman in a white gown?",
+   "box": [
+    50,
+    200,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    574,
+    150,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "bride_sitting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the woman in the white gown is sitting",
+   "question": "Is the woman in the white gown sitting?"
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the woman in the white gown holds a small bouquet of red roses",
+   "question": "Is the woman in the white gown holding a small bouquet of red roses?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the man in the black tuxedo is standing",
+   "question": "Is the man in the black tuxedo standing?"
+  },
+  {
+   "id": "groom_looking",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the man in the black tuxedo looks at the woman in the white gown",
+   "question": "Is the man in the black tuxedo looking at the woman in the white gown?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake",
+   "question": "Is there a cake visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0022",
+ "prompt": "In this photorealistic photo, a bride in a white gown sits on the left side of the frame. A groom in a black tuxedo stands on the right side. The bride holds a small bouquet of red roses. The groom looks at the bride. There is no cake visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,128 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station",
+   "question": "Does the image show the interior of a fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    650,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "hose_reel",
+   "type": "entity",
+   "class": "hose reel",
+   "plural": "hose reels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red hose reel",
+   "question": "Is there a red hose reel?",
+   "box": [
+    850,
+    200,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "firefighter_helmet",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear holds a silver helmet",
+   "question": "Is the firefighter in yellow gear holding a silver helmet?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "action",
+   "of": [
+    "cat",
+    "firefighter"
+   ],
+   "desc": "the black cat looks directly at the firefighter in yellow gear",
+   "question": "Is the black cat looking directly at the firefighter in yellow gear?"
+  },
+  {
+   "id": "cat_near_reel",
+   "type": "relation",
+   "of": [
+    "cat",
+    "hose_reel"
+   ],
+   "desc": "the black cat is near the red hose reel",
+   "question": "Is the black cat near the red hose reel?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear is standing",
+   "question": "Is the firefighter in yellow gear standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0035",
+ "prompt": "In an anime style scene set inside a fire station, a firefighter in yellow gear stands on the left side of the frame. A black cat sits calmly on the right side near a red hose reel. The firefighter is holding a silver helmet in their hands. The black cat is looking directly at the firefighter. There is no fire visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

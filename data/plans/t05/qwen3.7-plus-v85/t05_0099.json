@@ -1,0 +1,293 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theatre backstage area",
+   "question": "Does the image show a theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman_blue_dress",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    280,
+    350,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    300,
+    600,
+    480,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    450,
+    550,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "cushion",
+   "type": "entity",
+   "class": "velvet cushion",
+   "plural": "velvet cushions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet cushion",
+   "question": "Is there a velvet cushion?",
+   "box": [
+    440,
+    650,
+    610,
+    780
+   ]
+  },
+  {
+   "id": "boy_yellow_shirt",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a yellow shirt",
+   "question": "Is there a boy in a yellow shirt?",
+   "box": [
+    700,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging spotlight",
+   "question": "Is there a hanging spotlight?",
+   "box": [
+    750,
+    50,
+    900,
+    200
+   ]
+  },
+  {
+   "id": "old_man_grey_coat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a grey coat",
+   "question": "Is there an old man in a grey coat?",
+   "box": [
+    850,
+    250,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "man_holding_clipboard",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf holds a clipboard",
+   "question": "Is the man in a red scarf holding a clipboard?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue_dress",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "woman_looking_clipboard",
+   "type": "action",
+   "of": [
+    "woman_blue_dress",
+    "man_red_scarf"
+   ],
+   "desc": "the woman in a blue dress looks at the clipboard held by the man in a red scarf",
+   "question": "Is the woman in a blue dress looking at the clipboard held by the man in a red scarf?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sleeping",
+   "question": "Is the black cat sleeping?"
+  },
+  {
+   "id": "boy_pointing_spotlight",
+   "type": "action",
+   "of": [
+    "boy_yellow_shirt",
+    "spotlight"
+   ],
+   "desc": "the boy in a yellow shirt points at the hanging spotlight",
+   "question": "Is the boy in a yellow shirt pointing at the hanging spotlight?"
+  },
+  {
+   "id": "old_man_watching_boy",
+   "type": "action",
+   "of": [
+    "old_man_grey_coat",
+    "boy_yellow_shirt"
+   ],
+   "desc": "the old man in a grey coat watches the boy in a yellow shirt",
+   "question": "Is the old man in a grey coat watching the boy in a yellow shirt?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman_blue_dress",
+    "man_red_scarf"
+   ],
+   "desc": "the woman in a blue dress is next to the man in a red scarf",
+   "question": "Is the woman in a blue dress next to the man in a red scarf?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman_blue_dress",
+    "crate"
+   ],
+   "desc": "the woman in a blue dress sits on the wooden crate",
+   "question": "Is the woman in a blue dress sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_on_cushion",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cushion"
+   ],
+   "desc": "the black cat rests on the velvet cushion",
+   "question": "Is the black cat resting on the velvet cushion?"
+  },
+  {
+   "id": "boy_right_of_cat",
+   "type": "relation",
+   "of": [
+    "boy_yellow_shirt",
+    "cat"
+   ],
+   "desc": "the boy in a yellow shirt is to the right of the black cat",
+   "question": "Is the boy in a yellow shirt to the right of the black cat?"
+  },
+  {
+   "id": "old_man_beside_boy",
+   "type": "relation",
+   "of": [
+    "old_man_grey_coat",
+    "boy_yellow_shirt"
+   ],
+   "desc": "the old man in a grey coat is beside the boy in a yellow shirt",
+   "question": "Is the old man in a grey coat beside the boy in a yellow shirt?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the background?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy_yellow_shirt",
+   "desc": "the boy in a yellow shirt is standing",
+   "question": "Is the boy in a yellow shirt standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman_blue_dress",
+   "kind": "support"
+  },
+  {
+   "from": "cushion",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0099",
+ "prompt": "In a photorealistic photo set in a theatre backstage, a man in a red scarf stands on the left holding a clipboard. Next to him, a woman in a blue dress sits on a wooden crate, looking at the clipboard he holds. In the center, a black cat sleeps on a velvet cushion. To the right of the cat, a boy in a yellow shirt points at a hanging spotlight above. Beside the boy, an old man in a grey coat watches the pointing gesture intently. The scene captures these five distinct entities with specific spatial arrangements and interactions. There is no audience visible in the background. The man in the red scarf is positioned on the left side of the frame. The black cat rests in the center area. The boy in the yellow shirt stands on the right side. The woman interacts with the man by looking at his clipboard. The boy interacts with the old man by pointing towards the light while being watched. Each entity has a clear visual identifier such as clothing color or species. The poses include standing, sitting, sleeping, and pointing. The interactions are limited to looking and pointing between pairs.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

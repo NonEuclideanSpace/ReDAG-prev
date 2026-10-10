@@ -1,0 +1,105 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image depict a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    450,
+    300,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "woman_gift",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small gift box",
+   "question": "Is the woman in a blue coat holding a small gift box?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child in a yellow hat is looking at the woman",
+   "question": "Is the child in a yellow hat looking at the woman in the blue coat?"
+  },
+  {
+   "id": "handing_over",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue coat hands the gift to the child",
+   "question": "Is the woman in a blue coat handing the gift to the child?"
+  },
+  {
+   "id": "no_snowman",
+   "type": "absent",
+   "desc": "snowman",
+   "question": "Is there a snowman visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0019",
+ "prompt": "This flat vector illustration depicts a snowy town square. On the left stands a woman in a blue coat holding a small gift box. In the center, a child in a yellow hat looks at the woman. The woman is handing the gift to the child. There is no snowman visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

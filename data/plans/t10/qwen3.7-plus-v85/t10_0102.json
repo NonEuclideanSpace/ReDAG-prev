@@ -1,0 +1,375 @@
+{
+ "style": "anime style illustration, soft morning light, rustic atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market with stalls and cobblestones under a pale sky",
+   "question": "Does the image show a village market with stalls and cobblestones under a pale sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a striped cat",
+   "question": "Is there a striped cat?",
+   "box": [
+    100,
+    750,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man with a white beard",
+   "question": "Is there an old man with a white beard?",
+   "box": [
+    400,
+    150,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy in a yellow cap?",
+   "box": [
+    650,
+    250,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "baskets_stack",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of woven baskets",
+   "question": "Is there a stack of woven baskets?",
+   "box": [
+    850,
+    500,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "merchant",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a merchant in a purple turban",
+   "question": "Is there a merchant in a purple turban?",
+   "box": [
+    750,
+    150,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer dressed in simple brown robes",
+   "question": "Is there a customer dressed in simple brown robes?",
+   "box": [
+    550,
+    150,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    800,
+    700,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "clay jar",
+   "plural": "clay jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large clay jar",
+   "question": "Is there a large clay jar?",
+   "box": [
+    820,
+    550,
+    960,
+    750
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a basket of bright oranges",
+   "question": "Is the woman in the blue apron holding a basket of bright oranges?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat is sitting",
+   "question": "Is the striped cat sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man is leaning heavily on a wooden cane",
+   "question": "Is the old man leaning heavily on a wooden cane?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "old_man",
+    "boy"
+   ],
+   "desc": "the old man is looking at the young boy",
+   "question": "Is the old man looking at the young boy?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is pointing eagerly",
+   "question": "Is the young boy pointing eagerly?"
+  },
+  {
+   "id": "customer_reaching",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer reaches out with both hands",
+   "question": "Is the customer reaching out with both hands?"
+  },
+  {
+   "id": "woman_glancing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron has a calm and observant expression, glancing toward the central pair",
+   "question": "Does the woman in the blue apron have a calm and observant expression, glancing toward the center?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat is watching with mild curiosity",
+   "question": "Is the striped cat watching with mild curiosity?"
+  },
+  {
+   "id": "woman_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the striped cat sits next to the woman in the blue apron",
+   "question": "Is the striped cat sitting next to the woman in the blue apron?"
+  },
+  {
+   "id": "boy_opposite_man",
+   "type": "relation",
+   "of": [
+    "boy",
+    "old_man"
+   ],
+   "desc": "the young boy stands directly opposite the old man",
+   "question": "Is the young boy standing directly opposite the old man?"
+  },
+  {
+   "id": "baskets_beside_man",
+   "type": "relation",
+   "of": [
+    "baskets_stack",
+    "old_man"
+   ],
+   "desc": "the stack of woven baskets is piled high beside the old man",
+   "question": "Is the stack of woven baskets piled high beside the old man?"
+  },
+  {
+   "id": "merchant_hands_coin",
+   "type": "action",
+   "of": [
+    "merchant",
+    "customer"
+   ],
+   "desc": "the merchant in the purple turban hands a silver coin to the customer",
+   "question": "Is the merchant in the purple turban handing a silver coin to the customer?"
+  },
+  {
+   "id": "jar_on_crate",
+   "type": "relation",
+   "of": [
+    "jar",
+    "crate"
+   ],
+   "desc": "the large clay jar rests on the wooden crate",
+   "question": "Is the large clay jar resting on the wooden crate?"
+  },
+  {
+   "id": "crate_behind_merchant_customer",
+   "type": "relation",
+   "of": [
+    "crate",
+    "merchant"
+   ],
+   "desc": "the wooden crate is behind the merchant and the customer",
+   "question": "Is the wooden crate behind the merchant and the customer?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "modern technology",
+   "question": "Is there any modern technology visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron stands",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in the yellow cap stands",
+   "question": "Is the young boy in the yellow cap standing?"
+  },
+  {
+   "id": "cat_on_ground",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat sits on the ground",
+   "question": "Is the striped cat sitting on the ground?"
+  },
+  {
+   "id": "cat_green_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the striped cat has green eyes",
+   "question": "Does the striped cat have green eyes?"
+  },
+  {
+   "id": "baskets_pattern",
+   "type": "attribute",
+   "of": "baskets_stack",
+   "desc": "the woven baskets show intricate patterns of straw and reed",
+   "question": "Do the woven baskets show intricate patterns of straw and reed?"
+  },
+  {
+   "id": "jar_cracked_rim",
+   "type": "attribute",
+   "of": "jar",
+   "desc": "the large clay jar has a cracked rim",
+   "question": "Does the large clay jar have a cracked rim?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the striped cat's tail is curled around its paws",
+   "question": "Is the striped cat's tail curled around its paws?"
+  },
+  {
+   "id": "man_coat",
+   "type": "attribute",
+   "of": "old_man",
+   "desc": "the old man wears a tattered gray coat",
+   "question": "Does the old man wear a tattered gray coat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "jar",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0102",
+ "prompt": "In an anime style illustration, the village market awakens under a pale sky. On the left stands a woman in a blue apron holding a basket of bright oranges. Next to her on the ground sits a striped cat with green eyes, its tail curled neatly around its paws. In the center, an old man with a white beard leans heavily on a wooden cane while wearing a tattered gray coat. He is looking at a young boy in a yellow cap who stands directly opposite him. The boy is pointing eagerly at a stack of woven baskets piled high beside the elder. To the right, a merchant in a purple turban hands a silver coin to a customer dressed in simple brown robes. The customer reaches out with both hands to accept the payment. Behind them, a large clay jar with a cracked rim rests on a wooden crate. There is no modern technology visible in this rustic setting. The soft morning light touches the edges of the stalls, highlighting the dust motes dancing in the air between the figures. The woman in the blue apron glances toward the central pair, her expression calm and observant. The striped cat remains still, watching the exchange with mild curiosity. The wooden cane of the old man casts a long shadow across the cobblestones, anchoring the composition. The woven baskets show intricate patterns of straw and reed. The silver coin gleams faintly as it passes from hand to hand. The cracked rim of the clay jar suggests age and frequent use. The scene captures a quiet moment of daily life before the full bustle of the day begins.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

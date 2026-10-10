@@ -1,0 +1,442 @@
+{
+ "style": "cinematic sci-fi horror, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mad scientist's laboratory",
+   "question": "Does the image depict a mad scientist's laboratory?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "scientist",
+   "type": "entity",
+   "class": "scientist",
+   "plural": "scientists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scientist with wild grey hair",
+   "question": "Is there a scientist?",
+   "box": [
+    350,
+    300,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small stool",
+   "question": "Is there a small stool?",
+   "box": [
+    380,
+    750,
+    520,
+    900
+   ]
+  },
+  {
+   "id": "machine",
+   "type": "entity",
+   "class": "machine",
+   "plural": "machines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive, complex machine",
+   "question": "Is there a massive, complex machine?",
+   "box": [
+    100,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "levers",
+   "type": "entity",
+   "class": "lever",
+   "plural": "levers",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two large levers",
+   "question": "Are there two large levers?",
+   "box": [
+    400,
+    200,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "creature",
+   "type": "entity",
+   "class": "creature",
+   "plural": "creatures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a monstrous, green-skinned creature with a metal collar",
+   "question": "Is there a monstrous creature?",
+   "box": [
+    650,
+    250,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "cage",
+   "type": "entity",
+   "class": "glass cage",
+   "plural": "glass cages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reinforced glass cage",
+   "question": "Is there a reinforced glass cage?",
+   "box": [
+    600,
+    200,
+    1000,
+    750
+   ]
+  },
+  {
+   "id": "jacob_ladder",
+   "type": "entity",
+   "class": "jacob's ladder",
+   "plural": "jacob's ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a Jacob's ladder",
+   "question": "Is there a Jacob's ladder?",
+   "box": [
+    450,
+    50,
+    550,
+    150
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    50,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "blueprint",
+   "type": "entity",
+   "class": "blueprint",
+   "plural": "blueprints",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a detailed blueprint spread open",
+   "question": "Is there a detailed blueprint spread open?",
+   "box": [
+    80,
+    720,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "beakers",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four bubbling beakers",
+   "question": "Are there four bubbling beakers?",
+   "box": [
+    100,
+    750,
+    280,
+    880
+   ]
+  },
+  {
+   "id": "remote",
+   "type": "attribute",
+   "of": "scientist",
+   "desc": "the scientist holds a remote control",
+   "question": "Is the scientist holding a remote control?"
+  },
+  {
+   "id": "scientist_standing",
+   "type": "state",
+   "of": "scientist",
+   "desc": "the scientist is standing",
+   "question": "Is the scientist standing?"
+  },
+  {
+   "id": "scientist_looking_up",
+   "type": "state",
+   "of": "scientist",
+   "desc": "the scientist is looking up",
+   "question": "Is the scientist looking up?"
+  },
+  {
+   "id": "machine_sparking",
+   "type": "state",
+   "of": "machine",
+   "desc": "the machine is sparking",
+   "question": "Is the machine sparking?"
+  },
+  {
+   "id": "cage_shaking",
+   "type": "state",
+   "of": "cage",
+   "desc": "the cage is shaking",
+   "question": "Is the cage shaking?"
+  },
+  {
+   "id": "scientist_on_stool",
+   "type": "relation",
+   "of": [
+    "scientist",
+    "stool"
+   ],
+   "desc": "the scientist is standing on the stool",
+   "question": "Is the scientist standing on the stool?"
+  },
+  {
+   "id": "scientist_pulling_lever",
+   "type": "action",
+   "of": [
+    "scientist",
+    "levers"
+   ],
+   "desc": "the scientist is pulling one of the levers",
+   "question": "Is the scientist pulling one of the levers?"
+  },
+  {
+   "id": "creature_in_cage",
+   "type": "relation",
+   "of": [
+    "creature",
+    "cage"
+   ],
+   "desc": "the creature is inside the cage",
+   "question": "Is the creature inside the cage?"
+  },
+  {
+   "id": "creature_pushing_glass",
+   "type": "action",
+   "of": [
+    "creature",
+    "cage"
+   ],
+   "desc": "the creature is pushing against the glass of the cage",
+   "question": "Is the creature pushing against the glass of the cage?"
+  },
+  {
+   "id": "cage_behind_machine",
+   "type": "relation",
+   "of": [
+    "cage",
+    "machine"
+   ],
+   "desc": "the cage is behind the machine",
+   "question": "Is the cage behind the machine?"
+  },
+  {
+   "id": "scientist_shorter",
+   "type": "relation",
+   "of": [
+    "scientist",
+    "creature"
+   ],
+   "desc": "the scientist is shorter than the creature",
+   "question": "Is the scientist shorter than the creature?"
+  },
+  {
+   "id": "jacob_ladder_on_machine",
+   "type": "relation",
+   "of": [
+    "jacob_ladder",
+    "machine"
+   ],
+   "desc": "the Jacob's ladder is on top of the machine",
+   "question": "Is the Jacob's ladder on top of the machine?"
+  },
+  {
+   "id": "cable_connects",
+   "type": "relation",
+   "of": [
+    "machine",
+    "cage"
+   ],
+   "desc": "a thick power cable connects the machine's control panel to the cage",
+   "question": "Does a thick power cable connect the machine's control panel to the cage?"
+  },
+  {
+   "id": "creature_facing_scientist",
+   "type": "relation",
+   "of": [
+    "creature",
+    "scientist"
+   ],
+   "desc": "the creature is facing the scientist",
+   "question": "Is the creature facing the scientist?"
+  },
+  {
+   "id": "blueprint_on_table",
+   "type": "relation",
+   "of": [
+    "blueprint",
+    "table"
+   ],
+   "desc": "the blueprint is on the table",
+   "question": "Is the blueprint on the table?"
+  },
+  {
+   "id": "table_next_to_stool",
+   "type": "relation",
+   "of": [
+    "table",
+    "stool"
+   ],
+   "desc": "the table is next to the stool",
+   "question": "Is the table next to the stool?"
+  },
+  {
+   "id": "beakers_on_table",
+   "type": "relation",
+   "of": [
+    "beakers",
+    "table"
+   ],
+   "desc": "the beakers are on the table",
+   "question": "Are the beakers on the table?"
+  },
+  {
+   "id": "scientist_pointing_remote",
+   "type": "action",
+   "of": [
+    "scientist",
+    "cage"
+   ],
+   "desc": "the scientist is pointing the remote control at the cage",
+   "question": "Is the scientist pointing the remote control at the cage?"
+  },
+  {
+   "id": "stool_in_front_of_levers",
+   "type": "relation",
+   "of": [
+    "stool",
+    "levers"
+   ],
+   "desc": "the stool is directly in front of the levers",
+   "question": "Is the stool directly in front of the levers?"
+  },
+  {
+   "id": "beakers_bubbling",
+   "type": "state",
+   "of": "beakers",
+   "desc": "the beakers are bubbling",
+   "question": "Are the beakers bubbling?"
+  },
+  {
+   "id": "machine_tubes",
+   "type": "attribute",
+   "of": "machine",
+   "desc": "the machine has numerous glowing vacuum tubes",
+   "question": "Does the machine have numerous glowing vacuum tubes?"
+  },
+  {
+   "id": "scientist_hair_wild",
+   "type": "attribute",
+   "of": "scientist",
+   "desc": "the scientist has wild hair",
+   "question": "Does the scientist have wild hair?"
+  },
+  {
+   "id": "scientist_hair_grey",
+   "type": "attribute",
+   "of": "scientist",
+   "desc": "the scientist has grey hair",
+   "question": "Does the scientist have grey hair?"
+  },
+  {
+   "id": "creature_skin_green",
+   "type": "attribute",
+   "of": "creature",
+   "desc": "the creature has green skin",
+   "question": "Does the creature have green skin?"
+  },
+  {
+   "id": "creature_collar",
+   "type": "attribute",
+   "of": "creature",
+   "desc": "the creature has a metal collar around its neck",
+   "question": "Does the creature have a metal collar around its neck?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "machine",
+   "to": "levers",
+   "kind": "support"
+  },
+  {
+   "from": "machine",
+   "to": "jacob_ladder",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "blueprint",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "beakers",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_044",
+ "prompt": "In a mad scientist's laboratory, the scientist, with wild grey hair, is standing on a small stool and pulling one of two large levers on a massive, complex machine. The machine has numerous glowing vacuum tubes and is sparking. Behind the machine, a monstrous, green-skinned creature is inside a reinforced glass cage, pushing against the glass. The scientist is shorter than the creature. The scientist is looking up at the lever. A Jacob's ladder is sparking on top of the machine. The machine's construction appears bigger and intricate than the simple design of the reinforced cage. A thick power cable connects the lever's control panel to the cage. The creature is facing the scientist. A detailed blueprint for the machine is spread open on a table next to the stool. On the table, the number of bubbling beakers is two more than the total number of levers on the machine. The scientist is holding a remote control in their other hand, pointing it at the cage. The cage is shaking from the creature's pushing. The creature has a metal collar around its neck. The stool is directly in front of the levers.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

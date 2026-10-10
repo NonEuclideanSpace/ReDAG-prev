@@ -1,0 +1,132 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench in the image?",
+   "box": [
+    300,
+    600,
+    724,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    400,
+    250,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow coat holds a blue umbrella",
+   "question": "Is the woman in the yellow coat holding a blue umbrella?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow coat is standing",
+   "question": "Is the woman in the yellow coat standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is sitting",
+   "question": "Is the man in the grey suit sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the grey suit is looking at the woman",
+   "question": "Is the man in the grey suit looking at the woman in the yellow coat?"
+  },
+  {
+   "id": "handing_ticket",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow coat hands a small ticket to the man in the grey suit",
+   "question": "Is the woman in the yellow coat handing a small ticket to the man in the grey suit?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train",
+   "question": "Is there a train visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0007",
+ "prompt": "A watercolor illustration depicts a subway platform. On the left, a woman in a yellow coat stands holding a blue umbrella. In the center, a man in a grey suit sits on a bench looking at her. The woman is handing a small ticket to the man. There is no train visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

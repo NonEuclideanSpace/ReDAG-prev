@@ -1,0 +1,329 @@
+{
+ "style": "photorealistic photo, clear details on fabric textures and facial features",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a reception space with a wall and floor",
+   "question": "Does the image show a reception space with a wall and floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white table",
+   "question": "Is there a white table?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    150,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    420,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "cake",
+   "plural": "cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver three-tiered cake",
+   "question": "Is there a silver three-tiered cake?",
+   "box": [
+    480,
+    450,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "stand",
+   "type": "entity",
+   "class": "wooden stand",
+   "plural": "wooden stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden stand",
+   "question": "Is there a wooden stand?",
+   "box": [
+    490,
+    640,
+    590,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    750,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    200,
+    850,
+    500,
+    980
+   ]
+  },
+  {
+   "id": "fork",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a black tuxedo holds a small fork in his right hand",
+   "question": "Is the man in a black tuxedo holding a small fork in his right hand?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "woman_hands_lap",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress rests her hands on her lap calmly",
+   "question": "Is the woman in a blue dress resting her hands on her lap calmly?"
+  },
+  {
+   "id": "man_looking_cake",
+   "type": "action",
+   "of": [
+    "man",
+    "cake"
+   ],
+   "desc": "the man in a black tuxedo is looking at the silver three-tiered cake",
+   "question": "Is the man in a black tuxedo looking at the silver three-tiered cake?"
+  },
+  {
+   "id": "child_pointing_cake",
+   "type": "action",
+   "of": [
+    "child",
+    "cake"
+   ],
+   "desc": "the child in a yellow shirt points at the silver three-tiered cake",
+   "question": "Is the child in a yellow shirt pointing at the silver three-tiered cake?"
+  },
+  {
+   "id": "child_smiling",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow shirt is smiling",
+   "question": "Is the child in a yellow shirt smiling?"
+  },
+  {
+   "id": "child_arm_extended",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow shirt extends an arm forward",
+   "question": "Is the child in a yellow shirt extending an arm forward?"
+  },
+  {
+   "id": "dog_sleeping",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sleeping",
+   "question": "Is the golden retriever sleeping?"
+  },
+  {
+   "id": "woman_left_table",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in a blue dress sits on the left side of the white table",
+   "question": "Is the woman in a blue dress sitting on the left side of the white table?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black tuxedo stands next to the woman in a blue dress",
+   "question": "Is the man in a black tuxedo standing next to the woman in a blue dress?"
+  },
+  {
+   "id": "cake_on_stand",
+   "type": "relation",
+   "of": [
+    "cake",
+    "stand"
+   ],
+   "desc": "the silver three-tiered cake rests on the wooden stand",
+   "question": "Does the silver three-tiered cake rest on the wooden stand?"
+  },
+  {
+   "id": "stand_on_table",
+   "type": "relation",
+   "of": [
+    "stand",
+    "table"
+   ],
+   "desc": "the wooden stand is on the white table",
+   "question": "Is the wooden stand on the white table?"
+  },
+  {
+   "id": "child_right_side",
+   "type": "relation",
+   "of": [
+    "child",
+    "cake"
+   ],
+   "desc": "the child in a yellow shirt is on the right side relative to the silver three-tiered cake",
+   "question": "Is the child in a yellow shirt positioned to the right of the silver three-tiered cake?"
+  },
+  {
+   "id": "dog_behind_group",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever lies behind the woman in a blue dress",
+   "question": "Is the golden retriever lying behind the woman in a blue dress?"
+  },
+  {
+   "id": "dog_near_wall",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever lies near the wall",
+   "question": "Is the golden retriever lying near the wall?"
+  },
+  {
+   "id": "no_champagne",
+   "type": "absent",
+   "desc": "a champagne bottle",
+   "question": "Is there a champagne bottle visible in the scene?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is standing",
+   "question": "Is the man in a black tuxedo standing?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever lies on the floor",
+   "question": "Is the golden retriever lying on the floor?"
+  },
+  {
+   "id": "no_clutter",
+   "type": "absent",
+   "desc": "additional decorations or guests cluttering the background space",
+   "question": "Are there any additional decorations or guests cluttering the background space?"
+  },
+  {
+   "id": "dog_eyes_closed",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever has eyes closed tightly",
+   "question": "Does the golden retriever have its eyes closed tightly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "stand",
+   "kind": "support"
+  },
+  {
+   "from": "stand",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0015",
+ "prompt": "In this photorealistic photo, a woman in a blue dress sits on the left side of a white table. Next to her stands a man in a black tuxedo who is looking at a silver cake placed in the center. The cake has three tiers and rests on a wooden stand. A child in a yellow shirt points at the cake from the right side. Behind them, a golden retriever lies on the floor near the wall. There is no champagne bottle visible in the scene. The man holds a small fork in his right hand. The woman rests her hands on her lap calmly. The child smiles while extending an arm forward. The dog sleeps with eyes closed tightly. The scene captures a quiet moment during the reception with clear details on fabric textures and facial features without any additional decorations or guests cluttering the background space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

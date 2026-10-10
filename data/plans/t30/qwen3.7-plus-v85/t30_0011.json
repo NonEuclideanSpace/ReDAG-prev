@@ -1,0 +1,577 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a vintage train dining car interior",
+   "question": "Does the image depict the interior of a vintage train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_blue_hat",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue hat",
+   "question": "Is there a woman wearing a blue hat?",
+   "box": [
+    50,
+    300,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "man_grey_suit",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    300,
+    300,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "child_yellow_dress",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow dress",
+   "question": "Is there a small child in a yellow dress?",
+   "box": [
+    260,
+    400,
+    380,
+    700
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    380,
+    350,
+    520,
+    750
+   ]
+  },
+  {
+   "id": "conductor",
+   "type": "entity",
+   "class": "conductor",
+   "plural": "conductors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conductor in a navy uniform",
+   "question": "Is there a conductor in a navy uniform?",
+   "box": [
+    450,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "traveler",
+   "type": "entity",
+   "class": "traveler",
+   "plural": "travelers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a traveler",
+   "question": "Is there a traveler?",
+   "box": [
+    600,
+    250,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral shawl",
+   "question": "Is there an elderly woman in a floral shawl?",
+   "box": [
+    750,
+    400,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    800,
+    700,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a tall white hat",
+   "question": "Is there a chef in a tall white hat?",
+   "box": [
+    850,
+    300,
+    980,
+    650
+   ]
+  },
+  {
+   "id": "diner_green_vest",
+   "type": "entity",
+   "class": "diner",
+   "plural": "diners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a diner in a green vest",
+   "question": "Is there a diner in a green vest?",
+   "box": [
+    700,
+    350,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    900,
+    100,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue_hat",
+   "desc": "the woman in the blue hat is sitting with upright posture",
+   "question": "Is the woman in the blue hat sitting with upright posture?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman_blue_hat",
+    "man_grey_suit"
+   ],
+   "desc": "the woman in the blue hat is looking at the man in the grey suit",
+   "question": "Is the woman in the blue hat looking at the man in the grey suit?"
+  },
+  {
+   "id": "woman_adjusting_gloves",
+   "type": "state",
+   "of": "woman_blue_hat",
+   "desc": "the woman in the blue hat adjusts her gloves",
+   "question": "Is the woman in the blue hat adjusting her gloves?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man_grey_suit",
+   "desc": "the man in the grey suit is seated",
+   "question": "Is the man in the grey suit seated?"
+  },
+  {
+   "id": "man_holding_fork",
+   "type": "attribute",
+   "of": "man_grey_suit",
+   "desc": "the man in the grey suit holds a silver fork",
+   "question": "Is the man in the grey suit holding a silver fork?"
+  },
+  {
+   "id": "man_eating",
+   "type": "state",
+   "of": "man_grey_suit",
+   "desc": "the man in the grey suit takes a bite of his meal",
+   "question": "Is the man in the grey suit taking a bite of his meal?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child_yellow_dress",
+   "desc": "the child in the yellow dress reaches for a sugar cube",
+   "question": "Is the child in the yellow dress reaching for a sugar cube?"
+  },
+  {
+   "id": "child_smiling",
+   "type": "state",
+   "of": "child_yellow_dress",
+   "desc": "the child in the yellow dress is smiling",
+   "question": "Is the child in the yellow dress smiling?"
+  },
+  {
+   "id": "waiter_handing_napkin",
+   "type": "action",
+   "of": [
+    "waiter",
+    "child_yellow_dress"
+   ],
+   "desc": "the waiter hands a napkin to the child in the yellow dress",
+   "question": "Is the waiter handing a napkin to the child in the yellow dress?"
+  },
+  {
+   "id": "conductor_pointing",
+   "type": "state",
+   "of": "conductor",
+   "desc": "the conductor points toward the rear of the car",
+   "question": "Is the conductor pointing toward the rear of the car?"
+  },
+  {
+   "id": "traveler_walking",
+   "type": "state",
+   "of": "traveler",
+   "desc": "the traveler is walking",
+   "question": "Is the traveler walking?"
+  },
+  {
+   "id": "traveler_glancing",
+   "type": "action",
+   "of": [
+    "traveler",
+    "elderly_woman"
+   ],
+   "desc": "the traveler with the large backpack glances back at the elderly woman in the floral shawl",
+   "question": "Is the traveler with the large backpack glancing back at the elderly woman in the floral shawl?"
+  },
+  {
+   "id": "elderly_woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in the floral shawl is sitting on a seat",
+   "question": "Is the elderly woman in the floral shawl sitting on a seat?"
+  },
+  {
+   "id": "elderly_woman_petting",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "dog"
+   ],
+   "desc": "the elderly woman in the floral shawl pets the brown dog",
+   "question": "Is the elderly woman in the floral shawl petting the brown dog?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog lies calmly on the floor",
+   "question": "Is the brown dog lying calmly on the floor?"
+  },
+  {
+   "id": "chef_leaning",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in the tall white hat leans over",
+   "question": "Is the chef in the tall white hat leaning over?"
+  },
+  {
+   "id": "chef_speaking",
+   "type": "action",
+   "of": [
+    "chef",
+    "diner_green_vest"
+   ],
+   "desc": "the chef speaks with the diner in the green vest",
+   "question": "Is the chef speaking with the diner in the green vest?"
+  },
+  {
+   "id": "diner_stirring",
+   "type": "state",
+   "of": "diner_green_vest",
+   "desc": "the diner in the green vest is stirring soup",
+   "question": "Is the diner in the green vest stirring soup?"
+  },
+  {
+   "id": "diner_looking",
+   "type": "action",
+   "of": [
+    "diner_green_vest",
+    "chef"
+   ],
+   "desc": "the diner in the green vest looks at the chef with interest",
+   "question": "Is the diner in the green vest looking at the chef with interest?"
+  },
+  {
+   "id": "man_across_woman",
+   "type": "relation",
+   "of": [
+    "man_grey_suit",
+    "woman_blue_hat"
+   ],
+   "desc": "the man in the grey suit is seated across from the woman in the blue hat",
+   "question": "Is the man in the grey suit seated across from the woman in the blue hat?"
+  },
+  {
+   "id": "child_beside_woman",
+   "type": "relation",
+   "of": [
+    "child_yellow_dress",
+    "woman_blue_hat"
+   ],
+   "desc": "the child in the yellow dress is beside the woman in the blue hat",
+   "question": "Is the child in the yellow dress beside the woman in the blue hat?"
+  },
+  {
+   "id": "waiter_near_child",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "child_yellow_dress"
+   ],
+   "desc": "the waiter stands nearby the child in the yellow dress",
+   "question": "Is the waiter standing nearby the child in the yellow dress?"
+  },
+  {
+   "id": "traveler_past_conductor",
+   "type": "relation",
+   "of": [
+    "traveler",
+    "conductor"
+   ],
+   "desc": "the traveler walks past the conductor",
+   "question": "Is the traveler walking past the conductor?"
+  },
+  {
+   "id": "elderly_woman_down_aisle",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "conductor"
+   ],
+   "desc": "the elderly woman sits further down the aisle from the conductor",
+   "question": "Is the elderly woman sitting further down the aisle from the conductor?"
+  },
+  {
+   "id": "dog_next_to_elderly_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "elderly_woman"
+   ],
+   "desc": "the brown dog lies next to the elderly woman in the floral shawl",
+   "question": "Is the brown dog lying next to the elderly woman in the floral shawl?"
+  },
+  {
+   "id": "chef_next_to_diner",
+   "type": "relation",
+   "of": [
+    "chef",
+    "diner_green_vest"
+   ],
+   "desc": "the chef is next to the diner in the green vest at a table",
+   "question": "Is the chef next to the diner in the green vest at a table?"
+  },
+  {
+   "id": "fern_behind_chef_diner",
+   "type": "relation",
+   "of": [
+    "fern",
+    "chef"
+   ],
+   "desc": "the potted fern is behind the chef and the diner",
+   "question": "Is the potted fern behind the chef and the diner?"
+  },
+  {
+   "id": "plate_beef",
+   "type": "attribute",
+   "of": "man_grey_suit",
+   "desc": "a plate of roast beef next to a crystal wine glass",
+   "question": "Is there a plate of roast beef next to a crystal wine glass near the man in the grey suit?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "a digital clock on the wall",
+   "question": "Is there a digital clock visible on the wall?"
+  },
+  {
+   "id": "no_smartphone",
+   "type": "absent",
+   "desc": "a smartphone in anyone's hand",
+   "question": "Is there a smartphone in anyone's hand?"
+  },
+  {
+   "id": "sugar_cube",
+   "type": "attribute",
+   "of": "child_yellow_dress",
+   "desc": "a sugar cube reached for by the child",
+   "question": "Is there a sugar cube that the child in the yellow dress is reaching for?"
+  },
+  {
+   "id": "napkin",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "a napkin held by the waiter",
+   "question": "Is the waiter holding a napkin?"
+  },
+  {
+   "id": "backpack_on_rack",
+   "type": "state",
+   "of": "traveler",
+   "desc": "the traveler places the large backpack on the rack above",
+   "question": "Is the traveler placing the large backpack on the rack above?"
+  },
+  {
+   "id": "window_frame",
+   "type": "entity",
+   "class": "window frame",
+   "plural": "window frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window frame",
+   "question": "Is there a window frame?",
+   "box": [
+    850,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "fern_brushing_frame",
+   "type": "relation",
+   "of": [
+    "fern",
+    "window_frame"
+   ],
+   "desc": "the potted fern's leaves brush against the window frame",
+   "question": "Do the leaves of the potted fern brush against the window frame?"
+  },
+  {
+   "id": "velvet_seats",
+   "type": "entity",
+   "class": "seat",
+   "plural": "seats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "velvet seats showing signs of wear",
+   "question": "Are there velvet seats showing signs of wear?",
+   "box": [
+    50,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "window_rain",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a window with rain streaks on the glass",
+   "question": "Is there a window with rain streaks on the glass?",
+   "box": [
+    800,
+    100,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "woman_gloves",
+   "type": "attribute",
+   "of": "woman_blue_hat",
+   "desc": "the woman in the blue hat wears gloves",
+   "question": "Is the woman in the blue hat wearing gloves?"
+  },
+  {
+   "id": "traveler_backpack",
+   "type": "attribute",
+   "of": "traveler",
+   "desc": "the traveler has a large backpack",
+   "question": "Does the traveler have a large backpack?"
+  },
+  {
+   "id": "diner_spoon",
+   "type": "attribute",
+   "of": "diner_green_vest",
+   "desc": "the diner in the green vest holds a spoon",
+   "question": "Is the diner in the green vest holding a spoon?"
+  },
+  {
+   "id": "diner_bowl",
+   "type": "attribute",
+   "of": "diner_green_vest",
+   "desc": "the diner in the green vest has a bowl of soup",
+   "question": "Is there a bowl of soup with the diner in the green vest?"
+  }
+ ],
+ "edges": [],
+ "id": "t30_0011",
+ "prompt": "Rendered in the style of an oil painting, the scene unfolds within a vintage train dining car where fourteen distinct entities populate the space. On the left, a woman in a blue hat sits on a velvet bench, her posture upright as she looks at a man in a grey suit seated across from her. The man in the grey suit holds a silver fork, poised above a plate of roast beef that rests next to a crystal wine glass. Beside the woman in the blue hat, a small child in a yellow dress reaches for a sugar cube, while a waiter in a white apron stands nearby, handing a napkin to the child. In the center aisle, a conductor in a navy uniform points toward the rear of the car, directing a traveler with a large backpack who is walking past him. The traveler with the large backpack glances back at an elderly woman in a floral shawl who is sitting on a seat further down the aisle. Next to the elderly woman in the floral shawl, a brown dog lies calmly on the floor, its head resting near the hem of her skirt. At a table to the right, a chef in a tall white hat leans over to speak with a diner in a green vest, who is stirring a bowl of soup with a spoon. The diner in the green vest looks at the chef in the tall white hat with interest. A potted fern stands in the corner behind them, its leaves brushing against the window frame. Outside the window, rain streaks the glass, though the interior remains dry and warm. There is no digital clock visible on the wall, and there is no smartphone in anyone's hand. The composition captures the quiet intimacy of travel, with each figure engaged in their own small narrative. The woman in the blue hat adjusts her gloves, while the man in the grey suit takes a bite of his meal. The child in the yellow dress smiles as the waiter in the white apron retreats. The conductor in the navy uniform continues his patrol, ensuring order. The traveler with the large backpack finds a seat, placing the bag on the rack above. The elderly woman in the floral shawl pets the brown dog gently. The chef in the tall white hat returns to the kitchen, leaving the diner in the green vest to enjoy the soup. The potted fern remains still, a silent observer of the transient community. The silverware gleams under the soft overhead lights, reflecting the faces of those present. The velvet seats show signs of wear, adding character to the setting. The rain outside provides a rhythmic backdrop to the clinking of dishes and low murmurs of conversation. Every element contributes to the sense of movement and stillness coexisting in this confined space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

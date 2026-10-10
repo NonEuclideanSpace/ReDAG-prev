@@ -1,0 +1,336 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate scene",
+   "question": "Does the image depict an airport gate scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    80,
+    300,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    400,
+    200,
+    620,
+    900
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black suitcase",
+   "question": "Is there a black suitcase?",
+   "box": [
+    450,
+    700,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    700,
+    350,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    850,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "pilot",
+   "type": "entity",
+   "class": "pilot",
+   "plural": "pilots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pilot in a navy uniform",
+   "question": "Is there a pilot in a navy uniform?",
+   "box": [
+    350,
+    150,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    400,
+    350,
+    480,
+    450
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is sitting",
+   "question": "Is the woman in a blue coat sitting?"
+  },
+  {
+   "id": "woman_hand_on_knee",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat rests her hand on her knee",
+   "question": "Is the woman in a blue coat resting her hand on her knee?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is standing",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "man_gripping_handle",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf grips the handle of his luggage tightly",
+   "question": "Is the man in a red scarf gripping the handle of his luggage tightly?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat extends an arm",
+   "question": "Is the child in a yellow hat extending an arm?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits calmly",
+   "question": "Is the brown dog sitting calmly?"
+  },
+  {
+   "id": "dog_gazing_forward",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is gazing forward",
+   "question": "Is the brown dog gazing forward?"
+  },
+  {
+   "id": "pilot_looking",
+   "type": "relation",
+   "of": [
+    "pilot",
+    "clipboard"
+   ],
+   "desc": "the pilot in a navy uniform focuses intently on the papers",
+   "question": "Is the pilot in a navy uniform focusing intently on the papers?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in a blue coat sits on the metal bench",
+   "question": "Is the woman in a blue coat sitting on the metal bench?"
+  },
+  {
+   "id": "man_holding_suitcase",
+   "type": "relation",
+   "of": [
+    "man",
+    "suitcase"
+   ],
+   "desc": "the man in a red scarf holds the black suitcase",
+   "question": "Is the man in a red scarf holding the black suitcase?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a yellow hat is next to the brown dog",
+   "question": "Is the child in a yellow hat next to the brown dog?"
+  },
+  {
+   "id": "child_points_at_window",
+   "type": "relation",
+   "of": [
+    "child",
+    "window"
+   ],
+   "desc": "the child in a yellow hat points at the large window",
+   "question": "Is the child in a yellow hat pointing at the large window?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits on the floor",
+   "question": "Is the brown dog sitting on the floor?"
+  },
+  {
+   "id": "pilot_behind_man",
+   "type": "relation",
+   "of": [
+    "pilot",
+    "man"
+   ],
+   "desc": "the pilot in a navy uniform is behind the man in a red scarf",
+   "question": "Is the pilot in a navy uniform behind the man in a red scarf?"
+  },
+  {
+   "id": "pilot_looks_at_clipboard",
+   "type": "relation",
+   "of": [
+    "pilot",
+    "clipboard"
+   ],
+   "desc": "the pilot in a navy uniform looks at the clipboard",
+   "question": "Is the pilot in a navy uniform looking at the clipboard?"
+  },
+  {
+   "id": "no_coffee_cup",
+   "type": "absent",
+   "desc": "a coffee cup",
+   "question": "Is there a coffee cup visible in the image?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window",
+   "question": "Is there a large window?",
+   "box": [
+    700,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "dog_alert_eyes",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the brown dog has alert eyes",
+   "question": "Does the brown dog have alert eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0101",
+ "prompt": "This oil painting depicts an airport gate scene. On the left, a woman in a blue coat sits on a metal bench. In the center, a man in a red scarf stands holding a black suitcase. To the right, a child in a yellow hat points at a large window. Next to the child, a brown dog sits calmly on the floor. Behind the man, a pilot in a navy uniform looks at a clipboard. The woman rests her hand on her knee. The man grips the handle of his luggage tightly. The child extends an arm toward the glass. The pilot focuses intently on the papers. The dog gazes forward with alert eyes. The woman is positioned near the edge of the frame. The man occupies the central space. The child and dog share the right side. There is no coffee cup visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

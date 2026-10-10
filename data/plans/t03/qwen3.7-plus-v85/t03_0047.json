@@ -1,0 +1,145 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene background",
+   "question": "Does the image show an indoor scene background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall potted fern",
+   "question": "Is there a tall potted fern?",
+   "box": [
+    400,
+    150,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green apron",
+   "question": "Is there a man in a green apron?",
+   "box": [
+    674,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_holding_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small watering can",
+   "question": "Is the woman in a blue dress holding a small watering can?"
+  },
+  {
+   "id": "fern_fronds_up",
+   "type": "state",
+   "of": "fern",
+   "desc": "the fronds of the tall potted fern reach upward",
+   "question": "Do the fronds of the tall potted fern reach upward?"
+  },
+  {
+   "id": "man_points_fern",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a green apron points at the tall potted fern",
+   "question": "Is the man in a green apron pointing at the tall potted fern?"
+  },
+  {
+   "id": "man_looks_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green apron looks at the woman in a blue dress",
+   "question": "Is the man in a green apron looking at the woman in a blue dress?"
+  },
+  {
+   "id": "woman_looks_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress looks at the man in a green apron",
+   "question": "Is the woman in a blue dress looking at the man in a green apron?"
+  },
+  {
+   "id": "no_bench",
+   "type": "absent",
+   "desc": "a bench",
+   "question": "Is there a bench visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "fern_sitting",
+   "type": "state",
+   "of": "fern",
+   "desc": "the tall potted fern sits",
+   "question": "Is the tall potted fern sitting?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0047",
+ "prompt": "In this oil painting, a woman in a blue dress stands on the left, holding a small watering can. A tall potted fern sits in the center, its fronds reaching upward. On the right, a man in a green apron points at the fern while looking at the woman. The woman looks back at him. There is no bench visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,408 @@
+{
+ "style": "pencil sketch with light color wash, loose expressive lines, pale warm tones",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet hospital corridor",
+   "question": "Does the image show a quiet hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a striped shirt",
+   "question": "Is there a young boy in a striped shirt?",
+   "box": [
+    200,
+    450,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    400,
+    250,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    550,
+    500,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    750,
+    200,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "patient",
+   "type": "entity",
+   "class": "patient",
+   "plural": "patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patient in a gray gown",
+   "question": "Is there a patient in a gray gown?",
+   "box": [
+    850,
+    250,
+    1000,
+    750
+   ]
+  },
+  {
+   "id": "iv_stand",
+   "type": "entity",
+   "class": "iv stand",
+   "plural": "iv stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall IV stand with hooks",
+   "question": "Is there a tall IV stand with hooks?",
+   "box": [
+    700,
+    150,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard tightly against her chest",
+   "question": "Is the nurse in blue scrubs holding a clipboard tightly against her chest?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a striped shirt is sitting",
+   "question": "Is the young boy in a striped shirt sitting?"
+  },
+  {
+   "id": "boy_legs_swinging",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy's legs are swinging slightly above the floor",
+   "question": "Are the young boy's legs swinging slightly above the floor?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress has her finger extended pointing",
+   "question": "Does the elderly woman in a floral dress have her finger extended pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting calmly",
+   "question": "Is the golden retriever sitting calmly?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is looking up",
+   "question": "Is the golden retriever looking up?"
+  },
+  {
+   "id": "patient_reaching",
+   "type": "state",
+   "of": "patient",
+   "desc": "the patient in a gray gown is reaching out",
+   "question": "Is the patient in a gray gown reaching out?"
+  },
+  {
+   "id": "nurse_next_to_boy",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "boy"
+   ],
+   "desc": "the nurse in blue scrubs is next to the young boy",
+   "question": "Is the nurse in blue scrubs next to the young boy?"
+  },
+  {
+   "id": "boy_on_bench",
+   "type": "relation",
+   "of": [
+    "boy",
+    "bench"
+   ],
+   "desc": "the young boy sits on the metal bench",
+   "question": "Is the young boy sitting on the metal bench?"
+  },
+  {
+   "id": "woman_points_to_door",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "distant_door"
+   ],
+   "desc": "the elderly woman points toward the distant door",
+   "question": "Is the elderly woman pointing toward the distant door in the background?"
+  },
+  {
+   "id": "dog_beside_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "elderly_woman"
+   ],
+   "desc": "the golden retriever is beside the elderly woman",
+   "question": "Is the golden retriever beside the elderly woman?"
+  },
+  {
+   "id": "doctor_hands_cup",
+   "type": "action",
+   "of": [
+    "doctor",
+    "patient"
+   ],
+   "desc": "the doctor hands a small paper cup to the patient",
+   "question": "Is the doctor handing a small paper cup to the patient?"
+  },
+  {
+   "id": "iv_stand_leaning",
+   "type": "relation",
+   "of": [
+    "iv_stand",
+    "doctor"
+   ],
+   "desc": "the IV stand leans against the wall near the doctor",
+   "question": "Is the IV stand leaning against the wall near the doctor?"
+  },
+  {
+   "id": "nurse_looks_at_boy",
+   "type": "action",
+   "of": [
+    "nurse",
+    "boy"
+   ],
+   "desc": "the nurse looks at the boy",
+   "question": "Is the nurse looking at the boy?"
+  },
+  {
+   "id": "nurse_nodding",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse offers a subtle nod of reassurance",
+   "question": "Is the nurse offering a subtle nod?"
+  },
+  {
+   "id": "boy_looks_at_nurse",
+   "type": "action",
+   "of": [
+    "boy",
+    "nurse"
+   ],
+   "desc": "the boy looks back at the nurse",
+   "question": "Is the boy looking back at the nurse?"
+  },
+  {
+   "id": "boy_expression",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy's expression is softening",
+   "question": "Is the boy's expression softening?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "iv_stand_near_doctor",
+   "type": "relation",
+   "of": [
+    "iv_stand",
+    "doctor"
+   ],
+   "desc": "the IV stand is near the doctor",
+   "question": "Is the IV stand near the doctor?"
+  },
+  {
+   "id": "distant_door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant door at the end of the hallway",
+   "question": "Is there a distant door at the end of the hallway?",
+   "box": [
+    480,
+    200,
+    544,
+    300
+   ]
+  },
+  {
+   "id": "dog_attentive",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the golden retriever has attentive eyes",
+   "question": "Does the golden retriever have attentive eyes?"
+  },
+  {
+   "id": "woman_pointing_relation",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "distant_door"
+   ],
+   "desc": "the elderly woman points toward the distant door",
+   "question": "Is the elderly woman pointing toward the distant door?"
+  },
+  {
+   "id": "iv_bags",
+   "type": "entity",
+   "class": "iv bag",
+   "plural": "iv bags",
+   "count": 2,
+   "count_exact": false,
+   "desc": "empty IV bags",
+   "question": "Are there empty IV bags?",
+   "box": [
+    860,
+    300,
+    940,
+    400
+   ]
+  },
+  {
+   "id": "bags_on_stand",
+   "type": "relation",
+   "of": [
+    "iv_bags",
+    "iv_stand"
+   ],
+   "desc": "the empty IV bags hang from the IV stand",
+   "question": "Do the empty IV bags hang from the IV stand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "boy",
+   "kind": "support"
+  },
+  {
+   "from": "iv_stand",
+   "to": "iv_bags",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0013",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene depicts a quiet hospital corridor. On the left stands a nurse in blue scrubs, holding a clipboard tightly against her chest. Next to her, a young boy in a striped shirt sits on a metal bench, his legs swinging slightly above the floor. In the center of the hallway, an elderly woman in a floral dress points toward a distant door, her finger extended with urgency. Beside her, a golden retriever sits calmly, looking up at the woman with attentive eyes. To the right, a doctor in a white coat hands a small paper cup to a patient in a gray gown, who reaches out with a trembling hand to accept it. Leaning against the wall near the doctor is a tall IV stand with empty bags hanging from its hooks. The nurse looks at the boy on the bench, offering a subtle nod of reassurance. The boy looks back at the nurse, his expression softening. There is no blood visible anywhere in the scene. The lines are loose and expressive, capturing the transient nature of the moment without heavy shading. The color wash is pale, adding just enough warmth to the sterile environment to make it feel human. The perspective draws the eye down the long corridor, where the figures are arranged to create a sense of depth and narrative flow. Each character is distinct in their attire and posture, contributing to the overall story of care and waiting. The simplicity of the medium allows the viewer to focus on the interactions and the quiet dignity of the subjects.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background with no audience",
+   "question": "Is the background plain and free of any audience members?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a center table",
+   "question": "Is there a table?",
+   "box": [
+    300,
+    500,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with pigtails",
+   "question": "Is there a girl with pigtails?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing blue glasses",
+   "question": "Is there a boy wearing blue glasses?",
+   "box": [
+    450,
+    200,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "poster",
+   "type": "entity",
+   "class": "poster",
+   "plural": "posters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a poster",
+   "question": "Is there a poster?",
+   "box": [
+    150,
+    300,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "volcano_model",
+   "type": "entity",
+   "class": "model",
+   "plural": "models",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volcano model",
+   "question": "Is there a volcano model?",
+   "box": [
+    650,
+    450,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with pigtails is standing",
+   "question": "Is the girl with pigtails standing?"
+  },
+  {
+   "id": "girl_holding_poster",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with pigtails holds a poster",
+   "question": "Is the girl with pigtails holding a poster?"
+  },
+  {
+   "id": "boy_sitting",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing blue glasses is sitting",
+   "question": "Is the boy wearing blue glasses sitting?"
+  },
+  {
+   "id": "volcano_paint",
+   "type": "attribute",
+   "of": "volcano_model",
+   "desc": "the volcano model has red paint dripping down its side",
+   "question": "Does the volcano model have red paint dripping down its side?"
+  },
+  {
+   "id": "boy_at_table",
+   "type": "relation",
+   "of": [
+    "boy",
+    "table"
+   ],
+   "desc": "the boy wearing blue glasses sits at the table",
+   "question": "Is the boy wearing blue glasses sitting at the table?"
+  },
+  {
+   "id": "volcano_next_to_boy",
+   "type": "relation",
+   "of": [
+    "volcano_model",
+    "boy"
+   ],
+   "desc": "the volcano model is next to the boy wearing blue glasses",
+   "question": "Is the volcano model next to the boy wearing blue glasses?"
+  },
+  {
+   "id": "girl_points_volcano",
+   "type": "action",
+   "of": [
+    "girl",
+    "volcano_model"
+   ],
+   "desc": "the girl with pigtails points at the volcano model",
+   "question": "Is the girl with pigtails pointing at the volcano model?"
+  },
+  {
+   "id": "girl_looks_boy",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with pigtails looks at the boy wearing blue glasses",
+   "question": "Is the girl with pigtails looking at the boy wearing blue glasses?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members in the background",
+   "question": "Are there any audience members visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "volcano_model",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0112",
+ "prompt": "In a watercolor illustration, a girl with pigtails stands on the left holding a poster. A boy in blue glasses sits at the center table next to a volcano model. The volcano model has red paint dripping down its side. The girl points at the volcano model while looking at the boy. There is no audience in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

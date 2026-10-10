@@ -1,0 +1,337 @@
+{
+ "style": "flat vector illustration, clean lines, solid colors, no gradients, no shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with simple gray peaks under a clear sky",
+   "question": "Does the background show simple gray mountain peaks under a clear sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    50,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "pine_tree",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall pine tree with dark green needles",
+   "question": "Is there a tall pine tree with dark green needles?",
+   "box": [
+    280,
+    50,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in an orange vest",
+   "question": "Is there a man in an orange vest?",
+   "box": [
+    400,
+    350,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    450,
+    750,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    700,
+    450,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in purple boots",
+   "question": "Is there a girl in purple boots?",
+   "box": [
+    820,
+    450,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue beanie is sitting",
+   "question": "Is the woman in a blue beanie sitting?"
+  },
+  {
+   "id": "woman_hands_on_knees",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue beanie rests her hands on her knees",
+   "question": "Does the woman in a blue beanie rest her hands on her knees?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in an orange vest points toward the horizon",
+   "question": "Is the man in an orange vest pointing toward the horizon?"
+  },
+  {
+   "id": "man_holding_map",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in an orange vest holds a map",
+   "question": "Is the man in an orange vest holding a map?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is looking up",
+   "question": "Is the brown dog looking up?"
+  },
+  {
+   "id": "child_extending_arm",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow raincoat extends their arm forward",
+   "question": "Does the child in a yellow raincoat extend their arm forward?"
+  },
+  {
+   "id": "child_holding_stick",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in a yellow raincoat holds a marshmallow stick",
+   "question": "Is the child in a yellow raincoat holding a marshmallow stick?"
+  },
+  {
+   "id": "girl_reaching",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in purple boots reaches out",
+   "question": "Does the girl in purple boots reach out?"
+  },
+  {
+   "id": "tree_next_to_woman",
+   "type": "relation",
+   "of": [
+    "pine_tree",
+    "woman"
+   ],
+   "desc": "the tall pine tree is next to the woman in a blue beanie",
+   "question": "Is the tall pine tree next to the woman in a blue beanie?"
+  },
+  {
+   "id": "dog_at_man_feet",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is at the feet of the man in an orange vest",
+   "question": "Is the brown dog at the feet of the man in an orange vest?"
+  },
+  {
+   "id": "handover_stick",
+   "type": "action",
+   "of": [
+    "child",
+    "girl"
+   ],
+   "desc": "the child in a yellow raincoat hands the marshmallow stick to the girl in purple boots",
+   "question": "Is the child in a yellow raincoat handing a marshmallow stick to the girl in purple boots?"
+  },
+  {
+   "id": "girl_near_child",
+   "type": "relation",
+   "of": [
+    "girl",
+    "child"
+   ],
+   "desc": "the girl in purple boots stands nearby the child in a yellow raincoat",
+   "question": "Is the girl in purple boots standing nearby the child in a yellow raincoat?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in an orange vest stands",
+   "question": "Is the man in an orange vest standing?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in purple boots stands",
+   "question": "Is the girl in purple boots standing?"
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "grass",
+   "plural": "patches of grass",
+   "count": 1,
+   "count_exact": false,
+   "desc": "green grass",
+   "question": "Is there green grass?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_arm_extended",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in an orange vest keeps his arm extended steadily",
+   "question": "Does the man in an orange vest keep his arm extended steadily?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "girl",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "grass",
+   "to": "girl",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0092",
+ "prompt": "In a flat vector illustration of a mountain campsite, a woman in a blue beanie sits on the left side of the frame. Next to her stands a tall pine tree with dark green needles. In the center, a man in an orange vest points toward the horizon while holding a map. A brown dog lies calmly at his feet, looking up at him. On the right, a child in a yellow raincoat hands a marshmallow stick to a girl in purple boots who stands nearby. There is no fire in the scene. The woman rests her hands on her knees. The man keeps his arm extended steadily. The dog remains still on the grass. The child extends their arm forward. The girl reaches out to take the stick. The pine tree towers above the group. The background features simple gray peaks under a clear sky. All elements are rendered with clean lines and solid colors without gradients or shadows. The composition balances the figures across the foreground. The interaction between the child and the girl is gentle. The man's gesture directs attention outward. The dog's gaze connects it to the man. The woman observes the scene quietly from her seated position.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

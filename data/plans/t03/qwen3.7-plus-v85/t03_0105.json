@@ -1,0 +1,125 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand",
+   "question": "Does the image depict a beach volleyball court with sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue bikini",
+   "question": "Is there a woman in a blue bikini?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in white shorts",
+   "question": "Is there a man in white shorts?",
+   "box": [
+    380,
+    150,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "volleyball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    700,
+    250,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "woman_arms_raised",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue bikini has her arms raised",
+   "question": "Does the woman in a blue bikini have her arms raised?"
+  },
+  {
+   "id": "man_jumping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in white shorts is jumping high",
+   "question": "Is the man in white shorts jumping high?"
+  },
+  {
+   "id": "man_knees_bent",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in white shorts has his knees bent",
+   "question": "Does the man in white shorts have his knees bent?"
+  },
+  {
+   "id": "volleyball_near_man",
+   "type": "relation",
+   "of": [
+    "volleyball",
+    "man"
+   ],
+   "desc": "the yellow volleyball is near the man in white shorts",
+   "question": "Is the yellow volleyball near the man in white shorts?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue bikini stands",
+   "question": "Is the woman in a blue bikini standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0105",
+ "prompt": "An oil painting depicts a beach volleyball tournament. On the left, a woman in a blue bikini stands ready. In the center, a man in white shorts jumps high. On the right, a yellow volleyball floats mid-air. The woman in a blue bikini has her arms raised. The man in white shorts has his knees bent. The yellow volleyball is near the man in white shorts. There is no net visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

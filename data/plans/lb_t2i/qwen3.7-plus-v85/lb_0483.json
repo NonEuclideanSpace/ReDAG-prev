@@ -1,0 +1,599 @@
+{
+ "style": "surreal photorealistic, morning forest light, high detail, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest floor with damp moss and trees in morning light",
+   "question": "Does the image show a forest floor with damp moss and trees in morning light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fallen_oak",
+   "type": "entity",
+   "class": "fallen tree",
+   "plural": "fallen trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fallen oak tree with gnarled remains",
+   "question": "Is there a fallen oak tree with gnarled remains?",
+   "box": [
+    100,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "chainsaw",
+   "type": "entity",
+   "class": "chainsaw",
+   "plural": "chainsaws",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty chainsaw",
+   "question": "Is there a rusty chainsaw?",
+   "box": [
+    300,
+    550,
+    500,
+    650
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red plastic garden hose",
+   "question": "Is there a red plastic garden hose?",
+   "box": [
+    50,
+    600,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low rock",
+   "question": "Is there a low rock?",
+   "box": [
+    550,
+    700,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "boot",
+   "type": "entity",
+   "class": "leather boot",
+   "plural": "leather boots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered leather boot",
+   "question": "Is there a weathered leather boot?",
+   "box": [
+    580,
+    680,
+    680,
+    780
+   ]
+  },
+  {
+   "id": "violets",
+   "type": "entity",
+   "class": "wild violets",
+   "plural": "wild violets",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a cluster of wild violets",
+   "question": "Is there a cluster of wild violets?",
+   "box": [
+    590,
+    720,
+    670,
+    790
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crow",
+   "question": "Is there a crow?",
+   "box": [
+    400,
+    100,
+    550,
+    250
+   ]
+  },
+  {
+   "id": "branch",
+   "type": "entity",
+   "class": "tree branch",
+   "plural": "tree branches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crooked tree branch",
+   "question": "Is there a crooked tree branch?",
+   "box": [
+    350,
+    50,
+    600,
+    150
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a trail of ants",
+   "question": "Is there a trail of ants?",
+   "box": [
+    200,
+    300,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "chimes",
+   "type": "entity",
+   "class": "wind chimes",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a string of wind chimes",
+   "question": "Is there a string of wind chimes?",
+   "box": [
+    100,
+    200,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded yellow bicycle",
+   "question": "Is there a faded yellow bicycle?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "clock_tower",
+   "type": "entity",
+   "class": "clock tower",
+   "plural": "clock towers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock tower",
+   "question": "Is there a clock tower?",
+   "box": [
+    850,
+    50,
+    1000,
+    300
+   ]
+  },
+  {
+   "id": "chainsaw_buried",
+   "type": "state",
+   "of": "chainsaw",
+   "desc": "the rusty chainsaw lies half-buried in moss",
+   "question": "Is the rusty chainsaw lying half-buried in moss?"
+  },
+  {
+   "id": "chainsaw_oily",
+   "type": "attribute",
+   "of": "chainsaw",
+   "desc": "the chain of the rusty chainsaw is slick with oil",
+   "question": "Is the chain of the rusty chainsaw slick with oil?"
+  },
+  {
+   "id": "hose_snaking",
+   "type": "state",
+   "of": "hose",
+   "desc": "the red garden hose snakes across the forest floor with kinks and loops",
+   "question": "Does the red garden hose snake across the forest floor?"
+  },
+  {
+   "id": "hose_dew",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "miniature whirlpools of dew form at the bends of the red garden hose",
+   "question": "Are there miniature whirlpools of dew at the bends of the red garden hose?"
+  },
+  {
+   "id": "boot_on_rock",
+   "type": "relation",
+   "of": [
+    "boot",
+    "rock"
+   ],
+   "desc": "the weathered leather boot is wedged on the low rock",
+   "question": "Is the weathered leather boot wedged on the low rock?"
+  },
+  {
+   "id": "laces_entwined",
+   "type": "relation",
+   "of": [
+    "boot",
+    "violets"
+   ],
+   "desc": "the frayed laces of the boot are entwined with the wild violets",
+   "question": "Are the frayed laces of the boot entwined with the wild violets?"
+  },
+  {
+   "id": "violets_glowing",
+   "type": "attribute",
+   "of": "violets",
+   "desc": "the wild violets pulse with bioluminescent blue light",
+   "question": "Do the wild violets glow with bioluminescent blue light?"
+  },
+  {
+   "id": "crow_perched",
+   "type": "relation",
+   "of": [
+    "crow",
+    "branch"
+   ],
+   "desc": "the crow perches on the crooked branch",
+   "question": "Is the crow perching on the crooked branch?"
+  },
+  {
+   "id": "ants_crown",
+   "type": "attribute",
+   "of": "ants",
+   "desc": "one ant in the trail wears a tiny silver crown",
+   "question": "Does one ant in the trail wear a tiny silver crown?"
+  },
+  {
+   "id": "chimes_swaying",
+   "type": "state",
+   "of": "chimes",
+   "desc": "the wind chimes sway without wind",
+   "question": "Are the wind chimes swaying without wind?"
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "ants"
+   ],
+   "desc": "the faded yellow bicycle leans against the tree trunk",
+   "question": "Is the faded yellow bicycle leaning against the tree trunk?"
+  },
+  {
+   "id": "wheel_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the front wheel of the bicycle is spinning slowly",
+   "question": "Is the front wheel of the bicycle spinning slowly?"
+  },
+  {
+   "id": "handlebar_photos",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the handlebars of the bicycle are adorned with small photographs of smiling strangers",
+   "question": "Are the handlebars of the bicycle adorned with small photographs of smiling strangers?"
+  },
+  {
+   "id": "shadow_pattern",
+   "type": "attribute",
+   "of": "clock_tower",
+   "desc": "the shadow of the clock tower forms the outline of the crow, the boot, and the ants on the forest floor",
+   "question": "Does the shadow of the clock tower form the outline of the crow on the forest floor?"
+  },
+  {
+   "id": "chainsaw_near_oak",
+   "type": "relation",
+   "of": [
+    "chainsaw",
+    "fallen_oak"
+   ],
+   "desc": "the rusty chainsaw lies near the base of the fallen oak",
+   "question": "Is the rusty chainsaw lying near the base of the fallen oak?"
+  },
+  {
+   "id": "hose_to_boot",
+   "type": "action",
+   "of": [
+    "hose",
+    "boot"
+   ],
+   "desc": "the red garden hose directs a trickle of water onto the weathered leather boot",
+   "question": "Is the red garden hose directing a trickle of water onto the weathered leather boot?"
+  },
+  {
+   "id": "bicycle_trunk",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "fallen_oak"
+   ],
+   "desc": "the faded yellow bicycle leans against the trunk of the fallen oak",
+   "question": "Is the faded yellow bicycle leaning against the trunk of the fallen oak?"
+  },
+  {
+   "id": "ants_on_trunk",
+   "type": "relation",
+   "of": [
+    "ants",
+    "fallen_oak"
+   ],
+   "desc": "the trail of ants ascends the trunk of the fallen oak",
+   "question": "Does the trail of ants ascend the trunk of the fallen oak?"
+  },
+  {
+   "id": "bicycle_leaning_state",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the faded yellow bicycle is leaning",
+   "question": "Is the faded yellow bicycle leaning?"
+  },
+  {
+   "id": "violets_bioluminescent",
+   "type": "attribute",
+   "of": "violets",
+   "desc": "the wild violets pulse with bioluminescent blue light when touched by water",
+   "question": "Do the wild violets pulse with bioluminescent blue light?"
+  },
+  {
+   "id": "ants_synchrony",
+   "type": "state",
+   "of": "ants",
+   "desc": "the trail of ants moves in perfect synchrony",
+   "question": "Are the ants moving in perfect synchrony?"
+  },
+  {
+   "id": "ants_recalibration",
+   "type": "state",
+   "of": "ants",
+   "desc": "the ants instantly recalibrate their path after disruption",
+   "question": "Do the ants instantly recalibrate their path after disruption?"
+  },
+  {
+   "id": "chimes_materials",
+   "type": "attribute",
+   "of": "chimes",
+   "desc": "the wind chimes are made from old bottle caps, mismatched gears, and tiny mirrors",
+   "question": "Are the wind chimes made from old bottle caps, mismatched gears, and tiny mirrors?"
+  },
+  {
+   "id": "photos_strangers",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the photographs on the handlebars show faces of strangers smiling",
+   "question": "Do the photographs on the bicycle's handlebars show faces of strangers smiling?"
+  },
+  {
+   "id": "shadow_independent",
+   "type": "attribute",
+   "of": "clock_tower",
+   "desc": "the shadow of the clock tower moves independently of the sun",
+   "question": "Does the shadow of the clock tower move independently of the sun?"
+  },
+  {
+   "id": "shadow_crow_outline",
+   "type": "relation",
+   "of": [
+    "clock_tower",
+    "crow"
+   ],
+   "desc": "the shadow of the clock tower forms the outline of the crow",
+   "question": "Does the shadow of the clock tower form the outline of the crow?"
+  },
+  {
+   "id": "shadow_boot_outline",
+   "type": "relation",
+   "of": [
+    "clock_tower",
+    "boot"
+   ],
+   "desc": "the shadow of the clock tower forms the outline of the boot",
+   "question": "Does the shadow of the clock tower form the outline of the boot?"
+  },
+  {
+   "id": "shadow_ants_outline",
+   "type": "relation",
+   "of": [
+    "clock_tower",
+    "ants"
+   ],
+   "desc": "the shadow of the clock tower forms the outline of the ants",
+   "question": "Does the shadow of the clock tower form the outline of the ants?"
+  },
+  {
+   "id": "chainsaw_dulled",
+   "type": "attribute",
+   "of": "chainsaw",
+   "desc": "the teeth of the rusty chainsaw are dulled",
+   "question": "Are the teeth of the rusty chainsaw dulled?"
+  },
+  {
+   "id": "hose_cracked",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "the red plastic garden hose is cracked with age",
+   "question": "Is the red plastic garden hose cracked with age?"
+  },
+  {
+   "id": "boot_defiant",
+   "type": "state",
+   "of": "boot",
+   "desc": "the weathered leather boot is wedged defiantly",
+   "question": "Is the weathered leather boot wedged defiantly?"
+  },
+  {
+   "id": "laces_frayed",
+   "type": "attribute",
+   "of": "boot",
+   "desc": "the laces of the weathered leather boot are frayed",
+   "question": "Are the laces of the weathered leather boot frayed?"
+  },
+  {
+   "id": "crow_unblinking",
+   "type": "state",
+   "of": "crow",
+   "desc": "the crow watches with unblinking eyes",
+   "question": "Does the crow watch with unblinking eyes?"
+  },
+  {
+   "id": "chimes_striking",
+   "type": "state",
+   "of": "chimes",
+   "desc": "each chime strikes in turn",
+   "question": "Does each chime strike in turn?"
+  },
+  {
+   "id": "bicycle_front_wheel",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the front wheel of the faded yellow bicycle is spinning slowly",
+   "question": "Is the front wheel of the faded yellow bicycle spinning slowly?"
+  },
+  {
+   "id": "photos_curling",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the corners of the photographs on the handlebars are curling",
+   "question": "Are the corners of the photographs on the bicycle's handlebars curling?"
+  },
+  {
+   "id": "clock_no_hands",
+   "type": "attribute",
+   "of": "clock_tower",
+   "desc": "the clock tower has no hands",
+   "question": "Does the clock tower have no hands?"
+  },
+  {
+   "id": "ants_size",
+   "type": "attribute",
+   "of": "ants",
+   "desc": "the ants are no larger than a grain of sand",
+   "question": "Are the ants no larger than a grain of sand?"
+  },
+  {
+   "id": "ant_larger",
+   "type": "attribute",
+   "of": "ants",
+   "desc": "one ant in the trail is slightly larger than the others",
+   "question": "Is one ant in the trail slightly larger than the others?"
+  },
+  {
+   "id": "ant_leads",
+   "type": "state",
+   "of": "ants",
+   "desc": "the larger ant leads the trail of ants",
+   "question": "Does the larger ant lead the trail of ants?"
+  },
+  {
+   "id": "ant_larger_crown",
+   "type": "attribute",
+   "of": "ants",
+   "desc": "one ant is slightly larger and wears a tiny silver crown",
+   "question": "Is one ant slightly larger and wearing a tiny silver crown?"
+  },
+  {
+   "id": "crow_glossy_feathers",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow has glossy feathers",
+   "question": "Does the crow have glossy feathers?"
+  },
+  {
+   "id": "hose_kinks_loops",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "the red garden hose has kinks and loops",
+   "question": "Does the red garden hose have kinks and loops?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fallen_oak",
+   "to": "chainsaw",
+   "kind": "support"
+  },
+  {
+   "from": "rock",
+   "to": "boot",
+   "kind": "support"
+  },
+  {
+   "from": "branch",
+   "to": "crow",
+   "kind": "support"
+  },
+  {
+   "from": "fallen_oak",
+   "to": "bicycle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0483",
+ "prompt": "In the hushed drowsiness of a forest waking to morning, a tangled ecosystem of reality and surrealism unfolds with quiet intensity. A rusty chainsaw, its once-sharp teeth dulled by time and neglect, lies half-buried in the damp moss near the base of a fallen oak, the tree’s gnarled remains now cradling it like a relic of forgotten violence. The chain of the saw still catches the morning light, slick with a thin sheen of oil that seems almost too fresh for its setting, hinting at a mystery yet to unravel. A red plastic garden hose, cracked with age but stubbornly alive, snakes across the forest floor like a living creature. It kinks and loops in a way that defies its own rigidity, its path punctuated by a series of miniature whirlpools of dew forming and dissolving at the bends. The hose directs a slow, steady trickle onto a weathered leather boot, wedged defiantly on a low rock as if in protest against gravity or fate. The boot’s laces have frayed and become entwined with a cluster of wild violets, their roots now inexplicably feeding from the shoelace fibers, which seem to pulse faintly with a bioluminescent blue when touched by the water. Above this curious tableau, a crow perches on a crooked branch, its glossy feathers catching the light in an almost prismatic way. It watches with unblinking eyes, as if holding dominion over this small corner of the world, and occasionally emits a sound that echoes like a distorted telephone ringing, reverberating through the trees. Below, a trail of ants, each no larger than a grain of sand, ascends the tree trunk in perfect synchrony, forming a living, breathing river. Their march is periodically disrupted by the random fall of water droplets, but the ants never lose their rhythm—each deviation is met with an instant recalibration, as if guided by some unseen choreographer. One ant, slightly larger and wearing what appears to be a tiny silver crown, leads the way, its movements fluid and purposeful, as if burdened with the fate of the colony. Along the mossy undergrowth, a string of wind chimes made from old bottle caps, mismatched gears, and tiny mirrors sway without wind, their music weaving through the stillness like a thread of memory. Each chime strikes in turn, echoing the heartbeat of the scene. A faded yellow bicycle leans against the trunk, its front wheel spinning slowly in what seems to be a breeze that exists only for it. The bicycle's handlebars are adorned with small photographs—faces of strangers, all smiling, their corners curling as if trying to escape the plastic frame. In the distance, a clock tower with no hands casts a shadow that seems to move independently of the sun, tracing a pattern on the forest floor that slowly forms the outline of the crow, then the boot, then the chain of ants. The scene is suffused with a quiet hum of transformation—each object is in dialogue with another, their relationships layered with causality and mystery. The chainsaw's chain, the boot’s laces, the crow’s gaze, the bicycle’s silent spin—all are bound in a dance that defies easy logic, yet feels achingly coherent, like a dream remembered only in fragments. It is a world where objects hold memory, where time bends to fit the needs of the narrative, and where even stillness carries the weight of motion.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 18,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 40,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 2,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

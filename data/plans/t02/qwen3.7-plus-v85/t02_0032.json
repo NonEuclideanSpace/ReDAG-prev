@@ -1,0 +1,129 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform",
+   "question": "Does the image show a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow hat",
+   "question": "Is there a man in a yellow hat?",
+   "box": [
+    624,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_newspaper",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a newspaper",
+   "question": "Is the woman in a blue coat holding a newspaper?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue coat is looking at the man",
+   "question": "Is the woman in a blue coat looking towards the man?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train on the tracks",
+   "question": "Is there a train visible on the tracks?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a yellow hat is standing",
+   "question": "Is the man in a yellow hat standing?"
+  },
+  {
+   "id": "tracks",
+   "type": "entity",
+   "class": "track",
+   "plural": "tracks",
+   "count": 1,
+   "count_exact": false,
+   "desc": "subway tracks",
+   "question": "Are there subway tracks visible?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t02_0032",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue coat stands on the left side of a subway platform. A man in a yellow hat stands on the right side. The woman is holding a newspaper. She is looking at the man. There is no train visible on the tracks.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

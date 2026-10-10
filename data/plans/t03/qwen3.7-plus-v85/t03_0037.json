@@ -1,0 +1,175 @@
+{
+ "style": "anime style, night scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop under a night sky",
+   "question": "Does the image show a rooftop under a night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crate",
+   "question": "Is there a crate?",
+   "box": [
+    750,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    380,
+    300,
+    640,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    780,
+    550,
+    920,
+    700
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "woman_holding_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a glass",
+   "question": "Is the woman in the blue dress holding a glass?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green shirt is sitting",
+   "question": "Is the man in the green shirt sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the green shirt is looking at the woman",
+   "question": "Is the man in the green shirt looking at the woman in the blue dress?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sleeping",
+   "question": "Is the black cat sleeping?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is to the left of the man",
+   "question": "Is the woman in the blue dress to the left of the man in the green shirt?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat rests on the crate",
+   "question": "Is the black cat resting on the crate?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress hands the glass to the man in the green shirt",
+   "question": "Is the woman in the blue dress handing the glass to the man in the green shirt?"
+  },
+  {
+   "id": "no_music_player",
+   "type": "absent",
+   "desc": "music player",
+   "question": "Is there a music player visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0037",
+ "prompt": "In anime style, a rooftop party unfolds under the night sky. On the left stands a woman in a blue dress holding a glass. In the center sits a man in a green shirt looking at her. On the right rests a black cat sleeping on a crate. The woman is handing the glass to the man. There is no music player visible.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

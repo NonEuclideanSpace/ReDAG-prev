@@ -1,0 +1,139 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rural outdoor setting",
+   "question": "Does the image show a rural outdoor setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow hat",
+   "question": "Is there a man in a yellow hat?",
+   "box": [
+    550,
+    200,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "hay_bale",
+   "type": "entity",
+   "class": "hay bale",
+   "plural": "hay bales",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hay bale",
+   "question": "Is there a hay bale?",
+   "box": [
+    580,
+    600,
+    920,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a woven basket",
+   "question": "Is the woman in a blue apron holding a woven basket?"
+  },
+  {
+   "id": "corn",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a golden ear of corn",
+   "question": "Is the woman in a blue apron holding a golden ear of corn?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a yellow hat is sitting",
+   "question": "Is the man in a yellow hat sitting?"
+  },
+  {
+   "id": "handing_corn",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron hands a golden ear of corn to the man in a yellow hat",
+   "question": "Is the woman in a blue apron handing a golden ear of corn to the man in a yellow hat?"
+  },
+  {
+   "id": "man_on_hay",
+   "type": "relation",
+   "of": [
+    "man",
+    "hay_bale"
+   ],
+   "desc": "the man in a yellow hat sits on the hay bale",
+   "question": "Is the man in a yellow hat sitting on the hay bale?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "hay_bale",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0074",
+ "prompt": "In this photorealistic photo, a woman in a blue apron stands on the left holding a woven basket. A man in a yellow hat sits on the right resting on a hay bale. The woman is handing a golden ear of corn to the man. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

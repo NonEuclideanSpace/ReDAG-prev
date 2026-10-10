@@ -1,0 +1,282 @@
+{
+ "style": "sci-fi photorealistic render",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral dark background suitable for a specimen display",
+   "question": "Is the background neutral and dark, suitable for displaying a specimen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "containment_unit",
+   "type": "entity",
+   "class": "containment unit",
+   "plural": "containment units",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cylindrical glass containment unit",
+   "question": "Is there a cylindrical glass containment unit?",
+   "box": [
+    312,
+    100,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "alien_plant",
+   "type": "entity",
+   "class": "plant",
+   "plural": "plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an alien plant specimen",
+   "question": "Is there an alien plant specimen?",
+   "box": [
+    450,
+    300,
+    574,
+    800
+   ]
+  },
+  {
+   "id": "vines",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 5,
+   "count_exact": true,
+   "desc": "black tentacle-like vines",
+   "question": "Are there black tentacle-like vines?",
+   "box": [
+    400,
+    400,
+    624,
+    750
+   ]
+  },
+  {
+   "id": "flower",
+   "type": "entity",
+   "class": "flower",
+   "plural": "flowers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single large black flower",
+   "question": "Is there a single large black flower?",
+   "box": [
+    460,
+    250,
+    564,
+    350
+   ]
+  },
+  {
+   "id": "spores",
+   "type": "entity",
+   "class": "spore",
+   "plural": "spores",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glowing yellow spores",
+   "question": "Are there glowing yellow spores?",
+   "box": [
+    350,
+    200,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "control_panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small control panel",
+   "question": "Is there a small control panel?",
+   "box": [
+    550,
+    750,
+    680,
+    850
+   ]
+  },
+  {
+   "id": "unit_crack",
+   "type": "attribute",
+   "of": "containment_unit",
+   "desc": "the glass of the containment unit has a long visible crack",
+   "question": "Does the glass of the containment unit have a long visible crack?"
+  },
+  {
+   "id": "frame_scratches",
+   "type": "attribute",
+   "of": "containment_unit",
+   "desc": "the metallic frame of the containment unit is scratched",
+   "question": "Is the metallic frame of the containment unit scratched?"
+  },
+  {
+   "id": "veins",
+   "type": "attribute",
+   "of": "vines",
+   "desc": "the five black vines have clearly visible bright blue veins",
+   "question": "Do the five black vines have clearly visible bright blue veins?"
+  },
+  {
+   "id": "flower_state",
+   "type": "state",
+   "of": "flower",
+   "desc": "the large black flower is in a closed budding state",
+   "question": "Is the large black flower in a closed budding state?"
+  },
+  {
+   "id": "buttons_color",
+   "type": "attribute",
+   "of": "control_panel",
+   "desc": "the control panel has two green glowing buttons and one red glowing button",
+   "question": "Does the control panel have two green glowing buttons and one red glowing button?"
+  },
+  {
+   "id": "red_button_brightness",
+   "type": "attribute",
+   "of": "control_panel",
+   "desc": "the single red button on the control panel is distinctly brighter than the green ones",
+   "question": "Is the single red button on the control panel distinctly brighter than the green ones?"
+  },
+  {
+   "id": "plant_in_unit",
+   "type": "relation",
+   "of": [
+    "alien_plant",
+    "containment_unit"
+   ],
+   "desc": "the alien plant specimen is held within the containment unit",
+   "question": "Is the alien plant specimen held within the containment unit?"
+  },
+  {
+   "id": "vines_on_plant",
+   "type": "relation",
+   "of": [
+    "vines",
+    "alien_plant"
+   ],
+   "desc": "the five black vines are part of the alien plant instead of leaves",
+   "question": "Are the five black vines attached to the alien plant instead of leaves?"
+  },
+  {
+   "id": "flower_on_plant",
+   "type": "relation",
+   "of": [
+    "flower",
+    "alien_plant"
+   ],
+   "desc": "the large black flower is at the top of the alien plant",
+   "question": "Is the large black flower at the top of the alien plant?"
+  },
+  {
+   "id": "spores_in_unit",
+   "type": "relation",
+   "of": [
+    "spores",
+    "containment_unit"
+   ],
+   "desc": "the glowing yellow spores are floating inside the containment unit",
+   "question": "Are the glowing yellow spores floating inside the containment unit?"
+  },
+  {
+   "id": "panel_on_unit",
+   "type": "relation",
+   "of": [
+    "control_panel",
+    "containment_unit"
+   ],
+   "desc": "the control panel is on the containment unit",
+   "question": "Is the control panel on the containment unit?"
+  },
+  {
+   "id": "no_leaves",
+   "type": "absent",
+   "desc": "leaves on the alien plant",
+   "question": "Are there any leaves on the alien plant?"
+  },
+  {
+   "id": "unit_not_open",
+   "type": "absent",
+   "desc": "an open containment unit",
+   "question": "Is the containment unit open?"
+  },
+  {
+   "id": "flower_not_blooming",
+   "type": "absent",
+   "desc": "a blooming flower",
+   "question": "Is the black flower fully bloomed?"
+  },
+  {
+   "id": "stem",
+   "type": "attribute",
+   "of": "alien_plant",
+   "desc": "the alien plant has a single thick bright purple stem",
+   "question": "Does the alien plant have a single thick bright purple stem?"
+  },
+  {
+   "id": "vines_count",
+   "type": "attribute",
+   "of": "vines",
+   "desc": "there are exactly five black tentacle-like vines",
+   "question": "Are there exactly five black tentacle-like vines?"
+  },
+  {
+   "id": "unit_frame",
+   "type": "attribute",
+   "of": "containment_unit",
+   "desc": "the containment unit has a metallic frame",
+   "question": "Does the containment unit have a metallic frame?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "containment_unit",
+   "to": "alien_plant",
+   "kind": "support"
+  },
+  {
+   "from": "containment_unit",
+   "to": "control_panel",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_054",
+ "prompt": "A single, alien plant specimen held within a cylindrical glass containment unit. The unit's glass is thick but has a long, visible crack, and its metallic frame is scratched. The plant has a single, thick, bright purple stem. It has no leaves, but instead has exactly five black, tentacle-like vines, and all of these vines have bright blue veins that are clearly visible. At the top, a single, large, black flower is in a closed, budding state. Some glowing yellow spores are floating inside the unit. The unit has a small control panel with three glowing buttons: two green and one red. The single red button is distinctly brighter than the green ones. This is not a terrestrial plant, the containment unit is not open, the flower is not blooming, and the plant has no leaves.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,380 @@
+{
+ "style": "photorealistic, cinematic lighting, grand ballroom atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a grand, crowded ballroom with polished wooden floors and stone statues along the walls",
+   "question": "Does the image show a grand, crowded ballroom with polished wooden floors and stone statues along the walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "crystal chandelier",
+   "plural": "crystal chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive crystal chandelier",
+   "question": "Is there a massive crystal chandelier?",
+   "box": [
+    350,
+    0,
+    674,
+    200
+   ]
+  },
+  {
+   "id": "male_dancer",
+   "type": "entity",
+   "class": "dancer",
+   "plural": "dancers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a male dancer in a black tailcoat",
+   "question": "Is there a male dancer in a black tailcoat?",
+   "box": [
+    380,
+    250,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "female_dancer",
+   "type": "entity",
+   "class": "dancer",
+   "plural": "dancers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a female dancer in a flowing red dress",
+   "question": "Is there a female dancer in a flowing red dress?",
+   "box": [
+    300,
+    350,
+    550,
+    950
+   ]
+  },
+  {
+   "id": "stage",
+   "type": "entity",
+   "class": "raised stage",
+   "plural": "raised stages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a raised stage",
+   "question": "Is there a raised stage?",
+   "box": [
+    0,
+    400,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "violinists",
+   "type": "entity",
+   "class": "violinist",
+   "plural": "violinists",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four violinists",
+   "question": "Are there four violinists?",
+   "box": [
+    20,
+    420,
+    230,
+    750
+   ]
+  },
+  {
+   "id": "cellists",
+   "type": "entity",
+   "class": "cellist",
+   "plural": "cellists",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two cellists",
+   "question": "Are there two cellists?",
+   "box": [
+    20,
+    600,
+    230,
+    780
+   ]
+  },
+  {
+   "id": "conductor",
+   "type": "entity",
+   "class": "conductor",
+   "plural": "conductors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conductor",
+   "question": "Is there a conductor?",
+   "box": [
+    100,
+    450,
+    200,
+    750
+   ]
+  },
+  {
+   "id": "statues",
+   "type": "entity",
+   "class": "stone statue",
+   "plural": "stone statues",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three stone statues",
+   "question": "Are there three stone statues?",
+   "box": [
+    800,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "glove",
+   "type": "entity",
+   "class": "white glove",
+   "plural": "white gloves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single white glove",
+   "question": "Is there a single white glove?",
+   "box": [
+    280,
+    850,
+    350,
+    920
+   ]
+  },
+  {
+   "id": "fan",
+   "type": "attribute",
+   "of": "female_dancer",
+   "desc": "the female dancer holds a closed fan",
+   "question": "Is the female dancer holding a closed fan?"
+  },
+  {
+   "id": "baton",
+   "type": "attribute",
+   "of": "conductor",
+   "desc": "the conductor holds a baton",
+   "question": "Is the conductor holding a baton?"
+  },
+  {
+   "id": "male_dipping_female",
+   "type": "action",
+   "of": [
+    "male_dancer",
+    "female_dancer"
+   ],
+   "desc": "the male dancer is dipping the female dancer",
+   "question": "Is the male dancer dipping the female dancer?"
+  },
+  {
+   "id": "chandelier_above_couple",
+   "type": "relation",
+   "of": [
+    "chandelier",
+    "male_dancer"
+   ],
+   "desc": "the chandelier is directly above the dancing couple",
+   "question": "Is the chandelier directly above the dancing couple?"
+  },
+  {
+   "id": "orchestra_left_of_couple",
+   "type": "relation",
+   "of": [
+    "stage",
+    "male_dancer"
+   ],
+   "desc": "the orchestra stage is to the left of the dancing couple",
+   "question": "Is the orchestra stage to the left of the dancing couple?"
+  },
+  {
+   "id": "conductor_front_of_orchestra",
+   "type": "relation",
+   "of": [
+    "conductor",
+    "violinists"
+   ],
+   "desc": "the conductor is standing in front of the orchestra",
+   "question": "Is the conductor standing in front of the orchestra?"
+  },
+  {
+   "id": "conductor_pointing_at_violinists",
+   "type": "action",
+   "of": [
+    "conductor",
+    "violinists"
+   ],
+   "desc": "the conductor is pointing the baton at the violin section",
+   "question": "Is the conductor pointing the baton at the violin section?"
+  },
+  {
+   "id": "statues_along_walls",
+   "type": "state",
+   "of": "statues",
+   "desc": "the stone statues stand along the ballroom walls",
+   "question": "Do the stone statues stand along the ballroom walls?"
+  },
+  {
+   "id": "dress_touching_floor",
+   "type": "state",
+   "of": "female_dancer",
+   "desc": "the female dancer's dress is touching the polished wooden floor",
+   "question": "Is the female dancer's dress touching the polished wooden floor?"
+  },
+  {
+   "id": "male_looking_at_female",
+   "type": "action",
+   "of": [
+    "male_dancer",
+    "female_dancer"
+   ],
+   "desc": "the male dancer is looking at the female dancer",
+   "question": "Is the male dancer looking at the female dancer?"
+  },
+  {
+   "id": "female_looking_at_male",
+   "type": "action",
+   "of": [
+    "female_dancer",
+    "male_dancer"
+   ],
+   "desc": "the female dancer is looking up at the male dancer",
+   "question": "Is the female dancer looking up at the male dancer?"
+  },
+  {
+   "id": "glove_on_floor",
+   "type": "state",
+   "of": "glove",
+   "desc": "the white glove is lying on the floor",
+   "question": "Is the white glove lying on the floor?"
+  },
+  {
+   "id": "glove_between_couple_and_stage",
+   "type": "relation",
+   "of": [
+    "glove",
+    "male_dancer"
+   ],
+   "desc": "the white glove is between the dancing couple and the stage",
+   "question": "Is the white glove between the dancing couple and the stage?"
+  },
+  {
+   "id": "shoe_touching_hem",
+   "type": "relation",
+   "of": [
+    "male_dancer",
+    "female_dancer"
+   ],
+   "desc": "the male dancer's shoe is lightly touching the hem of the female dancer's dress",
+   "question": "Is the male dancer's shoe lightly touching the hem of the female dancer's dress?"
+  },
+  {
+   "id": "chandelier_higher_than_statues",
+   "type": "relation",
+   "of": [
+    "chandelier",
+    "statues"
+   ],
+   "desc": "the chandelier is suspended higher than the top of the statues",
+   "question": "Is the chandelier suspended higher than the top of the statues?"
+  },
+  {
+   "id": "orchestra_playing",
+   "type": "state",
+   "of": "violinists",
+   "desc": "the orchestra is playing instruments",
+   "question": "Is the orchestra playing instruments?"
+  },
+  {
+   "id": "male_dancer_standing",
+   "type": "state",
+   "of": "male_dancer",
+   "desc": "the male dancer in a black tailcoat is standing",
+   "question": "Is the male dancer in a black tailcoat standing?"
+  },
+  {
+   "id": "conductor_standing",
+   "type": "state",
+   "of": "conductor",
+   "desc": "the conductor is standing",
+   "question": "Is the conductor standing?"
+  },
+  {
+   "id": "glove_between_stage",
+   "type": "relation",
+   "of": [
+    "glove",
+    "stage"
+   ],
+   "desc": "the white glove is between the stage and the dancing couple",
+   "question": "Is the white glove positioned between the stage and the dancing couple?"
+  },
+  {
+   "id": "male_taller_than_female",
+   "type": "relation",
+   "of": [
+    "male_dancer",
+    "female_dancer"
+   ],
+   "desc": "the male dancer is slightly taller than the female dancer",
+   "question": "Is the male dancer slightly taller than the female dancer?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stage",
+   "to": "violinists",
+   "kind": "support"
+  },
+  {
+   "from": "stage",
+   "to": "cellists",
+   "kind": "support"
+  },
+  {
+   "from": "stage",
+   "to": "conductor",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_052",
+ "prompt": "In a grand, crowded ballroom, a male dancer in a black tailcoat is dipping a female dancer in a flowing red dress. A massive crystal chandelier hangs from the ceiling, directly above the dancing couple. To their left, a small orchestra is on a raised stage. The orchestra has four violinists, and the number of cellists is half the number of violinists. The conductor is standing in front of the orchestra, pointing a baton at the violin section. Along the ballroom walls stand several stone statues; their number is one more than the number of cellists. The light from the chandelier is brighter than any other light source in the room. The female dancer's dress is touching the polished wooden floor. The male dancer is looking at the female dancer, who is looking up at him. The male dancer is slightly taller than the female dancer. A single white glove, dropped by the female dancer, is lying on the floor between the dancing couple and the stage. The male dancer's shoe is lightly touching the hem of the female dancer's dress. The female dancer is holding a closed fan in her hand. The chandelier is suspended higher than the top of the statues. The orchestra is playing instruments.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 0,
+   "new_nodes": 0,
+   "added": 1,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

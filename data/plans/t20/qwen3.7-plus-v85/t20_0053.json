@@ -1,0 +1,510 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling hospital corridor with walls and an entrance on the far right",
+   "question": "Does the image show a bustling hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    260,
+    350,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    280,
+    500,
+    430,
+    900
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    400,
+    180,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "intern",
+   "type": "entity",
+   "class": "intern",
+   "plural": "interns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young intern in green attire",
+   "question": "Is there a young intern in green attire?",
+   "box": [
+    610,
+    200,
+    780,
+    900
+   ]
+  },
+  {
+   "id": "xray",
+   "type": "entity",
+   "class": "x-ray film",
+   "plural": "x-ray films",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an X-ray film",
+   "question": "Is there an X-ray film?",
+   "box": [
+    550,
+    300,
+    650,
+    500
+   ]
+  },
+  {
+   "id": "patient",
+   "type": "entity",
+   "class": "patient",
+   "plural": "patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patient in a striped gown",
+   "question": "Is there a patient in a striped gown?",
+   "box": [
+    790,
+    220,
+    920,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    800,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    850,
+    250,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "janitor",
+   "type": "entity",
+   "class": "janitor",
+   "plural": "janitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a janitor in gray overalls",
+   "question": "Is there a janitor in gray overalls?",
+   "box": [
+    300,
+    250,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cleaning cart",
+   "plural": "cleaning carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow cleaning cart",
+   "question": "Is there a yellow cleaning cart?",
+   "box": [
+    460,
+    500,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard in a dark uniform",
+   "question": "Is there a security guard in a dark uniform?",
+   "box": [
+    900,
+    150,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a pink jacket",
+   "question": "Is there a child in a pink jacket?",
+   "box": [
+    920,
+    600,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "nurse_upright",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs has an upright posture",
+   "question": "Does the nurse in blue scrubs have an upright posture?"
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "woman_weary",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress looks weary",
+   "question": "Does the elderly woman in a floral dress look weary?"
+  },
+  {
+   "id": "doctor_points",
+   "type": "action",
+   "of": [
+    "doctor",
+    "xray"
+   ],
+   "desc": "the doctor in a white coat points at the X-ray film",
+   "question": "Is the doctor in a white coat pointing at the X-ray film?"
+  },
+  {
+   "id": "intern_holds_xray",
+   "type": "attribute",
+   "of": "intern",
+   "desc": "the young intern in green attire holds the X-ray film",
+   "question": "Is the young intern in green attire holding the X-ray film?"
+  },
+  {
+   "id": "intern_focused",
+   "type": "relation",
+   "of": [
+    "intern",
+    "xray"
+   ],
+   "desc": "the young intern in green attire looks at the film with focused intensity",
+   "question": "Does the young intern in green attire look at the film with focused intensity?"
+  },
+  {
+   "id": "patient_leans",
+   "type": "state",
+   "of": "patient",
+   "desc": "the patient in a striped gown leans against the wall",
+   "question": "Is the patient in a striped gown leaning against the wall?"
+  },
+  {
+   "id": "patient_tired",
+   "type": "state",
+   "of": "patient",
+   "desc": "the patient in a striped gown appears tired",
+   "question": "Does the patient in a striped gown appear tired?"
+  },
+  {
+   "id": "dog_sits",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog sits calmly",
+   "question": "Does the small brown dog sit calmly?"
+  },
+  {
+   "id": "man_holds_leash",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds the leash firmly",
+   "question": "Is the man in a red scarf holding the leash firmly?"
+  },
+  {
+   "id": "janitor_pushes",
+   "type": "action",
+   "of": [
+    "janitor",
+    "cart"
+   ],
+   "desc": "the janitor in gray overalls pushes the yellow cleaning cart",
+   "question": "Is the janitor in gray overalls pushing the yellow cleaning cart?"
+  },
+  {
+   "id": "guard_watches",
+   "type": "state",
+   "of": "guard",
+   "desc": "the security guard in a dark uniform watches the scene",
+   "question": "Is the security guard in a dark uniform watching the scene?"
+  },
+  {
+   "id": "child_clings",
+   "type": "action",
+   "of": [
+    "child",
+    "guard"
+   ],
+   "desc": "the child in a pink jacket clings to the security guard's leg",
+   "question": "Is the child in a pink jacket clinging to the security guard's leg?"
+  },
+  {
+   "id": "nurse_left",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the nurse in blue scrubs is next to the elderly woman in a floral dress",
+   "question": "Is the nurse in blue scrubs next to the elderly woman in a floral dress?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman in a floral dress sits on the plastic chair",
+   "question": "Is the elderly woman in a floral dress sitting on the plastic chair?"
+  },
+  {
+   "id": "doctor_center",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "intern"
+   ],
+   "desc": "the doctor in a white coat is in the center with the young intern in green attire",
+   "question": "Are the doctor in a white coat and the young intern in green attire positioned in the center?"
+  },
+  {
+   "id": "patient_right_of_doctor",
+   "type": "relation",
+   "of": [
+    "patient",
+    "doctor"
+   ],
+   "desc": "the patient in a striped gown is to the right of the doctor in a white coat",
+   "question": "Is the patient in a striped gown to the right of the doctor in a white coat?"
+  },
+  {
+   "id": "dog_beside_patient",
+   "type": "relation",
+   "of": [
+    "dog",
+    "patient"
+   ],
+   "desc": "the small brown dog is beside the patient in a striped gown",
+   "question": "Is the small brown dog beside the patient in a striped gown?"
+  },
+  {
+   "id": "man_near_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in a red scarf is near the small brown dog",
+   "question": "Is the man in a red scarf near the small brown dog?"
+  },
+  {
+   "id": "janitor_behind",
+   "type": "relation",
+   "of": [
+    "janitor",
+    "doctor"
+   ],
+   "desc": "the janitor in gray overalls is behind the doctor in a white coat",
+   "question": "Is the janitor in gray overalls behind the doctor in a white coat?"
+  },
+  {
+   "id": "guard_right",
+   "type": "relation",
+   "of": [
+    "guard",
+    "patient"
+   ],
+   "desc": "the security guard in a dark uniform is on the right near the entrance",
+   "question": "Is the security guard in a dark uniform on the right near the entrance?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood on any surfaces",
+   "question": "Is there any blood visible on any surfaces?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic equipment other than the X-ray film",
+   "question": "Is there any electronic equipment other than the X-ray film?"
+  },
+  {
+   "id": "nurse_stands",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "woman_sits",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress sits",
+   "question": "Is the elderly woman in a floral dress sitting?"
+  },
+  {
+   "id": "man_stands",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf stands",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "dog_on_leash",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small brown dog is on a leash",
+   "question": "Is the small brown dog on a leash?"
+  },
+  {
+   "id": "intern_looks_xray",
+   "type": "relation",
+   "of": [
+    "intern",
+    "xray"
+   ],
+   "desc": "the young intern in green attire looks at the X-ray film",
+   "question": "Is the young intern in green attire looking at the X-ray film?"
+  },
+  {
+   "id": "nurse_attentive",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs has an attentive expression",
+   "question": "Does the nurse in blue scrubs have an attentive expression?"
+  },
+  {
+   "id": "dog_ears",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog has its ears perked up",
+   "question": "Does the small brown dog have its ears perked up?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "cart",
+   "to": "janitor",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0053",
+ "prompt": "This photorealistic photo captures a bustling hospital corridor with ten distinct entities. On the left, a nurse in blue scrubs stands holding a clipboard, her posture upright and attentive. Next to her sits an elderly woman in a floral dress on a plastic chair, looking weary. In the center, a doctor in a white coat points at an X-ray film held by a young intern in green attire. The intern looks at the film with focused intensity. To the right of the doctor, a patient in a striped gown leans against the wall, appearing tired. Beside the patient, a small brown dog on a leash sits calmly, its ears perked up. A man in a red scarf stands near the dog, holding the leash firmly. Behind them, a janitor in gray overalls pushes a yellow cleaning cart down the hall. Near the entrance on the far right, a security guard in a dark uniform watches the scene. A child in a pink jacket clings to the security guard's leg. There is no blood visible on any surfaces. There is no electronic equipment other than the X-ray film. The nurse is positioned on the left. The doctor and intern are in the center. The security guard is on the right. The nurse holds the clipboard. The doctor points at the X-ray. The intern looks at the X-ray. The child clings to the security guard.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

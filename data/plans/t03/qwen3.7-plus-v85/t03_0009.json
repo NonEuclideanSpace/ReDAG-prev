@@ -1,0 +1,176 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with distant peaks and a rocky backdrop",
+   "question": "Does the image show a mountain campsite with distant peaks and a rocky backdrop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    300,
+    600,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue jacket",
+   "question": "Is there a woman in a blue jacket?",
+   "box": [
+    400,
+    300,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tent",
+   "question": "Is there a silver tent?",
+   "box": [
+    700,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is next to the man in the red scarf",
+   "question": "Is the brown dog next to the man in the red scarf?"
+  },
+  {
+   "id": "woman_points_peaks",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue jacket points toward the distant peaks",
+   "question": "Is the woman in the blue jacket pointing toward the distant peaks?"
+  },
+  {
+   "id": "tent_against_backdrop",
+   "type": "state",
+   "of": "tent",
+   "desc": "the silver tent stands upright against the rocky backdrop",
+   "question": "Is the silver tent standing upright?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf looks at the woman in the blue jacket",
+   "question": "Is the man in the red scarf looking at the woman in the blue jacket?"
+  },
+  {
+   "id": "no_fire_pit",
+   "type": "absent",
+   "desc": "a fire pit",
+   "question": "Is there a fire pit visible in the scene?"
+  },
+  {
+   "id": "woman_pointing_target",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue jacket points toward the distant peaks",
+   "question": "Is the woman in the blue jacket pointing?"
+  },
+  {
+   "id": "tent_position",
+   "type": "state",
+   "of": "tent",
+   "desc": "the silver tent stands against the rocky backdrop",
+   "question": "Is the silver tent positioned against the rocky backdrop?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0009",
+ "prompt": "In an anime style illustration, a man in a red scarf sits on the left side of a mountain campsite. A brown dog lies calmly next to him on the ground. In the center, a woman in a blue jacket points toward the distant peaks. On the right, a silver tent stands upright against the rocky backdrop. The man in the red scarf looks at the woman in the blue jacket. There is no fire pit visible in the scene. The composition remains simple with these specific elements only.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,207 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party at night",
+   "question": "Does the image depict a rooftop party scene at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow hat",
+   "question": "Is there a man in a yellow hat?",
+   "box": [
+    380,
+    400,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crate",
+   "question": "Is there a crate?",
+   "box": [
+    400,
+    700,
+    630,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooftop railing",
+   "question": "Is there a rooftop railing?",
+   "box": [
+    700,
+    600,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a glass",
+   "question": "Is the woman in the blue dress holding a glass?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the yellow hat is sitting",
+   "question": "Is the man in the yellow hat sitting?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is resting",
+   "question": "Is the black cat resting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is looking at the man in the yellow hat",
+   "question": "Is the woman in the blue dress looking at the man in the yellow hat?"
+  },
+  {
+   "id": "man_pointing_cat",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the man in the yellow hat is pointing toward the black cat",
+   "question": "Is the man in the yellow hat pointing toward the black cat?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the yellow hat sits on the crate",
+   "question": "Is the man in the yellow hat sitting on the crate?"
+  },
+  {
+   "id": "cat_on_railing",
+   "type": "relation",
+   "of": [
+    "cat",
+    "railing"
+   ],
+   "desc": "the black cat rests on the railing",
+   "question": "Is the black cat resting on the railing?"
+  },
+  {
+   "id": "no_moon",
+   "type": "absent",
+   "desc": "moon",
+   "question": "Is there a moon visible in the sky?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "railing",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0100",
+ "prompt": "A watercolor illustration depicts a rooftop party at night. On the left, a woman in a blue dress stands holding a glass. In the center, a man in a yellow hat sits on a crate. To the right, a black cat rests on the railing. The woman is looking at the man. The man is pointing toward the cat. There is no moon visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

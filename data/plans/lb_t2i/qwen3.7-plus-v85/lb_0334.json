@@ -1,0 +1,517 @@
+{
+ "style": "surreal dreamlike fantasy, hazy dawn lighting, ethereal atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal forest landscape with bioluminescent moss and trees bending toward each other",
+   "question": "Does the image show a surreal forest landscape?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bear",
+   "type": "entity",
+   "class": "bear",
+   "plural": "bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bear",
+   "question": "Is there a bear?",
+   "box": [
+    350,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "picnic table",
+   "plural": "picnic tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden picnic table twisted into a spiral shape",
+   "question": "Is there a wooden picnic table twisted into a spiral shape?",
+   "box": [
+    200,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 5,
+   "count_exact": false,
+   "desc": "translucent winged books",
+   "question": "Are there translucent winged books?",
+   "box": [
+    400,
+    50,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open backpack",
+   "question": "Is there an open backpack?",
+   "box": [
+    100,
+    700,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 3,
+   "count_exact": false,
+   "desc": "iridescent apples",
+   "question": "Are there iridescent apples?",
+   "box": [
+    120,
+    750,
+    280,
+    880
+   ]
+  },
+  {
+   "id": "sandwich",
+   "type": "entity",
+   "class": "sandwich",
+   "plural": "sandwiches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten sandwich",
+   "question": "Is there a half-eaten sandwich?",
+   "box": [
+    250,
+    780,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "hiker",
+   "type": "entity",
+   "class": "hiker",
+   "plural": "hikers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy hiker",
+   "question": "Is there a shadowy hiker?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "leaf",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single leaf",
+   "question": "Is there a single leaf?",
+   "box": [
+    276,
+    816,
+    324,
+    864
+   ]
+  },
+  {
+   "id": "bear_standing",
+   "type": "state",
+   "of": "bear",
+   "desc": "the bear stands on its hind legs",
+   "question": "Is the bear standing on its hind legs?"
+  },
+  {
+   "id": "bear_snout_up",
+   "type": "state",
+   "of": "bear",
+   "desc": "the bear's snout is tilted upward",
+   "question": "Is the bear's snout tilted upward?"
+  },
+  {
+   "id": "books_fluttering",
+   "type": "state",
+   "of": "books",
+   "desc": "the winged books are fluttering",
+   "question": "Are the winged books fluttering?"
+  },
+  {
+   "id": "books_arch",
+   "type": "state",
+   "of": "books",
+   "desc": "the winged books form a great arch",
+   "question": "Do the winged books form a great arch?"
+  },
+  {
+   "id": "bear_near_table",
+   "type": "relation",
+   "of": [
+    "bear",
+    "table"
+   ],
+   "desc": "the bear hovers just inches from the picnic table",
+   "question": "Is the bear hovering just inches from the picnic table?"
+  },
+  {
+   "id": "books_above_table",
+   "type": "relation",
+   "of": [
+    "books",
+    "table"
+   ],
+   "desc": "the winged books are above the picnic table",
+   "question": "Are the winged books above the picnic table?"
+  },
+  {
+   "id": "backpack_on_floor",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "moss"
+   ],
+   "desc": "the backpack lies on the forest floor",
+   "question": "Does the backpack lie on the forest floor?"
+  },
+  {
+   "id": "apples_spilled",
+   "type": "relation",
+   "of": [
+    "apples",
+    "backpack"
+   ],
+   "desc": "the apples spill out of the backpack",
+   "question": "Do the apples spill out of the backpack?"
+  },
+  {
+   "id": "sandwich_beside_apples",
+   "type": "relation",
+   "of": [
+    "sandwich",
+    "apples"
+   ],
+   "desc": "the sandwich rests beside the apples",
+   "question": "Does the sandwich rest beside the apples?"
+  },
+  {
+   "id": "cheese_toward_books",
+   "type": "relation",
+   "of": [
+    "sandwich",
+    "books"
+   ],
+   "desc": "the cheese from the sandwich stretches toward the books",
+   "question": "Does the cheese from the sandwich stretch toward the books?"
+  },
+  {
+   "id": "hiker_behind_bear",
+   "type": "relation",
+   "of": [
+    "hiker",
+    "bear"
+   ],
+   "desc": "the hiker is behind the bear",
+   "question": "Is the hiker behind the bear?"
+  },
+  {
+   "id": "leaf_on_sandwich",
+   "type": "relation",
+   "of": [
+    "leaf",
+    "sandwich"
+   ],
+   "desc": "the leaf catches on the sandwich's edge",
+   "question": "Does the leaf catch on the sandwich's edge?"
+  },
+  {
+   "id": "hiker_stepping",
+   "type": "state",
+   "of": "hiker",
+   "desc": "the shadowy hiker steps backward",
+   "question": "Is the shadowy hiker stepping backward?"
+  },
+  {
+   "id": "bear_blinking",
+   "type": "state",
+   "of": "bear",
+   "desc": "the bear blinks",
+   "question": "Is the bear blinking?"
+  },
+  {
+   "id": "leaf_falling",
+   "type": "state",
+   "of": "leaf",
+   "desc": "the single leaf falls from the canopy",
+   "question": "Is the single leaf falling from the canopy?"
+  },
+  {
+   "id": "moss",
+   "type": "entity",
+   "class": "moss",
+   "plural": "moss",
+   "count": 1,
+   "count_exact": true,
+   "desc": "bioluminescent moss on the forest floor",
+   "question": "Is there bioluminescent moss on the forest floor?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "roots",
+   "type": "entity",
+   "class": "tree roots",
+   "plural": "tree roots",
+   "count": 1,
+   "count_exact": false,
+   "desc": "tangled tree roots",
+   "question": "Are there tangled tree roots?",
+   "box": [
+    100,
+    850,
+    924,
+    1024
+   ]
+  },
+  {
+   "id": "campfires",
+   "type": "entity",
+   "class": "campfire remains",
+   "plural": "campfire remains",
+   "count": 1,
+   "count_exact": false,
+   "desc": "remains of old campfires",
+   "question": "Are there remains of old campfires?",
+   "box": [
+    200,
+    860,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "compasses",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": false,
+   "desc": "forgotten compasses",
+   "question": "Are there forgotten compasses?",
+   "box": [
+    600,
+    870,
+    800,
+    960
+   ]
+  },
+  {
+   "id": "hiker_glowing_moss",
+   "type": "relation",
+   "of": [
+    "hiker",
+    "moss"
+   ],
+   "desc": "the hiker stands on the glowing moss",
+   "question": "Is the hiker standing on the glowing moss?"
+  },
+  {
+   "id": "roots_tangle_campfires",
+   "type": "relation",
+   "of": [
+    "roots",
+    "campfires"
+   ],
+   "desc": "the tree roots tangle with the campfire remains",
+   "question": "Do the tree roots tangle with the campfire remains?"
+  },
+  {
+   "id": "roots_tangle_compasses",
+   "type": "relation",
+   "of": [
+    "roots",
+    "compasses"
+   ],
+   "desc": "the tree roots tangle with the forgotten compasses",
+   "question": "Do the tree roots tangle with the forgotten compasses?"
+  },
+  {
+   "id": "bear_shadow",
+   "type": "attribute",
+   "of": "bear",
+   "desc": "the bear casts a shadow stretching across the landscape",
+   "question": "Does the bear cast a shadow stretching across the landscape?"
+  },
+  {
+   "id": "bear_paws_curling",
+   "type": "state",
+   "of": "bear",
+   "desc": "the bear's paws are curling",
+   "question": "Are the bear's paws curling?"
+  },
+  {
+   "id": "hiker_hands_raised",
+   "type": "state",
+   "of": "hiker",
+   "desc": "the hiker's hands are raised in an open gesture",
+   "question": "Are the hiker's hands raised in an open gesture?"
+  },
+  {
+   "id": "backpack_beside_bear",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "bear"
+   ],
+   "desc": "the open backpack is beside the bear",
+   "question": "Is the open backpack beside the bear?"
+  },
+  {
+   "id": "books_frame_horizon",
+   "type": "state",
+   "of": "books",
+   "desc": "the winged books form an arch that frames the horizon",
+   "question": "Do the winged books form an arch that frames the horizon?"
+  },
+  {
+   "id": "hiker_near_bear",
+   "type": "relation",
+   "of": [
+    "hiker",
+    "bear"
+   ],
+   "desc": "the hiker and the bear stand near each other",
+   "question": "Are the hiker and the bear standing near each other?"
+  },
+  {
+   "id": "bear_fur_shimmering",
+   "type": "attribute",
+   "of": "bear",
+   "desc": "the bear's fur shimmers with dew",
+   "question": "Does the bear's fur shimmer with dew?"
+  },
+  {
+   "id": "trees_bending",
+   "type": "state",
+   "of": "roots",
+   "desc": "the trees bend toward each other",
+   "question": "Do the trees bend toward each other?"
+  },
+  {
+   "id": "backpack_fraying",
+   "type": "attribute",
+   "of": "backpack",
+   "desc": "the backpack has fraying seams",
+   "question": "Does the backpack have fraying seams?"
+  },
+  {
+   "id": "cheese_stretching",
+   "type": "attribute",
+   "of": "sandwich",
+   "desc": "the sandwich's cheese stretches outward",
+   "question": "Does the sandwich's cheese stretch outward?"
+  },
+  {
+   "id": "leaf_trail",
+   "type": "attribute",
+   "of": "leaf",
+   "desc": "the leaf has a phosphorescent ink trail",
+   "question": "Does the leaf have a phosphorescent ink trail?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "table",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "backpack",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hiker",
+   "kind": "support"
+  },
+  {
+   "from": "moss",
+   "to": "roots",
+   "kind": "support"
+  },
+  {
+   "from": "moss",
+   "to": "campfires",
+   "kind": "support"
+  },
+  {
+   "from": "moss",
+   "to": "compasses",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0334",
+ "prompt": "In the hazy dawn light of a forest suspended between waking and dreaming, a bear—part beast, part dream—stood on its hind legs, its fur shimmering with dew and fragments of memory. It hovered just inches from a wooden picnic table, its paws curling as if testing the air for weight and meaning. Above the table, a flock of translucent, winged books fluttered lazily, their pages rustling in slow motion, each one inscribed with forgotten trails and unrealized paths. The bear’s snout tilted upward, catching the scent of bread and wildflowers, the air thick with the ghost of laughter and distant thunder. Beside it, a backpack lay open on the forest floor, its seams fraying like time itself. Inside spilled apples, their skins glinting with iridescent veins of color, as if they were fruit from a thousand different worlds. A half-eaten sandwich rested beside them, its cheese oozing not downward but outward, stretching like taffy toward the hovering books, as if the air were hungry too. The hiker, now only a shadow of movement, stepped backward with measured grace, hands raised in an open gesture of calm, but his backpack had already become part of the scene—a conduit between worlds. His boots left no prints, yet the moss beneath them glowed with bioluminescent patterns that mirrored the shifting sky. In the distance, trees bent toward each other in slow conversation, their roots tangling with the remains of old campfires and forgotten compasses. The bear blinked once, and in that instant, the forest shifted: the picnic table twisted into a spiral, its planks becoming staircases leading nowhere, while the books rearranged their wings into a great arch that framed the horizon. Somewhere, the sound of a clock ticking backwards hummed beneath the silence, harmonizing with the bear’s soft growl and the hiker’s silent breath. A single leaf fell from the canopy above, catching on the sandwich’s gooey edge before drifting into the glowing moss below. It left a trail of phosphorescent ink, a path of stories left unfinished. The bear took a step forward, its shadow stretching across the surreal landscape, and for a moment, the hiker and the bear stood on the same wavelength, bound by a shared understanding of beauty and impermanence. The world seemed to hold its breath, caught between the primal and the poetic, the real and the imagined, the ending and the beginning.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 33,
+   "n_uncovered": 4,
+   "proposed": 4,
+   "ungrounded": 1,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

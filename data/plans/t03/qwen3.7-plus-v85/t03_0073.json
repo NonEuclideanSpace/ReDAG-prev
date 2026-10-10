@@ -1,0 +1,130 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a restaurant interior",
+   "question": "Does the image show a restaurant interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    380,
+    150,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a blue coat",
+   "question": "Is there a customer in a blue coat?",
+   "box": [
+    700,
+    150,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef in the white hat grips a silver knife",
+   "question": "Is the chef in the white hat gripping a silver knife?"
+  },
+  {
+   "id": "tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the black vest holds an empty tray",
+   "question": "Is the waiter in the black vest holding an empty tray?"
+  },
+  {
+   "id": "dish",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef in the white hat holds a plated dish",
+   "question": "Is the chef in the white hat holding a plated dish?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in the white hat is standing",
+   "question": "Is the chef in the white hat standing?"
+  },
+  {
+   "id": "customer_waiting",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer in the blue coat is waiting patiently",
+   "question": "Is the customer in the blue coat waiting patiently?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef in the white hat is handing the plated dish to the waiter in the black vest",
+   "question": "Is the chef in the white hat handing a plated dish to the waiter in the black vest?"
+  },
+  {
+   "id": "no_steam",
+   "type": "absent",
+   "desc": "steam rising from the food",
+   "question": "Is there any steam rising from the food?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0073",
+ "prompt": "In a cinematic film still, a chef in a white hat stands on the left, gripping a silver knife. In the center, a waiter in a black vest holds a empty tray. On the right, a customer in a blue coat waits patiently. The chef in the white hat is handing a plated dish to the waiter in the black vest. There is no steam rising from the food.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

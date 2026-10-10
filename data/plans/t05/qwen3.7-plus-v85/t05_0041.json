@@ -1,0 +1,354 @@
+{
+ "style": "oil painting style with rich textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception interior",
+   "question": "Does the image show a wedding reception interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "velvet chair",
+   "plural": "velvet chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deep red velvet chair",
+   "question": "Is there a deep red velvet chair?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white gown",
+   "question": "Is there a bride in a white gown?",
+   "box": [
+    80,
+    250,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a blue suit",
+   "question": "Is there a groom in a blue suit?",
+   "box": [
+    360,
+    200,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    450,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "silver tray",
+   "plural": "silver trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tray",
+   "question": "Is there a silver tray?",
+   "box": [
+    520,
+    450,
+    620,
+    550
+   ]
+  },
+  {
+   "id": "guest",
+   "type": "entity",
+   "class": "guest",
+   "plural": "guests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guest in a green dress",
+   "question": "Is there a guest in a green dress?",
+   "box": [
+    620,
+    280,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    750,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "crystal chandelier",
+   "plural": "crystal chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large crystal chandelier",
+   "question": "Is there a large crystal chandelier?",
+   "box": [
+    300,
+    0,
+    700,
+    200
+   ]
+  },
+  {
+   "id": "bride_sitting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in the white gown is sitting",
+   "question": "Is the bride in the white gown sitting?"
+  },
+  {
+   "id": "bride_relaxed",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in the white gown has a relaxed posture",
+   "question": "Does the bride in the white gown have a relaxed posture?"
+  },
+  {
+   "id": "bride_hand_lap",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride's hand rests on her lap",
+   "question": "Does the bride's hand rest on her lap?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in the blue suit is standing",
+   "question": "Is the groom in the blue suit standing?"
+  },
+  {
+   "id": "groom_looking_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom in the blue suit is looking at the bride",
+   "question": "Is the groom in the blue suit looking at the bride?"
+  },
+  {
+   "id": "groom_tie_askew",
+   "type": "attribute",
+   "of": "groom",
+   "desc": "the groom's tie is slightly askew",
+   "question": "Is the groom's tie slightly askew?"
+  },
+  {
+   "id": "waiter_balancing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter balances the tray with precision",
+   "question": "Is the waiter balancing the tray with precision?"
+  },
+  {
+   "id": "guest_reaching",
+   "type": "state",
+   "of": "guest",
+   "desc": "the guest in the green dress reaches out eagerly",
+   "question": "Does the guest in the green dress reach out eagerly?"
+  },
+  {
+   "id": "guest_smiling",
+   "type": "state",
+   "of": "guest",
+   "desc": "the guest in the green dress smiles softly",
+   "question": "Does the guest in the green dress smile softly?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rug"
+   ],
+   "desc": "the golden retriever lies on the rug",
+   "question": "Is the golden retriever lying on the rug?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever watches the scene calmly",
+   "question": "Does the golden retriever watch the scene calmly?"
+  },
+  {
+   "id": "dog_tail_still",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog’s tail is still",
+   "question": "Is the dog’s tail still?"
+  },
+  {
+   "id": "chandelier_glimmering",
+   "type": "state",
+   "of": "chandelier",
+   "desc": "the chandelier glimmers faintly",
+   "question": "Does the chandelier glimmer faintly?"
+  },
+  {
+   "id": "groom_next_to_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom stands next to the bride",
+   "question": "Is the groom standing next to the bride?"
+  },
+  {
+   "id": "waiter_handing_guest",
+   "type": "action",
+   "of": [
+    "waiter",
+    "guest"
+   ],
+   "desc": "the waiter hands the silver tray to the guest",
+   "question": "Is the waiter handing the silver tray to the guest?"
+  },
+  {
+   "id": "chandelier_above_group",
+   "type": "relation",
+   "of": [
+    "chandelier",
+    "bride"
+   ],
+   "desc": "the chandelier hangs above the group",
+   "question": "Does the chandelier hang above the group including the bride?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a wedding cake",
+   "question": "Is there a wedding cake visible in the image?"
+  },
+  {
+   "id": "waiter_tray_attr",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a black vest holds a silver tray",
+   "question": "Is the waiter in a black vest holding a silver tray?"
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patterned rug with intricate designs",
+   "question": "Is there a patterned rug with intricate designs?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "bride",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0041",
+ "prompt": "In an oil painting style, a wedding reception unfolds with rich textures. On the left, a bride in a white gown sits on a velvet chair, her posture relaxed. Next to her stands a groom in a blue suit, looking at the bride with affection. In the center, a waiter in a black vest is handing a silver tray to a guest in a green dress who reaches out eagerly. To the right, a golden retriever lies on the rug, watching the scene calmly. A large crystal chandelier hangs above the group, casting subtle reflections. There is no cake visible in this intimate moment. The bride’s hand rests gently on her lap. The groom’s tie is slightly askew. The guest in the green dress smiles softly. The waiter balances the tray with precision. The dog’s tail is still. The chandelier glimmers faintly. The velvet chair is deep red. The rug is patterned with intricate designs. The silver tray reflects the ambient light. The blue suit is well-tailored. The white gown flows elegantly.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "dog_on_rug",
+     "dog_lying"
+    ]
+   ]
+  }
+ }
+}

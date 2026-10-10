@@ -1,0 +1,490 @@
+{
+ "style": "vibrant oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court with sand and a net",
+   "question": "Does the image depict a beach volleyball court with sand and a net?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player_blue",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in a blue jersey",
+   "question": "Is there a volleyball player in a blue jersey?",
+   "box": [
+    400,
+    100,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    100,
+    200,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "tall chair",
+   "plural": "tall chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall chair",
+   "question": "Is there a tall chair?",
+   "box": [
+    120,
+    400,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a wide-brimmed hat",
+   "question": "Is there a spectator in a wide-brimmed hat?",
+   "box": [
+    50,
+    300,
+    200,
+    650
+   ]
+  },
+  {
+   "id": "coach",
+   "type": "entity",
+   "class": "coach",
+   "plural": "coaches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coach in a polo shirt",
+   "question": "Is there a coach in a polo shirt?",
+   "box": [
+    800,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a water bottle",
+   "question": "Is there a water bottle?",
+   "box": [
+    850,
+    750,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow swimsuit",
+   "question": "Is there a child in a yellow swimsuit?",
+   "box": [
+    300,
+    700,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "towel",
+   "plural": "towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful towel",
+   "question": "Is there a colorful towel?",
+   "box": [
+    280,
+    850,
+    520,
+    980
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    350,
+    600,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "player_white",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in a white tank top",
+   "question": "Is there a volleyball player in a white tank top?",
+   "box": [
+    600,
+    300,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "player_black",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in black shorts",
+   "question": "Is there a volleyball player in black shorts?",
+   "box": [
+    500,
+    500,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "scoreboard",
+   "type": "entity",
+   "class": "scoreboard",
+   "plural": "scoreboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scoreboard displaying numbers",
+   "question": "Is there a scoreboard displaying numbers?",
+   "box": [
+    100,
+    50,
+    300,
+    150
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a volleyball",
+   "question": "Is there a volleyball?",
+   "box": [
+    450,
+    50,
+    550,
+    150
+   ]
+  },
+  {
+   "id": "player_blue_leaping",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the player in a blue jersey is leaping high in mid-air",
+   "question": "Is the player in a blue jersey leaping high in mid-air?"
+  },
+  {
+   "id": "player_blue_spiking",
+   "type": "action",
+   "of": [
+    "player_blue",
+    "ball"
+   ],
+   "desc": "the player in a blue jersey spikes the volleyball",
+   "question": "Is the player in a blue jersey spiking the volleyball?"
+  },
+  {
+   "id": "referee_standing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt stands upright",
+   "question": "Is the referee in a striped shirt standing upright?"
+  },
+  {
+   "id": "referee_on_chair",
+   "type": "relation",
+   "of": [
+    "referee",
+    "chair"
+   ],
+   "desc": "the referee in a striped shirt stands on the tall chair",
+   "question": "Is the referee in a striped shirt standing on the tall chair?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "action",
+   "of": [
+    "referee",
+    "player_blue"
+   ],
+   "desc": "the referee in a striped shirt watches the player in a blue jersey",
+   "question": "Is the referee in a striped shirt watching the player in a blue jersey?"
+  },
+  {
+   "id": "spectator_shielding",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a wide-brimmed hat shields their eyes",
+   "question": "Is the spectator in a wide-brimmed hat shielding their eyes?"
+  },
+  {
+   "id": "spectator_leaning",
+   "type": "state",
+   "of": "spectator",
+   "desc": "the spectator in a wide-brimmed hat leans forward slightly",
+   "question": "Is the spectator in a wide-brimmed hat leaning forward slightly?"
+  },
+  {
+   "id": "spectator_next_to_referee",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "referee"
+   ],
+   "desc": "the spectator in a wide-brimmed hat is next to the referee in a striped shirt",
+   "question": "Is the spectator in a wide-brimmed hat next to the referee in a striped shirt?"
+  },
+  {
+   "id": "coach_pointing",
+   "type": "action",
+   "of": [
+    "coach",
+    "player_white"
+   ],
+   "desc": "the coach in a polo shirt points at the player in a white tank top",
+   "question": "Is the coach in a polo shirt pointing at the player in a white tank top?"
+  },
+  {
+   "id": "bottle_half_buried",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the water bottle is half-buried in the sand",
+   "question": "Is the water bottle half-buried in the sand?"
+  },
+  {
+   "id": "bottle_next_to_coach",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "coach"
+   ],
+   "desc": "the water bottle is next to the coach in a polo shirt",
+   "question": "Is the water bottle next to the coach in a polo shirt?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow swimsuit sits cross-legged",
+   "question": "Is the child in a yellow swimsuit sitting cross-legged?"
+  },
+  {
+   "id": "child_on_towel",
+   "type": "relation",
+   "of": [
+    "child",
+    "towel"
+   ],
+   "desc": "the child in a yellow swimsuit sits on the colorful towel",
+   "question": "Is the child in a yellow swimsuit sitting on the colorful towel?"
+  },
+  {
+   "id": "child_looking_dog",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a yellow swimsuit looks at the brown dog",
+   "question": "Is the child in a yellow swimsuit looking at the brown dog?"
+  },
+  {
+   "id": "dog_behind_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the brown dog is behind the child in a yellow swimsuit",
+   "question": "Is the brown dog behind the child in a yellow swimsuit?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down with its head on its paws",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "player_white_blocking",
+   "type": "state",
+   "of": "player_white",
+   "desc": "the player in a white tank top has arms raised to block",
+   "question": "Is the player in a white tank top raising their arms to block?"
+  },
+  {
+   "id": "player_white_looking_ball",
+   "type": "action",
+   "of": [
+    "player_white",
+    "ball"
+   ],
+   "desc": "the player in a white tank top looks up at the volleyball",
+   "question": "Is the player in a white tank top looking up at the volleyball?"
+  },
+  {
+   "id": "player_black_diving",
+   "type": "state",
+   "of": "player_black",
+   "desc": "the player in black shorts is diving with their body stretched out",
+   "question": "Is the player in black shorts diving?"
+  },
+  {
+   "id": "player_black_reaching",
+   "type": "action",
+   "of": [
+    "player_black",
+    "ball"
+   ],
+   "desc": "the player in black shorts reaches for the volleyball",
+   "question": "Is the player in black shorts reaching for the volleyball?"
+  },
+  {
+   "id": "no_umbrella",
+   "type": "absent",
+   "desc": "an umbrella shading spectators",
+   "question": "Is there an umbrella shading any spectators?"
+  },
+  {
+   "id": "no_bird",
+   "type": "absent",
+   "desc": "a bird flying in the sky",
+   "question": "Is there a bird flying in the sky?"
+  },
+  {
+   "id": "scoreboard_numbers",
+   "type": "attribute",
+   "of": "scoreboard",
+   "desc": "the scoreboard displays numbers clearly",
+   "question": "Does the scoreboard display numbers clearly?"
+  },
+  {
+   "id": "coach_gesturing",
+   "type": "state",
+   "of": "coach",
+   "desc": "the coach in a polo shirt gestures emphatically",
+   "question": "Is the coach in a polo shirt gesturing emphatically?"
+  },
+  {
+   "id": "child_focused",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow swimsuit is focused on the play",
+   "question": "Is the child in a yellow swimsuit focused on the play?"
+  },
+  {
+   "id": "dog_still",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog remains still",
+   "question": "Is the brown dog remaining still?"
+  },
+  {
+   "id": "dog_head_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog rests its head on its paws",
+   "question": "Does the brown dog rest its head on its paws?"
+  },
+  {
+   "id": "player_black_stretched",
+   "type": "state",
+   "of": "player_black",
+   "desc": "the player in black shorts has their body stretched out",
+   "question": "Is the body of the player in black shorts stretched out?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "referee",
+   "kind": "support"
+  },
+  {
+   "from": "towel",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t20_0105",
+ "prompt": "This oil painting depicts a vibrant beach volleyball tournament scene. In the center, a player in a blue jersey leaps high to spike the ball. To the left, a referee in a striped shirt stands on a tall chair, watching intently. Next to the referee, a spectator in a wide-brimmed hat shields their eyes from the sun. On the right, a coach in a polo shirt points toward the court, giving instructions. Beside the coach, a water bottle sits on the sand, half-buried. In the foreground, a child in a yellow swimsuit sits on a colorful towel, looking at the game. Behind the child, a brown dog lies down, resting its head on its paws. Near the net, a player in a white tank top prepares to block, arms raised. Another player in black shorts dives for the ball, body stretched out. A scoreboard in the background displays numbers clearly. The player in the blue jersey is mid-air, demonstrating athletic prowess. The referee maintains an upright posture, overseeing the match. The spectator leans forward slightly, engaged in the action. The coach gestures emphatically, directing the team. The child sits cross-legged, focused on the play. The dog remains still, providing a calm contrast. The player in the white tank top looks up at the ball. The diving player reaches out with determination. The referee looks at the player in the blue jersey. The coach points at the player in the white tank top. The child looks at the brown dog. The water bottle is next to the coach. There is no umbrella shading the spectators. There is no bird flying in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

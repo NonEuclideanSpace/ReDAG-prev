@@ -1,0 +1,334 @@
+{
+ "style": "flat vector illustration, bold unshaded colors, clear outlines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception background with simple geometric shapes representing hanging lights and streamers",
+   "question": "Does the background feature simple geometric shapes representing hanging lights and streamers?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a blue tuxedo",
+   "question": "Is there a tall man in a blue tuxedo?",
+   "box": [
+    50,
+    100,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman_gown",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a flowing white gown",
+   "question": "Is there a woman in a flowing white gown?",
+   "box": [
+    320,
+    250,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small round table",
+   "question": "Is there a small round table?",
+   "box": [
+    400,
+    600,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "cake",
+   "plural": "cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a multi-tiered cake with pink frosting",
+   "question": "Is there a multi-tiered cake with pink frosting?",
+   "box": [
+    450,
+    500,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever dog",
+   "question": "Is there a golden retriever dog?",
+   "box": [
+    680,
+    650,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush beige rug",
+   "question": "Is there a plush beige rug?",
+   "box": [
+    600,
+    850,
+    1000,
+    1024
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    200,
+    150,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a purple dress",
+   "question": "Is there an elderly woman in a purple dress?",
+   "box": [
+    850,
+    200,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "man_flute",
+   "type": "attribute",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a blue tuxedo holds a champagne flute upright",
+   "question": "Is the tall man in a blue tuxedo holding a champagne flute upright?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_gown",
+   "desc": "the woman in a flowing white gown is sitting",
+   "question": "Is the woman in a flowing white gown sitting?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman_gown",
+   "desc": "the woman in a flowing white gown leans back slightly",
+   "question": "Does the woman in a flowing white gown lean back slightly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever dog sits patiently",
+   "question": "Is the golden retriever dog sitting patiently?"
+  },
+  {
+   "id": "dog_gazing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever dog gazes upward",
+   "question": "Is the golden retriever dog gazing upward?"
+  },
+  {
+   "id": "elderly_woman_smiling",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a purple dress smiles warmly",
+   "question": "Is the elderly woman in a purple dress smiling warmly?"
+  },
+  {
+   "id": "man_beside_woman",
+   "type": "relation",
+   "of": [
+    "man_tuxedo",
+    "woman_gown"
+   ],
+   "desc": "the tall man in a blue tuxedo stands beside the woman in a flowing white gown",
+   "question": "Is the tall man in a blue tuxedo standing beside the woman in a flowing white gown?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the multi-tiered cake with pink frosting is on the small round table",
+   "question": "Is the multi-tiered cake with pink frosting on the small round table?"
+  },
+  {
+   "id": "dog_next_to_table",
+   "type": "relation",
+   "of": [
+    "dog",
+    "table"
+   ],
+   "desc": "the golden retriever dog sits next to the small round table",
+   "question": "Is the golden retriever dog sitting next to the small round table?"
+  },
+  {
+   "id": "waiter_behind_couple",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "man_tuxedo"
+   ],
+   "desc": "the waiter in a black vest is behind the tall man in a blue tuxedo",
+   "question": "Is the waiter in a black vest behind the tall man in a blue tuxedo?"
+  },
+  {
+   "id": "waiter_points",
+   "type": "action",
+   "of": [
+    "waiter",
+    "man_tuxedo"
+   ],
+   "desc": "the waiter in a black vest points toward the tall man in a blue tuxedo",
+   "question": "Is the waiter in a black vest pointing toward the tall man in a blue tuxedo?"
+  },
+  {
+   "id": "elderly_woman_looks_at_dog",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "dog"
+   ],
+   "desc": "the elderly woman in a purple dress looks at the golden retriever dog",
+   "question": "Is the elderly woman in a purple dress looking at the golden retriever dog?"
+  },
+  {
+   "id": "man_hands_napkin",
+   "type": "action",
+   "of": [
+    "man_tuxedo",
+    "woman_gown"
+   ],
+   "desc": "the tall man in a blue tuxedo hands a napkin to the woman in a flowing white gown",
+   "question": "Is the tall man in a blue tuxedo handing a napkin to the woman in a flowing white gown?"
+  },
+  {
+   "id": "dog_on_rug",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rug"
+   ],
+   "desc": "the golden retriever dog sits on the plush beige rug",
+   "question": "Is the golden retriever dog sitting on the plush beige rug?"
+  },
+  {
+   "id": "no_alcohol",
+   "type": "absent",
+   "desc": "alcohol visible in any glass",
+   "question": "Is there any alcohol visible in any glass?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a blue tuxedo stands",
+   "question": "Is the tall man in a blue tuxedo standing?"
+  },
+  {
+   "id": "waiter_behind_woman",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "woman_gown"
+   ],
+   "desc": "the waiter in a black vest is behind the woman in a flowing white gown",
+   "question": "Is the waiter in a black vest behind the woman in a flowing white gown?"
+  },
+  {
+   "id": "no_alcohol_bottle",
+   "type": "absent",
+   "desc": "alcohol visible in any bottle",
+   "question": "Is there any alcohol visible in any bottle?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  },
+  {
+   "from": "rug",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0033",
+ "prompt": "This flat vector illustration depicts a lively wedding reception scene. On the left stands a tall man in a blue tuxedo, holding a champagne flute upright. Beside him on the right sits a woman in a flowing white gown, her posture relaxed as she leans back slightly. In the center foreground, a small round table holds a multi-tiered cake with pink frosting. A golden retriever dog sits patiently next to the table, gazing upward with anticipation. Behind the couple, a waiter in a black vest points toward the dance floor, directing attention away from the food. To the far right, an elderly woman in a purple dress looks at the dog with a warm smile. The man in the blue tuxedo is handing a napkin to the woman in the white gown, creating a gentle moment of care between them. The golden retriever is sitting on a plush beige rug, anchoring the lower part of the composition. There is no alcohol visible in any glass or bottle throughout the scene, maintaining a wholesome atmosphere. The background features simple geometric shapes representing hanging lights and streamers, keeping the focus on the six distinct figures. The colors are bold and unshaded, typical of the style, with clear outlines defining each character and object. The spatial arrangement ensures that every entity is easily distinguishable, from the sharp lines of the tuxedo to the soft curves of the wedding dress. The interaction of pointing adds dynamic movement, while the act of handing the napkin provides a focal point of human connection amidst the celebration.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

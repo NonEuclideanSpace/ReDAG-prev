@@ -1,0 +1,180 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a fire station bay",
+   "question": "Does the image show the interior of a fire station bay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter in a yellow helmet?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian?",
+   "box": [
+    380,
+    400,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished red fire truck",
+   "question": "Is there a polished red fire truck?",
+   "box": [
+    550,
+    150,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic in blue overalls?",
+   "box": [
+    700,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose",
+   "question": "Is the firefighter holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter is standing",
+   "question": "Is the firefighter standing?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dalmatian_next_to_truck",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "truck"
+   ],
+   "desc": "the dalmatian is next to the fire truck",
+   "question": "Is the dalmatian next to the fire truck?"
+  },
+  {
+   "id": "mechanic_points_at_dog",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "dalmatian"
+   ],
+   "desc": "the mechanic points at the dalmatian",
+   "question": "Is the mechanic pointing at the dalmatian?"
+  },
+  {
+   "id": "mechanic_looking_firefighter",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "firefighter"
+   ],
+   "desc": "the mechanic looks toward the firefighter",
+   "question": "Is the mechanic looking toward the firefighter?"
+  },
+  {
+   "id": "firefighter_looking_mechanic",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "mechanic"
+   ],
+   "desc": "the firefighter looks back at the mechanic",
+   "question": "Is the firefighter looking back at the mechanic?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke",
+   "question": "Is there any smoke visible in the image?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0068",
+ "prompt": "In an anime style illustration set inside a fire station, a firefighter in a yellow helmet stands on the left holding a coiled hose. In the center, a dalmatian with black spots sits patiently next to a polished red fire truck. On the right, a mechanic in blue overalls points at the dog while looking toward the firefighter. The firefighter looks back at the mechanic, creating a triangular gaze. There is no smoke visible in the clean bay. The scene captures a quiet moment of preparation and camaraderie among the trio, with distinct characters positioned clearly across the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench in the image?",
+   "box": [
+    350,
+    600,
+    674,
+    900
+   ]
+  },
+  {
+   "id": "iv_stand",
+   "type": "entity",
+   "class": "iv stand",
+   "plural": "iv stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling IV stand",
+   "question": "Is there a rolling IV stand?",
+   "box": [
+    750,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray cardigan",
+   "question": "Is there an elderly man in a gray cardigan?",
+   "box": [
+    400,
+    300,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the gray cardigan is sitting",
+   "question": "Is the elderly man in the gray cardigan sitting?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs looks at the elderly man in the gray cardigan",
+   "question": "Is the nurse in blue scrubs looking at the elderly man in the gray cardigan?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man in the gray cardigan sits on the metal bench",
+   "question": "Is the elderly man in the gray cardigan sitting on the metal bench?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through windows",
+   "question": "Is there sunlight streaming through windows in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "iv_bags",
+   "type": "entity",
+   "class": "iv bag",
+   "plural": "iv bags",
+   "count": 2,
+   "count_exact": false,
+   "desc": "clear IV bags",
+   "question": "Are there clear IV bags?",
+   "box": [
+    750,
+    300,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "bags_on_stand",
+   "type": "relation",
+   "of": [
+    "iv_bags",
+    "iv_stand"
+   ],
+   "desc": "the clear IV bags are on the rolling IV stand",
+   "question": "Are the clear IV bags on the rolling IV stand?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  },
+  {
+   "from": "iv_stand",
+   "to": "iv_bags",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0053",
+ "prompt": "In a photorealistic photo, a sterile hospital corridor features three distinct figures. On the left stands a nurse in blue scrubs holding a clipboard. In the center sits an elderly man in a gray cardigan on a metal bench. To the right is a rolling IV stand with clear bags. The nurse in blue scrubs is looking at the elderly man in the gray cardigan. The elderly man in the gray cardigan is sitting on the metal bench. There is no sunlight streaming through windows.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

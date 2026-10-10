@@ -1,0 +1,358 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn with cobblestones",
+   "question": "Does the image show a quiet village market at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman in a blue shawl?",
+   "box": [
+    100,
+    200,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy in a yellow cap?",
+   "box": [
+    400,
+    300,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "baskets",
+   "type": "entity",
+   "class": "woven basket",
+   "plural": "woven baskets",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a stack of woven baskets",
+   "question": "Is there a stack of woven baskets?",
+   "box": [
+    700,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green apron",
+   "question": "Is there a man in a green apron?",
+   "box": [
+    750,
+    250,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "low stool",
+   "plural": "low stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low stool",
+   "question": "Is there a low stool?",
+   "box": [
+    780,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    850,
+    700,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "donkey",
+   "type": "entity",
+   "class": "donkey",
+   "plural": "donkeys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown donkey",
+   "question": "Is there a brown donkey?",
+   "box": [
+    50,
+    150,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "post",
+   "type": "entity",
+   "class": "post",
+   "plural": "posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a post",
+   "question": "Is there a post?",
+   "box": [
+    20,
+    100,
+    100,
+    600
+   ]
+  },
+  {
+   "id": "woman_beside_crate",
+   "type": "relation",
+   "of": [
+    "woman",
+    "crate"
+   ],
+   "desc": "the elderly woman stands beside the wooden crate",
+   "question": "Is the elderly woman standing beside the wooden crate?"
+  },
+  {
+   "id": "boy_points_baskets",
+   "type": "action",
+   "of": [
+    "boy",
+    "baskets"
+   ],
+   "desc": "the young boy points toward the stack of woven baskets",
+   "question": "Is the young boy pointing toward the stack of woven baskets?"
+  },
+  {
+   "id": "man_sits_stool",
+   "type": "relation",
+   "of": [
+    "man",
+    "stool"
+   ],
+   "desc": "the man sits on the low stool",
+   "question": "Is the man sitting on the low stool?"
+  },
+  {
+   "id": "man_looks_boy",
+   "type": "action",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the man looks at the boy",
+   "question": "Is the man looking at the boy?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the spotted cat is next to the man",
+   "question": "Is the spotted cat next to the man?"
+  },
+  {
+   "id": "cat_rests",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat rests calmly",
+   "question": "Is the spotted cat resting calmly?"
+  },
+  {
+   "id": "donkey_behind_woman",
+   "type": "relation",
+   "of": [
+    "donkey",
+    "woman"
+   ],
+   "desc": "the brown donkey is behind the elderly woman",
+   "question": "Is the brown donkey behind the elderly woman?"
+  },
+  {
+   "id": "donkey_tethered_post",
+   "type": "relation",
+   "of": [
+    "donkey",
+    "post"
+   ],
+   "desc": "the brown donkey is tethered to the post",
+   "question": "Is the brown donkey tethered to the post?"
+  },
+  {
+   "id": "woman_hands_orange_boy",
+   "type": "action",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the elderly woman hands an orange to the boy",
+   "question": "Is the elderly woman handing an orange to the boy?"
+  },
+  {
+   "id": "boy_looks_man",
+   "type": "action",
+   "of": [
+    "boy",
+    "man"
+   ],
+   "desc": "the boy looks at the man",
+   "question": "Is the boy looking at the man?"
+  },
+  {
+   "id": "no_signage",
+   "type": "absent",
+   "desc": "modern signage",
+   "question": "Are there any modern signs in the image?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman in a blue shawl stands",
+   "question": "Is the elderly woman in a blue shawl standing?"
+  },
+  {
+   "id": "donkey_stands",
+   "type": "state",
+   "of": "donkey",
+   "desc": "the brown donkey stands still",
+   "question": "Is the brown donkey standing still?"
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone pavement",
+   "plural": "cobblestone pavements",
+   "count": 1,
+   "count_exact": true,
+   "desc": "cobblestone pavement",
+   "question": "Is there cobblestone pavement?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "oranges",
+   "type": "entity",
+   "class": "orange",
+   "plural": "oranges",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright oranges",
+   "question": "Are there bright oranges?",
+   "box": [
+    80,
+    620,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "oranges_in_crate",
+   "type": "relation",
+   "of": [
+    "oranges",
+    "crate"
+   ],
+   "desc": "the bright oranges are in the wooden crate",
+   "question": "Are the bright oranges in the wooden crate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "oranges",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0078",
+ "prompt": "A photorealistic photo captures a quiet village market at dawn. On the left, an elderly woman in a blue shawl stands beside a wooden crate filled with bright oranges. In the center, a young boy in a yellow cap points toward a stack of woven baskets. To the right, a man in a green apron sits on a low stool, looking at the boy. Next to the man, a spotted cat rests calmly on the cobblestones. Behind the woman, a brown donkey stands still, tethered to a post. The woman hands an orange to the boy. The boy looks at the man. The cat is next to the man. The donkey is behind the woman. There is no modern signage.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

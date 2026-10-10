@@ -1,0 +1,523 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, distorted perspective, golden afternoon light, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with walls folding inward",
+   "question": "Does the image show a room with walls folding inward?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped and timeworn mahogany desk",
+   "question": "Is there a warped and timeworn mahogany desk?",
+   "box": [
+    200,
+    500,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "eraser_main",
+   "type": "entity",
+   "class": "eraser",
+   "plural": "erasers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty eraser",
+   "question": "Is there a dusty eraser?",
+   "box": [
+    750,
+    516,
+    800,
+    564
+   ]
+  },
+  {
+   "id": "pencil",
+   "type": "entity",
+   "class": "pencil",
+   "plural": "pencils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow pencil splintered at the tip with broken lead",
+   "question": "Is there a yellow pencil splintered at the tip?",
+   "box": [
+    700,
+    530,
+    760,
+    600
+   ]
+  },
+  {
+   "id": "water_pool",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small shimmering pool of water",
+   "question": "Is there a small shimmering pool of water?",
+   "box": [
+    680,
+    576,
+    780,
+    624
+   ]
+  },
+  {
+   "id": "glass",
+   "type": "entity",
+   "class": "drinking glass",
+   "plural": "drinking glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tipped over drinking glass",
+   "question": "Is there a tipped over drinking glass?",
+   "box": [
+    650,
+    550,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "paper",
+   "type": "entity",
+   "class": "sheet of paper",
+   "plural": "sheets of paper",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crumpled sheet of paper",
+   "question": "Is there a crumpled sheet of paper?",
+   "box": [
+    220,
+    510,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "floating_erasers",
+   "type": "entity",
+   "class": "eraser",
+   "plural": "erasers",
+   "count": 12,
+   "count_exact": true,
+   "desc": "twelve identical erasers",
+   "question": "Are there twelve identical erasers?",
+   "box": [
+    400,
+    100,
+    624,
+    400
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter with a translucent ribbon",
+   "question": "Is there a typewriter with a translucent ribbon?",
+   "box": [
+    50,
+    600,
+    180,
+    750
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wide open window",
+   "question": "Is there a wide open window?",
+   "box": [
+    300,
+    0,
+    724,
+    200
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "chandelier",
+   "plural": "chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chandelier made of magnifying glasses",
+   "question": "Is there a chandelier made of magnifying glasses?",
+   "box": [
+    400,
+    0,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "eraser_hand",
+   "type": "attribute",
+   "of": "eraser_main",
+   "desc": "the dusty eraser has sprouted rubber fingers forming a hand",
+   "question": "Does the dusty eraser have rubber fingers forming a hand?"
+  },
+  {
+   "id": "pencil_state",
+   "type": "state",
+   "of": "pencil",
+   "desc": "the yellow pencil is leaning at a precarious angle",
+   "question": "Is the yellow pencil leaning at a precarious angle?"
+  },
+  {
+   "id": "paper_state",
+   "type": "state",
+   "of": "paper",
+   "desc": "the crumpled sheet of paper is fluttering mid-air",
+   "question": "Is the crumpled sheet of paper fluttering mid-air?"
+  },
+  {
+   "id": "water_on_desk",
+   "type": "relation",
+   "of": [
+    "water_pool",
+    "desk"
+   ],
+   "desc": "the pool of water is on the desk",
+   "question": "Is the pool of water on the desk?"
+  },
+  {
+   "id": "eraser_on_desk",
+   "type": "relation",
+   "of": [
+    "eraser_main",
+    "desk"
+   ],
+   "desc": "the dusty eraser rests on the far edge of the desk",
+   "question": "Is the dusty eraser resting on the far edge of the desk?"
+  },
+  {
+   "id": "pencil_beside_eraser",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "eraser_main"
+   ],
+   "desc": "the yellow pencil is beside the dusty eraser",
+   "question": "Is the yellow pencil beside the dusty eraser?"
+  },
+  {
+   "id": "lead_in_water",
+   "type": "relation",
+   "of": [
+    "pencil",
+    "water_pool"
+   ],
+   "desc": "the broken lead of the pencil lies in the pool of water",
+   "question": "Does the broken lead of the pencil lie in the pool of water?"
+  },
+  {
+   "id": "glass_on_desk",
+   "type": "relation",
+   "of": [
+    "glass",
+    "desk"
+   ],
+   "desc": "the tipped over glass is on the desk",
+   "question": "Is the tipped over glass on the desk?"
+  },
+  {
+   "id": "rivulets_on_desk",
+   "type": "relation",
+   "of": [
+    "water_pool",
+    "desk"
+   ],
+   "desc": "water rivulets from the glass carve patterns into the desk surface",
+   "question": "Do water rivulets carve patterns into the desk surface?"
+  },
+  {
+   "id": "paper_on_desk",
+   "type": "relation",
+   "of": [
+    "paper",
+    "desk"
+   ],
+   "desc": "the crumpled paper clings to the edge of the desk",
+   "question": "Is the crumpled paper clinging to the edge of the desk?"
+  },
+  {
+   "id": "erasers_above_desk",
+   "type": "relation",
+   "of": [
+    "floating_erasers",
+    "desk"
+   ],
+   "desc": "the twelve erasers are suspended above the desk",
+   "question": "Are the twelve erasers suspended above the desk?"
+  },
+  {
+   "id": "typewriter_corner",
+   "type": "state",
+   "of": "typewriter",
+   "desc": "the typewriter sits in the corner of the room",
+   "question": "Is the typewriter sitting in the corner of the room?"
+  },
+  {
+   "id": "window_above",
+   "type": "relation",
+   "of": [
+    "window",
+    "desk"
+   ],
+   "desc": "the window is above the desk",
+   "question": "Is the window above the desk?"
+  },
+  {
+   "id": "desk_standing",
+   "type": "state",
+   "of": "desk",
+   "desc": "the warped mahogany desk stands",
+   "question": "Is the warped mahogany desk standing?"
+  },
+  {
+   "id": "pencil_rolling",
+   "type": "state",
+   "of": "pencil",
+   "desc": "the yellow pencil is rolling backward",
+   "question": "Is the yellow pencil rolling backward?"
+  },
+  {
+   "id": "lead_disappearing",
+   "type": "action",
+   "of": [
+    "pencil",
+    "water_pool"
+   ],
+   "desc": "the broken lead of the pencil disappears into the pool of water",
+   "question": "Does the broken lead of the pencil disappear into the pool of water?"
+  },
+  {
+   "id": "lead_reappearing",
+   "type": "action",
+   "of": [
+    "pencil",
+    "eraser_main"
+   ],
+   "desc": "the broken lead reappears in the grip of the dusty eraser",
+   "question": "Does the broken lead reappear in the grip of the dusty eraser?"
+  },
+  {
+   "id": "glass_tipped",
+   "type": "state",
+   "of": "glass",
+   "desc": "the tipped over drinking glass is lying on its side",
+   "question": "Is the drinking glass lying on its side?"
+  },
+  {
+   "id": "chandelier_hanging",
+   "type": "state",
+   "of": "chandelier",
+   "desc": "the chandelier of magnifying glasses hangs from the ceiling",
+   "question": "Does the chandelier of magnifying glasses hang from the ceiling?"
+  },
+  {
+   "id": "window_open",
+   "type": "state",
+   "of": "window",
+   "desc": "the wide window is open and creaking in the breeze",
+   "question": "Is the wide window open?"
+  },
+  {
+   "id": "lead_rod",
+   "type": "entity",
+   "class": "pencil lead",
+   "plural": "pencil leads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a broken tiny black rod of pencil lead",
+   "question": "Is there a broken tiny black rod of pencil lead?",
+   "box": [
+    480,
+    750,
+    544,
+    814
+   ]
+  },
+  {
+   "id": "pencil_tip_splintered",
+   "type": "attribute",
+   "of": "pencil",
+   "desc": "the yellow pencil is splintered at the tip",
+   "question": "Is the yellow pencil splintered at the tip?"
+  },
+  {
+   "id": "glass_deliberate",
+   "type": "attribute",
+   "of": "glass",
+   "desc": "the tipped over glass appears deliberately placed",
+   "question": "Does the tipped over glass appear to have been placed deliberately rather than knocked over by clumsiness?"
+  },
+  {
+   "id": "ribbon_translucent",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter's ribbon is translucent",
+   "question": "Is the typewriter's ribbon translucent?"
+  },
+  {
+   "id": "ribbon_image",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter's translucent ribbon reveals a faint image of an eraser inside it",
+   "question": "Does the typewriter's translucent ribbon reveal a faint image of an eraser inside it?"
+  },
+  {
+   "id": "chandelier_distorting",
+   "type": "state",
+   "of": "chandelier",
+   "desc": "the chandelier's magnifying glasses distort the light",
+   "question": "Do the magnifying glasses in the chandelier distort the light?"
+  },
+  {
+   "id": "eraser_licked",
+   "type": "attribute",
+   "of": "eraser_main",
+   "desc": "the dusty eraser is half-licked",
+   "question": "Is the dusty eraser half-licked?"
+  },
+  {
+   "id": "paper_fingerprints",
+   "type": "attribute",
+   "of": "paper",
+   "desc": "the crumpled sheet of paper has faint fingerprints",
+   "question": "Does the crumpled sheet of paper have faint fingerprints?"
+  },
+  {
+   "id": "desk_carvings",
+   "type": "attribute",
+   "of": "desk",
+   "desc": "faint letter carvings on the desk surface",
+   "question": "Are there faint letter carvings on the desk surface?"
+  },
+  {
+   "id": "erasers_spiral",
+   "type": "state",
+   "of": "floating_erasers",
+   "desc": "the twelve identical erasers are suspended in a spiral",
+   "question": "Are the twelve identical erasers suspended in a spiral?"
+  },
+  {
+   "id": "window_sky",
+   "type": "attribute",
+   "of": "window",
+   "desc": "the window frames a swirling ink-like sky",
+   "question": "Does the window frame a swirling ink-like sky?"
+  },
+  {
+   "id": "eraser_graphite",
+   "type": "attribute",
+   "of": "eraser_main",
+   "desc": "the dusty eraser is smudged with graphite",
+   "question": "Is the dusty eraser smudged with graphite?"
+  },
+  {
+   "id": "paper_graphite",
+   "type": "attribute",
+   "of": "paper",
+   "desc": "the crumpled sheet of paper has graphite smudges",
+   "question": "Does the crumpled sheet of paper have graphite smudges?"
+  },
+  {
+   "id": "typewriter_keys",
+   "type": "attribute",
+   "of": "typewriter",
+   "desc": "the typewriter keys are dusted with graphite",
+   "question": "Are the typewriter keys dusted with graphite?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "eraser_main",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "pencil",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "water_pool",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "glass",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "paper",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "lead_rod",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0033",
+ "prompt": "The desk, a warped and timeworn relic of mahogany, stood in the center of a room where time had pooled unevenly, like spilled ink. A dusty eraser, half-licked and smudged with the ghost of graphite, rested on the desk’s far edge, as if it had just failed to correct some unseen error from a moment that no longer existed. Beside it, a yellow pencil—splintered at the tip—leaned at a precarious angle, its broken lead lying in a small pool of water that shimmered oddly, as though reflecting a sky not visible through the open window above. That window, wide and creaking in the breeze, let in not only the rustling air but a slant of golden afternoon light that twisted unnaturally as it passed through a glass that had tipped over not from clumsiness, but from a deliberate, if mysterious, intention. The water from the glass had formed rivulets that carved strange patterns into the wood, revealing faint carvings beneath—letters that shifted when glanced at sideways, as if spelling out a name only the room could understand. A crumpled sheet of paper, still clinging to the desk’s edge, fluttered like a bird caught mid-flight, its creases and folds mapping a topography of failed ideas, smudged with the graphite of half-crossed-out thoughts and faint fingerprints that never seemed to fade. Suspended above the desk, as if by invisible threads, a dozen identical erasers hung in a spiral, rotating slowly and synchronizing their motion with the ticking of a clock that didn’t exist—its sound echoed from the walls, the floor, the very air. The pencil, in a moment of uncanny animation, began to roll backward, retracing its path as though the act of writing itself was being unmade, and with it, the room seemed to bend slightly, walls folding in like the pages of a book closing. A typewriter sat in the corner, keys dusted with the same graphite smudge, but its ribbon had turned translucent, revealing a faint image of the eraser inside it—etched like a tattoo, pulsing faintly in time with the pencil’s reverse motion. From the ceiling, a chandelier hung not with crystals but with magnifying glasses, each one distorting the light in a different dimension, making shadows flicker with independent life. The broken lead of the pencil, now a tiny black rod, rolled into the water and disappeared—only to reappear in the eraser’s grip, which, in a surreal act of defiance of logic, had sprouted a hand of rubber fingers, as if reaching to correct the error that never was. In the distance, the window framed not a street but a sky that pulsed with ink, swirling like a mind trying to rewrite its own thoughts. And in the middle of it all, the desk—anchored, unmoving—held the weight of all these contradictions, binding them together in a single, impossible moment that refused to collapse, instead expanding outward like a scene from a story that was never written, only imagined.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 38,
+   "n_uncovered": 3,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

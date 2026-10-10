@@ -1,0 +1,242 @@
+{
+ "style": "cinematic film still, high contrast, snowy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with snow covering every surface uniformly",
+   "question": "Does the image show a snowy town square with snow covering every surface uniformly?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "lantern_post",
+   "type": "entity",
+   "class": "lantern post",
+   "plural": "lantern posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black lantern post",
+   "question": "Is there a black lantern post?",
+   "box": [
+    50,
+    200,
+    150,
+    800
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue coat",
+   "question": "Is there an old woman in a blue coat?",
+   "box": [
+    160,
+    250,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow hat",
+   "question": "Is there a young boy in a yellow hat?",
+   "box": [
+    400,
+    300,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    560,
+    500,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green scarf",
+   "question": "Is there a man in a green scarf?",
+   "box": [
+    750,
+    250,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "paper_bag",
+   "type": "entity",
+   "class": "paper bag",
+   "plural": "paper bags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small paper bag",
+   "question": "Is there a small paper bag?",
+   "box": [
+    680,
+    450,
+    740,
+    510
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    300,
+    600,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "bench_snowy",
+   "type": "state",
+   "of": "bench",
+   "desc": "the wooden bench is under a layer of fresh snow",
+   "question": "Is the wooden bench under a layer of fresh snow?"
+  },
+  {
+   "id": "woman_beside_post",
+   "type": "relation",
+   "of": [
+    "old_woman",
+    "lantern_post"
+   ],
+   "desc": "the old woman stands beside the black lantern post",
+   "question": "Is the old woman standing beside the black lantern post?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy points toward the right",
+   "question": "Is the young boy pointing toward the right?"
+  },
+  {
+   "id": "dog_next_to_boy",
+   "type": "relation",
+   "of": [
+    "dog",
+    "boy"
+   ],
+   "desc": "the brown dog sits next to the young boy",
+   "question": "Is the brown dog sitting next to the young boy?"
+  },
+  {
+   "id": "dog_looking_at_boy",
+   "type": "action",
+   "of": [
+    "dog",
+    "boy"
+   ],
+   "desc": "the brown dog looks up at the young boy",
+   "question": "Is the brown dog looking up at the young boy?"
+  },
+  {
+   "id": "man_holding_bag",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds out a small paper bag",
+   "question": "Is the man holding out a small paper bag?"
+  },
+  {
+   "id": "man_handing_to_boy",
+   "type": "action",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the man hands the small paper bag to the young boy",
+   "question": "Is the man handing the small paper bag to the young boy?"
+  },
+  {
+   "id": "bench_behind_group",
+   "type": "relation",
+   "of": [
+    "bench",
+    "boy"
+   ],
+   "desc": "the wooden bench is behind the young boy and the man",
+   "question": "Is the wooden bench behind the young boy and the man?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "visible smoke rising from chimneys",
+   "question": "Is there any visible smoke rising from chimneys in the image?"
+  },
+  {
+   "id": "old_woman_standing",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the old woman in a blue coat stands",
+   "question": "Is the old woman in a blue coat standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits",
+   "question": "Is the brown dog sitting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bench",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0066",
+ "prompt": "A cinematic film still captures a quiet moment in a snowy town square. On the left, an old woman in a blue coat stands beside a black lantern post. In the center, a young boy in a yellow hat points toward the right side of the frame. A brown dog sits patiently next to the boy, looking up at him with attentive eyes. On the right, a man in a green scarf holds out a small paper bag, handing it to the boy. Behind them, a wooden bench remains empty under a layer of fresh snow. There is no visible smoke rising from any chimneys. The scene is frozen in time, highlighting the stark contrast between the vibrant clothing and the white surroundings. The interaction between the man and the boy suggests a simple exchange, while the dog's presence adds warmth to the chilly atmosphere. The old woman observes silently from her position on the left, creating a balanced composition across the square. The snow covers every surface uniformly, emphasizing the stillness of the environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

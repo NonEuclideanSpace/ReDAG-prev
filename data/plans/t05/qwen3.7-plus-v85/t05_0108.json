@@ -1,0 +1,315 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit botanical greenhouse interior with plants and structural elements",
+   "question": "Does the image depict a sunlit botanical greenhouse interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench in the image?",
+   "box": [
+    350,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    600,
+    550,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child",
+   "question": "Is there a child?",
+   "box": [
+    750,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern",
+   "question": "Is there a large fern?",
+   "box": [
+    850,
+    100,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "terracotta pot",
+   "plural": "terracotta pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a terracotta pot",
+   "question": "Is there a terracotta pot?",
+   "box": [
+    800,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "orchid",
+   "type": "entity",
+   "class": "orchid",
+   "plural": "orchids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blooming orchid",
+   "question": "Is there a blooming orchid?",
+   "box": [
+    820,
+    600,
+    930,
+    750
+   ]
+  },
+  {
+   "id": "woman_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow hat holds a silver watering can",
+   "question": "Is the woman in the yellow hat holding a silver watering can?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue coat is sitting",
+   "question": "Is the man in the blue coat sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is resting its head",
+   "question": "Is the small brown dog resting its head?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "fern"
+   ],
+   "desc": "the child in green overalls points at the large fern",
+   "question": "Is the child in green overalls pointing at the large fern?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the yellow hat looks at the man in the blue coat",
+   "question": "Is the woman in the yellow hat looking at the man in the blue coat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in the blue coat sits on the wooden bench",
+   "question": "Is the man in the blue coat sitting on the wooden bench?"
+  },
+  {
+   "id": "dog_touching_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the small brown dog touches the man in the blue coat",
+   "question": "Is the small brown dog touching the man in the blue coat?"
+  },
+  {
+   "id": "child_next_to_pot",
+   "type": "relation",
+   "of": [
+    "child",
+    "pot"
+   ],
+   "desc": "the child in green overalls stands next to the terracotta pot",
+   "question": "Is the child in green overalls standing next to the terracotta pot?"
+  },
+  {
+   "id": "orchid_in_pot",
+   "type": "relation",
+   "of": [
+    "orchid",
+    "pot"
+   ],
+   "desc": "the blooming orchid is in the terracotta pot",
+   "question": "Is the blooming orchid in the terracotta pot?"
+  },
+  {
+   "id": "no_glass_ceiling",
+   "type": "absent",
+   "desc": "glass ceiling",
+   "question": "Is there a glass ceiling visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hat stands",
+   "question": "Is the woman in the yellow hat standing?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in green overalls stands",
+   "question": "Is the child in green overalls standing?"
+  },
+  {
+   "id": "pot_beside_fern",
+   "type": "relation",
+   "of": [
+    "pot",
+    "fern"
+   ],
+   "desc": "the terracotta pot is beside the large fern",
+   "question": "Is the terracotta pot beside the large fern?"
+  },
+  {
+   "id": "woman_yellow_hat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a yellow hat",
+   "question": "Does the woman wear a yellow hat?"
+  },
+  {
+   "id": "man_blue_coat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a blue coat",
+   "question": "Does the man wear a blue coat?"
+  },
+  {
+   "id": "child_green_overalls",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears green overalls",
+   "question": "Does the child wear green overalls?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "pot",
+   "to": "orchid",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0108",
+ "prompt": "In the style of an oil painting, a sunlit botanical greenhouse features five distinct entities. On the left stands a woman in a yellow hat holding a silver watering can. In the center sits a man in a blue coat on a wooden bench. To his right, a small brown dog rests its head on the man's knee. Further right, a child in green overalls points at a large fern. Beside the fern, a terracotta pot holds a blooming orchid. The woman in the yellow hat looks at the man in the blue coat. The child in green overalls stands next to the terracotta pot. The man in the blue coat is sitting on the wooden bench. The small brown dog is touching the man in the blue coat. There is no glass ceiling visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

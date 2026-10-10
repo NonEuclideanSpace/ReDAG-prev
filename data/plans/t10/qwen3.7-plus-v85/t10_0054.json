@@ -1,0 +1,367 @@
+{
+ "style": "oil painting with thick impasto strokes, gritty atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gritty subway platform with tiled walls and a dark tunnel",
+   "question": "Does the image show a gritty subway platform with tiled walls and a dark tunnel?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    280,
+    600,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "man_suit",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    400,
+    180,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "pillar",
+   "type": "entity",
+   "class": "pillar",
+   "plural": "pillars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiled pillar",
+   "question": "Is there a tiled pillar?",
+   "box": [
+    550,
+    100,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a green hoodie",
+   "question": "Is there a teenager in a green hoodie?",
+   "box": [
+    650,
+    250,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "smartphone",
+   "type": "entity",
+   "class": "smartphone",
+   "plural": "smartphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing smartphone",
+   "question": "Is there a glowing smartphone?",
+   "box": [
+    720,
+    450,
+    780,
+    550
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray hat",
+   "question": "Is there an elderly man in a gray hat?",
+   "box": [
+    800,
+    300,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    780,
+    600,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red suitcase",
+   "question": "Is there a red suitcase?",
+   "box": [
+    900,
+    550,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "train_lights",
+   "type": "entity",
+   "class": "train lights",
+   "plural": "train lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "approaching train lights",
+   "question": "Are there train lights visible?",
+   "box": [
+    450,
+    400,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "woman_arms_crossed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow coat has her arms crossed tightly",
+   "question": "Does the woman in the yellow coat have her arms crossed tightly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "woman_holding_leash",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow coat holds a leash",
+   "question": "Is the woman in the yellow coat holding a leash?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_suit",
+   "desc": "the man in the blue suit is leaning casually",
+   "question": "Is the man in the blue suit leaning casually?"
+  },
+  {
+   "id": "man_looking_tunnel",
+   "type": "relation",
+   "of": [
+    "man_suit",
+    "train_lights"
+   ],
+   "desc": "the man in the blue suit has his eyes fixed intently on the tunnel",
+   "question": "Is the man in the blue suit looking intently toward the tunnel?"
+  },
+  {
+   "id": "teenager_looking_phone",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "smartphone"
+   ],
+   "desc": "the teenager in the green hoodie is looking at the smartphone screen",
+   "question": "Is the teenager in the green hoodie looking at the smartphone screen?"
+  },
+  {
+   "id": "elderly_man_slumped",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the gray hat has a slumped posture",
+   "question": "Does the elderly man in the gray hat have a slumped posture?"
+  },
+  {
+   "id": "woman_next_to_dog",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the small brown dog is next to the woman in the yellow coat",
+   "question": "Is the small brown dog next to the woman in the yellow coat?"
+  },
+  {
+   "id": "man_against_pillar",
+   "type": "relation",
+   "of": [
+    "man_suit",
+    "pillar"
+   ],
+   "desc": "the man in the blue suit leans against the tiled pillar",
+   "question": "Is the man in the blue suit leaning against the tiled pillar?"
+  },
+  {
+   "id": "teenager_right_of_man",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "man_suit"
+   ],
+   "desc": "the teenager in the green hoodie is to the right of the man in the blue suit",
+   "question": "Is the teenager in the green hoodie to the right of the man in the blue suit?"
+  },
+  {
+   "id": "elderly_man_on_bench",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "bench"
+   ],
+   "desc": "the elderly man in the gray hat rests on the wooden bench",
+   "question": "Is the elderly man in the gray hat resting on the wooden bench?"
+  },
+  {
+   "id": "suitcase_beside_elderly_man",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "elderly_man"
+   ],
+   "desc": "the red suitcase stands beside the elderly man in the gray hat",
+   "question": "Is the red suitcase standing beside the elderly man in the gray hat?"
+  },
+  {
+   "id": "woman_looking_dog",
+   "type": "action",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in the yellow coat looks down at the small brown dog",
+   "question": "Is the woman in the yellow coat looking down at the small brown dog?"
+  },
+  {
+   "id": "man_pointing_lights",
+   "type": "action",
+   "of": [
+    "man_suit",
+    "train_lights"
+   ],
+   "desc": "the man in the blue suit points toward the approaching train lights",
+   "question": "Is the man in the blue suit pointing toward the approaching train lights?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "a digital clock on the wall",
+   "question": "Is there a digital clock visible on the wall?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow coat stands",
+   "question": "Is the woman in the yellow coat standing?"
+  },
+  {
+   "id": "dog_leash",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the small brown dog wears a leash",
+   "question": "Does the small brown dog wear a leash?"
+  },
+  {
+   "id": "suitcase_handle",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the red suitcase has an extended handle",
+   "question": "Does the red suitcase have an extended handle?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "suitcase",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0054",
+ "prompt": "Rendered in the style of an oil painting, the scene captures a gritty subway platform. On the left, a woman in a yellow coat stands with her arms crossed tightly against the chill. Next to her, a small brown dog sits patiently on the cold concrete, its leash held firmly by the woman. In the center, a man in a blue suit leans casually against a tiled pillar, his eyes fixed intently on the dark tunnel ahead. To his right, a teenager in a green hoodie is absorbed in a glowing smartphone screen, ignoring the surroundings. Further right, an elderly man in a gray hat rests on a wooden bench, his posture slumped in fatigue. Beside him, a red suitcase stands upright, its handle extended. The woman in the yellow coat looks down at the small brown dog, checking its collar. The man in the blue suit points toward the approaching train lights, signaling arrival to no one in particular. The thick impasto strokes capture the grime of the station and the weariness of the commuters. There is no digital clock visible on the wall, leaving time ambiguous and felt only through the anticipation of the crowd. The heavy textures emphasize the isolation of each figure despite their physical proximity. The yellow coat contrasts sharply with the muted browns and grays of the station walls. The blue suit adds a touch of formality to the otherwise chaotic environment. The green hoodie provides a splash of modern youthfulness. The gray hat signifies age and experience. The red suitcase suggests travel and transition. The brown dog offers a sense of loyalty and warmth amidst the cold infrastructure.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

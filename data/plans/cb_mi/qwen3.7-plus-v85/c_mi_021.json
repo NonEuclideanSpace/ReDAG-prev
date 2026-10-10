@@ -1,0 +1,450 @@
+{
+ "style": "cinematic photorealistic, dim lighting, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a modern movie theater auditorium with carpeted aisles and darkened ambiance",
+   "question": "Does the image show the interior of a modern movie theater auditorium?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "movie screen",
+   "plural": "movie screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive silver movie screen",
+   "question": "Is there a massive silver movie screen?",
+   "box": [
+    200,
+    50,
+    824,
+    400
+   ]
+  },
+  {
+   "id": "seats",
+   "type": "entity",
+   "class": "reclining seat",
+   "plural": "reclining seats",
+   "count": 2,
+   "count_exact": false,
+   "desc": "rows of red reclining seats",
+   "question": "Are there rows of red reclining seats?",
+   "box": [
+    0,
+    450,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "patron_1",
+   "type": "entity",
+   "class": "patron",
+   "plural": "patrons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patron settling into a seat",
+   "question": "Is there a patron?",
+   "box": [
+    300,
+    600,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "patron_2",
+   "type": "entity",
+   "class": "patron",
+   "plural": "patrons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second patron settling into a seat",
+   "question": "Is there a second patron?",
+   "box": [
+    550,
+    620,
+    750,
+    920
+   ]
+  },
+  {
+   "id": "popcorn_bucket",
+   "type": "attribute",
+   "of": "patron_1",
+   "desc": "the patron holds a bucket of buttery popcorn",
+   "question": "Is the patron holding a bucket of buttery popcorn?"
+  },
+  {
+   "id": "drink_cup",
+   "type": "attribute",
+   "of": "patron_1",
+   "desc": "the patron holds an oversized soft drink cup",
+   "question": "Is the patron holding an oversized soft drink cup?"
+  },
+  {
+   "id": "usher",
+   "type": "entity",
+   "class": "usher",
+   "plural": "ushers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an usher",
+   "question": "Is there an usher?",
+   "box": [
+    850,
+    500,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "late_arrival",
+   "type": "entity",
+   "class": "patron",
+   "plural": "patrons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a late arrival patron",
+   "question": "Is there a late arrival patron?",
+   "box": [
+    800,
+    550,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "exit_sign",
+   "type": "entity",
+   "class": "exit sign",
+   "plural": "exit signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing emergency exit sign",
+   "question": "Is there a glowing emergency exit sign?",
+   "box": [
+    100,
+    400,
+    150,
+    450
+   ]
+  },
+  {
+   "id": "speaker",
+   "type": "entity",
+   "class": "surround sound speaker",
+   "plural": "surround sound speakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a surround sound speaker",
+   "question": "Is there a surround sound speaker?",
+   "box": [
+    50,
+    200,
+    150,
+    300
+   ]
+  },
+  {
+   "id": "vent",
+   "type": "entity",
+   "class": "air conditioning vent",
+   "plural": "air conditioning vents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an air conditioning vent",
+   "question": "Is there an air conditioning vent?",
+   "box": [
+    400,
+    10,
+    600,
+    60
+   ]
+  },
+  {
+   "id": "extinguisher",
+   "type": "entity",
+   "class": "fire extinguisher",
+   "plural": "fire extinguishers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fire extinguisher",
+   "question": "Is there a fire extinguisher?",
+   "box": [
+    900,
+    300,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "wheelchair_seat",
+   "type": "entity",
+   "class": "wheelchair space",
+   "plural": "wheelchair spaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a designated wheelchair accessible seating area",
+   "question": "Is there a designated wheelchair accessible seating area?",
+   "box": [
+    100,
+    800,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "placard",
+   "type": "attribute",
+   "of": "seats",
+   "desc": "the seats are marked with numbered placards",
+   "question": "Are the seats marked with numbered placards?"
+  },
+  {
+   "id": "patron_1_sitting",
+   "type": "relation",
+   "of": [
+    "patron_1",
+    "patron_2"
+   ],
+   "desc": "the patron is settling into the seat",
+   "question": "Is the patron settling into the seat?"
+  },
+  {
+   "id": "patron_2_sitting",
+   "type": "relation",
+   "of": [
+    "patron_2",
+    "patron_1"
+   ],
+   "desc": "the second patron is settling into the seat",
+   "question": "Is the second patron settling into the seat?"
+  },
+  {
+   "id": "usher_guiding",
+   "type": "action",
+   "of": [
+    "usher",
+    "late_arrival"
+   ],
+   "desc": "the usher guides the late arrival to a seat",
+   "question": "Is the usher guiding the late arrival to a seat?"
+  },
+  {
+   "id": "seats_face_screen",
+   "type": "relation",
+   "of": [
+    "seats",
+    "screen"
+   ],
+   "desc": "the rows of seats face the screen",
+   "question": "Do the rows of seats face the screen?"
+  },
+  {
+   "id": "speaker_on_wall",
+   "type": "state",
+   "of": "speaker",
+   "desc": "the speaker is mounted on the wall",
+   "question": "Is the speaker mounted on the wall?"
+  },
+  {
+   "id": "vent_on_ceiling",
+   "type": "state",
+   "of": "vent",
+   "desc": "the vent is on the ceiling",
+   "question": "Is the vent on the ceiling?"
+  },
+  {
+   "id": "extinguisher_on_wall",
+   "type": "state",
+   "of": "extinguisher",
+   "desc": "the fire extinguisher is mounted on the wall",
+   "question": "Is the fire extinguisher mounted on the wall?"
+  },
+  {
+   "id": "no_exercise_equip",
+   "type": "absent",
+   "desc": "exercise equipment",
+   "question": "Is there any exercise equipment in the image?"
+  },
+  {
+   "id": "no_cooking_appliances",
+   "type": "absent",
+   "desc": "cooking appliances",
+   "question": "Are there any cooking appliances in the image?"
+  },
+  {
+   "id": "projection_booth",
+   "type": "entity",
+   "class": "projection booth",
+   "plural": "projection booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a projection booth",
+   "question": "Is there a projection booth?",
+   "box": [
+    800,
+    50,
+    974,
+    200
+   ]
+  },
+  {
+   "id": "digital_equipment",
+   "type": "attribute",
+   "of": "projection_booth",
+   "desc": "the projection booth contains sophisticated digital equipment",
+   "question": "Does the projection booth contain sophisticated digital equipment?"
+  },
+  {
+   "id": "usher_flashlight",
+   "type": "attribute",
+   "of": "usher",
+   "desc": "the usher holds a flashlight",
+   "question": "Is the usher holding a flashlight?"
+  },
+  {
+   "id": "patron_1_state",
+   "type": "state",
+   "of": "patron_1",
+   "desc": "the patron is settling into a seat",
+   "question": "Is the patron settling into a seat?"
+  },
+  {
+   "id": "patron_2_state",
+   "type": "state",
+   "of": "patron_2",
+   "desc": "the second patron is settling into a seat",
+   "question": "Is the second patron settling into a seat?"
+  },
+  {
+   "id": "patron_1_popcorn",
+   "type": "attribute",
+   "of": "patron_1",
+   "desc": "the patron clutches a bucket of buttery popcorn",
+   "question": "Is the patron clutching a bucket of buttery popcorn?"
+  },
+  {
+   "id": "patron_1_drink",
+   "type": "attribute",
+   "of": "patron_1",
+   "desc": "the patron clutches an oversized soft drink cup",
+   "question": "Is the patron clutching an oversized soft drink cup?"
+  },
+  {
+   "id": "patron_2_popcorn",
+   "type": "attribute",
+   "of": "patron_2",
+   "desc": "the second patron clutches a bucket of buttery popcorn",
+   "question": "Is the second patron clutching a bucket of buttery popcorn?"
+  },
+  {
+   "id": "patron_2_drink",
+   "type": "attribute",
+   "of": "patron_2",
+   "desc": "the second patron clutches an oversized soft drink cup",
+   "question": "Is the second patron clutching an oversized soft drink cup?"
+  },
+  {
+   "id": "late_arrival_seats",
+   "type": "relation",
+   "of": [
+    "late_arrival",
+    "seats"
+   ],
+   "desc": "the late arrival is guided to available seats",
+   "question": "Is the late arrival being guided to available seats?"
+  },
+  {
+   "id": "screen_credits",
+   "type": "state",
+   "of": "screen",
+   "desc": "the screen displays opening credits",
+   "question": "Does the screen display opening credits?"
+  },
+  {
+   "id": "seats_holders",
+   "type": "attribute",
+   "of": "seats",
+   "desc": "the seats are equipped with cup holders and armrests",
+   "question": "Are the seats equipped with cup holders and armrests?"
+  },
+  {
+   "id": "no_treadmills",
+   "type": "absent",
+   "desc": "treadmills",
+   "question": "Are there any treadmills in the image?"
+  },
+  {
+   "id": "no_weight_machines",
+   "type": "absent",
+   "desc": "weight machines",
+   "question": "Are there any weight machines in the image?"
+  },
+  {
+   "id": "no_stoves",
+   "type": "absent",
+   "desc": "stoves",
+   "question": "Are there any stoves in the image?"
+  },
+  {
+   "id": "no_ovens",
+   "type": "absent",
+   "desc": "ovens",
+   "question": "Are there any ovens in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "seats",
+   "to": "patron_1",
+   "kind": "support"
+  },
+  {
+   "from": "seats",
+   "to": "patron_2",
+   "kind": "support"
+  },
+  {
+   "from": "seats",
+   "to": "late_arrival",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_021",
+ "prompt": "A modern movie theater during evening showtime, where rows of red reclining seats face a massive silver screen displaying the opening credits. Patrons clutch buckets of buttery popcorn and oversized soft drink cups while settling into their cushioned seats equipped with cup holders and armrests. The projection booth operates sophisticated digital equipment while surround sound speakers deliver crystal-clear audio throughout the darkened auditorium. Emergency exit signs glow softly along the aisles, and ushers with flashlights guide late arrivals to available seats marked with numbered placards. However, this entertainment venue contains no exercise equipment like treadmills or weight machines, maintaining its focus on passive viewing rather than physical activity. You won't find any cooking appliances such as stoves or ovens either, as the theater relies on concession stands rather than full kitchen facilities for refreshments. Air conditioning vents circulate cool air while carpet runners reduce footstep noise, and programmable lighting systems dim automatically as previews begin. Wheelchair accessible seating accommodates all guests, and fire extinguishers ensure safety throughout this popular entertainment destination.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

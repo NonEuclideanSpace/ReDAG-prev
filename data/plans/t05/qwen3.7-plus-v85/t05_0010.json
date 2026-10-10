@@ -1,0 +1,331 @@
+{
+ "style": "anime style, bright and clear",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden farm during harvest with a clear bright sky",
+   "question": "Does the image show a golden farm during harvest with a clear bright sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a straw hat",
+   "question": "Is there a woman in a straw hat?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in blue overalls",
+   "question": "Is there a man in blue overalls?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    600,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    620,
+    650,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    450,
+    400,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a green apron",
+   "question": "Is there an elderly person in a green apron?",
+   "box": [
+    700,
+    300,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a straw hat holds a basket",
+   "question": "Is the woman in a straw hat holding a basket?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls points with his right hand",
+   "question": "Is the man in blue overalls pointing with his right hand?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the child in a yellow shirt looks at the woman",
+   "question": "Does the child in a yellow shirt look at the woman?"
+  },
+  {
+   "id": "elderly_extending",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person in a green apron extends their arm",
+   "question": "Does the elderly person in a green apron extend their arm?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a straw hat is to the left of the man in blue overalls",
+   "question": "Is the woman in a straw hat to the left of the man in blue overalls?"
+  },
+  {
+   "id": "dog_next_to_crate",
+   "type": "relation",
+   "of": [
+    "dog",
+    "crate"
+   ],
+   "desc": "the brown dog sits next to the wooden crate",
+   "question": "Is the brown dog sitting next to the wooden crate?"
+  },
+  {
+   "id": "child_behind_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in a yellow shirt is behind the brown dog",
+   "question": "Is the child in a yellow shirt behind the brown dog?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "elderly_person",
+    "man"
+   ],
+   "desc": "the elderly person in a green apron hands a water bottle to the man in blue overalls",
+   "question": "Is the elderly person in a green apron handing a water bottle to the man in blue overalls?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a straw hat stands",
+   "question": "Is the woman in a straw hat standing?"
+  },
+  {
+   "id": "barn",
+   "type": "entity",
+   "class": "barn",
+   "plural": "barns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered gray barn",
+   "question": "Is there a weathered gray barn?",
+   "box": [
+    700,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "pumpkins with short thick stems",
+   "question": "Are there pumpkins with short thick stems?",
+   "box": [
+    380,
+    620,
+    620,
+    850
+   ]
+  },
+  {
+   "id": "crate_filled",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "crate"
+   ],
+   "desc": "the pumpkins are in the wooden crate",
+   "question": "Are the pumpkins in the wooden crate?"
+  },
+  {
+   "id": "basket_both_hands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a straw hat holds the basket with both hands",
+   "question": "Is the woman in a straw hat holding the basket with both hands?"
+  },
+  {
+   "id": "man_arm_extended",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls has his arm extended",
+   "question": "Is the man in blue overalls keeping his arm extended?"
+  },
+  {
+   "id": "dog_tail_still",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog has its tail still",
+   "question": "Is the brown dog's tail still?"
+  },
+  {
+   "id": "child_wide_eyes",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow shirt has wide eyes",
+   "question": "Does the child in a yellow shirt have wide eyes?"
+  },
+  {
+   "id": "crate_dry_earth",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the wooden crate is on dry earth",
+   "question": "Is the ground under the wooden crate dry earth?"
+  },
+  {
+   "id": "crate_on_earth",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate rests on the ground",
+   "question": "Does the wooden crate rest on the ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "crate",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "barn",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "pumpkins",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0010",
+ "prompt": "In an anime style scene set on a golden farm during harvest, a woman in a straw hat stands on the left holding a basket. Beside her on the right, a man in blue overalls points toward the horizon with his right hand. In the center foreground, a brown dog sits calmly next to a wooden crate filled with pumpkins. Behind the dog, a child in a yellow shirt looks at the woman with wide eyes. Further back near the barn, an elderly person in a green apron hands a water bottle to the man in blue overalls. The sky is clear and bright above the fields. There is no tractor visible in the background or foreground. The woman holds the basket with both hands securely. The man keeps his arm extended while pointing. The dog remains seated with its tail still. The child maintains eye contact with the woman. The elderly person extends their arm to pass the bottle. The crate rests firmly on the dry earth. The pumpkin stems are short and thick. The barn wood is weathered gray.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

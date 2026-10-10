@@ -1,0 +1,192 @@
+{
+ "style": "steampunk illustration, warm lantern lighting, golden reflections",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a faded parchment map",
+   "question": "Is there a faded parchment map in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "compass",
+   "type": "entity",
+   "class": "compass",
+   "plural": "compasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single brass steampunk compass",
+   "question": "Is there a single brass steampunk compass?",
+   "box": [
+    312,
+    200,
+    712,
+    600
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bronze chain",
+   "question": "Is there a bronze chain?",
+   "box": [
+    480,
+    0,
+    544,
+    200
+   ]
+  },
+  {
+   "id": "ruby",
+   "type": "entity",
+   "class": "ruby",
+   "plural": "rubies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small ruby",
+   "question": "Is there a small ruby?",
+   "box": [
+    488,
+    208,
+    536,
+    256
+   ]
+  },
+  {
+   "id": "compass_circular",
+   "type": "state",
+   "of": "compass",
+   "desc": "the brass steampunk compass is perfectly circular",
+   "question": "Is the brass steampunk compass perfectly circular?"
+  },
+  {
+   "id": "compass_glass",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the brass steampunk compass has a convex glass cover revealing ornate gears",
+   "question": "Does the brass steampunk compass have a convex glass cover that reveals ornate gears?"
+  },
+  {
+   "id": "compass_face",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the brass steampunk compass has an ivory face with black Roman numerals",
+   "question": "Does the brass steampunk compass have an ivory face displaying black Roman numerals?"
+  },
+  {
+   "id": "compass_needle",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the brass steampunk compass has a glowing neon-green needle",
+   "question": "Does the brass steampunk compass have a glowing neon-green needle?"
+  },
+  {
+   "id": "compass_ruby_pos",
+   "type": "relation",
+   "of": [
+    "ruby",
+    "compass"
+   ],
+   "desc": "the small ruby is at the north mark of the brass steampunk compass",
+   "question": "Is the small ruby at the north mark of the brass steampunk compass?"
+  },
+  {
+   "id": "compass_ring",
+   "type": "attribute",
+   "of": "compass",
+   "desc": "the outer ring is engraved with cardinal letters",
+   "question": "Is the outer ring of the compass engraved with cardinal letters?"
+  },
+  {
+   "id": "needle_points_ruby",
+   "type": "relation",
+   "of": [
+    "compass",
+    "ruby"
+   ],
+   "desc": "the neon-green needle points toward the small ruby",
+   "question": "Does the neon-green needle point toward the small ruby?"
+  },
+  {
+   "id": "compass_suspended",
+   "type": "relation",
+   "of": [
+    "chain",
+    "compass"
+   ],
+   "desc": "the brass steampunk compass is suspended from the bronze chain",
+   "question": "Is the brass steampunk compass suspended from the bronze chain?"
+  },
+  {
+   "id": "compass_above_map",
+   "type": "state",
+   "of": "compass",
+   "desc": "the brass steampunk compass is above the faded parchment map",
+   "question": "Is the brass steampunk compass positioned above the faded parchment map?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks on the compass",
+   "question": "Are there any cracks on the compass?"
+  },
+  {
+   "id": "no_screens",
+   "type": "absent",
+   "desc": "digital screens on the compass",
+   "question": "Are there any digital screens on the compass?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chain",
+   "to": "compass",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_068",
+ "prompt": "Illustrate a single brass steampunk compass suspended from a bronze chain above a faded parchment map. The compass is perfectly circular, fitted with a convex glass cover that reveals ornate gears beneath. Its ivory face displays black Roman numerals, and a neon-green needle glows while pointing toward a small ruby set at the north mark. The outer ring is engraved with cardinal letters, and warm lantern light casts golden reflections on the polished metal. The device shows no cracks and contains no digital screens.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "compass_chain_relation",
+     "compass_suspended"
+    ]
+   ]
+  }
+ }
+}

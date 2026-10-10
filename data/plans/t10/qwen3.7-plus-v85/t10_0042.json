@@ -1,0 +1,460 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a swaying train dining car interior with polished wooden booths and windows",
+   "question": "Does the image show the interior of a train dining car with polished wooden booths and windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue beret",
+   "question": "Is there a woman wearing a blue beret?",
+   "box": [
+    50,
+    300,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    280,
+    550,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    550,
+    320,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man",
+   "question": "Is there an elderly man?",
+   "box": [
+    750,
+    300,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "conductor",
+   "type": "entity",
+   "class": "conductor",
+   "plural": "conductors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conductor in a crisp navy uniform",
+   "question": "Is there a conductor in a crisp navy uniform?",
+   "box": [
+    400,
+    150,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green potted plant",
+   "question": "Is there a green potted plant?",
+   "box": [
+    900,
+    100,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "ramen_bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bowl of ramen",
+   "question": "Is there a bowl of ramen?",
+   "box": [
+    600,
+    650,
+    750,
+    780
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman wearing a blue beret is sitting",
+   "question": "Is the woman wearing a blue beret sitting?"
+  },
+  {
+   "id": "woman_gazing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman wearing a blue beret is gazing out the window",
+   "question": "Is the woman wearing a blue beret gazing out the window?"
+  },
+  {
+   "id": "cat_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is curled up",
+   "question": "Is the small orange cat curled up?"
+  },
+  {
+   "id": "cat_tail_twitching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat's tail is twitching",
+   "question": "Is the small orange cat's tail twitching?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf is leaning forward",
+   "question": "Is the man wearing a red scarf leaning forward?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf is pointing",
+   "question": "Is the man wearing a red scarf pointing?"
+  },
+  {
+   "id": "elderly_smiling",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man is smiling",
+   "question": "Is the elderly man smiling?"
+  },
+  {
+   "id": "elderly_holding_cup",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man holds a teacup",
+   "question": "Is the elderly man holding a teacup?"
+  },
+  {
+   "id": "conductor_standing",
+   "type": "state",
+   "of": "conductor",
+   "desc": "the conductor in a crisp navy uniform is standing",
+   "question": "Is the conductor in a crisp navy uniform standing?"
+  },
+  {
+   "id": "conductor_checking_watch",
+   "type": "attribute",
+   "of": "conductor",
+   "desc": "the conductor in a crisp navy uniform checks a pocket watch",
+   "question": "Is the conductor in a crisp navy uniform checking a pocket watch?"
+  },
+  {
+   "id": "ramen_steaming",
+   "type": "state",
+   "of": "ramen_bowl",
+   "desc": "steam rises from the bowl of ramen",
+   "question": "Does steam rise from the bowl of ramen?"
+  },
+  {
+   "id": "woman_left_booth",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman wearing a blue beret sits on the left side of the booth",
+   "question": "Is the woman wearing a blue beret sitting on the left side of the booth?"
+  },
+  {
+   "id": "cat_next_to_woman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman"
+   ],
+   "desc": "the small orange cat is next to the woman wearing a blue beret",
+   "question": "Is the small orange cat next to the woman wearing a blue beret?"
+  },
+  {
+   "id": "cat_on_seat",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is on the seat cushion",
+   "question": "Is the small orange cat on the seat cushion?"
+  },
+  {
+   "id": "man_across_table",
+   "type": "relation",
+   "of": [
+    "man_red_scarf",
+    "woman"
+   ],
+   "desc": "the man wearing a red scarf is across the table from the woman wearing a blue beret",
+   "question": "Is the man wearing a red scarf across the table from the woman wearing a blue beret?"
+  },
+  {
+   "id": "ramen_before_man",
+   "type": "relation",
+   "of": [
+    "ramen_bowl",
+    "man_red_scarf"
+   ],
+   "desc": "the bowl of ramen is placed directly before the man wearing a red scarf",
+   "question": "Is the bowl of ramen placed directly before the man wearing a red scarf?"
+  },
+  {
+   "id": "elderly_right_of_man",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "man_red_scarf"
+   ],
+   "desc": "the elderly man with silver hair is to the right of the man wearing a red scarf",
+   "question": "Is the elderly man with silver hair to the right of the man wearing a red scarf?"
+  },
+  {
+   "id": "elderly_watching_man",
+   "type": "action",
+   "of": [
+    "elderly_man",
+    "man_red_scarf"
+   ],
+   "desc": "the elderly man with silver hair watches the man wearing a red scarf",
+   "question": "Is the elderly man with silver hair watching the man wearing a red scarf?"
+  },
+  {
+   "id": "conductor_behind_them",
+   "type": "relation",
+   "of": [
+    "conductor",
+    "man_red_scarf"
+   ],
+   "desc": "the conductor in a crisp navy uniform stands behind the man wearing a red scarf",
+   "question": "Is the conductor in a crisp navy uniform standing behind the man wearing a red scarf?"
+  },
+  {
+   "id": "plant_on_rack",
+   "type": "state",
+   "of": "plant",
+   "desc": "the green potted plant rests on a luggage rack",
+   "question": "Does the green potted plant rest on a luggage rack?"
+  },
+  {
+   "id": "woman_handing_packet",
+   "type": "action",
+   "of": [
+    "woman",
+    "man_red_scarf"
+   ],
+   "desc": "the woman wearing a blue beret hands a sugar packet to the man wearing a red scarf",
+   "question": "Is the woman wearing a blue beret handing a sugar packet to the man wearing a red scarf?"
+  },
+  {
+   "id": "cat_looking_at_steam",
+   "type": "action",
+   "of": [
+    "cat",
+    "ramen_bowl"
+   ],
+   "desc": "the small orange cat looks at the steam rising from the bowl of ramen",
+   "question": "Is the small orange cat looking at the steam rising from the bowl of ramen?"
+  },
+  {
+   "id": "no_smartphone",
+   "type": "absent",
+   "desc": "electronic smartphone",
+   "question": "Is there any electronic smartphone visible in the image?"
+  },
+  {
+   "id": "sugar_packet",
+   "type": "entity",
+   "class": "sugar packet",
+   "plural": "sugar packets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sugar packet",
+   "question": "Is there a sugar packet?",
+   "box": [
+    480,
+    650,
+    544,
+    700
+   ]
+  },
+  {
+   "id": "pocket_watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch",
+   "question": "Is there a pocket watch?",
+   "box": [
+    780,
+    550,
+    830,
+    600
+   ]
+  },
+  {
+   "id": "luggage_rack",
+   "type": "entity",
+   "class": "luggage rack",
+   "plural": "luggage racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a luggage rack",
+   "question": "Is there a luggage rack?",
+   "box": [
+    900,
+    200,
+    1024,
+    350
+   ]
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman wearing a blue beret has a relaxed posture",
+   "question": "Does the woman wearing a blue beret have a relaxed posture?"
+  },
+  {
+   "id": "man_eager",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf has an eager expression",
+   "question": "Does the man wearing a red scarf have an eager expression?"
+  },
+  {
+   "id": "conductor_focused",
+   "type": "state",
+   "of": "conductor",
+   "desc": "the conductor in a crisp navy uniform has a focused expression",
+   "question": "Does the conductor in a crisp navy uniform have a focused expression?"
+  },
+  {
+   "id": "cat_comfortable",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat is comfortable",
+   "question": "Is the small orange cat comfortable?"
+  },
+  {
+   "id": "cat_curious",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat looks curious",
+   "question": "Does the small orange cat look curious?"
+  },
+  {
+   "id": "elderly_gentle",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man with silver hair has a gentle expression",
+   "question": "Is the elderly man with silver hair's smile gentle?"
+  },
+  {
+   "id": "woman_hands_meet",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man_red_scarf"
+   ],
+   "desc": "the hands of the woman wearing a blue beret and the man wearing a red scarf meet over the table",
+   "question": "Do the hands of the woman wearing a blue beret and the man wearing a red scarf meet over the table?"
+  },
+  {
+   "id": "elderly_silver_hair",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man has silver hair",
+   "question": "Does the elderly man have silver hair?"
+  },
+  {
+   "id": "elderly_porcelain_cup",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the teacup held by the elderly man is porcelain",
+   "question": "Is the teacup held by the elderly man made of porcelain?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "plant",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0042",
+ "prompt": "In a vibrant anime style scene set within a swaying train dining car, a woman in a blue beret sits on the left side of a polished wooden booth, her posture relaxed as she gazes out the window. Next to her, a small orange cat curls up comfortably on the seat cushion, its tail twitching slightly with the rhythm of the tracks. Across the table in the center, a man in a red scarf leans forward eagerly, pointing at a steaming bowl of ramen placed directly before him. The steam rises in delicate swirls, indicating the food is freshly served and hot. To his right, an elderly gentleman with silver hair watches the younger man with a gentle smile, holding a porcelain teacup delicately between his fingers. Behind them, a conductor in a crisp navy uniform stands near the aisle, checking a pocket watch with a focused expression. On the far right edge of the frame, a green potted plant rests on a luggage rack, adding a touch of nature to the mechanical interior. The woman in the blue beret is handing a sugar packet to the man in the red scarf, their hands meeting briefly over the table surface. The orange cat is looking at the steam rising from the ramen bowl with mild curiosity. There is no electronic smartphone visible anywhere in the scene, preserving the timeless atmosphere of the journey. The composition captures the intimate moment of shared travel and simple pleasures, with each character distinct in their attire and action, creating a lively yet peaceful tableau of life on the rails.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 11,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

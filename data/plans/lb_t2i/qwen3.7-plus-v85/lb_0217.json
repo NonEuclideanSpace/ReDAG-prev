@@ -1,0 +1,556 @@
+{
+ "style": "surreal photorealistic, desolate atmosphere, high contrast, dusty texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a desolate landscape",
+   "question": "Does the image show a desolate landscape?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty metal crane with a weathered body",
+   "question": "Is there a rusty metal crane?",
+   "box": [
+    100,
+    50,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lonely puddle",
+   "question": "Is there a lonely puddle?",
+   "box": [
+    300,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a splintered wooden workbench",
+   "question": "Is there a splintered wooden workbench?",
+   "box": [
+    650,
+    500,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red bucket",
+   "question": "Is there a red bucket?",
+   "box": [
+    750,
+    450,
+    850,
+    550
+   ]
+  },
+  {
+   "id": "tarps",
+   "type": "entity",
+   "class": "tarp",
+   "plural": "tarps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "blue tarps stacked together, dulled by dust",
+   "question": "Are there blue tarps stacked together?",
+   "box": [
+    850,
+    550,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded map",
+   "question": "Is there a faded map?",
+   "box": [
+    860,
+    600,
+    960,
+    700
+   ]
+  },
+  {
+   "id": "stakes",
+   "type": "entity",
+   "class": "garden stake",
+   "plural": "garden stakes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bent garden stakes pinning the map",
+   "question": "Are there bent garden stakes?",
+   "box": [
+    870,
+    610,
+    950,
+    690
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "mechanical bird",
+   "plural": "mechanical birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanical bird with visible gears",
+   "question": "Is there a mechanical bird?",
+   "box": [
+    450,
+    150,
+    550,
+    250
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dry brittle vine",
+   "question": "Is there a dry brittle vine?",
+   "box": [
+    400,
+    200,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "dandelion",
+   "type": "entity",
+   "class": "dandelion",
+   "plural": "dandelions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single dandelion",
+   "question": "Is there a single dandelion?",
+   "box": [
+    400,
+    850,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "duck",
+   "type": "entity",
+   "class": "rubber duck",
+   "plural": "rubber ducks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked sun-bleached rubber duck",
+   "question": "Is there a cracked sun-bleached rubber duck?",
+   "box": [
+    450,
+    750,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "wheelbarrow",
+   "type": "entity",
+   "class": "wheelbarrow",
+   "plural": "wheelbarrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted empty wheelbarrow",
+   "question": "Is there a rusted empty wheelbarrow?",
+   "box": [
+    700,
+    800,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "entity",
+   "class": "metal gate",
+   "plural": "metal gates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal gate",
+   "question": "Is there a rusted metal gate?",
+   "box": [
+    0,
+    400,
+    200,
+    900
+   ]
+  },
+  {
+   "id": "crane_tilt",
+   "type": "state",
+   "of": "crane",
+   "desc": "the crane's neck tilts at an impossible angle",
+   "question": "Does the crane's neck tilt at an impossible angle?"
+  },
+  {
+   "id": "bucket_sway",
+   "type": "state",
+   "of": "bucket",
+   "desc": "the red bucket sways precariously",
+   "question": "Is the red bucket swaying precariously?"
+  },
+  {
+   "id": "tarp_lift",
+   "type": "state",
+   "of": "tarps",
+   "desc": "one tarp's edge is lifted by the wind",
+   "question": "Is one of the tarp's edges lifted?"
+  },
+  {
+   "id": "bird_flap",
+   "type": "state",
+   "of": "bird",
+   "desc": "the mechanical bird has its wings flapped",
+   "question": "Does the mechanical bird have its wings flapped?"
+  },
+  {
+   "id": "gate_swing",
+   "type": "state",
+   "of": "gate",
+   "desc": "the metal gate swings gently",
+   "question": "Is the metal gate swinging gently?"
+  },
+  {
+   "id": "crane_over_puddle",
+   "type": "relation",
+   "of": [
+    "crane",
+    "puddle"
+   ],
+   "desc": "the crane stands at the rim of the puddle",
+   "question": "Is the crane positioned at the rim of the puddle?"
+  },
+  {
+   "id": "bucket_on_bench",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "workbench"
+   ],
+   "desc": "the red bucket teeters atop the workbench",
+   "question": "Is the red bucket on top of the workbench?"
+  },
+  {
+   "id": "tarps_beside_bench",
+   "type": "relation",
+   "of": [
+    "tarps",
+    "workbench"
+   ],
+   "desc": "the blue tarps are stacked beside the workbench",
+   "question": "Are the blue tarps stacked beside the workbench?"
+  },
+  {
+   "id": "map_under_tarp",
+   "type": "relation",
+   "of": [
+    "map",
+    "tarps"
+   ],
+   "desc": "the map is pinned beneath the lifted tarp",
+   "question": "Is the map pinned beneath the lifted tarp?"
+  },
+  {
+   "id": "stakes_pin_map",
+   "type": "relation",
+   "of": [
+    "stakes",
+    "map"
+   ],
+   "desc": "the garden stakes pin the map",
+   "question": "Do the garden stakes pin the map?"
+  },
+  {
+   "id": "bird_on_crane",
+   "type": "relation",
+   "of": [
+    "bird",
+    "crane"
+   ],
+   "desc": "the mechanical bird is perched on the crane's arm",
+   "question": "Is the mechanical bird perched on the crane's arm?"
+  },
+  {
+   "id": "vine_on_crane",
+   "type": "relation",
+   "of": [
+    "vine",
+    "crane"
+   ],
+   "desc": "the vine loops over the crane's neck",
+   "question": "Does the vine loop over the crane's neck?"
+  },
+  {
+   "id": "vine_from_map",
+   "type": "relation",
+   "of": [
+    "vine",
+    "map"
+   ],
+   "desc": "the vine snakes from the map",
+   "question": "Does the vine originate from the map?"
+  },
+  {
+   "id": "duck_in_puddle",
+   "type": "relation",
+   "of": [
+    "duck",
+    "puddle"
+   ],
+   "desc": "the rubber duck floats on the puddle",
+   "question": "Is the rubber duck floating on the puddle?"
+  },
+  {
+   "id": "wheelbarrow_near_gate",
+   "type": "relation",
+   "of": [
+    "wheelbarrow",
+    "gate"
+   ],
+   "desc": "the wheelbarrow is near the metal gate",
+   "question": "Is the wheelbarrow near the metal gate?"
+  },
+  {
+   "id": "gate_behind_scene",
+   "type": "relation",
+   "of": [
+    "gate",
+    "crane"
+   ],
+   "desc": "the metal gate is behind the crane",
+   "question": "Is the metal gate behind the crane?"
+  },
+  {
+   "id": "pebbles",
+   "type": "entity",
+   "class": "pebble",
+   "plural": "pebbles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "smooth pebbles",
+   "question": "Are there smooth pebbles?",
+   "box": [
+    480,
+    580,
+    640,
+    700
+   ]
+  },
+  {
+   "id": "crane_stands",
+   "type": "state",
+   "of": "crane",
+   "desc": "the rusty metal crane stands",
+   "question": "Is the rusty metal crane standing?"
+  },
+  {
+   "id": "bucket_filled",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the red bucket is half-filled with pebbles",
+   "question": "Is the red bucket half-filled with pebbles?"
+  },
+  {
+   "id": "wheelbarrow_buried",
+   "type": "state",
+   "of": "wheelbarrow",
+   "desc": "the rusted wheelbarrow is half-buried in the dirt",
+   "question": "Is the rusted wheelbarrow half-buried in the dirt?"
+  },
+  {
+   "id": "pebbles_in_bucket",
+   "type": "relation",
+   "of": [
+    "pebbles",
+    "bucket"
+   ],
+   "desc": "the pebbles are inside the red bucket",
+   "question": "Are the pebbles inside the red bucket?"
+  },
+  {
+   "id": "dandelion_sprouts",
+   "type": "state",
+   "of": "dandelion",
+   "desc": "the dandelion sprouts from a crack in the reservoir bed",
+   "question": "Does the dandelion sprout from a crack in the reservoir bed?"
+  },
+  {
+   "id": "shadows",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": false,
+   "desc": "shadows stretching in impossible directions",
+   "question": "Are there shadows stretching in impossible directions?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "shadows_defy_sun",
+   "type": "state",
+   "of": "shadows",
+   "desc": "the shadows stretch in impossible directions defying the sun's angle",
+   "question": "Do the shadows stretch in impossible directions, defying the sun's angle?"
+  },
+  {
+   "id": "bucket_filled_2",
+   "type": "attribute",
+   "of": "bucket",
+   "desc": "the red bucket is half-filled with smooth pebbles",
+   "question": "Is the red bucket half-filled with smooth pebbles?"
+  },
+  {
+   "id": "map_red_x",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the faded map has a single red X",
+   "question": "Does the faded map have a single red X?"
+  },
+  {
+   "id": "dandelion_feathery",
+   "type": "attribute",
+   "of": "dandelion",
+   "desc": "the dandelion has a feathery head",
+   "question": "Does the dandelion have a feathery head?"
+  },
+  {
+   "id": "wheelbarrow_handles",
+   "type": "attribute",
+   "of": "wheelbarrow",
+   "desc": "the wheelbarrow has twisted handles",
+   "question": "Does the wheelbarrow have twisted handles?"
+  },
+  {
+   "id": "reservoir_bed",
+   "type": "entity",
+   "class": "reservoir bed",
+   "plural": "reservoir beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dried-up reservoir bed",
+   "question": "Is there a dried-up reservoir bed?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "puddle_shimmering",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle has shimmering water",
+   "question": "Does the puddle have shimmering water?",
+   "already": []
+  },
+  {
+   "id": "bird_frozen_gears",
+   "type": "attribute",
+   "of": "bird",
+   "desc": "the mechanical bird's gears are frozen",
+   "question": "Are the mechanical bird's gears frozen?"
+  },
+  {
+   "id": "pebbles_dew",
+   "type": "attribute",
+   "of": "pebbles",
+   "desc": "the pebbles glisten with trapped dew",
+   "question": "Do the pebbles glisten with trapped dew?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "bucket",
+   "kind": "support"
+  },
+  {
+   "from": "crane",
+   "to": "bird",
+   "kind": "support"
+  },
+  {
+   "from": "bucket",
+   "to": "pebbles",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0217",
+ "prompt": "The desolate landscape unfolds like a memory suspended in time, where a rusty crane, its metal body weathered by the harshest of seasons, stands frozen at the rim of a dried-up reservoir. Its long, arthritic neck tilts at an impossible angle, as if drawn toward a fractured reflection in a lonely puddle below—where shimmering water seems to pulse like a heartbeat. Just beyond, the sun beats down on a wooden workbench splintered by age and neglect, and atop it teeters a red bucket, half-filled with smooth pebbles that glisten with trapped dew. The bucket sways, inching ever closer to the edge, its precarious balance mirrored by the blue tarps stacked beside it, their vibrant hue dulled by time and dust. The wind sneaks in like a whisper, tugging gently at one tarp’s edge, lifting it just enough to reveal a faded map pinned beneath with bent garden stakes—its lines curling like veins of a forgotten world. On the map, a single red X marks a spot that appears to shift with the light, its position altering as if the ground itself refuses to be mapped. A mechanical bird perched on the crane’s arm flaps once, a dull clatter echoing across the reservoir, before falling silent again, its gears frozen in the motion of flight. The pebbles in the bucket rattle softly, as if reacting to the bird’s brief movement, while a long vine, dry and brittle, snakes its way from the map and loops over the crane’s neck, clinging to it like a strangler fig with no intention of letting go. Beneath the puddle, shadows stretch in impossible directions, defying the sun’s angle, and a single dandelion sprouts from a crack in the reservoir’s dry bed, its feathery head swaying with the wind despite the absence of moisture. A child’s rubber duck, cracked and sun-bleached, floats on the puddle’s surface, its eyes fixed on the crane’s reflection, while a nearby wheelbarrow, rusted and empty, is half-buried in the dirt, its handles twisted as if it had been yanked free from the earth. A metal gate swings gently behind it all, rust groaning in harmony with the wind, though no source of movement can be seen. Time itself seems to hang in the air like dust, caught in a loop between motion and stillness, between memory and what has yet to be. The crane, the bucket, the tarp, the map, and even the dandelion—each object is both cause and effect in a chain of quiet transformations, a visual riddle that insists it all must be seen together, as a whole. Yet for all its entanglement, the scene is coherent, each piece nested within the next, forming a fragile equilibrium of forgotten tools, silent witnesses, and half-forgotten intentions. It is a world that could only exist in a moment, but it is that moment that demands to be remembered.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

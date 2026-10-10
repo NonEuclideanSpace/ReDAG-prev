@@ -1,0 +1,419 @@
+{
+ "style": "cinematic post-apocalyptic dusk",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a post-apocalyptic cityscape at dusk",
+   "question": "Does the image show a post-apocalyptic cityscape at dusk?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "survivor",
+   "type": "entity",
+   "class": "survivor",
+   "plural": "survivors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a survivor wearing a gas mask",
+   "question": "Is there a survivor wearing a gas mask?",
+   "box": [
+    350,
+    400,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "humanoid robot",
+   "plural": "humanoid robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large damaged humanoid robot",
+   "question": "Is there a large damaged humanoid robot?",
+   "box": [
+    150,
+    600,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "campfire",
+   "type": "entity",
+   "class": "campfire",
+   "plural": "campfires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crackling campfire",
+   "question": "Is there a crackling campfire?",
+   "box": [
+    500,
+    700,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small tattered tent",
+   "question": "Is there a small tattered tent?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a guard dog",
+   "question": "Is there a guard dog?",
+   "box": [
+    920,
+    500,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "armored truck",
+   "plural": "armored trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a makeshift armored truck",
+   "question": "Is there a makeshift armored truck?",
+   "box": [
+    100,
+    200,
+    800,
+    500
+   ]
+  },
+  {
+   "id": "rifle",
+   "type": "entity",
+   "class": "rifle",
+   "plural": "rifles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rifle",
+   "question": "Is there a rifle?",
+   "box": [
+    120,
+    450,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "scrap_metal",
+   "type": "entity",
+   "class": "scrap metal piece",
+   "plural": "scrap metal pieces",
+   "count": 6,
+   "count_exact": true,
+   "desc": "a pile of six scrap metal pieces",
+   "question": "Are there six scrap metal pieces in a pile?",
+   "box": [
+    460,
+    800,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "tools",
+   "type": "entity",
+   "class": "tool",
+   "plural": "tools",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two tools",
+   "question": "Are there two tools?",
+   "box": [
+    300,
+    850,
+    400,
+    920
+   ]
+  },
+  {
+   "id": "survivor_kneeling",
+   "type": "state",
+   "of": "survivor",
+   "desc": "the survivor wearing a gas mask is kneeling",
+   "question": "Is the survivor wearing a gas mask kneeling?"
+  },
+  {
+   "id": "robot_lying",
+   "type": "state",
+   "of": "robot",
+   "desc": "the large damaged humanoid robot is lying on the ground",
+   "question": "Is the large damaged humanoid robot lying on the ground?"
+  },
+  {
+   "id": "robot_arm_reaching",
+   "type": "relation",
+   "of": [
+    "robot",
+    "survivor"
+   ],
+   "desc": "one arm of the large damaged humanoid robot is reaching towards the survivor",
+   "question": "Is one arm of the large damaged humanoid robot reaching towards the survivor?"
+  },
+  {
+   "id": "dog_facing_away",
+   "type": "relation",
+   "of": [
+    "dog",
+    "survivor"
+   ],
+   "desc": "the guard dog is facing away from the group",
+   "question": "Is the guard dog facing away from the survivor and the robot?"
+  },
+  {
+   "id": "dog_looking_darkness",
+   "type": "state",
+   "of": "dog",
+   "desc": "the guard dog is looking into the darkness",
+   "question": "Is the guard dog looking into the darkness?"
+  },
+  {
+   "id": "survivor_holding_wrench",
+   "type": "attribute",
+   "of": "survivor",
+   "desc": "the survivor wearing a gas mask holds a wrench",
+   "question": "Is the survivor wearing a gas mask holding a wrench?"
+  },
+  {
+   "id": "survivor_mask_covering",
+   "type": "attribute",
+   "of": "survivor",
+   "desc": "the gas mask covers the face of the survivor",
+   "question": "Does the gas mask cover the face of the survivor?"
+  },
+  {
+   "id": "robot_panel_open",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large damaged humanoid robot has an open service panel on its chest",
+   "question": "Does the large damaged humanoid robot have an open service panel on its chest?"
+  },
+  {
+   "id": "truck_ram_attached",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the makeshift armored truck has a battering ram attached to its front bumper",
+   "question": "Does the makeshift armored truck have a battering ram attached to its front bumper?"
+  },
+  {
+   "id": "rifle_scope_mounted",
+   "type": "attribute",
+   "of": "rifle",
+   "desc": "the rifle has a scope mounted on it",
+   "question": "Does the rifle have a scope mounted on it?"
+  },
+  {
+   "id": "survivor_repairing_robot",
+   "type": "action",
+   "of": [
+    "survivor",
+    "robot"
+   ],
+   "desc": "the survivor wearing a gas mask is repairing the large damaged humanoid robot by pushing a new gear into its exposed wiring",
+   "question": "Is the survivor wearing a gas mask repairing the large damaged humanoid robot by pushing a new gear into its exposed wiring?"
+  },
+  {
+   "id": "survivor_pointing_wrench",
+   "type": "action",
+   "of": [
+    "survivor",
+    "robot"
+   ],
+   "desc": "the survivor wearing a gas mask is pointing the wrench at the open service panel on the robot's chest",
+   "question": "Is the survivor wearing a gas mask pointing the wrench at the open service panel on the robot's chest?"
+  },
+  {
+   "id": "campfire_between_survivor_tent",
+   "type": "relation",
+   "of": [
+    "campfire",
+    "survivor",
+    "tent"
+   ],
+   "desc": "the crackling campfire is between the survivor wearing a gas mask and the small tattered tent",
+   "question": "Is the crackling campfire between the survivor wearing a gas mask and the small tattered tent?"
+  },
+  {
+   "id": "tent_taller_survivor",
+   "type": "relation",
+   "of": [
+    "tent",
+    "survivor"
+   ],
+   "desc": "the small tattered tent is taller than the kneeling survivor",
+   "question": "Is the small tattered tent taller than the kneeling survivor?"
+  },
+  {
+   "id": "dog_right_of_tent",
+   "type": "relation",
+   "of": [
+    "dog",
+    "tent"
+   ],
+   "desc": "the guard dog is to the right of the small tattered tent",
+   "question": "Is the guard dog to the right of the small tattered tent?"
+  },
+  {
+   "id": "truck_behind_survivor",
+   "type": "relation",
+   "of": [
+    "truck",
+    "survivor"
+   ],
+   "desc": "the makeshift armored truck is parked behind the survivor wearing a gas mask",
+   "question": "Is the makeshift armored truck parked behind the survivor wearing a gas mask?"
+  },
+  {
+   "id": "truck_longer_robot",
+   "type": "relation",
+   "of": [
+    "truck",
+    "robot"
+   ],
+   "desc": "the makeshift armored truck is much longer than the large damaged humanoid robot",
+   "question": "Is the makeshift armored truck much longer than the large damaged humanoid robot?"
+  },
+  {
+   "id": "rifle_against_truck_wheel",
+   "type": "relation",
+   "of": [
+    "rifle",
+    "truck"
+   ],
+   "desc": "the rifle with a scope is leaning against the front wheel of the makeshift armored truck",
+   "question": "Is the rifle with a scope leaning against the front wheel of the makeshift armored truck?"
+  },
+  {
+   "id": "rifle_longer_wrench",
+   "type": "relation",
+   "of": [
+    "rifle",
+    "survivor"
+   ],
+   "desc": "the rifle with a scope is longer than the wrench held by the survivor",
+   "question": "Is the rifle with a scope longer than the wrench held by the survivor?"
+  },
+  {
+   "id": "scrap_next_to_robot",
+   "type": "relation",
+   "of": [
+    "scrap_metal",
+    "robot"
+   ],
+   "desc": "the pile of scrap metal pieces is next to the large damaged humanoid robot",
+   "question": "Is the pile of scrap metal pieces next to the large damaged humanoid robot?"
+  },
+  {
+   "id": "tools_next_to_survivor",
+   "type": "relation",
+   "of": [
+    "tools",
+    "survivor"
+   ],
+   "desc": "the two tools lie next to the survivor wearing a gas mask",
+   "question": "Do the two tools lie next to the survivor wearing a gas mask?"
+  },
+  {
+   "id": "scrap_count_relation",
+   "type": "relation",
+   "of": [
+    "scrap_metal",
+    "tools"
+   ],
+   "desc": "the number of scrap metal pieces is three times the number of tools",
+   "question": "Is the number of scrap metal pieces three times the number of tools?"
+  },
+  {
+   "id": "campfire_brightest",
+   "type": "state",
+   "of": "campfire",
+   "desc": "the crackling campfire is the brightest source of light",
+   "question": "Is the crackling campfire the brightest source of light in the image?"
+  },
+  {
+   "id": "survivor_standing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the guard dog is standing",
+   "question": "Is the guard dog standing?"
+  },
+  {
+   "id": "robot_missing_leg",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large damaged humanoid robot is missing one leg",
+   "question": "Is the large damaged humanoid robot missing one leg?"
+  },
+  {
+   "id": "robot_exposed_wiring",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the large damaged humanoid robot has exposed wiring",
+   "question": "Does the large damaged humanoid robot have exposed wiring?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "truck",
+   "to": "rifle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_041",
+ "prompt": "In a post-apocalyptic cityscape at dusk, a survivor is kneeling beside a crackling campfire. The survivor is holding a wrench and repairing a large, damaged humanoid robot lying on the ground. The campfire is between the survivor and a small, tattered tent, which is taller than the kneeling survivor. To the right of the tent, a loyal guard dog is standing, facing away from the group. The makeshift armored truck, parked behind the survivor, is much longer than the robot. A rifle, which is longer than the wrench the survivor is holding, is leaning against the truck's front wheel. Next to the robot is a pile of scrap metal, and next to the survivor lie two tools. The number of scrap metal pieces is three times the number of tools. The truck has a battering ram attached to its front bumper. The survivor is pointing the wrench at an open service panel on the robot's chest. The robot is missing one leg. The campfire is the brightest source of light. The survivor is pushing a new gear into the robot's exposed wiring. The robot has one of its arms reaching towards the survivor. The dog is looking into the darkness. The rifle has a scope mounted on it. The survivor is wearing a gas mask which is covering their face.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

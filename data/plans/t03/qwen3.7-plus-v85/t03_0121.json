@@ -1,0 +1,218 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a field",
+   "question": "Does the image show a field?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    670,
+    150,
+    970,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    380,
+    500,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    700,
+    650,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a basket",
+   "question": "Is the woman in a blue apron holding a basket?"
+  },
+  {
+   "id": "wheat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman holds a sheaf of wheat",
+   "question": "Is the woman holding a sheaf of wheat?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a straw hat is sitting",
+   "question": "Is the man in a straw hat sitting?"
+  },
+  {
+   "id": "man_hand_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in a straw hat rests his hand on the wooden crate",
+   "question": "Is the man in a straw hat resting his hand on the wooden crate?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "dog_looking",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever is looking at the woman",
+   "question": "Is the golden retriever looking at the woman in the blue apron?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron hands the sheaf of wheat to the man in a straw hat",
+   "question": "Is the woman in a blue apron handing a sheaf of wheat to the man in a straw hat?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in a straw hat sits on the wooden crate",
+   "question": "Is the man in a straw hat sitting on the wooden crate?"
+  },
+  {
+   "id": "dog_between",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman",
+    "man"
+   ],
+   "desc": "the golden retriever is centered between the woman and the man",
+   "question": "Is the golden retriever positioned between the woman in the blue apron and the man in the straw hat?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "woman_apron",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue apron",
+   "question": "Does the woman wear a blue apron?"
+  },
+  {
+   "id": "man_hat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a straw hat",
+   "question": "Does the man wear a straw hat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0121",
+ "prompt": "In this oil painting, a woman in a blue apron stands on the left holding a basket. A man in a straw hat sits on the right resting his hand on a wooden crate. Centered between them, a golden retriever lies on the ground looking at the woman. The woman is handing a sheaf of wheat to the man. There is no tractor visible in the field.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

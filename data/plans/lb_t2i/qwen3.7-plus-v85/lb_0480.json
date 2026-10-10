@@ -1,0 +1,602 @@
+{
+ "style": "cinematic, moody, hyper-realistic, neon-noir",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit sushi restaurant interior with a rain-streaked window and blurred neon pink light",
+   "question": "Does the image show a dimly lit sushi restaurant interior with a rain-streaked window and blurred neon pink light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a calico cat",
+   "question": "Is there a calico cat?",
+   "box": [
+    400,
+    500,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "porcelain tray",
+   "plural": "porcelain trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a porcelain tray",
+   "question": "Is there a porcelain tray?",
+   "box": [
+    350,
+    600,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "maki",
+   "type": "entity",
+   "class": "maki roll",
+   "plural": "maki rolls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "delicate maki rolls gleaming with wasabi oil",
+   "question": "Are there delicate maki rolls gleaming with wasabi oil?",
+   "box": [
+    360,
+    610,
+    540,
+    690
+   ]
+  },
+  {
+   "id": "chopstick",
+   "type": "entity",
+   "class": "chopstick",
+   "plural": "chopsticks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single slender chopstick",
+   "question": "Is there a single slender chopstick?",
+   "box": [
+    580,
+    606,
+    700,
+    654
+   ]
+  },
+  {
+   "id": "soy_puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small pool of soy sauce",
+   "question": "Is there a small pool of soy sauce?",
+   "box": [
+    676,
+    626,
+    724,
+    674
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "paper lantern",
+   "plural": "paper lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paper lantern hanging from the ceiling",
+   "question": "Is there a paper lantern hanging from the ceiling?",
+   "box": [
+    450,
+    50,
+    550,
+    200
+   ]
+  },
+  {
+   "id": "fishbowl",
+   "type": "entity",
+   "class": "fishbowl",
+   "plural": "fishbowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass fishbowl",
+   "question": "Is there a glass fishbowl?",
+   "box": [
+    480,
+    850,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "goldfish",
+   "type": "entity",
+   "class": "goldfish",
+   "plural": "goldfish",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plump patterned goldfish",
+   "question": "Is there a plump patterned goldfish in the fishbowl?",
+   "box": [
+    506,
+    876,
+    554,
+    924
+   ]
+  },
+  {
+   "id": "eel",
+   "type": "entity",
+   "class": "eel",
+   "plural": "eels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a live eel",
+   "question": "Is there a live eel?",
+   "box": [
+    870,
+    750,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "smartphone",
+   "type": "entity",
+   "class": "smartphone",
+   "plural": "smartphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smartphone",
+   "question": "Is there a smartphone?",
+   "box": [
+    300,
+    720,
+    380,
+    800
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "wooden stool",
+   "plural": "wooden stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wooden stool",
+   "question": "Is there a small wooden stool?",
+   "box": [
+    280,
+    780,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "cat_ears",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat has twitching ears",
+   "question": "Does the calico cat have twitching ears?"
+  },
+  {
+   "id": "cat_perching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat is perching solemnly",
+   "question": "Is the calico cat perching solemnly?"
+  },
+  {
+   "id": "cat_tail_wrapping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat's tail is wrapped around the porcelain tray",
+   "question": "Is the calico cat's tail wrapped around the porcelain tray?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the calico cat has golden watchful eyes",
+   "question": "Does the calico cat have golden watchful eyes?"
+  },
+  {
+   "id": "chopstick_in_soy",
+   "type": "relation",
+   "of": [
+    "chopstick",
+    "soy_puddle"
+   ],
+   "desc": "one end of the chopstick dips into the soy sauce puddle",
+   "question": "Does one end of the chopstick dip into the soy sauce puddle?"
+  },
+  {
+   "id": "lantern_swinging",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the paper lantern is swinging gently",
+   "question": "Is the paper lantern swinging gently?"
+  },
+  {
+   "id": "lantern_flame",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the paper lantern's flame is flickering",
+   "question": "Is the paper lantern's flame flickering?"
+  },
+  {
+   "id": "thread_lantern_bowl",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "fishbowl"
+   ],
+   "desc": "a thin thread dangles from the lantern to the fishbowl",
+   "question": "Does a thin thread dangle from the lantern to the fishbowl?"
+  },
+  {
+   "id": "goldfish_breaking_surface",
+   "type": "state",
+   "of": "goldfish",
+   "desc": "the goldfish is breaking the surface of the water",
+   "question": "Is the goldfish breaking the surface of the water?"
+  },
+  {
+   "id": "fridge_contents",
+   "type": "attribute",
+   "of": "fridge_bg",
+   "desc": "the refrigerator reveals shelves with kimchi",
+   "question": "Does the refrigerator reveal shelves with kimchi?"
+  },
+  {
+   "id": "eel_writhing",
+   "type": "state",
+   "of": "eel",
+   "desc": "the eel is writhing in the container",
+   "question": "Is the eel writhing in the container?"
+  },
+  {
+   "id": "cat_paw_phone",
+   "type": "action",
+   "of": [
+    "cat",
+    "smartphone"
+   ],
+   "desc": "the calico cat presses a paw against the smartphone",
+   "question": "Is the calico cat pressing a paw against the smartphone?"
+  },
+  {
+   "id": "phone_on_stool",
+   "type": "relation",
+   "of": [
+    "smartphone",
+    "stool"
+   ],
+   "desc": "the smartphone is balanced on the wooden stool",
+   "question": "Is the smartphone balanced on the wooden stool?"
+  },
+  {
+   "id": "phone_screen",
+   "type": "attribute",
+   "of": "smartphone",
+   "desc": "the smartphone screen shows a video call",
+   "question": "Does the smartphone screen show a video call?"
+  },
+  {
+   "id": "eel_shadow",
+   "type": "relation",
+   "of": [
+    "eel",
+    "cat"
+   ],
+   "desc": "the shadow of the eel flows toward the cat’s paws",
+   "question": "Does the shadow of the eel flow toward the cat’s paws?"
+  },
+  {
+   "id": "eel_twitching",
+   "type": "state",
+   "of": "eel",
+   "desc": "the eel twitches",
+   "question": "Is the eel twitching?"
+  },
+  {
+   "id": "soy_stains",
+   "type": "attribute",
+   "of": "soy_puddle",
+   "desc": "dark stains from soy sauce seeping into the wood",
+   "question": "Are there dark stains from soy sauce seeping into the wood?"
+  },
+  {
+   "id": "stain_reflection",
+   "type": "state",
+   "of": "soy_puddle",
+   "desc": "the soy sauce stains mirror the storm clouds in the window",
+   "question": "Do the soy sauce stains mirror the storm clouds visible in the window?"
+  },
+  {
+   "id": "cat_tracking",
+   "type": "action",
+   "of": [
+    "cat",
+    "lantern"
+   ],
+   "desc": "the calico cat tracks the movement of the paper lantern",
+   "question": "Is the calico cat tracking the movement of the paper lantern?"
+  },
+  {
+   "id": "fishbowl_floor",
+   "type": "state",
+   "of": "fishbowl",
+   "desc": "the fishbowl is on the floor",
+   "question": "Is the fishbowl on the floor?"
+  },
+  {
+   "id": "eel_shadow_floor",
+   "type": "state",
+   "of": "eel",
+   "desc": "the eel's shadow flows across the floor",
+   "question": "Does the eel's shadow flow across the floor?"
+  },
+  {
+   "id": "phone_glitch",
+   "type": "state",
+   "of": "smartphone",
+   "desc": "the smartphone screen occasionally glitches",
+   "question": "Does the smartphone screen occasionally glitch?"
+  },
+  {
+   "id": "maki_count",
+   "type": "attribute",
+   "of": "maki",
+   "desc": "the maki rolls are arranged in six rows",
+   "question": "Are the maki rolls arranged in six rows?"
+  },
+  {
+   "id": "chopstick_abandoned",
+   "type": "relation",
+   "of": [
+    "chopstick",
+    "counter_bg"
+   ],
+   "desc": "the chopstick lies abandoned on the counter",
+   "question": "Is the chopstick lying abandoned on the counter?"
+  },
+  {
+   "id": "goldfish_suspended",
+   "type": "state",
+   "of": "goldfish",
+   "desc": "the goldfish seems suspended in a vortex of slow motion",
+   "question": "Does the goldfish appear suspended in a vortex of slow motion?"
+  },
+  {
+   "id": "fridge_humming",
+   "type": "state",
+   "of": "fridge_bg",
+   "desc": "the refrigerator hums",
+   "question": "Does the refrigerator appear to be humming (operating)?"
+  },
+  {
+   "id": "eel_container",
+   "type": "attribute",
+   "of": "eel",
+   "desc": "the eel is in a container of ice",
+   "question": "Is the eel in a container of ice?"
+  },
+  {
+   "id": "phone_figure_kimono",
+   "type": "attribute",
+   "of": "smartphone",
+   "desc": "the figure on the smartphone screen wears a kimono",
+   "question": "Does the figure on the smartphone screen wear a kimono?"
+  },
+  {
+   "id": "cat_unperturbed",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat is unperturbed",
+   "question": "Does the calico cat appear unperturbed?"
+  },
+  {
+   "id": "cat_shifts",
+   "type": "state",
+   "of": "cat",
+   "desc": "the calico cat shifts slightly",
+   "question": "Is the calico cat shifting slightly?"
+  },
+  {
+   "id": "gutter",
+   "type": "entity",
+   "class": "gutter",
+   "plural": "gutters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gutter above the window",
+   "question": "Is there a gutter above the window?",
+   "box": [
+    400,
+    0,
+    624,
+    80
+   ]
+  },
+  {
+   "id": "water_dripping",
+   "type": "state",
+   "of": "gutter",
+   "desc": "water drips from the gutter",
+   "question": "Does water drip from the gutter?"
+  },
+  {
+   "id": "counter_bg",
+   "type": "entity",
+   "class": "sushi counter",
+   "plural": "sushi counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a polished mahogany sushi counter",
+   "question": "Is there a polished mahogany sushi counter?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "fridge_bg",
+   "type": "entity",
+   "class": "refrigerator",
+   "plural": "refrigerators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a refrigerator in the corner",
+   "question": "Is there a refrigerator in the corner?",
+   "box": [
+    850,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "fridge_daikon",
+   "type": "attribute",
+   "of": "fridge_bg",
+   "desc": "the refrigerator reveals shelves with fermented daikon",
+   "question": "Does the refrigerator reveal shelves with fermented daikon?"
+  },
+  {
+   "id": "fridge_tea",
+   "type": "attribute",
+   "of": "fridge_bg",
+   "desc": "the refrigerator reveals a bottle of green tea",
+   "question": "Does the refrigerator reveal a bottle of green tea?"
+  },
+  {
+   "id": "phone_figure",
+   "type": "attribute",
+   "of": "smartphone",
+   "desc": "the video call shows a faceless figure",
+   "question": "Does the video call show a faceless figure?"
+  },
+  {
+   "id": "fishbowl_water",
+   "type": "attribute",
+   "of": "fishbowl",
+   "desc": "the fishbowl contains swirling water",
+   "question": "Does the fishbowl contain swirling water?"
+  },
+  {
+   "id": "fridge_door",
+   "type": "state",
+   "of": "fridge_bg",
+   "desc": "the refrigerator door is slightly ajar",
+   "question": "Is the refrigerator door slightly ajar?"
+  },
+  {
+   "id": "phone_lit",
+   "type": "state",
+   "of": "smartphone",
+   "desc": "the smartphone screen is lit",
+   "question": "Is the smartphone screen lit?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tray",
+   "to": "maki",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "smartphone",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "fishbowl",
+   "kind": "support"
+  },
+  {
+   "from": "counter_bg",
+   "to": "tray",
+   "kind": "support"
+  },
+  {
+   "from": "counter_bg",
+   "to": "chopstick",
+   "kind": "support"
+  },
+  {
+   "from": "counter_bg",
+   "to": "soy_puddle",
+   "kind": "support"
+  },
+  {
+   "from": "counter_bg",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0480",
+ "prompt": "The rain outside presses hard against the glass, distorting the neon pink of the convenience store sign into a trembling afterimage that bleeds across the window like a ghostly blush, reflecting faintly on the polished mahogany sushi counter where a calico cat, ears twitching, perches with the solemnity of a monk in meditation. Its tail, thick and sinuous, wraps protectively around a porcelain tray holding six rows of delicate maki, each roll gleaming with a sheen of wasabi oil and wrapped with precision, as if by invisible hands. A single chopstick, slender and smooth from years of use, lies abandoned on the counter, one end dipping into a small pool of soy sauce that seeps slowly into the wood, leaving dark stains that mirror the storm clouds beyond the window. The scent of miso and umami clings to the air, mingling with the metallic tang of rain and the faint, citrusy undertone of cleaning agents from the floor below. The cat’s eyes, golden and watchful, track the movement of a paper lantern swinging gently from the ceiling, its flame flickering as if caught in the breath of some unseen wind. A thin thread, nearly invisible, dangles from the lantern’s frame and is tethered to a fishbowl on the floor—a glass orb swirling with a spiral of water and fish that seem suspended in a vortex of slow, hypnotic motion. The goldfish, plump and patterned like origami, occasionally breaks the surface, its tail a flicker of movement that momentarily ripples the soy sauce puddle beneath it, creating concentric shadows that echo in the window's rain-slicked mirror. A refrigerator hums in the corner, its door slightly ajar, revealing shelves layered with kimchi, fermented daikon, and a bottle of green tea that glows faintly in the dim light. From the fridge’s bottom shelf, a live eel writhes in a container of ice, its undulating body casting a strange, liquid shadow across the floor that flows toward the cat’s paws, where it curls and dissolves like ink in water. The cat, unperturbed, shifts slightly, pressing a paw against a nearby smartphone balanced on a small wooden stool, its screen lit with a video call of a faceless figure in a kimono, speaking in a language that sounds like rustling leaves. Each word causes the eel to twitch, as if translating emotion into movement, while the smartphone’s camera occasionally glitches, revealing for a heartbeat a scene that does not exist—perhaps another version of this kitchen, drenched in red, where the cat is a shadowy doppelgänger watching back. The room seems to breathe with the storm, the furniture shifting subtly in the damp air, the counter warping slightly as the soy sauce continues to sink into its grain, and the neon light outside pulses like a heartbeat, synchronized with the eel’s undulations and the faint drip of water from the gutter above. The entire scene is a tapestry of slow transformation, each object acting as both cause and effect, the boundaries between creature, tool, and environment blurring until it is impossible to say where one begins and another ends.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 51,
+   "n_uncovered": 5,
+   "proposed": 4,
+   "ungrounded": 2,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [
+    [
+     "fridge",
+     "fridge_bg"
+    ]
+   ],
+   "dropped": []
+  }
+ }
+}

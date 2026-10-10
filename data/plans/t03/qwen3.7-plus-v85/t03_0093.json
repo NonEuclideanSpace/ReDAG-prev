@@ -1,0 +1,250 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a weathered shipyard dock stretching into mist",
+   "question": "Does the image show a weathered shipyard dock stretching into mist?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman wearing blue overalls?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    150,
+    450,
+    250,
+    550
+   ]
+  },
+  {
+   "id": "anchor_chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted anchor chain",
+   "question": "Is there a rusted anchor chain?",
+   "box": [
+    450,
+    700,
+    800,
+    850
+   ]
+  },
+  {
+   "id": "man_holding_clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man holds a clipboard against his chest",
+   "question": "Is the man holding a clipboard against his chest?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman points firmly",
+   "question": "Is the woman pointing firmly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits patiently",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_looking_down",
+   "type": "relation",
+   "of": [
+    "man",
+    "clipboard"
+   ],
+   "desc": "the man looks down at the clipboard",
+   "question": "Is the man looking down at the clipboard?"
+  },
+  {
+   "id": "dog_gazing_up",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog gazes up at the woman's face",
+   "question": "Is the brown dog gazing up at the woman's face?"
+  },
+  {
+   "id": "woman_gesturing_toward_chain",
+   "type": "relation",
+   "of": [
+    "woman",
+    "anchor_chain"
+   ],
+   "desc": "the woman gestures toward the rusted anchor chain",
+   "question": "Is the woman gesturing toward the rusted anchor chain?"
+  },
+  {
+   "id": "chain_on_planks",
+   "type": "state",
+   "of": "anchor_chain",
+   "desc": "the rusted anchor chain lies on the wet planks",
+   "question": "Does the rusted anchor chain lie on the wet planks of the dock?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf stands",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "dog_next_to_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog sits next to the woman in blue overalls",
+   "question": "Is the brown dog sitting next to the woman in blue overalls?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wet wooden planks of the dock",
+   "question": "Are there wet wooden planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "debris",
+   "type": "entity",
+   "class": "industrial debris",
+   "plural": "industrial debris",
+   "count": 2,
+   "count_exact": false,
+   "desc": "industrial debris in the yard",
+   "question": "Is there industrial debris?",
+   "box": [
+    50,
+    700,
+    974,
+    950
+   ]
+  },
+  {
+   "id": "clipboard_tight",
+   "type": "state",
+   "of": "man",
+   "desc": "the man holds the clipboard tightly",
+   "question": "Is the man holding the clipboard tightly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "planks",
+   "to": "anchor_chain",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0093",
+ "prompt": "In a cinematic film still, a weathered shipyard dock stretches into the mist. On the left stands a man in a red scarf, holding a clipboard tightly against his chest. In the center, a woman in blue overalls points firmly at a rusted anchor chain lying on the wet planks. To the right, a brown dog sits patiently next to the woman, gazing up at her face. The man looks down at the clipboard while the woman gestures toward the heavy metal links. There is no water visible in the frame, only the damp wood and industrial debris of the yard.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

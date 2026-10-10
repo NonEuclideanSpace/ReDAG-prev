@@ -1,0 +1,165 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with falling snow",
+   "question": "Does the image show a snowy town square with falling snow?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    550,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    724,
+    250,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_lantern",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a lantern",
+   "question": "Is the woman in the blue coat holding a lantern?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing upright",
+   "question": "Is the woman in the blue coat standing upright?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is leaning forward slightly",
+   "question": "Is the man in the green hat leaning forward slightly?"
+  },
+  {
+   "id": "man_looking_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in the green hat looks at the brown dog",
+   "question": "Is the man in the green hat looking at the brown dog?"
+  },
+  {
+   "id": "woman_pointing_dog",
+   "type": "action",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in the blue coat points her finger toward the brown dog",
+   "question": "Is the woman in the blue coat pointing her finger toward the brown dog?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bench"
+   ],
+   "desc": "the brown dog sits on the wooden bench",
+   "question": "Is the brown dog sitting on the wooden bench?"
+  },
+  {
+   "id": "no_car",
+   "type": "absent",
+   "desc": "a car",
+   "question": "Is there a car visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0117",
+ "prompt": "In a cinematic film still, a snowy town square features three distinct figures. On the left stands a woman in a blue coat holding a lantern. In the center sits a brown dog on a wooden bench. On the right is a man in a green hat looking at the dog. The woman in the blue coat is standing upright. The man in the green hat is leaning forward slightly. The woman in the blue coat is pointing her finger toward the brown dog. There is no car visible in the scene. The composition places the woman on the left, the dog in the center, and the man on the right, creating a balanced triangular arrangement within the falling snow.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

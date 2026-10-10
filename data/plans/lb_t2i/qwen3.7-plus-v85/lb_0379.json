@@ -1,0 +1,535 @@
+{
+ "style": "surreal digital painting, dim atmospheric lighting, golden shafts of light, intricate details, dreamlike mood",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forgotten room with closed blinds and bookshelves lining the walls",
+   "question": "Does the image show a forgotten room with closed blinds and bookshelves lining the walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty side table",
+   "question": "Is there a dusty side table?",
+   "box": [
+    200,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty teacup",
+   "question": "Is there a half-empty teacup?",
+   "box": [
+    300,
+    550,
+    400,
+    650
+   ]
+  },
+  {
+   "id": "steam",
+   "type": "entity",
+   "class": "steam",
+   "plural": "steams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "mist rising from the teacup",
+   "question": "Is there mist rising from the teacup?",
+   "box": [
+    320,
+    450,
+    380,
+    550
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "brass key",
+   "plural": "brass keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass key",
+   "question": "Is there a brass key?",
+   "box": [
+    500,
+    600,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "napkin",
+   "type": "entity",
+   "class": "cloth napkin",
+   "plural": "cloth napkins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded cloth napkin",
+   "question": "Is there a folded cloth napkin?",
+   "box": [
+    480,
+    620,
+    580,
+    680
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellowed open book",
+   "question": "Is there a yellowed open book?",
+   "box": [
+    600,
+    580,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    350,
+    480,
+    420,
+    540
+   ]
+  },
+  {
+   "id": "slippers",
+   "type": "entity",
+   "class": "slippers",
+   "plural": "slippers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of worn slippers",
+   "question": "Is there a pair of worn slippers?",
+   "box": [
+    100,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror",
+   "question": "Is there a mirror?",
+   "box": [
+    800,
+    200,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "reflection",
+   "type": "entity",
+   "class": "reflection",
+   "plural": "reflections",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the reflection in the mirror showing a full teacup",
+   "question": "Does the reflection in the mirror show a full teacup?",
+   "box": [
+    820,
+    250,
+    930,
+    550
+   ]
+  },
+  {
+   "id": "pendulum",
+   "type": "entity",
+   "class": "pendulum",
+   "plural": "pendulums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass pendulum hanging from the ceiling",
+   "question": "Is there a brass pendulum hanging from the ceiling?",
+   "box": [
+    488,
+    0,
+    536,
+    300
+   ]
+  },
+  {
+   "id": "gramophone",
+   "type": "entity",
+   "class": "gramophone",
+   "plural": "gramophones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gramophone",
+   "question": "Is there a gramophone?",
+   "box": [
+    50,
+    600,
+    180,
+    800
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "mechanical bird",
+   "plural": "mechanical birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mechanical bird with one wing askew",
+   "question": "Is there a small mechanical bird with one wing askew?",
+   "box": [
+    756,
+    576,
+    804,
+    624
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    850,
+    100,
+    900,
+    150
+   ]
+  },
+  {
+   "id": "mirror_leaning",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror is leaning crookedly",
+   "question": "Is the mirror leaning crookedly?"
+  },
+  {
+   "id": "key_on_napkin",
+   "type": "relation",
+   "of": [
+    "key",
+    "napkin"
+   ],
+   "desc": "the brass key rests atop the folded cloth napkin",
+   "question": "Is the brass key resting atop the folded cloth napkin?"
+  },
+  {
+   "id": "napkin_on_table",
+   "type": "relation",
+   "of": [
+    "napkin",
+    "table"
+   ],
+   "desc": "the folded cloth napkin is on the side table",
+   "question": "Is the folded cloth napkin on the side table?"
+  },
+  {
+   "id": "book_on_table",
+   "type": "relation",
+   "of": [
+    "book",
+    "table"
+   ],
+   "desc": "the yellowed open book lies on the side table",
+   "question": "Is the yellowed open book lying on the side table?"
+  },
+  {
+   "id": "teacup_on_table",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "table"
+   ],
+   "desc": "the half-empty teacup is on the side table",
+   "question": "Is the half-empty teacup on the side table?"
+  },
+  {
+   "id": "bird_on_table",
+   "type": "relation",
+   "of": [
+    "bird",
+    "table"
+   ],
+   "desc": "the mechanical bird perches on the edge of the side table",
+   "question": "Is the mechanical bird perching on the edge of the side table?"
+  },
+  {
+   "id": "moth_near_steam",
+   "type": "relation",
+   "of": [
+    "moth",
+    "steam"
+   ],
+   "desc": "the moth flutters in and out of the teacup's steam",
+   "question": "Is the moth fluttering in and out of the teacup's steam?"
+  },
+  {
+   "id": "mirror_against_wall",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror leans against the wall",
+   "question": "Is the mirror leaning against the wall?"
+  },
+  {
+   "id": "clock_behind_mirror",
+   "type": "relation",
+   "of": [
+    "clock",
+    "mirror"
+   ],
+   "desc": "the clock hangs behind the mirror",
+   "question": "Is the clock hanging behind the mirror?"
+  },
+  {
+   "id": "pendulum_from_ceiling",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the pendulum swings from the ceiling",
+   "question": "Is the pendulum swinging from the ceiling?"
+  },
+  {
+   "id": "slippers_on_floor",
+   "type": "state",
+   "of": "slippers",
+   "desc": "the worn slippers lie on the floor",
+   "question": "Are the worn slippers lying on the floor?"
+  },
+  {
+   "id": "gramophone_stands",
+   "type": "state",
+   "of": "gramophone",
+   "desc": "the gramophone stands",
+   "question": "Is the gramophone standing?"
+  },
+  {
+   "id": "gramophone_near_table",
+   "type": "relation",
+   "of": [
+    "gramophone",
+    "table"
+   ],
+   "desc": "the gramophone is near the side table",
+   "question": "Is the gramophone near the side table?"
+  },
+  {
+   "id": "clock_hangs",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock hangs",
+   "question": "Is the clock hanging?"
+  },
+  {
+   "id": "teacup_steaming",
+   "type": "state",
+   "of": "teacup",
+   "desc": "the half-empty teacup is steaming",
+   "question": "Is the half-empty teacup steaming?"
+  },
+  {
+   "id": "moth_fluttering",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth with stained glass wings is fluttering",
+   "question": "Is the moth with stained glass wings fluttering?"
+  },
+  {
+   "id": "slippers_crossed",
+   "type": "state",
+   "of": "slippers",
+   "desc": "the worn slippers are crossed",
+   "question": "Are the worn slippers crossed?"
+  },
+  {
+   "id": "pendulum_swinging",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the brass pendulum is swinging",
+   "question": "Is the brass pendulum swinging?"
+  },
+  {
+   "id": "bird_perching",
+   "type": "state",
+   "of": "bird",
+   "desc": "the small mechanical bird is perching",
+   "question": "Is the small mechanical bird perching?"
+  },
+  {
+   "id": "book_curling",
+   "type": "state",
+   "of": "book",
+   "desc": "the pages of the yellowed open book are curling",
+   "question": "Are the pages of the yellowed open book curling?"
+  },
+  {
+   "id": "book_bookmark",
+   "type": "attribute",
+   "of": "book",
+   "desc": "a dried ivy bookmark pressing into the spine of the yellowed open book",
+   "question": "Is there a dried ivy bookmark pressing into the spine of the yellowed open book?"
+  },
+  {
+   "id": "book_map",
+   "type": "attribute",
+   "of": "book",
+   "desc": "a map drawn in fading ink on the open page of the yellowed open book",
+   "question": "Does the open page of the yellowed open book reveal a map drawn in fading ink?"
+  },
+  {
+   "id": "slippers_treads",
+   "type": "attribute",
+   "of": "slippers",
+   "desc": "the treads of the worn slippers are smooth",
+   "question": "Are the treads of the worn slippers smooth?"
+  },
+  {
+   "id": "bird_beak_open",
+   "type": "state",
+   "of": "bird",
+   "desc": "the beak of the small mechanical bird is open",
+   "question": "Is the beak of the small mechanical bird open?"
+  },
+  {
+   "id": "moth_wings",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "wings of stained glass on the moth",
+   "question": "Does the moth have wings of stained glass?"
+  },
+  {
+   "id": "mirror_frame_carved",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "an intricately carved frame on the mirror",
+   "question": "Does the mirror have an intricately carved frame?"
+  },
+  {
+   "id": "reflection_closed_book",
+   "type": "attribute",
+   "of": "reflection",
+   "desc": "a closed book in the reflection",
+   "question": "Does the reflection show a closed book?"
+  },
+  {
+   "id": "reflection_no_key",
+   "type": "absent",
+   "desc": "a key in the reflection",
+   "question": "Is there a key visible in the reflection?"
+  },
+  {
+   "id": "gramophone_needle",
+   "type": "attribute",
+   "of": "gramophone",
+   "desc": "a needle resting on a record on the gramophone",
+   "question": "Is the needle of the gramophone resting on a record?"
+  },
+  {
+   "id": "clock_hands",
+   "type": "state",
+   "of": "clock",
+   "desc": "the hands of the clock spinning backward",
+   "question": "Are the hands of the clock spinning backward?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teacup",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "napkin",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "bird",
+   "kind": "support"
+  },
+  {
+   "from": "napkin",
+   "to": "key",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0379",
+ "prompt": "In the dim confines of a forgotten room where time folds over itself like parchment, a dusty side table holds the fragile remains of a suspended moment: a half-empty teacup steams into the air, its mist weaving through shafts of sunlight that slice like blades between the closed blinds. The light, narrow and golden, cuts diagonally across the table, illuminating a brass key that glints faintly, resting atop a folded cloth napkin as if waiting to be claimed. The napkin itself seems stitched into the fabric of the scene, somehow suspended by the gravity of expectation, its fibers threaded with threads of another time. Nearby, a yellowed book lies open on the table, its pages slightly curling from age, a bookmark of dried ivy pressing into the spine. The open page reveals a map drawn in fading ink—of a place that does not exist, yet somehow does. Beside it, a moth with wings of stained glass flutters in and out of the teacup’s steam, as if the two are connected in some strange cycle of creation and evaporation. The worn slippers lie crossed in a near-meditative pose, their treads worn smooth by years of quiet contemplation, their placement suggesting a sudden pause, a momentary breath before something unresolved began. From the slippers, the gaze drifts to a mirror leaning crookedly against the wall, its frame carved with intricate, impossible geometries—circles within triangles within spirals, each one slightly off-kilter, as if the mirror knows the secret of the room and won’t reveal it. The reflection within shows not the room, but another version of it, where the teacup is full, the book is closed, and the key has vanished. A pendulum of brass swings from the ceiling, its motion erratic, almost deliberate, and with each swing, the shadows of the room shift like living things, reconfiguring furniture, reorienting doorways. A gramophone stands nearby, its needle resting on a record that plays no music but hums with a sound like a lullaby just beyond memory. The sound drifts through the air, merging with the dust motes, each particle now carrying the weight of a lost song. A small mechanical bird perches on the edge of the table, one of its wings slightly askew, its tiny gears ticking in perfect time with the pendulum. It appears frozen in the act of taking flight, its beak open as if mid-song, though no sound escapes. The walls are lined with bookshelves that stretch impossibly upward, their contents spilling over into other dimensions, some titles shifting when glanced at too long, others glowing faintly with the light of unread stories. A clock hangs behind the mirror, its hands spinning backward, not toward midnight, but toward some undefined hour of return. In this surreal, layered moment, every object seems to echo another, their existence bound by the strange physics of the room—where a spilled teacup can rewrite a story, a mirror can show a better life, and a brass key can open more than just a door. Dust, light, and memory intertwine in a slow, deliberate dance, each particle, object, and shadow conspiring in a narrative too vast to fully grasp, yet undeniably real in its impossible coherence.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 53,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 5,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "style": "macro product photography, soft lighting, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a slate-grey linen backdrop",
+   "question": "Is the background a slate-grey linen texture?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fine rose-gold rope-style chain",
+   "question": "Is there a fine rose-gold rope-style chain?",
+   "box": [
+    480,
+    0,
+    544,
+    400
+   ]
+  },
+  {
+   "id": "pendant",
+   "type": "entity",
+   "class": "pendant",
+   "plural": "pendants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an oval honey-gold amber cabochon in a rose-gold filigree bezel",
+   "question": "Is there an oval honey-gold amber cabochon in a rose-gold filigree bezel?",
+   "box": [
+    412,
+    400,
+    612,
+    650
+   ]
+  },
+  {
+   "id": "amber_inclusions",
+   "type": "attribute",
+   "of": "pendant",
+   "desc": "tiny clearly visible fern inclusions inside the amber",
+   "question": "Are there tiny clearly visible fern inclusions inside the amber?"
+  },
+  {
+   "id": "pearls_position",
+   "type": "attribute",
+   "of": "pendant",
+   "desc": "four seed pearls set at cardinal points on the bezel",
+   "question": "Are there four seed pearls set at cardinal points on the bezel?"
+  },
+  {
+   "id": "bail_symbol",
+   "type": "attribute",
+   "of": "pendant",
+   "desc": "an engraved infinity symbol on the bail",
+   "question": "Is there an engraved infinity symbol on the bail?"
+  },
+  {
+   "id": "chain_polish",
+   "type": "attribute",
+   "of": "chain",
+   "desc": "highly polished chain links",
+   "question": "Are the chain links highly polished?"
+  },
+  {
+   "id": "amber_surface",
+   "type": "state",
+   "of": "pendant",
+   "desc": "the amber surface is unblemished",
+   "question": "Is the amber surface unblemished?"
+  },
+  {
+   "id": "pearls_condition",
+   "type": "state",
+   "of": "pendant",
+   "desc": "the pearls show no discoloration",
+   "question": "Do the pearls show no discoloration?"
+  },
+  {
+   "id": "pendant_hanging",
+   "type": "relation",
+   "of": [
+    "pendant",
+    "chain"
+   ],
+   "desc": "the pendant hangs from the chain",
+   "question": "Does the pendant hang from the chain?"
+  },
+  {
+   "id": "no_silver",
+   "type": "absent",
+   "desc": "silver components",
+   "question": "Are there any silver components in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chain",
+   "to": "pendant",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_090",
+ "prompt": "Depict a single Baltic-amber pendant hanging from a fine rose-gold chain against a slate-grey linen backdrop. The pendant is an oval cabochon of honey-gold amber with tiny, clearly visible fern inclusions. A filigree rose-gold bezel surrounds the stone, set with four seed pearls at cardinal points. The bail features an engraved infinity symbol. The chain links are rope-style and highly polished. The amber surface is unblemished, the pearls show no discoloration, and the piece contains no silver components.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

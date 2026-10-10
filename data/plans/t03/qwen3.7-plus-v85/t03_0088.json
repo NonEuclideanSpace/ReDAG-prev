@@ -1,0 +1,200 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background suitable for a pencil sketch",
+   "question": "Is the image rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table in the image?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green sweater",
+   "question": "Is there a man in a green sweater?",
+   "box": [
+    674,
+    180,
+    974,
+    820
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    450,
+    520,
+    574,
+    650
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a green sweater holds an open book",
+   "question": "Is the man in a green sweater holding an open book?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is sitting",
+   "question": "Is the woman in a blue dress sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green sweater is standing",
+   "question": "Is the man in a green sweater standing?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is resting",
+   "question": "Is the small black cat resting?"
+  },
+  {
+   "id": "woman_looking_lap",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is looking down at her lap",
+   "question": "Is the woman in a blue dress looking down at her lap?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green sweater is pointing toward the pages of the book",
+   "question": "Is the man in a green sweater pointing toward the pages of the book he holds?"
+  },
+  {
+   "id": "woman_on_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "table"
+   ],
+   "desc": "the woman in a blue dress sits on the left side of the wooden table",
+   "question": "Is the woman in a blue dress positioned on the left side of the wooden table?"
+  },
+  {
+   "id": "man_on_right",
+   "type": "relation",
+   "of": [
+    "man",
+    "table"
+   ],
+   "desc": "the man in a green sweater stands on the right side of the wooden table",
+   "question": "Is the man in a green sweater positioned on the right side of the wooden table?"
+  },
+  {
+   "id": "cat_center_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the small black cat rests in the center of the wooden table",
+   "question": "Is the small black cat resting in the center of the wooden table?"
+  },
+  {
+   "id": "cat_between",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman",
+    "man"
+   ],
+   "desc": "the small black cat is between the woman in a blue dress and the man in a green sweater",
+   "question": "Is the small black cat positioned between the woman in a blue dress and the man in a green sweater?"
+  },
+  {
+   "id": "woman_looking_book",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress is looking at the book the man in a green sweater holds",
+   "question": "Is the woman in a blue dress looking at the book held by the man in a green sweater?"
+  },
+  {
+   "id": "no_computer",
+   "type": "absent",
+   "desc": "a computer",
+   "question": "Is there a computer visible in the scene?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0088",
+ "prompt": "In a pencil sketch with light color wash, a woman in a blue dress sits on the left side of a wooden table. A man in a green sweater stands on the right side holding an open book. A small black cat rests in the center of the table between them. The woman is looking down at her lap. The man is pointing toward the pages. The woman is looking at the book the man holds. There is no computer visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

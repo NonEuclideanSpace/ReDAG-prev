@@ -1,0 +1,289 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a village market at dawn with cobblestones and a center path",
+   "question": "Does the image show a village market scene at dawn with cobblestones?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_apron",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman wearing a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man_hat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man wearing a green hat?",
+   "box": [
+    350,
+    180,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of bright orange pumpkins",
+   "question": "Is there a stack of bright orange pumpkins?",
+   "box": [
+    620,
+    400,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "child_boots",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in yellow boots",
+   "question": "Is there a small child wearing yellow boots?",
+   "box": [
+    550,
+    550,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    560,
+    650,
+    690,
+    820
+   ]
+  },
+  {
+   "id": "old_woman_shawl",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a purple shawl",
+   "question": "Is there an elderly woman wearing a purple shawl?",
+   "box": [
+    750,
+    250,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "merchant_beard",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a merchant with a gray beard",
+   "question": "Is there a man with a gray beard acting as a merchant?",
+   "box": [
+    850,
+    280,
+    1024,
+    780
+   ]
+  },
+  {
+   "id": "cat_paws",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    800,
+    750,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman_apron",
+   "desc": "the woman in the blue apron holds a woven basket",
+   "question": "Is the woman in the blue apron holding a woven basket?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man_hat",
+    "pumpkins"
+   ],
+   "desc": "the man in the green hat points toward the stack of pumpkins",
+   "question": "Is the man in the green hat pointing toward the stack of pumpkins?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child_boots",
+   "desc": "the small child in yellow boots is sitting",
+   "question": "Is the small child in yellow boots sitting?"
+  },
+  {
+   "id": "child_on_crate",
+   "type": "relation",
+   "of": [
+    "child_boots",
+    "crate"
+   ],
+   "desc": "the small child sits on the wooden crate",
+   "question": "Is the small child sitting on the wooden crate?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "action",
+   "of": [
+    "child_boots",
+    "man_hat"
+   ],
+   "desc": "the small child looks up at the man in the green hat",
+   "question": "Is the small child looking up at the man in the green hat?"
+  },
+  {
+   "id": "woman_handing_coin",
+   "type": "action",
+   "of": [
+    "old_woman_shawl",
+    "merchant_beard"
+   ],
+   "desc": "the old woman hands a silver coin to the merchant",
+   "question": "Is the old woman handing a silver coin to the merchant with the gray beard?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat_paws",
+   "desc": "the cat with white paws is sleeping",
+   "question": "Is the cat with white paws sleeping?"
+  },
+  {
+   "id": "cat_near_merchant",
+   "type": "relation",
+   "of": [
+    "cat_paws",
+    "merchant_beard"
+   ],
+   "desc": "the cat is near the merchant's feet",
+   "question": "Is the cat near the feet of the merchant with the gray beard?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun in the sky",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman_apron",
+   "desc": "the woman in the blue apron stands",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_hat",
+    "woman_apron"
+   ],
+   "desc": "the man in the green hat is next to the woman in the blue apron",
+   "question": "Is the man in the green hat next to the woman in the blue apron?"
+  },
+  {
+   "id": "crate_near_pumpkins",
+   "type": "relation",
+   "of": [
+    "crate",
+    "pumpkins"
+   ],
+   "desc": "the wooden crate is near the stack of bright orange pumpkins",
+   "question": "Is the wooden crate near the stack of bright orange pumpkins?"
+  },
+  {
+   "id": "cat_white_paws",
+   "type": "attribute",
+   "of": "cat_paws",
+   "desc": "the stray cat has white paws",
+   "question": "Does the stray cat have white paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "child_boots",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0102",
+ "prompt": "In an anime style scene set in a village market at dawn, a woman in a blue apron stands on the left holding a woven basket. Next to her on the center path, a man in a green hat points toward a stack of bright orange pumpkins. A small child in yellow boots sits on a wooden crate near the pumpkins, looking up at the man. On the right side, an old woman in a purple shawl hands a silver coin to a merchant with a gray beard. A stray cat with white paws sleeps peacefully on the cobblestones near the merchant's feet. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

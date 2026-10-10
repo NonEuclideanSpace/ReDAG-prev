@@ -1,0 +1,192 @@
+{
+ "style": "sci-fi digital art, high detail, cinematic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the vacuum of space",
+   "question": "Does the image show the vacuum of space?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "station",
+   "type": "entity",
+   "class": "space station",
+   "plural": "space stations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spherical ornate space station observatory",
+   "question": "Is there a spherical ornate space station observatory?",
+   "box": [
+    312,
+    312,
+    712,
+    712
+   ]
+  },
+  {
+   "id": "dome",
+   "type": "attribute",
+   "of": "station",
+   "desc": "a transparent crystal dome on the station revealing instruments within",
+   "question": "Does the station have a transparent crystal dome revealing instruments within?"
+  },
+  {
+   "id": "telescope",
+   "type": "attribute",
+   "of": "station",
+   "desc": "a massive telescope with a golden mirror assembly visible through the dome",
+   "question": "Is a massive telescope with a golden mirror assembly visible through the dome?"
+  },
+  {
+   "id": "solar_panels",
+   "type": "entity",
+   "class": "solar panel array",
+   "plural": "solar panel arrays",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five retractable solar panel arrays",
+   "question": "Are there five retractable solar panel arrays?",
+   "box": [
+    100,
+    100,
+    924,
+    924
+   ]
+  },
+  {
+   "id": "sensor_arrays",
+   "type": "attribute",
+   "of": "station",
+   "desc": "smaller sensor arrays protruding from various points on the hull",
+   "question": "Do smaller sensor arrays protrude from various points on the hull?"
+  },
+  {
+   "id": "dishes",
+   "type": "attribute",
+   "of": "station",
+   "desc": "communication dishes in the shape of crystalline flowers positioned to track signals",
+   "question": "Are there communication dishes in the shape of crystalline flowers positioned to track signals?"
+  },
+  {
+   "id": "docking_bay",
+   "type": "attribute",
+   "of": "station",
+   "desc": "a docking bay illuminated by soft amber lighting",
+   "question": "Is there a docking bay illuminated by soft amber lighting?"
+  },
+  {
+   "id": "station_stable",
+   "type": "state",
+   "of": "station",
+   "desc": "the station is not rotating and maintains a stable position",
+   "question": "Is the station not rotating and maintaining a stable position?"
+  },
+  {
+   "id": "no_damage",
+   "type": "absent",
+   "desc": "signs of meteor damage on the station",
+   "question": "Are there any signs of meteor damage on the station?"
+  },
+  {
+   "id": "no_venting",
+   "type": "absent",
+   "desc": "atmospheric venting systems on the station",
+   "question": "Are there any atmospheric venting systems on the station?"
+  },
+  {
+   "id": "solar_panels_station",
+   "type": "relation",
+   "of": [
+    "solar_panels",
+    "station"
+   ],
+   "desc": "the five solar panel arrays extend from the main body of the station",
+   "question": "Do the five solar panel arrays extend from the main body of the station?"
+  },
+  {
+   "id": "station_hull",
+   "type": "attribute",
+   "of": "station",
+   "desc": "the station's hull is constructed from polished metallic panels",
+   "question": "Is the station's hull constructed from polished metallic panels?"
+  },
+  {
+   "id": "station_neon",
+   "type": "attribute",
+   "of": "station",
+   "desc": "blue neon accent lights trace geometric patterns across the surface",
+   "question": "Do blue neon accent lights trace geometric patterns across the station's surface?"
+  },
+  {
+   "id": "station_engravings",
+   "type": "attribute",
+   "of": "station",
+   "desc": "intricate circuit-like engravings that emit a bright glow on the surface",
+   "question": "Are there intricate circuit-like engravings that emit a bright glow on the station's surface?"
+  },
+  {
+   "id": "solar_cells",
+   "type": "attribute",
+   "of": "solar_panels",
+   "desc": "the solar panel arrays are covered in shimmering reflective cells",
+   "question": "Are the solar panel arrays covered in shimmering reflective cells?"
+  },
+  {
+   "id": "nebula",
+   "type": "entity",
+   "class": "nebula",
+   "plural": "nebulae",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colorful nebula",
+   "question": "Is there a colorful nebula?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "station",
+   "to": "solar_panels",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_018",
+ "prompt": "A single ornate space station observatory floating in the vacuum near a nebula. The structure is spherical with a transparent crystal dome revealing the sophisticated astronomical instruments within. Its hull is constructed from polished metallic panels that reflect the colorful nebula gases, while blue neon accent lights trace geometric patterns across the surface. The station is not rotating, maintaining a stable position for precise celestial observations. Five retractable solar panel arrays extend from the main body, each covered in shimmering reflective cells that catch starlight. The observatory houses a massive telescope with a golden mirror assembly visible through the dome, while smaller sensor arrays protrude from various points on the hull. Communication dishes in the shape of crystalline flowers are positioned to track distant signals. The station's docking bay is illuminated by soft amber lighting, and its surface displays intricate circuit-like engravings that emit a bright glow. The structure shows no signs of meteor damage and contains no atmospheric venting systems, being designed for pure vacuum operation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node station: entity question is long (21 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

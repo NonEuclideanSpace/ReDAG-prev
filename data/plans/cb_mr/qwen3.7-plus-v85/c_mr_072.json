@@ -1,0 +1,354 @@
+{
+ "style": "photorealistic industrial scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a factory floor",
+   "question": "Does the image show a factory floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "conveyor_belt",
+   "type": "entity",
+   "class": "conveyor belt",
+   "plural": "conveyor belts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a conveyor belt",
+   "question": "Is there a conveyor belt?",
+   "box": [
+    200,
+    400,
+    824,
+    624
+   ]
+  },
+  {
+   "id": "robotic_arm",
+   "type": "entity",
+   "class": "robotic arm",
+   "plural": "robotic arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic arm",
+   "question": "Is there a robotic arm?",
+   "box": [
+    400,
+    50,
+    624,
+    450
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker",
+   "question": "Is there a worker?",
+   "box": [
+    100,
+    200,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "control_panel",
+   "type": "entity",
+   "class": "control panel",
+   "plural": "control panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a control panel",
+   "question": "Is there a control panel?",
+   "box": [
+    260,
+    350,
+    380,
+    550
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 5,
+   "count_exact": true,
+   "desc": "a pile of five crates",
+   "question": "Is there a pile of five crates?",
+   "box": [
+    850,
+    450,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench",
+   "question": "Is there a workbench?",
+   "box": [
+    850,
+    650,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "toolboxes",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six toolboxes",
+   "question": "Are there six toolboxes?",
+   "box": [
+    880,
+    700,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "forklift",
+   "type": "entity",
+   "class": "forklift",
+   "plural": "forklifts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forklift",
+   "question": "Is there a forklift?",
+   "box": [
+    50,
+    600,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "safety_barrier",
+   "type": "entity",
+   "class": "safety barrier",
+   "plural": "safety barriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a safety barrier",
+   "question": "Is there a safety barrier?",
+   "box": [
+    30,
+    500,
+    320,
+    650
+   ]
+  },
+  {
+   "id": "hanging_lamp",
+   "type": "entity",
+   "class": "hanging lamp",
+   "plural": "hanging lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging lamp",
+   "question": "Is there a hanging lamp?",
+   "box": [
+    450,
+    0,
+    574,
+    150
+   ]
+  },
+  {
+   "id": "belt_center",
+   "type": "state",
+   "of": "conveyor_belt",
+   "desc": "the conveyor belt runs through the center",
+   "question": "Does the conveyor belt run through the center of the image?"
+  },
+  {
+   "id": "arm_above_belt",
+   "type": "relation",
+   "of": [
+    "robotic_arm",
+    "conveyor_belt"
+   ],
+   "desc": "the robotic arm is positioned above the conveyor belt",
+   "question": "Is the robotic arm positioned above the conveyor belt?"
+  },
+  {
+   "id": "arm_picking",
+   "type": "action",
+   "of": [
+    "robotic_arm",
+    "conveyor_belt"
+   ],
+   "desc": "the robotic arm is picking up items from the conveyor belt",
+   "question": "Is the robotic arm picking up items from the conveyor belt?"
+  },
+  {
+   "id": "crates_at_end",
+   "type": "relation",
+   "of": [
+    "crates",
+    "conveyor_belt"
+   ],
+   "desc": "the pile of crates is at the end of the conveyor belt",
+   "question": "Is the pile of crates at the end of the conveyor belt?"
+  },
+  {
+   "id": "worker_next_to_panel",
+   "type": "relation",
+   "of": [
+    "worker",
+    "control_panel"
+   ],
+   "desc": "the worker stands next to the control panel",
+   "question": "Is the worker standing next to the control panel?"
+  },
+  {
+   "id": "worker_operating",
+   "type": "action",
+   "of": [
+    "worker",
+    "control_panel"
+   ],
+   "desc": "the worker is operating the control panel",
+   "question": "Is the worker operating the control panel?"
+  },
+  {
+   "id": "panel_alongside_belt",
+   "type": "relation",
+   "of": [
+    "control_panel",
+    "conveyor_belt"
+   ],
+   "desc": "the control panel is alongside the conveyor belt",
+   "question": "Is the control panel alongside the conveyor belt?"
+  },
+  {
+   "id": "toolboxes_on_bench",
+   "type": "relation",
+   "of": [
+    "toolboxes",
+    "workbench"
+   ],
+   "desc": "the toolboxes are on the workbench",
+   "question": "Are the toolboxes on the workbench?"
+  },
+  {
+   "id": "forklift_behind_barrier",
+   "type": "relation",
+   "of": [
+    "forklift",
+    "safety_barrier"
+   ],
+   "desc": "the forklift is parked behind the safety barrier",
+   "question": "Is the forklift parked behind the safety barrier?"
+  },
+  {
+   "id": "lamp_illuminates_belt",
+   "type": "relation",
+   "of": [
+    "hanging_lamp",
+    "conveyor_belt"
+   ],
+   "desc": "the hanging lamp illuminates the conveyor belt",
+   "question": "Does the hanging lamp illuminate the conveyor belt?"
+  },
+  {
+   "id": "arm_taller_worker",
+   "type": "attribute",
+   "of": "robotic_arm",
+   "desc": "the robotic arm is taller than the worker",
+   "question": "Is the robotic arm taller than the worker?"
+  },
+  {
+   "id": "worker_taller_barrier",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker is taller than the safety barrier",
+   "question": "Is the worker taller than the safety barrier?"
+  },
+  {
+   "id": "forklift_larger_crate",
+   "type": "attribute",
+   "of": "forklift",
+   "desc": "the forklift is larger than an individual crate",
+   "question": "Is the forklift larger than an individual crate?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker stands",
+   "question": "Is the worker standing?"
+  },
+  {
+   "id": "forklift_parked",
+   "type": "state",
+   "of": "forklift",
+   "desc": "the forklift is parked",
+   "question": "Is the forklift parked?"
+  },
+  {
+   "id": "panel_buttons",
+   "type": "attribute",
+   "of": "control_panel",
+   "desc": "the control panel has three large red buttons",
+   "question": "Does the control panel have three large red buttons?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "conveyor_belt",
+   "to": "crates",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "toolboxes",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_072",
+ "prompt": "A factory floor with a conveyor belt running through the center. A robotic arm, which is taller than the worker, is positioned above the conveyor belt, picking up items. At the end of the conveyor belt is a pile of crates. A worker stands next to a control panel, operating it. The control panel is alongside the conveyor belt. On the control panel are three large red buttons. A workbench is to the right of the conveyor belt. On the workbench, there are some toolboxes, and their number is twice the number of red buttons. A forklift, which is larger than the individual crates, is parked behind a safety barrier. A hanging lamp illuminates the conveyor belt. The number of crates in the pile is two more than the number of red buttons. The worker is taller than the safety barrier.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

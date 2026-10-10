@@ -1,0 +1,148 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock scene",
+   "question": "Does the image depict a shipyard dock scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in blue overalls",
+   "question": "Is there a worker in blue overalls?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted anchor",
+   "question": "Is there a rusted anchor?",
+   "box": [
+    600,
+    700,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "worker_holding_clipboard",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in blue overalls holds a clipboard against his chest",
+   "question": "Is the worker in blue overalls holding a clipboard against his chest?"
+  },
+  {
+   "id": "worker_looking_at_anchor",
+   "type": "action",
+   "of": [
+    "worker",
+    "anchor"
+   ],
+   "desc": "the worker in blue overalls is looking at the rusted anchor",
+   "question": "Is the worker in blue overalls looking at the rusted anchor?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in blue overalls stands",
+   "question": "Is the worker in blue overalls standing?"
+  },
+  {
+   "id": "anchor_on_planks_relation",
+   "type": "relation",
+   "of": [
+    "anchor",
+    "planks"
+   ],
+   "desc": "the rusted anchor rests on the wooden planks",
+   "question": "Is the rusted anchor resting on the wooden planks of the dock scene?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden planks",
+   "question": "Are there wooden planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "anchor_on_planks",
+   "type": "relation",
+   "of": [
+    "anchor",
+    "planks"
+   ],
+   "desc": "the rusted anchor rests on the wooden planks",
+   "question": "Is the rusted anchor resting on the wooden planks?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "planks",
+   "to": "anchor",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0049",
+ "prompt": "A pencil sketch with light color wash depicts a shipyard dock scene. On the left stands a worker in blue overalls, holding a clipboard firmly against his chest. To the right, a rusted anchor rests heavily on the wooden planks. The worker in blue overalls is looking at the rusted anchor. There is no water visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

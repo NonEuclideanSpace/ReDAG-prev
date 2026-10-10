@@ -1,0 +1,238 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet library reading room",
+   "question": "Does the image show a quiet library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    50,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    80,
+    200,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large table",
+   "question": "Is there a large table?",
+   "box": [
+    300,
+    500,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "student",
+   "type": "entity",
+   "class": "student",
+   "plural": "students",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young student in a blue hoodie",
+   "question": "Is there a young student in a blue hoodie?",
+   "box": [
+    400,
+    250,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "open book",
+   "plural": "open books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large open book",
+   "question": "Is there a large open book?",
+   "box": [
+    450,
+    600,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    850,
+    450,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman with silver hair sits upright",
+   "question": "Is the elderly woman with silver hair sitting upright?"
+  },
+  {
+   "id": "student_leaning",
+   "type": "state",
+   "of": "student",
+   "desc": "the young student in a blue hoodie leans forward",
+   "question": "Is the young student in a blue hoodie leaning forward?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat rests calmly",
+   "question": "Is the black cat resting calmly?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "woman",
+    "chair"
+   ],
+   "desc": "the elderly woman with silver hair sits on the wooden chair",
+   "question": "Is the elderly woman with silver hair sitting on the wooden chair?"
+  },
+  {
+   "id": "student_over_book",
+   "type": "relation",
+   "of": [
+    "student",
+    "book"
+   ],
+   "desc": "the young student in a blue hoodie is over the large open book",
+   "question": "Is the young student in a blue hoodie positioned over the large open book?"
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the black cat is on the table edge",
+   "question": "Is the black cat on the edge of the table?"
+  },
+  {
+   "id": "student_pointing",
+   "type": "action",
+   "of": [
+    "student",
+    "book"
+   ],
+   "desc": "the young student in a blue hoodie points at a paragraph in the large open book",
+   "question": "Is the young student in a blue hoodie pointing at a paragraph in the large open book?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "action",
+   "of": [
+    "cat",
+    "student"
+   ],
+   "desc": "the black cat looks at the hand of the young student in a blue hoodie",
+   "question": "Is the black cat looking at the hand of the young student in a blue hoodie?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices",
+   "question": "Are there any electronic devices visible in the image?"
+  },
+  {
+   "id": "woman_hair",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the elderly woman has silver hair",
+   "question": "Does the elderly woman have silver hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "book",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0067",
+ "prompt": "A photorealistic photo captures a quiet library reading room. On the left, an elderly woman with silver hair sits upright on a wooden chair. In the center, a young student in a blue hoodie leans forward over a large open book. To the right, a black cat rests calmly on the table edge. The student is pointing at a specific paragraph in the text. The black cat is looking at the student's hand. There is no electronic device visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

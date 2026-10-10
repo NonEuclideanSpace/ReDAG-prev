@@ -1,0 +1,362 @@
+{
+ "style": "rich textured oil painting, realistic lighting, polished floor reflections",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with a pale wall and a closed door at the end of the hall",
+   "question": "Does the image show a sterile hospital corridor with a pale wall and a closed door at the end?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in crisp blue scrubs",
+   "question": "Is there a nurse in crisp blue scrubs?",
+   "box": [
+    50,
+    200,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a tweed coat",
+   "question": "Is there an elderly man in a tweed coat?",
+   "box": [
+    260,
+    220,
+    450,
+    820
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a floral dress",
+   "question": "Is there a young woman in a floral dress?",
+   "box": [
+    400,
+    350,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hard plastic chair",
+   "question": "Is there a hard plastic chair?",
+   "box": [
+    420,
+    500,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier with matted fur",
+   "question": "Is there a small terrier with matted fur?",
+   "box": [
+    550,
+    600,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white lab coat",
+   "question": "Is there a doctor in a white lab coat?",
+   "box": [
+    750,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "security_guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security guard in a dark uniform",
+   "question": "Is there a security guard in a dark uniform?",
+   "box": [
+    780,
+    180,
+    980,
+    780
+   ]
+  },
+  {
+   "id": "nurse_posture",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in crisp blue scrubs has a rigid and alert posture",
+   "question": "Does the nurse in crisp blue scrubs have a rigid posture?"
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in crisp blue scrubs holds a clipboard tightly against her chest",
+   "question": "Is the nurse in crisp blue scrubs holding a clipboard tightly against her chest?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed coat is leaning heavily",
+   "question": "Is the elderly man in a tweed coat leaning heavily?"
+  },
+  {
+   "id": "man_shoulders",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed coat has slumped shoulders",
+   "question": "Does the elderly man in a tweed coat have slumped shoulders?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a floral dress is sitting",
+   "question": "Is the young woman in a floral dress sitting?"
+  },
+  {
+   "id": "woman_head",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a floral dress has her head bowed low",
+   "question": "Is the head of the young woman in a floral dress bowed low?"
+  },
+  {
+   "id": "terrier_chin",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier with matted fur rests its chin on a knee",
+   "question": "Is the small terrier with matted fur resting its chin?"
+  },
+  {
+   "id": "doctor_gesturing",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor in a white lab coat gestures emphatically with one hand",
+   "question": "Is the doctor in a white lab coat gesturing with one hand?"
+  },
+  {
+   "id": "guard_arms",
+   "type": "state",
+   "of": "security_guard",
+   "desc": "the security guard in a dark uniform has his arms crossed firmly over his chest",
+   "question": "Does the security guard in a dark uniform have his arms crossed firmly over his chest?"
+  },
+  {
+   "id": "man_next_to_nurse",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "nurse"
+   ],
+   "desc": "the elderly man in a tweed coat is next to the nurse in crisp blue scrubs",
+   "question": "Is the elderly man in a tweed coat next to the nurse in crisp blue scrubs?"
+  },
+  {
+   "id": "man_against_wall",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed coat leans against the pale wall",
+   "question": "Is the elderly man in a tweed coat leaning against the pale wall?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "young_woman",
+    "chair"
+   ],
+   "desc": "the young woman in a floral dress sits on the hard plastic chair",
+   "question": "Is the young woman in a floral dress sitting on the hard plastic chair?"
+  },
+  {
+   "id": "terrier_beside_woman",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "young_woman"
+   ],
+   "desc": "the small terrier with matted fur is beside the young woman in a floral dress",
+   "question": "Is the small terrier with matted fur beside the young woman in a floral dress?"
+  },
+  {
+   "id": "terrier_on_knee",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "young_woman"
+   ],
+   "desc": "the small terrier with matted fur rests its chin on the knee of the young woman in a floral dress",
+   "question": "Is the small terrier with matted fur resting its chin on the knee of the young woman in a floral dress?"
+  },
+  {
+   "id": "doctor_right",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "young_woman"
+   ],
+   "desc": "the doctor in a white lab coat is to the right of the young woman in a floral dress",
+   "question": "Is the doctor in a white lab coat to the right of the young woman in a floral dress?"
+  },
+  {
+   "id": "doctor_pointing_door",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor in a white lab coat points toward the closed door at the end of the hall",
+   "question": "Is the doctor in a white lab coat pointing toward the closed door at the end of the hall?"
+  },
+  {
+   "id": "guard_behind_doctor",
+   "type": "relation",
+   "of": [
+    "security_guard",
+    "doctor"
+   ],
+   "desc": "the security guard in a dark uniform stands just behind the doctor in a white lab coat",
+   "question": "Is the security guard in a dark uniform standing just behind the doctor in a white lab coat?"
+  },
+  {
+   "id": "nurse_looking_man",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in crisp blue scrubs looks directly at the elderly man in a tweed coat",
+   "question": "Is the nurse in crisp blue scrubs looking directly at the elderly man in a tweed coat?"
+  },
+  {
+   "id": "woman_stroking_terrier",
+   "type": "action",
+   "of": [
+    "young_woman",
+    "terrier"
+   ],
+   "desc": "the young woman in a floral dress reaches out to stroke the small terrier with matted fur",
+   "question": "Is the young woman in a floral dress reaching out to stroke the small terrier with matted fur?"
+  },
+  {
+   "id": "no_equipment",
+   "type": "absent",
+   "desc": "IV poles or monitors",
+   "question": "Are there any IV poles visible in the hallway?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in crisp blue scrubs stands",
+   "question": "Is the nurse in crisp blue scrubs standing?"
+  },
+  {
+   "id": "nurse_alert",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in crisp blue scrubs has an alert posture",
+   "question": "Does the nurse in crisp blue scrubs have an alert posture?"
+  },
+  {
+   "id": "doctor_emphatic",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor in a white lab coat gestures emphatically",
+   "question": "Is the doctor in a white lab coat gesturing emphatically?"
+  },
+  {
+   "id": "no_monitors",
+   "type": "absent",
+   "desc": "monitors",
+   "question": "Are there any monitors visible in the hallway?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "young_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0029",
+ "prompt": "In the rich, textured style of an oil painting, a sterile hospital corridor unfolds with palpable tension. On the left stands a nurse in crisp blue scrubs, her posture rigid and alert as she holds a clipboard tightly against her chest. Next to her, leaning heavily against the pale wall, is an elderly man in a tweed coat, his shoulders slumped in exhaustion. In the center of the frame, a young woman in a floral dress sits on a hard plastic chair, her head bowed low in quiet despair. Beside her, a small terrier with matted fur rests its chin on her knee, offering silent comfort. To the right, a doctor in a white lab coat gestures emphatically with one hand, pointing toward a closed door at the end of the hall. Standing just behind the doctor is a security guard in a dark uniform, his arms crossed firmly over his broad chest, observing the scene with detached neutrality. The nurse looks directly at the elderly man, creating a line of concern across the space. The young woman reaches out to stroke the terrier, finding solace in the animal's presence. The brushstrokes capture the gleam of the polished floor and the soft folds of fabric, grounding the scene in realism. There is no visible medical equipment such as IV poles or monitors cluttering the hallway, keeping the focus entirely on the human and animal figures within this moment of waiting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "doctor_pointing",
+     "doctor_pointing_door"
+    ]
+   ]
+  }
+ }
+}

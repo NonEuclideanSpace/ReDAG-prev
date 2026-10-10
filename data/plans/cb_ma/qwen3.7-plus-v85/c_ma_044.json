@@ -1,0 +1,197 @@
+{
+ "style": "photorealistic fantasy render, minimalist, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an empty, minimalist white room",
+   "question": "Is the background an empty, minimalist white room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "armchair",
+   "type": "entity",
+   "class": "armchair",
+   "plural": "armchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single fantasy armchair made of black stone",
+   "question": "Is there a single fantasy armchair made of black stone?",
+   "box": [
+    200,
+    300,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "vines",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several glowing, leafy, green vines",
+   "question": "Are there several leafy, green vines?",
+   "box": [
+    250,
+    400,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "eye",
+   "type": "entity",
+   "class": "eye",
+   "plural": "eyes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single large unblinking yellow eye",
+   "question": "Is there a single large unblinking yellow eye?",
+   "box": [
+    480,
+    350,
+    544,
+    414
+   ]
+  },
+  {
+   "id": "armchair_texture",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair has a texture that is both rocky and fluid",
+   "question": "Does the armchair have a texture that appears both rocky and fluid?"
+  },
+  {
+   "id": "armchair_glossy",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair has a glossy, reflective finish",
+   "question": "Does the armchair have a glossy, reflective finish?"
+  },
+  {
+   "id": "armchair_back",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair has a high, asymmetrical back",
+   "question": "Does the armchair have a high, asymmetrical back?"
+  },
+  {
+   "id": "armchair_arms",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair has two curved arms",
+   "question": "Does the armchair have two curved arms?"
+  },
+  {
+   "id": "armchair_legs",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair is supported by three thick, cylindrical legs",
+   "question": "Is the armchair supported by three thick, cylindrical legs?"
+  },
+  {
+   "id": "armchair_cracked",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "some parts of the armchair are cracked",
+   "question": "Are some parts of the armchair cracked?"
+  },
+  {
+   "id": "vines_wrapped",
+   "type": "relation",
+   "of": [
+    "vines",
+    "armchair"
+   ],
+   "desc": "the vines are wrapped around one of the armchair's curved arms",
+   "question": "Are the vines wrapped around one of the armchair's curved arms?"
+  },
+  {
+   "id": "eye_embedded",
+   "type": "relation",
+   "of": [
+    "eye",
+    "armchair"
+   ],
+   "desc": "the eye is embedded in the center of the armchair's backrest",
+   "question": "Is the eye embedded in the center of the armchair's backrest?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wood material",
+   "question": "Does the armchair appear to be made of wood?"
+  },
+  {
+   "id": "no_withered_vines",
+   "type": "absent",
+   "desc": "withered vines",
+   "question": "Do the vines appear withered?"
+  },
+  {
+   "id": "no_occupant",
+   "type": "absent",
+   "desc": "person or creature sitting in the armchair",
+   "question": "Is there anyone or anything sitting in the armchair?"
+  },
+  {
+   "id": "armchair_single",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair is a single item",
+   "question": "Is there exactly one armchair in the image?"
+  },
+  {
+   "id": "vines_glowing",
+   "type": "attribute",
+   "of": "vines",
+   "desc": "the vines are glowing",
+   "question": "Are the vines glowing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "armchair",
+   "to": "vines",
+   "kind": "support"
+  },
+  {
+   "from": "armchair",
+   "to": "eye",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_044",
+ "prompt": "A single, fantasy armchair that seems to be made of black stone, with a texture that is both rocky and fluid. The chair is in an otherwise empty, minimalist white room. The armchair has a high, asymmetrical back. Several glowing, leafy, green vines are wrapped around one of its two curved arms. A single, large, unblinking yellow eye is embedded in the center of its backrest. The armchair is supported by three thick, cylindrical legs. The entire surface has a glossy, reflective finish, as if it were wet. Some parts of the chair are cracked. It is not made of wood, the vines are not withered, it is not a normal piece of furniture, and it is not occupied.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

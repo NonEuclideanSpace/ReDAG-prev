@@ -1,0 +1,425 @@
+{
+ "style": "photorealistic, serene, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a tranquil Japanese Zen garden with white sand",
+   "question": "Does the image show a tranquil Japanese Zen garden with white sand?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tatami_mat",
+   "type": "entity",
+   "class": "tatami mat",
+   "plural": "tatami mats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tatami mat",
+   "question": "Is there a tatami mat?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "monk",
+   "type": "entity",
+   "class": "monk",
+   "plural": "monks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a monk in a simple robe",
+   "question": "Is there a monk in a simple robe?",
+   "box": [
+    400,
+    450,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "stone_lantern",
+   "type": "entity",
+   "class": "stone lantern",
+   "plural": "stone lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large moss-covered stone lantern",
+   "question": "Is there a large moss-covered stone lantern?",
+   "box": [
+    100,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "wooden_table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low smooth polished wooden table",
+   "question": "Is there a low smooth polished wooden table?",
+   "box": [
+    700,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "bonsai_tree",
+   "type": "entity",
+   "class": "bonsai tree",
+   "plural": "bonsai trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small meticulously shaped bonsai tree",
+   "question": "Is there a small meticulously shaped bonsai tree?",
+   "box": [
+    750,
+    450,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "maple_leaves",
+   "type": "entity",
+   "class": "maple leaf",
+   "plural": "maple leaves",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three red maple leaves",
+   "question": "Are there three red maple leaves?",
+   "box": [
+    150,
+    250,
+    300,
+    350
+   ]
+  },
+  {
+   "id": "rake",
+   "type": "entity",
+   "class": "wooden rake",
+   "plural": "wooden rakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wooden rake",
+   "question": "Is there a small wooden rake?",
+   "box": [
+    550,
+    750,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "koi_fish",
+   "type": "entity",
+   "class": "koi fish",
+   "plural": "koi fish",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four large koi fish",
+   "question": "Are there four large koi fish?",
+   "box": [
+    300,
+    850,
+    700,
+    1000
+   ]
+  },
+  {
+   "id": "bamboo_fountain",
+   "type": "entity",
+   "class": "bamboo fountain",
+   "plural": "bamboo fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bamboo water fountain (shishi-odoshi) with a moving arm",
+   "question": "Is there a bamboo water fountain with a moving arm?",
+   "box": [
+    750,
+    800,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rock",
+   "question": "Is there a rock?",
+   "box": [
+    850,
+    900,
+    950,
+    980
+   ]
+  },
+  {
+   "id": "monk_kneeling",
+   "type": "state",
+   "of": "monk",
+   "desc": "the monk is kneeling",
+   "question": "Is the monk kneeling?"
+  },
+  {
+   "id": "monk_facing_sand",
+   "type": "state",
+   "of": "monk",
+   "desc": "the monk is facing the sand",
+   "question": "Is the monk facing the sand?"
+  },
+  {
+   "id": "lantern_taller",
+   "type": "attribute",
+   "of": "stone_lantern",
+   "desc": "the stone lantern is taller than the monk",
+   "question": "Is the stone lantern taller than the monk?"
+  },
+  {
+   "id": "table_smooth",
+   "type": "attribute",
+   "of": "wooden_table",
+   "desc": "the wooden table is smooth",
+   "question": "Is the wooden table smooth?"
+  },
+  {
+   "id": "fountain_arm_tipping",
+   "type": "state",
+   "of": "bamboo_fountain",
+   "desc": "the bamboo fountain's arm is tipping over",
+   "question": "Is the bamboo fountain's arm tipping over?"
+  },
+  {
+   "id": "monk_on_mat",
+   "type": "relation",
+   "of": [
+    "monk",
+    "tatami_mat"
+   ],
+   "desc": "the monk is on the tatami mat",
+   "question": "Is the monk on the tatami mat?"
+  },
+  {
+   "id": "lantern_left_of_monk",
+   "type": "relation",
+   "of": [
+    "stone_lantern",
+    "monk"
+   ],
+   "desc": "the stone lantern is to the left of the monk",
+   "question": "Is the stone lantern to the left of the monk?"
+  },
+  {
+   "id": "bonsai_on_table",
+   "type": "relation",
+   "of": [
+    "bonsai_tree",
+    "wooden_table"
+   ],
+   "desc": "the bonsai tree is on the wooden table",
+   "question": "Is the bonsai tree on the wooden table?"
+  },
+  {
+   "id": "table_behind_monk",
+   "type": "relation",
+   "of": [
+    "wooden_table",
+    "monk"
+   ],
+   "desc": "the wooden table is behind the monk",
+   "question": "Is the wooden table behind the monk?"
+  },
+  {
+   "id": "leaves_on_lantern",
+   "type": "relation",
+   "of": [
+    "maple_leaves",
+    "stone_lantern"
+   ],
+   "desc": "the maple leaves are resting on the stone lantern",
+   "question": "Are the maple leaves resting on the stone lantern?"
+  },
+  {
+   "id": "monk_holding_rake",
+   "type": "action",
+   "of": [
+    "monk",
+    "rake"
+   ],
+   "desc": "the monk is holding the wooden rake",
+   "question": "Is the monk holding the wooden rake?"
+  },
+  {
+   "id": "rake_in_sand",
+   "type": "state",
+   "of": "rake",
+   "desc": "the rake is creating lines in the sand",
+   "question": "Is the rake creating lines in the sand?"
+  },
+  {
+   "id": "fish_in_pond",
+   "type": "state",
+   "of": "koi_fish",
+   "desc": "the koi fish are swimming in the pond",
+   "question": "Are the koi fish swimming in the pond?"
+  },
+  {
+   "id": "pond_in_front_of_monk",
+   "type": "state",
+   "of": "monk",
+   "desc": "the pond is in front of the monk",
+   "question": "Is the pond in front of the monk?"
+  },
+  {
+   "id": "fountain_next_to_pond",
+   "type": "relation",
+   "of": [
+    "bamboo_fountain",
+    "pond"
+   ],
+   "desc": "the bamboo fountain is next to the pond",
+   "question": "Is the bamboo fountain next to the pond?"
+  },
+  {
+   "id": "arm_strikes_rock",
+   "type": "action",
+   "of": [
+    "bamboo_fountain",
+    "rock"
+   ],
+   "desc": "the bamboo fountain's arm is striking the rock",
+   "question": "Is the bamboo fountain's arm striking the rock?"
+  },
+  {
+   "id": "monk_between_pond_and_table",
+   "type": "relation",
+   "of": [
+    "monk",
+    "wooden_table"
+   ],
+   "desc": "the monk is between the pond and the wooden table",
+   "question": "Is the monk positioned between the pond and the wooden table?"
+  },
+  {
+   "id": "rock_near_fountain",
+   "type": "relation",
+   "of": [
+    "rock",
+    "bamboo_fountain"
+   ],
+   "desc": "the rock is near the bamboo fountain",
+   "question": "Is the rock near the bamboo fountain?"
+  },
+  {
+   "id": "pond",
+   "type": "entity",
+   "class": "pond",
+   "plural": "ponds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small pond",
+   "question": "Is there a small pond?",
+   "box": [
+    0,
+    750,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "monk_raking",
+   "type": "state",
+   "of": "monk",
+   "desc": "the monk is raking the white sand",
+   "question": "Is the monk raking the white sand?"
+  },
+  {
+   "id": "bonsai_branches",
+   "type": "attribute",
+   "of": "bonsai_tree",
+   "desc": "the bonsai tree has two main branches",
+   "question": "Does the bonsai tree have two main branches?"
+  },
+  {
+   "id": "rake_tines",
+   "type": "attribute",
+   "of": "rake",
+   "desc": "the wooden rake has nine tines",
+   "question": "Does the wooden rake have nine tines?"
+  },
+  {
+   "id": "lantern_older",
+   "type": "relation",
+   "of": [
+    "stone_lantern",
+    "wooden_table"
+   ],
+   "desc": "the stone lantern appears older than the wooden table",
+   "question": "Does the stone lantern appear older than the wooden table?"
+  },
+  {
+   "id": "table_polished",
+   "type": "attribute",
+   "of": "wooden_table",
+   "desc": "the wooden table is polished",
+   "question": "Is the wooden table polished?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tatami_mat",
+   "to": "monk",
+   "kind": "support"
+  },
+  {
+   "from": "wooden_table",
+   "to": "bonsai_tree",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_045",
+ "prompt": "In a tranquil Japanese Zen garden, a monk in a simple robe is kneeling on a tatami mat and carefully raking a pattern into the white sand. To the monk's left is a large, moss-covered stone lantern, which is taller than the kneeling monk. On a low wooden table behind the monk is a small, meticulously shaped bonsai tree with two main branches. Three red maple leaves are resting on the stone lantern. The monk is holding a small wooden rake, and it has three times as many tines as the bonsai tree has main branches. The rake is creating lines in the sand. In a small pond located in front of the monk, a number of large koi fish are swimming; the number of fish is one more than the number of maple leaves. The moss on the stone lantern makes it appear much older than the smooth, polished wooden table. The monk is facing the sand. A bamboo water fountain (a shishi-odoshi) is next to the pond, and its moving arm is tipping over to strike a rock. The monk is between the pond and the bonsai table.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 1,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

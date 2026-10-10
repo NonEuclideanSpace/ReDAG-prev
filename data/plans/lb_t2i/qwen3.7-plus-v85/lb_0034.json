@@ -1,0 +1,535 @@
+{
+ "style": "surreal magical realism, dreamlike atmosphere, soft lighting, detailed textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen with a wide arched window, one wall papered with faded constellations, another covered in translucent rippling maps, and a bookshelf growing from the wall with curling shelves",
+   "question": "Does the image show a kitchen with a wide arched window, a wall with faded constellation wallpaper, a wall with translucent rippling map wallpaper, and a bookshelf growing from the wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "kitchen table",
+   "plural": "kitchen tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden kitchen table with a woven cloth",
+   "question": "Is there a wooden kitchen table with a woven cloth?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red spiral notebook",
+   "question": "Is there a red spiral notebook?",
+   "box": [
+    300,
+    550,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee mug chipped at the base",
+   "question": "Is there a coffee mug chipped at the base?",
+   "box": [
+    620,
+    580,
+    720,
+    700
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fern in a clay pot",
+   "question": "Is there a fern in a clay pot?",
+   "box": [
+    750,
+    450,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall clock",
+   "question": "Is there a wall clock?",
+   "box": [
+    450,
+    100,
+    574,
+    224
+   ]
+  },
+  {
+   "id": "apple_core",
+   "type": "entity",
+   "class": "apple core",
+   "plural": "apple cores",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an apple core glowing faintly",
+   "question": "Is there an apple core glowing faintly?",
+   "box": [
+    200,
+    300,
+    280,
+    380
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow typewriter",
+   "question": "Is there a yellow typewriter?",
+   "box": [
+    100,
+    850,
+    300,
+    980
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sleek silver-tipped cat",
+   "question": "Is there a sleek silver-tipped cat?",
+   "box": [
+    400,
+    350,
+    550,
+    450
+   ]
+  },
+  {
+   "id": "thread_spool",
+   "type": "entity",
+   "class": "spool of thread",
+   "plural": "spools of thread",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spool of red thread",
+   "question": "Is there a spool of red thread?",
+   "box": [
+    650,
+    300,
+    720,
+    370
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single moth glowing faintly",
+   "question": "Is there a single moth glowing faintly?",
+   "box": [
+    350,
+    600,
+    400,
+    650
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "books on the curling shelves",
+   "question": "Are there books on the curling shelves?",
+   "box": [
+    800,
+    200,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "pocket_watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch",
+   "question": "Is there a pocket watch?",
+   "box": [
+    850,
+    210,
+    900,
+    260
+   ]
+  },
+  {
+   "id": "notebook_open",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the red spiral notebook is open",
+   "question": "Is the red spiral notebook open?"
+  },
+  {
+   "id": "pages_fluttering",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the pages of the red spiral notebook are fluttering",
+   "question": "Are the pages of the red spiral notebook fluttering?"
+  },
+  {
+   "id": "mug_liquid",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee mug is half-full of amber-brown liquid",
+   "question": "Is the coffee mug half-full of amber-brown liquid?"
+  },
+  {
+   "id": "mug_tilted",
+   "type": "state",
+   "of": "mug",
+   "desc": "the coffee mug is resting on a tilt",
+   "question": "Is the coffee mug resting on a tilt?"
+  },
+  {
+   "id": "fern_leaning",
+   "type": "state",
+   "of": "fern",
+   "desc": "the fern leans toward the window",
+   "question": "Does the fern lean toward the window?"
+  },
+  {
+   "id": "clock_crooked",
+   "type": "state",
+   "of": "clock",
+   "desc": "the wall clock hangs crookedly",
+   "question": "Does the wall clock hang crookedly?"
+  },
+  {
+   "id": "apple_floating",
+   "type": "state",
+   "of": "apple_core",
+   "desc": "the apple core floats in midair",
+   "question": "Does the apple core float in midair?"
+  },
+  {
+   "id": "apple_spinning",
+   "type": "state",
+   "of": "apple_core",
+   "desc": "the apple core spins lazily",
+   "question": "Does the apple core spin lazily?"
+  },
+  {
+   "id": "cat_balancing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat balances on the windowsill",
+   "question": "Does the cat balance on the windowsill?"
+  },
+  {
+   "id": "moth_fluttering",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth flutters",
+   "question": "Does the moth flutter?"
+  },
+  {
+   "id": "notebook_on_table",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "table"
+   ],
+   "desc": "the red spiral notebook lies on the wooden kitchen table",
+   "question": "Does the red spiral notebook lie on the wooden kitchen table?"
+  },
+  {
+   "id": "mug_beside_notebook",
+   "type": "relation",
+   "of": [
+    "mug",
+    "notebook"
+   ],
+   "desc": "the coffee mug is beside the red spiral notebook",
+   "question": "Is the coffee mug beside the red spiral notebook?"
+  },
+  {
+   "id": "mug_on_table",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "the coffee mug rests on the wooden kitchen table",
+   "question": "Does the coffee mug rest on the wooden kitchen table?"
+  },
+  {
+   "id": "fern_on_table",
+   "type": "relation",
+   "of": [
+    "fern",
+    "table"
+   ],
+   "desc": "the fern sits on the wooden kitchen table",
+   "question": "Does the fern sit on the wooden kitchen table?"
+  },
+  {
+   "id": "clock_behind_window",
+   "type": "state",
+   "of": "clock",
+   "desc": "the wall clock hangs on the wall behind the window",
+   "question": "Does the wall clock hang on the wall behind the window?"
+  },
+  {
+   "id": "typewriter_on_floor",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "puddle"
+   ],
+   "desc": "the yellow typewriter sits on the floor",
+   "question": "Does the yellow typewriter sit on the floor?"
+  },
+  {
+   "id": "cat_on_windowsill",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is on the windowsill",
+   "question": "Is the cat on the windowsill?"
+  },
+  {
+   "id": "cat_tail_touches_notebook",
+   "type": "action",
+   "of": [
+    "cat",
+    "notebook"
+   ],
+   "desc": "the cat's tail flicks the corner of the red spiral notebook",
+   "question": "Does the cat's tail flick the corner of the red spiral notebook?"
+  },
+  {
+   "id": "thread_loops_fern",
+   "type": "relation",
+   "of": [
+    "thread_spool",
+    "fern"
+   ],
+   "desc": "the red thread loops around the stem of the fern",
+   "question": "Does the red thread loop around the stem of the fern?"
+  },
+  {
+   "id": "moth_toward_notebook",
+   "type": "action",
+   "of": [
+    "moth",
+    "notebook"
+   ],
+   "desc": "the moth flutters toward the red spiral notebook",
+   "question": "Does the moth flutter toward the red spiral notebook?"
+  },
+  {
+   "id": "tape_thread_tangled",
+   "type": "relation",
+   "of": [
+    "mug",
+    "table"
+   ],
+   "desc": "a loose thread from the table's cloth is tangled in the fern's stem via the mug's tape",
+   "question": "Is a loose thread from the table's cloth tangled in the fern's stem, connected to the mug's tape?"
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle of liquid light",
+   "question": "Is there a puddle of liquid light?",
+   "box": [
+    300,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "typewriter_submerged",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "puddle"
+   ],
+   "desc": "the yellow typewriter is half-submerged in the puddle",
+   "question": "Is the yellow typewriter half-submerged in the puddle?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat watches with unblinking eyes",
+   "question": "Does the cat have unblinking eyes?"
+  },
+  {
+   "id": "fern_reaching",
+   "type": "state",
+   "of": "fern",
+   "desc": "the fern reaches for the thread with one trembling tendril",
+   "question": "Does the fern reach for the thread with one tendril?"
+  },
+  {
+   "id": "books_shifting",
+   "type": "state",
+   "of": "books",
+   "desc": "the books shift positions",
+   "question": "Do the books shift positions?"
+  },
+  {
+   "id": "pocket_watch_still",
+   "type": "state",
+   "of": "pocket_watch",
+   "desc": "the pocket watch hands are still",
+   "question": "Are the hands of the pocket watch still?"
+  },
+  {
+   "id": "notebook_warped",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "worn edges on the red spiral notebook",
+   "question": "Does the red spiral notebook have worn edges?"
+  },
+  {
+   "id": "tape_crumpled",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the masking tape on the mug's handle is crumpled",
+   "question": "Is the masking tape on the mug's handle crumpled?"
+  },
+  {
+   "id": "clock_hands_spinning",
+   "type": "state",
+   "of": "clock",
+   "desc": "the wall clock's hands are spinning backward",
+   "question": "Are the hands of the wall clock spinning backward?"
+  },
+  {
+   "id": "fern_roots",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "exposed roots at the edges of the pot",
+   "question": "Are there exposed roots at the edges of the fern's pot?"
+  },
+  {
+   "id": "clock_cracked",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "cracked glass on the clock",
+   "question": "Does the wall clock have cracked glass?"
+  },
+  {
+   "id": "notebook_edges_warped",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "warped edges on the red spiral notebook",
+   "question": "Does the red spiral notebook have warped edges?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "fern",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "puddle",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0034",
+ "prompt": "The red spiral notebook, its edges worn and warped by time and ink, lies open on the wooden kitchen table, pages fluttering as if breathing in the breeze from the wide, arched window. The air carries the scent of rain and blooming jasmine, and as the wind pushes the notebook’s pages back and forth, the inked words seem to shift and shimmer—letters bleeding into new shapes, half-finished poems rearranging themselves into riddles or forgotten memories. Beside it, a coffee mug, chipped at the base and half-full of cooling, amber-brown liquid, rests on a tilt. The mug’s handle bears a crumpled piece of masking tape, still holding fast to a loose thread from the table’s woven cloth, which has somehow become tangled in the stem of a fern. The houseplant in its clay pot, roots exposed at the edges, leans toward the window, drinking in the sunlight with a living hunger. Its fronds curl slightly, casting long, sinuous shadows that drape across the notebook’s pages like secret messages from the plant’s mind. A clock, glass cracked but still ticking, hangs crookedly on the wall behind the window, its hands spinning backward in slow, hypnotic defiance of time. The kitchen itself seems suspended between dimensions—one wall papered with faded constellations, another covered in translucent maps that ripple like water when touched by the breeze. A floating apple core spins lazily in midair, caught in the invisible eddy of the draft, its skin glowing faintly as if lit from within. A yellow typewriter sits half-submerged in a puddle on the floor, its keys tapping softly as if responding to the rustling pages. The puddle itself is not water but liquid light, refracting the sunlight into prismatic arcs that crisscross the room, catching in the coffee’s steam and bending it into a faint, spectral crown above the mug. A cat, sleek and silver-tipped, balances on the windowsill, its tail flicking the notebook’s corner, causing it to flutter more wildly, yet it never falls. The cat watches with unblinking eyes as a spool of red thread unwinds from a drawer, floating toward the plant, which reaches for it with one trembling tendril. The thread loops around the stem and begins to pulse with soft, rhythmic light, syncing with the heartbeat of the room itself. On the far side of the table, a bookshelf appears to grow from the wall, shelves curling like the pages of a book, and within them, books shift positions, their titles changing with the light. A pocket watch sits on the top shelf, its hands still, yet when the wind passes through, the numbers on its face dissolve and reform into musical notes. A single moth, drawn by the light from the puddle, flutters toward the notebook, its wings catching in the air of the draft, its body beginning to glow faintly. The scene breathes, shifts, and hums with the quiet chaos of a world where objects speak, light moves like water, and the boundaries between thought and reality blur like ink in coffee.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v6",
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "facts_pass": {
+   "n_facts": 75,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

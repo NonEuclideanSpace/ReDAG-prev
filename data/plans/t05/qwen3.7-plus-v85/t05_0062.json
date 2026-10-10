@@ -1,0 +1,318 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a foggy shipyard dock with wet wooden planks",
+   "question": "Does the image show a foggy shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman_blue_hat",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hard hat",
+   "question": "Is there a woman in a blue hard hat?",
+   "box": [
+    320,
+    220,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor",
+   "question": "Is there a large rusted anchor?",
+   "box": [
+    450,
+    600,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    680,
+    650,
+    850,
+    880
+   ]
+  },
+  {
+   "id": "child_yellow_raincoat",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    750,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "sailor_grey_coat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old sailor in a grey coat",
+   "question": "Is there an old sailor in a grey coat?",
+   "box": [
+    850,
+    250,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "mooring_post",
+   "type": "entity",
+   "class": "mooring post",
+   "plural": "mooring posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick mooring post",
+   "question": "Is there a thick mooring post?",
+   "box": [
+    900,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf holds a clipboard",
+   "question": "Is the man in the red scarf holding a clipboard?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman_blue_hat",
+   "desc": "the woman in the blue hard hat is pointing",
+   "question": "Is the woman in the blue hard hat pointing?"
+  },
+  {
+   "id": "anchor_on_planks",
+   "type": "relation",
+   "of": [
+    "anchor",
+    "planks"
+   ],
+   "desc": "the large rusted anchor rests on the wet wooden planks",
+   "question": "Is the large rusted anchor resting on the wet wooden planks?"
+  },
+  {
+   "id": "dog_next_to_anchor",
+   "type": "relation",
+   "of": [
+    "dog",
+    "anchor"
+   ],
+   "desc": "the brown dog sits next to the large rusted anchor",
+   "question": "Is the brown dog sitting next to the large rusted anchor?"
+  },
+  {
+   "id": "dog_tail_curled",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog's tail is curled around its paws",
+   "question": "Is the brown dog's tail curled around its paws?"
+  },
+  {
+   "id": "child_looking_at_dog",
+   "type": "action",
+   "of": [
+    "child_yellow_raincoat",
+    "dog"
+   ],
+   "desc": "the child in the yellow raincoat looks at the brown dog",
+   "question": "Is the child in the yellow raincoat looking at the brown dog?"
+  },
+  {
+   "id": "child_toy_boat",
+   "type": "attribute",
+   "of": "child_yellow_raincoat",
+   "desc": "the child in the yellow raincoat clutches a small toy boat",
+   "question": "Is the child in the yellow raincoat clutching a small toy boat?"
+  },
+  {
+   "id": "sailor_leaning_post",
+   "type": "relation",
+   "of": [
+    "sailor_grey_coat",
+    "mooring_post"
+   ],
+   "desc": "the old sailor in the grey coat leans against the thick mooring post",
+   "question": "Is the old sailor in the grey coat leaning against the thick mooring post?"
+  },
+  {
+   "id": "man_hands_pen",
+   "type": "action",
+   "of": [
+    "man_red_scarf",
+    "woman_blue_hat"
+   ],
+   "desc": "the man in the red scarf hands a pen to the woman in the blue hard hat",
+   "question": "Is the man in the red scarf handing a pen to the woman in the blue hard hat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man in the red scarf stands",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "woman_beside_man",
+   "type": "relation",
+   "of": [
+    "woman_blue_hat",
+    "man_red_scarf"
+   ],
+   "desc": "the woman in the blue hard hat is beside the man in the red scarf",
+   "question": "Is the woman in the blue hard hat beside the man in the red scarf?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "sailor_observing",
+   "type": "state",
+   "of": "sailor_grey_coat",
+   "desc": "the old sailor in the grey coat observes the scene",
+   "question": "Is the old sailor in the grey coat observing the scene?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wet wooden planks",
+   "question": "Are there wet wooden planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "anchor",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mooring_post",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "anchor",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "mooring_post",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0062",
+ "prompt": "In a cinematic film still set at a foggy shipyard dock, a man in a red scarf stands on the left holding a clipboard. Beside him, a woman in a blue hard hat points toward the center where a large rusted anchor rests heavily on the wet wooden planks. A brown dog sits patiently next to the anchor, its tail curled neatly around its paws. On the right, a child in a yellow raincoat looks intently at the dog while clutching a small toy boat. Nearby, an old sailor in a grey coat leans against a thick mooring post, observing the scene with calm detachment. The man in the red scarf hands a pen to the woman in the blue hard hat as she gestures. There is no water visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

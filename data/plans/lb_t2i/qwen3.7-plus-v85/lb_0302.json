@@ -1,0 +1,481 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, golden hour lighting, intricate details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an interior room with a windowsill, a wall and a floor",
+   "question": "Does the image show an interior room with a windowsill, a wall and a floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "ceramic mug",
+   "plural": "ceramic mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ceramic mug half-full of chocolate-brown liquid",
+   "question": "Is there a ceramic mug half-full of chocolate-brown liquid?",
+   "box": [
+    300,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sun-warmed windowsill",
+   "question": "Is there a sun-warmed windowsill?",
+   "box": [
+    200,
+    550,
+    800,
+    650
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "mechanical sparrow",
+   "plural": "mechanical sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanical sparrow",
+   "question": "Is there a mechanical sparrow?",
+   "box": [
+    450,
+    580,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "wooden spoon",
+   "plural": "wooden spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden spoon",
+   "question": "Is there a wooden spoon?",
+   "box": [
+    376,
+    590,
+    424,
+    700
+   ]
+  },
+  {
+   "id": "hanger",
+   "type": "entity",
+   "class": "clothes hanger",
+   "plural": "clothes hangers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped wooden clothes hanger",
+   "question": "Is there a warped wooden clothes hanger?",
+   "box": [
+    700,
+    300,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "scarf",
+   "type": "entity",
+   "class": "scarf",
+   "plural": "scarves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded red scarf with fringe",
+   "question": "Is there a faded red scarf with fringe?",
+   "box": [
+    720,
+    320,
+    880,
+    500
+   ]
+  },
+  {
+   "id": "cookbooks",
+   "type": "entity",
+   "class": "cookbook",
+   "plural": "cookbooks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of old open cookbooks",
+   "question": "Are there several old open cookbooks?",
+   "box": [
+    100,
+    700,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "parchment",
+   "type": "entity",
+   "class": "sheet of parchment",
+   "plural": "sheets of parchment",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single sheet of parchment with glowing cursive script",
+   "question": "Is there a single sheet of parchment with glowing cursive script?",
+   "box": [
+    150,
+    500,
+    280,
+    600
+   ]
+  },
+  {
+   "id": "steam_faces",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "spirals of steam rising from the mug forming tiny ghostly faces",
+   "question": "Do spirals of steam rise from the mug forming tiny ghostly faces?"
+  },
+  {
+   "id": "sparrow_perched",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the mechanical sparrow is perched",
+   "question": "Is the mechanical sparrow perched?"
+  },
+  {
+   "id": "sparrow_sipping",
+   "type": "action",
+   "of": [
+    "sparrow",
+    "mug"
+   ],
+   "desc": "the mechanical sparrow sips froth from the mug",
+   "question": "Is the mechanical sparrow sipping froth from the mug?"
+  },
+  {
+   "id": "spoon_balancing",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the wooden spoon is balancing",
+   "question": "Is the wooden spoon balancing?"
+  },
+  {
+   "id": "spoon_steam_cloud",
+   "type": "attribute",
+   "of": "spoon",
+   "desc": "a spiral of steam from the spoon forms a miniature cloud above it",
+   "question": "Does a spiral of steam from the spoon form a miniature cloud above it?"
+  },
+  {
+   "id": "clock_in_cloud",
+   "type": "attribute",
+   "of": "spoon",
+   "desc": "a clock with hands spinning in both directions floats within the cloud above the spoon",
+   "question": "Does a clock with hands spinning in both directions float within the cloud above the spoon?"
+  },
+  {
+   "id": "person_in_clock",
+   "type": "attribute",
+   "of": "spoon",
+   "desc": "a tiny person sits at a desk writing a letter inside the clock",
+   "question": "Does a tiny person sit at a desk writing a letter inside the clock?"
+  },
+  {
+   "id": "scarf_on_hanger",
+   "type": "relation",
+   "of": [
+    "scarf",
+    "hanger"
+   ],
+   "desc": "the faded red scarf drapes over the warped wooden clothes hanger",
+   "question": "Does the faded red scarf drape over the warped wooden clothes hanger?"
+  },
+  {
+   "id": "scarf_unraveling",
+   "type": "state",
+   "of": "scarf",
+   "desc": "the faded red scarf is unraveling",
+   "question": "Is the faded red scarf unraveling?"
+  },
+  {
+   "id": "threads_curtain",
+   "type": "attribute",
+   "of": "scarf",
+   "desc": "the drifting threads weave into a curtain of light refracting impossible landscapes",
+   "question": "Do the drifting threads weave into a curtain of light refracting impossible landscapes?"
+  },
+  {
+   "id": "cookbooks_leaning",
+   "type": "state",
+   "of": "cookbooks",
+   "desc": "the stack of cookbooks leans against the wall",
+   "question": "Does the stack of cookbooks lean against the wall?"
+  },
+  {
+   "id": "cookbooks_rotating",
+   "type": "state",
+   "of": "cookbooks",
+   "desc": "the cookbooks rotate in slow circles",
+   "question": "Do the cookbooks rotate in slow circles?"
+  },
+  {
+   "id": "parchment_floating",
+   "type": "state",
+   "of": "parchment",
+   "desc": "the sheet of parchment floats midair between the cookbooks",
+   "question": "Does the sheet of parchment float midair between the cookbooks?"
+  },
+  {
+   "id": "mug_on_windowsill",
+   "type": "relation",
+   "of": [
+    "mug",
+    "windowsill"
+   ],
+   "desc": "the ceramic mug perches on the windowsill",
+   "question": "Does the ceramic mug perch on the windowsill?"
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow on the wall shaped like a person",
+   "question": "Is there a shadow on the wall shaped like a person?",
+   "box": [
+    50,
+    50,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "sparrow_beak",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the mechanical sparrow's beak is twitching",
+   "question": "Is the mechanical sparrow's beak twitching?"
+  },
+  {
+   "id": "sparrow_tail",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the mechanical sparrow's tail feathers are fanning",
+   "question": "Are the mechanical sparrow's tail feathers fanning?"
+  },
+  {
+   "id": "hanger_creaking",
+   "type": "state",
+   "of": "hanger",
+   "desc": "the warped wooden clothes hanger is shifting",
+   "question": "Is the warped wooden clothes hanger shifting?"
+  },
+  {
+   "id": "spoon_trembling",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the wooden spoon handle is trembling",
+   "question": "Is the wooden spoon handle trembling?"
+  },
+  {
+   "id": "parchment_glowing",
+   "type": "state",
+   "of": "parchment",
+   "desc": "the sheet of parchment is glowing brighter",
+   "question": "Is the sheet of parchment glowing brightly?"
+  },
+  {
+   "id": "steam_dissolving",
+   "type": "state",
+   "of": "mug",
+   "desc": "the spirals of steam from the mug dissolve before reaching the ceiling",
+   "question": "Do the spirals of steam from the mug dissolve before reaching the ceiling?"
+  },
+  {
+   "id": "cookbooks_pages",
+   "type": "attribute",
+   "of": "cookbooks",
+   "desc": "the cookbooks are open to different pages with ingredients missing",
+   "question": "Are the cookbooks open to different pages with ingredients missing?"
+  },
+  {
+   "id": "parchment_script_changing",
+   "type": "attribute",
+   "of": "parchment",
+   "desc": "the cursive script on the parchment changes recipes every few seconds",
+   "question": "Does the cursive script on the parchment change recipes every few seconds?"
+  },
+  {
+   "id": "sparrow_gears_whirring",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the gears in the mechanical sparrow's chest whir faster as it sips",
+   "question": "Do the gears in the mechanical sparrow's chest whir faster as it sips?"
+  },
+  {
+   "id": "shadow_contorting",
+   "type": "state",
+   "of": "shadow",
+   "desc": "the shadow on the wall stretches and contorts like ink in water",
+   "question": "Does the shadow on the wall stretch and contort like ink in water?"
+  },
+  {
+   "id": "cookbook_memories",
+   "type": "attribute",
+   "of": "cookbooks",
+   "desc": "the cookbook pages reveal scenes of abandoned kitchens",
+   "question": "Do the cookbook pages reveal scenes of abandoned kitchens?"
+  },
+  {
+   "id": "sparrow_flying",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the mechanical sparrow is flying into a frenzy",
+   "question": "Is the mechanical sparrow flying into a frenzy?"
+  },
+  {
+   "id": "threads_drifting",
+   "type": "relation",
+   "of": [
+    "scarf",
+    "window"
+   ],
+   "desc": "threads from the scarf drift toward the window",
+   "question": "Do threads from the scarf drift toward the window?"
+  },
+  {
+   "id": "pages_flipping",
+   "type": "state",
+   "of": "cookbooks",
+   "desc": "the pages of the cookbooks flip like wings",
+   "question": "Do the pages of the cookbooks flip like wings?"
+  },
+  {
+   "id": "shadow_details",
+   "type": "attribute",
+   "of": "shadow",
+   "desc": "the shadow shows a flicker of a flame, the arc of a pendulum, and the flight of a bird",
+   "question": "Does the shadow show a flicker of a flame, the arc of a pendulum, and the flight of a bird?"
+  },
+  {
+   "id": "ink_blotted_shapes",
+   "type": "attribute",
+   "of": "cookbooks",
+   "desc": "missing ingredients are replaced by ink-blotted shapes",
+   "question": "Are missing ingredients replaced by ink-blotted shapes?"
+  },
+  {
+   "id": "memories_meals",
+   "type": "attribute",
+   "of": "cookbooks",
+   "desc": "the cookbook pages reveal meals never shared",
+   "question": "Do the cookbook pages reveal meals never shared?"
+  },
+  {
+   "id": "memories_hands",
+   "type": "attribute",
+   "of": "cookbooks",
+   "desc": "the cookbook pages reveal hands that once stirred drinks",
+   "question": "Do the cookbook pages reveal hands that once stirred drinks?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a glass window",
+   "question": "Is there a glass window in the image?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "sparrow_material",
+   "type": "attribute",
+   "of": "sparrow",
+   "desc": "the mechanical sparrow is made of brass and clockwork",
+   "question": "Is the mechanical sparrow made of brass and clockwork?"
+  },
+  {
+   "id": "spoon_on_mug",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "mug"
+   ],
+   "desc": "the wooden spoon balances on the rim of the mug",
+   "question": "Does the wooden spoon balance on the rim of the mug?"
+  },
+  {
+   "id": "spoon_tip_in_liquid",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "mug"
+   ],
+   "desc": "the tip of the wooden spoon dips into the liquid in the mug",
+   "question": "Does the tip of the wooden spoon dip into the liquid in the mug?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0302",
+ "prompt": "The ceramic mug perches on a sun-warmed windowsill, its chocolate-brown contents sending spirals of steam into the air, where they condense into tiny, ghostly faces that dissolve before reaching the ceiling. A faded red scarf, once bold and vibrant, drapes over a warped wooden clothes hanger, its fringe dancing in the golden sunlight that spills through the glass, casting long, prismatic ripples across the floor where a stack of old cookbooks leans precariously against the wall. The cookbooks are open—each to a different page, some with ingredients missing, replaced by ink-blotted shapes that seem to rearrange themselves when not observed. Between them, a single sheet of parchment floats midair, as if suspended by some unseen current, its cursive script glowing faintly, changing recipes every few seconds as though written by a future chef with many conflicting desires. A mechanical sparrow, built of brass and clockwork, perches on the edge of the mug, its tiny beak twitching as it sips the froth from the surface, each drop causing the gears in its chest to whir faster, its tiny tail feathers fanning with delight. The scarf, in a slow, deliberate movement, begins to unravel, its threads unspooling like whispers and drifting toward the open windows where they weave themselves into a curtain of light that refracts the outside world into a kaleidoscope of impossible landscapes. A wooden spoon, seemingly left behind from a previous cooking attempt, balances precariously on the rim of the mug, its handle trembling as if in anticipation, while its tip dips just slightly into the chocolate-brown liquid, drawing up a spiral of steam that forms a miniature cloud above it. Within that cloud, a clock floats, its hands spinning in both directions at once, and within the clock, a tiny person sits at a desk, writing a letter that never ends. The cookbooks, in a strange synchronicity, begin to rotate in slow circles, their pages flipping like the wings of a hummingbird, revealing not recipes but memories—scenes of kitchens long abandoned, meals never shared, and hands that once stirred the same kind of drink. The hanger creaks, shifting subtly, as if responding to the weight of the scarf’s unraveling, and the mug, now only half-full, begins to echo faintly with the sound of a melody no one can quite place. A shadow appears on the wall, stretching and contorting like ink in water, and in its shape, you can see not just the figure of a person but also the flicker of a flame, the arc of a pendulum, and the flight of a bird. The parchment above the cookbooks now glows brighter, and the recipe it holds begins to hum, vibrating so strongly that it causes the wooden spoon to vibrate in sympathy, and the sparrow to fly into a frenzy, its gears spinning so fast they almost catch fire. The steam, the unraveling, the rotation, the hum—all are connected in a delicate web of motion and transformation, each element feeding into the next, creating a moment that feels both inevitable and impossible, a scene caught between time and memory, between logic and dream, between the familiar and the unnameable.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 48,
+   "n_uncovered": 8,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 10,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 3,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

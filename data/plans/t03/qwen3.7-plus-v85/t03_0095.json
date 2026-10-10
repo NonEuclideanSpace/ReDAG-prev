@@ -1,0 +1,173 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef",
+   "question": "Is there a chef?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    380,
+    180,
+    680,
+    880
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    750,
+    550,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    720,
+    650,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "ladle",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a silver ladle",
+   "question": "Is the chef holding a silver ladle?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "waiter_reaching",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is reaching out",
+   "question": "Is the waiter reaching out?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sitting calmly",
+   "question": "Is the cat sitting calmly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef is handing a steaming bowl to the waiter",
+   "question": "Is the chef handing a steaming bowl to the waiter?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the cat sits on the wooden crate",
+   "question": "Is the cat sitting on the wooden crate?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire in the background",
+   "question": "Is there any fire visible in the background?"
+  },
+  {
+   "id": "chef_hat",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef wears a tall white hat",
+   "question": "Does the chef wear a tall white hat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0095",
+ "prompt": "In an anime style busy restaurant kitchen, a chef with a tall white hat stands on the left holding a silver ladle. In the center, a waiter in a blue apron reaches out to take a steaming bowl from the chef. On the right, a small black cat sits calmly on a wooden crate observing the scene. The chef is handing the bowl to the waiter. There is no fire visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

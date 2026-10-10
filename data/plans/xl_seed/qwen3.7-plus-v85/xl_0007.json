@@ -1,0 +1,337 @@
+{
+ "style": "photorealistic photo, warm ambient lighting, high fidelity textures",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a warm bakery interior with a tiled floor and a window on the far right",
+   "question": "Does the image show a warm bakery interior with a tiled floor and a window on the far right?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "glass counter",
+   "plural": "glass counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass counter",
+   "question": "Is there a glass counter?",
+   "box": [
+    0,
+    500,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "baker",
+   "type": "entity",
+   "class": "baker",
+   "plural": "bakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a baker in a white apron",
+   "question": "Is there a baker in a white apron?",
+   "box": [
+    100,
+    200,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a beige coat",
+   "question": "Is there a woman in a beige coat?",
+   "box": [
+    400,
+    250,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "loaves",
+   "type": "entity",
+   "class": "loaf of bread",
+   "plural": "loaves of bread",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three golden-brown loaves of bread",
+   "question": "Are there three golden-brown loaves of bread?",
+   "box": [
+    250,
+    520,
+    450,
+    620
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "wooden board",
+   "plural": "wooden boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden board",
+   "question": "Is there a wooden board?",
+   "box": [
+    240,
+    530,
+    460,
+    630
+   ]
+  },
+  {
+   "id": "employee",
+   "type": "entity",
+   "class": "employee",
+   "plural": "employees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second employee wearing gloves",
+   "question": "Is there a second employee wearing gloves?",
+   "box": [
+    700,
+    250,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tray of chocolate muffins",
+   "question": "Is there a tray of chocolate muffins?",
+   "box": [
+    750,
+    550,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jar of colorful cookies",
+   "question": "Is there a jar of colorful cookies?",
+   "box": [
+    100,
+    750,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "register",
+   "type": "entity",
+   "class": "cash register",
+   "plural": "cash registers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage cash register",
+   "question": "Is there a vintage cash register?",
+   "box": [
+    300,
+    750,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "scale",
+   "type": "entity",
+   "class": "hanging scale",
+   "plural": "hanging scales",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging scale",
+   "question": "Is there a hanging scale?",
+   "box": [
+    200,
+    50,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "baker_handing",
+   "type": "action",
+   "of": [
+    "baker",
+    "customer"
+   ],
+   "desc": "the baker in a white apron hands a croissant wrapped in paper to the woman in a beige coat",
+   "question": "Is the baker in a white apron handing a croissant wrapped in paper to the woman in a beige coat?"
+  },
+  {
+   "id": "customer_reaching",
+   "type": "state",
+   "of": "customer",
+   "desc": "the woman in a beige coat reaches out with her right hand",
+   "question": "Is the woman in a beige coat reaching out with her right hand?"
+  },
+  {
+   "id": "customer_purse",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the woman in a beige coat holds a leather purse in her left hand",
+   "question": "Is the woman in a beige coat holding a leather purse in her left hand?"
+  },
+  {
+   "id": "loaves_on_board",
+   "type": "relation",
+   "of": [
+    "loaves",
+    "board"
+   ],
+   "desc": "the three golden-brown loaves of bread sit on the wooden board",
+   "question": "Do the three golden-brown loaves of bread sit on the wooden board?"
+  },
+  {
+   "id": "board_on_counter",
+   "type": "relation",
+   "of": [
+    "board",
+    "counter"
+   ],
+   "desc": "the wooden board sits on the glass counter",
+   "question": "Does the wooden board sit on the glass counter?"
+  },
+  {
+   "id": "loaves_steam",
+   "type": "state",
+   "of": "loaves",
+   "desc": "the three golden-brown loaves of bread emit visible steam",
+   "question": "Do the three golden-brown loaves of bread emit visible steam?"
+  },
+  {
+   "id": "employee_placing",
+   "type": "action",
+   "of": [
+    "employee",
+    "tray"
+   ],
+   "desc": "the second employee wearing gloves places the tray of chocolate muffins down",
+   "question": "Is the second employee wearing gloves placing the tray of chocolate muffins down?"
+  },
+  {
+   "id": "jar_next_to_register",
+   "type": "relation",
+   "of": [
+    "jar",
+    "register"
+   ],
+   "desc": "the jar of colorful cookies sits next to the vintage cash register",
+   "question": "Does the jar of colorful cookies sit next to the vintage cash register?"
+  },
+  {
+   "id": "scale_above_counter",
+   "type": "relation",
+   "of": [
+    "scale",
+    "counter"
+   ],
+   "desc": "the hanging scale dangles above the glass counter",
+   "question": "Does the hanging scale dangle above the glass counter?"
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": false,
+   "desc": "shelves stocked with flour sacks and mixing bowls",
+   "question": "Are there shelves stocked with flour sacks and mixing bowls?",
+   "box": [
+    50,
+    50,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "scale_pan",
+   "type": "attribute",
+   "of": "scale",
+   "desc": "the hanging scale has an empty brass pan",
+   "question": "Does the hanging scale have an empty brass pan?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "board",
+   "kind": "support"
+  },
+  {
+   "from": "board",
+   "to": "loaves",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "jar",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "register",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "loaves",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "tray",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0007",
+ "prompt": "Inside a warm bakery, a baker in a white apron stands behind a glass counter on the left, handing a croissant wrapped in paper to a customer. The customer, a woman in a beige coat, reaches out with her right hand to accept the pastry while holding a leather purse in her left. On the counter, three golden-brown loaves of bread sit on a wooden board in the center, emitting visible steam. To the right, a tray of chocolate muffins is being placed down by a second employee wearing gloves. In the foreground, a jar of colorful cookies sits next to a vintage cash register. A hanging scale dangles from the ceiling above the counter, its brass pan empty. Behind the baker, shelves are stocked with flour sacks and mixing bowls. Warm ambient light streams through the window on the far right, illuminating dust particles and creating soft shadows on the tiled floor. The textures of the crusty bread and smooth glass are rendered with high fidelity. The scene captures a quiet morning transaction with natural lighting and detailed surfaces. This is a photorealistic photo.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

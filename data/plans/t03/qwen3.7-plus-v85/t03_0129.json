@@ -1,0 +1,224 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car with a booth",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "booth_bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet bench in the dining car booth",
+   "question": "Is there a velvet bench in the dining car booth?",
+   "box": [
+    50,
+    400,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue dress",
+   "question": "Is there a woman wearing a blue dress?",
+   "box": [
+    350,
+    200,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    650,
+    500,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a silver teapot upright",
+   "question": "Is the woman in the blue dress holding a silver teapot upright?"
+  },
+  {
+   "id": "cup",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a cup",
+   "question": "Is the man in the red scarf holding a cup?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is resting calmly",
+   "question": "Is the small brown dog resting calmly?"
+  },
+  {
+   "id": "man_left",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the red scarf is to the left of the woman in the blue dress",
+   "question": "Is the man in the red scarf to the left of the woman in the blue dress?"
+  },
+  {
+   "id": "dog_right",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the small brown dog is to the right of the woman in the blue dress",
+   "question": "Is the small brown dog to the right of the woman in the blue dress?"
+  },
+  {
+   "id": "dog_on_bench",
+   "type": "relation",
+   "of": [
+    "dog",
+    "booth_bench"
+   ],
+   "desc": "the small brown dog is on the velvet bench",
+   "question": "Is the small brown dog on the velvet bench?"
+  },
+  {
+   "id": "pouring",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is pouring tea from the teapot into the cup held by the man in the red scarf",
+   "question": "Is the woman in the blue dress pouring tea into the cup held by the man in the red scarf?"
+  },
+  {
+   "id": "dog_looking",
+   "type": "action",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the small brown dog is looking at the steam rising from the cup held by the man in the red scarf",
+   "question": "Is the small brown dog looking at the steam rising from the cup held by the man in the red scarf?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows in the background",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "booth_entity",
+   "type": "entity",
+   "class": "booth",
+   "plural": "booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining car booth",
+   "question": "Is there a dining car booth?",
+   "box": [
+    50,
+    200,
+    974,
+    900
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "booth_bench",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "booth_entity",
+   "to": "booth_bench",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0129",
+ "prompt": "In this watercolor illustration, a man in a red scarf sits on the left side of a train dining car booth. A woman in a blue dress occupies the center seat, holding a silver teapot upright. To her right, a small brown dog rests calmly on the velvet bench. The woman in the blue dress is pouring tea into the cup held by the man in the red scarf. The small brown dog is looking at the steam rising from the cup. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

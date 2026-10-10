@@ -1,0 +1,567 @@
+{
+ "style": "surreal digital painting, golden hour lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a kitchen interior",
+   "question": "Does the image show a kitchen interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "cabinet",
+   "plural": "cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open wooden cabinet",
+   "question": "Is there an open wooden cabinet?",
+   "box": [
+    100,
+    200,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "mugs",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "mismatched mugs",
+   "question": "Are there mismatched mugs?",
+   "box": [
+    150,
+    300,
+    450,
+    500
+   ]
+  },
+  {
+   "id": "towel",
+   "type": "entity",
+   "class": "tea towel",
+   "plural": "tea towels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging tea towel",
+   "question": "Is there a hanging tea towel?",
+   "box": [
+    300,
+    50,
+    400,
+    250
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "entity",
+   "class": "spoon",
+   "plural": "spoons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver spoon",
+   "question": "Is there a silver spoon?",
+   "box": [
+    200,
+    241,
+    250,
+    289
+   ]
+  },
+  {
+   "id": "vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vine",
+   "question": "Is there a vine?",
+   "box": [
+    600,
+    100,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "sparrow",
+   "type": "entity",
+   "class": "sparrow",
+   "plural": "sparrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plump sparrow",
+   "question": "Is there a plump sparrow?",
+   "box": [
+    700,
+    150,
+    750,
+    200
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of books",
+   "question": "Is there a stack of books?",
+   "box": [
+    150,
+    600,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chain of copper links",
+   "question": "Is there a chain of copper links?",
+   "box": [
+    200,
+    650,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small ceramic bowl",
+   "question": "Is there a small ceramic bowl?",
+   "box": [
+    250,
+    850,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "marbles",
+   "type": "entity",
+   "class": "marble",
+   "plural": "marbles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "polished marbles of every color",
+   "question": "Are there polished marbles of every color?",
+   "box": [
+    260,
+    860,
+    340,
+    940
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with melting gears",
+   "question": "Is there a clock with melting gears?",
+   "box": [
+    50,
+    100,
+    150,
+    200
+   ]
+  },
+  {
+   "id": "letter",
+   "type": "entity",
+   "class": "letter",
+   "plural": "letters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folded letter with smudged ink",
+   "question": "Is there a folded letter with smudged ink?",
+   "box": [
+    201,
+    251,
+    249,
+    299
+   ]
+  },
+  {
+   "id": "cabinet_open",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the wooden cabinet is open",
+   "question": "Is the wooden cabinet open?"
+  },
+  {
+   "id": "spoon_glinting",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the silver spoon is glinting",
+   "question": "Is the silver spoon glinting?"
+  },
+  {
+   "id": "sparrow_hovering",
+   "type": "state",
+   "of": "sparrow",
+   "desc": "the sparrow is hovering",
+   "question": "Is the sparrow hovering?"
+  },
+  {
+   "id": "marbles_spinning",
+   "type": "state",
+   "of": "marbles",
+   "desc": "the marbles are spinning in a vortex",
+   "question": "Are the marbles spinning in a vortex?"
+  },
+  {
+   "id": "mugs_in_cabinet",
+   "type": "relation",
+   "of": [
+    "mugs",
+    "cabinet"
+   ],
+   "desc": "the mugs are inside the cabinet",
+   "question": "Are the mugs inside the cabinet?"
+  },
+  {
+   "id": "towel_above_cabinet",
+   "type": "relation",
+   "of": [
+    "towel",
+    "cabinet"
+   ],
+   "desc": "the tea towel hangs above the cabinet",
+   "question": "Does the tea towel hang above the cabinet?"
+  },
+  {
+   "id": "spoon_in_drawer",
+   "type": "relation",
+   "of": [
+    "spoon",
+    "cabinet"
+   ],
+   "desc": "the silver spoon is in the top drawer of the cabinet",
+   "question": "Is the silver spoon in the top drawer of the cabinet?"
+  },
+  {
+   "id": "vine_through_blinds",
+   "type": "state",
+   "of": "vine",
+   "desc": "the vine coils through the kitchen's open blinds",
+   "question": "Does the vine coil through the kitchen's open blinds?"
+  },
+  {
+   "id": "berry_on_vine",
+   "type": "attribute",
+   "of": "vine",
+   "desc": "the vine has a crimson berry clinging to it",
+   "question": "Does the vine have a crimson berry clinging to it?"
+  },
+  {
+   "id": "sparrow_near_berry",
+   "type": "relation",
+   "of": [
+    "sparrow",
+    "vine"
+   ],
+   "desc": "the sparrow is near the crimson berry on the vine",
+   "question": "Is the sparrow near the crimson berry on the vine?"
+  },
+  {
+   "id": "books_on_shelf",
+   "type": "relation",
+   "of": [
+    "books",
+    "cabinet"
+   ],
+   "desc": "the books are on the lower shelf of the cabinet",
+   "question": "Are the books on the lower shelf of the cabinet?"
+  },
+  {
+   "id": "chain_on_books",
+   "type": "relation",
+   "of": [
+    "chain",
+    "books"
+   ],
+   "desc": "the chain binds the books",
+   "question": "Does the chain bind the books?"
+  },
+  {
+   "id": "chain_in_bowl",
+   "type": "relation",
+   "of": [
+    "chain",
+    "bowl"
+   ],
+   "desc": "the chain sags into the ceramic bowl",
+   "question": "Does the chain sag into the ceramic bowl?"
+  },
+  {
+   "id": "marbles_in_bowl",
+   "type": "relation",
+   "of": [
+    "marbles",
+    "bowl"
+   ],
+   "desc": "the marbles are in the ceramic bowl",
+   "question": "Are the marbles in the ceramic bowl?"
+  },
+  {
+   "id": "clock_on_wall",
+   "type": "relation",
+   "of": [
+    "clock",
+    "books"
+   ],
+   "desc": "the clock hangs on the wall behind the books",
+   "question": "Does the clock hang on the wall behind the books?"
+  },
+  {
+   "id": "vine_around_spoon",
+   "type": "relation",
+   "of": [
+    "vine",
+    "spoon"
+   ],
+   "desc": "the vine wraps around the silver spoon",
+   "question": "Does the vine wrap around the silver spoon?"
+  },
+  {
+   "id": "letter_under_spoon",
+   "type": "relation",
+   "of": [
+    "letter",
+    "spoon"
+   ],
+   "desc": "the folded letter lies beneath the silver spoon",
+   "question": "Does the folded letter lie beneath the silver spoon?"
+  },
+  {
+   "id": "cabinet_interior",
+   "type": "attribute",
+   "of": "cabinet",
+   "desc": "the interior of the wooden cabinet is crammed with mismatched mugs",
+   "question": "Is the interior of the wooden cabinet crammed with mismatched mugs?"
+  },
+  {
+   "id": "mug_chips",
+   "type": "attribute",
+   "of": "mugs",
+   "desc": "some of the mismatched mugs have chips",
+   "question": "Do some of the mismatched mugs have chips?"
+  },
+  {
+   "id": "mug_daisies",
+   "type": "attribute",
+   "of": "mugs",
+   "desc": "some of the mismatched mugs have cheerful painted daisies",
+   "question": "Do some of the mismatched mugs have cheerful painted daisies?"
+  },
+  {
+   "id": "towel_nail",
+   "type": "attribute",
+   "of": "towel",
+   "desc": "the tea towel hangs from a nail",
+   "question": "Does the tea towel hang from a nail?"
+  },
+  {
+   "id": "spoon_exposed",
+   "type": "state",
+   "of": "spoon",
+   "desc": "the silver spoon is half-exposed in the drawer",
+   "question": "Is the silver spoon half-exposed in the drawer?"
+  },
+  {
+   "id": "vine_blinds",
+   "type": "state",
+   "of": "vine",
+   "desc": "the vine coils through the open blinds",
+   "question": "Does the vine coil through the open blinds?"
+  },
+  {
+   "id": "sparrow_beak_clicking",
+   "type": "action",
+   "of": [
+    "sparrow",
+    "vine"
+   ],
+   "desc": "the sparrow clicks its beak against the berry on the vine",
+   "question": "Is the sparrow clicking its beak against the berry on the vine?"
+  },
+  {
+   "id": "books_sagging",
+   "type": "state",
+   "of": "books",
+   "desc": "the spines of the stack of books are sagging",
+   "question": "Are the spines of the stack of books sagging?"
+  },
+  {
+   "id": "chain_tangled",
+   "type": "state",
+   "of": "chain",
+   "desc": "the chain of copper links forms a tangle",
+   "question": "Does the chain of copper links form a tangle?"
+  },
+  {
+   "id": "bowl_floor",
+   "type": "state",
+   "of": "bowl",
+   "desc": "the ceramic bowl rests on the floor",
+   "question": "Does the ceramic bowl rest on the floor?"
+  },
+  {
+   "id": "marbles_colors",
+   "type": "attribute",
+   "of": "marbles",
+   "desc": "the marbles are of every color",
+   "question": "Are the marbles of every color?"
+  },
+  {
+   "id": "clock_face_door",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock face is painted with an image of a door",
+   "question": "Is the clock face painted with an image of a door?"
+  },
+  {
+   "id": "clock_hallway",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "a glimpse of an infinite hallway is visible through the painted door on the clock",
+   "question": "Is a glimpse of an infinite hallway visible through the painted door on the clock?"
+  },
+  {
+   "id": "vine_cabinet",
+   "type": "relation",
+   "of": [
+    "vine",
+    "cabinet"
+   ],
+   "desc": "the vine curls into the cabinet",
+   "question": "Does the vine curl into the cabinet?"
+  },
+  {
+   "id": "vine_spoon",
+   "type": "relation",
+   "of": [
+    "vine",
+    "spoon"
+   ],
+   "desc": "the vine wraps around the silver spoon inside the cabinet",
+   "question": "Does the vine wrap around the silver spoon inside the cabinet?"
+  },
+  {
+   "id": "letter_text",
+   "type": "attribute",
+   "of": "letter",
+   "desc": "the folded letter reads 'Come back when the marbles fall still'",
+   "question": "Does the folded letter read 'Come back when the marbles fall still'?"
+  },
+  {
+   "id": "cabinet_stands",
+   "type": "state",
+   "of": "cabinet",
+   "desc": "the wooden cabinet stands",
+   "question": "Is the wooden cabinet standing?"
+  },
+  {
+   "id": "vine_coiled",
+   "type": "state",
+   "of": "vine",
+   "desc": "the vine is coiled",
+   "question": "Is the vine coiled?"
+  },
+  {
+   "id": "hallway_mirrors",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the infinite hallway visible through the painted door on the clock has walls lined with mirrors",
+   "question": "Does the infinite hallway visible through the painted door on the clock have walls lined with mirrors?"
+  },
+  {
+   "id": "blinds",
+   "type": "entity",
+   "class": "blind",
+   "plural": "blinds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wooden blinds on a window",
+   "question": "Are there wooden blinds on a window?",
+   "box": [
+    800,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "cabinet",
+   "to": "mugs",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "books",
+   "kind": "support"
+  },
+  {
+   "from": "cabinet",
+   "to": "spoon",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clock",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0261",
+ "prompt": "In the golden hush of a kitchen bathed in late afternoon light, a wooden cabinet stands open like the mouth of a forgotten cave, its interior crammed with an eccentric menagerie of mismatched mugs—some with chips, others with cheerful painted daisies, all whispering stories of morning coffees and stolen sips of tea. A single hanging tea towel dangles lazily from a nail above, swaying with a hypnotic rhythm that seems to defy both time and the stillness of the room, as if moved by an unseen breeze or a ghostly memory of a hand passing through. Nestled in the top drawer, half-exposed like a treasure left behind, is a silver spoon that glints softly in the light, its polished curve catching reflections of the window, the mugs, and the bird beyond, all of which blur together in a shimmering mosaic of surfaces and shadows. Outside, a small, crimson berry clings precariously to a vine that has coiled through the kitchen’s open blinds, each slat of wood a ladder for the plant’s ascent. A plump sparrow hovers in the air just beyond the pane, its beak clicking rhythmically against the berry as if in a performance of hunger and patience. Inside, the cabinet’s lower shelf is occupied by a stack of books whose spines sag under the weight of unread pages, each volume bound to the next by a chain of copper links that dangle and twist, forming a tangle of metal and paper. The chain sags into a small ceramic bowl resting on the floor, filled with marbles of every color, each one polished to a mirror finish and somehow orbiting a tiny black hole in the center—a vortex of marbles that never spills, always spinning in slow, hypnotic synchrony. Behind the books, a clock with melting gears hangs askew on the wall, its hands frozen between noon and one, but the clock face is painted with an image of a door, and through that painted door, a glimpse of a hallway stretches infinitely, its walls lined with mirrors that do not reflect but refract, each mirror containing a different version of the kitchen—one where the bird is inside, one where the mugs are full of clouds, one where the spoon has grown into a silver vine. In this impossible kitchen, everything is connected by unseen threads—light bends around objects, time warps in the corners, and the scent of lavender tea seems to flow upward from the marbles in the bowl, swirling into the hanging tea towel as if it were drawn in by a silent breath. The vine from the window has not only reached through the blinds but curled into the cabinet itself, where it wraps gently around the silver spoon, as if trying to draw it into the outside world. Inside the drawer, a folded letter lies beneath the spoon, its ink smudged by time but legible in the way only memories can be. It reads, “Come back when the marbles fall still,” though the marbles have never stopped, and perhaps they never will.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

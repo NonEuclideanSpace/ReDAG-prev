@@ -1,0 +1,345 @@
+{
+ "style": "photorealistic photo, natural bright lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a vibrant flower shop interior with shelves lined with colorful blooms and a front window",
+   "question": "Does the image show the interior of a vibrant flower shop with shelves of colorful blooms and a front window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden counter",
+   "question": "Is there a wooden counter?",
+   "box": [
+    0,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "florist",
+   "type": "entity",
+   "class": "florist",
+   "plural": "florists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a florist in a green apron",
+   "question": "Is there a florist wearing a green apron?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a beige trench coat",
+   "question": "Is there a customer wearing a beige trench coat?",
+   "box": [
+    700,
+    250,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large ceramic vase filled with sunflowers",
+   "question": "Is there a large ceramic vase filled with sunflowers?",
+   "box": [
+    50,
+    550,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tabby cat",
+   "question": "Is there a tabby cat?",
+   "box": [
+    260,
+    750,
+    400,
+    880
+   ]
+  },
+  {
+   "id": "magazines",
+   "type": "entity",
+   "class": "magazine",
+   "plural": "magazines",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of gardening magazines",
+   "question": "Is there a stack of gardening magazines?",
+   "box": [
+    270,
+    820,
+    390,
+    880
+   ]
+  },
+  {
+   "id": "assistant",
+   "type": "entity",
+   "class": "assistant",
+   "plural": "assistants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young assistant in a white shirt",
+   "question": "Is there a young assistant wearing a white shirt?",
+   "box": [
+    600,
+    100,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "ferns",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "potted ferns",
+   "question": "Are there potted ferns?",
+   "box": [
+    650,
+    50,
+    750,
+    150
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "entity",
+   "class": "watering can",
+   "plural": "watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a copper watering can",
+   "question": "Is there a copper watering can?",
+   "box": [
+    720,
+    120,
+    780,
+    200
+   ]
+  },
+  {
+   "id": "baskets",
+   "type": "entity",
+   "class": "hanging basket",
+   "plural": "hanging baskets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hanging baskets of purple petunias",
+   "question": "Are there hanging baskets of purple petunias?",
+   "box": [
+    100,
+    0,
+    600,
+    150
+   ]
+  },
+  {
+   "id": "case",
+   "type": "entity",
+   "class": "display case",
+   "plural": "display cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass display case containing delicate orchids",
+   "question": "Is there a glass display case containing delicate orchids?",
+   "box": [
+    750,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "holder",
+   "type": "entity",
+   "class": "price tag holder",
+   "plural": "price tag holders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an empty price tag holder",
+   "question": "Is there an empty price tag holder?",
+   "box": [
+    576,
+    776,
+    624,
+    824
+   ]
+  },
+  {
+   "id": "bouquet",
+   "type": "attribute",
+   "of": "florist",
+   "desc": "the florist holds a bouquet of red roses wrapped in brown paper",
+   "question": "Is the florist holding a bouquet of red roses wrapped in brown paper?"
+  },
+  {
+   "id": "florist_wrapping",
+   "type": "state",
+   "of": "florist",
+   "desc": "the florist is wrapping the bouquet",
+   "question": "Is the florist wrapping the bouquet?"
+  },
+  {
+   "id": "customer_reaching",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer reaches out with both hands",
+   "question": "Is the customer reaching out with both hands?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "florist",
+    "customer"
+   ],
+   "desc": "the florist hands the bouquet to the customer",
+   "question": "Is the florist handing the bouquet to the customer?"
+  },
+  {
+   "id": "vase_on_counter",
+   "type": "relation",
+   "of": [
+    "vase",
+    "counter"
+   ],
+   "desc": "the vase sits on the counter",
+   "question": "Is the vase sitting on the counter?"
+  },
+  {
+   "id": "cat_on_magazines",
+   "type": "relation",
+   "of": [
+    "cat",
+    "magazines"
+   ],
+   "desc": "the cat sleeps on the stack of magazines",
+   "question": "Is the cat sleeping on the stack of magazines?"
+  },
+  {
+   "id": "magazines_near_vase",
+   "type": "relation",
+   "of": [
+    "magazines",
+    "vase"
+   ],
+   "desc": "the stack of magazines is near the vase",
+   "question": "Is the stack of magazines near the vase?"
+  },
+  {
+   "id": "assistant_watering",
+   "type": "action",
+   "of": [
+    "assistant",
+    "ferns"
+   ],
+   "desc": "the assistant waters the ferns using the watering can",
+   "question": "Is the assistant watering the ferns using the watering can?"
+  },
+  {
+   "id": "ferns_on_shelf",
+   "type": "state",
+   "of": "ferns",
+   "desc": "the ferns are on a high shelf",
+   "question": "Are the ferns on a high shelf?"
+  },
+  {
+   "id": "baskets_above_counter",
+   "type": "relation",
+   "of": [
+    "baskets",
+    "counter"
+   ],
+   "desc": "the hanging baskets suspend above the counter",
+   "question": "Do the hanging baskets suspend above the counter?"
+  },
+  {
+   "id": "holder_on_counter",
+   "type": "relation",
+   "of": [
+    "holder",
+    "counter"
+   ],
+   "desc": "the price tag holder stands on the counter",
+   "question": "Is the price tag holder standing on the counter?"
+  },
+  {
+   "id": "holder_near_florist",
+   "type": "relation",
+   "of": [
+    "holder",
+    "florist"
+   ],
+   "desc": "the price tag holder is near the florist's elbow",
+   "question": "Is the price tag holder near the florist's elbow?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "counter",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "holder",
+   "kind": "support"
+  },
+  {
+   "from": "magazines",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0043",
+ "prompt": "Inside a vibrant flower shop, shelves are lined with colorful blooms. In the center foreground, a florist in a green apron wraps a bouquet of red roses in brown paper, handing it to a customer in a beige trench coat standing on the right. The customer reaches out with both hands to receive the flowers. To the left, a large ceramic vase filled with sunflowers sits on a wooden counter. A tabby cat sleeps on a stack of gardening magazines near the vase. In the background, a young assistant in a white shirt waters potted ferns on a high shelf using a copper watering can. Hanging baskets of purple petunias suspend from the ceiling above the counter. A glass display case in the lower right contains delicate orchids. A price tag holder stands empty on the counter near the florist's elbow. Sunlight streams through the front window, illuminating dust particles and creating bright highlights on the glossy leaves. The lighting is natural and bright, enhancing the vivid colors of the petals. The style is a photorealistic photo.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 1,
+  "warnings": []
+ }
+}

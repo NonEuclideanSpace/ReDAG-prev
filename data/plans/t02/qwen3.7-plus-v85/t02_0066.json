@@ -1,0 +1,135 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with snow covering the ground and buildings in the background",
+   "question": "Does the image show a snowy town square with snow covering the ground and buildings?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    150,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray hat",
+   "question": "Is there a man in a gray hat?",
+   "box": [
+    600,
+    150,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_package",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a small package",
+   "question": "Is the woman in a blue coat holding a small package?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a gray hat looks at the woman",
+   "question": "Is the man in a gray hat looking at the woman in a blue coat?"
+  },
+  {
+   "id": "man_extending",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray hat extends his hand",
+   "question": "Is the man in a gray hat extending his hand?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman hands the package to the man",
+   "question": "Is the woman handing the package to the man?"
+  },
+  {
+   "id": "no_vehicle",
+   "type": "absent",
+   "desc": "vehicles",
+   "question": "Are there any vehicles in the image?"
+  },
+  {
+   "id": "no_others",
+   "type": "absent",
+   "desc": "other people or distracting objects",
+   "question": "Are there any other people in the image besides the woman and the man?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat stands",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "no_distractions",
+   "type": "absent",
+   "desc": "distracting objects",
+   "question": "Are there any distracting objects in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0066",
+ "prompt": "A cinematic film still captures a snowy town square. On the left, a woman in a blue coat stands holding a small package. In the center, a man in a gray hat looks at her while extending his hand to receive it. The interaction focuses on the handing of the package between them. Snow covers the ground and buildings in the background. There is no vehicle visible in the scene. The composition remains tight on these two figures and their exchange, excluding any other distractions or additional characters from the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

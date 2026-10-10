@@ -1,0 +1,139 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock with wooden planks",
+   "question": "Does the image depict a shipyard dock with wooden planks?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in blue overalls",
+   "question": "Is there a worker in blue overalls?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large steel anchor",
+   "question": "Is there a large steel anchor?",
+   "box": [
+    350,
+    600,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in a yellow hard hat",
+   "question": "Is there a foreman in a yellow hard hat?",
+   "box": [
+    700,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "worker_clipboard",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in blue overalls holds a clipboard",
+   "question": "Is the worker in blue overalls holding a clipboard?"
+  },
+  {
+   "id": "foreman_points_anchor",
+   "type": "action",
+   "of": [
+    "foreman",
+    "anchor"
+   ],
+   "desc": "the foreman in the yellow hard hat points at the anchor",
+   "question": "Is the foreman in the yellow hard hat pointing at the large steel anchor?"
+  },
+  {
+   "id": "worker_looks_foreman",
+   "type": "action",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker in blue overalls looks at the foreman in the yellow hard hat",
+   "question": "Is the worker in blue overalls looking at the foreman in the yellow hard hat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in blue overalls stands",
+   "question": "Is the worker in blue overalls standing?"
+  },
+  {
+   "id": "anchor_on_planks",
+   "type": "state",
+   "of": "anchor",
+   "desc": "the large steel anchor rests on the wooden planks of the dock",
+   "question": "Does the large steel anchor rest on the wooden planks of the dock?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0049",
+ "prompt": "A pencil sketch with light color wash depicts a shipyard dock. On the left, a worker in blue overalls stands holding a clipboard. In the center, a large steel anchor rests on the wooden planks. To the right, a foreman in a yellow hard hat points at the anchor. The worker in blue overalls looks at the foreman in the yellow hard hat. There is no water visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

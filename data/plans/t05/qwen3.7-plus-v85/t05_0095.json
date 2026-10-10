@@ -1,0 +1,386 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef with a tall white hat",
+   "question": "Is there a chef with a tall white hat?",
+   "box": [
+    380,
+    150,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small gray cat",
+   "question": "Is there a small gray cat?",
+   "box": [
+    100,
+    600,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    80,
+    700,
+    280,
+    900
+   ]
+  },
+  {
+   "id": "dishwasher",
+   "type": "entity",
+   "class": "dishwasher",
+   "plural": "dishwashers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dishwasher with wet sleeves",
+   "question": "Is there a dishwasher with wet sleeves?",
+   "box": [
+    700,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "manager",
+   "type": "entity",
+   "class": "manager",
+   "plural": "managers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a manager in a sharp suit",
+   "question": "Is there a manager in a sharp suit?",
+   "box": [
+    850,
+    200,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "pan",
+   "type": "entity",
+   "class": "frying pan",
+   "plural": "frying pans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sizzling frying pan",
+   "question": "Is there a sizzling frying pan?",
+   "box": [
+    450,
+    400,
+    580,
+    500
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "cooking pot",
+   "plural": "cooking pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming cooking pot",
+   "question": "Is there a steaming cooking pot?",
+   "box": [
+    200,
+    500,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "stove",
+   "type": "entity",
+   "class": "stove",
+   "plural": "stoves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stove",
+   "question": "Is there a stove?",
+   "box": [
+    180,
+    600,
+    380,
+    800
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clean plate",
+   "question": "Is there a clean plate?",
+   "box": [
+    780,
+    550,
+    880,
+    650
+   ]
+  },
+  {
+   "id": "chef_holding_pan",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef with a tall white hat holds a sizzling frying pan",
+   "question": "Is the chef with a tall white hat holding a frying pan?"
+  },
+  {
+   "id": "waiter_pointing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a blue apron is pointing urgently",
+   "question": "Is the waiter in a blue apron pointing urgently?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small gray cat is sitting calmly",
+   "question": "Is the small gray cat sitting calmly?"
+  },
+  {
+   "id": "manager_checking_time",
+   "type": "state",
+   "of": "manager",
+   "desc": "the manager in a sharp suit looks at the time on his wrist",
+   "question": "Is the manager in a sharp suit looking at the time on his wrist?"
+  },
+  {
+   "id": "chef_flipping",
+   "type": "action",
+   "of": [
+    "chef",
+    "pan"
+   ],
+   "desc": "the chef with a tall white hat flips food in the sizzling frying pan",
+   "question": "Is the chef with a tall white hat flipping food in the sizzling frying pan?"
+  },
+  {
+   "id": "waiter_gesturing_pot",
+   "type": "action",
+   "of": [
+    "waiter",
+    "pot"
+   ],
+   "desc": "the waiter in a blue apron gestures toward the steaming cooking pot",
+   "question": "Is the waiter in a blue apron gesturing toward the steaming cooking pot?"
+  },
+  {
+   "id": "dishwasher_handing_plate",
+   "type": "action",
+   "of": [
+    "dishwasher",
+    "manager"
+   ],
+   "desc": "the dishwasher with wet sleeves hands a clean plate to the manager in a sharp suit",
+   "question": "Is the dishwasher with wet sleeves handing a plate to the manager in a sharp suit?"
+  },
+  {
+   "id": "manager_accepting",
+   "type": "action",
+   "of": [
+    "manager",
+    "dishwasher"
+   ],
+   "desc": "the manager in a sharp suit accepts the plate from the dishwasher with a nod",
+   "question": "Is the manager in a sharp suit accepting the plate from the dishwasher?"
+  },
+  {
+   "id": "waiter_next_to_cat",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "cat"
+   ],
+   "desc": "the waiter in a blue apron is next to the small gray cat",
+   "question": "Is the waiter in a blue apron next to the small gray cat?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the small gray cat sits on the wooden crate",
+   "question": "Is the small gray cat sitting on the wooden crate?"
+  },
+  {
+   "id": "pot_on_stove",
+   "type": "relation",
+   "of": [
+    "pot",
+    "stove"
+   ],
+   "desc": "the steaming cooking pot is on the stove",
+   "question": "Is the steaming cooking pot on the stove?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "visible fire",
+   "question": "Is there any visible fire in the image?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef with a tall white hat is standing",
+   "question": "Is the chef with a tall white hat standing?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small gray cat is observing",
+   "question": "Is the small gray cat observing the scene?"
+  },
+  {
+   "id": "utensils",
+   "type": "entity",
+   "class": "utensil",
+   "plural": "utensils",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hanging utensils",
+   "question": "Are there hanging utensils?",
+   "box": [
+    50,
+    50,
+    974,
+    300
+   ]
+  },
+  {
+   "id": "bowls",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked bowls",
+   "question": "Are there stacked bowls?",
+   "box": [
+    800,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "pan_sizzling",
+   "type": "state",
+   "of": "pan",
+   "desc": "the frying pan is sizzling",
+   "question": "Is the frying pan sizzling (emitting steam/smoke)?"
+  },
+  {
+   "id": "plate_clean",
+   "type": "attribute",
+   "of": "plate",
+   "desc": "the plate is clean",
+   "question": "Is the plate clean?"
+  },
+  {
+   "id": "manager_nodding",
+   "type": "state",
+   "of": "manager",
+   "desc": "the manager in a sharp suit is nodding",
+   "question": "Is the manager in a sharp suit nodding?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stove",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0095",
+ "prompt": "In an anime style busy restaurant kitchen, a chef with a tall white hat stands center holding a sizzling pan. To the left, a waiter in a blue apron points urgently at a steaming pot on the stove. Next to the waiter, a small gray cat sits calmly on a wooden crate, observing the chaos. On the right, a dishwasher with wet sleeves hands a clean plate to a manager in a sharp suit who looks at the time on his wrist. There is no fire visible in the scene. The chef flips food in the pan while the waiter gestures toward the heat. The manager accepts the plate from the dishwasher with a nod. The cat remains still on its perch. The kitchen is filled with hanging utensils and stacked bowls, but the focus remains on these five distinct figures engaged in their specific tasks amidst the culinary rush.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

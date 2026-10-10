@@ -1,0 +1,200 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage area, sparse and intimate",
+   "question": "Does the image depict a quiet theatre backstage area that is sparse and intimate?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    80,
+    300,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    400,
+    200,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "costumes",
+   "type": "entity",
+   "class": "stack of costumes",
+   "plural": "stacks of costumes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of costumes",
+   "question": "Is there a stack of costumes?",
+   "box": [
+    700,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    720,
+    350,
+    930,
+    600
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf is sitting",
+   "question": "Is the man wearing a red scarf sitting?"
+  },
+  {
+   "id": "man_slumped",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf has a slumped posture",
+   "question": "Does the man wearing a red scarf have a slumped posture?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing rigidly",
+   "question": "Is the woman in the blue dress standing rigidly?"
+  },
+  {
+   "id": "woman_holding_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a script tightly against her chest",
+   "question": "Is the woman in the blue dress holding a script tightly against her chest?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is perched",
+   "question": "Is the black cat perched?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat's tail is curled neatly around its paws",
+   "question": "Is the black cat's tail curled neatly around its paws?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress looks directly at the man wearing a red scarf",
+   "question": "Is the woman in the blue dress looking directly at the man wearing a red scarf?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man wearing a red scarf sits on the wooden crate",
+   "question": "Is the man wearing a red scarf sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_on_costumes",
+   "type": "relation",
+   "of": [
+    "cat",
+    "costumes"
+   ],
+   "desc": "the black cat perches atop the stack of costumes",
+   "question": "Is the black cat perched atop the stack of costumes?"
+  },
+  {
+   "id": "no_lighting_equipment",
+   "type": "absent",
+   "desc": "stage lighting equipment",
+   "question": "Is there any stage lighting equipment visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "costumes",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0061",
+ "prompt": "A pencil sketch with light color wash depicts a quiet theatre backstage. On the left, a man in a red scarf sits on a wooden crate, his posture slumped from exhaustion. In the center, a woman in a blue dress stands rigidly, holding a script tightly against her chest. To the right, a black cat perches atop a stack of costumes, its tail curled neatly around its paws. The woman in the blue dress looks directly at the man in the red scarf, creating a silent tension between them. The scene is sparse and intimate, focusing entirely on these three figures. There is no stage lighting equipment visible in the background, keeping the attention strictly on the characters and their immediate surroundings without technical distractions or additional props cluttering the visual narrative.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

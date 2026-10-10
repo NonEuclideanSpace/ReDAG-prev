@@ -1,0 +1,483 @@
+{
+ "style": "warm photorealistic interior photography, soft afternoon lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cozy independent bookstore interior",
+   "question": "Does the image show the interior of a cozy independent bookstore?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tall wooden bookshelves",
+   "question": "Are there tall wooden bookshelves?",
+   "box": [
+    50,
+    50,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "reading chair",
+   "plural": "reading chairs",
+   "count": 3,
+   "count_exact": false,
+   "desc": "comfortable reading chairs",
+   "question": "Are there comfortable reading chairs?",
+   "box": [
+    600,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "side_tables",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "small side tables",
+   "question": "Are there small side tables?",
+   "box": [
+    650,
+    700,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "mugs",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "coffee mugs",
+   "question": "Are there coffee mugs?",
+   "box": [
+    680,
+    720,
+    750,
+    780
+   ]
+  },
+  {
+   "id": "glasses",
+   "type": "entity",
+   "class": "reading glasses",
+   "plural": "reading glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of reading glasses",
+   "question": "Is there a pair of reading glasses?",
+   "box": [
+    760,
+    721,
+    820,
+    769
+   ]
+  },
+  {
+   "id": "bookmarks",
+   "type": "entity",
+   "class": "bookmark",
+   "plural": "bookmarks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bookmarks",
+   "question": "Are there bookmarks?",
+   "box": [
+    696,
+    726,
+    744,
+    774
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "checkout counter",
+   "plural": "checkout counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a checkout counter",
+   "question": "Is there a checkout counter?",
+   "box": [
+    100,
+    700,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "register",
+   "type": "entity",
+   "class": "cash register",
+   "plural": "cash registers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage cash register",
+   "question": "Is there a vintage cash register?",
+   "box": [
+    200,
+    720,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "customers",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "customers",
+   "question": "Are there customers?",
+   "box": [
+    450,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "bins",
+   "type": "entity",
+   "class": "storage bin",
+   "plural": "storage bins",
+   "count": 3,
+   "count_exact": false,
+   "desc": "colorful storage bins",
+   "question": "Are there colorful storage bins?",
+   "box": [
+    800,
+    600,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "low_tables",
+   "type": "entity",
+   "class": "low table",
+   "plural": "low tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low table equipped with crayons and coloring sheets",
+   "question": "Is there a low table equipped with crayons and coloring sheets?",
+   "box": [
+    820,
+    760,
+    960,
+    850
+   ]
+  },
+  {
+   "id": "bookends",
+   "type": "entity",
+   "class": "bookend",
+   "plural": "bookends",
+   "count": 2,
+   "count_exact": false,
+   "desc": "animal-shaped bookends",
+   "question": "Are there animal-shaped bookends?",
+   "box": [
+    150,
+    300,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "lamps",
+   "type": "entity",
+   "class": "reading lamp",
+   "plural": "reading lamps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "reading lamps illuminating corners",
+   "question": "Are there reading lamps illuminating corners?",
+   "box": [
+    50,
+    400,
+    150,
+    600
+   ]
+  },
+  {
+   "id": "customers_carrying",
+   "type": "attribute",
+   "of": "customers",
+   "desc": "the customers carry canvas tote bags filled with literary selections",
+   "question": "Do the customers carry canvas tote bags filled with literary selections?"
+  },
+  {
+   "id": "bookends_holding",
+   "type": "state",
+   "of": "bookends",
+   "desc": "the animal-shaped bookends keep volumes upright",
+   "question": "Do the animal-shaped bookends keep volumes upright?"
+  },
+  {
+   "id": "mugs_on_tables",
+   "type": "relation",
+   "of": [
+    "mugs",
+    "side_tables"
+   ],
+   "desc": "the coffee mugs rest on the small side tables",
+   "question": "Do the coffee mugs rest on the small side tables?"
+  },
+  {
+   "id": "glasses_on_tables",
+   "type": "relation",
+   "of": [
+    "glasses",
+    "side_tables"
+   ],
+   "desc": "the reading glasses rest on the small side tables",
+   "question": "Do the reading glasses rest on the small side tables?"
+  },
+  {
+   "id": "bookmarks_on_tables",
+   "type": "relation",
+   "of": [
+    "bookmarks",
+    "side_tables"
+   ],
+   "desc": "the bookmarks rest on the small side tables",
+   "question": "Do the bookmarks rest on the small side tables?"
+  },
+  {
+   "id": "chairs_near_windows",
+   "type": "relation",
+   "of": [
+    "chairs",
+    "windows"
+   ],
+   "desc": "the reading chairs cluster near the large windows",
+   "question": "Do the reading chairs cluster near the large windows?"
+  },
+  {
+   "id": "register_on_counter",
+   "type": "relation",
+   "of": [
+    "register",
+    "counter"
+   ],
+   "desc": "the vintage cash register sits on the checkout counter",
+   "question": "Does the vintage cash register sit on the checkout counter?"
+  },
+  {
+   "id": "bins_near_tables",
+   "type": "relation",
+   "of": [
+    "bins",
+    "low_tables"
+   ],
+   "desc": "the colorful bins are near the low tables",
+   "question": "Are the colorful bins near the low tables?"
+  },
+  {
+   "id": "no_automotive",
+   "type": "absent",
+   "desc": "automotive parts like spark plugs or motor oil",
+   "question": "Are there any automotive parts like spark plugs or motor oil in the image?"
+  },
+  {
+   "id": "no_sports",
+   "type": "absent",
+   "desc": "sports equipment such as soccer balls or tennis rackets",
+   "question": "Are there any sports equipment such as soccer balls or tennis rackets in the image?"
+  },
+  {
+   "id": "shelves_overflow",
+   "type": "state",
+   "of": "shelves",
+   "desc": "the tall wooden bookshelves overflow with books",
+   "question": "Do the tall wooden bookshelves overflow with books?"
+  },
+  {
+   "id": "chairs_cluster",
+   "type": "state",
+   "of": "chairs",
+   "desc": "the comfortable reading chairs are clustered",
+   "question": "Are the comfortable reading chairs clustered?"
+  },
+  {
+   "id": "windows",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "large windows",
+   "question": "Are there large windows?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "posters",
+   "type": "entity",
+   "class": "poster",
+   "plural": "posters",
+   "count": 2,
+   "count_exact": false,
+   "desc": "author event posters",
+   "question": "Are there author event posters?",
+   "box": [
+    800,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "displays",
+   "type": "entity",
+   "class": "display stand",
+   "plural": "display stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "rotating display stands",
+   "question": "Is there a rotating display stand?",
+   "box": [
+    700,
+    600,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "paperbacks",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 10,
+   "count_exact": false,
+   "desc": "paperback novels",
+   "question": "Are there paperback novels on the shelves?",
+   "box": [
+    50,
+    100,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "hardcovers",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 10,
+   "count_exact": false,
+   "desc": "hardcover classics",
+   "question": "Are there hardcover classics on the shelves?",
+   "box": [
+    50,
+    100,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "bestseller_lists",
+   "type": "attribute",
+   "of": "counter",
+   "desc": "the checkout counter displays bestseller lists",
+   "question": "Does the checkout counter display bestseller lists?"
+  },
+  {
+   "id": "recommendations",
+   "type": "attribute",
+   "of": "counter",
+   "desc": "the checkout counter displays book recommendations",
+   "question": "Does the checkout counter display book recommendations?"
+  },
+  {
+   "id": "picture_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 10,
+   "count_exact": false,
+   "desc": "children's picture books",
+   "question": "Are there children's picture books in the bins?",
+   "box": [
+    620,
+    720,
+    880,
+    900
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "side_tables",
+   "to": "mugs",
+   "kind": "support"
+  },
+  {
+   "from": "side_tables",
+   "to": "glasses",
+   "kind": "support"
+  },
+  {
+   "from": "side_tables",
+   "to": "bookmarks",
+   "kind": "support"
+  },
+  {
+   "from": "counter",
+   "to": "register",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_023",
+ "prompt": "A cozy independent bookstore during afternoon browsing time, where tall wooden shelves overflow with paperback novels and hardcover classics organized by genre and author. Comfortable reading chairs cluster near large windows while coffee mugs rest on small side tables beside bookmarks and reading glasses. A checkout counter displays bestseller lists and book recommendations while customers carry canvas tote bags filled with their literary selections. Children's picture books fill colorful bins near low tables equipped with crayons and coloring sheets, while bookends shaped like animals keep volumes upright. However, this literary sanctuary contains no automotive parts like spark plugs or motor oil, maintaining its peaceful atmosphere dedicated to reading rather than mechanical work. You won't spot any sports equipment such as soccer balls or tennis rackets either, preserving the quiet contemplative environment that serious book lovers appreciate. A vintage cash register processes purchases while gift cards hang on rotating displays, and reading lamps illuminate cozy corners where author event posters advertise upcoming signings in this beloved community gathering place.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 6,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

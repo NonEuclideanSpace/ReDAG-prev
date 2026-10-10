@@ -1,0 +1,179 @@
+{
+ "style": "photorealistic, dimly lit, mystical atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit tower chamber",
+   "question": "Is the scene set in a dimly lit tower chamber?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "alchemy table",
+   "plural": "alchemy tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rectangular dark wooden alchemy table with curved legs featuring intricate spiral carvings",
+   "question": "Is there a rectangular dark wooden alchemy table?",
+   "box": [
+    100,
+    400,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "vessels",
+   "type": "entity",
+   "class": "glass vessel",
+   "plural": "glass vessels",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five glass alchemical vessels",
+   "question": "Are there five glass alchemical vessels?",
+   "box": [
+    200,
+    450,
+    824,
+    650
+   ]
+  },
+  {
+   "id": "table_surface",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the alchemy table has a checkered surface of alternating dark and light wood squares",
+   "question": "Does the alchemy table have a checkered surface?"
+  },
+  {
+   "id": "table_stains",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table is covered with centuries of magical residue and potion stains",
+   "question": "Is the table covered with magical residue and potion stains?"
+  },
+  {
+   "id": "table_edges",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table's edges are reinforced with greenish metallic strips that show weathered appearance from age",
+   "question": "Are the table's edges reinforced with weathered greenish metallic strips?"
+  },
+  {
+   "id": "table_drawers",
+   "type": "attribute",
+   "of": "table",
+   "desc": "three small drawers with crystal knobs are built into the front panel, each carved with different geometric symbols",
+   "question": "Are there three small drawers with crystal knobs carved with different geometric symbols on the front panel?"
+  },
+  {
+   "id": "table_damage",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table's surface is scorched with burn marks and has small holes where corrosive substances have eaten through the wood",
+   "question": "Is the table's surface scorched with burn marks?"
+  },
+  {
+   "id": "table_wires",
+   "type": "attribute",
+   "of": "table",
+   "desc": "thin metallic wire spirals connect various apparatus holders on the table",
+   "question": "Are there thin metallic wire spirals connecting apparatus holders on the table?"
+  },
+  {
+   "id": "vessel_colors",
+   "type": "attribute",
+   "of": "vessels",
+   "desc": "the five glass alchemical vessels contain bright emerald green, deep crimson red, golden yellow, midnight blue, and pure silver liquids",
+   "question": "Do the five glass alchemical vessels contain bright emerald green, deep crimson red, golden yellow, midnight blue, and pure silver liquids?"
+  },
+  {
+   "id": "table_glow",
+   "type": "state",
+   "of": "table",
+   "desc": "the alchemy table emits a faint luminous glow",
+   "question": "Does the alchemy table emit a faint luminous glow?"
+  },
+  {
+   "id": "vessels_on_table",
+   "type": "relation",
+   "of": [
+    "vessels",
+    "table"
+   ],
+   "desc": "the five glass alchemical vessels sit upon the alchemy table",
+   "question": "Do the five glass alchemical vessels sit upon the alchemy table?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic components",
+   "question": "Are there any plastic components in the image?"
+  },
+  {
+   "id": "no_modern_construction",
+   "type": "absent",
+   "desc": "signs of modern construction",
+   "question": "Are there any signs of modern construction in the image?"
+  },
+  {
+   "id": "table_legs_carved",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table has curved legs featuring intricate spiral carvings",
+   "question": "Does the table have curved legs featuring intricate spiral carvings?"
+  },
+  {
+   "id": "table_holes",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table has small holes where corrosive substances have eaten through the wood",
+   "question": "Does the table have small holes where corrosive substances have eaten through the wood?"
+  },
+  {
+   "id": "table_surface_pattern",
+   "type": "attribute",
+   "of": "table",
+   "desc": "the table surface has a pattern of alternating dark and light wood squares",
+   "question": "Does the table surface have a pattern of alternating dark and light wood squares?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "vessels",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_021",
+ "prompt": "A single mystical alchemy laboratory table crafted from dark wooden timber in a dimly lit tower chamber. The table is rectangular with curved legs featuring intricate spiral carvings, while its surface displays a checkered pattern of alternating dark and light wood squares. The table is not clean, covered with centuries of magical residue and potion stains. Five glass alchemical vessels sit upon its surface - each containing different colored liquids: bright emerald green, deep crimson red, golden yellow, midnight blue, and pure silver. The table's edges are reinforced with greenish metallic strips that show weathered appearance from age. Three small drawers with crystal knobs are built into the front panel, each carved with different geometric symbols. The table's surface is scorched with burn marks from failed experiments, while small holes indicate where corrosive substances have eaten through the wood. Thin metallic wire spirals connect various apparatus holders, and the entire piece emits a faint luminous glow. The table shows no signs of modern construction and contains no plastic components, maintaining its authentic medieval craftsmanship.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "style": "photorealistic photo, dim lighting, theatre backstage atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "theatre backstage with dim shadows of the wings",
+   "question": "Does the image show a theatre backstage setting with dim shadows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    150,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    550,
+    150,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "man_holding_script",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a script tightly in his hands",
+   "question": "Is the man wearing a red scarf holding a script tightly in his hands?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress looks directly at the man in the red scarf",
+   "question": "Is the woman in the blue dress looking directly at the man in the red scarf?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress stands next to the man in the red scarf",
+   "question": "Is the woman in the blue dress standing next to the man in the red scarf?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the background?"
+  },
+  {
+   "id": "no_extra_props",
+   "type": "absent",
+   "desc": "additional distractions or extra props cluttering the view",
+   "question": "Are there any additional distractions cluttering the view?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf is standing",
+   "question": "Is the man wearing a red scarf standing?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "no_extra_props_2",
+   "type": "absent",
+   "desc": "extra props cluttering the view",
+   "question": "Are there any extra props cluttering the view?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0080",
+ "prompt": "In a photorealistic photo set in a theatre backstage, a man in a red scarf stands on the left side of the frame. He is holding a script tightly in his hands. Next to him on the right stands a woman in a blue dress. She is looking directly at the man in the red scarf. The two figures are positioned close together amidst the dim shadows of the wings. There is no audience visible in the background. The scene captures a quiet moment before the curtain rises, focusing entirely on these two individuals and their immediate surroundings without any additional distractions or extra props cluttering the view.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

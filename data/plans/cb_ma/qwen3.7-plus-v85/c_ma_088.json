@@ -1,0 +1,140 @@
+{
+ "style": "photorealistic macro photography, high contrast, sharp focus",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a frosted-glass board square",
+   "question": "Is there a frosted-glass board square visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rook",
+   "type": "entity",
+   "class": "chess rook",
+   "plural": "chess rooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a matte-onyx chess rook",
+   "question": "Is there a matte-onyx chess rook?",
+   "box": [
+    360,
+    200,
+    664,
+    800
+   ]
+  },
+  {
+   "id": "crenellations",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "twelve evenly spaced crenellations around the battlement of the rook",
+   "question": "Does the rook have twelve evenly spaced crenellations around its battlement?"
+  },
+  {
+   "id": "silver_inlay",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "a narrow band of silver wire inlay circling the mid-tower of the rook",
+   "question": "Does the rook have a narrow band of silver wire inlay circling its mid-tower?"
+  },
+  {
+   "id": "dragon_scales",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "micro-etched dragon scales texture on the cylindrical body of the rook",
+   "question": "Does the cylindrical body of the rook have a micro-etched dragon scales texture?"
+  },
+  {
+   "id": "felt_pad",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "a felt pad of royal purple on the underside of the rook",
+   "question": "Does the underside of the rook bear a felt pad of royal purple?"
+  },
+  {
+   "id": "ruby_accent",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "a small ruby accent on the front face of the rook",
+   "question": "Is there a small ruby accent on the front face of the rook?"
+  },
+  {
+   "id": "no_scratches",
+   "type": "absent",
+   "desc": "scratches on the rook",
+   "question": "Are there any scratches on the rook?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks on the rook",
+   "question": "Are there any cracks on the rook?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden content in the scene",
+   "question": "Is there any wooden content in the image?"
+  },
+  {
+   "id": "rook_standing",
+   "type": "state",
+   "of": "rook",
+   "desc": "the matte-onyx chess rook is standing",
+   "question": "Is the matte-onyx chess rook standing?"
+  },
+  {
+   "id": "rook_on_square",
+   "type": "state",
+   "of": "rook",
+   "desc": "the matte-onyx chess rook stands on the frosted-glass board square",
+   "question": "Is the matte-onyx chess rook standing on the frosted-glass board square?"
+  },
+  {
+   "id": "rook_material",
+   "type": "attribute",
+   "of": "rook",
+   "desc": "the rook is carved from jet-black onyx",
+   "question": "Is the rook carved from jet-black onyx?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "rook",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_088",
+ "prompt": "Illustrate a single matte-onyx chess rook standing on a frosted-glass board square. The rook is carved from jet-black onyx featuring twelve evenly spaced crenellations around the battlement. A narrow band of silver wire inlay circles the mid-tower. Micro-etched dragon scales texture the cylindrical body. The underside bears a felt pad of royal purple. A small ruby accent marks the front face. The piece shows no scratches, no cracks, and absolutely no wooden content.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "style": "cinematic film still, cool lighting, sterile clinical atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse",
+   "question": "Is there a nurse?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    400,
+    300,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    420,
+    500,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard tightly against her chest",
+   "question": "Is the nurse holding a clipboard tightly against her chest?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is standing",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is sitting",
+   "question": "Is the elderly man sitting?"
+  },
+  {
+   "id": "man_looking_up",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man is looking up",
+   "question": "Is the elderly man looking up?"
+  },
+  {
+   "id": "nurse_pointing",
+   "type": "action",
+   "of": [
+    "nurse",
+    "man"
+   ],
+   "desc": "the nurse points at a line on the paper for the elderly man to read",
+   "question": "Is the nurse pointing at a line on the paper for the elderly man to read?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the elderly man sits on the plastic chair",
+   "question": "Is the elderly man sitting on the plastic chair?"
+  },
+  {
+   "id": "no_other_furniture",
+   "type": "absent",
+   "desc": "other furniture or people",
+   "question": "Are there any other pieces of furniture visible in the background?"
+  },
+  {
+   "id": "no_other_people",
+   "type": "absent",
+   "desc": "other people",
+   "question": "Are there any other people visible in the background?"
+  },
+  {
+   "id": "nurse_scrubs",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse wears blue scrubs",
+   "question": "Does the nurse wear blue scrubs?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0056",
+ "prompt": "A cinematic film still captures a sterile hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard tightly against her chest. In the center, an elderly man in a gray coat sits on a plastic chair, looking up at her. The nurse is pointing at a specific line on the paper for him to read. There is no other furniture or people visible in the background. The scene focuses strictly on this exchange between the two figures, with the cool lighting emphasizing the clinical environment and the quiet tension of the moment shared between them.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy restaurant kitchen with a door",
+   "question": "Does the image show a busy restaurant kitchen?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "pot",
+   "plural": "pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stainless steel pot",
+   "question": "Is there a stainless steel pot?",
+   "box": [
+    400,
+    500,
+    624,
+    700
+   ]
+  },
+  {
+   "id": "server",
+   "type": "entity",
+   "class": "server",
+   "plural": "servers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a server in a blue apron",
+   "question": "Is there a server in a blue apron?",
+   "box": [
+    674,
+    200,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of white plates",
+   "question": "Is there a stack of white plates?",
+   "box": [
+    750,
+    400,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    700,
+    800,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "burner",
+   "type": "entity",
+   "class": "burner",
+   "plural": "burners",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stove burner",
+   "question": "Is there a stove burner?",
+   "box": [
+    420,
+    650,
+    604,
+    720
+   ]
+  },
+  {
+   "id": "ticket",
+   "type": "entity",
+   "class": "ticket",
+   "plural": "tickets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ticket",
+   "question": "Is there a ticket?",
+   "box": [
+    500,
+    450,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef in the white hat is standing",
+   "question": "Is the chef in the white hat standing?"
+  },
+  {
+   "id": "server_waiting",
+   "type": "state",
+   "of": "server",
+   "desc": "the server in the blue apron is waiting",
+   "question": "Is the server in the blue apron waiting?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat crouches low",
+   "question": "Is the black cat crouching?"
+  },
+  {
+   "id": "pot_steaming",
+   "type": "state",
+   "of": "pot",
+   "desc": "the stainless steel pot is steaming vigorously",
+   "question": "Is the stainless steel pot steaming vigorously?"
+  },
+  {
+   "id": "chef_looking_pot",
+   "type": "relation",
+   "of": [
+    "chef",
+    "pot"
+   ],
+   "desc": "the chef in the white hat is looking at the stainless steel pot",
+   "question": "Is the chef in the white hat looking at the stainless steel pot?"
+  },
+  {
+   "id": "server_pointing_plates",
+   "type": "action",
+   "of": [
+    "server",
+    "plates"
+   ],
+   "desc": "the server in the blue apron is pointing at the stack of white plates",
+   "question": "Is the server in the blue apron pointing at the stack of white plates?"
+  },
+  {
+   "id": "chef_handing_server",
+   "type": "action",
+   "of": [
+    "chef",
+    "server"
+   ],
+   "desc": "the chef in the white hat is handing a ticket to the server in the blue apron",
+   "question": "Is the chef in the white hat handing a ticket to the server in the blue apron?"
+  },
+  {
+   "id": "cat_next_to_plates",
+   "type": "relation",
+   "of": [
+    "cat",
+    "plates"
+   ],
+   "desc": "the black cat is next to the stack of white plates",
+   "question": "Is the black cat next to the stack of white plates?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the background?"
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a door",
+   "question": "Is there a door?",
+   "box": [
+    850,
+    100,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "cat_low",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the black cat is low to the ground",
+   "question": "Is the black cat low to the ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "burner",
+   "to": "pot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plates",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0073",
+ "prompt": "In a cinematic film still, a busy restaurant kitchen bustles with activity. On the left, a chef in a white hat stands firmly. In the center, a stainless steel pot sits on the burner. To the right, a server in a blue apron waits patiently. Behind them, a stack of white plates rests precariously. Near the door, a black cat crouches low. The chef in the white hat is looking at the stainless steel pot. The server in the blue apron is pointing at the stack of white plates. The chef in the white hat is handing a ticket to the server in the blue apron. The black cat is sitting on the floor next to the stack of white plates. The stainless steel pot is steaming vigorously. There is no window in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

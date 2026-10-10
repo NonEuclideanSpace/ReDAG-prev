@@ -1,0 +1,160 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site scene",
+   "question": "Does the image depict a construction site scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "supervisor",
+   "type": "entity",
+   "class": "supervisor",
+   "plural": "supervisors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a supervisor in an orange vest",
+   "question": "Is there a supervisor in an orange vest?",
+   "box": [
+    380,
+    200,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "bulldozer",
+   "type": "entity",
+   "class": "bulldozer",
+   "plural": "bulldozers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large bulldozer",
+   "question": "Is there a large bulldozer?",
+   "box": [
+    700,
+    300,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker holds blueprints tightly",
+   "question": "Is the worker holding blueprints tightly?"
+  },
+  {
+   "id": "supervisor_pointing",
+   "type": "state",
+   "of": "supervisor",
+   "desc": "the supervisor points firmly",
+   "question": "Is the supervisor pointing firmly?"
+  },
+  {
+   "id": "supervisor_looking",
+   "type": "relation",
+   "of": [
+    "supervisor",
+    "worker"
+   ],
+   "desc": "the supervisor looks directly at the worker",
+   "question": "Is the supervisor looking directly at the worker?"
+  },
+  {
+   "id": "bulldozer_idle",
+   "type": "state",
+   "of": "bulldozer",
+   "desc": "the bulldozer is idle and stationary",
+   "question": "Is the bulldozer idle and stationary?"
+  },
+  {
+   "id": "supervisor_points_plans",
+   "type": "action",
+   "of": [
+    "supervisor",
+    "worker"
+   ],
+   "desc": "the supervisor points at the plans held by the worker",
+   "question": "Is the supervisor pointing at the plans held by the worker?"
+  },
+  {
+   "id": "no_scaffolding",
+   "type": "absent",
+   "desc": "scaffolding",
+   "question": "Is there any scaffolding visible in the background?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in a yellow hard hat stands",
+   "question": "Is the worker in a yellow hard hat standing?"
+  },
+  {
+   "id": "supervisor_sitting",
+   "type": "state",
+   "of": "bulldozer",
+   "desc": "the large bulldozer with rusted tracks sits",
+   "question": "Is the large bulldozer with rusted tracks sitting?"
+  },
+  {
+   "id": "bulldozer_tracks",
+   "type": "attribute",
+   "of": "bulldozer",
+   "desc": "the bulldozer has rusted tracks",
+   "question": "Does the bulldozer have rusted tracks?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0119",
+ "prompt": "This watercolor illustration depicts a construction site scene. On the left stands a worker in a yellow hard hat, holding blueprints tightly. In the center, a supervisor in an orange vest points firmly at the plans held by the worker. To the right sits a large bulldozer with rusted tracks, remaining idle and stationary. The supervisor looks directly at the worker while gesturing. There is no scaffolding visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

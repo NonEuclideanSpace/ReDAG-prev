@@ -1,0 +1,377 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a boutique bakery",
+   "question": "Does the image show the interior of a boutique bakery?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "display_case",
+   "type": "entity",
+   "class": "display case",
+   "plural": "display cases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass display case",
+   "question": "Is there a glass display case?",
+   "box": [
+    50,
+    400,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "pastries",
+   "type": "entity",
+   "class": "pastry",
+   "plural": "pastries",
+   "count": 2,
+   "count_exact": false,
+   "desc": "an assortment of pastries including croissants, muffins, cake slices, cookies, glazed doughnuts, and fresh bread loaves such as baguettes and bagels",
+   "question": "Are there pastries including croissants, muffins, cake slices, cookies, glazed doughnuts, and fresh bread loaves such as baguettes and bagels?",
+   "box": [
+    80,
+    500,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "countertop",
+   "type": "entity",
+   "class": "countertop",
+   "plural": "countertops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bakery countertop",
+   "question": "Is there a bakery countertop?",
+   "box": [
+    0,
+    600,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wooden shelves",
+   "question": "Are there wooden shelves?",
+   "box": [
+    650,
+    100,
+    980,
+    500
+   ]
+  },
+  {
+   "id": "jars",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 2,
+   "count_exact": false,
+   "desc": "jam jars and glass storage jars",
+   "question": "Are there jam jars and glass storage jars?",
+   "box": [
+    680,
+    150,
+    850,
+    350
+   ]
+  },
+  {
+   "id": "butter_dish",
+   "type": "entity",
+   "class": "butter dish",
+   "plural": "butter dishes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a butter dish",
+   "question": "Is there a butter dish?",
+   "box": [
+    860,
+    200,
+    950,
+    280
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of ceramic plates",
+   "question": "Is there a stack of ceramic plates?",
+   "box": [
+    700,
+    360,
+    800,
+    450
+   ]
+  },
+  {
+   "id": "napkin_holder",
+   "type": "entity",
+   "class": "napkin holder",
+   "plural": "napkin holders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a napkin holder",
+   "question": "Is there a napkin holder?",
+   "box": [
+    810,
+    360,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "register",
+   "type": "entity",
+   "class": "cash register",
+   "plural": "cash registers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cash register",
+   "question": "Is there a cash register?",
+   "box": [
+    100,
+    550,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "chalkboard",
+   "type": "entity",
+   "class": "chalkboard",
+   "plural": "chalkboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chalkboard menu with a menu stand",
+   "question": "Is there a chalkboard menu with a menu stand?",
+   "box": [
+    280,
+    450,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "light",
+   "type": "entity",
+   "class": "display light",
+   "plural": "display lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bright display light",
+   "question": "Is there a bright display light?",
+   "box": [
+    300,
+    50,
+    430,
+    150
+   ]
+  },
+  {
+   "id": "tongs_trays",
+   "type": "entity",
+   "class": "serving tool",
+   "plural": "serving tools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "serving tongs and pastry trays",
+   "question": "Are there serving tongs and pastry trays?",
+   "box": [
+    500,
+    600,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "coffee_cup",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a coffee cup with a saucer",
+   "question": "Is there a coffee cup with a saucer?",
+   "box": [
+    720,
+    620,
+    820,
+    720
+   ]
+  },
+  {
+   "id": "pastries_in_case",
+   "type": "relation",
+   "of": [
+    "pastries",
+    "display_case"
+   ],
+   "desc": "the pastries are showcased in the glass display case",
+   "question": "Are the pastries showcased in the glass display case?"
+  },
+  {
+   "id": "shelves_behind_counter",
+   "type": "relation",
+   "of": [
+    "shelves",
+    "countertop"
+   ],
+   "desc": "the wooden shelves are behind the countertop",
+   "question": "Are the wooden shelves behind the countertop?"
+  },
+  {
+   "id": "jars_on_shelves",
+   "type": "relation",
+   "of": [
+    "jars",
+    "shelves"
+   ],
+   "desc": "the jam jars and glass storage jars are held on the wooden shelves",
+   "question": "Are the jam jars and glass storage jars held on the wooden shelves?"
+  },
+  {
+   "id": "butter_beside_plates",
+   "type": "relation",
+   "of": [
+    "butter_dish",
+    "plates"
+   ],
+   "desc": "the butter dish is beside the stack of ceramic plates",
+   "question": "Is the butter dish beside the stack of ceramic plates?"
+  },
+  {
+   "id": "plates_beside_napkin",
+   "type": "relation",
+   "of": [
+    "plates",
+    "napkin_holder"
+   ],
+   "desc": "the stack of ceramic plates is beside the napkin holder",
+   "question": "Is the stack of ceramic plates beside the napkin holder?"
+  },
+  {
+   "id": "register_next_to_chalkboard",
+   "type": "relation",
+   "of": [
+    "register",
+    "chalkboard"
+   ],
+   "desc": "the cash register stands next to the chalkboard menu",
+   "question": "Does the cash register stand next to the chalkboard menu?"
+  },
+  {
+   "id": "chalkboard_under_light",
+   "type": "relation",
+   "of": [
+    "chalkboard",
+    "light"
+   ],
+   "desc": "the chalkboard menu is under the bright display light",
+   "question": "Is the chalkboard menu under the bright display light?"
+  },
+  {
+   "id": "tools_near_cup",
+   "type": "relation",
+   "of": [
+    "tongs_trays",
+    "coffee_cup"
+   ],
+   "desc": "the serving tongs and pastry trays are arranged near the coffee cup",
+   "question": "Are the serving tongs and pastry trays arranged near the coffee cup?"
+  },
+  {
+   "id": "no_smartphone",
+   "type": "absent",
+   "desc": "a smartphone",
+   "question": "Is there a smartphone in the image?"
+  },
+  {
+   "id": "no_newspaper",
+   "type": "absent",
+   "desc": "a newspaper",
+   "question": "Is there a newspaper in the image?"
+  },
+  {
+   "id": "no_plastic_bag",
+   "type": "absent",
+   "desc": "a plastic bag",
+   "question": "Is there a plastic bag in the image?"
+  },
+  {
+   "id": "no_plastic_straw",
+   "type": "absent",
+   "desc": "a plastic straw",
+   "question": "Is there a plastic straw in the image?"
+  },
+  {
+   "id": "no_plastic_chair",
+   "type": "absent",
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "display_case",
+   "to": "pastries",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "jars",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "butter_dish",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "plates",
+   "kind": "support"
+  },
+  {
+   "from": "shelves",
+   "to": "napkin_holder",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_090",
+ "prompt": "Inside a boutique bakery, a glass display case showcases pastries including croissants, muffins, cake slices, and cookies alongside glazed doughnuts and fresh bread loaves such as baguettes and bagels. Behind the countertop, wooden shelves hold jam jars, glass storage jars, and a butter dish beside a stack of ceramic plates and a napkin holder. A cash register stands next to a chalkboard menu propped on a menu stand under a bright display light. Serving tongs and pastry trays are arranged near a coffee cup on a saucer. There is no smartphone, no newspaper, no plastic bag, no plastic straw, and no plastic chair.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [
+   "node pastries: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

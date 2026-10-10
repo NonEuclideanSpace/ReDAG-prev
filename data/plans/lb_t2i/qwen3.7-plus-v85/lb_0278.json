@@ -1,0 +1,598 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, glowing bioluminescence, impossible geometry",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a coastal realm with a sky that ripples like fabric and a cliff face curving upward like a spine",
+   "question": "Does the background show a coastal realm?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tide_pool",
+   "type": "entity",
+   "class": "tide pool",
+   "plural": "tide pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tide pool glowing with inner luminescence",
+   "question": "Is there a tide pool?",
+   "box": [
+    200,
+    600,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "lobster_pot",
+   "type": "entity",
+   "class": "lobster pot",
+   "plural": "lobster pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered lobster pot with rusted bands",
+   "question": "Is there a weathered lobster pot?",
+   "box": [
+    350,
+    550,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "inverted_pool",
+   "type": "entity",
+   "class": "tide pool",
+   "plural": "tide pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second inverted tide pool filled with glowing feathers",
+   "question": "Is there a second inverted tide pool?",
+   "box": [
+    600,
+    700,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "driftwood",
+   "type": "entity",
+   "class": "driftwood",
+   "plural": "driftwood logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jagged log of driftwood twisted into a spiral",
+   "question": "Is there a jagged log of driftwood?",
+   "box": [
+    100,
+    400,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "seagull",
+   "type": "entity",
+   "class": "seagull",
+   "plural": "seagulls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a seagull",
+   "question": "Is there a seagull?",
+   "box": [
+    200,
+    350,
+    300,
+    450
+   ]
+  },
+  {
+   "id": "crab",
+   "type": "entity",
+   "class": "crab",
+   "plural": "crabs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small crab with translucent legs",
+   "question": "Is there a small crab?",
+   "box": [
+    580,
+    650,
+    650,
+    720
+   ]
+  },
+  {
+   "id": "rocky_outcrop",
+   "type": "entity",
+   "class": "rocky outcrop",
+   "plural": "rocky outcrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rocky outcrop with layered cross-sections and glowing veins",
+   "question": "Is there a rocky outcrop?",
+   "box": [
+    500,
+    600,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "distant_rock",
+   "type": "entity",
+   "class": "rock formation",
+   "plural": "rock formations",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant rock formation pulsing with glow",
+   "question": "Is there a distant rock formation?",
+   "box": [
+    850,
+    200,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "fish",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny bioluminescent fish",
+   "question": "Are there tiny bioluminescent fish?",
+   "box": [
+    400,
+    700,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "seaweed",
+   "type": "entity",
+   "class": "seaweed",
+   "plural": "seaweed strands",
+   "count": 2,
+   "count_exact": false,
+   "desc": "impossibly long coiled seaweed strands with translucent flowers",
+   "question": "Are there impossibly long coiled seaweed strands?",
+   "box": [
+    300,
+    500,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "pot_submerged",
+   "type": "state",
+   "of": "lobster_pot",
+   "desc": "the lobster pot is half-submerged",
+   "question": "Is the lobster pot half-submerged?"
+  },
+  {
+   "id": "pot_open",
+   "type": "state",
+   "of": "lobster_pot",
+   "desc": "the lobster pot's mouth is open wide",
+   "question": "Is the lobster pot's mouth open wide?"
+  },
+  {
+   "id": "pot_swirl",
+   "type": "attribute",
+   "of": "lobster_pot",
+   "desc": "swirling seawater and liquid light inside the lobster pot",
+   "question": "Is there swirling seawater and liquid light inside the lobster pot?"
+  },
+  {
+   "id": "gull_perched",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull is perched",
+   "question": "Is the seagull perched?"
+  },
+  {
+   "id": "gull_tilted",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull's head is tilted",
+   "question": "Is the seagull's head tilted?"
+  },
+  {
+   "id": "crab_claw_raised",
+   "type": "state",
+   "of": "crab",
+   "desc": "the crab has one claw raised",
+   "question": "Does the crab have one claw raised?"
+  },
+  {
+   "id": "waves_domed",
+   "type": "state",
+   "of": "tide_pool",
+   "desc": "liquid domes hovering above the tide pool",
+   "question": "Are there liquid domes hovering above the tide pool?"
+  },
+  {
+   "id": "shadow_side",
+   "type": "relation",
+   "of": [
+    "lobster_pot",
+    "inverted_pool"
+   ],
+   "desc": "the lobster pot's shadow stretches into the inverted tide pool",
+   "question": "Does the lobster pot's shadow stretch into the inverted tide pool?"
+  },
+  {
+   "id": "gull_on_driftwood",
+   "type": "relation",
+   "of": [
+    "seagull",
+    "driftwood"
+   ],
+   "desc": "the seagull is perched on the driftwood",
+   "question": "Is the seagull perched on the driftwood?"
+  },
+  {
+   "id": "crab_beside_pot",
+   "type": "relation",
+   "of": [
+    "crab",
+    "lobster_pot"
+   ],
+   "desc": "the crab is beside the lobster pot",
+   "question": "Is the crab beside the lobster pot?"
+  },
+  {
+   "id": "crab_on_outcrop",
+   "type": "relation",
+   "of": [
+    "crab",
+    "rocky_outcrop"
+   ],
+   "desc": "the crab is on the rocky outcrop",
+   "question": "Is the crab on the rocky outcrop?"
+  },
+  {
+   "id": "seaweed_connects",
+   "type": "relation",
+   "of": [
+    "seaweed",
+    "lobster_pot",
+    "distant_rock"
+   ],
+   "desc": "seaweed strands connect the lobster pot to the distant rock formation",
+   "question": "Do seaweed strands connect the lobster pot to the distant rock formation?"
+  },
+  {
+   "id": "seaweed_entangled",
+   "type": "relation",
+   "of": [
+    "seaweed",
+    "driftwood"
+   ],
+   "desc": "seaweed strands are entangled in the driftwood",
+   "question": "Are seaweed strands entangled in the driftwood?"
+  },
+  {
+   "id": "fish_in_pool",
+   "type": "relation",
+   "of": [
+    "fish",
+    "tide_pool"
+   ],
+   "desc": "the fish are in the tide pool",
+   "question": "Are the fish in the tide pool?"
+  },
+  {
+   "id": "pot_in_pool",
+   "type": "relation",
+   "of": [
+    "lobster_pot",
+    "tide_pool"
+   ],
+   "desc": "the lobster pot is in the tide pool",
+   "question": "Is the lobster pot in the tide pool?"
+  },
+  {
+   "id": "feathers",
+   "type": "entity",
+   "class": "feather",
+   "plural": "feathers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "fallen feathers glowing with the color of the sun at its zenith",
+   "question": "Are there fallen feathers?",
+   "box": [
+    100,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "gull_blinking",
+   "type": "state",
+   "of": "seagull",
+   "desc": "the seagull is blinking slowly",
+   "question": "Is the seagull blinking slowly?"
+  },
+  {
+   "id": "crab_dissolving",
+   "type": "state",
+   "of": "crab",
+   "desc": "the crab is dissolving into reflective particles",
+   "question": "Is the crab dissolving into reflective particles?"
+  },
+  {
+   "id": "waves_folding",
+   "type": "state",
+   "of": "tide_pool",
+   "desc": "the waves fold in on themselves forming liquid domes",
+   "question": "Do the waves fold in on themselves forming liquid domes?"
+  },
+  {
+   "id": "feathers_in_pool",
+   "type": "relation",
+   "of": [
+    "feathers",
+    "inverted_pool"
+   ],
+   "desc": "the feathers are in the inverted tide pool",
+   "question": "Are the feathers in the inverted tide pool?"
+  },
+  {
+   "id": "root_system",
+   "type": "entity",
+   "class": "tree root",
+   "plural": "tree roots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a long-dead tree root twisted into an impossible spiral",
+   "question": "Is there a long-dead tree root?",
+   "box": [
+    400,
+    700,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "driftwood_on_root",
+   "type": "relation",
+   "of": [
+    "driftwood",
+    "root_system"
+   ],
+   "desc": "the driftwood has grown from the tree root",
+   "question": "Has the driftwood grown from the tree root?"
+  },
+  {
+   "id": "waves_pendulum",
+   "type": "state",
+   "of": "tide_pool",
+   "desc": "the waves ebb and flow in slow deliberate arcs like a living pendulum",
+   "question": "Do the waves ebb and flow in slow deliberate arcs?"
+  },
+  {
+   "id": "lobster_pot_pitted",
+   "type": "attribute",
+   "of": "lobster_pot",
+   "desc": "the lobster pot's bands are pitted with age",
+   "question": "Are the bands of the lobster pot pitted?"
+  },
+  {
+   "id": "fish_in_swirl",
+   "type": "relation",
+   "of": [
+    "fish",
+    "lobster_pot"
+   ],
+   "desc": "the tiny bioluminescent fish are within the swirling currents inside the lobster pot",
+   "question": "Are the tiny bioluminescent fish within the swirling currents inside the lobster pot?"
+  },
+  {
+   "id": "driftwood_into_earth",
+   "type": "state",
+   "of": "driftwood",
+   "desc": "the driftwood extends into the earth",
+   "question": "Does the driftwood extend into the earth?"
+  },
+  {
+   "id": "flowers_on_driftwood",
+   "type": "relation",
+   "of": [
+    "seaweed",
+    "driftwood"
+   ],
+   "desc": "translucent flowers on the seaweed strands are on the driftwood",
+   "question": "Are there translucent flowers on the seaweed strands located on the driftwood?"
+  },
+  {
+   "id": "inverted_pool_mirrors",
+   "type": "attribute",
+   "of": "inverted_pool",
+   "desc": "the second inverted tide pool mirrors the first in shape",
+   "question": "Does the second inverted tide pool mirror the first tide pool in shape?"
+  },
+  {
+   "id": "pool_glow",
+   "type": "attribute",
+   "of": "tide_pool",
+   "desc": "the tide pool glows faintly with an inner luminescence",
+   "question": "Does the tide pool glow faintly with an inner luminescence?"
+  },
+  {
+   "id": "pot_rusted",
+   "type": "attribute",
+   "of": "lobster_pot",
+   "desc": "the bands of the lobster pot are rusted and pitted with age",
+   "question": "Are the bands of the lobster pot rusted and pitted with age?"
+  },
+  {
+   "id": "pool_feathers",
+   "type": "attribute",
+   "of": "inverted_pool",
+   "desc": "the inverted tide pool is filled with fallen feathers glowing with the color of the sun at its zenith",
+   "question": "Is the inverted tide pool filled with fallen feathers glowing with the color of the sun at its zenith?"
+  },
+  {
+   "id": "driftwood_spiral",
+   "type": "attribute",
+   "of": "driftwood",
+   "desc": "the driftwood is twisted into an impossible spiral",
+   "question": "Is the driftwood twisted into an impossible spiral?"
+  },
+  {
+   "id": "crab_translucent",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the crab has translucent legs glistening with droplets",
+   "question": "Does the crab have translucent legs glistening with droplets?"
+  },
+  {
+   "id": "outcrop_layered",
+   "type": "attribute",
+   "of": "rocky_outcrop",
+   "desc": "the rocks are layered with cross-sections revealing glowing veins of mineral",
+   "question": "Are the rocks layered with cross-sections revealing glowing veins of mineral?"
+  },
+  {
+   "id": "rock_pulse",
+   "type": "attribute",
+   "of": "distant_rock",
+   "desc": "the distant rock formation pulses with a faint otherworldly glow",
+   "question": "Does the distant rock formation pulse with a faint otherworldly glow?"
+  },
+  {
+   "id": "seaweed_flowers",
+   "type": "attribute",
+   "of": "seaweed",
+   "desc": "the seaweed strands sprout tiny translucent flowers",
+   "question": "Do the seaweed strands sprout tiny translucent flowers?"
+  },
+  {
+   "id": "feathers_glow",
+   "type": "attribute",
+   "of": "feathers",
+   "desc": "the feathers glow with the color of the sun at its zenith",
+   "question": "Do the feathers glow with the color of the sun at its zenith?"
+  },
+  {
+   "id": "root_spiral",
+   "type": "attribute",
+   "of": "root_system",
+   "desc": "the tree root is twisted into an impossible spiral",
+   "question": "Is the tree root twisted into an impossible spiral?"
+  },
+  {
+   "id": "waves_living_pendulum",
+   "type": "state",
+   "of": "tide_pool",
+   "desc": "the waves move like a living pendulum",
+   "question": "Do the waves move like a living pendulum?"
+  },
+  {
+   "id": "sky_ripples",
+   "type": "entity",
+   "class": "sky",
+   "plural": "skies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sky that ripples like fabric caught in a breeze",
+   "question": "Does the sky ripple like fabric caught in a breeze?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "cliff_spine",
+   "type": "entity",
+   "class": "cliff face",
+   "plural": "cliff faces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cliff face that curves upward like the spine of a sleeping giant",
+   "question": "Does a cliff face curve upward like the spine of a sleeping giant?",
+   "box": [
+    800,
+    0,
+    1024,
+    600
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "driftwood",
+   "to": "seagull",
+   "kind": "support"
+  },
+  {
+   "from": "rocky_outcrop",
+   "to": "crab",
+   "kind": "support"
+  },
+  {
+   "from": "tide_pool",
+   "to": "lobster_pot",
+   "kind": "support"
+  },
+  {
+   "from": "inverted_pool",
+   "to": "feathers",
+   "kind": "support"
+  },
+  {
+   "from": "root_system",
+   "to": "driftwood",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0278",
+ "prompt": "In the late afternoon hush of a coastal realm that defies earthly logic, a weathered lobster pot, its bands rusted and pitted with age, rests half-submerged in a tide pool that glows faintly with an inner luminescence. The pot's open mouth yawns wide, and within it swirls a strange current of seawater mixed with shimmering, liquid light—reflecting the hues of a sky that seems to ripple like fabric caught in a breeze. The surface is still, but beneath it, tiny bioluminescent fish dart through the swirling currents, as if drawn to some unseen magnetic pull. A small crab, no larger than a coin, skitters along the rocky outcrop beside the pot, its translucent legs glistening with droplets that catch the sun in prismatic fragments. The crab halts mid-scurry, its claw raised in a gesture that seems almost theatrical, as if addressing the tide pool or the sky above. Above it all, a curious seagull perches precariously on a jagged log of driftwood, which itself seems to have grown from a long-dead tree root that extends into the earth, now twisted into an impossible spiral. The gull tilts its head, as if deciphering a riddle written in the movement of the waves, which do not roll gently but instead ebb and flow in slow, deliberate arcs, like a living pendulum. The waves do not recede entirely but instead fold in on themselves, forming liquid domes that hover briefly before collapsing back into the pool, their collapse triggering a faint hum in the air that vibrates through the driftwood and rocks alike. Seaweed strands, impossibly long and coiled, twist and turn like living veins connecting the lobster pot to a distant rock formation on the horizon, which seems to pulse with a faint, otherworldly glow. Some of the strands have become entangled in the driftwood, where they sprout tiny, translucent flowers that open and close in time with the gull’s slow blinking. The rocks beneath the scene are not solid but layered, with cross-sections revealing glowing veins of mineral that pulse like the heart of the earth itself. As the crab turns again, it appears to dissolve momentarily into a swirl of tiny, reflective particles before reforming, as if the world itself is questioning its own coherence. The lobster pot’s shadow is cast not directly beneath it, but to the side, stretching into a second, inverted tide pool that mirrors the first in shape but is dry and filled with fallen feathers, each one glowing with the color of the sun at its zenith. In the distance, the waves meet a cliff face that curves upward like the spine of a sleeping giant, its stone etched with patterns that resemble the crab’s movements or the gull’s flight. Here, the wind carries not sound but images—brief flashes of scenes that flicker like static across the cliffs, showing the same crab walking on a desert plain, the gull flying through a city of glass towers, the lobster pot in the middle of a vast, dry sea. These images vanish as quickly as they appear, but their remnants linger in the air like echoes, warping the space around them. In this place, time folds and unfolds in unpredictable ways, and every action seems to echo in multiple directions at once—yet the scene remains locked in a single, surreal moment, as if the world itself is holding its breath.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 62,
+   "n_uncovered": 14,
+   "proposed": 7,
+   "ungrounded": 1,
+   "added": 6,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 13,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

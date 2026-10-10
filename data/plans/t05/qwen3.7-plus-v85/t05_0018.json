@@ -1,0 +1,309 @@
+{
+ "style": "vibrant anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling shipyard dock",
+   "question": "Does the image show a bustling shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow hard hat",
+   "question": "Is there a woman in a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor",
+   "question": "Is there a large rusted anchor?",
+   "box": [
+    350,
+    600,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in blue overalls",
+   "question": "Is there a man in blue overalls?",
+   "box": [
+    700,
+    300,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "crates",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of crates",
+   "question": "Is there a stack of crates?",
+   "box": [
+    720,
+    650,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat with black spots",
+   "question": "Is there a small white cat with black spots?",
+   "box": [
+    750,
+    550,
+    850,
+    680
+   ]
+  },
+  {
+   "id": "hook",
+   "type": "entity",
+   "class": "crane hook",
+   "plural": "crane hooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall crane hook",
+   "question": "Is there a tall crane hook?",
+   "box": [
+    450,
+    0,
+    550,
+    500
+   ]
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat has a rigid posture",
+   "question": "Does the woman in the yellow hard hat have a rigid posture?"
+  },
+  {
+   "id": "woman_blueprint",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat holds a rolled blueprint tightly against her chest",
+   "question": "Is the woman in the yellow hard hat holding a rolled blueprint tightly against her chest?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls is sitting",
+   "question": "Is the man in blue overalls sitting?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat with black spots is perched alertly",
+   "question": "Is the small white cat with black spots perched alertly?"
+  },
+  {
+   "id": "hook_dangling",
+   "type": "state",
+   "of": "hook",
+   "desc": "the tall crane hook is dangling from above",
+   "question": "Is the tall crane hook dangling from above?"
+  },
+  {
+   "id": "woman_points_anchor",
+   "type": "action",
+   "of": [
+    "woman",
+    "anchor"
+   ],
+   "desc": "the woman in the yellow hard hat points sharply toward the rusted anchor",
+   "question": "Is the woman in the yellow hard hat pointing sharply toward the rusted anchor?"
+  },
+  {
+   "id": "man_looks_cat",
+   "type": "action",
+   "of": [
+    "man",
+    "cat"
+   ],
+   "desc": "the man in blue overalls looks directly at the small white cat with black spots",
+   "question": "Is the man in blue overalls looking directly at the small white cat with black spots?"
+  },
+  {
+   "id": "cat_stares_man",
+   "type": "action",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the small white cat with black spots stares intently at the man in blue overalls",
+   "question": "Is the small white cat with black spots staring intently at the man in blue overalls?"
+  },
+  {
+   "id": "anchor_on_planks",
+   "type": "relation",
+   "of": [
+    "anchor",
+    "planks"
+   ],
+   "desc": "the large rusted anchor rests on the wooden planks",
+   "question": "Is the large rusted anchor resting on the wooden planks?"
+  },
+  {
+   "id": "man_on_crates",
+   "type": "relation",
+   "of": [
+    "man",
+    "crates"
+   ],
+   "desc": "the man in blue overalls sits on the stack of crates",
+   "question": "Is the man in blue overalls sitting on the stack of crates?"
+  },
+  {
+   "id": "cat_on_crates",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crates"
+   ],
+   "desc": "the small white cat with black spots perches on the top crate",
+   "question": "Is the small white cat with black spots perching on the top crate?"
+  },
+  {
+   "id": "hook_behind_anchor",
+   "type": "relation",
+   "of": [
+    "hook",
+    "anchor"
+   ],
+   "desc": "the tall crane hook stands behind the rusted anchor",
+   "question": "Is the tall crane hook positioned behind the rusted anchor?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the small white cat with black spots is next to the man in blue overalls",
+   "question": "Is the small white cat with black spots next to the man in blue overalls?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the background?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the yellow hard hat stands",
+   "question": "Is the woman in the yellow hard hat standing?"
+  },
+  {
+   "id": "anchor_pitted",
+   "type": "attribute",
+   "of": "anchor",
+   "desc": "the large rusted anchor has a pitted dark metal surface",
+   "question": "Does the large rusted anchor have a pitted dark metal surface?"
+  },
+  {
+   "id": "man_legs_crossed",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in blue overalls has his legs crossed",
+   "question": "Does the man in blue overalls have his legs crossed?"
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden plank",
+   "plural": "wooden planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "wooden planks",
+   "question": "Are there wooden planks?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "crates",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "crates",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0018",
+ "prompt": "In a vibrant anime style scene set at a bustling shipyard dock, five distinct entities populate the frame. On the left stands a woman in a yellow hard hat, her posture rigid as she holds a rolled blueprint tightly against her chest. In the center, a large rusted anchor rests heavily on the wooden planks, its metal surface pitted and dark. To the right, a man in blue overalls sits casually on a stack of crates, his legs crossed comfortably. Next to him, a small white cat with black spots perches alertly on the top crate, staring intently at the man. Standing behind the anchor is a tall crane hook, dangling ominously from above. The woman in the yellow hard hat points sharply toward the rusted anchor, directing attention to its condition. Meanwhile, the man in blue overalls looks directly at the small white cat, sharing a quiet moment amidst the industrial chaos. There is no water visible in the background, keeping the focus strictly on the dockside activities and the characters present. The composition balances the industrial elements with the organic presence of the cat and the human interactions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

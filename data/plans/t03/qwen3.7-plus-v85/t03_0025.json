@@ -1,0 +1,225 @@
+{
+ "style": "bustling anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a restaurant kitchen with blurred stainless steel appliances",
+   "question": "Does the background show a restaurant kitchen with blurred stainless steel appliances?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "counter",
+   "type": "entity",
+   "class": "counter",
+   "plural": "counters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a kitchen counter",
+   "question": "Is there a kitchen counter?",
+   "box": [
+    512,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "chef",
+   "type": "entity",
+   "class": "chef",
+   "plural": "chefs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chef in a white hat",
+   "question": "Is there a chef in a white hat?",
+   "box": [
+    50,
+    150,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a blue apron",
+   "question": "Is there a waiter in a blue apron?",
+   "box": [
+    350,
+    200,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a green coat",
+   "question": "Is there a customer in a green coat?",
+   "box": [
+    700,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming plate of food",
+   "question": "Is there a steaming plate of food?",
+   "box": [
+    450,
+    500,
+    550,
+    600
+   ]
+  },
+  {
+   "id": "knife",
+   "type": "attribute",
+   "of": "chef",
+   "desc": "the chef holds a sharp knife",
+   "question": "Is the chef holding a sharp knife?"
+  },
+  {
+   "id": "chef_standing",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef is standing",
+   "question": "Is the chef standing?"
+  },
+  {
+   "id": "waiter_leaning",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter is leaning forward",
+   "question": "Is the waiter leaning forward?"
+  },
+  {
+   "id": "waiter_extending_hand",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter extends a hand",
+   "question": "Is the waiter extending a hand?"
+  },
+  {
+   "id": "customer_sitting",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer is sitting",
+   "question": "Is the customer sitting?"
+  },
+  {
+   "id": "customer_watching",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer has wide eyes and is watching",
+   "question": "Does the customer have wide eyes and appear to be watching?"
+  },
+  {
+   "id": "steam_rising",
+   "type": "state",
+   "of": "plate",
+   "desc": "steam rises from the plate",
+   "question": "Is steam rising visibly from the plate?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef hands the hot dish to the waiter",
+   "question": "Is the chef handing the hot dish to the waiter?"
+  },
+  {
+   "id": "customer_at_counter",
+   "type": "relation",
+   "of": [
+    "customer",
+    "counter"
+   ],
+   "desc": "the customer sits at the counter",
+   "question": "Is the customer sitting at the counter?"
+  },
+  {
+   "id": "no_cat",
+   "type": "absent",
+   "desc": "a cat",
+   "question": "Is there a cat visible in the image?"
+  },
+  {
+   "id": "chef_left",
+   "type": "relation",
+   "of": [
+    "chef",
+    "waiter"
+   ],
+   "desc": "the chef is on the left relative to the waiter",
+   "question": "Is the chef positioned to the left of the waiter?"
+  },
+  {
+   "id": "waiter_center",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "chef"
+   ],
+   "desc": "the waiter is in the center relative to the chef and customer",
+   "question": "Is the waiter positioned between the chef and the customer?"
+  },
+  {
+   "id": "customer_right",
+   "type": "relation",
+   "of": [
+    "customer",
+    "waiter"
+   ],
+   "desc": "the customer is on the right relative to the waiter",
+   "question": "Is the customer positioned to the right of the waiter?"
+  },
+  {
+   "id": "chef_gripping",
+   "type": "state",
+   "of": "chef",
+   "desc": "the chef grips the knife firmly",
+   "question": "Is the chef gripping the knife firmly?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0025",
+ "prompt": "In a bustling anime style restaurant kitchen, a chef in a white hat stands on the left, gripping a sharp knife firmly. In the center, a waiter in a blue apron leans forward eagerly, extending a hand to receive a steaming plate. On the right, a customer in a green coat sits patiently at the counter, watching the exchange with wide eyes. The chef hands the hot dish directly to the waiting waiter, creating a dynamic line of action across the frame. Steam rises visibly from the food, emphasizing the heat and freshness of the meal. The background features blurred stainless steel appliances, keeping focus on the trio. There is no cat visible anywhere in the scene, ensuring the attention remains strictly on the human interaction and the culinary process unfolding within the cramped, energetic space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

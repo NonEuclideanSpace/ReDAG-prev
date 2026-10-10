@@ -1,0 +1,352 @@
+{
+ "style": "photorealistic photo, clinical illumination, calm atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital ward with polished linoleum floor, fluorescent ceiling lights, and a wall-mounted monitor in the background",
+   "question": "Does the image show a sterile hospital ward with a polished linoleum floor, fluorescent ceiling lights, and a wall-mounted monitor in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "left_bed",
+   "type": "entity",
+   "class": "hospital bed",
+   "plural": "hospital beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hospital bed",
+   "question": "Is there a hospital bed?",
+   "box": [
+    50,
+    300,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "right_bed",
+   "type": "entity",
+   "class": "hospital bed",
+   "plural": "hospital beds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second hospital bed",
+   "question": "Is there a second hospital bed?",
+   "box": [
+    574,
+    300,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "privacy curtain",
+   "plural": "privacy curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a privacy curtain separating the beds",
+   "question": "Is there a privacy curtain?",
+   "box": [
+    450,
+    100,
+    574,
+    900
+   ]
+  },
+  {
+   "id": "elderly_patient",
+   "type": "entity",
+   "class": "elderly patient",
+   "plural": "elderly patients",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly patient in a blue gown",
+   "question": "Is there an elderly patient wearing a blue gown?",
+   "box": [
+    150,
+    250,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in white scrubs",
+   "question": "Is there a nurse wearing white scrubs?",
+   "box": [
+    350,
+    200,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in pajamas",
+   "question": "Is there a child wearing pajamas?",
+   "box": [
+    650,
+    350,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor wearing a white coat?",
+   "box": [
+    850,
+    300,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "teddy_bear",
+   "type": "entity",
+   "class": "teddy bear",
+   "plural": "teddy bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teddy bear",
+   "question": "Is there a teddy bear?",
+   "box": [
+    700,
+    450,
+    800,
+    550
+   ]
+  },
+  {
+   "id": "iv_stand",
+   "type": "entity",
+   "class": "iv stand",
+   "plural": "iv stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an IV stand with a hanging bag",
+   "question": "Is there an IV stand with a hanging bag?",
+   "box": [
+    480,
+    200,
+    544,
+    900
+   ]
+  },
+  {
+   "id": "wheelchair",
+   "type": "entity",
+   "class": "wheelchair",
+   "plural": "wheelchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelchair",
+   "question": "Is there a wheelchair?",
+   "box": [
+    100,
+    700,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "rolling cart",
+   "plural": "rolling carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling cart with a tray of medical supplies",
+   "question": "Is there a rolling cart with a tray of medical supplies?",
+   "box": [
+    800,
+    700,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "patient_sitting",
+   "type": "state",
+   "of": "elderly_patient",
+   "desc": "the elderly patient is sitting up",
+   "question": "Is the elderly patient sitting up?"
+  },
+  {
+   "id": "patient_holding_cup",
+   "type": "attribute",
+   "of": "elderly_patient",
+   "desc": "the elderly patient holds a clear plastic cup of water",
+   "question": "Is the elderly patient holding a clear plastic cup of water?"
+  },
+  {
+   "id": "nurse_smiling",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is smiling gently",
+   "question": "Is the nurse smiling gently?"
+  },
+  {
+   "id": "child_playing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is playing",
+   "question": "Is the child playing?"
+  },
+  {
+   "id": "doctor_kneeling",
+   "type": "state",
+   "of": "doctor",
+   "desc": "the doctor is kneeling",
+   "question": "Is the doctor kneeling?"
+  },
+  {
+   "id": "nurse_supporting",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_patient"
+   ],
+   "desc": "the nurse supports the elderly patient's back with one hand",
+   "question": "Is the nurse supporting the elderly patient's back with one hand?"
+  },
+  {
+   "id": "nurse_offering",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_patient"
+   ],
+   "desc": "the nurse offers the cup to the elderly patient",
+   "question": "Is the nurse offering the cup to the elderly patient?"
+  },
+  {
+   "id": "doctor_checking",
+   "type": "action",
+   "of": [
+    "doctor",
+    "child"
+   ],
+   "desc": "the doctor checks the child's chest with a stethoscope",
+   "question": "Is the doctor checking the child's chest with a stethoscope?"
+  },
+  {
+   "id": "patient_on_left_bed",
+   "type": "relation",
+   "of": [
+    "elderly_patient",
+    "left_bed"
+   ],
+   "desc": "the elderly patient is in the left bed",
+   "question": "Is the elderly patient in the left bed?"
+  },
+  {
+   "id": "nurse_beside_left_bed",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "left_bed"
+   ],
+   "desc": "the nurse stands beside the left bed",
+   "question": "Is the nurse standing beside the left bed?"
+  },
+  {
+   "id": "child_on_right_bed",
+   "type": "relation",
+   "of": [
+    "child",
+    "right_bed"
+   ],
+   "desc": "the child is in the right bed",
+   "question": "Is the child in the right bed?"
+  },
+  {
+   "id": "doctor_beside_right_bed",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "right_bed"
+   ],
+   "desc": "the doctor kneels beside the right bed",
+   "question": "Is the doctor kneeling beside the right bed?"
+  },
+  {
+   "id": "iv_between_beds",
+   "type": "relation",
+   "of": [
+    "iv_stand",
+    "left_bed",
+    "right_bed"
+   ],
+   "desc": "the IV stand stands between the beds",
+   "question": "Is the IV stand positioned between the two beds?"
+  },
+  {
+   "id": "wheelchair_near_left_bed",
+   "type": "relation",
+   "of": [
+    "wheelchair",
+    "left_bed"
+   ],
+   "desc": "the wheelchair is parked near the foot of the left bed",
+   "question": "Is the wheelchair parked near the foot of the left bed?"
+  },
+  {
+   "id": "cart_near_doctor",
+   "type": "relation",
+   "of": [
+    "cart",
+    "doctor"
+   ],
+   "desc": "the rolling cart is near the doctor",
+   "question": "Is the rolling cart near the doctor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "left_bed",
+   "to": "elderly_patient",
+   "kind": "support"
+  },
+  {
+   "from": "right_bed",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0044",
+ "prompt": "The sterile hospital ward features two beds separated by a privacy curtain. In the left bed, an elderly patient in a blue gown sits up, holding a clear plastic cup of water offered by a nurse in white scrubs standing beside the bed. The nurse smiles gently, supporting the patient's back with one hand. On the right bed, a child in pajamas plays with a teddy bear, while a doctor in a white coat kneels beside the bed, checking a stethoscope against the child's chest. An IV stand with a hanging bag stands between the beds in the center foreground. A wheelchair is parked near the foot of the left bed. A monitor displaying vital signs glows softly on a wall mount in the background. A tray with medical supplies rests on a rolling cart near the doctor. Fluorescent ceiling lights provide even, clinical illumination, casting minimal shadows. The floor is polished linoleum, reflecting the overhead lights. The atmosphere is calm and professional. The style is a photorealistic photo.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 2,
+  "warnings": []
+ }
+}

@@ -1,0 +1,493 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an art studio with a window behind the easel area",
+   "question": "Does the image show an art studio interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "artist",
+   "type": "entity",
+   "class": "artist",
+   "plural": "artists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an artist",
+   "question": "Is there an artist?",
+   "box": [
+    300,
+    100,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "easel",
+   "type": "entity",
+   "class": "easel",
+   "plural": "easels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an easel",
+   "question": "Is there an easel?",
+   "box": [
+    550,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "canvas_fresh",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fresh canvas",
+   "question": "Is there a fresh canvas?",
+   "box": [
+    600,
+    250,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    700,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "palette",
+   "type": "entity",
+   "class": "palette",
+   "plural": "palettes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a palette",
+   "question": "Is there a palette?",
+   "box": [
+    720,
+    620,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    750,
+    920,
+    900,
+    1000
+   ]
+  },
+  {
+   "id": "cloth",
+   "type": "entity",
+   "class": "cloth",
+   "plural": "cloths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a paint-splattered cloth",
+   "question": "Is there a paint-splattered cloth?",
+   "box": [
+    740,
+    930,
+    910,
+    1010
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pedestal in the corner",
+   "question": "Is there a pedestal in the corner?",
+   "box": [
+    50,
+    600,
+    200,
+    900
+   ]
+  },
+  {
+   "id": "sculpture",
+   "type": "entity",
+   "class": "bird sculpture",
+   "plural": "bird sculptures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sculpture of a bird",
+   "question": "Is there a sculpture of a bird?",
+   "box": [
+    80,
+    500,
+    170,
+    600
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jar of paintbrushes",
+   "question": "Is there a jar of paintbrushes?",
+   "box": [
+    600,
+    650,
+    680,
+    750
+   ]
+  },
+  {
+   "id": "canvases_stack",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of canvases",
+   "question": "Is there a stack of canvases?",
+   "box": [
+    450,
+    650,
+    580,
+    800
+   ]
+  },
+  {
+   "id": "tubes_red",
+   "type": "entity",
+   "class": "paint tube",
+   "plural": "paint tubes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two red paint tubes",
+   "question": "Are there exactly two red paint tubes?",
+   "box": [
+    721,
+    621,
+    769,
+    669
+   ]
+  },
+  {
+   "id": "tubes_blue",
+   "type": "entity",
+   "class": "paint tube",
+   "plural": "paint tubes",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four blue paint tubes",
+   "question": "Are there exactly four blue paint tubes?",
+   "box": [
+    770,
+    621,
+    820,
+    669
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small stool",
+   "question": "Is there a small stool?",
+   "box": [
+    220,
+    700,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "artist_holding_brush",
+   "type": "attribute",
+   "of": "artist",
+   "desc": "the artist is holding a paintbrush",
+   "question": "Is the artist holding a paintbrush?"
+  },
+  {
+   "id": "artist_facing",
+   "type": "state",
+   "of": "artist",
+   "desc": "the artist is facing the fresh canvas",
+   "question": "Is the artist facing the fresh canvas?"
+  },
+  {
+   "id": "artist_pointing",
+   "type": "action",
+   "of": [
+    "artist",
+    "canvas_fresh"
+   ],
+   "desc": "the artist is pointing at the fresh canvas",
+   "question": "Is the artist pointing at the fresh canvas?"
+  },
+  {
+   "id": "canvas_on_easel",
+   "type": "relation",
+   "of": [
+    "canvas_fresh",
+    "easel"
+   ],
+   "desc": "the fresh canvas is on the easel",
+   "question": "Is the fresh canvas on the easel?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sleeping",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "cat_on_cloth",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cloth"
+   ],
+   "desc": "the cat is on the paint-splattered cloth",
+   "question": "Is the cat on the paint-splattered cloth?"
+  },
+  {
+   "id": "cloth_under_table",
+   "type": "relation",
+   "of": [
+    "cloth",
+    "table"
+   ],
+   "desc": "the cloth is under the wooden table",
+   "question": "Is the cloth under the wooden table?"
+  },
+  {
+   "id": "sculpture_on_pedestal",
+   "type": "relation",
+   "of": [
+    "sculpture",
+    "pedestal"
+   ],
+   "desc": "the bird sculpture sits on top of the pedestal",
+   "question": "Does the bird sculpture sit on top of the pedestal?"
+  },
+  {
+   "id": "palette_on_table",
+   "type": "relation",
+   "of": [
+    "palette",
+    "table"
+   ],
+   "desc": "the palette sits on the wooden table",
+   "question": "Does the palette sit on the wooden table?"
+  },
+  {
+   "id": "table_next_to_easel",
+   "type": "relation",
+   "of": [
+    "table",
+    "easel"
+   ],
+   "desc": "the wooden table is next to the easel",
+   "question": "Is the wooden table next to the easel?"
+  },
+  {
+   "id": "jar_between",
+   "type": "relation",
+   "of": [
+    "jar",
+    "palette",
+    "canvases_stack"
+   ],
+   "desc": "the jar is positioned between the palette and the stack of canvases",
+   "question": "Is the jar positioned between the palette and the stack of canvases?"
+  },
+  {
+   "id": "canvas_brighter",
+   "type": "attribute",
+   "of": "canvas_fresh",
+   "desc": "the fresh canvas is visibly brighter than the canvases in the stack",
+   "question": "Is the fresh canvas visibly brighter than the canvases in the stack?"
+  },
+  {
+   "id": "brush_count_relation",
+   "type": "attribute",
+   "of": "jar",
+   "desc": "the number of brushes in the jar is four more than the number the artist is holding",
+   "question": "Is the number of brushes in the jar four more than the number the artist is holding?"
+  },
+  {
+   "id": "tubes_scattered",
+   "type": "relation",
+   "of": [
+    "tubes_red",
+    "tubes_blue",
+    "palette"
+   ],
+   "desc": "the red and blue paint tubes are scattered around the palette",
+   "question": "Are the red and blue paint tubes scattered around the palette?"
+  },
+  {
+   "id": "stool_next_to_pedestal",
+   "type": "relation",
+   "of": [
+    "stool",
+    "pedestal"
+   ],
+   "desc": "the small stool sits next to the pedestal",
+   "question": "Does the small stool sit next to the pedestal?"
+  },
+  {
+   "id": "artist_taller",
+   "type": "attribute",
+   "of": "artist",
+   "desc": "the artist is taller than the stool",
+   "question": "Is the artist taller than the stool?"
+  },
+  {
+   "id": "artist_working",
+   "type": "state",
+   "of": "artist",
+   "desc": "the artist is working on a painting",
+   "question": "Is the artist working on a painting?"
+  },
+  {
+   "id": "easel_behind_window",
+   "type": "state",
+   "of": "easel",
+   "desc": "the easel is in front of the window",
+   "question": "Is the easel positioned in front of the window?"
+  },
+  {
+   "id": "canvas_new",
+   "type": "attribute",
+   "of": "canvas_fresh",
+   "desc": "the fresh canvas is new",
+   "question": "Is the fresh canvas new?"
+  },
+  {
+   "id": "palette_colors",
+   "type": "attribute",
+   "of": "palette",
+   "desc": "the palette has multiple paint colors",
+   "question": "Does the palette have multiple paint colors?"
+  },
+  {
+   "id": "canvases_older",
+   "type": "attribute",
+   "of": "canvases_stack",
+   "desc": "the canvases in the stack are older and used",
+   "question": "Are the canvases in the stack older and used?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "easel",
+   "to": "canvas_fresh",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "palette",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "jar",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "canvases_stack",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "tubes_red",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "tubes_blue",
+   "kind": "support"
+  },
+  {
+   "from": "cloth",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "pedestal",
+   "to": "sculpture",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cloth",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_003",
+ "prompt": "An art studio with an artist working on a painting. The artist is holding a paintbrush and facing a fresh, new canvas on an easel. Behind the easel, there is a window. A palette with multiple paint colors sits on a wooden table next to the easel. The artist is pointing at a specific area on the canvas. On the floor under the table, there is a cat sleeping on a paint-splattered cloth. A sculpture of a bird sits on top of a pedestal in the corner. A jar of paintbrushes is positioned between the palette and a stack of older, used canvases; the fresh canvas on the easel is visibly brighter than the canvases in the stack. The number of brushes in the jar is four more than the number the artist is holding. There are two red paint tubes and a group of blue paint tubes scattered around the palette. The number of blue tubes is twice the number of red tubes. A small stool sits next to the pedestal. The artist is taller than the stool.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

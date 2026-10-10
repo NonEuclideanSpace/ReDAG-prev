@@ -1,0 +1,272 @@
+{
+ "style": "flat vector illustration, clean and minimal, distinct shapes",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site with dirt ground",
+   "question": "Does the image depict a construction site with dirt ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in an orange vest",
+   "question": "Is there a foreman in an orange vest?",
+   "box": [
+    380,
+    220,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick",
+   "plural": "bricks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of bricks",
+   "question": "Is there a stack of bricks?",
+   "box": [
+    700,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "operator",
+   "type": "entity",
+   "class": "crane operator",
+   "plural": "crane operators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crane operator in a blue shirt",
+   "question": "Is there a crane operator in a blue shirt?",
+   "box": [
+    750,
+    150,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "cab",
+   "type": "entity",
+   "class": "crane cab",
+   "plural": "crane cabs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crane cab",
+   "question": "Is there a crane cab?",
+   "box": [
+    720,
+    100,
+    980,
+    500
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    550,
+    750,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver toolbox",
+   "question": "Is there a silver toolbox?",
+   "box": [
+    650,
+    850,
+    800,
+    980
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds blueprints",
+   "question": "Is the worker in the yellow hard hat holding blueprints?"
+  },
+  {
+   "id": "operator_sitting",
+   "type": "state",
+   "of": "operator",
+   "desc": "the crane operator in the blue shirt is sitting",
+   "question": "Is the crane operator in the blue shirt sitting?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "worker_left",
+   "type": "relation",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker in the yellow hard hat is to the left of the foreman in the orange vest",
+   "question": "Is the worker in the yellow hard hat to the left of the foreman in the orange vest?"
+  },
+  {
+   "id": "operator_right",
+   "type": "relation",
+   "of": [
+    "operator",
+    "foreman"
+   ],
+   "desc": "the crane operator in the blue shirt is to the right of the foreman in the orange vest",
+   "question": "Is the crane operator in the blue shirt to the right of the foreman in the orange vest?"
+  },
+  {
+   "id": "operator_in_cab",
+   "type": "relation",
+   "of": [
+    "operator",
+    "cab"
+   ],
+   "desc": "the crane operator in the blue shirt is inside the crane cab",
+   "question": "Is the crane operator in the blue shirt inside the crane cab?"
+  },
+  {
+   "id": "dog_next_to_foreman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "foreman"
+   ],
+   "desc": "the brown dog is next to the foreman in the orange vest",
+   "question": "Is the brown dog next to the foreman in the orange vest?"
+  },
+  {
+   "id": "toolbox_beside_dog",
+   "type": "relation",
+   "of": [
+    "toolbox",
+    "dog"
+   ],
+   "desc": "the silver toolbox is beside the brown dog",
+   "question": "Is the silver toolbox beside the brown dog?"
+  },
+  {
+   "id": "worker_looking_at_foreman",
+   "type": "action",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker in the yellow hard hat is looking at the foreman in the orange vest",
+   "question": "Is the worker in the yellow hard hat looking at the foreman in the orange vest?"
+  },
+  {
+   "id": "foreman_pointing_at_bricks",
+   "type": "action",
+   "of": [
+    "foreman",
+    "bricks"
+   ],
+   "desc": "the foreman in the orange vest is pointing at the stack of bricks",
+   "question": "Is the foreman in the orange vest pointing at the stack of bricks?"
+  },
+  {
+   "id": "no_scaffolding",
+   "type": "absent",
+   "desc": "scaffolding",
+   "question": "Is there any scaffolding visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat stands",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "toolbox_on_ground",
+   "type": "state",
+   "of": "toolbox",
+   "desc": "the silver toolbox rests on the dirt ground",
+   "question": "Does the silver toolbox rest on the dirt ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "bricks",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "toolbox",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0147",
+ "prompt": "This flat vector illustration depicts a construction site scene. On the left stands a worker in a yellow hard hat holding blueprints. In the center, a foreman in an orange vest points toward a stack of bricks. To the right, a crane operator in a blue shirt sits inside a cab. Next to the foreman, a brown dog sits calmly on the ground. Beside the dog, a silver toolbox rests on the dirt. The worker in the yellow hard hat is looking at the foreman in the orange vest. The foreman in the orange vest is pointing at the stack of bricks. There is no scaffolding visible in the background. The scene remains clean and minimal with distinct shapes.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

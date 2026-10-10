@@ -1,0 +1,228 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a scene with a concrete floor",
+   "question": "Does the image show a scene with a concrete floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in a yellow helmet",
+   "question": "Is there a firefighter in a yellow helmet?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    320,
+    500,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue uniform",
+   "question": "Is there a woman in a blue uniform?",
+   "box": [
+    450,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "truck",
+   "plural": "trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red truck",
+   "question": "Is there a large red truck?",
+   "box": [
+    400,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray jacket",
+   "question": "Is there a man in a gray jacket?",
+   "box": [
+    750,
+    250,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter in the yellow helmet holds a coiled hose",
+   "question": "Is the firefighter in the yellow helmet holding a coiled hose?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in the yellow helmet is standing upright",
+   "question": "Is the firefighter in the yellow helmet standing upright?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots is sitting down",
+   "question": "Is the dalmatian with black spots sitting down?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "truck"
+   ],
+   "desc": "the woman in the blue uniform points toward the large red truck",
+   "question": "Is the woman in the blue uniform pointing toward the large red truck?"
+  },
+  {
+   "id": "truck_stationary",
+   "type": "state",
+   "of": "truck",
+   "desc": "the large red truck is stationary",
+   "question": "Is the large red truck stationary?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the gray jacket looks at the clipboard held by the woman in the blue uniform",
+   "question": "Is the man in the gray jacket looking at the clipboard held by the woman in the blue uniform?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue uniform is handing the clipboard to the man in the gray jacket",
+   "question": "Is the woman in the blue uniform handing a clipboard to the man in the gray jacket?"
+  },
+  {
+   "id": "dalmatian_next_to_firefighter",
+   "type": "relation",
+   "of": [
+    "dalmatian",
+    "firefighter"
+   ],
+   "desc": "the dalmatian with black spots is next to the firefighter in the yellow helmet",
+   "question": "Is the dalmatian with black spots next to the firefighter in the yellow helmet?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the image?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots sits on the concrete floor",
+   "question": "Is the dalmatian with black spots sitting on the concrete floor?"
+  },
+  {
+   "id": "truck_wheels",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the large red truck has shiny chrome wheels",
+   "question": "Does the large red truck have shiny chrome wheels?"
+  },
+  {
+   "id": "overhead_lights",
+   "type": "entity",
+   "class": "light",
+   "plural": "lights",
+   "count": 1,
+   "count_exact": false,
+   "desc": "overhead lights",
+   "question": "Are there overhead lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    100
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "t05_0028",
+ "prompt": "In a cinematic film still, a firefighter in a yellow helmet stands on the left, holding a coiled hose. Next to him on the left, a dalmatian with black spots sits calmly on the concrete floor. In the center, a woman in a blue uniform points toward a large red truck parked prominently. The truck in the center has shiny chrome wheels that reflect the overhead lights. On the right, a man in a gray jacket looks at a clipboard held by the woman in the blue uniform. The woman in the blue uniform is handing the clipboard to the man in the gray jacket. There is no fire visible in the scene. The firefighter in the yellow helmet is standing upright. The dalmatian with black spots is sitting down. The large red truck is stationary.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

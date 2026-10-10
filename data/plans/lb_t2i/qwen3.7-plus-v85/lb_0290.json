@@ -1,0 +1,482 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, high contrast, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with a vaulted ceiling merging into a starry, mercury-like void",
+   "question": "Does the image show a room with a vaulted ceiling merging into a starry, mercury-like void?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden table",
+   "question": "Is there a weathered wooden table?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "bracelet",
+   "type": "entity",
+   "class": "bracelet",
+   "plural": "bracelets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver bracelet",
+   "question": "Is there a silver bracelet?",
+   "box": [
+    450,
+    550,
+    574,
+    650
+   ]
+  },
+  {
+   "id": "orb",
+   "type": "entity",
+   "class": "hourglass",
+   "plural": "hourglasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crystalline hourglass",
+   "question": "Is there a crystalline hourglass?",
+   "box": [
+    600,
+    100,
+    800,
+    300
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming mug",
+   "question": "Is there a steaming mug?",
+   "box": [
+    200,
+    500,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of books",
+   "question": "Is there a stack of books?",
+   "box": [
+    180,
+    580,
+    320,
+    650
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an impossibly green fern",
+   "question": "Is there an impossibly green fern?",
+   "box": [
+    700,
+    400,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "entity",
+   "class": "photograph",
+   "plural": "photographs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded family photograph",
+   "question": "Is there a faded family photograph?",
+   "box": [
+    320,
+    620,
+    420,
+    720
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tilted mirror",
+   "question": "Is there a tilted mirror?",
+   "box": [
+    50,
+    200,
+    250,
+    500
+   ]
+  },
+  {
+   "id": "bracelet_color",
+   "type": "state",
+   "of": "bracelet",
+   "desc": "the bracelet is shifting color from silver to gold and indigo",
+   "question": "Does the bracelet appear to be shifting colors between silver, gold, and indigo?"
+  },
+  {
+   "id": "table_glow",
+   "type": "state",
+   "of": "table",
+   "desc": "the table emits a faint bioluminescent glow",
+   "question": "Does the wooden table emit a faint bioluminescent glow?"
+  },
+  {
+   "id": "glyphs_pulse",
+   "type": "state",
+   "of": "table",
+   "desc": "the glyphs on the table are glowing",
+   "question": "Are the glyphs on the table glowing?"
+  },
+  {
+   "id": "pages_flutter",
+   "type": "state",
+   "of": "books",
+   "desc": "the pages of the books are fluttering",
+   "question": "Are the pages of the books fluttering?"
+  },
+  {
+   "id": "steam_tendrils",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam from the mug twists into tendrils",
+   "question": "Does steam from the mug twist into delicate tendrils?"
+  },
+  {
+   "id": "notes_hover",
+   "type": "state",
+   "of": "mug",
+   "desc": "small flickering notes hover near the mug",
+   "question": "Are small flickering notes hovering near the mug?"
+  },
+  {
+   "id": "clocks_spin",
+   "type": "state",
+   "of": "photo",
+   "desc": "the tiny clocks bordering the photo have hands spinning in different directions",
+   "question": "Do the tiny clocks bordering the photo have hands spinning in various directions?"
+  },
+  {
+   "id": "mirror_ripple",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror surface ripples like water",
+   "question": "Does the surface of the mirror ripple like water?"
+  },
+  {
+   "id": "bracelet_on_table",
+   "type": "relation",
+   "of": [
+    "bracelet",
+    "table"
+   ],
+   "desc": "the bracelet rests on the table",
+   "question": "Is the bracelet resting on the wooden table?"
+  },
+  {
+   "id": "orb_hanging",
+   "type": "state",
+   "of": "orb",
+   "desc": "the orb hangs from the ceiling",
+   "question": "Is the glass orb hanging from the ceiling?"
+  },
+  {
+   "id": "mug_on_books",
+   "type": "relation",
+   "of": [
+    "mug",
+    "books"
+   ],
+   "desc": "the mug is balanced on the stack of books",
+   "question": "Is the mug balanced on the stack of books?"
+  },
+  {
+   "id": "books_on_table",
+   "type": "relation",
+   "of": [
+    "books",
+    "table"
+   ],
+   "desc": "the stack of books stands on the table",
+   "question": "Is the stack of books standing on the table?"
+  },
+  {
+   "id": "steam_around_plant",
+   "type": "relation",
+   "of": [
+    "mug",
+    "plant"
+   ],
+   "desc": "steam tendrils from the mug curl around the fern",
+   "question": "Do steam tendrils from the mug curl around the fern?"
+  },
+  {
+   "id": "plant_hanging",
+   "type": "state",
+   "of": "plant",
+   "desc": "the fern hangs from the ceiling",
+   "question": "Is the fern hanging from the ceiling?"
+  },
+  {
+   "id": "photo_beside_mug",
+   "type": "relation",
+   "of": [
+    "photo",
+    "mug"
+   ],
+   "desc": "the photograph leans beside the mug",
+   "question": "Is the photograph leaning beside the mug?"
+  },
+  {
+   "id": "mirror_behind_table",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "table"
+   ],
+   "desc": "the mirror is behind the table",
+   "question": "Is the mirror positioned behind the table?"
+  },
+  {
+   "id": "sunlight_through_orb",
+   "type": "state",
+   "of": "orb",
+   "desc": "a shaft of sunlight passes through the orb",
+   "question": "Does a shaft of sunlight pass through the glass orb?"
+  },
+  {
+   "id": "curtains",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "billowing curtains woven from shimmering threads",
+   "question": "Are there billowing curtains woven from shimmering threads?",
+   "box": [
+    0,
+    0,
+    300,
+    1024
+   ]
+  },
+  {
+   "id": "bracelet_turning",
+   "type": "state",
+   "of": "bracelet",
+   "desc": "the bracelet turns to face the viewer",
+   "question": "Is the bracelet turning to face the viewer?"
+  },
+  {
+   "id": "mug_defying_gravity",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug stands in defiance of gravity",
+   "question": "Is the mug standing in defiance of gravity?"
+  },
+  {
+   "id": "notes_from_mug",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug leaks a cascade of small flickering notes",
+   "question": "Is the mug leaking a cascade of small flickering notes?"
+  },
+  {
+   "id": "notes_to_orb",
+   "type": "action",
+   "of": [
+    "mug",
+    "orb"
+   ],
+   "desc": "the notes from the mug vanish into the steam and are carried into the orb",
+   "question": "Are the notes from the mug carried into the orb?"
+  },
+  {
+   "id": "sunlight_shaft",
+   "type": "entity",
+   "class": "shaft of light",
+   "plural": "shafts of light",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single shaft of sunlight",
+   "question": "Is there a single shaft of sunlight?",
+   "box": [
+    400,
+    0,
+    600,
+    600
+   ]
+  },
+  {
+   "id": "sunlight_through_orb_rel",
+   "type": "relation",
+   "of": [
+    "sunlight_shaft",
+    "orb"
+   ],
+   "desc": "the shaft of sunlight passes through the glass orb",
+   "question": "Does the shaft of sunlight pass through the glass orb?"
+  },
+  {
+   "id": "cord_voices",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "the fern hanging by a cord made of whispering voices",
+   "question": "Is the fern hanging by a cord made of whispering voices?"
+  },
+  {
+   "id": "shadow_on_photo",
+   "type": "relation",
+   "of": [
+    "plant",
+    "photo"
+   ],
+   "desc": "the shadow of the fern falls across the faded family photo",
+   "question": "Does the shadow of the fern fall across the faded family photo?"
+  },
+  {
+   "id": "faces_flickering",
+   "type": "state",
+   "of": "photo",
+   "desc": "the faces in the photo flicker between joy and sorrow",
+   "question": "Do the faces in the photo flicker between joy and sorrow?"
+  },
+  {
+   "id": "books_near_table",
+   "type": "relation",
+   "of": [
+    "books",
+    "table"
+   ],
+   "desc": "the stack of books is near the table",
+   "question": "Is the stack of books near the weathered wooden table?"
+  },
+  {
+   "id": "table_scorch",
+   "type": "attribute",
+   "of": "table",
+   "desc": "scorch marks on the table",
+   "question": "Are there scorch marks on the weathered wooden table?"
+  },
+  {
+   "id": "table_names",
+   "type": "attribute",
+   "of": "table",
+   "desc": "etched names on the table",
+   "question": "Are there etched names on the weathered wooden table?"
+  },
+  {
+   "id": "orb_patterns",
+   "type": "attribute",
+   "of": "orb",
+   "desc": "swirling patterns inside the hourglass",
+   "question": "Are there swirling patterns inside the crystalline hourglass?"
+  },
+  {
+   "id": "plant_silver_leaves",
+   "type": "attribute",
+   "of": "plant",
+   "desc": "leaves of the fern turning to silver",
+   "question": "Do the leaves of the fern turn to silver?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflecting a surreal scene with sun rising from floor",
+   "question": "Does the mirror reflect a surreal scene where the sun rises from the floor?"
+  },
+  {
+   "id": "sunlight_bending",
+   "type": "state",
+   "of": "sunlight_shaft",
+   "desc": "the shaft of sunlight bending and twisting",
+   "question": "Is the shaft of sunlight bending and twisting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "bracelet",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "books",
+   "kind": "support"
+  },
+  {
+   "from": "books",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0290",
+ "prompt": "Beneath a vaulted ceiling that seemed to stretch endlessly into a shimmering void of starlight and liquid mercury, the silver bracelet rested as if suspended in time, its curves glinting with an otherworldly sheen that refracted not just light, but the soft hum of memories. The weathered wooden table beneath it bore the marks of a thousand unseen hands—scorch marks from vanished candles, etched names that shifted when no one was looking, and faint, glowing glyphs that pulsed in rhythm with the beating of a nearby heart. A gentle breeze, thick with the scent of petrichor and forgotten spices, coiled around the room, pulling at the curtains that billowed like the wings of an ancient creature waking from a dream. The curtains, woven from threads that shimmered between states of being—sometimes silk, sometimes smoke—parted just enough to let a single shaft of sunlight slice through the air, bending and twisting as it passed through a glass orb hanging from the ceiling. This orb, a crystalline hourglass with no beginning or end, trapped moments of time in swirling patterns that flickered with scenes of other rooms, other lives, always just out of focus. Near the table, a steaming mug of coffee stood in defiance of gravity, balanced on a precarious stack of books whose pages fluttered as if reading themselves aloud. The steam from the mug curled and wove into the air, distorting the light like heat haze, but instead of vanishing, it twisted into delicate tendrils that curled around the frame of a hanging potted plant. This plant, an impossibly green fern with leaves that turned to silver in the sunlight, dangled from the ceiling by a cord made of whispering voices. Its shadow fell across a faded family photo that leaned beside the mug, the faces within it flickering between joy and sorrow, their expressions shifting as though they remembered different moments in a shared life. The photograph was bordered by tiny clocks, each ticking in a different rhythm, their hands spinning backwards, forwards, and sometimes sideways, defying any consistent measure of time. Behind the table, a mirror sat tilted at an impossible angle, its surface rippling like water but reflecting not the room, but a different version of it—where the sun rose from the floor and the walls were made of sound. The room itself seemed to breathe, its very fabric responding to the presence of the objects and the silent tension between them. The bracelet, as if aware of the gaze it drew, slowly turned to face the viewer, its surface shifting from silver to gold, then to a deep indigo, as if drawing color from the very atmosphere. The mug, in turn, began to leak not liquid, but a cascade of small, flickering notes—each one containing a single word in a language no one had ever heard but somehow understood. The notes hovered midair for a moment before vanishing into the steam, which then carried them into the orb, where they added to the swirling memories already trapped within. The table, now pulsing with a faint bioluminescent glow, began to emit a low, harmonic tone that resonated through the room, syncing the ticking clocks and the breathing shadows into a symphony of surrealism. The breeze, now carrying a faint echo of laughter and lullabies, wove between the fern’s leaves, causing them to emit a faint hum that matched the bracelet’s color shifts. In this moment, the scene was more than a room—it was a living, breathing nexus of time, memory, and wonder, a dream stitched from fragments of reality and the infinite spaces between.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 38,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 1,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

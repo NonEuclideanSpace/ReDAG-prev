@@ -1,0 +1,159 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with tall pine trees and distant snowy peaks under a clear sky",
+   "question": "Does the background show a mountain campsite with tall pine trees and distant snowy peaks under a clear sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    380,
+    500,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue jacket",
+   "question": "Is there a woman in a blue jacket?",
+   "box": [
+    700,
+    300,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "pot",
+   "type": "entity",
+   "class": "metal pot",
+   "plural": "metal pots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal pot",
+   "question": "Is there a metal pot?",
+   "box": [
+    600,
+    550,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_resting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is resting calmly",
+   "question": "Is the brown dog resting calmly?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue jacket is standing",
+   "question": "Is the woman in the blue jacket standing?"
+  },
+  {
+   "id": "woman_holding_pot",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue jacket holds a metal pot",
+   "question": "Is the woman in the blue jacket holding a metal pot?"
+  },
+  {
+   "id": "man_looking_at_dog",
+   "type": "relation",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in the red scarf is looking at the brown dog",
+   "question": "Is the man in the red scarf looking at the brown dog?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is next to the man in the red scarf",
+   "question": "Is the brown dog next to the man in the red scarf?"
+  },
+  {
+   "id": "woman_handing_pot",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue jacket is handing the metal pot toward the man in the red scarf",
+   "question": "Is the woman in the blue jacket handing the metal pot toward the man in the red scarf?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire visible in the scene?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0039",
+ "prompt": "In an anime style illustration, a man in a red scarf sits on the left side of a mountain campsite. A brown dog rests calmly next to him in the center foreground. On the right, a woman in a blue jacket stands holding a metal pot. The man in the red scarf is looking at the brown dog. The woman in the blue jacket is handing the metal pot toward the man. There is no fire visible in the scene. The background features tall pine trees and distant snowy peaks under a clear sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

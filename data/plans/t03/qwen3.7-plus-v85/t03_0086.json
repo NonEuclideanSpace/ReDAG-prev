@@ -1,0 +1,195 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit botanical greenhouse interior",
+   "question": "Does the image show a sunlit botanical greenhouse interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall potted fern with lush green fronds",
+   "question": "Is there a tall potted fern with lush green fronds?",
+   "box": [
+    400,
+    100,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a beige hat",
+   "question": "Is there an older man in a beige hat?",
+   "box": [
+    700,
+    300,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    680,
+    600,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a silver watering can",
+   "question": "Is the woman in a blue dress holding a silver watering can?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is looking forward",
+   "question": "Is the woman in a blue dress looking forward?"
+  },
+  {
+   "id": "woman_extending",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is extending her arm toward the fern",
+   "question": "Is the woman in a blue dress extending her arm toward the fern?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the older man in a beige hat is sitting",
+   "question": "Is the older man in a beige hat sitting?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the older man in a beige hat sits on the wooden bench",
+   "question": "Is the older man in a beige hat sitting on the wooden bench?"
+  },
+  {
+   "id": "man_next_to_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the older man in a beige hat is next to the tall potted fern",
+   "question": "Is the older man in a beige hat next to the tall potted fern?"
+  },
+  {
+   "id": "no_glass_roof",
+   "type": "absent",
+   "desc": "glass roof",
+   "question": "Is there a glass roof visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "woman_looking_fern",
+   "type": "relation",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in a blue dress is looking at the tall potted fern",
+   "question": "Is the woman in a blue dress looking at the tall potted fern?"
+  },
+  {
+   "id": "woman_extending_fern",
+   "type": "relation",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in a blue dress is extending her arm toward the tall potted fern",
+   "question": "Is the woman in a blue dress extending her arm toward the tall potted fern?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0086",
+ "prompt": "A photorealistic photo captures a sunlit botanical greenhouse. On the left, a woman in a blue dress stands holding a silver watering can. In the center, a tall potted fern with lush green fronds rises from the floor. To the right, an older man in a beige hat sits on a wooden bench. The woman is looking at the fern while extending her arm toward it. The man is sitting next to the fern. There is no glass roof visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

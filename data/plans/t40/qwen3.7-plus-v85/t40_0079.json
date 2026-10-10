@@ -1,0 +1,915 @@
+{
+ "style": "pencil sketch with light color wash, gritty texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform with tiled walls and tracks",
+   "question": "Does the image show a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman_yellow",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow coat",
+   "question": "Is there a woman in a yellow coat?",
+   "box": [
+    20,
+    300,
+    200,
+    900
+   ]
+  },
+  {
+   "id": "briefcase",
+   "type": "attribute",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat holds a leather briefcase",
+   "question": "Is the woman in the yellow coat holding a leather briefcase?"
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat has a rigid posture",
+   "question": "Does the woman in the yellow coat have a rigid posture?"
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a blue hoodie",
+   "question": "Is there a teenager in a blue hoodie?",
+   "box": [
+    220,
+    250,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "pillar",
+   "type": "entity",
+   "class": "pillar",
+   "plural": "pillars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiled pillar",
+   "question": "Is there a tiled pillar?",
+   "box": [
+    380,
+    100,
+    480,
+    800
+   ]
+  },
+  {
+   "id": "teen_leaning",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in the blue hoodie leans casually",
+   "question": "Does the teenager in the blue hoodie lean casually?"
+  },
+  {
+   "id": "teen_foot_propped",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "pillar"
+   ],
+   "desc": "the teenager in the blue hoodie has one foot propped up on the base of the pillar",
+   "question": "Does the teenager in the blue hoodie have one foot propped up on the base of the pillar?"
+  },
+  {
+   "id": "teen_staring",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in the blue hoodie stares blankly",
+   "question": "Does the teenager in the blue hoodie stare blankly?"
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    250,
+    600,
+    380,
+    850
+   ]
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits patiently",
+   "question": "Does the brown dog sit patiently?"
+  },
+  {
+   "id": "leash_held",
+   "type": "attribute",
+   "of": "teenager",
+   "desc": "the teenager in the blue hoodie holds a leash loosely in his left hand",
+   "question": "Does the teenager in the blue hoodie hold a leash loosely in his left hand?"
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray suit",
+   "question": "Is there an elderly man in a gray suit?",
+   "box": [
+    450,
+    500,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    400,
+    650,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the gray suit sits",
+   "question": "Does the elderly man in the gray suit sit?"
+  },
+  {
+   "id": "man_head_bowed",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in the gray suit has his head bowed slightly",
+   "question": "Does the elderly man in the gray suit have his head bowed slightly?"
+  },
+  {
+   "id": "man_reading",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man in the gray suit reads a folded newspaper",
+   "question": "Is the elderly man in the gray suit reading a folded newspaper?"
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young girl in a pink dress",
+   "question": "Is there a young girl in a pink dress?",
+   "box": [
+    600,
+    550,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "girl_swinging",
+   "type": "state",
+   "of": "girl",
+   "desc": "the young girl in the pink dress swings her legs",
+   "question": "Does the young girl in the pink dress swing her legs?"
+  },
+  {
+   "id": "girl_looking_up",
+   "type": "state",
+   "of": "girl",
+   "desc": "the young girl in the pink dress looks up with curiosity",
+   "question": "Does the young girl in the pink dress look up with curiosity?"
+  },
+  {
+   "id": "businessman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a businessman in a black suit",
+   "question": "Is there a businessman in a black suit?",
+   "box": [
+    500,
+    300,
+    680,
+    900
+   ]
+  },
+  {
+   "id": "businessman_checking",
+   "type": "attribute",
+   "of": "businessman",
+   "desc": "the businessman in the black suit checks his wristwatch",
+   "question": "Is the businessman in the black suit checking his wristwatch?"
+  },
+  {
+   "id": "businessman_anxious",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman in the black suit has an anxious expression",
+   "question": "Does the businessman in the black suit have an anxious expression?"
+  },
+  {
+   "id": "businessman_tapping",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman in the black suit taps his foot impatiently",
+   "question": "Does the businessman in the black suit tap his foot impatiently?"
+  },
+  {
+   "id": "musician",
+   "type": "entity",
+   "class": "musician",
+   "plural": "musicians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street musician in a torn jacket",
+   "question": "Is there a street musician in a torn jacket?",
+   "box": [
+    700,
+    250,
+    880,
+    850
+   ]
+  },
+  {
+   "id": "guitar",
+   "type": "attribute",
+   "of": "musician",
+   "desc": "the street musician in the torn jacket strums an acoustic guitar",
+   "question": "Is the street musician in the torn jacket strumming an acoustic guitar?"
+  },
+  {
+   "id": "musician_eyes_closed",
+   "type": "state",
+   "of": "musician",
+   "desc": "the street musician in the torn jacket has his eyes closed in concentration",
+   "question": "Does the street musician in the torn jacket have his eyes closed in concentration?"
+  },
+  {
+   "id": "child_red_hat",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a red hat",
+   "question": "Is there a small child in a red hat?",
+   "box": [
+    850,
+    400,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "child_holding_cup",
+   "type": "attribute",
+   "of": "child_red_hat",
+   "desc": "the small child in the red hat holds out a metal cup",
+   "question": "Is the small child in the red hat holding out a metal cup?"
+  },
+  {
+   "id": "musician_nodding",
+   "type": "action",
+   "of": [
+    "musician",
+    "child_red_hat"
+   ],
+   "desc": "the street musician nods toward the metal cup held by the small child",
+   "question": "Does the street musician nod toward the metal cup held by the small child?"
+  },
+  {
+   "id": "couple_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    750,
+    150,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "couple_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white blouse",
+   "question": "Is there a woman in a white blouse?",
+   "box": [
+    820,
+    160,
+    920,
+    500
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "relation",
+   "of": [
+    "couple_man",
+    "woman_yellow"
+   ],
+   "desc": "the man in the green shirt holds a single umbrella over the woman in the white blouse",
+   "question": "Does the man in the green shirt hold a single umbrella over the woman in the white blouse?"
+  },
+  {
+   "id": "woman_affectionate",
+   "type": "relation",
+   "of": [
+    "couple_woman",
+    "elderly_man"
+   ],
+   "desc": "the woman in the white blouse looks at the man in the green shirt affectionately",
+   "question": "Does the woman in the white blouse look at the man in the green shirt affectionately?"
+  },
+  {
+   "id": "cyclist",
+   "type": "entity",
+   "class": "cyclist",
+   "plural": "cyclists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cyclist in a helmet",
+   "question": "Is there a cyclist in a helmet?",
+   "box": [
+    850,
+    100,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "bike",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    880,
+    200,
+    1000,
+    600
+   ]
+  },
+  {
+   "id": "cyclist_resting",
+   "type": "action",
+   "of": [
+    "cyclist",
+    "bike"
+   ],
+   "desc": "the cyclist rests the bicycle against the wall",
+   "question": "Does the cyclist rest the bicycle against the wall?"
+  },
+  {
+   "id": "cyclist_adjusting",
+   "type": "attribute",
+   "of": "cyclist",
+   "desc": "the cyclist adjusts a strap on their backpack",
+   "question": "Is the cyclist adjusting a strap on their backpack?"
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vendor in an apron",
+   "question": "Is there a vendor in an apron?",
+   "box": [
+    800,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "flowers",
+   "type": "entity",
+   "class": "flower",
+   "plural": "flowers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "flowers in a bucket",
+   "question": "Are there flowers in a bucket?",
+   "box": [
+    820,
+    600,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "vendor_arranging",
+   "type": "action",
+   "of": [
+    "vendor",
+    "flowers"
+   ],
+   "desc": "the vendor arranges the flowers in the bucket",
+   "question": "Does the vendor arrange the flowers in the bucket?"
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a denim jacket",
+   "question": "Is there a customer in a denim jacket?",
+   "box": [
+    900,
+    350,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the vendor hands a bouquet to the customer",
+   "question": "Does the vendor hand a bouquet to the customer?"
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "security camera",
+   "plural": "security cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a security camera hanging from the ceiling",
+   "question": "Is there a security camera hanging from the ceiling?",
+   "box": [
+    850,
+    50,
+    950,
+    150
+   ]
+  },
+  {
+   "id": "camera_pointing",
+   "type": "state",
+   "of": "camera",
+   "desc": "the security camera lens points downward",
+   "question": "Does the security camera lens point downward?"
+  },
+  {
+   "id": "janitor",
+   "type": "entity",
+   "class": "janitor",
+   "plural": "janitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a janitor in blue overalls",
+   "question": "Is there a janitor in blue overalls?",
+   "box": [
+    950,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "mop_bucket",
+   "type": "entity",
+   "class": "mop bucket",
+   "plural": "mop buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mop bucket",
+   "question": "Is there a mop bucket?",
+   "box": [
+    960,
+    700,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "janitor_pushing",
+   "type": "action",
+   "of": [
+    "janitor",
+    "mop_bucket"
+   ],
+   "desc": "the janitor pushes the mop bucket",
+   "question": "Does the janitor push the mop bucket?"
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    500,
+    850,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "cat_hiding",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the stray cat hides under the bench",
+   "question": "Does the stray cat hide under the bench?"
+  },
+  {
+   "id": "cat_peeking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the stray cat peeks out with wide eyes",
+   "question": "Is the stray cat peeking out?"
+  },
+  {
+   "id": "lights",
+   "type": "entity",
+   "class": "fluorescent light",
+   "plural": "fluorescent lights",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three fluorescent lights hanging from the ceiling",
+   "question": "Are there three fluorescent lights hanging from the ceiling?",
+   "box": [
+    400,
+    0,
+    700,
+    100
+   ]
+  },
+  {
+   "id": "coffee_cup",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a discarded coffee cup",
+   "question": "Is there a discarded coffee cup?",
+   "box": [
+    100,
+    850,
+    180,
+    920
+   ]
+  },
+  {
+   "id": "graffiti",
+   "type": "entity",
+   "class": "graffiti tag",
+   "plural": "graffiti tags",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a graffiti tag on the wall",
+   "question": "Is there a graffiti tag on the wall?",
+   "box": [
+    700,
+    200,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train on the tracks",
+   "question": "Is there a train visible on the tracks?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through windows",
+   "question": "Is there sunlight streaming through windows?"
+  },
+  {
+   "id": "no_ad_screen",
+   "type": "absent",
+   "desc": "a digital advertising screen on the wall",
+   "question": "Is there a digital advertising screen on the wall?"
+  },
+  {
+   "id": "woman_yellow_stands",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat stands",
+   "question": "Is the woman in the yellow coat standing?"
+  },
+  {
+   "id": "woman_near_edge",
+   "type": "state",
+   "of": "woman_yellow",
+   "desc": "the woman in the yellow coat is near the edge of the platform",
+   "question": "Is the woman in the yellow coat near the edge of the subway platform?"
+  },
+  {
+   "id": "teenager_next_to_woman",
+   "type": "relation",
+   "of": [
+    "teenager",
+    "woman_yellow"
+   ],
+   "desc": "the teenager in the blue hoodie is next to the woman in the yellow coat",
+   "question": "Is the teenager in the blue hoodie next to the woman in the yellow coat?"
+  },
+  {
+   "id": "dog_beside_teenager",
+   "type": "relation",
+   "of": [
+    "dog",
+    "teenager"
+   ],
+   "desc": "the brown dog sits beside the teenager in the blue hoodie",
+   "question": "Is the brown dog sitting beside the teenager in the blue hoodie?"
+  },
+  {
+   "id": "girl_on_bench",
+   "type": "relation",
+   "of": [
+    "girl",
+    "bench"
+   ],
+   "desc": "the young girl in the pink dress sits on the wooden bench",
+   "question": "Is the young girl in the pink dress sitting on the wooden bench?"
+  },
+  {
+   "id": "girl_beside_man",
+   "type": "relation",
+   "of": [
+    "girl",
+    "elderly_man"
+   ],
+   "desc": "the young girl in the pink dress is beside the elderly man in the gray suit",
+   "question": "Is the young girl in the pink dress beside the elderly man in the gray suit?"
+  },
+  {
+   "id": "girl_looking_at_man",
+   "type": "relation",
+   "of": [
+    "girl",
+    "elderly_man"
+   ],
+   "desc": "the young girl in the pink dress looks up at the elderly man in the gray suit",
+   "question": "Is the young girl in the pink dress looking up at the elderly man in the gray suit?"
+  },
+  {
+   "id": "businessman_in_front_of_bench",
+   "type": "relation",
+   "of": [
+    "businessman",
+    "bench"
+   ],
+   "desc": "the businessman in the black suit stands directly in front of the wooden bench",
+   "question": "Is the businessman in the black suit standing directly in front of the wooden bench?"
+  },
+  {
+   "id": "musician_right_of_businessman",
+   "type": "relation",
+   "of": [
+    "musician",
+    "businessman"
+   ],
+   "desc": "the street musician in the torn jacket is to the right of the businessman in the black suit",
+   "question": "Is the street musician in the torn jacket to the right of the businessman in the black suit?"
+  },
+  {
+   "id": "child_next_to_musician",
+   "type": "relation",
+   "of": [
+    "child_red_hat",
+    "musician"
+   ],
+   "desc": "the small child in the red hat stands next to the street musician in the torn jacket",
+   "question": "Is the small child in the red hat standing next to the street musician in the torn jacket?"
+  },
+  {
+   "id": "couple_behind_musician",
+   "type": "relation",
+   "of": [
+    "couple_man",
+    "musician"
+   ],
+   "desc": "the couple is behind the street musician in the torn jacket",
+   "question": "Are the man in the green shirt and the woman in the white blouse behind the street musician in the torn jacket?"
+  },
+  {
+   "id": "umbrella_over_woman",
+   "type": "action",
+   "of": [
+    "couple_man",
+    "couple_woman"
+   ],
+   "desc": "the man in the green shirt holds a single umbrella over the woman in the white blouse",
+   "question": "Is the man in the green shirt holding a single umbrella over the woman in the white blouse?"
+  },
+  {
+   "id": "woman_looks_at_man",
+   "type": "relation",
+   "of": [
+    "couple_woman",
+    "couple_man"
+   ],
+   "desc": "the woman in the white blouse looks at the man in the green shirt affectionately",
+   "question": "Is the woman in the white blouse looking at the man in the green shirt affectionately?"
+  },
+  {
+   "id": "cyclist_near_vendor",
+   "type": "relation",
+   "of": [
+    "cyclist",
+    "vendor"
+   ],
+   "desc": "the cyclist in a helmet is near the vendor in an apron",
+   "question": "Is the cyclist in a helmet near the vendor in an apron?"
+  },
+  {
+   "id": "bike_against_wall",
+   "type": "relation",
+   "of": [
+    "bike",
+    "graffiti"
+   ],
+   "desc": "the bicycle rests against the wall",
+   "question": "Does the bicycle rest against the wall?"
+  },
+  {
+   "id": "camera_above_vendor",
+   "type": "relation",
+   "of": [
+    "camera",
+    "vendor"
+   ],
+   "desc": "the security camera hangs from the ceiling above the vendor in an apron",
+   "question": "Does the security camera hang from the ceiling above the vendor in an apron?"
+  },
+  {
+   "id": "janitor_far_right",
+   "type": "state",
+   "of": "janitor",
+   "desc": "the janitor in blue overalls is on the far right edge",
+   "question": "Is the janitor in blue overalls on the far right edge of the image?"
+  },
+  {
+   "id": "cat_under_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the stray cat hides under the wooden bench",
+   "question": "Is the stray cat hiding under the wooden bench?"
+  },
+  {
+   "id": "cat_near_janitor",
+   "type": "relation",
+   "of": [
+    "cat",
+    "janitor"
+   ],
+   "desc": "the stray cat is near the janitor in blue overalls",
+   "question": "Is the stray cat near the janitor in blue overalls?"
+  },
+  {
+   "id": "lights_above_center",
+   "type": "relation",
+   "of": [
+    "lights",
+    "camera"
+   ],
+   "desc": "three fluorescent lights hang from the ceiling above the center",
+   "question": "Do three fluorescent lights hang from the ceiling above the center?"
+  },
+  {
+   "id": "cup_near_woman",
+   "type": "relation",
+   "of": [
+    "coffee_cup",
+    "woman_yellow"
+   ],
+   "desc": "a discarded coffee cup lies on the ground near the woman in the yellow coat",
+   "question": "Does a discarded coffee cup lie on the ground near the woman in the yellow coat?"
+  },
+  {
+   "id": "graffiti_behind_musician",
+   "type": "relation",
+   "of": [
+    "graffiti",
+    "musician"
+   ],
+   "desc": "a graffiti tag marks the wall behind the street musician in the torn jacket",
+   "question": "Does a graffiti tag mark the wall behind the street musician in the torn jacket?"
+  },
+  {
+   "id": "cat_wide_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the stray cat has wide eyes",
+   "question": "Does the stray cat have wide eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "elderly_man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "girl",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "pillar",
+   "to": "teenager",
+   "kind": "support"
+  }
+ ],
+ "id": "t40_0079",
+ "prompt": "The image is rendered as a pencil sketch with light color wash, capturing the gritty texture of a subway platform. On the far left, a woman in a yellow coat stands near the edge, her posture rigid as she clutches a leather briefcase tightly against her side. Next to her, a teenager in a blue hoodie leans casually against a tiled pillar, one foot propped up on the base while he stares blankly at the tracks. A brown dog sits patiently beside the teenager, its leash held loosely by the teen’s left hand, creating a quiet bond between them. In the center foreground, an elderly man in a gray suit sits on a wooden bench, his head bowed slightly as he reads a folded newspaper. Beside him on the same bench, a young girl in a pink dress swings her legs, looking up at the elderly man with curiosity. Standing directly in front of the bench, a businessman in a black suit checks his wristwatch, his expression anxious as he taps his foot impatiently. To the right of the businessman, a street musician in a torn jacket strums an acoustic guitar, his eyes closed in concentration. A small child in a red hat stands next to the musician, holding out a metal cup for donations, while the musician subtly nods toward the cup. Behind them, a couple shares a single umbrella despite the dry air, the man in a green shirt holding it over the woman in a white blouse who looks at him affectionately. Further back on the right, a cyclist in a helmet rests their bike against the wall, adjusting a strap on their backpack. Near the cyclist, a vendor in an apron arranges flowers in a bucket, handing a bouquet to a customer in a denim jacket. Above the vendor, a security camera hangs from the ceiling, its lens pointed downward. On the far right edge, a janitor in blue overalls pushes a mop bucket, ignoring the chaos around him. A stray cat hides under the bench near the janitor, peeking out with wide eyes. Hanging from the ceiling above the center are three fluorescent lights, two of which flicker faintly. A discarded coffee cup lies on the ground near the woman in the yellow coat. A graffiti tag marks the wall behind the musician. There is no train visible on the tracks. There is no sunlight streaming through windows. There is no digital advertising screen on the wall.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 22,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

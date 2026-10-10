@@ -1,0 +1,589 @@
+{
+ "style": "surreal, dreamlike, cinematic photography, muted colors, high contrast, eerie atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forgotten field with low-hanging fog",
+   "question": "Does the image show a forgotten field with low-hanging fog?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fire_truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted fire truck",
+   "question": "Is there a rusted fire truck?",
+   "box": [
+    100,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a skeletal oak tree",
+   "question": "Is there a skeletal oak tree?",
+   "box": [
+    750,
+    50,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a jet-black crow",
+   "question": "Is there a jet-black crow?",
+   "box": [
+    200,
+    650,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "apple",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked apple",
+   "question": "Is there a cracked apple?",
+   "box": [
+    220,
+    780,
+    280,
+    840
+   ]
+  },
+  {
+   "id": "rainboot",
+   "type": "entity",
+   "class": "rainboot",
+   "plural": "rainboots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rainboot",
+   "question": "Is there a rainboot?",
+   "box": [
+    780,
+    650,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "quilt",
+   "type": "entity",
+   "class": "quilt",
+   "plural": "quilts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dulled patchwork quilt",
+   "question": "Is there a dulled patchwork quilt?",
+   "box": [
+    300,
+    680,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a garden hose",
+   "question": "Is there a garden hose?",
+   "box": [
+    500,
+    700,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "bicycle_tire",
+   "type": "entity",
+   "class": "bicycle tire",
+   "plural": "bicycle tires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle tire",
+   "question": "Is there a bicycle tire?",
+   "box": [
+    100,
+    800,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "windmill",
+   "type": "entity",
+   "class": "windmill",
+   "plural": "windmills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an askew windmill",
+   "question": "Is there an askew windmill?",
+   "box": [
+    50,
+    100,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "entity",
+   "class": "gate",
+   "plural": "gates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted gate",
+   "question": "Is there a rusted gate?",
+   "box": [
+    20,
+    300,
+    100,
+    500
+   ]
+  },
+  {
+   "id": "shadow",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distinct shadow",
+   "question": "Is there a distinct shadow?",
+   "box": [
+    850,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "truck_mud",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the fire truck is covered in mud",
+   "question": "Is the fire truck covered in mud?"
+  },
+  {
+   "id": "truck_sideways",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "the fire truck is lying sideways",
+   "question": "Is the fire truck lying sideways?"
+  },
+  {
+   "id": "truck_buried",
+   "type": "state",
+   "of": "fire_truck",
+   "desc": "the fire truck is half-buried in mire",
+   "question": "Is the fire truck half-buried in mire?"
+  },
+  {
+   "id": "ladder_branch",
+   "type": "relation",
+   "of": [
+    "fire_truck",
+    "oak_tree"
+   ],
+   "desc": "the fire truck's ladder grasps a splintered branch of the oak tree",
+   "question": "Does the fire truck's ladder grasp a splintered branch of the oak tree?"
+  },
+  {
+   "id": "crow_pecking",
+   "type": "action",
+   "of": [
+    "crow",
+    "apple"
+   ],
+   "desc": "the crow pecks at the cracked apple",
+   "question": "Is the crow pecking at the cracked apple?"
+  },
+  {
+   "id": "crow_looking",
+   "type": "relation",
+   "of": [
+    "crow",
+    "rainboot"
+   ],
+   "desc": "the crow looks toward the dangling rainboot",
+   "question": "Is the crow looking toward the dangling rainboot?"
+  },
+  {
+   "id": "boot_dangling",
+   "type": "state",
+   "of": "rainboot",
+   "desc": "the rainboot is dangling",
+   "question": "Is the rainboot dangling?"
+  },
+  {
+   "id": "quilt_pinned",
+   "type": "state",
+   "of": "quilt",
+   "desc": "the quilt is pinned awkwardly",
+   "question": "Is the quilt pinned awkwardly?"
+  },
+  {
+   "id": "quilt_under_truck",
+   "type": "relation",
+   "of": [
+    "quilt",
+    "fire_truck"
+   ],
+   "desc": "the quilt is beneath the fire truck",
+   "question": "Is the quilt beneath the fire truck?"
+  },
+  {
+   "id": "quilt_hose",
+   "type": "relation",
+   "of": [
+    "quilt",
+    "hose"
+   ],
+   "desc": "the quilt is tangled with the garden hose",
+   "question": "Is the quilt tangled with the garden hose?"
+  },
+  {
+   "id": "hose_squirming",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose is slightly squirming",
+   "question": "Is the garden hose slightly squirming?"
+  },
+  {
+   "id": "tire_turning",
+   "type": "state",
+   "of": "bicycle_tire",
+   "desc": "one spoke of the bicycle tire is turning slowly",
+   "question": "Is one spoke of the bicycle tire turning slowly?"
+  },
+  {
+   "id": "tire_floating",
+   "type": "state",
+   "of": "bicycle_tire",
+   "desc": "the bicycle tire is floating in a pool of water",
+   "question": "Is the bicycle tire floating in a pool of water?"
+  },
+  {
+   "id": "vine_gate",
+   "type": "relation",
+   "of": [
+    "windmill",
+    "gate"
+   ],
+   "desc": "a vine from the windmill base curls around the rusted gate",
+   "question": "Does a vine from the windmill base curl around the rusted gate?"
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle reflecting the sky",
+   "question": "Is there a puddle reflecting the sky?",
+   "box": [
+    100,
+    800,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "tree_root",
+   "type": "entity",
+   "class": "tree root",
+   "plural": "tree roots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree root twisting into the puddle",
+   "question": "Is there a tree root twisting into the puddle?",
+   "box": [
+    150,
+    820,
+    350,
+    920
+   ]
+  },
+  {
+   "id": "pasture",
+   "type": "entity",
+   "class": "pasture",
+   "plural": "pastures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an empty pasture",
+   "question": "Is there an empty pasture?",
+   "box": [
+    700,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "truck_bumper",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the fire truck has a bumper from which the rainboot dangles",
+   "question": "Does the fire truck have a bumper?"
+  },
+  {
+   "id": "boot_on_bumper",
+   "type": "relation",
+   "of": [
+    "rainboot",
+    "fire_truck"
+   ],
+   "desc": "the rainboot dangles from the fire truck's bumper",
+   "question": "Does the rainboot dangle from the fire truck's bumper?"
+  },
+  {
+   "id": "quilt_under_chassis",
+   "type": "relation",
+   "of": [
+    "quilt",
+    "fire_truck"
+   ],
+   "desc": "the quilt is pinned beneath the fire truck's chassis",
+   "question": "Is the quilt pinned beneath the fire truck's chassis?"
+  },
+  {
+   "id": "hose_trailing_shadows",
+   "type": "relation",
+   "of": [
+    "hose",
+    "shadow"
+   ],
+   "desc": "the garden hose trails into the shadows",
+   "question": "Does the garden hose trail into the shadows?"
+  },
+  {
+   "id": "tire_in_puddle",
+   "type": "relation",
+   "of": [
+    "bicycle_tire",
+    "puddle"
+   ],
+   "desc": "the bicycle tire floats in the puddle",
+   "question": "Does the bicycle tire float in the puddle?"
+  },
+  {
+   "id": "windmill_at_edge",
+   "type": "relation",
+   "of": [
+    "windmill",
+    "pasture"
+   ],
+   "desc": "the windmill stands at the edge of the pasture",
+   "question": "Does the windmill stand at the edge of the pasture?"
+  },
+  {
+   "id": "gate_open",
+   "type": "state",
+   "of": "gate",
+   "desc": "the rusted gate hangs open",
+   "question": "Does the rusted gate hang open?"
+  },
+  {
+   "id": "gate_leads_pasture",
+   "type": "relation",
+   "of": [
+    "gate",
+    "pasture"
+   ],
+   "desc": "the rusted gate leads to the empty pasture",
+   "question": "Does the rusted gate lead to the empty pasture?"
+  },
+  {
+   "id": "shadow_moves_with_crow",
+   "type": "action",
+   "of": [
+    "shadow",
+    "crow"
+   ],
+   "desc": "the shadow moves in time with the crow's pecking",
+   "question": "Does the shadow move in time with the crow's pecking?"
+  },
+  {
+   "id": "puddle_reflection_root",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects a tree root twisting into a mirror of itself",
+   "question": "Does the puddle reflect a tree root twisting into a mirror of itself?"
+  },
+  {
+   "id": "grass_circular",
+   "type": "state",
+   "of": "pasture",
+   "desc": "the grass in the pasture is bent in a circular pattern",
+   "question": "Is the grass in the pasture bent in a circular pattern?"
+  },
+  {
+   "id": "windmill_stands",
+   "type": "state",
+   "of": "windmill",
+   "desc": "the windmill stands askew",
+   "question": "Does the windmill stand askew?"
+  },
+  {
+   "id": "oak_splintered",
+   "type": "attribute",
+   "of": "oak_tree",
+   "desc": "the oak tree has splintered branches",
+   "question": "Does the oak tree have splintered branches?"
+  },
+  {
+   "id": "crow_moist",
+   "type": "attribute",
+   "of": "crow",
+   "desc": "the crow is glistening with moisture",
+   "question": "Is the crow glistening with moisture?"
+  },
+  {
+   "id": "boot_water",
+   "type": "attribute",
+   "of": "rainboot",
+   "desc": "the rainboot contains a puddle of water",
+   "question": "Does the rainboot contain a puddle of water?"
+  },
+  {
+   "id": "windmill_frozen",
+   "type": "state",
+   "of": "windmill",
+   "desc": "the windmill blades are frozen mid-swing",
+   "question": "Are the windmill blades frozen mid-swing?"
+  },
+  {
+   "id": "shadow_uncaused",
+   "type": "attribute",
+   "of": "shadow",
+   "desc": "the shadow is not cast by any visible object",
+   "question": "Is the shadow not cast by any visible object?"
+  },
+  {
+   "id": "mud_crusted",
+   "type": "attribute",
+   "of": "fire_truck",
+   "desc": "the mud on the fire truck is crusted",
+   "question": "Is the mud on the fire truck crusted?"
+  },
+  {
+   "id": "puddle_reflects_root",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects a tree root",
+   "question": "Does the puddle reflect a tree root?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fire_truck",
+   "to": "quilt",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "fire_truck",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "oak_tree",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "crow",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "apple",
+   "kind": "support"
+  },
+  {
+   "from": "fire_truck",
+   "to": "rainboot",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hose",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bicycle_tire",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "windmill",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "gate",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0320",
+ "prompt": "The storm had long since passed, but its fingerprints lingered in the rusted, sideways fire truck that lay half-buried in the mire of a forgotten field. Mud clung to its flanks like ancient, crusted memories, and the ladder—its metal rungs still grasping a splintered oak branch—angled unnaturally toward the skeletal remains of the tree, which creaked in the wind as if whispering the secrets of its final days. A crow, jet-black and glistening with moisture, perched nearby, its beak delicately pecking at a cracked apple abandoned on the ground, its eyes flicking toward the dangling rainboot from the fire truck’s bumper. The boot swayed gently, still cradling a puddle of rainwater from the storm, as if the child who had lost it had merely stepped into another dimension. A patchwork quilt, its colors dulled by the elements, was pinned awkwardly beneath the truck’s chassis, half-buried and tangled with a length of garden hose that snaked through the mud, trailing into the shadows. The hose was still slightly squirming, as if something had just slipped away from its end. Above, a low-hanging fog draped the field like a veil, reflecting faintly in a nearby puddle that also showed glimpses of the sky and a tree root twisting into a mirror of itself—an illusion that shifted when you blinked. A tire from a long-lost bicycle floated nearby in a pool of standing water, one spoke still turning ever so slowly, despite the stillness of the air. At the edge of the field, a windmill stood askew, its blades frozen mid-swing, though the breeze continued, as if caught in a temporal loop. From its base, a vine curled around a rusted gate, which hung open, leading to an empty pasture where the grass bent unnaturally in a circular pattern, as if once struck by an unseen force. A shadow flickered in the distance, not cast by anything visible, moving in time with the crow’s pecking. The whole scene was frozen in the tension between memory and possibility, the objects interwoven in a silent, shared language of ruin and rebirth. Each element seemed both cause and effect, trapped in a dreamlike cycle where the past was rewritten with every shifting light. The fire truck, the crow, the boot, the root, the shadow—all parts of a greater, unspeakable narrative, suspended in the eerie stillness of a world that almost made sense, if only you could look at it from the right angle.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 9,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

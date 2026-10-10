@@ -1,0 +1,345 @@
+{
+ "style": "watercolor illustration, soft bleeding hues, blurred background",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling construction site with dusty ground",
+   "question": "Does the image depict a construction site with dusty ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick stack",
+   "plural": "brick stacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of red bricks",
+   "question": "Is there a stack of red bricks?",
+   "box": [
+    50,
+    600,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker wearing a yellow hard hat?",
+   "box": [
+    80,
+    300,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "excavator",
+   "type": "entity",
+   "class": "excavator",
+   "plural": "excavators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large orange excavator",
+   "question": "Is there a large orange excavator?",
+   "box": [
+    350,
+    400,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "gravel",
+   "type": "entity",
+   "class": "gravel pile",
+   "plural": "gravel piles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small pile of gray gravel",
+   "question": "Is there a small pile of gray gravel?",
+   "box": [
+    720,
+    750,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman in a high-visibility vest",
+   "question": "Is there a foreman wearing a high-visibility vest?",
+   "box": [
+    750,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "colleague",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colleague in a green shirt",
+   "question": "Is there a colleague wearing a green shirt?",
+   "box": [
+    880,
+    350,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    850,
+    850,
+    980,
+    980
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "wooden beam",
+   "plural": "wooden beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden beam",
+   "question": "Is there a wooden beam?",
+   "box": [
+    820,
+    700,
+    990,
+    780
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white coffee cup",
+   "question": "Is there a white coffee cup?",
+   "box": [
+    880,
+    650,
+    940,
+    720
+   ]
+  },
+  {
+   "id": "worker_blueprints",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds blueprints against his chest",
+   "question": "Is the worker in the yellow hard hat holding blueprints against his chest?"
+  },
+  {
+   "id": "worker_leaning",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat is leaning",
+   "question": "Is the worker in the yellow hard hat leaning?"
+  },
+  {
+   "id": "excavator_idle",
+   "type": "state",
+   "of": "excavator",
+   "desc": "the orange excavator is idle",
+   "question": "Is the orange excavator idle?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "state",
+   "of": "foreman",
+   "desc": "the foreman in the high-visibility vest is pointing",
+   "question": "Is the foreman in the high-visibility vest pointing?"
+  },
+  {
+   "id": "colleague_hands_on_hips",
+   "type": "state",
+   "of": "colleague",
+   "desc": "the colleague in the green shirt has hands on hips",
+   "question": "Does the colleague in the green shirt have hands on hips?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is crouching low",
+   "question": "Is the black cat crouching low?"
+  },
+  {
+   "id": "cup_steam",
+   "type": "state",
+   "of": "cup",
+   "desc": "steam rises from the white coffee cup",
+   "question": "Is steam rising from the white coffee cup?"
+  },
+  {
+   "id": "worker_against_bricks",
+   "type": "relation",
+   "of": [
+    "worker",
+    "bricks"
+   ],
+   "desc": "the worker in the yellow hard hat leans against the stack of red bricks",
+   "question": "Is the worker in the yellow hard hat leaning against the stack of red bricks?"
+  },
+  {
+   "id": "excavator_next_to_gravel",
+   "type": "relation",
+   "of": [
+    "excavator",
+    "gravel"
+   ],
+   "desc": "the orange excavator is next to the pile of gray gravel",
+   "question": "Is the orange excavator next to the pile of gray gravel?"
+  },
+  {
+   "id": "colleague_beside_foreman",
+   "type": "relation",
+   "of": [
+    "colleague",
+    "foreman"
+   ],
+   "desc": "the colleague in the green shirt stands beside the foreman",
+   "question": "Is the colleague in the green shirt standing beside the foreman?"
+  },
+  {
+   "id": "cup_on_beam",
+   "type": "relation",
+   "of": [
+    "cup",
+    "beam"
+   ],
+   "desc": "the white coffee cup is perched on the wooden beam",
+   "question": "Is the white coffee cup perched on the wooden beam?"
+  },
+  {
+   "id": "beam_above_cat",
+   "type": "relation",
+   "of": [
+    "beam",
+    "cat"
+   ],
+   "desc": "the wooden beam is above the black cat",
+   "question": "Is the wooden beam above the black cat?"
+  },
+  {
+   "id": "worker_looking_at_foreman",
+   "type": "action",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the worker in the yellow hard hat looks at the foreman",
+   "question": "Is the worker in the yellow hard hat looking at the foreman?"
+  },
+  {
+   "id": "foreman_directing_colleague",
+   "type": "action",
+   "of": [
+    "foreman",
+    "colleague"
+   ],
+   "desc": "the foreman points toward the colleague in the green shirt",
+   "question": "Is the foreman pointing toward the colleague in the green shirt?"
+  },
+  {
+   "id": "no_machinery_motion",
+   "type": "absent",
+   "desc": "heavy machinery in motion",
+   "question": "Is there any heavy machinery in motion?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat stands",
+   "question": "Is the worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "colleague_standing",
+   "type": "state",
+   "of": "colleague",
+   "desc": "the colleague in the green shirt stands",
+   "question": "Is the colleague in the green shirt standing?"
+  },
+  {
+   "id": "excavator_bucket_ground",
+   "type": "state",
+   "of": "excavator",
+   "desc": "the excavator's bucket rests on the ground",
+   "question": "Does the orange excavator's bucket rest on the ground?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bricks",
+   "to": "worker",
+   "kind": "support"
+  },
+  {
+   "from": "beam",
+   "to": "cup",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0020",
+ "prompt": "This watercolor illustration depicts a bustling construction site rendered in soft, bleeding hues. On the left stands a worker in a yellow hard hat, holding blueprints tightly against his chest while leaning casually against a stack of red bricks. In the center, a large orange excavator sits idle, its metal bucket resting gently on the dusty ground next to a small pile of gray gravel. To the right, a foreman in a high-visibility vest points firmly toward the horizon, directing the attention of a colleague in a green shirt who stands beside him with hands on hips. Near the bottom right corner, a stray black cat crouches low, watching the scene with wide, curious eyes. Above the cat, perched precariously on a wooden beam, is a white coffee cup with steam rising from it. The worker in the yellow hard hat looks directly at the foreman, creating a visual line of communication across the chaotic space. The foreman in the high-visibility vest interacts with the colleague in the green shirt by pointing, establishing a clear directive between them. There is no heavy machinery in motion, ensuring the scene remains calm and static despite the industrial setting. The soft edges of the watercolor style blur the background slightly, emphasizing the six distinct elements in the foreground. The red bricks provide a warm contrast to the cool gray of the gravel, while the orange excavator serves as a vibrant focal point in the middle ground. The black cat adds a touch of life and unpredictability to the structured environment, contrasting with the rigid lines of the construction materials.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

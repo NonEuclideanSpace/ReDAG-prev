@@ -1,0 +1,368 @@
+{
+ "style": "cinematic film still, cool clinical lighting, long shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with floor tiles and a far wall",
+   "question": "Does the image show a sterile hospital corridor with floor tiles and a far wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a tweed coat",
+   "question": "Is there an elderly man in a tweed coat?",
+   "box": [
+    350,
+    300,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    380,
+    500,
+    580,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "young woman",
+   "plural": "young women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a denim jacket",
+   "question": "Is there a young woman in a denim jacket?",
+   "box": [
+    650,
+    250,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "clipboard",
+   "type": "entity",
+   "class": "clipboard",
+   "plural": "clipboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clipboard",
+   "question": "Is there a clipboard?",
+   "box": [
+    150,
+    450,
+    250,
+    550
+   ]
+  },
+  {
+   "id": "janitor",
+   "type": "entity",
+   "class": "janitor",
+   "plural": "janitors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a janitor in gray overalls",
+   "question": "Is there a janitor in gray overalls?",
+   "box": [
+    750,
+    150,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "mop bucket",
+   "plural": "mop buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow mop bucket",
+   "question": "Is there a yellow mop bucket?",
+   "box": [
+    850,
+    500,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "terrier",
+   "plural": "terriers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier with a red collar",
+   "question": "Is there a small terrier with a red collar?",
+   "box": [
+    800,
+    650,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "gurney",
+   "type": "entity",
+   "class": "gurney",
+   "plural": "gurneys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gurney with white sheets",
+   "question": "Is there a gurney with white sheets?",
+   "box": [
+    100,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "nurse_arms_crossed",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs has arms crossed",
+   "question": "Does the nurse in blue scrubs have her arms crossed?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a tweed coat is sitting slumped",
+   "question": "Is the elderly man in a tweed coat sitting slumped?"
+  },
+  {
+   "id": "man_head_bowed",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man in a tweed coat has his head bowed",
+   "question": "Is the elderly man in a tweed coat's head bowed?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman in a denim jacket is leaning forward",
+   "question": "Is the young woman in a denim jacket leaning forward?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "action",
+   "of": [
+    "woman",
+    "clipboard"
+   ],
+   "desc": "the young woman in a denim jacket points at the clipboard",
+   "question": "Is the young woman in a denim jacket pointing at the clipboard?"
+  },
+  {
+   "id": "nurse_holding_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds the clipboard",
+   "question": "Is the nurse in blue scrubs holding the clipboard?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "woman"
+   ],
+   "desc": "the nurse in blue scrubs looks at the young woman's pointing finger",
+   "question": "Is the nurse in blue scrubs looking at the young woman's pointing finger?"
+  },
+  {
+   "id": "janitor_pushing_bucket",
+   "type": "action",
+   "of": [
+    "janitor",
+    "bucket"
+   ],
+   "desc": "the janitor in gray overalls pushes the yellow mop bucket",
+   "question": "Is the janitor in gray overalls pushing the yellow mop bucket?"
+  },
+  {
+   "id": "janitor_watching",
+   "type": "action",
+   "of": [
+    "janitor",
+    "nurse"
+   ],
+   "desc": "the janitor in gray overalls watches the nurse and the young woman",
+   "question": "Is the janitor in gray overalls watching the interaction between the nurse and the young woman?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small terrier with a red collar sits patiently",
+   "question": "Is the small terrier with a red collar sitting?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "action",
+   "of": [
+    "dog",
+    "janitor"
+   ],
+   "desc": "the small terrier with a red collar looks up at the janitor",
+   "question": "Is the small terrier with a red collar looking up at the janitor?"
+  },
+  {
+   "id": "gurney_empty",
+   "type": "state",
+   "of": "gurney",
+   "desc": "the gurney with white sheets is empty",
+   "question": "Is the gurney with white sheets empty?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the elderly man in a tweed coat sits on the plastic chair",
+   "question": "Is the elderly man in a tweed coat sitting on the plastic chair?"
+  },
+  {
+   "id": "woman_right_of_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the young woman in a denim jacket is to the right of the elderly man",
+   "question": "Is the young woman in a denim jacket to the right of the elderly man?"
+  },
+  {
+   "id": "janitor_behind_group",
+   "type": "relation",
+   "of": [
+    "janitor",
+    "nurse"
+   ],
+   "desc": "the janitor in gray overalls is behind the nurse and the young woman",
+   "question": "Is the janitor in gray overalls behind the nurse and the young woman?"
+  },
+  {
+   "id": "dog_next_to_bucket",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bucket"
+   ],
+   "desc": "the small terrier with a red collar is next to the yellow mop bucket",
+   "question": "Is the small terrier with a red collar next to the yellow mop bucket?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "janitor_behind_man",
+   "type": "relation",
+   "of": [
+    "janitor",
+    "man"
+   ],
+   "desc": "the janitor in gray overalls is behind the elderly man",
+   "question": "Is the janitor in gray overalls behind the elderly man?"
+  },
+  {
+   "id": "gurney_against_wall",
+   "type": "state",
+   "of": "gurney",
+   "desc": "the gurney with white sheets stands against the far wall",
+   "question": "Is the gurney with white sheets standing against the far wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "gurney",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0056",
+ "prompt": "A cinematic film still captures a tense moment in a sterile hospital corridor. On the left, a nurse in blue scrubs stands with arms crossed, her posture rigid and defensive. In the center, an elderly man in a tweed coat sits slumped on a plastic chair, his head bowed in exhaustion. To his right, a young woman in a denim jacket leans forward, pointing urgently at a clipboard held by the nurse. The nurse looks directly at the pointing finger, her expression unreadable. Behind them, a janitor in gray overalls pushes a yellow mop bucket, pausing to watch the confrontation unfold. Next to the bucket, a small terrier with a red collar sits patiently, looking up at the janitor. A gurney with white sheets stands empty against the far wall. There is no blood visible anywhere in the scene. The lighting is cool and clinical, casting long shadows down the hallway. The nurse's stance suggests authority, while the seated man appears defeated. The interaction between the woman and the nurse is the focal point, with the pointing gesture bridging the gap between them. The janitor remains an observer, detached from the immediate conflict. The dog provides a touch of warmth amidst the cold environment. The empty gurney hints at recent activity without showing it. The composition balances the three main figures across the width of the frame, creating a dynamic triangular relationship. The textures of the tweed, denim, and scrubs are distinct and tangible. The floor tiles reflect the overhead lights, adding depth to the space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

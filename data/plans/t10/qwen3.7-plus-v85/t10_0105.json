@@ -1,0 +1,310 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sun-drenched beach volleyball court with a net and sideline",
+   "question": "Does the image show a sun-drenched beach volleyball court with a net and sideline?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a neon pink bikini",
+   "question": "Is there a woman in a neon pink bikini?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue cap",
+   "question": "Is there a man in a blue cap?",
+   "box": [
+    280,
+    320,
+    480,
+    900
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "volleyball",
+   "plural": "volleyballs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow volleyball",
+   "question": "Is there a yellow volleyball?",
+   "box": [
+    460,
+    150,
+    560,
+    250
+   ]
+  },
+  {
+   "id": "player",
+   "type": "entity",
+   "class": "player",
+   "plural": "players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in black shorts",
+   "question": "Is there a player in black shorts?",
+   "box": [
+    600,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    750,
+    350,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "cooler",
+   "type": "entity",
+   "class": "cooler",
+   "plural": "coolers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tan cooler",
+   "question": "Is there a tan cooler?",
+   "box": [
+    850,
+    700,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "bottles",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of discarded water bottles",
+   "question": "Is there a pile of discarded water bottles?",
+   "box": [
+    900,
+    720,
+    1024,
+    880
+   ]
+  },
+  {
+   "id": "woman_coiled",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a neon pink bikini has a body coiled in anticipation",
+   "question": "Is the woman in a neon pink bikini coiled in anticipation?"
+  },
+  {
+   "id": "man_towel",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a blue cap holds a white towel",
+   "question": "Is the man in a blue cap holding a white towel?"
+  },
+  {
+   "id": "man_slumped",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue cap has a posture slumped in exhaustion",
+   "question": "Is the man in a blue cap slumped in exhaustion?"
+  },
+  {
+   "id": "ball_suspended",
+   "type": "state",
+   "of": "ball",
+   "desc": "the yellow volleyball hangs suspended in mid-air",
+   "question": "Is the yellow volleyball suspended in mid-air?"
+  },
+  {
+   "id": "player_leaping",
+   "type": "state",
+   "of": "player",
+   "desc": "the player in black shorts is leaping high",
+   "question": "Is the player in black shorts leaping high?"
+  },
+  {
+   "id": "referee_watching",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt is watching intently",
+   "question": "Is the referee in a striped shirt watching intently?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a neon pink bikini stands on the left beside the man in a blue cap",
+   "question": "Is the woman in a neon pink bikini standing beside the man in a blue cap?"
+  },
+  {
+   "id": "ball_center",
+   "type": "relation",
+   "of": [
+    "ball",
+    "player"
+   ],
+   "desc": "the yellow volleyball is to the right of the player in black shorts",
+   "question": "Is the yellow volleyball to the right of the player in black shorts?"
+  },
+  {
+   "id": "referee_behind_net",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt is behind the net",
+   "question": "Is the referee in a striped shirt behind the net?"
+  },
+  {
+   "id": "cooler_next_to_bottles",
+   "type": "relation",
+   "of": [
+    "cooler",
+    "bottles"
+   ],
+   "desc": "the tan cooler sits next to the pile of discarded water bottles",
+   "question": "Is the tan cooler next to the pile of discarded water bottles?"
+  },
+  {
+   "id": "woman_looking_ball",
+   "type": "action",
+   "of": [
+    "woman",
+    "ball"
+   ],
+   "desc": "the woman in a neon pink bikini is looking at the airborne yellow volleyball",
+   "question": "Is the woman in a neon pink bikini looking at the yellow volleyball?"
+  },
+  {
+   "id": "player_reaching_ball",
+   "type": "action",
+   "of": [
+    "player",
+    "ball"
+   ],
+   "desc": "the player in black shorts is reaching for the yellow volleyball",
+   "question": "Is the player in black shorts reaching for the yellow volleyball?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience in the background",
+   "question": "Is there an audience in the background?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a neon pink bikini stands",
+   "question": "Is the woman in a neon pink bikini standing?"
+  },
+  {
+   "id": "man_wiping",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a blue cap wipes his brow with the towel",
+   "question": "Is the man in a blue cap wiping his brow with the white towel?"
+  },
+  {
+   "id": "player_arm_extended",
+   "type": "state",
+   "of": "player",
+   "desc": "the player in black shorts has an arm extended upward",
+   "question": "Does the player in black shorts have an arm extended upward?"
+  },
+  {
+   "id": "referee_hands_clasped",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in a striped shirt has hands clasped behind his back",
+   "question": "Does the referee in a striped shirt have his hands clasped behind his back?"
+  },
+  {
+   "id": "cooler_near_sideline",
+   "type": "state",
+   "of": "cooler",
+   "desc": "the tan cooler is near the sideline",
+   "question": "Is the tan cooler near the sideline of the court?"
+  }
+ ],
+ "edges": [],
+ "id": "t10_0105",
+ "prompt": "Rendered in the style of an oil painting, a sun-drenched beach volleyball court hosts a tense moment. On the left stands a woman in a neon pink bikini, her body coiled in anticipation. Beside her, a man in a blue cap wipes sweat from his brow with a white towel, his posture slumped in exhaustion. In the center, a yellow volleyball hangs suspended in mid-air, caught in the golden light. To the right of the ball, a player in black shorts leaps high, arm extended upward to strike. Behind the net, a referee in a striped shirt watches intently, hands clasped behind his back. Near the sideline, a tan cooler sits next to a pile of discarded water bottles. The woman in the neon pink bikini is looking at the airborne yellow volleyball. The player in black shorts is reaching for the yellow volleyball. There is no audience in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "ball_right_player",
+     "ball_center"
+    ],
+    [
+     "referee_behind_net_rel",
+     "referee_behind_net"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,370 @@
+{
+ "style": "photorealistic architectural photography, wide angle, natural daylight",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a hillside overlooking the Mediterranean sea",
+   "question": "Does the background show a hillside overlooking the Mediterranean sea?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "amphitheater",
+   "type": "entity",
+   "class": "amphitheater",
+   "plural": "amphitheaters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a colossal ancient Greek amphitheater",
+   "question": "Is there a colossal ancient Greek amphitheater?",
+   "box": [
+    50,
+    100,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "seating",
+   "type": "entity",
+   "class": "tiered seating",
+   "plural": "tiered seatings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "semicircular tiered seating",
+   "question": "Is there semicircular tiered seating?",
+   "box": [
+    100,
+    150,
+    924,
+    600
+   ]
+  },
+  {
+   "id": "columns",
+   "type": "entity",
+   "class": "column",
+   "plural": "columns",
+   "count": 2,
+   "count_exact": false,
+   "desc": "many tall columns with ornate capitals",
+   "question": "Are there many tall columns with ornate capitals?",
+   "box": [
+    200,
+    500,
+    824,
+    700
+   ]
+  },
+  {
+   "id": "orchestra_floor",
+   "type": "entity",
+   "class": "orchestra floor",
+   "plural": "orchestra floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an orchestra floor paved with geometric mosaics",
+   "question": "Is there an orchestra floor paved with geometric mosaics?",
+   "box": [
+    300,
+    700,
+    724,
+    850
+   ]
+  },
+  {
+   "id": "backdrop_wall",
+   "type": "entity",
+   "class": "backdrop wall",
+   "plural": "backdrop walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a backdrop wall featuring raised sculptural reliefs",
+   "question": "Is there a backdrop wall featuring raised sculptural reliefs?",
+   "box": [
+    250,
+    450,
+    774,
+    650
+   ]
+  },
+  {
+   "id": "archways",
+   "type": "entity",
+   "class": "archway",
+   "plural": "archways",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three grand archways topped with triangular decorative elements",
+   "question": "Are there three grand archways topped with triangular decorative elements?",
+   "box": [
+    150,
+    600,
+    874,
+    800
+   ]
+  },
+  {
+   "id": "staining",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "honey-colored staining on some sections of the stone surfaces",
+   "question": "Do some sections of the stone surfaces show honey-colored staining?"
+  },
+  {
+   "id": "seating_part_of_amphitheater",
+   "type": "relation",
+   "of": [
+    "seating",
+    "amphitheater"
+   ],
+   "desc": "the tiered seating is part of the amphitheater structure",
+   "question": "Is the tiered seating part of the amphitheater structure?"
+  },
+  {
+   "id": "columns_frame_stage",
+   "type": "relation",
+   "of": [
+    "columns",
+    "amphitheater"
+   ],
+   "desc": "the columns frame the stage area of the amphitheater",
+   "question": "Do the columns frame the stage area of the amphitheater?"
+  },
+  {
+   "id": "orchestra_floor_in_amphitheater",
+   "type": "relation",
+   "of": [
+    "orchestra_floor",
+    "amphitheater"
+   ],
+   "desc": "the orchestra floor is in the amphitheater",
+   "question": "Is the orchestra floor in the amphitheater?"
+  },
+  {
+   "id": "backdrop_wall_in_amphitheater",
+   "type": "relation",
+   "of": [
+    "backdrop_wall",
+    "amphitheater"
+   ],
+   "desc": "the backdrop wall is in the amphitheater",
+   "question": "Is the backdrop wall in the amphitheater?"
+  },
+  {
+   "id": "archways_in_amphitheater",
+   "type": "relation",
+   "of": [
+    "archways",
+    "amphitheater"
+   ],
+   "desc": "the archways provide entrance to the seating area of the amphitheater",
+   "question": "Do the archways provide entrance to the seating area of the amphitheater?"
+  },
+  {
+   "id": "no_steel",
+   "type": "absent",
+   "desc": "steel reinforcements",
+   "question": "Are there any steel reinforcements visible in the amphitheater?"
+  },
+  {
+   "id": "no_restoration",
+   "type": "absent",
+   "desc": "signs of recent restoration",
+   "question": "Are there any signs of recent restoration visible in the amphitheater?"
+  },
+  {
+   "id": "amphitheater_carved",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "the amphitheater is carved from white stone",
+   "question": "Is the amphitheater carved from white stone?"
+  },
+  {
+   "id": "amphitheater_on_hillside",
+   "type": "state",
+   "of": "amphitheater",
+   "desc": "the amphitheater is on the hillside",
+   "question": "Is the amphitheater located on the hillside?"
+  },
+  {
+   "id": "seating_semicircular",
+   "type": "state",
+   "of": "seating",
+   "desc": "the tiered seating is semicircular",
+   "question": "Is the tiered seating semicircular?"
+  },
+  {
+   "id": "seating_concentric_arcs",
+   "type": "attribute",
+   "of": "seating",
+   "desc": "the tiered seating rises in perfect concentric arcs",
+   "question": "Does the tiered seating rise in perfect concentric arcs?"
+  },
+  {
+   "id": "seating_steps",
+   "type": "attribute",
+   "of": "seating",
+   "desc": "each row of the tiered seating is separated by smooth stone steps",
+   "question": "Are the rows of the tiered seating separated by smooth stone steps?"
+  },
+  {
+   "id": "columns_count",
+   "type": "attribute",
+   "of": "columns",
+   "desc": "there are many tall columns",
+   "question": "Are there many tall columns?"
+  },
+  {
+   "id": "columns_height",
+   "type": "attribute",
+   "of": "columns",
+   "desc": "the columns are twelve feet tall",
+   "question": "Are the columns twelve feet tall?"
+  },
+  {
+   "id": "columns_leaf_patterns",
+   "type": "attribute",
+   "of": "columns",
+   "desc": "the columns are carved with delicate decorative leaf patterns",
+   "question": "Are the columns carved with delicate decorative leaf patterns?"
+  },
+  {
+   "id": "orchestra_floor_geometric",
+   "type": "attribute",
+   "of": "orchestra_floor",
+   "desc": "the orchestra floor is paved with geometric mosaics",
+   "question": "Is the orchestra floor paved with geometric mosaics?"
+  },
+  {
+   "id": "orchestra_floor_bw",
+   "type": "attribute",
+   "of": "orchestra_floor",
+   "desc": "the geometric mosaics are in black and white patterned stone",
+   "question": "Are the geometric mosaics in black and white patterned stone?"
+  },
+  {
+   "id": "backdrop_reliefs_figures",
+   "type": "attribute",
+   "of": "backdrop_wall",
+   "desc": "the raised sculptural reliefs depict figures and scenes",
+   "question": "Do the raised sculptural reliefs depict figures and scenes?"
+  },
+  {
+   "id": "archways_count",
+   "type": "attribute",
+   "of": "archways",
+   "desc": "there are three grand archways",
+   "question": "Are there three grand archways?"
+  },
+  {
+   "id": "archways_triangular_elements",
+   "type": "attribute",
+   "of": "archways",
+   "desc": "the archways are topped with triangular decorative elements",
+   "question": "Are the archways topped with triangular decorative elements?"
+  },
+  {
+   "id": "triangular_elements_figures",
+   "type": "attribute",
+   "of": "archways",
+   "desc": "the triangular decorative elements are carved with multiple human figures",
+   "question": "Are the triangular decorative elements carved with multiple human figures?"
+  },
+  {
+   "id": "amphitheater_weathering_streaks",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "the stone surfaces show natural weathering streaks",
+   "question": "Do the stone surfaces show natural weathering streaks?"
+  },
+  {
+   "id": "amphitheater_plant_growth",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "there is green plant growth in the crevices of the stone surfaces",
+   "question": "Is there green plant growth in the crevices of the stone surfaces?"
+  },
+  {
+   "id": "amphitheater_honey_staining",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "some sections of the stone surfaces display honey-colored staining",
+   "question": "Do some sections of the stone surfaces display honey-colored staining?"
+  },
+  {
+   "id": "amphitheater_classical_architecture",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "the amphitheater displays authentic classical architecture",
+   "question": "Does the amphitheater display authentic classical architecture?"
+  },
+  {
+   "id": "amphitheater_weathered",
+   "type": "attribute",
+   "of": "amphitheater",
+   "desc": "the amphitheater has weathered surfaces and age-old patina",
+   "question": "Does the amphitheater have weathered surfaces and age-old patina?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "amphitheater",
+   "to": "seating",
+   "kind": "support"
+  },
+  {
+   "from": "amphitheater",
+   "to": "columns",
+   "kind": "support"
+  },
+  {
+   "from": "amphitheater",
+   "to": "orchestra_floor",
+   "kind": "support"
+  },
+  {
+   "from": "amphitheater",
+   "to": "backdrop_wall",
+   "kind": "support"
+  },
+  {
+   "from": "amphitheater",
+   "to": "archways",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_022",
+ "prompt": "A single colossal ancient Greek amphitheater carved from white stone on a hillside overlooking the Mediterranean sea. The structure is semicircular with tiered seating that rises in perfect concentric arcs, each row separated by smooth stone steps. The amphitheater is not modern, displaying authentic classical architecture with weathered surfaces and age-old patina. Many tall columns with ornate capitals frame the stage area, each standing twelve feet tall and carved with delicate decorative leaf patterns. The orchestra floor is paved with geometric mosaics in black and white patterned stone, while the backdrop wall features raised sculptural reliefs depicting figures and scenes. Three grand archways provide entrance to the seating area, each topped with triangular decorative elements carved with multiple human figures. The stone surfaces show natural weathering streaks and green plant growth in the crevices, while some sections display honey-colored staining from centuries of exposure. The amphitheater contains no steel reinforcements and shows no signs of recent restoration, preserving its original Hellenistic grandeur.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node amphitheater: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 18,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

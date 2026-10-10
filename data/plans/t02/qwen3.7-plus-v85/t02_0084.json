@@ -1,0 +1,200 @@
+{
+ "style": "cinematic film still, twilight lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "rugged mountain peaks under a twilight sky",
+   "question": "Does the background show rugged mountain peaks under a twilight sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden log",
+   "question": "Is there a wooden log?",
+   "box": [
+    50,
+    600,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman wearing a blue beanie?",
+   "box": [
+    100,
+    350,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "bear",
+   "type": "entity",
+   "class": "black bear",
+   "plural": "black bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black bear",
+   "question": "Is there a black bear?",
+   "box": [
+    450,
+    300,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camping tent",
+   "question": "Is there a camping tent?",
+   "box": [
+    700,
+    400,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is sitting",
+   "question": "Is the woman in the blue beanie sitting?"
+  },
+  {
+   "id": "woman_holding_mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue beanie holds a mug with both hands",
+   "question": "Is the woman in the blue beanie holding a mug with both hands?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bear"
+   ],
+   "desc": "the woman in the blue beanie looks at the black bear",
+   "question": "Does the woman in the blue beanie look at the black bear?"
+  },
+  {
+   "id": "bear_standing",
+   "type": "state",
+   "of": "bear",
+   "desc": "the black bear stands on its hind legs",
+   "question": "Is the black bear standing on its hind legs?"
+  },
+  {
+   "id": "bear_sniffing",
+   "type": "state",
+   "of": "bear",
+   "desc": "the black bear is sniffing the air",
+   "question": "Is the black bear sniffing the air?"
+  },
+  {
+   "id": "woman_on_log",
+   "type": "relation",
+   "of": [
+    "woman",
+    "log"
+   ],
+   "desc": "the woman in the blue beanie sits on the log",
+   "question": "Is the woman in the blue beanie sitting on the log?"
+  },
+  {
+   "id": "bear_near_tent",
+   "type": "relation",
+   "of": [
+    "bear",
+    "tent"
+   ],
+   "desc": "the black bear is near the tent",
+   "question": "Is the black bear near the tent?"
+  },
+  {
+   "id": "bear_right_of_woman",
+   "type": "relation",
+   "of": [
+    "bear",
+    "woman"
+   ],
+   "desc": "the black bear is to the right of the woman in the blue beanie",
+   "question": "Is the black bear to the right of the woman in the blue beanie?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the scene?"
+  },
+  {
+   "id": "woman_wide_eyes",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie has wide eyes",
+   "question": "Does the woman in the blue beanie have wide eyes?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "woman",
+   "desc": "steam rises from the mug held by the woman in the blue beanie",
+   "question": "Does steam rise from the mug held by the woman in the blue beanie?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0084",
+ "prompt": "A cinematic film still captures a quiet mountain campsite. On the left, a woman in a blue beanie sits on a log, holding a steaming mug with both hands. To her right, a black bear stands on its hind legs, sniffing the air near a tent. The woman looks at the bear with wide eyes. There is no fire in the scene. The rugged peaks loom in the background under a twilight sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an indoor scene with a stone floor and a glass ceiling",
+   "question": "Does the image show an indoor scene with a stone floor and a glass ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    300,
+    600,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    150,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a tweed cap",
+   "question": "Is there an old man in a tweed cap?",
+   "box": [
+    380,
+    150,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    450,
+    550,
+    574,
+    700
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern frond",
+   "plural": "fern fronds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern frond",
+   "question": "Is there a large fern frond?",
+   "box": [
+    700,
+    200,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "palm",
+   "type": "entity",
+   "class": "palm tree",
+   "plural": "palm trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall potted palm tree",
+   "question": "Is there a tall potted palm tree?",
+   "box": [
+    750,
+    100,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "can",
+   "type": "entity",
+   "class": "watering can",
+   "plural": "watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted watering can",
+   "question": "Is there a rusted watering can?",
+   "box": [
+    900,
+    800,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "woman_glass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a magnifying glass",
+   "question": "Is the woman in a blue dress holding a magnifying glass?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in a blue dress looks at the fern frond",
+   "question": "Is the woman in a blue dress looking at the large fern frond?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the old man in a tweed cap points at the large fern frond",
+   "question": "Is the old man in a tweed cap pointing at the large fern frond?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat observes the scene",
+   "question": "Is the black cat observing the scene?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the old man in a tweed cap is next to the woman in a blue dress",
+   "question": "Is the old man in a tweed cap next to the woman in a blue dress?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat sits on the wooden bench",
+   "question": "Is the black cat sitting on the wooden bench?"
+  },
+  {
+   "id": "palm_behind_bench",
+   "type": "relation",
+   "of": [
+    "palm",
+    "bench"
+   ],
+   "desc": "the tall potted palm tree is behind the wooden bench",
+   "question": "Is the tall potted palm tree behind the wooden bench?"
+  },
+  {
+   "id": "can_on_floor",
+   "type": "state",
+   "of": "can",
+   "desc": "the rusted watering can rests on the stone floor",
+   "question": "Does the rusted watering can rest on the stone floor?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through the glass",
+   "question": "Is there sunlight streaming through the glass?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0070",
+ "prompt": "In a cinematic film still, a woman in a blue dress stands on the left holding a magnifying glass. Next to her on the right, an old man in a tweed cap points at a large fern frond. In the center, a black cat sits on a wooden bench observing the scene. Behind the bench, a tall potted palm tree rises toward the glass ceiling. To the far right, a rusted watering can rests on the stone floor. The woman looks at the fern frond indicated by the man. The black cat sits on the wooden bench. There is no sunlight streaming through the glass.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

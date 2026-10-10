@@ -1,0 +1,354 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plush train dining car interior with booths and a table",
+   "question": "Does the image show a plush train dining car interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "booth",
+   "type": "entity",
+   "class": "booth",
+   "plural": "booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush dining car booth",
+   "question": "Is there a plush dining car booth?",
+   "box": [
+    50,
+    300,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    300,
+    550,
+    724,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    100,
+    250,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman with blue hair",
+   "question": "Is there a woman with blue hair?",
+   "box": [
+    624,
+    250,
+    924,
+    600
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bowl of ramen",
+   "question": "Is there a bowl of ramen?",
+   "box": [
+    460,
+    580,
+    564,
+    680
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    580,
+    600,
+    680,
+    800
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a black vest",
+   "question": "Is there a waiter in a black vest?",
+   "box": [
+    400,
+    100,
+    624,
+    400
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    150,
+    350,
+    350,
+    650
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a menu",
+   "question": "Is there a menu?",
+   "box": [
+    250,
+    450,
+    350,
+    550
+   ]
+  },
+  {
+   "id": "spoon",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a silver spoon",
+   "question": "Is the man in a red scarf holding a silver spoon?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf is sitting",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with blue hair is sitting",
+   "question": "Is the woman with blue hair sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman with blue hair is looking at the spoon",
+   "question": "Is the woman with blue hair looking at the spoon?"
+  },
+  {
+   "id": "bowl_steaming",
+   "type": "state",
+   "of": "bowl",
+   "desc": "the bowl of ramen is steaming",
+   "question": "Is the bowl of ramen steaming?"
+  },
+  {
+   "id": "dog_standing",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is standing on its hind legs",
+   "question": "Is the small brown dog standing on its hind legs?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a black vest is standing",
+   "question": "Is the waiter in a black vest standing?"
+  },
+  {
+   "id": "child_seated",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is seated",
+   "question": "Is the child in a yellow hat seated?"
+  },
+  {
+   "id": "child_looking",
+   "type": "relation",
+   "of": [
+    "child",
+    "menu"
+   ],
+   "desc": "the child in a yellow hat is looking at the menu",
+   "question": "Is the child in a yellow hat looking at the menu?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf is handing the silver spoon to the woman with blue hair",
+   "question": "Is the man in a red scarf handing a silver spoon to the woman with blue hair?"
+  },
+  {
+   "id": "man_left_woman_right",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf sits directly across from the woman with blue hair",
+   "question": "Is the man in a red scarf sitting directly across from the woman with blue hair?"
+  },
+  {
+   "id": "bowl_on_table",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "table"
+   ],
+   "desc": "the bowl of ramen rests on the table",
+   "question": "Is the bowl of ramen resting on the table?"
+  },
+  {
+   "id": "dog_next_to_bowl",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bowl"
+   ],
+   "desc": "the small brown dog is next to the bowl of ramen",
+   "question": "Is the small brown dog next to the bowl of ramen?"
+  },
+  {
+   "id": "dog_reaching",
+   "type": "relation",
+   "of": [
+    "dog",
+    "bowl"
+   ],
+   "desc": "the small brown dog is reaching up toward the bowl of ramen",
+   "question": "Is the small brown dog reaching up toward the bowl of ramen?"
+  },
+  {
+   "id": "waiter_behind_booth",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "booth"
+   ],
+   "desc": "the waiter in a black vest stands behind the booth",
+   "question": "Is the waiter in a black vest standing behind the booth?"
+  },
+  {
+   "id": "waiter_pointing",
+   "type": "action",
+   "of": [
+    "waiter",
+    "menu"
+   ],
+   "desc": "the waiter in a black vest is pointing at the menu",
+   "question": "Is the waiter in a black vest pointing at the menu?"
+  },
+  {
+   "id": "child_holding_menu",
+   "type": "action",
+   "of": [
+    "child",
+    "menu"
+   ],
+   "desc": "the child in a yellow hat holds the menu",
+   "question": "Is the child in a yellow hat holding the menu?"
+  },
+  {
+   "id": "child_next_to_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in a yellow hat is seated next to the man in a red scarf",
+   "question": "Is the child in a yellow hat seated next to the man in a red scarf?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "bowl",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0042",
+ "prompt": "In an anime style illustration, a man in a red scarf sits on the left side of a plush train dining car booth. He is handing a silver spoon to a woman with blue hair who sits directly across from him on the right. The woman with blue hair is looking at the spoon being offered. In the center of the table rests a steaming bowl of ramen. Next to the bowl, a small brown dog stands on its hind legs, reaching up toward the food. A waiter in a black vest stands behind the booth, pointing at a menu held by a child in a yellow hat seated next to the man in the red scarf. The child in the yellow hat is looking at the menu. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

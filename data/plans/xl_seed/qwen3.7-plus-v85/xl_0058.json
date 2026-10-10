@@ -1,0 +1,403 @@
+{
+ "style": "charming 3D animated film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bicycle repair shop with walls adorned with posters of famous races",
+   "question": "Does the image show a bicycle repair shop with walls adorned with posters of famous races?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic",
+   "question": "Is there a mechanic?",
+   "box": [
+    350,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "purple_bike",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a purple bicycle frame",
+   "question": "Is there a purple bicycle frame?",
+   "box": [
+    400,
+    300,
+    700,
+    700
+   ]
+  },
+  {
+   "id": "stand",
+   "type": "entity",
+   "class": "repair stand",
+   "plural": "repair stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle repair stand",
+   "question": "Is there a bicycle repair stand?",
+   "box": [
+    450,
+    500,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a helmet",
+   "question": "Is there a customer in a helmet?",
+   "box": [
+    50,
+    250,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small robot with round eyes",
+   "question": "Is there a small robot with round eyes?",
+   "box": [
+    750,
+    300,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toolbox",
+   "question": "Is there a toolbox?",
+   "box": [
+    780,
+    500,
+    920,
+    650
+   ]
+  },
+  {
+   "id": "hanging_bikes",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "various bicycles including a tiny tricycle and a large tandem bike hanging from the ceiling",
+   "question": "Are there various bicycles including a tiny tricycle and a large tandem bike hanging from the ceiling?",
+   "box": [
+    100,
+    0,
+    900,
+    200
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench",
+   "question": "Is there a workbench?",
+   "box": [
+    0,
+    700,
+    400,
+    1024
+   ]
+  },
+  {
+   "id": "spare_parts",
+   "type": "entity",
+   "class": "spare part",
+   "plural": "spare parts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of spare tires and gears",
+   "question": "Is there a pile of spare parts?",
+   "box": [
+    50,
+    750,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "coffee_cup",
+   "type": "entity",
+   "class": "cup",
+   "plural": "cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming cup of coffee",
+   "question": "Is there a steaming cup of coffee?",
+   "box": [
+    280,
+    780,
+    350,
+    880
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shelf",
+   "question": "Is there a shelf?",
+   "box": [
+    800,
+    100,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "parrot",
+   "type": "entity",
+   "class": "parrot",
+   "plural": "parrots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a parrot",
+   "question": "Is there a parrot?",
+   "box": [
+    850,
+    120,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "mechanic_tightening",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "purple_bike"
+   ],
+   "desc": "the mechanic tightens a bolt on the purple bicycle frame",
+   "question": "Is the mechanic tightening a bolt on the purple bicycle frame?"
+  },
+  {
+   "id": "bike_on_stand",
+   "type": "relation",
+   "of": [
+    "purple_bike",
+    "stand"
+   ],
+   "desc": "the purple bicycle frame is mounted on the stand",
+   "question": "Is the purple bicycle frame mounted on the stand?"
+  },
+  {
+   "id": "customer_watching",
+   "type": "action",
+   "of": [
+    "customer",
+    "mechanic"
+   ],
+   "desc": "the customer watches the mechanic intently",
+   "question": "Is the customer watching the mechanic intently?"
+  },
+  {
+   "id": "customer_holding_wrench",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the customer holds a wrench",
+   "question": "Is the customer holding a wrench?"
+  },
+  {
+   "id": "robot_rolling",
+   "type": "state",
+   "of": "robot",
+   "desc": "the robot rolls forward",
+   "question": "Is the robot rolling forward?"
+  },
+  {
+   "id": "robot_carrying_toolbox",
+   "type": "action",
+   "of": [
+    "robot",
+    "toolbox"
+   ],
+   "desc": "the robot carries the toolbox in its metallic arms",
+   "question": "Is the robot carrying the toolbox in its metallic arms?"
+  },
+  {
+   "id": "parts_on_workbench",
+   "type": "relation",
+   "of": [
+    "spare_parts",
+    "workbench"
+   ],
+   "desc": "the pile of spare tires and gears sits on the workbench",
+   "question": "Does the pile of spare tires and gears sit on the workbench?"
+  },
+  {
+   "id": "cup_next_to_parts",
+   "type": "relation",
+   "of": [
+    "coffee_cup",
+    "spare_parts"
+   ],
+   "desc": "the steaming cup of coffee is next to the pile of spare tires and gears",
+   "question": "Is the steaming cup of coffee next to the pile of spare tires and gears?"
+  },
+  {
+   "id": "parrot_on_shelf",
+   "type": "relation",
+   "of": [
+    "parrot",
+    "shelf"
+   ],
+   "desc": "the parrot perches on the shelf",
+   "question": "Does the parrot perch on the shelf?"
+  },
+  {
+   "id": "mechanic_standing",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is standing",
+   "question": "Is the mechanic standing?"
+  },
+  {
+   "id": "customer_standing",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer in a helmet stands",
+   "question": "Is the customer in a helmet standing?"
+  },
+  {
+   "id": "mechanic_grease",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the mechanic has grease-stained hands",
+   "question": "Does the mechanic have grease-stained hands?"
+  },
+  {
+   "id": "robot_arms",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot has metallic arms",
+   "question": "Does the robot have metallic arms?"
+  },
+  {
+   "id": "tires",
+   "type": "entity",
+   "class": "tire",
+   "plural": "tires",
+   "count": 2,
+   "count_exact": false,
+   "desc": "spare tires in the pile",
+   "question": "Are there spare tires in the pile?",
+   "box": [
+    120,
+    780,
+    250,
+    920
+   ]
+  },
+  {
+   "id": "gears",
+   "type": "entity",
+   "class": "gear",
+   "plural": "gears",
+   "count": 2,
+   "count_exact": false,
+   "desc": "gears in the pile",
+   "question": "Are there gears in the pile?",
+   "box": [
+    260,
+    780,
+    380,
+    920
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "stand",
+   "to": "purple_bike",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "spare_parts",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "coffee_cup",
+   "kind": "support"
+  },
+  {
+   "from": "shelf",
+   "to": "parrot",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0058",
+ "prompt": "Rendered in a charming 3D animated film still style, this bicycle repair shop is filled with colorful tools and quirky details. In the center, a mechanic with grease-stained hands tightens a bolt on a purple bicycle frame mounted on a stand. To the left, a customer in a helmet watches intently, holding a wrench as if ready to help. On the right, a small robot with round eyes rolls forward, carrying a toolbox in its metallic arms. Above them, various bicycles hang from the ceiling, including a tiny tricycle and a large tandem bike. In the foreground, a pile of spare tires and gears sits on a workbench next to a steaming cup of coffee. A parrot perches on a shelf in the background, mimicking the sound of a ringing bell. The lighting is bright and even, with soft shadows that emphasize the smooth surfaces of the metal parts and the playful expressions of the characters. The walls are adorned with posters of famous races, adding depth and context to the busy workshop environment, while the overall composition remains balanced and visually engaging without clutter.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node hanging_bikes: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

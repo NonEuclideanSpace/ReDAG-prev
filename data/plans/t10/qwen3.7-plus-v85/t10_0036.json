@@ -1,0 +1,416 @@
+{
+ "style": "photorealistic photo, sharp clarity on textures, diffuse overcast lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with classic brick buildings with shuttered windows and packed snow ground with faint footprints",
+   "question": "Does the image show a snowy town square with classic brick buildings with shuttered windows and packed snow ground with faint footprints?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "fountain",
+   "plural": "fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ornate stone fountain",
+   "question": "Is there an ornate stone fountain?",
+   "box": [
+    360,
+    300,
+    664,
+    700
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a bright yellow coat",
+   "question": "Is there a woman in a bright yellow coat?",
+   "box": [
+    150,
+    350,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a blue knit hat",
+   "question": "Is there a small child in a blue knit hat?",
+   "box": [
+    300,
+    500,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a heavy gray wool coat",
+   "question": "Is there a man in a heavy gray wool coat?",
+   "box": [
+    700,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    680,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    850,
+    650,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street vendor in a green apron",
+   "question": "Is there a street vendor in a green apron?",
+   "box": [
+    100,
+    200,
+    250,
+    500
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cart",
+   "question": "Is there a cart?",
+   "box": [
+    50,
+    400,
+    200,
+    600
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a partially obscured customer",
+   "question": "Is there a partially obscured customer?",
+   "box": [
+    200,
+    250,
+    300,
+    450
+   ]
+  },
+  {
+   "id": "woman_cup",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a bright yellow coat holds a steaming paper cup",
+   "question": "Is the woman in a bright yellow coat holding a steaming paper cup?"
+  },
+  {
+   "id": "woman_breath",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a bright yellow coat has visible breath",
+   "question": "Is the breath of the woman in a bright yellow coat visible?"
+  },
+  {
+   "id": "woman_looking_right",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a bright yellow coat looks toward the right",
+   "question": "Is the woman in a bright yellow coat looking toward the right?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a blue knit hat reaches out eagerly",
+   "question": "Is the small child in a blue knit hat reaching out eagerly?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a bright yellow coat hands a small wrapped gift to the small child in a blue knit hat",
+   "question": "Is the woman in a bright yellow coat handing a small wrapped gift to the small child in a blue knit hat?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a heavy gray wool coat is sitting",
+   "question": "Is the man in a heavy gray wool coat sitting?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever sits patiently",
+   "question": "Is the golden retriever sitting patiently?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever looks up attentively",
+   "question": "Is the golden retriever looking up attentively?"
+  },
+  {
+   "id": "vendor_pointing",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the street vendor in a green apron points",
+   "question": "Is the street vendor in a green apron pointing?"
+  },
+  {
+   "id": "woman_left_fountain",
+   "type": "relation",
+   "of": [
+    "woman",
+    "fountain"
+   ],
+   "desc": "the woman in a bright yellow coat is to the left of the ornate stone fountain",
+   "question": "Is the woman in a bright yellow coat to the left of the ornate stone fountain?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child in a blue knit hat is next to the woman in a bright yellow coat",
+   "question": "Is the small child in a blue knit hat next to the woman in a bright yellow coat?"
+  },
+  {
+   "id": "man_right_scene",
+   "type": "relation",
+   "of": [
+    "man",
+    "fountain"
+   ],
+   "desc": "the man in a heavy gray wool coat is on the right side relative to the fountain",
+   "question": "Is the man in a heavy gray wool coat on the right side of the scene relative to the fountain?"
+  },
+  {
+   "id": "dog_beside_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever is beside the man in a heavy gray wool coat",
+   "question": "Is the golden retriever beside the man in a heavy gray wool coat?"
+  },
+  {
+   "id": "dog_looking_at_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever looks at the man in a heavy gray wool coat",
+   "question": "Is the golden retriever looking at the man in a heavy gray wool coat?"
+  },
+  {
+   "id": "vendor_behind_cart",
+   "type": "relation",
+   "of": [
+    "vendor",
+    "cart"
+   ],
+   "desc": "the street vendor in a green apron stands behind the cart",
+   "question": "Is the street vendor in a green apron standing behind the cart?"
+  },
+  {
+   "id": "vendor_pointing_at_customer",
+   "type": "relation",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the street vendor in a green apron points toward the partially obscured customer",
+   "question": "Is the street vendor in a green apron pointing toward the partially obscured customer?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is the sun visible in the sky?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a bright yellow coat stands",
+   "question": "Is the woman in a bright yellow coat standing?"
+  },
+  {
+   "id": "vendor_standing",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the street vendor in a green apron stands",
+   "question": "Is the street vendor in a green apron standing?"
+  },
+  {
+   "id": "fountain_ice",
+   "type": "attribute",
+   "of": "fountain",
+   "desc": "the fountain basin is filled with frozen ice",
+   "question": "Is the fountain basin filled with frozen ice?"
+  },
+  {
+   "id": "fountain_snow",
+   "type": "attribute",
+   "of": "fountain",
+   "desc": "the fountain is capped by a thick layer of fresh white snow",
+   "question": "Is the fountain capped by a thick layer of fresh white snow?"
+  },
+  {
+   "id": "chestnuts",
+   "type": "entity",
+   "class": "roasted chestnut",
+   "plural": "roasted chestnuts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "roasted chestnuts",
+   "question": "Are there roasted chestnuts?",
+   "box": [
+    760,
+    480,
+    940,
+    550
+   ]
+  },
+  {
+   "id": "chestnuts_on_cart",
+   "type": "relation",
+   "of": [
+    "chestnuts",
+    "cart"
+   ],
+   "desc": "the roasted chestnuts are piled high on the cart",
+   "question": "Are the roasted chestnuts piled high on the cart?"
+  },
+  {
+   "id": "dog_snow",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the golden retriever's fur is dusted with snowflakes",
+   "question": "Is the golden retriever's fur dusted with snowflakes?"
+  },
+  {
+   "id": "man_hunched",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a heavy gray wool coat is hunched",
+   "question": "Is the man in a heavy gray wool coat hunched?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "cart",
+   "to": "chestnuts",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0036",
+ "prompt": "This photorealistic photo captures a bustling snowy town square where winter has settled heavily. In the center stands an ornate stone fountain, its basin filled with frozen ice and capped by a thick layer of fresh white snow. To the left of the fountain, a woman in a bright yellow coat holds a steaming paper cup, her breath visible in the cold air as she looks toward the right. Next to her, a small child in a blue knit hat reaches out eagerly, creating a gentle interaction of handing over a small wrapped gift from the woman to the child. On the right side of the scene, a man in a heavy gray wool coat sits on a wooden bench, his posture relaxed yet hunched against the chill. Beside him, a golden retriever sits patiently, its fur dusted with snowflakes, looking up at the man with attentive eyes. In the background, slightly blurred but distinct, a street vendor in a green apron stands behind a cart piled high with roasted chestnuts, pointing toward a customer who is partially obscured. The ground is covered in packed snow, showing faint footprints that lead toward the central fountain. There is no sun visible in the sky, only a uniform gray overcast that diffuses the light evenly across the scene. The architecture features classic brick buildings with shuttered windows, framing the square tightly. The textures of the wool coats, the rough stone of the fountain, and the soft fur of the dog are rendered with sharp clarity, emphasizing the tactile nature of the cold environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [
+   "node fountain: entity question is long (19 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

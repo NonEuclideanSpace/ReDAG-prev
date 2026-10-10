@@ -1,0 +1,216 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a harvest scene field",
+   "question": "Does the image depict a harvest scene field?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a blue hat",
+   "question": "Is there a farmer in a blue hat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "wheat",
+   "type": "entity",
+   "class": "sheaf of wheat",
+   "plural": "sheaves of wheat",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden sheaf of wheat",
+   "question": "Is there a golden sheaf of wheat?",
+   "box": [
+    150,
+    100,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "goat",
+   "type": "entity",
+   "class": "goat",
+   "plural": "goats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white goat",
+   "question": "Is there a white goat?",
+   "box": [
+    400,
+    300,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cart",
+   "question": "Is there a wooden cart?",
+   "box": [
+    550,
+    400,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow dress",
+   "question": "Is there a child in a yellow dress?",
+   "box": [
+    750,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "farmer_holds_wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer in a blue hat holds a golden sheaf of wheat",
+   "question": "Is the farmer in a blue hat holding a golden sheaf of wheat?"
+  },
+  {
+   "id": "goat_stands",
+   "type": "state",
+   "of": "goat",
+   "desc": "the white goat stands calmly",
+   "question": "Is the white goat standing calmly?"
+  },
+  {
+   "id": "goat_beside_cart",
+   "type": "relation",
+   "of": [
+    "goat",
+    "cart"
+   ],
+   "desc": "the white goat stands beside the wooden cart",
+   "question": "Is the white goat standing beside the wooden cart?"
+  },
+  {
+   "id": "child_touches_goat",
+   "type": "action",
+   "of": [
+    "child",
+    "goat"
+   ],
+   "desc": "the child in a yellow dress reaches out to touch the goat's ear",
+   "question": "Is the child in a yellow dress reaching out to touch the white goat's ear?"
+  },
+  {
+   "id": "farmer_looks_child",
+   "type": "action",
+   "of": [
+    "farmer",
+    "child"
+   ],
+   "desc": "the farmer in a blue hat looks toward the child in a yellow dress",
+   "question": "Is the farmer in a blue hat looking toward the child in a yellow dress?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several pumpkins",
+   "question": "Are there several pumpkins?",
+   "box": [
+    380,
+    550,
+    620,
+    750
+   ]
+  },
+  {
+   "id": "cart_filled_pumpkins",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "cart"
+   ],
+   "desc": "the pumpkins are in the wooden cart",
+   "question": "Are the pumpkins in the wooden cart?"
+  },
+  {
+   "id": "wheat_upright",
+   "type": "state",
+   "of": "wheat",
+   "desc": "the golden sheaf of wheat is upright",
+   "question": "Is the golden sheaf of wheat upright?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cart",
+   "to": "goat",
+   "kind": "support"
+  },
+  {
+   "from": "cart",
+   "to": "pumpkins",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0106",
+ "prompt": "A watercolor illustration depicts a harvest scene. On the left, a farmer in a blue hat holds a golden sheaf of wheat upright. In the center, a white goat stands calmly beside a wooden cart filled with pumpkins. On the right, a child in a yellow dress reaches out to touch the goat's ear. The farmer looks toward the child while holding the wheat. There is no tractor visible in the field.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

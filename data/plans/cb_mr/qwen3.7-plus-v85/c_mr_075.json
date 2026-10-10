@@ -1,0 +1,357 @@
+{
+ "style": "photorealistic wildlife photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a savannah landscape",
+   "question": "Does the image show a savannah landscape?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elephants",
+   "type": "entity",
+   "class": "elephant",
+   "plural": "elephants",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four elephants",
+   "question": "Are there exactly four elephants?",
+   "box": [
+    50,
+    400,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "zebras",
+   "type": "entity",
+   "class": "zebra",
+   "plural": "zebras",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three zebras",
+   "question": "Are there exactly three zebras?",
+   "box": [
+    650,
+    400,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "lion",
+   "type": "entity",
+   "class": "lion",
+   "plural": "lions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lion",
+   "question": "Is there a lion?",
+   "box": [
+    400,
+    500,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "gazelle",
+   "type": "entity",
+   "class": "gazelle",
+   "plural": "gazelles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gazelle",
+   "question": "Is there a gazelle?",
+   "box": [
+    450,
+    520,
+    580,
+    640
+   ]
+  },
+  {
+   "id": "grass",
+   "type": "entity",
+   "class": "tall grass",
+   "plural": "patches of tall grass",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of tall grass",
+   "question": "Is there a patch of tall grass?",
+   "box": [
+    380,
+    550,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "hyena",
+   "type": "entity",
+   "class": "hyena",
+   "plural": "hyenas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hyena",
+   "question": "Is there a hyena?",
+   "box": [
+    750,
+    600,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "mound",
+   "type": "entity",
+   "class": "termite mound",
+   "plural": "termite mounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a termite mound",
+   "question": "Is there a termite mound?",
+   "box": [
+    760,
+    550,
+    840,
+    650
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "acacia tree",
+   "plural": "acacia trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall acacia tree",
+   "question": "Is there a tall acacia tree?",
+   "box": [
+    800,
+    100,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six birds",
+   "question": "Are there exactly six birds?",
+   "box": [
+    820,
+    120,
+    960,
+    250
+   ]
+  },
+  {
+   "id": "vulture",
+   "type": "entity",
+   "class": "vulture",
+   "plural": "vultures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vulture",
+   "question": "Is there a vulture?",
+   "box": [
+    450,
+    50,
+    550,
+    150
+   ]
+  },
+  {
+   "id": "elephants_drinking",
+   "type": "state",
+   "of": "elephants",
+   "desc": "the four elephants are drinking",
+   "question": "Are the four elephants drinking?"
+  },
+  {
+   "id": "zebras_drinking",
+   "type": "state",
+   "of": "zebras",
+   "desc": "the three zebras are drinking",
+   "question": "Are the three zebras drinking?"
+  },
+  {
+   "id": "lion_stalking",
+   "type": "action",
+   "of": [
+    "lion",
+    "gazelle"
+   ],
+   "desc": "the lion is stalking the gazelle",
+   "question": "Is the lion stalking the gazelle?"
+  },
+  {
+   "id": "lion_behind_grass",
+   "type": "relation",
+   "of": [
+    "lion",
+    "grass"
+   ],
+   "desc": "the lion is behind the patch of tall grass",
+   "question": "Is the lion behind the patch of tall grass?"
+  },
+  {
+   "id": "hyena_lurking",
+   "type": "state",
+   "of": "hyena",
+   "desc": "the hyena is lurking",
+   "question": "Is the hyena lurking?"
+  },
+  {
+   "id": "hyena_behind_mound",
+   "type": "relation",
+   "of": [
+    "hyena",
+    "mound"
+   ],
+   "desc": "the hyena is behind the termite mound",
+   "question": "Is the hyena behind the termite mound?"
+  },
+  {
+   "id": "birds_perched",
+   "type": "state",
+   "of": "birds",
+   "desc": "the six birds are perched",
+   "question": "Are the six birds perched?"
+  },
+  {
+   "id": "birds_on_tree",
+   "type": "relation",
+   "of": [
+    "birds",
+    "tree"
+   ],
+   "desc": "the six birds are on the tall acacia tree",
+   "question": "Are the six birds on the tall acacia tree?"
+  },
+  {
+   "id": "vulture_circling",
+   "type": "state",
+   "of": "vulture",
+   "desc": "the vulture is circling in the sky",
+   "question": "Is the vulture circling in the sky?"
+  },
+  {
+   "id": "vulture_above_lion_gazelle",
+   "type": "relation",
+   "of": [
+    "vulture",
+    "lion",
+    "gazelle"
+   ],
+   "desc": "the vulture is above the lion and the gazelle",
+   "question": "Is the vulture above the lion and the gazelle?"
+  },
+  {
+   "id": "lion_larger_than_hyena",
+   "type": "attribute",
+   "of": "lion",
+   "desc": "the lion is larger than the hyena",
+   "question": "Is the lion visibly larger than the hyena?"
+  },
+  {
+   "id": "tree_taller_than_elephants",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the tall acacia tree is taller than the elephants",
+   "question": "Is the tall acacia tree taller than the elephants?"
+  },
+  {
+   "id": "mound_taller_than_hyena",
+   "type": "attribute",
+   "of": "mound",
+   "desc": "the termite mound is taller than the hyena",
+   "question": "Is the termite mound taller than the hyena?"
+  },
+  {
+   "id": "elephants_left",
+   "type": "state",
+   "of": "elephants",
+   "desc": "the four elephants are on the left side of the waterhole",
+   "question": "Are the four elephants on the left side of the waterhole?"
+  },
+  {
+   "id": "zebras_right",
+   "type": "state",
+   "of": "zebras",
+   "desc": "the three zebras are on the right side of the waterhole",
+   "question": "Are the three zebras on the right side of the waterhole?"
+  },
+  {
+   "id": "waterhole",
+   "type": "entity",
+   "class": "waterhole",
+   "plural": "waterholes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waterhole",
+   "question": "Is there a waterhole?",
+   "box": [
+    360,
+    460,
+    664,
+    564
+   ]
+  },
+  {
+   "id": "tree_right_of_waterhole",
+   "type": "relation",
+   "of": [
+    "tree",
+    "waterhole"
+   ],
+   "desc": "the tall acacia tree is to the right of the waterhole",
+   "question": "Is the tall acacia tree to the right of the waterhole?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tree",
+   "to": "birds",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_075",
+ "prompt": "A savannah scene with a waterhole in the center. A herd of four elephants is drinking on the left side of the waterhole, while three zebras are drinking on the right side. The number of elephants is one more than the number of zebras. A lion is stalking a gazelle from behind a patch of tall grass; the lion is larger than the hyena. On a tall acacia tree to the right of the waterhole, a flock of birds is perched. The tree is taller than the elephants. The number of birds is twice the number of zebras. A hyena lurks behind a termite mound, which is taller than the hyena. A vulture circles in the sky above the lion and gazelle.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

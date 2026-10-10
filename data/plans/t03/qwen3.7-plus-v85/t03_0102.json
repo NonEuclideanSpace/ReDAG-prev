@@ -1,0 +1,201 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an outdoor scene with cobblestones and sky",
+   "question": "Does the image show an outdoor scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    674,
+    150,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    700,
+    960,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white cat with black spots",
+   "question": "Is there a white cat with black spots?",
+   "box": [
+    412,
+    650,
+    612,
+    900
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a woven basket",
+   "question": "Is the woman in the blue apron holding a woven basket?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron is standing",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is sitting",
+   "question": "Is the man in the green hat sitting?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the white cat with black spots is sitting",
+   "question": "Is the white cat with black spots sitting?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the green hat sits on the wooden crate",
+   "question": "Is the man in the green hat sitting on the wooden crate?"
+  },
+  {
+   "id": "woman_looks_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue apron looks at the white cat with black spots",
+   "question": "Is the woman in the blue apron looking at the white cat with black spots?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is there a sun visible in the sky?"
+  },
+  {
+   "id": "cat_on_cobblestones_rel",
+   "type": "state",
+   "of": "cat",
+   "desc": "the white cat with black spots sits on the cobblestones",
+   "question": "Is the white cat with black spots sitting on the cobblestones?"
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone ground",
+   "plural": "cobblestone grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "cobblestone ground",
+   "question": "Is there cobblestone ground?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cat_on_cobblestones",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cobblestones"
+   ],
+   "desc": "the white cat with black spots sits on the cobblestones",
+   "question": "Is the white cat with black spots sitting on the cobblestones?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0102",
+ "prompt": "In an anime style scene, a woman in a blue apron stands on the left holding a woven basket. A man in a green hat sits on the right resting on a wooden crate. Centered between them, a white cat with black spots sits calmly on the cobblestones. The woman in the blue apron looks at the white cat with black spots. There is no sun visible in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

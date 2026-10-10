@@ -1,0 +1,192 @@
+{
+ "style": "oil painting style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a white apron",
+   "question": "Is there a waiter in a white apron?",
+   "box": [
+    400,
+    200,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    750,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in the white apron is standing",
+   "question": "Is the waiter in the white apron standing?"
+  },
+  {
+   "id": "waiter_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in the white apron holds a tray",
+   "question": "Is the waiter in the white apron holding a tray?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter in the white apron hands a cup to the woman in the blue dress",
+   "question": "Is the waiter in the white apron handing a cup to the woman in the blue dress?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the image?"
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    100,
+    600,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet bench",
+   "question": "Is there a velvet bench?",
+   "box": [
+    50,
+    500,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in the blue dress sits on the velvet bench",
+   "question": "Is the woman in the blue dress sitting on the velvet bench?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the silver teapot rests on the table",
+   "question": "Is the silver teapot resting on the table?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0135",
+ "prompt": "In an oil painting style, a train dining car features three distinct figures. On the left sits a woman in a blue dress. In the center stands a waiter in a white apron. On the right rests a silver teapot on the table. The woman is seated on the velvet bench. The waiter is holding a tray. The waiter is handing a cup to the woman. There is no window visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 3,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

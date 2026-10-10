@@ -1,0 +1,372 @@
+{
+ "style": "photorealistic pastoral landscape, early morning light",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "green pastures surrounded by wooden fence posts and metal gates, with a red barn and a farmhouse in the distance",
+   "question": "Does the image show green pastures surrounded by wooden fence posts and metal gates, with a red barn and a farmhouse?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cows",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "Holstein cows",
+   "question": "Are there Holstein cows?",
+   "box": [
+    100,
+    600,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "farmers",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "farmers wearing overalls",
+   "question": "Are there farmers wearing overalls?",
+   "box": [
+    500,
+    550,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "troughs",
+   "type": "entity",
+   "class": "feed trough",
+   "plural": "feed troughs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "feed troughs filled with grain",
+   "question": "Are there feed troughs filled with grain?",
+   "box": [
+    450,
+    750,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "pitchforks",
+   "type": "entity",
+   "class": "pitchfork",
+   "plural": "pitchforks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "pitchforks",
+   "question": "Are there pitchforks?",
+   "box": [
+    800,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "wheelbarrows",
+   "type": "entity",
+   "class": "wheelbarrow",
+   "plural": "wheelbarrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelbarrow loaded with manure",
+   "question": "Is there a wheelbarrow?",
+   "box": [
+    850,
+    700,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "chicken_coop",
+   "type": "entity",
+   "class": "chicken coop",
+   "plural": "chicken coops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chicken coop",
+   "question": "Is there a chicken coop?",
+   "box": [
+    50,
+    400,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "hens",
+   "type": "entity",
+   "class": "hen",
+   "plural": "hens",
+   "count": 2,
+   "count_exact": false,
+   "desc": "laying hens",
+   "question": "Are there laying hens?",
+   "box": [
+    80,
+    550,
+    220,
+    600
+   ]
+  },
+  {
+   "id": "rooster",
+   "type": "entity",
+   "class": "rooster",
+   "plural": "roosters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooster",
+   "question": "Is there a rooster?",
+   "box": [
+    230,
+    550,
+    280,
+    600
+   ]
+  },
+  {
+   "id": "tractor",
+   "type": "entity",
+   "class": "tractor",
+   "plural": "tractors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tractor cultivating soil",
+   "question": "Is there a tractor cultivating soil?",
+   "box": [
+    700,
+    300,
+    900,
+    450
+   ]
+  },
+  {
+   "id": "milk_jugs",
+   "type": "entity",
+   "class": "milk jug",
+   "plural": "milk jugs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "milk jugs",
+   "question": "Are there milk jugs?",
+   "box": [
+    600,
+    850,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "cows_grazing",
+   "type": "state",
+   "of": "cows",
+   "desc": "the Holstein cows are grazing",
+   "question": "Are the Holstein cows grazing?"
+  },
+  {
+   "id": "farmers_tending",
+   "type": "action",
+   "of": [
+    "farmers",
+    "troughs"
+   ],
+   "desc": "the farmers tend to the feed troughs",
+   "question": "Are the farmers tending to the feed troughs?"
+  },
+  {
+   "id": "pitchforks_leaning",
+   "type": "state",
+   "of": "pitchforks",
+   "desc": "the pitchforks lean against the barn walls",
+   "question": "Do the pitchforks lean against the barn walls?"
+  },
+  {
+   "id": "wheelbarrows_near_pitchforks",
+   "type": "relation",
+   "of": [
+    "wheelbarrows",
+    "pitchforks"
+   ],
+   "desc": "the wheelbarrow is near the pitchforks",
+   "question": "Is the wheelbarrow near the pitchforks?"
+  },
+  {
+   "id": "hens_in_coop",
+   "type": "relation",
+   "of": [
+    "hens",
+    "chicken_coop"
+   ],
+   "desc": "the hens are sheltered in the chicken coop",
+   "question": "Are the hens sheltered in the chicken coop?"
+  },
+  {
+   "id": "rooster_crowing",
+   "type": "state",
+   "of": "rooster",
+   "desc": "the rooster is crowing",
+   "question": "Is the rooster crowing (beak open, head up)?"
+  },
+  {
+   "id": "no_subway",
+   "type": "absent",
+   "desc": "subway trains",
+   "question": "Are there any subway trains in the image?"
+  },
+  {
+   "id": "no_arcade",
+   "type": "absent",
+   "desc": "arcade games",
+   "question": "Are there any arcade games in the image?"
+  },
+  {
+   "id": "barn_equipment",
+   "type": "entity",
+   "class": "milking tank",
+   "plural": "milking tanks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "stainless steel tanks",
+   "question": "Are there stainless steel tanks?",
+   "box": [
+    100,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "hay_bales",
+   "type": "entity",
+   "class": "hay bale",
+   "plural": "hay bales",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked hay bales",
+   "question": "Are there stacked hay bales?",
+   "box": [
+    150,
+    200,
+    350,
+    350
+   ]
+  },
+  {
+   "id": "equipment_in_barn",
+   "type": "state",
+   "of": "barn_equipment",
+   "desc": "the milking equipment is inside the red barn",
+   "question": "Is the milking equipment inside the red barn?"
+  },
+  {
+   "id": "hay_in_loft",
+   "type": "state",
+   "of": "hay_bales",
+   "desc": "the hay bales are in the storage loft above the barn",
+   "question": "Are the hay bales in the storage loft above the barn?"
+  },
+  {
+   "id": "farmers_boots",
+   "type": "attribute",
+   "of": "farmers",
+   "desc": "the farmers wear rubber boots",
+   "question": "Do the farmers wear rubber boots?"
+  },
+  {
+   "id": "troughs_water",
+   "type": "attribute",
+   "of": "troughs",
+   "desc": "the feed troughs contain fresh water",
+   "question": "Do the feed troughs contain fresh water?"
+  },
+  {
+   "id": "wheelbarrow_content",
+   "type": "attribute",
+   "of": "wheelbarrows",
+   "desc": "the wheelbarrow is loaded with manure",
+   "question": "Is the wheelbarrow loaded with manure?"
+  },
+  {
+   "id": "no_bus",
+   "type": "absent",
+   "desc": "city buses",
+   "question": "Are there any city buses in the image?"
+  },
+  {
+   "id": "no_pinball",
+   "type": "absent",
+   "desc": "pinball machines",
+   "question": "Are there any pinball machines in the image?"
+  },
+  {
+   "id": "pumps",
+   "type": "entity",
+   "class": "pump",
+   "plural": "pumps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "automated pumps",
+   "question": "Are there automated pumps?",
+   "box": [
+    420,
+    250,
+    550,
+    400
+   ]
+  }
+ ],
+ "edges": [],
+ "id": "c_mi_006",
+ "prompt": "A peaceful dairy farm during early morning milking hours, where Holstein cows graze in green pastures surrounded by wooden fence posts and metal gates. The red barn houses milking equipment including stainless steel tanks and automated pumps while hay bales stack neatly in the storage loft above. Farmers wearing overalls and rubber boots tend to feed troughs filled with grain and fresh water, while pitchforks lean against barn walls near wheelbarrows loaded with manure for compost. However, this rural agricultural setting contains no urban transportation like subway trains or city buses, maintaining its pastoral character focused on farming rather than metropolitan transit systems. You won't find any electronic entertainment devices such as arcade games or pinball machines either, preserving the traditional work environment that connects directly with natural agricultural cycles. Chicken coops shelter laying hens while roosters crow at dawn, and a farmhouse kitchen window overlooks fields where tractors cultivate soil. Milk jugs await collection.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "pitchforks_near_wall",
+     "pitchforks_leaning"
+    ]
+   ]
+  }
+ }
+}

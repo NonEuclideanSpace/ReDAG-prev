@@ -1,0 +1,220 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    400,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver suitcase",
+   "question": "Is there a silver suitcase?",
+   "box": [
+    750,
+    700,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_ticket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a ticket",
+   "question": "Is the woman in the blue coat holding a ticket?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat has a gentle smile",
+   "question": "Does the woman in the blue coat have a gentle smile?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow hat is pointing excitedly",
+   "question": "Is the child in the yellow hat pointing excitedly?"
+  },
+  {
+   "id": "woman_looking_child",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in the blue coat looks at the child in the yellow hat",
+   "question": "Is the woman in the blue coat looking at the child in the yellow hat?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane visible outside the window",
+   "question": "Is there an airplane visible outside the window?"
+  },
+  {
+   "id": "no_extra_characters",
+   "type": "absent",
+   "desc": "additional background characters or clutter",
+   "question": "Are there any additional background characters in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat stands",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "child_pointing_window",
+   "type": "relation",
+   "of": [
+    "child",
+    "window"
+   ],
+   "desc": "the child in the yellow hat points toward the large window",
+   "question": "Is the child in the yellow hat pointing toward the large window?"
+  },
+  {
+   "id": "suitcase_sitting",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the silver suitcase sits",
+   "question": "Is the silver suitcase sitting?"
+  },
+  {
+   "id": "suitcase_on_floor",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the silver suitcase is on the floor",
+   "question": "Is the silver suitcase on the floor?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large window",
+   "question": "Is there a large window?",
+   "box": [
+    300,
+    50,
+    724,
+    400
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    750,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "suitcase_next_to_bench",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "bench"
+   ],
+   "desc": "the silver suitcase is next to the bench",
+   "question": "Is the silver suitcase next to the bench?"
+  },
+  {
+   "id": "no_clutter",
+   "type": "absent",
+   "desc": "background clutter",
+   "question": "Is there any background clutter in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "suitcase",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0118",
+ "prompt": "In an anime style illustration set at an airport gate, a woman in a blue coat stands on the left holding a ticket. In the center, a child in a yellow hat points excitedly toward the large window. On the right, a silver suitcase sits quietly on the floor next to a bench. The woman in the blue coat looks at the child in the yellow hat with a gentle smile. There is no airplane visible outside the window. The scene captures a quiet moment of anticipation before boarding, focusing strictly on these three distinct figures and their immediate surroundings without any additional background clutter or extra characters.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

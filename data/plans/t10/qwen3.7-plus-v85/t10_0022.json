@@ -1,0 +1,406 @@
+{
+ "style": "photorealistic photo, candid, crisp detail, natural colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception room with neutral tones",
+   "question": "Does the image show a wedding reception room with neutral tones?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "velvet chair",
+   "plural": "velvet chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deep purple velvet chair",
+   "question": "Is there a deep purple velvet chair?",
+   "box": [
+    50,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white lace gown",
+   "question": "Is there a bride in a white lace gown?",
+   "box": [
+    80,
+    250,
+    320,
+    850
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a sharp black tuxedo",
+   "question": "Is there a groom in a sharp black tuxedo?",
+   "box": [
+    350,
+    200,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "round table",
+   "plural": "round tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small round table",
+   "question": "Is there a small round table?",
+   "box": [
+    400,
+    600,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall crystal vase",
+   "question": "Is there a tall crystal vase?",
+   "box": [
+    480,
+    450,
+    580,
+    750
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "white plate",
+   "plural": "white plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white plate",
+   "question": "Is there a white plate?",
+   "box": [
+    580,
+    650,
+    680,
+    720
+   ]
+  },
+  {
+   "id": "flower_girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young flower girl in a pink dress",
+   "question": "Is there a young flower girl in a pink dress?",
+   "box": [
+    650,
+    350,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "older_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a blue sequined dress",
+   "question": "Is there an older woman in a blue sequined dress?",
+   "box": [
+    700,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bride_sitting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white lace gown is sitting",
+   "question": "Is the bride in a white lace gown sitting?"
+  },
+  {
+   "id": "bride_hand_resting",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride's left hand rests on the armrest",
+   "question": "Does the bride's left hand rest on the armrest?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a sharp black tuxedo is standing",
+   "question": "Is the groom in a sharp black tuxedo standing?"
+  },
+  {
+   "id": "groom_smiling",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a sharp black tuxedo is smiling",
+   "question": "Is the groom in a sharp black tuxedo smiling?"
+  },
+  {
+   "id": "groom_hand_pocket",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom's right hand is tucked into his pocket",
+   "question": "Is the groom's right hand tucked into his pocket?"
+  },
+  {
+   "id": "server_attribute",
+   "type": "attribute",
+   "of": "plate",
+   "desc": "a silver cake server resting on the white plate",
+   "question": "Is there a silver cake server resting on the white plate?"
+  },
+  {
+   "id": "flower_girl_pointing",
+   "type": "state",
+   "of": "flower_girl",
+   "desc": "the young flower girl is pointing",
+   "question": "Is the young flower girl pointing?"
+  },
+  {
+   "id": "older_woman_looking",
+   "type": "state",
+   "of": "older_woman",
+   "desc": "the older woman has an amused expression",
+   "question": "Does the older woman have an amused expression?"
+  },
+  {
+   "id": "bride_on_chair",
+   "type": "relation",
+   "of": [
+    "bride",
+    "chair"
+   ],
+   "desc": "the bride sits on the velvet chair",
+   "question": "Is the bride sitting on the velvet chair?"
+  },
+  {
+   "id": "groom_beside_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom stands beside the bride",
+   "question": "Is the groom standing beside the bride?"
+  },
+  {
+   "id": "groom_leaning",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom leans toward the bride",
+   "question": "Is the groom leaning toward the bride?"
+  },
+  {
+   "id": "vase_on_table",
+   "type": "relation",
+   "of": [
+    "vase",
+    "table"
+   ],
+   "desc": "the crystal vase stands on the small round table",
+   "question": "Is the crystal vase standing on the small round table?"
+  },
+  {
+   "id": "plate_next_to_vase",
+   "type": "relation",
+   "of": [
+    "plate",
+    "vase"
+   ],
+   "desc": "the white plate is next to the crystal vase",
+   "question": "Is the white plate next to the crystal vase?"
+  },
+  {
+   "id": "flower_girl_near_table",
+   "type": "relation",
+   "of": [
+    "flower_girl",
+    "table"
+   ],
+   "desc": "the young flower girl stands near the small round table",
+   "question": "Is the young flower girl standing near the small round table?"
+  },
+  {
+   "id": "flower_girl_pointing_at_server",
+   "type": "action",
+   "of": [
+    "flower_girl",
+    "plate"
+   ],
+   "desc": "the young flower girl points at the silver cake server on the plate",
+   "question": "Is the young flower girl pointing at the silver cake server on the plate?"
+  },
+  {
+   "id": "older_woman_behind_girl",
+   "type": "relation",
+   "of": [
+    "older_woman",
+    "flower_girl"
+   ],
+   "desc": "the older woman stands behind the young flower girl",
+   "question": "Is the older woman standing behind the young flower girl?"
+  },
+  {
+   "id": "older_woman_looking_at_girl",
+   "type": "action",
+   "of": [
+    "older_woman",
+    "flower_girl"
+   ],
+   "desc": "the older woman looks at the young flower girl",
+   "question": "Is the older woman looking at the young flower girl?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "chandelier",
+   "plural": "chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chandelier",
+   "question": "Is there a chandelier?",
+   "box": [
+    400,
+    0,
+    624,
+    150
+   ]
+  },
+  {
+   "id": "roses",
+   "type": "entity",
+   "class": "rose",
+   "plural": "roses",
+   "count": 2,
+   "count_exact": false,
+   "desc": "red roses",
+   "question": "Are there red roses?",
+   "box": [
+    470,
+    590,
+    554,
+    680
+   ]
+  },
+  {
+   "id": "vase_filled",
+   "type": "relation",
+   "of": [
+    "vase",
+    "roses"
+   ],
+   "desc": "the tall crystal vase is filled with red roses",
+   "question": "Is the tall crystal vase filled with red roses?"
+  },
+  {
+   "id": "flower_girl_bow",
+   "type": "attribute",
+   "of": "flower_girl",
+   "desc": "the young flower girl wears a pink bow",
+   "question": "Does the young flower girl wear a pink bow?"
+  },
+  {
+   "id": "older_woman_tilted",
+   "type": "state",
+   "of": "older_woman",
+   "desc": "the older woman's head is tilted slightly",
+   "question": "Is the older woman's head tilted slightly?"
+  },
+  {
+   "id": "flower_girl_right_hand",
+   "type": "attribute",
+   "of": "flower_girl",
+   "desc": "the young flower girl uses her right hand to point",
+   "question": "Is the young flower girl using her right hand to point?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "bride",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "vase",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "plate",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "roses",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0022",
+ "prompt": "This photorealistic photo captures a lively moment at a wedding reception. On the left, a bride in a white lace gown sits gracefully on a velvet chair, her posture relaxed yet elegant. Beside her, to the right, stands a groom in a sharp black tuxedo, leaning slightly toward her with a warm smile. In the center foreground, a small round table holds a tall crystal vase filled with red roses, its glass catching the ambient light. Next to the vase, a silver cake server rests on a white plate, gleaming under the chandelier. A young flower girl in a pink dress stands near the table, pointing excitedly at the cake server with her right hand. Behind her, an older woman in a blue sequined dress looks at the flower girl with an amused expression, her head tilted slightly. There is no confetti in the air, keeping the scene clean and focused on the intimate interactions. The bride’s left hand rests gently on the armrest, while the groom’s right hand is tucked into his pocket. The flower girl’s pink bow bobs as she gestures, drawing the older woman’s attention. The red roses in the center provide a vibrant splash of color against the neutral tones of the room. The velvet chair’s deep purple hue contrasts with the white gown, anchoring the left side of the composition. The crystal vase reflects the surrounding figures, adding depth to the center. The silver server’s metallic shine complements the groom’s cufflinks, creating a subtle visual link between the center and the right. The scene feels candid and spontaneous, frozen in time with crisp detail and natural colors.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

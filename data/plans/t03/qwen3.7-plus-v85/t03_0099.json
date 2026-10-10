@@ -1,0 +1,184 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage area",
+   "question": "Does the image show a quiet theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    350,
+    600,
+    670,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a velvet dress",
+   "question": "Is there a woman in a velvet dress?",
+   "box": [
+    50,
+    150,
+    300,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a tuxedo",
+   "question": "Is there a man in a tuxedo?",
+   "box": [
+    380,
+    200,
+    640,
+    800
+   ]
+  },
+  {
+   "id": "spotlight",
+   "type": "entity",
+   "class": "spotlight",
+   "plural": "spotlights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver spotlight",
+   "question": "Is there a silver spotlight?",
+   "box": [
+    700,
+    650,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the velvet dress holds a script",
+   "question": "Is the woman in the velvet dress holding a script?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo is sitting",
+   "question": "Is the man in the tuxedo sitting?"
+  },
+  {
+   "id": "man_tired",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the tuxedo looks tired",
+   "question": "Does the man in the tuxedo look tired?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the velvet dress is to the left of the man in the tuxedo",
+   "question": "Is the woman in the velvet dress to the left of the man in the tuxedo?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the tuxedo sits on the wooden crate",
+   "question": "Is the man in the tuxedo sitting on the wooden crate?"
+  },
+  {
+   "id": "spotlight_next_to_man",
+   "type": "relation",
+   "of": [
+    "spotlight",
+    "man"
+   ],
+   "desc": "the silver spotlight is next to the man in the tuxedo",
+   "question": "Is the silver spotlight next to the man in the tuxedo?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the velvet dress hands the script to the man in the tuxedo",
+   "question": "Is the woman in the velvet dress handing the script to the man in the tuxedo?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the velvet dress stands",
+   "question": "Is the woman in the velvet dress standing?"
+  },
+  {
+   "id": "spotlight_on_floor",
+   "type": "state",
+   "of": "spotlight",
+   "desc": "the silver spotlight rests on the floor",
+   "question": "Is the silver spotlight resting on the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0099",
+ "prompt": "A photorealistic photo captures a quiet theatre backstage moment. On the left, a woman in a velvet dress stands holding a script. In the center, a man in a tuxedo sits on a wooden crate, looking tired. To the right, a silver spotlight rests on the floor next to the seated man. The woman is handing the script to the man in the tuxedo. There is no audience visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

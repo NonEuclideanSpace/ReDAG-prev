@@ -1,0 +1,236 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a field with dusty ground and a horizon",
+   "question": "Does the image show a field with dusty ground and a horizon?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    280,
+    500,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    400,
+    250,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old wooden cart",
+   "question": "Is there an old wooden cart?",
+   "box": [
+    650,
+    400,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in green overalls",
+   "question": "Is there a boy in green overalls?",
+   "box": [
+    550,
+    350,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "man_wheat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a golden sheaf of wheat",
+   "question": "Is the man in the red scarf holding a golden sheaf of wheat?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress points with her right hand",
+   "question": "Is the woman in the blue dress pointing?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in green overalls looks with curiosity",
+   "question": "Does the boy in green overalls have a curious expression?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is next to the man in the red scarf",
+   "question": "Is the brown dog next to the man in the red scarf?"
+  },
+  {
+   "id": "woman_right_of_cart",
+   "type": "relation",
+   "of": [
+    "cart",
+    "woman"
+   ],
+   "desc": "the old wooden cart is to the right of the woman in the blue dress",
+   "question": "Is the old wooden cart to the right of the woman in the blue dress?"
+  },
+  {
+   "id": "boy_next_to_cart",
+   "type": "relation",
+   "of": [
+    "boy",
+    "cart"
+   ],
+   "desc": "the boy in green overalls is next to the old wooden cart",
+   "question": "Is the boy in green overalls next to the old wooden cart?"
+  },
+  {
+   "id": "boy_looking_at_woman",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in green overalls looks at the woman in the blue dress",
+   "question": "Is the boy in green overalls looking at the woman in the blue dress?"
+  },
+  {
+   "id": "man_handing_boy",
+   "type": "action",
+   "of": [
+    "man",
+    "boy"
+   ],
+   "desc": "the man in the red scarf hands a small bundle of stalks to the boy in green overalls",
+   "question": "Is the man in the red scarf handing a small bundle of stalks to the boy in green overalls?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Is there any modern machinery visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf stands",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "cart_resting",
+   "type": "state",
+   "of": "cart",
+   "desc": "the old wooden cart rests heavily",
+   "question": "Does the old wooden cart appear to rest heavily?"
+  },
+  {
+   "id": "cart_grain",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the old wooden cart is loaded with harvested grain",
+   "question": "Is the old wooden cart loaded with harvested grain?"
+  },
+  {
+   "id": "woman_right_hand",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress uses her right hand to point",
+   "question": "Is the woman in the blue dress pointing with her right hand?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0126",
+ "prompt": "In this oil painting, a man in a red scarf stands on the left holding a golden sheaf of wheat. Beside him, a brown dog sits calmly on the dusty ground. In the center, a woman in a blue dress points toward the horizon with her right hand. To her right, an old wooden cart rests heavily under the weight of harvested grain. Next to the cart, a boy in green overalls looks at the woman with curiosity. The man in the red scarf is handing a small bundle of stalks to the boy in green overalls. The brown dog is sitting next to the man in the red scarf. There is no modern machinery visible in the field.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

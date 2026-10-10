@@ -1,0 +1,414 @@
+{
+ "style": "surreal digital art, dreamlike, hyper-detailed, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sky shimmering with static-like patterns",
+   "question": "Does the background show a sky shimmering with static-like patterns?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hose_vine",
+   "type": "entity",
+   "class": "vine",
+   "plural": "vines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vine-like structure with blooming and withering flowers",
+   "question": "Is there a vine-like structure with blooming and withering flowers?",
+   "box": [
+    50,
+    400,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "soil_patch",
+   "type": "entity",
+   "class": "soil patch",
+   "plural": "soil patches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of soil rippling like liquid mercury",
+   "question": "Is there a patch of soil rippling like liquid mercury?",
+   "box": [
+    300,
+    700,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "duck_creature",
+   "type": "entity",
+   "class": "creature",
+   "plural": "creatures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a transformed duck-like creature with translucent fins",
+   "question": "Is there a transformed duck-like creature with translucent fins?",
+   "box": [
+    400,
+    200,
+    600,
+    500
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat with one torn ear",
+   "question": "Is there a small white cat with one torn ear?",
+   "box": [
+    700,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "glass jar",
+   "plural": "glass jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny glass jar hovering in the air",
+   "question": "Is there a tiny glass jar hovering in the air?",
+   "box": [
+    750,
+    550,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "hand",
+   "type": "entity",
+   "class": "hand",
+   "plural": "hands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hand the color of storm clouds",
+   "question": "Is there a hand the color of storm clouds?",
+   "box": [
+    850,
+    300,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "mycelium_layer",
+   "type": "attribute",
+   "of": "soil_patch",
+   "desc": "a shimmering layer of bioluminescent mycelium beneath the soil surface",
+   "question": "Is there a shimmering layer of bioluminescent mycelium beneath the soil surface?"
+  },
+  {
+   "id": "water_spiral",
+   "type": "attribute",
+   "of": "hose_vine",
+   "desc": "water trickling from the hose/vine in slow, lazy spiraling helices",
+   "question": "Is water trickling from the hose/vine in slow, lazy spiraling helices?"
+  },
+  {
+   "id": "cat_tail_flick",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail flicking with a deliberate rhythm, releasing puffs of iridescent fur dissolving into fireflies",
+   "question": "Is the cat's tail flicking with a deliberate rhythm, releasing puffs of iridescent fur dissolving into fireflies?"
+  },
+  {
+   "id": "cat_still",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat remaining still except for its tail",
+   "question": "Is the cat remaining still except for its tail?"
+  },
+  {
+   "id": "duck_upward",
+   "type": "state",
+   "of": "duck_creature",
+   "desc": "the duck-creature fluttering upward",
+   "question": "Is the duck-creature fluttering upward?"
+  },
+  {
+   "id": "hose_rising",
+   "type": "state",
+   "of": "hose_vine",
+   "desc": "the hose/vine rising and uncoiling",
+   "question": "Is the hose/vine rising and uncoiling?"
+  },
+  {
+   "id": "water_inversion",
+   "type": "action",
+   "of": [
+    "duck_creature",
+    "jar"
+   ],
+   "desc": "water inverting from the duck's beak upward into the hovering glass jar",
+   "question": "Is water inverting from the duck's beak upward into the hovering glass jar?"
+  },
+  {
+   "id": "hand_on_fence",
+   "type": "relation",
+   "of": [
+    "hand",
+    "hose_initial"
+   ],
+   "desc": "the storm-colored hand pressing against the fence in the background",
+   "question": "Is the storm-colored hand pressing against the fence in the background?"
+  },
+  {
+   "id": "jar_on_tail",
+   "type": "relation",
+   "of": [
+    "jar",
+    "cat"
+   ],
+   "desc": "the glass jar balanced on the edge of the cat's tail",
+   "question": "Is the glass jar balanced on the edge of the cat's tail?"
+  },
+  {
+   "id": "duck_above_soil",
+   "type": "relation",
+   "of": [
+    "duck_creature",
+    "soil_patch"
+   ],
+   "desc": "the duck-creature positioned above the soil patch",
+   "question": "Is the duck-creature positioned above the soil patch?"
+  },
+  {
+   "id": "no_door_gate",
+   "type": "absent",
+   "desc": "a door or gate in the fence",
+   "question": "Is there a door or gate in the fence?"
+  },
+  {
+   "id": "hose_initial",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty red garden hose coiled near the fence",
+   "question": "Is there a rusty red garden hose coiled near the fence?",
+   "box": [
+    50,
+    600,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "duck_initial",
+   "type": "entity",
+   "class": "mallard",
+   "plural": "mallards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small mallard",
+   "question": "Is there a small mallard?",
+   "box": [
+    350,
+    650,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "duck_waddling",
+   "type": "state",
+   "of": "duck_initial",
+   "desc": "the mallard waddles past the soil patch",
+   "question": "Is the mallard waddling?"
+  },
+  {
+   "id": "duck_dipping",
+   "type": "state",
+   "of": "duck_initial",
+   "desc": "the mallard dips its beak into the pooling water",
+   "question": "Is the mallard dipping its beak into the water?"
+  },
+  {
+   "id": "cat_ear_listening",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat turns its head slightly with its ear catching sound",
+   "question": "Is the cat turning its head slightly as if listening?"
+  },
+  {
+   "id": "droplet_on_whisker",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "a single spiraling water droplet clinging to the cat’s whisker",
+   "question": "Is there a single water droplet clinging to the cat’s whisker?"
+  },
+  {
+   "id": "hose_coiled",
+   "type": "state",
+   "of": "hose_initial",
+   "desc": "the rusty red garden hose is coiled",
+   "question": "Is the rusty red garden hose coiled?"
+  },
+  {
+   "id": "hose_near_fence",
+   "type": "state",
+   "of": "hose_initial",
+   "desc": "the rusty red garden hose is near the weathered wooden fence",
+   "question": "Is the rusty red garden hose near the weathered wooden fence?"
+  },
+  {
+   "id": "duck_past_soil",
+   "type": "relation",
+   "of": [
+    "duck_initial",
+    "soil_patch"
+   ],
+   "desc": "the mallard waddles past the patch of soil",
+   "question": "Is the mallard waddling past the patch of soil?"
+  },
+  {
+   "id": "hand_vanishing",
+   "type": "state",
+   "of": "hand",
+   "desc": "the storm-colored hand vanishes after pressing the fence",
+   "question": "Is the storm-colored hand vanishing or translucent?"
+  },
+  {
+   "id": "fence_planks",
+   "type": "entity",
+   "class": "fence plank",
+   "plural": "fence planks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "weathered wooden fence planks etched with shifting impossible equations",
+   "question": "Are there weathered wooden fence planks etched with shifting impossible equations?",
+   "box": [
+    0,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "soil_freshly_turned",
+   "type": "attribute",
+   "of": "soil_patch",
+   "desc": "the patch of soil is freshly turned",
+   "question": "Is the patch of soil freshly turned?"
+  },
+  {
+   "id": "fence_behind_cat",
+   "type": "relation",
+   "of": [
+    "fence_planks",
+    "cat"
+   ],
+   "desc": "the fence planks are behind the cat",
+   "question": "Are the fence planks behind the cat?"
+  },
+  {
+   "id": "hose_vine_origin",
+   "type": "attribute",
+   "of": "hose_vine",
+   "desc": "the vine-like structure appears formed from a rusty red garden hose",
+   "question": "Does the vine-like structure appear formed from a rusty red garden hose?"
+  },
+  {
+   "id": "duck_feathered_feet",
+   "type": "attribute",
+   "of": "duck_creature",
+   "desc": "the creature has feathered feet trailing ribbons of light",
+   "question": "Does the creature have feathered feet trailing ribbons of light?"
+  },
+  {
+   "id": "duck_bioluminescent",
+   "type": "attribute",
+   "of": "duck_creature",
+   "desc": "the creature has a pulsing bioluminescent underbelly",
+   "question": "Does the creature have a pulsing bioluminescent underbelly?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat's eyes reflect colors",
+   "question": "Do the cat's eyes reflect colors?"
+  },
+  {
+   "id": "duck_feathers",
+   "type": "attribute",
+   "of": "duck_initial",
+   "desc": "the mallard has feathers dappled in cobalt and silver",
+   "question": "Does the mallard have feathers dappled in cobalt and silver?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fence_planks",
+   "to": "hose_initial",
+   "kind": "support"
+  },
+  {
+   "from": "soil_patch",
+   "to": "duck_initial",
+   "kind": "support"
+  },
+  {
+   "from": "cat",
+   "to": "jar",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0430",
+ "prompt": "Beneath a sky that shimmers with the static of a thousand unresolved plotlines, the rusty red garden hose coiled near the weathered wooden fence appears less like an abandoned tool and more like a living thing, its snarled coils twitching subtly in time with the pulse of a low, subsonic hum. The nozzle still trickles water, though the droplets don’t fall in a linear path—they spiral downward in slow, lazy helices, each drop suspended in its own private gravity well, as if the laws of motion have grown lazy and drunk. The patch of freshly turned soil is no ordinary dirt; it ripples like liquid mercury when the duck, a small but resolute mallard with feathers dappled in cobalt and silver, waddles past, its webbed feet disturbing the surface to reveal a shimmering layer of bioluminescent mycelium beneath. The duck dips its beak into the pooling water, and as it does, the water doesn’t enter its mouth but rather inverts—its beak becoming a kind of drain through which the water is sucked upward, into a tiny, hovering glass jar balanced on the edge of the cat’s tail. The cat, a small white feline with one ear torn and its eyes reflecting the colors of a thousand memories, remains still, but its tail flicks with a deliberate rhythm, releasing minute puffs of iridescent fur that dissolve midair into constellations of dust-like fireflies. Behind the cat, the fence appears weathered not from age but from paradox—its planks are etched with impossible equations that shift and reconfigure themselves as one’s gaze lingers, their meaning just beyond the edge of comprehension. The duck, now quivering with the effects of the strange water, begins to transform: its feathers lengthen and flatten into translucent fins, and a bioluminescent underbelly pulses in time with the flickering fence posts. The hose, sensing the change, begins to uncoil and rise, as if drawn by some gravitational tide, and as it does, it sheds rust and metal, reforming into a vine-like structure with flowers that bloom and wither in seconds, each petal releasing a faint, whispering echo of forgotten lullabies. The cat, now the sole static element in this shifting tableau, turns its head slightly, its ear catching the sound of something—or someone—walking on the other side of the fence. There is no door, no gate, only a faint shimmer in the wood, like heat rising from a sunbaked surface, and for a moment, a hand the color of storm clouds presses gently against the planks, then vanishes. The duck, fully transformed into a creature of the sky, flutters upward, its webbed feet now feathered and trailing ribbons of light, and with one final quack, it disappears through the now-pulsing sky, leaving behind only a single water droplet that clings to the cat’s whisker, still spiraling, still humming, as if holding the memory of a world just beyond reach.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node hose_vine: entity question is long (19 words); should only ask presence + identifying look",
+   "node duck_creature: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 78,
+   "n_uncovered": 3,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,543 @@
+{
+ "style": "surreal photorealistic, dreamlike atmosphere, warm amber lighting, sharp focus on foreground objects with soft background blur",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an interior room with a stone windowsill and a window looking out to a garden wall",
+   "question": "Does the image show an interior room with a stone windowsill and a window looking out to a garden wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "jug",
+   "type": "entity",
+   "class": "jug",
+   "plural": "jugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass jug with a wooden handle",
+   "question": "Is there a brass jug with a wooden handle?",
+   "box": [
+    350,
+    400,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    100,
+    500,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "butterfly",
+   "type": "entity",
+   "class": "butterfly",
+   "plural": "butterflies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a butterfly hovering midair outside the window",
+   "question": "Is there a butterfly?",
+   "box": [
+    750,
+    300,
+    850,
+    400
+   ]
+  },
+  {
+   "id": "rose",
+   "type": "entity",
+   "class": "rose",
+   "plural": "roses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rose outside the window trembling under heatwaves",
+   "question": "Is there a rose?",
+   "box": [
+    700,
+    450,
+    800,
+    550
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    400,
+    200,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "chandelier",
+   "type": "entity",
+   "class": "chandelier",
+   "plural": "chandeliers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dimly lit chandelier",
+   "question": "Is there a dimly lit chandelier?",
+   "box": [
+    400,
+    0,
+    600,
+    150
+   ]
+  },
+  {
+   "id": "painting",
+   "type": "entity",
+   "class": "painting",
+   "plural": "paintings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a painting depicting a cat, a butterfly, and a jug",
+   "question": "Is there a painting depicting a cat, a butterfly, and a jug?",
+   "box": [
+    200,
+    100,
+    350,
+    300
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a key lying beneath the jug, half-buried in a stain",
+   "question": "Is there a key?",
+   "box": [
+    450,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "stain",
+   "type": "entity",
+   "class": "water stain",
+   "plural": "water stains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dark water stain",
+   "question": "Is there a dark water stain?",
+   "box": [
+    300,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "web",
+   "type": "entity",
+   "class": "spider web",
+   "plural": "spider webs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spider web stretched between the window frame and the chandelier",
+   "question": "Is there a spider web?",
+   "box": [
+    600,
+    150,
+    800,
+    400
+   ]
+  },
+  {
+   "id": "jug_perched",
+   "type": "state",
+   "of": "jug",
+   "desc": "the brass jug is perched on the windowsill",
+   "question": "Is the brass jug perched on the windowsill?"
+  },
+  {
+   "id": "jug_tilted",
+   "type": "state",
+   "of": "jug",
+   "desc": "the brass jug is tilted slightly",
+   "question": "Is the brass jug tilted slightly?"
+  },
+  {
+   "id": "cat_staring",
+   "type": "relation",
+   "of": [
+    "cat",
+    "painting"
+   ],
+   "desc": "the cat is motionless and staring at the jug",
+   "question": "Is the cat motionless and staring at the jug?"
+  },
+  {
+   "id": "butterfly_hovering",
+   "type": "state",
+   "of": "butterfly",
+   "desc": "the butterfly is hovering midair",
+   "question": "Is the butterfly hovering midair?"
+  },
+  {
+   "id": "clock_spinning",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock hands are spinning backward",
+   "question": "Are the clock hands spinning backward?"
+  },
+  {
+   "id": "painting_leaking",
+   "type": "relation",
+   "of": [
+    "painting",
+    "shadow_corner"
+   ],
+   "desc": "the painted jug in the painting is leaking a ghostly stream of water onto the sill",
+   "question": "Is the painted jug in the painting leaking a ghostly stream of water onto the sill?"
+  },
+  {
+   "id": "rose_trembling",
+   "type": "state",
+   "of": "rose",
+   "desc": "the rose is trembling under heatwaves",
+   "question": "Is the rose trembling under heatwaves?"
+  },
+  {
+   "id": "cat_behind_jug",
+   "type": "relation",
+   "of": [
+    "cat",
+    "jug"
+   ],
+   "desc": "the cat is beside the jug",
+   "question": "Is the cat beside the jug?"
+  },
+  {
+   "id": "butterfly_outside",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "jug"
+   ],
+   "desc": "the butterfly is outside the window, visible through it",
+   "question": "Is the butterfly outside the window, visible through it?"
+  },
+  {
+   "id": "rose_outside",
+   "type": "relation",
+   "of": [
+    "rose",
+    "jug"
+   ],
+   "desc": "the rose is outside the window, visible through it",
+   "question": "Is the rose outside the window, visible through it?"
+  },
+  {
+   "id": "clock_behind_jug",
+   "type": "relation",
+   "of": [
+    "clock",
+    "jug"
+   ],
+   "desc": "the clock hangs behind the jug",
+   "question": "Does the clock hang behind the jug?"
+  },
+  {
+   "id": "painting_behind_jug",
+   "type": "relation",
+   "of": [
+    "painting",
+    "jug"
+   ],
+   "desc": "the painting is on the wall behind the jug",
+   "question": "Is the painting on the wall behind the jug?"
+  },
+  {
+   "id": "key_under_jug",
+   "type": "relation",
+   "of": [
+    "key",
+    "jug"
+   ],
+   "desc": "the key lies beneath the jug",
+   "question": "Does the key lie beneath the jug?"
+  },
+  {
+   "id": "stain_on_sill",
+   "type": "state",
+   "of": "stain",
+   "desc": "the stain is on the stone windowsill",
+   "question": "Is the stain on the stone windowsill?"
+  },
+  {
+   "id": "web_between_frame_chandelier",
+   "type": "relation",
+   "of": [
+    "web",
+    "chandelier"
+   ],
+   "desc": "the spider web is stretched between the window frame and the chandelier",
+   "question": "Is the spider web stretched between the window frame and the chandelier?"
+  },
+  {
+   "id": "cat_eyes_golden",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has wide golden eyes",
+   "question": "Does the cat have wide golden eyes?"
+  },
+  {
+   "id": "shadow_corner",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow of a passing cloud settled in a corner of the sill",
+   "question": "Is there a shadow of a passing cloud settled in a corner of the windowsill?",
+   "box": [
+    850,
+    600,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "shadow_coiling_stain",
+   "type": "relation",
+   "of": [
+    "shadow_corner",
+    "stain"
+   ],
+   "desc": "the shadow coils around the water stain",
+   "question": "Does the shadow coil around the water stain?"
+  },
+  {
+   "id": "cat_staring_jug",
+   "type": "relation",
+   "of": [
+    "cat",
+    "jug"
+   ],
+   "desc": "the cat stares into the jug",
+   "question": "Is the cat staring into the jug?"
+  },
+  {
+   "id": "butterfly_rose",
+   "type": "relation",
+   "of": [
+    "butterfly",
+    "rose"
+   ],
+   "desc": "the butterfly hovers against the rose petals",
+   "question": "Is the butterfly hovering against the rose petals?"
+  },
+  {
+   "id": "window_frame",
+   "type": "entity",
+   "class": "window frame",
+   "plural": "window frames",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window frame",
+   "question": "Is there a window frame?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "jug_handle_material",
+   "type": "attribute",
+   "of": "jug",
+   "desc": "the wooden handle of the brass jug is turning into bark",
+   "question": "Is the wooden handle of the brass jug turning into bark?"
+  },
+  {
+   "id": "cat_eyes_flicker",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's wide golden eyes are directed between the jug and the butterfly",
+   "question": "Are the cat's wide golden eyes directed between the jug and the butterfly?"
+  },
+  {
+   "id": "butterfly_loop",
+   "type": "state",
+   "of": "butterfly",
+   "desc": "the butterfly repeats its landing over and over in a time loop",
+   "question": "Does the butterfly repeat its landing over and over in a time loop?"
+  },
+  {
+   "id": "shadow_fractal_letters",
+   "type": "attribute",
+   "of": "shadow_corner",
+   "desc": "the shadow forms intricate fractal patterns curling into letters",
+   "question": "Does the shadow form intricate fractal patterns curling into letters?"
+  },
+  {
+   "id": "web_shivers",
+   "type": "state",
+   "of": "web",
+   "desc": "the spider web shivers",
+   "question": "Does the spider web shiver?"
+  },
+  {
+   "id": "painting_cat_watching",
+   "type": "attribute",
+   "of": "painting",
+   "desc": "the painted cat in the painting watches the real cat",
+   "question": "Does the painted cat in the painting watch the real cat?"
+  },
+  {
+   "id": "painting_butterfly_mirroring",
+   "type": "attribute",
+   "of": "painting",
+   "desc": "the painted butterfly in the painting mirrors the real butterfly",
+   "question": "Does the painted butterfly in the painting mirror the real butterfly?"
+  },
+  {
+   "id": "key_teeth_glow",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the teeth of the key glint",
+   "question": "Do the teeth of the key glint?"
+  },
+  {
+   "id": "jug_handle_transforming",
+   "type": "attribute",
+   "of": "jug",
+   "desc": "the wooden handle of the brass jug appears to be transforming into bark and petals",
+   "question": "Does the wooden handle of the brass jug appear to be transforming into bark and petals?"
+  },
+  {
+   "id": "chandelier_amber_glow",
+   "type": "attribute",
+   "of": "chandelier",
+   "desc": "the chandelier casts a warm amber glow",
+   "question": "Does the chandelier cast a warm amber glow?"
+  },
+  {
+   "id": "painting_jug_leaking",
+   "type": "attribute",
+   "of": "painting",
+   "desc": "the painted jug in the painting is leaking water",
+   "question": "Is the painted jug in the painting leaking water?"
+  },
+  {
+   "id": "stain_fractal_letters",
+   "type": "attribute",
+   "of": "stain",
+   "desc": "the water stain has fractal patterns resembling letters",
+   "question": "Does the water stain have fractal patterns resembling letters?"
+  },
+  {
+   "id": "jug_handle_petal",
+   "type": "attribute",
+   "of": "jug",
+   "desc": "the wooden handle of the brass jug is turning into petals",
+   "question": "Is the wooden handle of the brass jug turning into petals?"
+  },
+  {
+   "id": "web_threads_vibrating",
+   "type": "attribute",
+   "of": "web",
+   "desc": "each thread of the spider web is vibrating",
+   "question": "Is each thread of the spider web vibrating?"
+  },
+  {
+   "id": "key_teeth_soft_glow",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the teeth of the key have a soft glow",
+   "question": "Do the teeth of the key have a soft glow?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "jug",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "key",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "stain",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0059",
+ "prompt": "The brass jug, still perched on the stone windowsill, seems untouched by time yet teeming with motion. Its wooden handle creaks faintly, though no wind stirs inside the room—only the hush of a suspended moment. The water within glints like liquid glass, reflecting not the ceiling above but the garden wall beyond the window, where the cat, now motionless, stares into the jug as if it holds the reflection of the butterfly it once watched. Outside, the rose trembles subtly under a heatwave that never reaches the room, bending the light into impossible ripples, as if the air between here and there is a sheet of heat-wracked glass. The cat’s eyes, wide and golden, flicker between the jug and the butterfly, which now hovers midair, neither flying nor falling, caught in a time loop that repeats its landing over and over, a frozen echo of wings against petals. Inside, a clock hangs behind the jug, its hands spinning backward at the same rhythm the butterfly repeats its dance. The shadow of the passing cloud, now a lingering fog, has settled in a corner of the sill, coiling around the water stain and thickening into something alive, a living ink that spreads in intricate, fractal patterns across the stone, curling into letters in a language only the butterfly seems to understand. A spider web, stretched between the window frame and a hanging chandelier, shivers in time with the jug’s reflection, each thread vibrating as if plucked by an invisible hand. The chandelier, oddly dimmed, casts a warm amber glow that only illuminates parts of the room at a time, making objects shift in and out of focus, as though the scene itself is being composed and recomposed in real time. A painting on the wall behind the jug begins to change—its painted cat now watching the real one, its painted butterfly mirroring the one outside, and its painted jug leaking a ghostly stream of water that drips not onto the canvas, but onto the sill, adding to the stain. The room seems to breathe, contracting and expanding with the pulse of the clock, the stillness of the cat, and the endless loop of the butterfly. The jug tilts slightly, just enough to suggest a disturbance, though no force is apparent—only the echo of something moving through a space it doesn’t occupy. The wooden handle, warm from the sun, is slowly transforming into the same material as the rose outside, bark turning to petal, as if the boundary between inside and outside is blurring into a shared dream. The water in the jug remains still, yet it flows in the reflections it casts, showing glimpses of places the eye cannot reach, moments not yet born. A key lies beneath the jug, half-buried in the growing stain, its teeth glinting with a soft glow, as if it unlocks a door not yet seen. The scene holds its breath in a perfect balance of stillness and motion, surreal yet bound by its own strange logic, each object entangled in the lives of the others, forming a tapestry of impossible coexistence that defies explanation but invites contemplation.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay+dedupe",
+  "attempts": 2,
+  "warnings": [
+   "node jug: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 10,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 10,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cat_staring_jug_correct",
+     "cat_staring_jug"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,546 @@
+{
+ "style": "surreal digital painting, amber lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal art studio room with translucent overlapping walls showing different moments, a warped leaded-glass window, and a floor with spilled pigments and melted wax",
+   "question": "Does the image show a surreal art studio with translucent walls, a warped leaded-glass window, and a floor covered in spilled pigments and wax?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "easel",
+   "type": "entity",
+   "class": "easel",
+   "plural": "easels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rickety wooden easel",
+   "question": "Is there a rickety wooden easel?",
+   "box": [
+    300,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "paintbrush",
+   "type": "entity",
+   "class": "paintbrush",
+   "plural": "paintbrushes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered paintbrush",
+   "question": "Is there a weathered paintbrush?",
+   "box": [
+    280,
+    400,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "canvas",
+   "type": "entity",
+   "class": "canvas",
+   "plural": "canvases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a canvas",
+   "question": "Is there a canvas?",
+   "box": [
+    320,
+    250,
+    580,
+    750
+   ]
+  },
+  {
+   "id": "heron",
+   "type": "entity",
+   "class": "heron",
+   "plural": "herons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a living heron",
+   "question": "Is there a living heron?",
+   "box": [
+    420,
+    550,
+    480,
+    650
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wobbly stool",
+   "question": "Is there a wobbly stool?",
+   "box": [
+    700,
+    600,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cracked ceramic coffee mug",
+   "question": "Is there a cracked ceramic coffee mug?",
+   "box": [
+    750,
+    620,
+    850,
+    720
+   ]
+  },
+  {
+   "id": "paint_tubes",
+   "type": "entity",
+   "class": "paint tube",
+   "plural": "paint tubes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a cluster of half-unscrewed paint tubes oozing paint",
+   "question": "Are there half-unscrewed paint tubes oozing paint?",
+   "box": [
+    720,
+    700,
+    880,
+    800
+   ]
+  },
+  {
+   "id": "candle",
+   "type": "entity",
+   "class": "candle",
+   "plural": "candles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a burned-down candle",
+   "question": "Is there a burned-down candle?",
+   "box": [
+    100,
+    850,
+    180,
+    950
+   ]
+  },
+  {
+   "id": "tapestry",
+   "type": "entity",
+   "class": "tapestry",
+   "plural": "tapestries",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tapestry depicting a mountain collapsing into the sea",
+   "question": "Is there a tapestry depicting a mountain collapsing into the sea?",
+   "box": [
+    50,
+    50,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    850,
+    100,
+    980,
+    230
+   ]
+  },
+  {
+   "id": "paintbrush_leaning",
+   "type": "state",
+   "of": "paintbrush",
+   "desc": "the paintbrush is leaning precariously",
+   "question": "Is the paintbrush leaning precariously?"
+  },
+  {
+   "id": "heron_wings",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron's wings are twitching",
+   "question": "Are the heron's wings twitching?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam curls from the coffee mug",
+   "question": "Is steam curling from the coffee mug?"
+  },
+  {
+   "id": "candle_flame",
+   "type": "state",
+   "of": "candle",
+   "desc": "the candle flame burns upward",
+   "question": "Does the candle flame burn upward?"
+  },
+  {
+   "id": "canvas_content",
+   "type": "attribute",
+   "of": "canvas",
+   "desc": "the canvas depicts a stormy sky above a mirror-like lake",
+   "question": "Does the canvas depict a stormy sky above a mirror-like lake?"
+  },
+  {
+   "id": "paintbrush_against_easel",
+   "type": "relation",
+   "of": [
+    "paintbrush",
+    "easel"
+   ],
+   "desc": "the paintbrush leans against the easel",
+   "question": "Is the paintbrush leaning against the easel?"
+  },
+  {
+   "id": "heron_on_canvas",
+   "type": "relation",
+   "of": [
+    "heron",
+    "canvas"
+   ],
+   "desc": "the heron stands on the canvas",
+   "question": "Is the heron standing on the canvas?"
+  },
+  {
+   "id": "mug_on_stool",
+   "type": "relation",
+   "of": [
+    "mug",
+    "stool"
+   ],
+   "desc": "the coffee mug sits atop the stool",
+   "question": "Is the coffee mug sitting atop the stool?"
+  },
+  {
+   "id": "tubes_on_stool",
+   "type": "relation",
+   "of": [
+    "paint_tubes",
+    "stool"
+   ],
+   "desc": "the paint tubes are on the stool",
+   "question": "Are the paint tubes on the stool?"
+  },
+  {
+   "id": "tapestry_hanging",
+   "type": "relation",
+   "of": [
+    "tapestry",
+    "ceiling"
+   ],
+   "desc": "the tapestry dangles from the ceiling",
+   "question": "Is the tapestry dangling from the ceiling?"
+  },
+  {
+   "id": "heron_stands",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron stands",
+   "question": "Is the heron standing?"
+  },
+  {
+   "id": "heron_reflection",
+   "type": "attribute",
+   "of": "heron",
+   "desc": "the heron has a reflection in the lake",
+   "question": "Does the heron have a reflection in the lake?"
+  },
+  {
+   "id": "heron_head_tilt",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron tilts its head",
+   "question": "Is the heron tilting its head?"
+  },
+  {
+   "id": "clock_hands_mismatch",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the clock has one wooden hand and one metallic hand",
+   "question": "Does the clock have one wooden hand and one metallic hand?"
+  },
+  {
+   "id": "clock_ticks_backward",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock ticks backward",
+   "question": "Is the clock ticking backward?"
+  },
+  {
+   "id": "artist",
+   "type": "entity",
+   "class": "artist",
+   "plural": "artists",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an artist visible in the translucent wall",
+   "question": "Is there an artist visible in the translucent wall?",
+   "box": [
+    50,
+    200,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "floorboard",
+   "type": "entity",
+   "class": "floorboard",
+   "plural": "floorboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chipped floorboard",
+   "question": "Is there a chipped floorboard?",
+   "box": [
+    100,
+    850,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "heron_reflection_tilt",
+   "type": "state",
+   "of": "heron",
+   "desc": "the heron's reflection tilts oppositely to the heron's head",
+   "question": "Does the heron's reflection tilt oppositely to the heron's head?"
+  },
+  {
+   "id": "pigment_indigo",
+   "type": "entity",
+   "class": "pigment puddle",
+   "plural": "pigment puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a deep indigo pigment puddle",
+   "question": "Is there a deep indigo pigment puddle?",
+   "box": [
+    100,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "pigment_ochre",
+   "type": "entity",
+   "class": "pigment stream",
+   "plural": "pigment streams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an ochre pigment stream",
+   "question": "Is there an ochre pigment stream?",
+   "box": [
+    300,
+    850,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "indigo_near_floorboard",
+   "type": "relation",
+   "of": [
+    "pigment_indigo",
+    "floorboard"
+   ],
+   "desc": "the deep indigo pigment puddle is near the chipped floorboard",
+   "question": "Is the deep indigo pigment puddle near the chipped floorboard?"
+  },
+  {
+   "id": "ochre_toward_corner",
+   "type": "state",
+   "of": "pigment_ochre",
+   "desc": "the ochre pigment stream trickles toward a warped corner",
+   "question": "Does the ochre pigment stream trickle toward a warped corner?"
+  },
+  {
+   "id": "wax_stream",
+   "type": "entity",
+   "class": "wax stream",
+   "plural": "wax streams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stream of melted wax",
+   "question": "Is there a stream of melted wax?",
+   "box": [
+    400,
+    860,
+    550,
+    960
+   ]
+  },
+  {
+   "id": "ochre_merges_wax",
+   "type": "action",
+   "of": [
+    "pigment_ochre",
+    "wax_stream"
+   ],
+   "desc": "the ochre pigment stream merges with the stream of melted wax",
+   "question": "Does the ochre pigment stream merge with the stream of melted wax?"
+  },
+  {
+   "id": "artist_shadow",
+   "type": "entity",
+   "class": "shadow figure",
+   "plural": "shadow figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow of the future where the canvas is finished",
+   "question": "Is there a shadow figure showing the finished canvas?",
+   "box": [
+    800,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "ceiling",
+   "type": "entity",
+   "class": "ceiling",
+   "plural": "ceilings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the ceiling from which the tapestry dangles",
+   "question": "Is there a ceiling visible in the room?",
+   "box": [
+    0,
+    0,
+    1024,
+    150
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a door beyond the room",
+   "question": "Is there a door visible beyond the room?",
+   "box": [
+    900,
+    300,
+    1024,
+    800
+   ]
+  },
+  {
+   "id": "canvas_beside_paintbrush",
+   "type": "relation",
+   "of": [
+    "canvas",
+    "paintbrush"
+   ],
+   "desc": "the canvas rests beside the paintbrush",
+   "question": "Does the canvas rest beside the paintbrush?"
+  },
+  {
+   "id": "paintbrush_bristles",
+   "type": "attribute",
+   "of": "paintbrush",
+   "desc": "the paintbrush bristles are speckled with dried cobalt and burnt sienna",
+   "question": "Are the paintbrush bristles speckled with dried cobalt and burnt sienna?"
+  },
+  {
+   "id": "mug_handle_chip",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the coffee mug has a chip in its handle",
+   "question": "Does the coffee mug have a chip in its handle?"
+  },
+  {
+   "id": "artist_stroke",
+   "type": "state",
+   "of": "artist",
+   "desc": "the artist is mid-stroke",
+   "question": "Is the artist mid-stroke?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "easel",
+   "to": "paintbrush",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "paint_tubes",
+   "kind": "support"
+  },
+  {
+   "from": "stool",
+   "to": "wax_stream",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0370",
+ "prompt": "Beneath the amber glow of a late afternoon sun slanting through a warped, leaded-glass window, the room breathes with the pulse of unfinished art. A weathered paintbrush, its bristles still speckled with a patchwork of dried cobalt and burnt sienna, leans precariously against a rickety wooden easel, as if it had just completed its final stroke before surrendering to gravity. The canvas it rests beside is a paradox: a stormy sky in tumultuous swirls above a mirror-like lake so still it seems to hold the weight of the heavens. Between these two realms, a solitary heron stands, not as a painted bird but a living one, its reflection frozen in the lake’s glassy surface while its real body shimmers like heat haze. The air trembles faintly, as if the bird is caught between existence and depiction, its wings twitching in a silent animation loop that never breaks the illusion. A cracked ceramic coffee mug, the chip in its handle deepened by years of use, sits atop a wobbly stool nearby, steam curling in a delicate spiral around a cluster of half-unscrewed paint tubes, each oozing a slow, glistening trail down the edge of the stool as if reluctant to be left behind. The floor is a mosaic of spilled pigments—deep indigo puddling near a chipped floorboard, ochre trickling toward a warped corner where it merges with a stream of melted wax from a candle that burned down and now burns upward again, its flame sustained by the fumes of its own wax. A tapestry dangles from the ceiling, woven with threads that shift subtly as the light changes, depicting not a static scene but a slow-motion collapse of a mountain into the sea, each wave catching the viewer in its eye. The walls themselves are not walls but layers—translucent and overlapping, revealing glimpses of the same room in different moments: one wall shows the artist mid-stroke, another reveals a shadow of the future where the canvas is finished, the storm and lake fully resolved into a single moment of harmony. A clock with mismatched hands—one wooden, one metallic—ticks backward in the corner, casting shadows that advance forward, creating a dissonant rhythm that pulses through the room like a heartbeat. The air smells of linseed oil and damp earth, and as you step closer, the heron tilts its head, the reflection in the lake tilting oppositely, a mirror not of form but of intention. Somewhere beyond the room, a door creaks open and closes, not with the sound of wood and hinges but with the muted hum of color fading and reappearing, and though no one enters or leaves, the presence of the movement is felt in the way the light adjusts, the pigments settle, and the canvas breathes as if waiting to be completed once more.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 67,
+   "n_uncovered": 6,
+   "proposed": 4,
+   "ungrounded": 1,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

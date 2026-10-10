@@ -1,0 +1,177 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    600,
+    600,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man",
+   "question": "Is there a man?",
+   "box": [
+    650,
+    250,
+    900,
+    750
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "woman_holding_pass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a boarding pass",
+   "question": "Is the woman in the blue coat holding a boarding pass?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is sitting",
+   "question": "Is the man in the green hat sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the green hat is looking at the woman",
+   "question": "Is the man in the green hat looking at the woman in the blue coat?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat is to the left of the man",
+   "question": "Is the woman in the blue coat to the left of the man in the green hat?"
+  },
+  {
+   "id": "man_on_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in the green hat sits on the bench",
+   "question": "Is the man in the green hat sitting on the bench?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue coat hands the boarding pass to the man in the green hat",
+   "question": "Is the woman in the blue coat handing the boarding pass to the man in the green hat?"
+  },
+  {
+   "id": "no_luggage",
+   "type": "absent",
+   "desc": "luggage",
+   "question": "Is there any luggage visible in the image?"
+  },
+  {
+   "id": "woman_blue_coat",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue coat",
+   "question": "Does the woman wear a blue coat?"
+  },
+  {
+   "id": "man_green_hat",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a green hat",
+   "question": "Does the man wear a green hat?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0096",
+ "prompt": "In anime style, a woman in a blue coat stands on the left side of an airport gate, holding a boarding pass. A man in a green hat sits on a bench on the right side, looking at her. The woman is handing the boarding pass to the man. There is no luggage visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

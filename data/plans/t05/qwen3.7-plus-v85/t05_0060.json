@@ -1,0 +1,246 @@
+{
+ "style": "pencil sketch with light watercolor wash, loose lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy construction site background",
+   "question": "Does the image depict a busy construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "entity",
+   "class": "steel beam",
+   "plural": "steel beams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a horizontal steel beam",
+   "question": "Is there a horizontal steel beam?",
+   "box": [
+    50,
+    600,
+    974,
+    700
+   ]
+  },
+  {
+   "id": "bricks",
+   "type": "entity",
+   "class": "brick",
+   "plural": "bricks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of bricks",
+   "question": "Is there a stack of bricks?",
+   "box": [
+    400,
+    650,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a construction worker in a yellow hard hat",
+   "question": "Is there a construction worker wearing a yellow hard hat?",
+   "box": [
+    100,
+    200,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second construction worker wearing blue overalls",
+   "question": "Is there a second construction worker wearing blue overalls?",
+   "box": [
+    400,
+    250,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an orange cat",
+   "question": "Is there an orange cat?",
+   "box": [
+    620,
+    680,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a third construction worker in a white shirt",
+   "question": "Is there a third construction worker wearing a white shirt?",
+   "box": [
+    750,
+    250,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "assistant",
+   "type": "entity",
+   "class": "construction worker",
+   "plural": "construction workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fourth construction worker wearing green gloves",
+   "question": "Is there a fourth construction worker wearing green gloves?",
+   "box": [
+    850,
+    350,
+    1000,
+    700
+   ]
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the construction worker in the yellow hard hat is standing",
+   "question": "Is the construction worker in the yellow hard hat standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the orange cat is sitting",
+   "question": "Is the orange cat sitting?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "action",
+   "of": [
+    "foreman",
+    "bricks"
+   ],
+   "desc": "the construction worker in blue overalls points toward the stack of bricks",
+   "question": "Is the construction worker in blue overalls pointing toward the stack of bricks?"
+  },
+  {
+   "id": "engineer_looking",
+   "type": "action",
+   "of": [
+    "engineer",
+    "assistant"
+   ],
+   "desc": "the construction worker in the white shirt looks at the clipboard held by the assistant",
+   "question": "Is the construction worker in the white shirt looking at the clipboard held by the assistant?"
+  },
+  {
+   "id": "assistant_holding_clipboard",
+   "type": "attribute",
+   "of": "assistant",
+   "desc": "the assistant holds a clipboard",
+   "question": "Is the assistant holding a clipboard?"
+  },
+  {
+   "id": "assistant_handing_blueprint",
+   "type": "action",
+   "of": [
+    "assistant",
+    "engineer"
+   ],
+   "desc": "the assistant hands a rolled blueprint to the engineer",
+   "question": "Is the assistant handing a rolled blueprint to the engineer?"
+  },
+  {
+   "id": "worker_looking_foreman",
+   "type": "action",
+   "of": [
+    "worker",
+    "foreman"
+   ],
+   "desc": "the construction worker in the yellow hard hat looks at the foreman",
+   "question": "Is the construction worker in the yellow hard hat looking at the foreman?"
+  },
+  {
+   "id": "worker_on_beam",
+   "type": "relation",
+   "of": [
+    "worker",
+    "beam"
+   ],
+   "desc": "the construction worker in the yellow hard hat stands on the steel beam",
+   "question": "Is the construction worker in the yellow hard hat standing on the steel beam?"
+  },
+  {
+   "id": "cat_next_to_bricks",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bricks"
+   ],
+   "desc": "the orange cat is next to the stack of bricks",
+   "question": "Is the orange cat next to the stack of bricks?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "heavy machinery",
+   "question": "Is there any heavy machinery visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "beam",
+   "to": "worker",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bricks",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0060",
+ "prompt": "A pencil sketch with light color wash depicts a busy construction site. On the left, a worker in a yellow hard hat stands firmly on a steel beam. In the center, a foreman wearing blue overalls points toward a stack of bricks. Next to the bricks, a stray cat with orange fur sits quietly observing the scene. To the right, an engineer in a white shirt looks at a clipboard held by an assistant in green gloves. The assistant is handing a rolled blueprint to the engineer. The worker in the yellow hard hat is looking at the foreman. There is no heavy machinery visible in the background. The sketch captures the raw energy of the site through loose lines and subtle watercolor tints, focusing entirely on the human and animal elements present. The composition balances the verticality of the standing figures with the horizontal line of the beam, creating a dynamic yet structured visual narrative without unnecessary clutter or mechanical distractions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

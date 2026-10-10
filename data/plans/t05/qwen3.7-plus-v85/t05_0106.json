@@ -1,0 +1,313 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dusty field",
+   "question": "Does the image show a dusty field?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a straw hat",
+   "question": "Is there a farmer in a straw hat?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    300,
+    600,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    400,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in yellow overalls",
+   "question": "Is there a small child in yellow overalls?",
+   "box": [
+    650,
+    350,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "crow",
+   "type": "entity",
+   "class": "crow",
+   "plural": "crows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black crow",
+   "question": "Is there a black crow?",
+   "box": [
+    750,
+    550,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "farmer_wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a golden sheaf of wheat",
+   "question": "Is the farmer holding a golden sheaf of wheat?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog's tail is curled tightly around its paws",
+   "question": "Is the brown dog's tail curled tightly around its paws?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron reaches out",
+   "question": "Is the woman in the blue apron reaching out?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child points excitedly",
+   "question": "Is the small child pointing excitedly?"
+  },
+  {
+   "id": "crow_perched",
+   "type": "state",
+   "of": "crow",
+   "desc": "the black crow is perched",
+   "question": "Is the black crow perched?"
+  },
+  {
+   "id": "crow_watching",
+   "type": "state",
+   "of": "crow",
+   "desc": "the black crow watches with keen interest",
+   "question": "Is the black crow watching with keen interest?"
+  },
+  {
+   "id": "farmer_looks_woman",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the farmer looks at the woman",
+   "question": "Is the farmer looking at the woman?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the farmer passes the bundle to the woman",
+   "question": "Is the farmer passing the bundle to the woman?"
+  },
+  {
+   "id": "child_looks_crow",
+   "type": "relation",
+   "of": [
+    "child",
+    "crow"
+   ],
+   "desc": "the child looks at the crow",
+   "question": "Is the child looking at the crow?"
+  },
+  {
+   "id": "dog_beside_farmer",
+   "type": "relation",
+   "of": [
+    "dog",
+    "farmer"
+   ],
+   "desc": "the brown dog is beside the farmer",
+   "question": "Is the brown dog beside the farmer?"
+  },
+  {
+   "id": "dog_on_ground",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits on the dusty ground",
+   "question": "Is the brown dog sitting on the dusty ground?"
+  },
+  {
+   "id": "crow_on_pumpkin",
+   "type": "state",
+   "of": "crow",
+   "desc": "the black crow is perched atop the highest pumpkin",
+   "question": "Is the black crow perched atop the highest pumpkin in the cart?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the field?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a straw hat stands",
+   "question": "Is the farmer in a straw hat standing?"
+  },
+  {
+   "id": "cart_entity",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cart",
+   "question": "Is there a wooden cart?",
+   "box": [
+    650,
+    500,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "child_right_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child in yellow overalls is to the right of the woman in a blue apron",
+   "question": "Is the small child in yellow overalls to the right of the woman in a blue apron?"
+  },
+  {
+   "id": "crow_on_cart",
+   "type": "relation",
+   "of": [
+    "crow",
+    "cart_entity"
+   ],
+   "desc": "the black crow is perched atop the highest pumpkin on the wooden cart",
+   "question": "Is the black crow perched atop the highest pumpkin on the wooden cart?"
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several pumpkins",
+   "question": "Are there several pumpkins?",
+   "box": [
+    760,
+    620,
+    970,
+    840
+   ]
+  },
+  {
+   "id": "cart_overflowing",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "cart_entity"
+   ],
+   "desc": "the pumpkins are overflowing from the wooden cart",
+   "question": "Are the pumpkins overflowing from the wooden cart?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cart_entity",
+   "to": "crow",
+   "kind": "support"
+  },
+  {
+   "from": "cart_entity",
+   "to": "pumpkins",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0106",
+ "prompt": "In this watercolor illustration, a farmer in a straw hat stands on the left holding a golden sheaf of wheat. Beside him, a brown dog sits patiently on the dusty ground, its tail curled tightly around its paws. In the center, a woman in a blue apron reaches out to accept the wheat from the farmer's hands. To her right, a small child in yellow overalls points excitedly toward a wooden cart overflowing with pumpkins. Perched atop the highest pumpkin is a black crow, watching the scene with keen interest. The farmer looks at the woman as he passes the bundle. The child looks at the crow while pointing. There is no tractor visible in the field.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

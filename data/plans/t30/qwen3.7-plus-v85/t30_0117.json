@@ -1,0 +1,467 @@
+{
+ "style": "cinematic film still, overcast winter lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square with cobblestones, a stone fountain, bare tree branches overhead, and closed shop windows in the background",
+   "question": "Does the image show a snowy town square with cobblestones, a stone fountain, bare tree branches, and closed shop windows?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue coat",
+   "question": "Is there an elderly woman in a blue coat?",
+   "box": [
+    400,
+    300,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman holds a lantern",
+   "question": "Is the elderly woman holding a lantern?"
+  },
+  {
+   "id": "woman_breath",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "visible breath from the elderly woman",
+   "question": "Is visible breath coming from the elderly woman's mouth?"
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    250,
+    320,
+    400,
+    820
+   ]
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man points with his finger extended",
+   "question": "Is the man pointing with his finger extended?"
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    280,
+    600,
+    420,
+    750
+   ]
+  },
+  {
+   "id": "dog_chin_on_boot",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the dog rests its chin on the man's boot",
+   "question": "Is the brown dog resting its chin on the man's boot?"
+  },
+  {
+   "id": "children",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two children in yellow jackets",
+   "question": "Are there two children in yellow jackets?",
+   "box": [
+    700,
+    400,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "performer",
+   "type": "entity",
+   "class": "performer",
+   "plural": "performers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street performer wearing a striped hat",
+   "question": "Is there a street performer wearing a striped hat?",
+   "box": [
+    750,
+    350,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "balls",
+   "type": "attribute",
+   "of": "performer",
+   "desc": "the performer juggles three orange balls",
+   "question": "Is the performer juggling three orange balls?"
+  },
+  {
+   "id": "performer_balance",
+   "type": "state",
+   "of": "performer",
+   "desc": "the performer balances on one leg",
+   "question": "Is the performer balancing on one leg?"
+  },
+  {
+   "id": "children_look_performer",
+   "type": "action",
+   "of": [
+    "children",
+    "performer"
+   ],
+   "desc": "the children look at the performer",
+   "question": "Are the two children looking at the street performer?"
+  },
+  {
+   "id": "carriage",
+   "type": "entity",
+   "class": "carriage",
+   "plural": "carriages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a horse-drawn carriage",
+   "question": "Is there a horse-drawn carriage?",
+   "box": [
+    600,
+    500,
+    950,
+    700
+   ]
+  },
+  {
+   "id": "horse",
+   "type": "entity",
+   "class": "horse",
+   "plural": "horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white horse attached to the carriage",
+   "question": "Is there a white horse attached to the carriage?",
+   "box": [
+    600,
+    520,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "horse_stamping",
+   "type": "state",
+   "of": "horse",
+   "desc": "the white horse stamps its hoof",
+   "question": "Is the white horse stamping its hoof on the ground?"
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vendor in a green apron",
+   "question": "Is there a vendor in a green apron?",
+   "box": [
+    100,
+    400,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a black beanie",
+   "question": "Is there a customer in a black beanie?",
+   "box": [
+    260,
+    420,
+    380,
+    800
+   ]
+  },
+  {
+   "id": "handover_cup",
+   "type": "action",
+   "of": [
+    "vendor",
+    "customer"
+   ],
+   "desc": "the vendor hands a steaming cup to the customer",
+   "question": "Is the vendor handing a steaming cup to the customer?"
+  },
+  {
+   "id": "pigeon",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pigeon",
+   "question": "Is there a pigeon?",
+   "box": [
+    500,
+    850,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "pigeon_pecking",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon pecks at crumbs",
+   "question": "Is the pigeon pecking at crumbs on the ground?"
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat",
+   "question": "Is there a cat?",
+   "box": [
+    480,
+    780,
+    580,
+    860
+   ]
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is perched on the fountain's edge",
+   "question": "Is the orange cat perched on the edge of the stone fountain?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "pigeon"
+   ],
+   "desc": "the cat watches the pigeon",
+   "question": "Is the orange cat watching the pigeon?"
+  },
+  {
+   "id": "officer",
+   "type": "entity",
+   "class": "police officer",
+   "plural": "police officers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a police officer in a dark uniform",
+   "question": "Is there a police officer in a dark uniform?",
+   "box": [
+    850,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "officer_walking",
+   "type": "state",
+   "of": "officer",
+   "desc": "the police officer walks past a shop window",
+   "question": "Is the police officer walking past a closed shop window?"
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    820,
+    500,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "bicycle_leaning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle leans against a lamppost",
+   "question": "Is the bicycle leaning against a lamppost?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun",
+   "question": "Is the sun visible in the sky?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke rising from a chimney",
+   "question": "Is there smoke rising from any chimney?"
+  },
+  {
+   "id": "elderly_woman_stands",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a blue coat stands",
+   "question": "Is the elderly woman in a blue coat standing?"
+  },
+  {
+   "id": "man_sits",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf sits",
+   "question": "Is the man in a red scarf sitting?"
+  },
+  {
+   "id": "dog_sits",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits next to the man",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "performer_tossing",
+   "type": "state",
+   "of": "performer",
+   "desc": "the street performer wearing a striped hat tosses the highest ball",
+   "question": "Is the street performer wearing a striped hat tossing the highest ball?"
+  },
+  {
+   "id": "horse_waits",
+   "type": "state",
+   "of": "horse",
+   "desc": "the white horse waits",
+   "question": "Is the white horse waiting?"
+  },
+  {
+   "id": "pigeon_near_fountain",
+   "type": "state",
+   "of": "pigeon",
+   "desc": "the pigeon is near the base of the stone fountain",
+   "question": "Is the pigeon near the base of the stone fountain?"
+  },
+  {
+   "id": "officer_reflection",
+   "type": "attribute",
+   "of": "officer",
+   "desc": "the police officer's reflection is faintly visible in the shop window glass",
+   "question": "Is the police officer's reflection faintly visible in the shop window glass?"
+  },
+  {
+   "id": "bicycle_tires_snow",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle's tires are half-buried in snow",
+   "question": "Are the bicycle's tires half-buried in snow?"
+  },
+  {
+   "id": "man_gloves",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears gloves",
+   "question": "Is the man wearing gloves?"
+  },
+  {
+   "id": "dog_floppy_ear",
+   "type": "attribute",
+   "of": "dog",
+   "desc": "the brown dog has a floppy ear",
+   "question": "Does the brown dog have a floppy ear?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is next to the man",
+   "question": "Is the brown dog next to the man?"
+  },
+  {
+   "id": "cat_orange_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has orange fur",
+   "question": "Does the cat have orange fur?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "carriage",
+   "to": "horse",
+   "kind": "support"
+  }
+ ],
+ "id": "t30_0117",
+ "prompt": "Cinematic film still. In the center of a snowy town square, an elderly woman in a blue coat stands holding a lantern, her breath visible in the cold air. To her left, a man in a red scarf points toward the clock tower, his gloved finger extended sharply. Next to him sits a brown dog with a floppy ear, resting its chin on the man’s boot. On the right side of the frame, two children in yellow jackets look at a street performer juggling three orange balls. The performer, wearing a striped hat, balances on one leg while tossing the highest ball into the gray sky. Behind them, a horse-drawn carriage waits, the white horse stamping its hoof impatiently on the cobblestones. A vendor in a green apron hands a steaming cup to a customer in a black beanie, their fingers brushing briefly during the exchange. Nearby, a pigeon pecks at crumbs scattered near the base of a stone fountain. Perched on the fountain’s edge is a cat with orange fur, watching the bird with intense focus. In the background, a police officer in a dark uniform walks past a closed shop window, his reflection faintly visible in the glass. A bicycle leans against a lamppost near the officer, its tires half-buried in snow. Above the square, bare tree branches stretch across the top of the frame, dusted with fresh powder. There is no sun visible in the overcast sky. There is no smoke rising from any chimney. The scene captures a quiet moment of daily life amidst the winter chill, with each figure distinct in their attire and action, creating a layered narrative within the single frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 9,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 1,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

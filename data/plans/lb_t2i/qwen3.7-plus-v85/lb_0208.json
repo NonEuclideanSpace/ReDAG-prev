@@ -1,0 +1,492 @@
+{
+ "style": "surreal digital art, magical realism, high detail, dramatic lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a churned-up field of mud and knee-high grass under a low ceiling of swirling storm clouds with diffuse golden afternoon sun",
+   "question": "Does the image show a churned-up field of mud and knee-high grass under swirling storm clouds with golden sunlight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bus",
+   "type": "entity",
+   "class": "school bus",
+   "plural": "school buses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow school bus wedged sideways",
+   "question": "Is there a yellow school bus wedged sideways?",
+   "box": [
+    100,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall farmer",
+   "question": "Is there a tall farmer?",
+   "box": [
+    650,
+    200,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ladder with alternating wood and glowing circuit rungs",
+   "question": "Is there a ladder with alternating wood and glowing circuit rungs?",
+   "box": [
+    700,
+    100,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toolbox",
+   "question": "Is there a toolbox?",
+   "box": [
+    720,
+    350,
+    780,
+    450
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a key",
+   "question": "Is there a key?",
+   "box": [
+    726,
+    266,
+    774,
+    314
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a chaotic assembly of birds including starlings, magpies, and a penguin in a tiny top hat",
+   "question": "Are there birds including a penguin in a tiny top hat?",
+   "box": [
+    200,
+    250,
+    600,
+    350
+   ]
+  },
+  {
+   "id": "tire",
+   "type": "entity",
+   "class": "tire",
+   "plural": "tires",
+   "count": 1,
+   "count_exact": true,
+   "desc": "one deflated tire",
+   "question": "Is there one deflated tire?",
+   "box": [
+    150,
+    650,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "fire truck",
+   "plural": "fire trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red fire truck",
+   "question": "Is there a red fire truck?",
+   "box": [
+    850,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "horizon_distortion",
+   "type": "entity",
+   "class": "horizon distortion",
+   "plural": "horizon distortions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warping horizon distortion",
+   "question": "Is there a warping horizon distortion?",
+   "box": [
+    0,
+    0,
+    1024,
+    200
+   ]
+  },
+  {
+   "id": "bus_doors",
+   "type": "state",
+   "of": "bus",
+   "desc": "the bus doors are wide open",
+   "question": "Are the bus doors wide open?"
+  },
+  {
+   "id": "farmer_climbing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer is climbing the ladder",
+   "question": "Is the farmer climbing the ladder?"
+  },
+  {
+   "id": "farmer_smiling",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer is smiling",
+   "question": "Is the farmer smiling?"
+  },
+  {
+   "id": "dust_trail",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer leaves a trail of dust rearranging into tiny constellations",
+   "question": "Does the farmer leave a trail of dust that forms tiny constellations?"
+  },
+  {
+   "id": "truck_reflection",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the fire truck's reflection shows alternate versions of the scene",
+   "question": "Does the fire truck's reflection show alternate versions of the scene?"
+  },
+  {
+   "id": "farmer_inserts_key",
+   "type": "action",
+   "of": [
+    "farmer",
+    "bus"
+   ],
+   "desc": "the farmer inserts the glowing key into a vent on the bus",
+   "question": "Is the farmer inserting the glowing key into a vent on the bus?"
+  },
+  {
+   "id": "ladder_against_bus",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "bus"
+   ],
+   "desc": "the ladder is placed against the side of the bus",
+   "question": "Is the ladder placed against the side of the bus?"
+  },
+  {
+   "id": "birds_on_bus",
+   "type": "relation",
+   "of": [
+    "birds",
+    "bus"
+   ],
+   "desc": "the birds are perched on the roof and antenna of the bus",
+   "question": "Are the birds perched on the roof and antenna of the bus?"
+  },
+  {
+   "id": "truck_behind_bus",
+   "type": "relation",
+   "of": [
+    "truck",
+    "bus"
+   ],
+   "desc": "the fire truck is behind the bus in the background",
+   "question": "Is the fire truck positioned behind the bus in the background?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "clear undistorted sky without storm clouds",
+   "question": "Is the sky clear and undistorted without storm clouds?"
+  },
+  {
+   "id": "broken_glass",
+   "type": "attribute",
+   "of": "bus",
+   "desc": "the bus has broken glass in its doors",
+   "question": "Does the bus have broken glass in its doors?"
+  },
+  {
+   "id": "farmer_trudges",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer trudges forward",
+   "question": "Is the farmer trudging forward?"
+  },
+  {
+   "id": "farmer_carrying_ladder_toolbox",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer carries a wooden ladder",
+   "question": "Is the farmer carrying a wooden ladder?"
+  },
+  {
+   "id": "truck_turning",
+   "type": "state",
+   "of": "truck",
+   "desc": "the fire truck turns in a slow circle",
+   "question": "Is the fire truck turning in a slow circle?"
+  },
+  {
+   "id": "truck_creeping",
+   "type": "state",
+   "of": "truck",
+   "desc": "the fire truck is creeping forward",
+   "question": "Is the fire truck creeping forward?"
+  },
+  {
+   "id": "tire_inflating",
+   "type": "state",
+   "of": "tire",
+   "desc": "the deflated tire is slowly inflating",
+   "question": "Is the deflated tire slowly inflating?"
+  },
+  {
+   "id": "mud_portals",
+   "type": "entity",
+   "class": "portal",
+   "plural": "portals",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny doors and portals in the mud",
+   "question": "Are there tiny doors and portals in the mud?",
+   "box": [
+    100,
+    800,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "birds_silent",
+   "type": "state",
+   "of": "birds",
+   "desc": "the birds are silent",
+   "question": "Are the birds silent?"
+  },
+  {
+   "id": "truck_lights_flickering",
+   "type": "state",
+   "of": "truck",
+   "desc": "the fire truck's lights are flickering",
+   "question": "Are the fire truck's lights flickering?"
+  },
+  {
+   "id": "key_in_palm",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds the glowing key in his palm",
+   "question": "Does the farmer hold the glowing key in his palm?"
+  },
+  {
+   "id": "bus_vortex_interior",
+   "type": "attribute",
+   "of": "bus",
+   "desc": "the bus interior contains a swirling vortex of colors and shapes",
+   "question": "Does the bus interior contain a swirling vortex of colors and shapes?"
+  },
+  {
+   "id": "horizon_behind_truck",
+   "type": "relation",
+   "of": [
+    "horizon_distortion",
+    "truck"
+   ],
+   "desc": "the warping horizon mirage is behind the fire truck",
+   "question": "Is the warping horizon mirage behind the fire truck?"
+  },
+  {
+   "id": "farmer_on_bus",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "bus"
+   ],
+   "desc": "the farmer is at the top of the bus",
+   "question": "Is the farmer positioned at the top of the yellow school bus?"
+  },
+  {
+   "id": "farmer_overalls",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "faded blue overalls",
+   "question": "Is the farmer wearing faded blue overalls?"
+  },
+  {
+   "id": "farmer_hat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "a sun-worn straw hat",
+   "question": "Is the farmer wearing a sun-worn straw hat?"
+  },
+  {
+   "id": "ladder_infinite",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the ladder appears to stretch infinitely upwards and downwards",
+   "question": "Does the ladder appear to stretch infinitely upwards and downwards?"
+  },
+  {
+   "id": "toolbox_glowing_tools",
+   "type": "attribute",
+   "of": "toolbox",
+   "desc": "faintly glowing tools inside the toolbox",
+   "question": "Are there faintly glowing tools inside the toolbox?"
+  },
+  {
+   "id": "key_cerulean",
+   "type": "attribute",
+   "of": "key",
+   "desc": "the key glows with cerulean light",
+   "question": "Does the key glow with cerulean light?"
+  },
+  {
+   "id": "tire_bloated",
+   "type": "attribute",
+   "of": "tire",
+   "desc": "the tire is bloated and lifeless",
+   "question": "Is the tire bloated and lifeless?"
+  },
+  {
+   "id": "horizon_mirrored",
+   "type": "attribute",
+   "of": "horizon_distortion",
+   "desc": "the horizon distortion shows mirrored versions of the scene",
+   "question": "Does the horizon distortion show mirrored versions of the scene?"
+  },
+  {
+   "id": "bus_vortex_reveal",
+   "type": "attribute",
+   "of": "bus",
+   "desc": "the open bus doors reveal a swirling vortex of colors and shapes",
+   "question": "Do the open bus doors reveal a swirling vortex of colors and shapes?"
+  },
+  {
+   "id": "reflection_alien",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the reflection shows an alien farmer with a green beard",
+   "question": "Does the reflection show an alien farmer with a green beard?"
+  },
+  {
+   "id": "reflection_gold_birds",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the reflection shows birds made of molten gold",
+   "question": "Does the reflection show birds made of molten gold?"
+  },
+  {
+   "id": "farmer_carrying_toolbox",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer carries a toolbox strapped to his back",
+   "question": "Is the farmer carrying a toolbox strapped to his back?"
+  },
+  {
+   "id": "mud_miniature_worlds",
+   "type": "attribute",
+   "of": "mud_portals",
+   "desc": "the portals reveal miniature worlds of toy cars and animated pencils",
+   "question": "Do the portals reveal miniature worlds of toy cars and animated pencils?"
+  },
+  {
+   "id": "vortex_staircases",
+   "type": "attribute",
+   "of": "bus",
+   "desc": "the vortex contains spiral staircases into other dimensions",
+   "question": "Does the vortex contain spiral staircases into other dimensions?"
+  },
+  {
+   "id": "vortex_drawings",
+   "type": "attribute",
+   "of": "bus",
+   "desc": "the vortex contains living children’s drawings of flying cats and singing trees",
+   "question": "Does the vortex contain living children’s drawings of flying cats and singing trees?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bus",
+   "to": "birds",
+   "kind": "support"
+  },
+  {
+   "from": "bus",
+   "to": "ladder",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0208",
+ "prompt": "The yellow school bus, wedged sideways in a churned-up field of mud and knee-high grass, seems to breathe with the weather, its wide-open doors yawning like the mouth of a cave where the wind now whistles through broken glass and the faint, musty scent of crayons and old milk lingers. One tire lies deflated, a bloated, lifeless thing, while the rest of the bus glows under a diffuse, golden afternoon sun that filters through a low ceiling of swirling storm clouds. The roof and the lone, crooked antenna have become a perch for a chaotic assembly of birds—starlings, magpies, and even a dapper penguin in a tiny top hat—chirping, squawking, and pecking at something just out of view, perhaps a secret stash of jellybeans or the remnants of a science fair experiment left behind by a long-ago student. A tall, weather-worn farmer in faded blue overalls and a sun-worn straw hat trudges forward with a wooden ladder and a toolbox strapped to his back, the tools inside jingling like a clockmaker’s collection, each item glowing faintly with the soft luminescence of objects imbued with purpose. The ladder, as he places it against the side of the bus, is not ordinary; it appears to stretch infinitely upwards and downwards, its rungs alternating between real wood and glowing circuits, and as he climbs, he leaves behind a faint trail of dust that rearranges into tiny constellations midair. In the background, the red fire truck turns in a slow, deliberate circle on the narrow country road, its polished surface reflecting the bus and the farmer as if in a funhouse mirror, but as the truck rotates, the reflection begins to show not the present moment, but alternate versions of the scene: one where the farmer is an alien with a green beard, another where the birds are made of molten gold, and yet another where the bus is floating above the field like a time capsule from a lost century. Behind the truck, the horizon warps subtly, bending around the scene like a heat mirage, and within that distortion, you can see the same field mirrored infinitely in every direction, each version slightly different—rain falling instead of sun, the bus upright, the farmer gone. As the farmer reaches the top of the bus and opens his toolbox, he removes a key that glows with a faint cerulean light, and as he inserts it into a vent, the entire vehicle begins to hum and vibrate, the flat tire slowly inflating with a sound like a thousand whispered secrets. The birds, now silent, watch in rapt attention as the doors of the bus creak open further, revealing not the empty insides of a school bus, but a swirling vortex of colors and shapes that defy perspective, where staircases spiral into other dimensions and children’s drawings of flying cats and singing trees come to life. The farmer smiles, the key now in his palm, as the fire truck stops turning and begins to creep forward, its lights flickering in a pattern that might be Morse code or a lullaby, as if responding to the scene with its own kind of sentience. In the field, the mud shifts and pulses like living skin, revealing tiny doors and portals where miniature worlds of toy cars and animated pencils are at work, building and rebuilding the very ground beneath the bus. The scene is a tangle of impossible logic and quiet harmony, a single frozen moment in which time folds in on itself and every object—be it bus, farmer, or bird—plays its part in a grand, unseen symphony of causality.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 2,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 51,
+   "n_uncovered": 5,
+   "proposed": 3,
+   "ungrounded": 1,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 14,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 12,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "style": "dimly lit, mysterious, photorealistic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dimly lit underground cave",
+   "question": "Does the image show a dimly lit underground cave?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chest",
+   "type": "entity",
+   "class": "treasure chest",
+   "plural": "treasure chests",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old rectangular wooden treasure chest",
+   "question": "Is there an old rectangular wooden treasure chest?",
+   "box": [
+    312,
+    412,
+    712,
+    812
+   ]
+  },
+  {
+   "id": "coins",
+   "type": "entity",
+   "class": "coin",
+   "plural": "coins",
+   "count": 5,
+   "count_exact": false,
+   "desc": "scattered ancient coins",
+   "question": "Are there scattered ancient coins?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "chest_hinges",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "three rusty metal hinges along the back edge of the chest",
+   "question": "Does the chest have three rusty metal hinges along its back edge?"
+  },
+  {
+   "id": "chest_carvings",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "intricate spiral patterns carved on the surface of the chest",
+   "question": "Are there intricate spiral patterns carved on the surface of the chest?"
+  },
+  {
+   "id": "chest_dust",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "a thin layer of dust covering the chest",
+   "question": "Is the chest covered in a thin layer of dust?"
+  },
+  {
+   "id": "chest_locks",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest has five brass locks on the front",
+   "question": "Are there five brass locks on the front of the chest?"
+  },
+  {
+   "id": "chest_cracks",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the wooden planks of the chest display deep cracks",
+   "question": "Do the wooden planks of the chest display deep cracks?"
+  },
+  {
+   "id": "chest_paint",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "areas on the chest show chipped old paint",
+   "question": "Are there areas on the chest with chipped old paint?"
+  },
+  {
+   "id": "chest_sitting",
+   "type": "state",
+   "of": "chest",
+   "desc": "the chest is sitting",
+   "question": "Is the chest sitting?"
+  },
+  {
+   "id": "chest_not_glowing",
+   "type": "state",
+   "of": "chest",
+   "desc": "the chest is not glowing",
+   "question": "Is the chest not glowing?"
+  },
+  {
+   "id": "chest_on_floor",
+   "type": "relation",
+   "of": [
+    "chest",
+    "floor"
+   ],
+   "desc": "the chest rests on the stone floor",
+   "question": "Does the chest rest on the stone floor?"
+  },
+  {
+   "id": "coins_surround_chest",
+   "type": "relation",
+   "of": [
+    "coins",
+    "chest"
+   ],
+   "desc": "the coins are scattered around the chest",
+   "question": "Are the coins scattered around the chest?"
+  },
+  {
+   "id": "no_modern_elements",
+   "type": "absent",
+   "desc": "modern elements",
+   "question": "Are there any modern elements in the image?"
+  },
+  {
+   "id": "chest_metal_oxidized",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "all metal components of the chest are oxidized",
+   "question": "Are all metal components of the chest oxidized?"
+  },
+  {
+   "id": "floor",
+   "type": "entity",
+   "class": "stone floor",
+   "plural": "stone floors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone floor",
+   "question": "Is there a stone floor?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chest_wood_color",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the chest is made of dark brown worn wood",
+   "question": "Is the chest made of dark brown worn wood?"
+  },
+  {
+   "id": "chest_locks_corrosion",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the brass locks show green corrosion",
+   "question": "Do the brass locks show green corrosion?"
+  },
+  {
+   "id": "chest_planks_yellowed",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "the wooden planks have yellowed coloring",
+   "question": "Do the wooden planks have yellowed coloring?"
+  },
+  {
+   "id": "chest_paint_peeling",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "areas on the chest show peeling old paint",
+   "question": "Are there areas on the chest with peeling old paint?"
+  },
+  {
+   "id": "chest_metal_worn",
+   "type": "attribute",
+   "of": "chest",
+   "desc": "all metal components of the chest are worn",
+   "question": "Are all metal components of the chest worn?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "floor",
+   "to": "chest",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_001",
+ "prompt": "A single old wooden treasure chest sitting in a dimly lit underground cave. The chest is rectangular, made of dark brown worn wood with three rusty metal hinges along the back edge. Its surface is carved with intricate spiral patterns and covered in a thin layer of dust. The chest is not glowing, avoiding any bright illumination. Five brass locks secure the front, each showing signs of green corrosion. The wooden planks display deep cracks and yellowed coloring, with some areas showing chipped and peeling old paint. The chest rests on a stone floor, surrounded by scattered ancient coins that reflect the dim torchlight. All the metal components are oxidized and worn, giving the chest a mysterious and forgotten appearance. The chest contains no modern elements and shows no signs of recent use.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

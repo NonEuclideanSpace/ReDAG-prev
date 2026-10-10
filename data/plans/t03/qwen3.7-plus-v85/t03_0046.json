@@ -1,0 +1,125 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a beach volleyball court setting",
+   "question": "Does the image depict a beach volleyball tournament setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player_blue",
+   "type": "entity",
+   "class": "volleyball player",
+   "plural": "volleyball players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in a blue jersey",
+   "question": "Is there a player in a blue jersey?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    400,
+    250,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "spectator",
+   "type": "entity",
+   "class": "spectator",
+   "plural": "spectators",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spectator in a yellow hat",
+   "question": "Is there a spectator in a yellow hat?",
+   "box": [
+    724,
+    350,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "player_jumping",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the player in the blue jersey is jumping high",
+   "question": "Is the player in the blue jersey jumping high?"
+  },
+  {
+   "id": "referee_whistle_attr",
+   "type": "attribute",
+   "of": "referee",
+   "desc": "the referee in the striped shirt holds a whistle",
+   "question": "Is the referee in the striped shirt holding a whistle?"
+  },
+  {
+   "id": "referee_blowing",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt is blowing the whistle",
+   "question": "Is the referee in the striped shirt blowing the whistle?"
+  },
+  {
+   "id": "spectator_looking",
+   "type": "relation",
+   "of": [
+    "spectator",
+    "referee"
+   ],
+   "desc": "the spectator in the yellow hat is looking at the referee",
+   "question": "Is the spectator in the yellow hat looking at the referee?"
+  },
+  {
+   "id": "no_net",
+   "type": "absent",
+   "desc": "a volleyball net",
+   "question": "Is there a volleyball net visible in the scene?"
+  },
+  {
+   "id": "player_standing",
+   "type": "state",
+   "of": "player_blue",
+   "desc": "the player in the blue jersey stands ready",
+   "question": "Is the player in the blue jersey standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0046",
+ "prompt": "A watercolor illustration depicts a beach volleyball tournament. On the left, a player in a blue jersey stands ready. In the center, a referee in a striped shirt holds a whistle. On the right, a spectator in a yellow hat watches intently. The player in the blue jersey is jumping high. The referee in the striped shirt is blowing the whistle. The spectator in the yellow hat is looking at the referee. There is no net visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

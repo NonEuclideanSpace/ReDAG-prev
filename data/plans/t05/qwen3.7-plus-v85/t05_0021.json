@@ -1,0 +1,320 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn",
+   "question": "Does the image depict a quiet village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "old_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman wearing a blue shawl?",
+   "box": [
+    60,
+    350,
+    240,
+    750
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted cat",
+   "question": "Is there a spotted cat?",
+   "box": [
+    260,
+    650,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy wearing a yellow cap?",
+   "box": [
+    400,
+    300,
+    580,
+    800
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "woven basket",
+   "plural": "woven baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woven basket",
+   "question": "Is there a woven basket?",
+   "box": [
+    450,
+    550,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "produce",
+   "type": "entity",
+   "class": "produce",
+   "plural": "produce",
+   "count": 1,
+   "count_exact": false,
+   "desc": "fresh produce on display",
+   "question": "Is there fresh produce displayed?",
+   "box": [
+    420,
+    750,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in green overalls",
+   "question": "Is there a farmer wearing green overalls?",
+   "box": [
+    620,
+    280,
+    800,
+    820
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of fresh apples",
+   "question": "Is there a pile of fresh apples?",
+   "box": [
+    820,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    820,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the elderly woman is sitting",
+   "question": "Is the elderly woman sitting?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the spotted cat is resting",
+   "question": "Is the spotted cat resting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is standing",
+   "question": "Is the young boy standing?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "relation",
+   "of": [
+    "boy",
+    "produce"
+   ],
+   "desc": "the young boy is looking intently at the produce",
+   "question": "Is the young boy looking intently at the produce?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting patiently",
+   "question": "Is the brown dog sitting patiently?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "old_woman",
+    "crate"
+   ],
+   "desc": "the elderly woman sits on the wooden crate",
+   "question": "Is the elderly woman sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_beside_woman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "old_woman"
+   ],
+   "desc": "the spotted cat is beside the elderly woman",
+   "question": "Is the spotted cat beside the elderly woman?"
+  },
+  {
+   "id": "boy_holding_basket",
+   "type": "action",
+   "of": [
+    "boy",
+    "basket"
+   ],
+   "desc": "the young boy holds the woven basket",
+   "question": "Is the young boy holding the woven basket?"
+  },
+  {
+   "id": "farmer_pointing",
+   "type": "action",
+   "of": [
+    "farmer",
+    "apples"
+   ],
+   "desc": "the farmer points toward the pile of fresh apples",
+   "question": "Is the farmer pointing toward the pile of fresh apples?"
+  },
+  {
+   "id": "dog_next_to_farmer",
+   "type": "relation",
+   "of": [
+    "dog",
+    "farmer"
+   ],
+   "desc": "the brown dog is next to the farmer",
+   "question": "Is the brown dog next to the farmer?"
+  },
+  {
+   "id": "woman_giving_coin",
+   "type": "action",
+   "of": [
+    "old_woman",
+    "boy"
+   ],
+   "desc": "the elderly woman hands a small coin to the young boy",
+   "question": "Is the elderly woman handing a small coin to the young boy?"
+  },
+  {
+   "id": "farmer_looking_at_dog",
+   "type": "action",
+   "of": [
+    "farmer",
+    "dog"
+   ],
+   "desc": "the farmer looks at the brown dog",
+   "question": "Is the farmer looking at the brown dog?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "modern technology",
+   "question": "Is there any modern technology visible in the image?"
+  },
+  {
+   "id": "woman_slumped",
+   "type": "state",
+   "of": "old_woman",
+   "desc": "the elderly woman has a slumped posture",
+   "question": "Does the elderly woman have a slumped posture?"
+  },
+  {
+   "id": "cat_tail_curled",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the spotted cat's tail is curled around its paws",
+   "question": "Is the spotted cat's tail curled around its paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "old_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0021",
+ "prompt": "Rendered as a pencil sketch with light color wash, the scene captures a quiet village market at dawn. On the left, an old woman in a blue shawl sits on a wooden crate, her posture slumped from early fatigue. Beside her, a spotted cat rests calmly, its tail curled neatly around its paws. In the center, a young boy in a yellow cap stands holding a woven basket, his gaze fixed intently on the produce before him. To his right, a farmer in green overalls points toward a pile of fresh apples, directing attention to their quality. Next to the farmer, a brown dog sits patiently, waiting for a stray morsel. The old woman hands a small coin to the boy, completing a simple transaction. The farmer looks at the dog, acknowledging its presence near the stall. There is no modern technology visible in this timeless setting. The soft lines and faint hues emphasize the tranquil atmosphere of the morning hour without overwhelming the delicate structural details of the figures and their surroundings.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

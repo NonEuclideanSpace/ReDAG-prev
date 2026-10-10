@@ -1,0 +1,178 @@
+{
+ "style": "photorealistic still life, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an off-white backdrop",
+   "question": "Is the background off-white?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mat",
+   "type": "entity",
+   "class": "bamboo mat",
+   "plural": "bamboo mats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tan woven bamboo mat",
+   "question": "Is there a tan woven bamboo mat?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pastel-green ceramic teapot",
+   "question": "Is there a pastel-green ceramic teapot?",
+   "box": [
+    362,
+    350,
+    662,
+    750
+   ]
+  },
+  {
+   "id": "teapot_spherical",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot has a perfectly spherical body",
+   "question": "Is the body of the teapot perfectly spherical?"
+  },
+  {
+   "id": "teapot_glazed",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot is smoothly glazed",
+   "question": "Is the teapot smoothly glazed?"
+  },
+  {
+   "id": "teapot_handle",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot has a curved handle",
+   "question": "Does the teapot have a curved handle?"
+  },
+  {
+   "id": "teapot_spout",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "the teapot has an arched spout",
+   "question": "Does the teapot have an arched spout?"
+  },
+  {
+   "id": "steam",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "teapot_count"
+   ],
+   "desc": "steam rises from the spout of the teapot",
+   "question": "Is steam rising from the spout of the teapot?"
+  },
+  {
+   "id": "teapot_on_mat",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "mat"
+   ],
+   "desc": "the teapot rests on the bamboo mat",
+   "question": "Is the teapot resting on the bamboo mat?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks on the teapot",
+   "question": "Are there any cracks on the teapot?"
+  },
+  {
+   "id": "no_metal_parts",
+   "type": "absent",
+   "desc": "metal body parts on the teapot other than the knob",
+   "question": "Are there any metal body parts on the teapot other than the knob?"
+  },
+  {
+   "id": "no_red_patterns",
+   "type": "absent",
+   "desc": "red patterns on the teapot",
+   "question": "Are there any red patterns on the teapot?"
+  },
+  {
+   "id": "teapot_count",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single pastel-green ceramic teapot",
+   "question": "Is there exactly one pastel-green ceramic teapot?",
+   "box": [
+    362,
+    362,
+    662,
+    662
+   ]
+  },
+  {
+   "id": "teapot_motifs",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "white cherry-blossom motifs on the teapot",
+   "question": "Does the teapot have white cherry-blossom motifs?"
+  },
+  {
+   "id": "teapot_knob",
+   "type": "attribute",
+   "of": "teapot",
+   "desc": "a golden knob on the teapot lid",
+   "question": "Does the teapot have a golden knob on its lid?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "mat",
+   "to": "teapot",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_065",
+ "prompt": "Paint a scene featuring a single pastel-green ceramic teapot resting on a tan woven bamboo mat before an off-white backdrop. The teapot’s body is perfectly spherical, smoothly glazed, and decorated with delicate white cherry-blossom motifs. A curved handle arcs gracefully opposite an arched spout, from which steam rises. A golden knob tops the lid, reflecting soft light. The teapot is warm yet shows no cracks, includes no metal body parts beyond the knob, and carries no red patterns anywhere.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

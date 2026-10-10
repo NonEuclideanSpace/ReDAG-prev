@@ -1,0 +1,305 @@
+{
+ "style": "cyberpunk digital art, rainy night, neon lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rain-slicked cyberpunk alleyway at night",
+   "question": "Does the image show a rain-slicked cyberpunk alleyway at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "noodle stall",
+   "plural": "noodle stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a neon-lit noodle stall",
+   "question": "Is there a neon-lit noodle stall?",
+   "box": [
+    500,
+    300,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "cyborg",
+   "type": "entity",
+   "class": "cyborg",
+   "plural": "cyborgs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cyborg",
+   "question": "Is there a cyborg?",
+   "box": [
+    300,
+    150,
+    550,
+    900
+   ]
+  },
+  {
+   "id": "noodle_drone",
+   "type": "entity",
+   "class": "drone",
+   "plural": "drones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating noodle-serving drone",
+   "question": "Is there a floating noodle-serving drone?",
+   "box": [
+    450,
+    400,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "delivery_drones",
+   "type": "entity",
+   "class": "drone",
+   "plural": "drones",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two small hovering delivery drones",
+   "question": "Are there two small hovering delivery drones?",
+   "box": [
+    100,
+    200,
+    300,
+    400
+   ]
+  },
+  {
+   "id": "electronics_pile",
+   "type": "entity",
+   "class": "pile of electronics",
+   "plural": "piles of electronics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large pile of discarded electronics",
+   "question": "Is there a large pile of discarded electronics?",
+   "box": [
+    50,
+    600,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large puddle",
+   "question": "Is there a large puddle?",
+   "box": [
+    400,
+    800,
+    900,
+    1024
+   ]
+  },
+  {
+   "id": "wiring_panel",
+   "type": "attribute",
+   "of": "cyborg",
+   "desc": "the cyborg's robotic arm has an exposed wiring panel",
+   "question": "Does the cyborg's robotic arm have an exposed wiring panel?"
+  },
+  {
+   "id": "data_chip",
+   "type": "attribute",
+   "of": "cyborg",
+   "desc": "the cyborg is holding one data chip",
+   "question": "Is the cyborg holding one data chip?"
+  },
+  {
+   "id": "bowl_of_noodles",
+   "type": "attribute",
+   "of": "noodle_drone",
+   "desc": "the noodle-serving drone extends a bowl of noodles",
+   "question": "Is the noodle-serving drone extending a bowl of noodles?"
+  },
+  {
+   "id": "cyborg_leaning",
+   "type": "state",
+   "of": "cyborg",
+   "desc": "the cyborg is leaning",
+   "question": "Is the cyborg leaning?"
+  },
+  {
+   "id": "cyborg_looking",
+   "type": "action",
+   "of": [
+    "cyborg",
+    "noodle_drone"
+   ],
+   "desc": "the cyborg is looking at the noodle drone",
+   "question": "Is the cyborg looking at the noodle drone?"
+  },
+  {
+   "id": "cyborg_against_stall",
+   "type": "relation",
+   "of": [
+    "cyborg",
+    "stall"
+   ],
+   "desc": "the cyborg is leaning against the noodle stall",
+   "question": "Is the cyborg leaning against the noodle stall?"
+  },
+  {
+   "id": "drone_in_front_of_stall",
+   "type": "relation",
+   "of": [
+    "noodle_drone",
+    "stall"
+   ],
+   "desc": "the noodle-serving drone is in front of the noodle stall",
+   "question": "Is the noodle-serving drone in front of the noodle stall?"
+  },
+  {
+   "id": "drones_behind_cyborg",
+   "type": "relation",
+   "of": [
+    "delivery_drones",
+    "cyborg"
+   ],
+   "desc": "the delivery drones are behind the cyborg",
+   "question": "Are the delivery drones behind the cyborg?"
+  },
+  {
+   "id": "electronics_left_of_stall",
+   "type": "relation",
+   "of": [
+    "electronics_pile",
+    "stall"
+   ],
+   "desc": "the pile of discarded electronics is to the left of the noodle stall",
+   "question": "Is the pile of discarded electronics to the left of the noodle stall?"
+  },
+  {
+   "id": "drone_between_cyborg_and_puddle",
+   "type": "relation",
+   "of": [
+    "noodle_drone",
+    "cyborg",
+    "puddle"
+   ],
+   "desc": "the noodle drone is between the cyborg and the large puddle",
+   "question": "Is the noodle drone positioned between the cyborg and the large puddle?"
+  },
+  {
+   "id": "drones_lower_than_noodle_drone",
+   "type": "relation",
+   "of": [
+    "delivery_drones",
+    "noodle_drone"
+   ],
+   "desc": "the delivery drones are hovering at a lower altitude than the noodle drone",
+   "question": "Are the delivery drones hovering at a lower altitude than the noodle drone?"
+  },
+  {
+   "id": "cyborg_taller",
+   "type": "relation",
+   "of": [
+    "cyborg",
+    "noodle_drone"
+   ],
+   "desc": "the cyborg is taller than the noodle drone is high off the ground",
+   "question": "Is the cyborg taller than the height of the noodle drone above the ground?"
+  },
+  {
+   "id": "fire_escape",
+   "type": "entity",
+   "class": "fire escape",
+   "plural": "fire escapes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal fire escape",
+   "question": "Is there a rusted metal fire escape?",
+   "box": [
+    200,
+    0,
+    824,
+    300
+   ]
+  },
+  {
+   "id": "four_wires",
+   "type": "attribute",
+   "of": "cyborg",
+   "desc": "the cyborg's robotic arm has four visible wires in the wiring panel",
+   "question": "Are there four visible wires in the cyborg's robotic arm wiring panel?"
+  },
+  {
+   "id": "stall_under_fire_escape",
+   "type": "relation",
+   "of": [
+    "stall",
+    "fire_escape"
+   ],
+   "desc": "the noodle stall is under the rusted metal fire escape",
+   "question": "Is the noodle stall under the rusted metal fire escape?"
+  },
+  {
+   "id": "stall_narrower",
+   "type": "relation",
+   "of": [
+    "stall",
+    "fire_escape"
+   ],
+   "desc": "the noodle stall is narrower than the rusted metal fire escape",
+   "question": "Is the noodle stall narrower than the rusted metal fire escape?"
+  },
+  {
+   "id": "robotic_arm",
+   "type": "attribute",
+   "of": "cyborg",
+   "desc": "the cyborg has a robotic arm",
+   "question": "Does the cyborg have a robotic arm?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stall",
+   "to": "noodle_drone",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_057",
+ "prompt": "In a rain-slicked cyberpunk alleyway at night, a cyborg with a robotic arm is leaning against a neon-lit noodle stall. The cyborg's robotic arm has an exposed wiring panel with four visible wires. The cyborg is holding one data chip. A floating noodle-serving drone is in front of the stall, extending a bowl of noodles towards the cyborg. Behind the cyborg, there are two small, hovering delivery drones waiting; their number is half the number of visible wires on the cyborg's arm. The number of data chips the cyborg is holding is half the number of delivery drones. The cyborg is looking at the noodle drone. The cyborg is taller than the noodle drone is high off the ground. A large pile of discarded electronics is to the left of the noodle stall. The noodle drone is between the cyborg and a large puddle on the ground. The delivery drones are hovering at a lower altitude than the noodle drone. The noodle stall is under a rusted metal fire escape and is narrower than the fire escape.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

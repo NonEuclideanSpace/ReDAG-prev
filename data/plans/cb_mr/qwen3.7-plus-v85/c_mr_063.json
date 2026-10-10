@@ -1,0 +1,431 @@
+{
+ "style": "photorealistic product photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an office desk surface",
+   "question": "Is there an office desk surface visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver laptop",
+   "question": "Is there a silver laptop?",
+   "box": [
+    100,
+    300,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "mouse",
+   "type": "entity",
+   "class": "mouse",
+   "plural": "mice",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black computer mouse",
+   "question": "Is there a black computer mouse?",
+   "box": [
+    520,
+    400,
+    620,
+    500
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "desk lamp",
+   "plural": "desk lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older model desk lamp",
+   "question": "Is there an older model desk lamp?",
+   "box": [
+    700,
+    100,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "pens",
+   "type": "entity",
+   "class": "pen",
+   "plural": "pens",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four red pens",
+   "question": "Are there exactly four red pens?",
+   "box": [
+    200,
+    650,
+    400,
+    750
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick blue notebook",
+   "question": "Is there a thick blue notebook?",
+   "box": [
+    450,
+    600,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "smartphone",
+   "type": "entity",
+   "class": "smartphone",
+   "plural": "smartphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slim smartphone",
+   "question": "Is there a slim smartphone?",
+   "box": [
+    350,
+    620,
+    420,
+    780
+   ]
+  },
+  {
+   "id": "clips",
+   "type": "entity",
+   "class": "paper clip",
+   "plural": "paper clips",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a small pile of paper clips",
+   "question": "Is there a small pile of paper clips?",
+   "box": [
+    650,
+    650,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted plant",
+   "question": "Is there a potted plant?",
+   "box": [
+    550,
+    250,
+    700,
+    550
+   ]
+  },
+  {
+   "id": "laptop_next_to_mouse",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "mouse"
+   ],
+   "desc": "the silver laptop is next to the black mouse",
+   "question": "Is the silver laptop next to the black mouse?"
+  },
+  {
+   "id": "pens_on_desk",
+   "type": "relation",
+   "of": [
+    "pens",
+    "desk"
+   ],
+   "desc": "the red pens are on the desk",
+   "question": "Are the red pens on the desk?"
+  },
+  {
+   "id": "notebook_on_desk",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "desk"
+   ],
+   "desc": "the blue notebook is on the desk",
+   "question": "Is the blue notebook on the desk?"
+  },
+  {
+   "id": "pen_across_notebook",
+   "type": "relation",
+   "of": [
+    "pens",
+    "notebook"
+   ],
+   "desc": "one red pen lies across the blue notebook",
+   "question": "Does one of the red pens lie across the blue notebook?"
+  },
+  {
+   "id": "clips_on_desk",
+   "type": "relation",
+   "of": [
+    "clips",
+    "desk"
+   ],
+   "desc": "the paper clips are on the desk",
+   "question": "Are the paper clips on the desk?"
+  },
+  {
+   "id": "plant_next_to_laptop",
+   "type": "relation",
+   "of": [
+    "plant",
+    "laptop"
+   ],
+   "desc": "the potted plant is next to the silver laptop",
+   "question": "Is the potted plant next to the silver laptop?"
+  },
+  {
+   "id": "lamp_behind_plant",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "plant"
+   ],
+   "desc": "the desk lamp is behind the potted plant",
+   "question": "Is the desk lamp behind the potted plant?"
+  },
+  {
+   "id": "smartphone_between",
+   "type": "relation",
+   "of": [
+    "smartphone",
+    "laptop",
+    "notebook"
+   ],
+   "desc": "the smartphone is between the laptop and the blue notebook",
+   "question": "Is the smartphone positioned between the laptop and the blue notebook?"
+  },
+  {
+   "id": "lamp_shining",
+   "type": "action",
+   "of": [
+    "lamp",
+    "notebook"
+   ],
+   "desc": "the desk lamp shines light onto the blue notebook",
+   "question": "Is the desk lamp shining light onto the blue notebook?"
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an office desk",
+   "question": "Is there an office desk?",
+   "box": [
+    0,
+    400,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "laptop_on_desk",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "desk"
+   ],
+   "desc": "the silver laptop is on the desk",
+   "question": "Is the silver laptop on the desk?"
+  },
+  {
+   "id": "mouse_on_desk",
+   "type": "relation",
+   "of": [
+    "mouse",
+    "desk"
+   ],
+   "desc": "the black mouse is on the desk",
+   "question": "Is the black mouse on the desk?"
+  },
+  {
+   "id": "lamp_on_desk",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "desk"
+   ],
+   "desc": "the desk lamp is on the desk",
+   "question": "Is the desk lamp on the desk?"
+  },
+  {
+   "id": "smartphone_on_desk",
+   "type": "relation",
+   "of": [
+    "smartphone",
+    "desk"
+   ],
+   "desc": "the smartphone is on the desk",
+   "question": "Is the smartphone on the desk?"
+  },
+  {
+   "id": "plant_on_desk",
+   "type": "relation",
+   "of": [
+    "plant",
+    "desk"
+   ],
+   "desc": "the potted plant is on the desk",
+   "question": "Is the potted plant on the desk?"
+  },
+  {
+   "id": "notebook_thicker",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the blue notebook is thicker than the smartphone",
+   "question": "Is the blue notebook noticeably thicker than the smartphone?"
+  },
+  {
+   "id": "laptop_modern",
+   "type": "attribute",
+   "of": "laptop",
+   "desc": "the silver laptop is modern and sleek",
+   "question": "Is the silver laptop modern and sleek?"
+  },
+  {
+   "id": "lamp_scratches",
+   "type": "attribute",
+   "of": "lamp",
+   "desc": "the older model desk lamp has visible scratches",
+   "question": "Does the older model desk lamp have visible scratches?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "mouse",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "pens",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "smartphone",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "clips",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "plant",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "mouse",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "lamp",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "pens",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "smartphone",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "clips",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "plant",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_063",
+ "prompt": "An office desk setup with a silver laptop next to a black mouse. The desk lamp is an older model with visible scratches, while the silver laptop is modern and sleek. On the desk are four red pens and a blue notebook, with one pen lying across the notebook. The blue notebook is noticeably thicker than the slim smartphone. There is also a small pile of paper clips on the desk, and their number is half the number of pens. Next to the laptop is a potted plant, and behind the plant is the desk lamp. The smartphone is between the laptop and the blue notebook. The lamp is shining onto the notebook.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

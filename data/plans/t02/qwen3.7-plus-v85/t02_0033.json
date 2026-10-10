@@ -1,0 +1,119 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a simple and uncluttered background",
+   "question": "Is the background simple and uncluttered?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white gown",
+   "question": "Is there a woman in a white gown?",
+   "box": [
+    256,
+    200,
+    512,
+    900
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    512,
+    200,
+    768,
+    900
+   ]
+  },
+  {
+   "id": "bride_bouquet",
+   "type": "attribute",
+   "of": "bride",
+   "desc": "the woman in the white gown holds a bouquet",
+   "question": "Is the woman in the white gown holding a bouquet?"
+  },
+  {
+   "id": "groom_hand",
+   "type": "state",
+   "of": "groom",
+   "desc": "the man in the blue suit extends his hand",
+   "question": "Is the man in the blue suit extending his hand?"
+  },
+  {
+   "id": "groom_toward_bride",
+   "type": "relation",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the man in the blue suit extends his hand toward the woman in the white gown",
+   "question": "Is the man in the blue suit extending his hand toward the woman in the white gown?"
+  },
+  {
+   "id": "bride_next_to_groom",
+   "type": "relation",
+   "of": [
+    "bride",
+    "groom"
+   ],
+   "desc": "the woman in the white gown is next to the man in the blue suit",
+   "question": "Is the woman in the white gown next to the man in the blue suit?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "a cake",
+   "question": "Is there a cake in the image?"
+  },
+  {
+   "id": "bride_standing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the woman in the white gown is standing",
+   "question": "Is the woman in the white gown standing?"
+  },
+  {
+   "id": "groom_standing",
+   "type": "state",
+   "of": "groom",
+   "desc": "the man in the blue suit is standing",
+   "question": "Is the man in the blue suit standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0033",
+ "prompt": "In a flat vector illustration, a bride in a white gown stands on the left holding a bouquet. A groom in a blue suit stands on the right extending his hand toward her. The two figures are positioned next to each other in the center of the frame, sharing a quiet moment during their reception. There is no cake visible in the scene. The background remains simple and uncluttered to focus entirely on the couple's interaction and distinct attire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

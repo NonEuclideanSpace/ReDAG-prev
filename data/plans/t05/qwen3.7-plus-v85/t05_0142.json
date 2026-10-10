@@ -1,0 +1,264 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bright botanical greenhouse interior",
+   "question": "Does the image show a bright botanical greenhouse interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall potted fern",
+   "question": "Is there a tall potted fern?",
+   "box": [
+    400,
+    100,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a yellow hat",
+   "question": "Is there a man in a yellow hat?",
+   "box": [
+    650,
+    250,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small orange cat",
+   "question": "Is there a small orange cat?",
+   "box": [
+    860,
+    600,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    840,
+    700,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue apron holds a watering can",
+   "question": "Is the woman in the blue apron holding a watering can?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue apron looks at the man in the yellow hat",
+   "question": "Is the woman in the blue apron looking towards the man in the yellow hat?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the yellow hat points at a specific leaf",
+   "question": "Is the man in the yellow hat pointing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small orange cat sits calmly",
+   "question": "Is the small orange cat sitting calmly?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "fern"
+   ],
+   "desc": "the woman in the blue apron is on the left of the tall potted fern",
+   "question": "Is the woman in the blue apron positioned to the left of the tall potted fern?"
+  },
+  {
+   "id": "man_right_fern",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the yellow hat is to the right of the tall potted fern",
+   "question": "Is the man in the yellow hat positioned to the right of the tall potted fern?"
+  },
+  {
+   "id": "cat_next_to_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the small orange cat is next to the man in the yellow hat",
+   "question": "Is the small orange cat positioned next to the man in the yellow hat?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the small orange cat sits on the wooden bench",
+   "question": "Is the small orange cat sitting on the wooden bench?"
+  },
+  {
+   "id": "window_behind_bench",
+   "type": "state",
+   "of": "bench",
+   "desc": "the large glass window is behind the wooden bench",
+   "question": "Is the large glass window positioned behind the wooden bench?"
+  },
+  {
+   "id": "no_soil",
+   "type": "absent",
+   "desc": "spilled soil on the floor",
+   "question": "Is there any spilled soil on the floor?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue apron stands",
+   "question": "Is the woman in the blue apron standing?"
+  },
+  {
+   "id": "man_pointing_fern",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the yellow hat points at the tall potted fern",
+   "question": "Is the man in the yellow hat pointing at the tall potted fern?"
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "glass window",
+   "plural": "glass windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large glass window revealing a sunny sky outside",
+   "question": "Is there a large glass window revealing a sunny sky outside?",
+   "box": [
+    600,
+    50,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "fern_fronds",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the tall potted fern has lush green fronds",
+   "question": "Does the tall potted fern have lush green fronds?"
+  },
+  {
+   "id": "man_pointing_leaf",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the yellow hat points at a specific leaf of the fern",
+   "question": "Is the man in the yellow hat pointing at a specific leaf of the fern?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0142",
+ "prompt": "This flat vector illustration depicts a bright botanical greenhouse scene. On the left, a woman in a blue apron stands holding a watering can. In the center, a tall potted fern rises with lush green fronds. To the right of the fern, a man in a yellow hat points at a specific leaf. Next to him on the right, a small orange cat sits calmly on a wooden bench. Behind the bench, a large glass window reveals a sunny sky outside. The woman in the blue apron looks at the man in the yellow hat. The man in the yellow hat points at the tall potted fern. The small orange cat sits on the wooden bench. There is no soil spilled on the floor.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

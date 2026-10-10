@@ -1,0 +1,183 @@
+{
+ "style": "flat vector illustration with clear outlines and solid colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "green fields",
+   "question": "Does the background show green fields?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in blue overalls",
+   "question": "Is there a farmer in blue overalls?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown cow with black spots",
+   "question": "Is there a brown cow with black spots?",
+   "box": [
+    380,
+    350,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    700,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a golden sheaf of wheat upright",
+   "question": "Is the farmer holding a golden sheaf of wheat upright?"
+  },
+  {
+   "id": "cow_facing_right",
+   "type": "state",
+   "of": "cow",
+   "desc": "the cow is facing right",
+   "question": "Is the cow facing right?"
+  },
+  {
+   "id": "child_looking_at_cow",
+   "type": "action",
+   "of": [
+    "child",
+    "cow"
+   ],
+   "desc": "the child looks at the cow",
+   "question": "Is the child looking at the cow?"
+  },
+  {
+   "id": "child_next_to_cow",
+   "type": "relation",
+   "of": [
+    "child",
+    "cow"
+   ],
+   "desc": "the child stands next to the cow",
+   "question": "Is the child standing next to the cow?"
+  },
+  {
+   "id": "farmer_left_of_cow",
+   "type": "relation",
+   "of": [
+    "farmer",
+    "cow"
+   ],
+   "desc": "the farmer is positioned to the left of the cow",
+   "question": "Is the farmer positioned to the left of the cow?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "machinery",
+   "question": "Is there any machinery visible in the image?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in blue overalls and a straw hat is standing",
+   "question": "Is the farmer in blue overalls and a straw hat standing?"
+  },
+  {
+   "id": "cow_standing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the brown cow with black spots is standing",
+   "question": "Is the brown cow with black spots standing?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow raincoat and bright yellow boots is standing",
+   "question": "Is the child in a yellow raincoat and bright yellow boots standing?"
+  },
+  {
+   "id": "farmer_hat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer wears a straw hat",
+   "question": "Does the farmer wear a straw hat?"
+  },
+  {
+   "id": "child_boots",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears bright yellow boots",
+   "question": "Does the child wear bright yellow boots?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0052",
+ "prompt": "This flat vector illustration depicts a farm harvest scene. On the left stands a farmer in blue overalls holding a golden sheaf of wheat upright. In the center, a spotted brown cow stands calmly facing right. On the right, a child in a yellow raincoat looks at the cow while standing next to it. The farmer is positioned to the left of the cow. There is no tractor visible in the background. The composition remains simple with clear outlines and solid colors typical of the style. The wheat is bright gold against green fields. The cow has distinct black spots. The child wears bright yellow boots. The farmer wears a straw hat. The scene captures a quiet moment during the harvest season without any machinery present.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

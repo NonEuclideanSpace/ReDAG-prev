@@ -1,0 +1,354 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a golden wheat field under a clear sky during harvest",
+   "question": "Does the image show a golden wheat field under a clear sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large wooden cart",
+   "question": "Is there a large wooden cart?",
+   "box": [
+    300,
+    500,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly farmer in a straw hat",
+   "question": "Is there an elderly farmer wearing a straw hat?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "young woman",
+   "plural": "young women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in denim overalls",
+   "question": "Is there a young woman wearing denim overalls?",
+   "box": [
+    320,
+    350,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow shirt",
+   "question": "Is there a small child wearing a yellow shirt?",
+   "box": [
+    450,
+    400,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "brown dog",
+   "plural": "brown dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    750,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "man_cap",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue cap",
+   "question": "Is there a man wearing a blue cap?",
+   "box": [
+    250,
+    320,
+    450,
+    800
+   ]
+  },
+  {
+   "id": "bundle_stalks",
+   "type": "entity",
+   "class": "bundle of stalks",
+   "plural": "bundles of stalks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bundle of cut stalks",
+   "question": "Is there a bundle of cut stalks?",
+   "box": [
+    380,
+    650,
+    480,
+    750
+   ]
+  },
+  {
+   "id": "farmer_sickle",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the elderly farmer holds a sharp sickle",
+   "question": "Is the elderly farmer holding a sharp sickle?"
+  },
+  {
+   "id": "farmer_bundle_wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the elderly farmer holds a fresh bundle of wheat",
+   "question": "Is the elderly farmer holding a fresh bundle of wheat?"
+  },
+  {
+   "id": "woman_hands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman reaches out",
+   "question": "Is the young woman reaching out?"
+  },
+  {
+   "id": "woman_bending",
+   "type": "state",
+   "of": "woman",
+   "desc": "the young woman bends forward",
+   "question": "Is the young woman bending forward?"
+  },
+  {
+   "id": "woman_tying",
+   "type": "action",
+   "of": [
+    "woman",
+    "bundle_stalks"
+   ],
+   "desc": "the young woman ties the bundle of cut stalks",
+   "question": "Is the young woman tying the bundle of cut stalks?"
+  },
+  {
+   "id": "child_laughing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is laughing",
+   "question": "Is the small child laughing?"
+  },
+  {
+   "id": "child_looking_down",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child looks down",
+   "question": "Is the small child looking down?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child is sitting",
+   "question": "Is the small child sitting?"
+  },
+  {
+   "id": "dog_panting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is panting",
+   "question": "Is the brown dog panting?"
+  },
+  {
+   "id": "dog_head_on_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog rests its head on its paws",
+   "question": "Is the brown dog resting its head on its paws?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man_cap",
+   "desc": "the man in the blue cap points toward the horizon",
+   "question": "Is the man in the blue cap pointing toward the horizon?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "woman"
+   ],
+   "desc": "the elderly farmer hands a fresh bundle of wheat to the young woman",
+   "question": "Is the elderly farmer handing a fresh bundle of wheat to the young woman?"
+  },
+  {
+   "id": "woman_next_to_farmer",
+   "type": "relation",
+   "of": [
+    "woman",
+    "farmer"
+   ],
+   "desc": "the young woman is next to the elderly farmer",
+   "question": "Is the young woman next to the elderly farmer?"
+  },
+  {
+   "id": "child_on_cart",
+   "type": "relation",
+   "of": [
+    "child",
+    "cart"
+   ],
+   "desc": "the small child is perched atop the pile on the wooden cart",
+   "question": "Is the small child perched atop the pile on the wooden cart?"
+  },
+  {
+   "id": "dog_beside_cart",
+   "type": "relation",
+   "of": [
+    "dog",
+    "cart"
+   ],
+   "desc": "the brown dog is beside the rear wheel of the wooden cart",
+   "question": "Is the brown dog beside the rear wheel of the wooden cart?"
+  },
+  {
+   "id": "man_behind_woman",
+   "type": "relation",
+   "of": [
+    "man_cap",
+    "woman"
+   ],
+   "desc": "the man in the blue cap stands slightly behind the young woman",
+   "question": "Is the man in the blue cap standing slightly behind the young woman?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Is there any modern machinery visible in the image?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the elderly farmer in a straw hat stands firmly",
+   "question": "Is the elderly farmer in a straw hat standing firmly?"
+  },
+  {
+   "id": "man_cap_standing",
+   "type": "state",
+   "of": "man_cap",
+   "desc": "the man in a blue cap is standing",
+   "question": "Is the man in a blue cap standing?"
+  },
+  {
+   "id": "cart_sheaves",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the large wooden cart is loaded with sheaves",
+   "question": "Is the large wooden cart loaded with sheaves?"
+  },
+  {
+   "id": "cart_wheels_mud",
+   "type": "attribute",
+   "of": "cart",
+   "desc": "the wheels of the large wooden cart are caked in dry mud",
+   "question": "Are the wheels of the large wooden cart caked in dry mud?"
+  },
+  {
+   "id": "sickle_grip",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the sickle held by the elderly farmer has a weathered grip",
+   "question": "Does the sickle held by the elderly farmer have a weathered grip?"
+  },
+  {
+   "id": "child_legs_dangling",
+   "type": "state",
+   "of": "child",
+   "desc": "the legs of the small child are dangling",
+   "question": "Are the legs of the small child dangling?"
+  },
+  {
+   "id": "dog_tongue",
+   "type": "state",
+   "of": "dog",
+   "desc": "the tongue of the brown dog is lolling out",
+   "question": "Is the tongue of the brown dog lolling out?"
+  },
+  {
+   "id": "woman_both_hands",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the young woman uses both hands",
+   "question": "Is the young woman using both hands?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cart",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0098",
+ "prompt": "In this photorealistic photo, a golden wheat field stretches under a clear sky during the height of harvest. On the left, an elderly farmer in a straw hat stands firmly, holding a sharp sickle with a weathered grip. Next to him on the right, a young woman in denim overalls bends forward, her hands busy tying a bundle of cut stalks. In the center foreground, a large wooden cart sits heavily loaded with sheaves, its wheels caked in dry mud. Perched atop the pile on the cart is a small child in a yellow shirt, laughing while looking down at the workers below. Beside the cart's rear wheel, a brown dog lies panting, its tongue lolling out in the heat. Standing slightly behind the woman, a man in a blue cap points toward the horizon, directing attention to the remaining uncut section of the field. The farmer in the straw hat is handing a fresh bundle of wheat to the woman in denim overalls, who reaches out with both hands to accept it. The child in the yellow shirt is sitting on the wooden cart, legs dangling over the side. The brown dog is next to the wooden cart, resting its head on its paws. There is no modern machinery visible in the scene, preserving the traditional atmosphere of manual labor and rural simplicity.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

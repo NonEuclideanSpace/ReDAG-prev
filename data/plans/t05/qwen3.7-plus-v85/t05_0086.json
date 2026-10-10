@@ -1,0 +1,285 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lush botanical greenhouse with verdant plants",
+   "question": "Does the image show a lush botanical greenhouse with verdant plants?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    360,
+    600,
+    664,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green apron",
+   "question": "Is there a man in a green apron?",
+   "box": [
+    250,
+    200,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white cat",
+   "question": "Is there a white cat?",
+   "box": [
+    450,
+    550,
+    574,
+    750
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a straw hat",
+   "question": "Is there an elderly person in a straw hat?",
+   "box": [
+    700,
+    250,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow rain boots",
+   "question": "Is there a child in yellow rain boots?",
+   "box": [
+    850,
+    400,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern frond",
+   "plural": "fern fronds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large fern frond",
+   "question": "Is there a large fern frond?",
+   "box": [
+    300,
+    100,
+    500,
+    400
+   ]
+  },
+  {
+   "id": "orchid",
+   "type": "entity",
+   "class": "orchid",
+   "plural": "orchids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blooming orchid",
+   "question": "Is there a blooming orchid?",
+   "box": [
+    750,
+    150,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "woman_trowel",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small trowel",
+   "question": "Is the woman in a blue dress holding a small trowel?"
+  },
+  {
+   "id": "child_can",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in yellow rain boots holds a watering can",
+   "question": "Is the child in yellow rain boots holding a watering can?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the white cat is sitting calmly",
+   "question": "Is the white cat sitting calmly?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a green apron points at the large fern frond",
+   "question": "Is the man in a green apron pointing at the large fern frond?"
+  },
+  {
+   "id": "elderly_looking",
+   "type": "action",
+   "of": [
+    "elderly_person",
+    "orchid"
+   ],
+   "desc": "the elderly person in a straw hat looks at the blooming orchid",
+   "question": "Is the elderly person in a straw hat looking at the blooming orchid?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress hands the trowel to the man in a green apron",
+   "question": "Is the woman in a blue dress handing a trowel to the man in a green apron?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green apron is next to the woman in a blue dress",
+   "question": "Is the man in a green apron next to the woman in a blue dress?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the white cat sits on the wooden bench",
+   "question": "Is the white cat sitting on the wooden bench?"
+  },
+  {
+   "id": "elderly_right_of_bench",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "bench"
+   ],
+   "desc": "the elderly person in a straw hat is to the right of the wooden bench",
+   "question": "Is the elderly person in a straw hat to the right of the wooden bench?"
+  },
+  {
+   "id": "child_beside_elderly",
+   "type": "relation",
+   "of": [
+    "child",
+    "elderly_person"
+   ],
+   "desc": "the child in yellow rain boots is beside the elderly person in a straw hat",
+   "question": "Is the child in yellow rain boots beside the elderly person in a straw hat?"
+  },
+  {
+   "id": "no_reflection",
+   "type": "absent",
+   "desc": "visible glass reflection on the greenhouse panels",
+   "question": "Are there any visible glass reflections on the greenhouse panels?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress stands",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "man_accepting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green apron accepts the trowel with his free hand",
+   "question": "Is the man in a green apron accepting the trowel with his free hand?"
+  },
+  {
+   "id": "cat_observing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the white cat observes the scene",
+   "question": "Is the white cat observing the scene?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0086",
+ "prompt": "In a photorealistic photo set within a lush botanical greenhouse, a woman in a blue dress stands on the left holding a small trowel. Next to her, a man in a green apron points at a large fern frond, directing her attention to its underside. In the center, a white cat sits calmly on a wooden bench, observing the scene with quiet curiosity. To the right of the bench, an elderly person in a straw hat looks at a blooming orchid with gentle admiration. Beside them, a child in yellow rain boots holds a watering can, ready to tend to the soil. The woman in the blue dress is handing the trowel to the man in the green apron, who accepts it with his free hand. The white cat remains still, neither moving nor reacting to the exchange. There is no visible glass reflection on the greenhouse panels. The spatial arrangement places the woman and man on the left, the cat in the center, and the elderly person and child on the right, creating a balanced composition within the verdant space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

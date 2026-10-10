@@ -1,0 +1,532 @@
+{
+ "style": "surreal digital art, dreamlike, high detail, magical realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sky that ripples like mercury between two realities, with floating rain drops containing scenes, and an impossible geometry of stacked translucent mirrors showing different versions of a child",
+   "question": "Does the background show a sky that ripples like mercury, floating rain drops with scenes inside, and stacked translucent mirrors?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden windowsill",
+   "question": "Is there a wooden windowsill?",
+   "box": [
+    0,
+    300,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "train",
+   "type": "entity",
+   "class": "toy train",
+   "plural": "toy trains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red stuffed toy train",
+   "question": "Is there a red stuffed toy train?",
+   "box": [
+    100,
+    320,
+    400,
+    480
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "clay cup",
+   "plural": "clay cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clay cup",
+   "question": "Is there a clay cup?",
+   "box": [
+    450,
+    350,
+    550,
+    480
+   ]
+  },
+  {
+   "id": "jellyfish",
+   "type": "entity",
+   "class": "winged jellyfish",
+   "plural": "winged jellyfish",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny luminous winged jellyfish",
+   "question": "Are there tiny luminous winged jellyfish?",
+   "box": [
+    460,
+    360,
+    540,
+    420
+   ]
+  },
+  {
+   "id": "mitten",
+   "type": "entity",
+   "class": "child's mitten",
+   "plural": "children's mittens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-frozen child's mitten gripping a pencil",
+   "question": "Is there a half-frozen child's mitten gripping a pencil?",
+   "box": [
+    600,
+    380,
+    700,
+    520
+   ]
+  },
+  {
+   "id": "ink_river",
+   "type": "entity",
+   "class": "ink",
+   "plural": "inks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "glowing ink flowing like a river",
+   "question": "Is there glowing ink flowing like a river?",
+   "box": [
+    650,
+    450,
+    900,
+    500
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    100,
+    500,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "inverted_room",
+   "type": "entity",
+   "class": "room",
+   "plural": "rooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down smaller room lit by perpetual twilight",
+   "question": "Is there an upside-down smaller room lit by perpetual twilight?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with hands twisting and looping in a dance",
+   "question": "Is there a clock with hands twisting and looping in a dance?",
+   "box": [
+    450,
+    100,
+    574,
+    224
+   ]
+  },
+  {
+   "id": "fog_figures",
+   "type": "entity",
+   "class": "figure",
+   "plural": "figures",
+   "count": 2,
+   "count_exact": false,
+   "desc": "tiny figures made of fog",
+   "question": "Are there tiny figures made of fog?",
+   "box": [
+    300,
+    500,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "train_cosmos",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the train's glass panes contain swirling miniature cosmos",
+   "question": "Do the train's glass panes contain swirling miniature cosmos?"
+  },
+  {
+   "id": "train_wheels_spinning",
+   "type": "state",
+   "of": "train",
+   "desc": "the train's plush wheels are spinning faintly",
+   "question": "Are the train's plush wheels spinning faintly?"
+  },
+  {
+   "id": "cup_contents",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "the clay cup contains raindrops",
+   "question": "Does the clay cup contain raindrops?"
+  },
+  {
+   "id": "mitten_position",
+   "type": "state",
+   "of": "mitten",
+   "desc": "the mitten is draped over the sill's edge",
+   "question": "Is the mitten draped over the sill's edge?"
+  },
+  {
+   "id": "pencil_writing",
+   "type": "action",
+   "of": [
+    "mitten",
+    "ink_river"
+   ],
+   "desc": "the pencil in the mitten writes ink that flows into the air",
+   "question": "Is the pencil in the mitten writing ink that flows into the air?"
+  },
+  {
+   "id": "train_on_sill",
+   "type": "relation",
+   "of": [
+    "train",
+    "windowsill"
+   ],
+   "desc": "the toy train sits on the wooden windowsill",
+   "question": "Is the toy train sitting on the wooden windowsill?"
+  },
+  {
+   "id": "cup_beside_train",
+   "type": "relation",
+   "of": [
+    "cup",
+    "train"
+   ],
+   "desc": "the clay cup is beside the toy train",
+   "question": "Is the clay cup beside the toy train?"
+  },
+  {
+   "id": "chair_beneath_sill",
+   "type": "relation",
+   "of": [
+    "chair",
+    "windowsill"
+   ],
+   "desc": "the chair is beneath the windowsill",
+   "question": "Is the chair beneath the windowsill?"
+  },
+  {
+   "id": "ink_on_glass",
+   "type": "relation",
+   "of": [
+    "ink_river",
+    "windowsill"
+   ],
+   "desc": "the glowing ink pools in the shallow basin formed by the windowsill's carved grooves",
+   "question": "Does the glowing ink pool in the shallow basin formed by the windowsill's carved grooves?"
+  },
+  {
+   "id": "fog_figures_tiptoe",
+   "type": "action",
+   "of": [
+    "fog_figures",
+    "chair"
+   ],
+   "desc": "tiny figures made of fog tiptoe along the furniture",
+   "question": "Do tiny figures made of fog tiptoe along the furniture?"
+  },
+  {
+   "id": "inverted_train_resonance",
+   "type": "relation",
+   "of": [
+    "train",
+    "inverted_room"
+   ],
+   "desc": "the iron locomotive in the inverted room hums in perfect resonance with the plush toy's spinning wheels",
+   "question": "Does the iron locomotive in the inverted room hum in perfect resonance with the plush toy's spinning wheels?"
+  },
+  {
+   "id": "books_unfold",
+   "type": "relation",
+   "of": [
+    "inverted_room",
+    "origami_books"
+   ],
+   "desc": "the books on the shelves unfold like origami",
+   "question": "Do the books on the shelves unfold like origami?"
+  },
+  {
+   "id": "clock_ripples",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock's hands create ripples in the fabric of time that bend the walls",
+   "question": "Do the clock's hands create ripples in the fabric of time that bend the walls?"
+  },
+  {
+   "id": "pencil_draws_furniture",
+   "type": "state",
+   "of": "mitten",
+   "desc": "the pencil draws new furniture into existence in both rooms",
+   "question": "Does the pencil draw new furniture into existence in both rooms?"
+  },
+  {
+   "id": "ink_glowing",
+   "type": "attribute",
+   "of": "ink_river",
+   "desc": "the glowing ink is alive with tiny script",
+   "question": "Is the glowing ink alive with tiny script?"
+  },
+  {
+   "id": "inverted_train_iron",
+   "type": "attribute",
+   "of": "inverted_room",
+   "desc": "the inverted room contains a real iron locomotive",
+   "question": "Does the inverted room contain a real iron locomotive?"
+  },
+  {
+   "id": "shelves_books",
+   "type": "attribute",
+   "of": "inverted_room",
+   "desc": "the walls of the inverted room are lined with shelves",
+   "question": "Are the walls of the inverted room lined with shelves?"
+  },
+  {
+   "id": "child_laughing",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child laughing",
+   "question": "Is there a child laughing?",
+   "box": [
+    50,
+    50,
+    200,
+    300
+   ]
+  },
+  {
+   "id": "child_trapped",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second child trapped",
+   "question": "Is there a second child trapped?",
+   "box": [
+    220,
+    50,
+    370,
+    300
+   ]
+  },
+  {
+   "id": "books_speak",
+   "type": "state",
+   "of": "inverted_room",
+   "desc": "the books in the library speak aloud in a language of colors",
+   "question": "Do the books in the library speak aloud in a language of colors?"
+  },
+  {
+   "id": "mirror_child_laughing",
+   "type": "state",
+   "of": "child_laughing",
+   "desc": "one mirror shows the child laughing in a forest",
+   "question": "Does one of the mirrors show the child laughing in a forest?"
+  },
+  {
+   "id": "mirror_child_trapped",
+   "type": "state",
+   "of": "child_trapped",
+   "desc": "another mirror shows the child trapped in a snow globe",
+   "question": "Does another mirror show the child trapped in a snow globe?"
+  },
+  {
+   "id": "windowsill_grooves",
+   "type": "attribute",
+   "of": "windowsill",
+   "desc": "the windowsill has carved grooves",
+   "question": "Does the windowsill have carved grooves?"
+  },
+  {
+   "id": "train_plush_wheels",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the toy train has plush wheels",
+   "question": "Does the toy train have plush wheels?"
+  },
+  {
+   "id": "train_glass_carriages",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the toy train has carriages fused with glass panes",
+   "question": "Does the toy train have carriages fused with glass panes?"
+  },
+  {
+   "id": "chair_smoke_legs",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the chair has legs dissolving into smoke and re-forming as stone pillars",
+   "question": "Does the chair have legs dissolving into smoke and re-forming as stone pillars?"
+  },
+  {
+   "id": "inverted_locomotive",
+   "type": "entity",
+   "class": "locomotive",
+   "plural": "locomotives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a real iron locomotive",
+   "question": "Is there a real iron locomotive?",
+   "box": [
+    100,
+    800,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "origami_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "books that unfold like origami",
+   "question": "Are there books that unfold like origami?",
+   "box": [
+    500,
+    750,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "ink_script",
+   "type": "attribute",
+   "of": "ink_river",
+   "desc": "the ink has tiny shifting script",
+   "question": "Does the ink have tiny shifting script?"
+  },
+  {
+   "id": "cosmos_details",
+   "type": "attribute",
+   "of": "train",
+   "desc": "the miniature cosmos contain constellations and planets",
+   "question": "Do the miniature cosmos in the train contain constellations and planets?"
+  },
+  {
+   "id": "cup_jellyfish",
+   "type": "attribute",
+   "of": "cup",
+   "desc": "the clay cup contains luminous winged jellyfish",
+   "question": "Does the clay cup contain luminous winged jellyfish?"
+  },
+  {
+   "id": "script_shifting",
+   "type": "state",
+   "of": "ink_river",
+   "desc": "the tiny script in the ink shifts and rearranges itself",
+   "question": "Does the tiny script in the ink shift and rearrange itself?"
+  },
+  {
+   "id": "shelves_filled_books",
+   "type": "attribute",
+   "of": "inverted_room",
+   "desc": "the shelves in the inverted room are filled with books",
+   "question": "Are the shelves in the inverted room filled with books?"
+  },
+  {
+   "id": "child_forest",
+   "type": "state",
+   "of": "child_laughing",
+   "desc": "the laughing child is in a forest of glowing trees",
+   "question": "Is the laughing child in a forest of glowing trees?"
+  },
+  {
+   "id": "child_snowglobe",
+   "type": "state",
+   "of": "child_trapped",
+   "desc": "the trapped child is in a melting snow globe",
+   "question": "Is the trapped child in a melting snow globe?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "train",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "cup",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "mitten",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "ink_river",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0269",
+ "prompt": "Beneath a sky that ripples like mercury between two realities, the red stuffed toy train sits frozen on a wooden windowsill, its plush wheels still trembling faintly as if haunted by the memory of motion. The train’s painted wooden carriages are fused with glass panes, each one filled with a swirling miniature cosmos—swirling constellations trapped in liquid amber, miniature planets orbiting tiny black holes. Beside it, a clay cup, warm from the recent touch of the sun, cradles not just raindrops but tiny, luminous creatures—winged jellyfish that pulse softly with bioluminescent hues. They flicker in rhythm with the train’s spinning wheels, as though drawn into its dream-like frequency. A child’s mitten, half-frozen and still gripping a pencil, lies draped over the sill’s edge, its tip smudged with ink that flows like a thin river down the glass, pooling in a shallow basin formed by the sill’s carved grooves. That ink doesn’t just stain the glass—it glows, alive with tiny script that shifts and rearranges itself, telling a story that changes as you watch, as if the story were trying to remember itself. Behind the sill, the room is an impossible geometry of stacked, translucent mirrors, each one showing a different version of the child: one laughing in a forest of glowing trees, another trapped in a snow globe that melts when the train makes a sound. The mirrors ripple with heat, but the room is icy—cold enough that the breath of a dream lingers in the air like a fog, taking the shape of tiny figures that tiptoe along the furniture. The furniture, too, is not ordinary: the chair beneath the windowsill has legs that dissolve into smoke mid-way down, only to re-form as stone pillars in the floor below, where a second, smaller room exists upside-down, lit by a perpetual twilight. In this inverted space, the train appears again, not as a toy but as a real, iron locomotive, its engine humming in perfect resonance with the plush toy’s spinning wheels, as though both exist in a shared frequency. The walls of the inverted room are lined with shelves filled with books that don’t open but unfold like origami, each page a different moment in the child’s life, each moment bleeding into the next with ghostly edges. A clock hangs in the center of the room, but its hands are frozen in a dance with each other—twisting and looping, creating ripples in the fabric of time that bend the walls like a dream shifting in the mind. Outside the window, the rain doesn’t fall but floats in spirals, each drop containing a scene: a kitchen, a forest, a library with books that speak aloud in a language of colors. And as the child’s mitten dangles, the pencil still writes—its ink bleeding into the air, drawing new furniture into existence in both rooms, real and inverted, as if the story itself were becoming a living blueprint.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node inverted_room: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 12,
+   "new_nodes": 13,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 7,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

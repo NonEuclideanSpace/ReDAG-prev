@@ -1,0 +1,378 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate interior",
+   "question": "Does the image show an airport gate interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    150,
+    600,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "plant",
+   "type": "entity",
+   "class": "potted plant",
+   "plural": "potted plants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted plant",
+   "question": "Is there a large potted plant?",
+   "box": [
+    550,
+    300,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "luggage cart",
+   "plural": "luggage carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a luggage cart",
+   "question": "Is there a luggage cart?",
+   "box": [
+    600,
+    700,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    200,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green vest",
+   "question": "Is there a man in a green vest?",
+   "box": [
+    450,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robot",
+   "question": "Is there a robot?",
+   "box": [
+    700,
+    250,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    650,
+    650,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "woman_suitcase",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue coat holds a silver suitcase",
+   "question": "Is the woman in a blue coat holding a silver suitcase?"
+  },
+  {
+   "id": "child_tablet",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in a yellow hat holds a tablet",
+   "question": "Is the child in a yellow hat holding a tablet?"
+  },
+  {
+   "id": "robot_pass",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot with glowing eyes holds a boarding pass",
+   "question": "Is the robot with glowing eyes holding a boarding pass?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is standing",
+   "question": "Is the woman in a blue coat standing?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is sitting",
+   "question": "Is the child in a yellow hat sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat is looking at the tablet screen",
+   "question": "Is the child in a yellow hat looking at the tablet screen?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green vest has his arm raised",
+   "question": "Does the man in a green vest have his arm raised?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green vest is standing",
+   "question": "Is the man in a green vest standing?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sleeping",
+   "question": "Is the black cat sleeping?"
+  },
+  {
+   "id": "child_feet",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in a yellow hat rests their feet on the floor",
+   "question": "Does the child in a yellow hat rest their feet on the floor?"
+  },
+  {
+   "id": "woman_next_to_child",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in a blue coat is next to the child in a yellow hat",
+   "question": "Is the woman in a blue coat next to the child in a yellow hat?"
+  },
+  {
+   "id": "child_on_bench",
+   "type": "relation",
+   "of": [
+    "child",
+    "bench"
+   ],
+   "desc": "the child in a yellow hat sits on the metal bench",
+   "question": "Is the child in a yellow hat sitting on the metal bench?"
+  },
+  {
+   "id": "man_beside_plant",
+   "type": "relation",
+   "of": [
+    "man",
+    "plant"
+   ],
+   "desc": "the man in a green vest stands beside the large potted plant",
+   "question": "Is the man in a green vest standing beside the large potted plant?"
+  },
+  {
+   "id": "robot_right_of_man",
+   "type": "relation",
+   "of": [
+    "robot",
+    "man"
+   ],
+   "desc": "the robot with glowing eyes is to the right of the man in a green vest",
+   "question": "Is the robot with glowing eyes to the right of the man in a green vest?"
+  },
+  {
+   "id": "cat_on_cart",
+   "type": "relation",
+   "of": [
+    "cat",
+    "cart"
+   ],
+   "desc": "the black cat is on top of the luggage cart",
+   "question": "Is the black cat on top of the luggage cart?"
+  },
+  {
+   "id": "man_points_board",
+   "type": "relation",
+   "of": [
+    "man",
+    "departure_board"
+   ],
+   "desc": "the man in a green vest points toward the departure board",
+   "question": "Is the man in a green vest pointing toward the departure board?"
+  },
+  {
+   "id": "robot_hands_woman",
+   "type": "action",
+   "of": [
+    "robot",
+    "woman"
+   ],
+   "desc": "the robot with glowing eyes hands the boarding pass to the woman in a blue coat",
+   "question": "Is the robot with glowing eyes handing the boarding pass to the woman in a blue coat?"
+  },
+  {
+   "id": "woman_takes_robot",
+   "type": "action",
+   "of": [
+    "woman",
+    "robot"
+   ],
+   "desc": "the woman in a blue coat reaches out to take the boarding pass from the robot with glowing eyes",
+   "question": "Is the woman in a blue coat reaching out to take the boarding pass from the robot with glowing eyes?"
+  },
+  {
+   "id": "no_airplane",
+   "type": "absent",
+   "desc": "an airplane visible through the window",
+   "question": "Is there an airplane visible through the window?"
+  },
+  {
+   "id": "departure_board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure board",
+   "question": "Is there a departure board?",
+   "box": [
+    400,
+    50,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a window",
+   "question": "Is there a window?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "robot_eyes",
+   "type": "attribute",
+   "of": "robot",
+   "desc": "the robot has glowing eyes",
+   "question": "Does the robot have glowing eyes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "cart",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0064",
+ "prompt": "In this anime style scene at an airport gate, a woman in a blue coat stands on the left holding a silver suitcase. Next to her, a child in a yellow hat sits on a metal bench, looking at a tablet screen. In the center, a man in a green vest points toward the departure board while standing beside a large potted plant. To his right, a robot with glowing eyes holds out a boarding pass for the woman in the blue coat. Behind them, a black cat sleeps on top of a luggage cart. The woman in the blue coat reaches out to take the boarding pass from the robot with glowing eyes. The child in the yellow hat rests their feet on the floor. The man in the green vest keeps his arm raised. There is no airplane visible through the window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

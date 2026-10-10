@@ -1,0 +1,212 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a plain background suitable for a pencil sketch",
+   "question": "Is the image rendered as a pencil sketch with light color wash?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table in the scene?",
+   "box": [
+    0,
+    600,
+    1024,
+    950
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in blue overalls",
+   "question": "Is there a girl wearing blue overalls?",
+   "box": [
+    50,
+    150,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with thick glasses",
+   "question": "Is there a boy wearing thick glasses?",
+   "box": [
+    400,
+    180,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    750,
+    550,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "poster_board",
+   "type": "entity",
+   "class": "poster board",
+   "plural": "poster boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a poster board",
+   "question": "Is there a poster board?",
+   "box": [
+    150,
+    250,
+    300,
+    550
+   ]
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in blue overalls is standing",
+   "question": "Is the girl in blue overalls standing?"
+  },
+  {
+   "id": "girl_holding_board",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl in blue overalls holds a poster board upright",
+   "question": "Is the girl in blue overalls holding a poster board upright?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy with thick glasses is pointing his finger",
+   "question": "Is the boy with thick glasses pointing his finger?"
+  },
+  {
+   "id": "rabbit_sitting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit is sitting calmly",
+   "question": "Is the small white rabbit sitting calmly?"
+  },
+  {
+   "id": "girl_looking_down",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in blue overalls looks down",
+   "question": "Is the girl in blue overalls looking down?"
+  },
+  {
+   "id": "boy_pointing_at_diagram",
+   "type": "relation",
+   "of": [
+    "boy",
+    "poster_board"
+   ],
+   "desc": "the boy with thick glasses points at the diagram on the poster board",
+   "question": "Is the boy with thick glasses pointing at the diagram on the poster board?"
+  },
+  {
+   "id": "rabbit_on_table",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "table"
+   ],
+   "desc": "the small white rabbit sits on the table",
+   "question": "Is the small white rabbit sitting on the table?"
+  },
+  {
+   "id": "rabbit_next_to_boy",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "boy"
+   ],
+   "desc": "the small white rabbit is next to the boy with thick glasses",
+   "question": "Is the small white rabbit next to the boy with thick glasses?"
+  },
+  {
+   "id": "no_text",
+   "type": "absent",
+   "desc": "text on the poster board",
+   "question": "Is there any visible text on the poster board?"
+  },
+  {
+   "id": "diagram_on_board",
+   "type": "attribute",
+   "of": "poster_board",
+   "desc": "the poster board has a diagram",
+   "question": "Does the poster board have a diagram?"
+  },
+  {
+   "id": "no_text_other",
+   "type": "absent",
+   "desc": "text on any other surface",
+   "question": "Is there any visible text on any other surface in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "rabbit",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0111",
+ "prompt": "In a pencil sketch with light color wash, a girl in blue overalls stands on the left holding a poster board upright. In the center, a boy with thick glasses points his finger directly at a diagram on her display. To the right, a small white rabbit sits calmly on the table next to the boy. The girl looks down at the rabbit while the boy maintains his pointing gesture toward the science project. There is no text visible on the poster board or any other surface in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,692 @@
+{
+ "style": "surreal photorealistic, dusk lighting, atmospheric, dreamlike",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a forest clearing at dusk with pine trees and muddy ground",
+   "question": "Does the image show a forest clearing at dusk?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "trolley",
+   "type": "entity",
+   "class": "trolley",
+   "plural": "trolleys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted trolley",
+   "question": "Is there a rusted trolley?",
+   "box": [
+    300,
+    300,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "map",
+   "type": "entity",
+   "class": "map",
+   "plural": "maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red map",
+   "question": "Is there a red map?",
+   "box": [
+    350,
+    550,
+    600,
+    650
+   ]
+  },
+  {
+   "id": "watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open pocket watch",
+   "question": "Is there an open pocket watch?",
+   "box": [
+    450,
+    380,
+    500,
+    430
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "entity",
+   "class": "garden hose",
+   "plural": "garden hoses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a garden hose",
+   "question": "Is there a garden hose?",
+   "box": [
+    100,
+    700,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "hat",
+   "type": "entity",
+   "class": "straw hat",
+   "plural": "straw hats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a straw hat teetering on its edge",
+   "question": "Is there a straw hat teetering on its edge?",
+   "box": [
+    200,
+    800,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "birch tree",
+   "plural": "birch trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a birch tree with a split trunk revealing copper wire",
+   "question": "Is there a birch tree with a split trunk revealing copper wire?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "garden chair",
+   "plural": "garden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red garden chair",
+   "question": "Is there a red garden chair?",
+   "box": [
+    100,
+    400,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "blackbird",
+   "plural": "blackbirds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blackbird",
+   "question": "Is there a blackbird?",
+   "box": [
+    150,
+    380,
+    200,
+    430
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lantern with a blue flame",
+   "question": "Is there a lantern with a blue flame?",
+   "box": [
+    650,
+    550,
+    720,
+    620
+   ]
+  },
+  {
+   "id": "journal",
+   "type": "entity",
+   "class": "leather journal",
+   "plural": "leather journals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open weathered leather journal with handwritten equations",
+   "question": "Is there an open weathered leather journal with handwritten equations?",
+   "box": [
+    600,
+    800,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "bicycle wheel",
+   "plural": "bicycle wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single bicycle wheel",
+   "question": "Is there a single bicycle wheel?",
+   "box": [
+    750,
+    850,
+    950,
+    1024
+   ]
+  },
+  {
+   "id": "hand",
+   "type": "entity",
+   "class": "stone hand",
+   "plural": "stone hands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone hand protruding from the ground",
+   "question": "Is there a stone hand protruding from the ground?",
+   "box": [
+    100,
+    900,
+    200,
+    1024
+   ]
+  },
+  {
+   "id": "saucer",
+   "type": "entity",
+   "class": "saucer",
+   "plural": "saucers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a saucer",
+   "question": "Is there a saucer?",
+   "box": [
+    120,
+    876,
+    180,
+    924
+   ]
+  },
+  {
+   "id": "ants",
+   "type": "entity",
+   "class": "ant",
+   "plural": "ants",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a trail of ants",
+   "question": "Are there ants?",
+   "box": [
+    150,
+    600,
+    250,
+    650
+   ]
+  },
+  {
+   "id": "ants_carrying",
+   "type": "state",
+   "of": "ants",
+   "desc": "the ants are carrying metal fragments",
+   "question": "Are the ants carrying metal fragments?"
+  },
+  {
+   "id": "map_under_trolley",
+   "type": "relation",
+   "of": [
+    "map",
+    "trolley"
+   ],
+   "desc": "the map lies beneath the trolley",
+   "question": "Is the map lying beneath the trolley?"
+  },
+  {
+   "id": "watch_on_dashboard",
+   "type": "relation",
+   "of": [
+    "watch",
+    "trolley"
+   ],
+   "desc": "the pocket watch sits on the trolley's dashboard",
+   "question": "Is the pocket watch sitting on the trolley's dashboard?"
+  },
+  {
+   "id": "watch_spinning",
+   "type": "state",
+   "of": "watch",
+   "desc": "the pocket watch hands are spinning counterclockwise",
+   "question": "Are the hands of the pocket watch spinning counterclockwise?"
+  },
+  {
+   "id": "hose_pulsing",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose appears to pulse",
+   "question": "Does the garden hose appear to pulse?"
+  },
+  {
+   "id": "motes_from_hose",
+   "type": "action",
+   "of": [
+    "hose",
+    "hat"
+   ],
+   "desc": "iridescent motes evaporate from the hose toward the hat",
+   "question": "Are iridescent motes evaporating from the hose toward the hat?"
+  },
+  {
+   "id": "smoke_from_hat",
+   "type": "state",
+   "of": "hat",
+   "desc": "wisp of smoke shaped like a question mark rises from the hat",
+   "question": "Does a wisp of smoke shaped like a question mark rise from the hat?"
+  },
+  {
+   "id": "chair_behind_tree",
+   "type": "relation",
+   "of": [
+    "chair",
+    "tree"
+   ],
+   "desc": "the red garden chair is behind the birch tree",
+   "question": "Is the red garden chair behind the birch tree?"
+  },
+  {
+   "id": "shadow_curling",
+   "type": "state",
+   "of": "chair",
+   "desc": "the chair's shadow curls into the tree bark",
+   "question": "Does the chair's shadow curl into the tree bark?"
+  },
+  {
+   "id": "bird_on_chair",
+   "type": "relation",
+   "of": [
+    "bird",
+    "chair"
+   ],
+   "desc": "the blackbird perches on the chair's backrest",
+   "question": "Is the blackbird perching on the chair's backrest?"
+  },
+  {
+   "id": "bird_looking_trolley",
+   "type": "relation",
+   "of": [
+    "bird",
+    "trolley"
+   ],
+   "desc": "the blackbird has one eye fixed on the trolley",
+   "question": "Is the blackbird looking at the trolley with one eye?"
+  },
+  {
+   "id": "bird_looking_lantern",
+   "type": "relation",
+   "of": [
+    "bird",
+    "lantern"
+   ],
+   "desc": "the blackbird has the other eye fixed on the lantern",
+   "question": "Is the blackbird looking at the lantern with the other eye?"
+  },
+  {
+   "id": "lantern_on_trolley",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "trolley"
+   ],
+   "desc": "the lantern sits on the trolley's flatbed",
+   "question": "Is the lantern sitting on the trolley's flatbed?"
+  },
+  {
+   "id": "light_on_journal",
+   "type": "relation",
+   "of": [
+    "lantern",
+    "journal"
+   ],
+   "desc": "ripples of color from the lantern fall on the journal",
+   "question": "Do ripples of color from the lantern fall on the journal?"
+  },
+  {
+   "id": "wheel_near_journal",
+   "type": "relation",
+   "of": [
+    "wheel",
+    "journal"
+   ],
+   "desc": "the bicycle wheel lies near the journal",
+   "question": "Is the bicycle wheel lying near the journal?"
+  },
+  {
+   "id": "spoke_in_page",
+   "type": "relation",
+   "of": [
+    "wheel",
+    "journal"
+   ],
+   "desc": "one spoke of the wheel is lodged in the journal page",
+   "question": "Is one spoke of the wheel lodged in the journal page?"
+  },
+  {
+   "id": "tree_leaning",
+   "type": "state",
+   "of": "tree",
+   "desc": "the birch tree leans toward the clearing",
+   "question": "Is the birch tree leaning toward the clearing?"
+  },
+  {
+   "id": "ants_on_wire",
+   "type": "relation",
+   "of": [
+    "ants",
+    "tree"
+   ],
+   "desc": "the ants crawl along the copper wire in the tree",
+   "question": "Are the ants crawling along the copper wire in the tree?"
+  },
+  {
+   "id": "ink_dripping",
+   "type": "action",
+   "of": [
+    "tree",
+    "saucer"
+   ],
+   "desc": "a drop of ink drips from the tree bark into the saucer",
+   "question": "Is a drop of ink dripping from the tree bark into the saucer?"
+  },
+  {
+   "id": "saucer_on_hand",
+   "type": "relation",
+   "of": [
+    "saucer",
+    "hand"
+   ],
+   "desc": "the saucer is placed by the stone hand",
+   "question": "Is the saucer placed by the stone hand?"
+  },
+  {
+   "id": "trolley_windshield_glaze",
+   "type": "attribute",
+   "of": "trolley",
+   "desc": "the trolley's cracked windshield is smeared with a curious glaze",
+   "question": "Is the trolley's cracked windshield smeared with a curious glaze?"
+  },
+  {
+   "id": "watch_numbers_shifting",
+   "type": "state",
+   "of": "watch",
+   "desc": "the pocket watch numbers shift positions",
+   "question": "Do the numbers on the open pocket watch shift positions?"
+  },
+  {
+   "id": "hat_smoke_shape",
+   "type": "state",
+   "of": "hat",
+   "desc": "the wisp of smoke from the straw hat is shaped like a question mark",
+   "question": "Is the wisp of smoke rising from the straw hat shaped like a question mark?"
+  },
+  {
+   "id": "chair_occupied_empty",
+   "type": "state",
+   "of": "chair",
+   "desc": "the red garden chair is occupied but no one is visible",
+   "question": "Is the red garden chair appearing occupied while having no visible occupant?"
+  },
+  {
+   "id": "journal_trolley_diagrams",
+   "type": "attribute",
+   "of": "journal",
+   "desc": "the journal pages contain diagrams of trolleys looping back",
+   "question": "Do the journal pages contain diagrams of trolleys that loop back into the same sketch?"
+  },
+  {
+   "id": "tree_hollow_copper",
+   "type": "attribute",
+   "of": "tree",
+   "desc": "the hollow chamber in the tree is lined with copper wire",
+   "question": "Is the hollow chamber in the tree lined with copper wire?"
+  },
+  {
+   "id": "ants_rust_fragments",
+   "type": "relation",
+   "of": [
+    "ants",
+    "trolley"
+   ],
+   "desc": "the ants carry fragments of rusted metal from the trolley",
+   "question": "Are the ants carrying fragments of rusted metal from the trolley?"
+  },
+  {
+   "id": "hand_gesture",
+   "type": "state",
+   "of": "hand",
+   "desc": "the stone hand fingers are curled as if mid-gesture",
+   "question": "Are the fingers of the stone hand curled as if mid-gesture?"
+  },
+  {
+   "id": "map_unrolled",
+   "type": "state",
+   "of": "map",
+   "desc": "the tattered red map is partly unrolled",
+   "question": "Is the tattered red map partly unrolled?"
+  },
+  {
+   "id": "hose_snaking",
+   "type": "state",
+   "of": "hose",
+   "desc": "the garden hose snakes across the mud",
+   "question": "Does the garden hose snake across the mud?"
+  },
+  {
+   "id": "hat_incense_holder",
+   "type": "attribute",
+   "of": "hat",
+   "desc": "the straw hat acts as a makeshift incense holder",
+   "question": "Does the straw hat act as a makeshift incense holder?"
+  },
+  {
+   "id": "journal_on_ground",
+   "type": "relation",
+   "of": [
+    "journal",
+    "hand"
+   ],
+   "desc": "the weathered leather journal lies on the ground",
+   "question": "Does the weathered leather journal lie on the ground?"
+  },
+  {
+   "id": "wheel_askew",
+   "type": "state",
+   "of": "wheel",
+   "desc": "the single bicycle wheel lies askew",
+   "question": "Does the single bicycle wheel lie askew?"
+  },
+  {
+   "id": "tree_listening",
+   "type": "state",
+   "of": "tree",
+   "desc": "the birch tree hums faintly as though listening",
+   "question": "Does the birch tree appear to hum faintly as though listening?"
+  },
+  {
+   "id": "stone",
+   "type": "entity",
+   "class": "stone",
+   "plural": "stones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone from which the hand protrudes",
+   "question": "Is there a stone from which the hand protrudes?",
+   "box": [
+    800,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "dashboard",
+   "type": "entity",
+   "class": "dashboard",
+   "plural": "dashboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the dashboard inside the driver’s compartment of the trolley",
+   "question": "Is there a dashboard inside the driver’s compartment of the trolley?",
+   "box": [
+    450,
+    350,
+    650,
+    450
+   ]
+  },
+  {
+   "id": "pine_trees",
+   "type": "entity",
+   "class": "pine tree",
+   "plural": "pine trees",
+   "count": 2,
+   "count_exact": false,
+   "desc": "pine trees",
+   "question": "Are there pine trees?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "mud",
+   "type": "entity",
+   "class": "mud",
+   "plural": "patches of mud",
+   "count": 1,
+   "count_exact": true,
+   "desc": "muddy ground",
+   "question": "Is the ground muddy?",
+   "box": [
+    0,
+    600,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "trolley_windshield",
+   "type": "attribute",
+   "of": "trolley",
+   "desc": "the trolley has a cracked windshield",
+   "question": "Does the trolley have a cracked windshield?"
+  },
+  {
+   "id": "map_tattered",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map is tattered",
+   "question": "Is the map tattered?"
+  },
+  {
+   "id": "map_curled_edges",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map has curled edges",
+   "question": "Does the map have curled edges?"
+  },
+  {
+   "id": "map_stained",
+   "type": "attribute",
+   "of": "map",
+   "desc": "the map is stained with coffee or rust",
+   "question": "Is the map stained with coffee or rust?"
+  },
+  {
+   "id": "hose_green_liquid",
+   "type": "attribute",
+   "of": "hose",
+   "desc": "the hose contains green liquid",
+   "question": "Does the hose contain green liquid?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "trolley",
+   "to": "watch",
+   "kind": "support"
+  },
+  {
+   "from": "trolley",
+   "to": "lantern",
+   "kind": "support"
+  },
+  {
+   "from": "hand",
+   "to": "saucer",
+   "kind": "support"
+  },
+  {
+   "from": "stone",
+   "to": "hand",
+   "kind": "support"
+  },
+  {
+   "from": "trolley",
+   "to": "dashboard",
+   "kind": "support"
+  },
+  {
+   "from": "dashboard",
+   "to": "watch",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0293",
+ "prompt": "The forest clearing is suspended in the hush between dusk and night, where the air hangs heavy with the scent of pine and the first chill of evening. A tattered red map, its edges curled and stained with what looks like coffee or rust, lies partly unrolled beneath the rusted trolley, as if someone once tried to chart the forest but gave up mid-route. The trolley’s cracked windshield is smeared with a curious glaze—perhaps the residue of melted snow or a bird that never actually struck it. Inside the driver’s compartment, a pocket watch sits open on the dashboard, its hands spinning counterclockwise while the numbers shift positions with each tick, as if time itself is a riddle the forest wants solved. The garden hose, snaking across the mud, is not empty; it pulses faintly, as though alive, with a green liquid that evaporates midair into iridescent motes of light. These motes gather near the straw hat, which teeters on the edge of tipping over, now acting as a makeshift incense holder—each drop that falls into it produces a wisp of smoke shaped like a question mark. Behind the birch tree, the red garden chair is occupied again, though no one is visible—its shadow stretches unnaturally toward the tree, curling into the bark and disappearing into a knot of wood. A blackbird perches on the chair’s backrest, one eye fixed on the trolley, the other on a small lantern that sits on the trolley’s flatbed. The lantern flickers with a blue flame, casting ripples of color onto a weathered leather journal left open on the ground, its pages filled with handwritten equations and diagrams of trolleys that loop back into the same sketch again and again. A single bicycle wheel lies askew near the journal, one spoke lodged in the page, as if the story is trying to spin itself forward. The birch tree itself seems to lean toward the clearing, its trunk split open at the base, revealing a hollow chamber lined with copper wire and humming faintly, as though it’s listening. A trail of ants crawls along the wire, carrying fragments of the trolley’s rusted metal, and a single drop of ink drips from the tree’s bark into a saucer placed beneath it by a stone hand that protrudes from the ground, fingers curled as if mid-gesture. The whole scene feels like the aftermath of a dream that’s trying to remember itself, each object both a cause and an effect, bound in a loop that begins when the first drop falls into the hat and ends when the last light fades from the lantern. The forest breathes, and the trolley creaks, as if waiting for the next page to turn.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 72,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

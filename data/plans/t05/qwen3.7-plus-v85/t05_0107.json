@@ -1,0 +1,239 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "fountain",
+   "type": "entity",
+   "class": "fountain",
+   "plural": "fountains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fountain",
+   "question": "Is there a stone fountain?",
+   "box": [
+    350,
+    250,
+    670,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    700,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "black cat",
+   "plural": "black cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    550,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "wooden bench",
+   "plural": "wooden benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old wooden bench",
+   "question": "Is there an old wooden bench?",
+   "box": [
+    750,
+    400,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "woman_shivering",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is shivering visibly",
+   "question": "Is the woman in the blue coat shivering visibly?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat is standing still",
+   "question": "Is the man in the green hat standing still?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is crouching low",
+   "question": "Is the black cat crouching low?"
+  },
+  {
+   "id": "woman_looking_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman in the blue coat is looking at the black cat",
+   "question": "Is the woman in the blue coat looking at the black cat?"
+  },
+  {
+   "id": "man_sitting_bench",
+   "type": "relation",
+   "of": [
+    "man",
+    "bench"
+   ],
+   "desc": "the man in the green hat is sitting on the old wooden bench",
+   "question": "Is the man in the green hat sitting on the old wooden bench?"
+  },
+  {
+   "id": "bench_behind_man",
+   "type": "relation",
+   "of": [
+    "bench",
+    "man"
+   ],
+   "desc": "the old wooden bench is behind the man in the green hat",
+   "question": "Is the old wooden bench behind the man in the green hat?"
+  },
+  {
+   "id": "cat_near_fountain",
+   "type": "relation",
+   "of": [
+    "cat",
+    "fountain"
+   ],
+   "desc": "the black cat rests near the fountain’s edge",
+   "question": "Is the black cat resting near the edge of the stone fountain?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun in the sky",
+   "question": "Is there a sun in the sky?"
+  },
+  {
+   "id": "woman_stands",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat stands",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "fountain_sits",
+   "type": "state",
+   "of": "fountain",
+   "desc": "the stone fountain sits in the center",
+   "question": "Is the stone fountain sitting in the center?"
+  },
+  {
+   "id": "man_waits",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the green hat waits",
+   "question": "Is the man in the green hat waiting?"
+  },
+  {
+   "id": "cat_rests",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat rests",
+   "question": "Is the black cat resting?"
+  },
+  {
+   "id": "bench_leans",
+   "type": "state",
+   "of": "bench",
+   "desc": "the old wooden bench leans",
+   "question": "Is the old wooden bench leaning?"
+  },
+  {
+   "id": "fountain_ice",
+   "type": "attribute",
+   "of": "fountain",
+   "desc": "the stone fountain is topped with ice",
+   "question": "Is the stone fountain topped with ice?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0107",
+ "prompt": "Rendered as a pencil sketch with light color wash, the snowy town square features five distinct elements. On the left stands a woman in a blue coat. In the center sits a stone fountain topped with ice. To the right waits a man in a green hat. Near the fountain’s edge rests a black cat. Behind the man leans an old wooden bench. The woman in the blue coat is shivering visibly. The man in the green hat is standing still. The black cat is crouching low. The woman in the blue coat is looking at the black cat. The man in the green hat is sitting on the old wooden bench. There is no sun in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 5,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

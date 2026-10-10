@@ -1,0 +1,713 @@
+{
+ "style": "surreal digital painting, amber and cobalt lighting, atmospheric, dreamlike",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim room with walls that seem to breathe and shift perspective, containing a fireplace and a frosted window",
+   "question": "Does the image show a dim room with surreal, shifting walls, a fireplace, and a frosted window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "armchair",
+   "type": "entity",
+   "class": "armchair",
+   "plural": "armchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered leather armchair",
+   "question": "Is there a weathered leather armchair?",
+   "box": [
+    360,
+    400,
+    664,
+    900
+   ]
+  },
+  {
+   "id": "earphones",
+   "type": "entity",
+   "class": "earphones",
+   "plural": "earphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of earphones",
+   "question": "Is there a pair of earphones?",
+   "box": [
+    380,
+    450,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "photo_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of old photography books",
+   "question": "Is there a stack of old photography books?",
+   "box": [
+    200,
+    750,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "coffee_cup",
+   "type": "entity",
+   "class": "cup",
+   "plural": "cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-empty coffee cup with steam rising in spirals",
+   "question": "Is there a half-empty coffee cup with steam rising in spirals?",
+   "box": [
+    150,
+    850,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "mismatched_mugs",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 3,
+   "count_exact": false,
+   "desc": "several mismatched mugs",
+   "question": "Are there several mismatched mugs?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter",
+   "question": "Is there a typewriter?",
+   "box": [
+    700,
+    600,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "dictionary",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick dictionary",
+   "question": "Is there a thick dictionary?",
+   "box": [
+    720,
+    700,
+    830,
+    780
+   ]
+  },
+  {
+   "id": "cabinet",
+   "type": "entity",
+   "class": "cabinet",
+   "plural": "cabinets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cabinet with an open top drawer",
+   "question": "Is there a wooden cabinet with an open top drawer?",
+   "box": [
+    800,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "papers",
+   "type": "entity",
+   "class": "paper",
+   "plural": "papers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "photographs and letters spilling from the cabinet",
+   "question": "Are there photographs and letters spilling from the cabinet?",
+   "box": [
+    820,
+    400,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock with shifting numbers",
+   "question": "Is there a clock with shifting numbers?",
+   "box": [
+    450,
+    100,
+    574,
+    224
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with three tails",
+   "question": "Is there a cat with three tails?",
+   "box": [
+    850,
+    450,
+    980,
+    580
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camera",
+   "question": "Is there a camera?",
+   "box": [
+    856,
+    476,
+    904,
+    524
+   ]
+  },
+  {
+   "id": "key",
+   "type": "entity",
+   "class": "key",
+   "plural": "keys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a key",
+   "question": "Is there a key?",
+   "box": [
+    891,
+    486,
+    939,
+    534
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror",
+   "question": "Is there a mirror?",
+   "box": [
+    926,
+    476,
+    974,
+    524
+   ]
+  },
+  {
+   "id": "armchair_center",
+   "type": "state",
+   "of": "armchair",
+   "desc": "the armchair is sitting at the center of the room",
+   "question": "Is the armchair positioned in the center of the room?"
+  },
+  {
+   "id": "earphone_dangle",
+   "type": "relation",
+   "of": [
+    "earphones",
+    "armchair"
+   ],
+   "desc": "the earphones dangle from the armchair's left ear",
+   "question": "Do the earphones dangle from the left side of the armchair?"
+  },
+  {
+   "id": "earbud_on_armrest",
+   "type": "relation",
+   "of": [
+    "earphones",
+    "armchair"
+   ],
+   "desc": "one earbud of the earphones rests on the armrest of the armchair",
+   "question": "Is one earbud resting on the armrest of the armchair?"
+  },
+  {
+   "id": "cord_tangle",
+   "type": "relation",
+   "of": [
+    "earphones",
+    "photo_books"
+   ],
+   "desc": "the earphone cord tangles with the stack of photography books",
+   "question": "Does the earphone cord tangle with the stack of photography books?"
+  },
+  {
+   "id": "book_ajar",
+   "type": "state",
+   "of": "photo_books",
+   "desc": "the pages of the ajar book appear to be fluttering",
+   "question": "Do the pages of the ajar book appear to be fluttering?"
+  },
+  {
+   "id": "cup_on_floor",
+   "type": "state",
+   "of": "coffee_cup",
+   "desc": "the coffee cup is placed on the floor",
+   "question": "Is the coffee cup placed on the floor?"
+  },
+  {
+   "id": "mugs_around_cup",
+   "type": "relation",
+   "of": [
+    "mismatched_mugs",
+    "coffee_cup"
+   ],
+   "desc": "the mismatched mugs surround the coffee cup",
+   "question": "Do the mismatched mugs surround the coffee cup?"
+  },
+  {
+   "id": "typewriter_on_dictionary",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "dictionary"
+   ],
+   "desc": "the typewriter sits balanced on the spine of the dictionary",
+   "question": "Is the typewriter balanced on the spine of the dictionary?"
+  },
+  {
+   "id": "papers_spill",
+   "type": "relation",
+   "of": [
+    "papers",
+    "cabinet"
+   ],
+   "desc": "the photographs and letters spill out of the open drawer of the cabinet",
+   "question": "Do the photographs and letters spill out of the open drawer of the cabinet?"
+  },
+  {
+   "id": "clock_above_fireplace",
+   "type": "relation",
+   "of": [
+    "clock",
+    "fireplace"
+   ],
+   "desc": "the clock is above the fireplace",
+   "question": "Is the clock positioned above the fireplace?"
+  },
+  {
+   "id": "cat_on_windowsill",
+   "type": "relation",
+   "of": [
+    "cat",
+    "windowsill"
+   ],
+   "desc": "the cat sits on the windowsill",
+   "question": "Is the cat sitting on the windowsill?"
+  },
+  {
+   "id": "tail_camera",
+   "type": "relation",
+   "of": [
+    "cat",
+    "camera"
+   ],
+   "desc": "one tail of the cat is wrapped around the camera",
+   "question": "Is one of the cat's tails wrapped around the camera?"
+  },
+  {
+   "id": "tail_key",
+   "type": "relation",
+   "of": [
+    "cat",
+    "key"
+   ],
+   "desc": "a second tail of the cat is wrapped around the key",
+   "question": "Is a second tail of the cat wrapped around the key?"
+  },
+  {
+   "id": "tail_mirror",
+   "type": "relation",
+   "of": [
+    "cat",
+    "mirror"
+   ],
+   "desc": "the third tail of the cat is wrapped around the mirror",
+   "question": "Is the third tail of the cat wrapped around the mirror?"
+  },
+  {
+   "id": "fireplace",
+   "type": "entity",
+   "class": "fireplace",
+   "plural": "fireplaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fireplace",
+   "question": "Is there a fireplace?",
+   "box": [
+    400,
+    100,
+    624,
+    300
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a windowsill below the frosted window",
+   "question": "Is there a windowsill?",
+   "box": [
+    800,
+    400,
+    950,
+    450
+   ]
+  },
+  {
+   "id": "record_player",
+   "type": "entity",
+   "class": "record player",
+   "plural": "record players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a record player",
+   "question": "Is there a record player?",
+   "box": [
+    100,
+    700,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "armchair_sits",
+   "type": "state",
+   "of": "armchair",
+   "desc": "the weathered leather armchair sits",
+   "question": "Is the weathered leather armchair sitting?"
+  },
+  {
+   "id": "cup_half_empty",
+   "type": "attribute",
+   "of": "coffee_cup",
+   "desc": "the coffee cup is half-empty",
+   "question": "Is the coffee cup half-empty?"
+  },
+  {
+   "id": "cat_blinks",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat blinks",
+   "question": "Is the cat blinking?"
+  },
+  {
+   "id": "clock_above_fireplace_rel",
+   "type": "relation",
+   "of": [
+    "clock",
+    "fireplace"
+   ],
+   "desc": "the clock is above the fireplace",
+   "question": "Is the clock above the fireplace?"
+  },
+  {
+   "id": "sunbeam",
+   "type": "entity",
+   "class": "sunbeam",
+   "plural": "sunbeams",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single sunbeam piercing the frosted window",
+   "question": "Is there a single sunbeam piercing the frosted window?",
+   "box": [
+    200,
+    0,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "dust_particles",
+   "type": "entity",
+   "class": "dust particles",
+   "plural": "dust particles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dust particles visible in the sunbeam",
+   "question": "Are dust particles visible in the sunbeam?",
+   "box": [
+    300,
+    100,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "candlelight",
+   "type": "entity",
+   "class": "candlelight",
+   "plural": "candlelights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "candlelight glowing on some photographs",
+   "question": "Is there candlelight glowing on some photographs?",
+   "box": [
+    100,
+    400,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "sunbeam_diagonal",
+   "type": "state",
+   "of": "sunbeam",
+   "desc": "the sunbeam slices diagonally across the space",
+   "question": "Does the sunbeam slice diagonally across the space?"
+  },
+  {
+   "id": "cup_steam_spirals",
+   "type": "attribute",
+   "of": "coffee_cup",
+   "desc": "steam from the coffee cup curls in slow spirals",
+   "question": "Does steam from the coffee cup curl in slow spirals?"
+  },
+  {
+   "id": "mugs_filled_substances",
+   "type": "attribute",
+   "of": "mismatched_mugs",
+   "desc": "the mismatched mugs are filled with varying substances including milk and ink",
+   "question": "Are the mismatched mugs filled with varying substances including milk and ink?"
+  },
+  {
+   "id": "papers_burning_glow",
+   "type": "state",
+   "of": "papers",
+   "desc": "some photographs and letters burn with a slow amber glow",
+   "question": "Do some photographs and letters burn with a slow amber glow?"
+  },
+  {
+   "id": "clock_numbers_shifting",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock's numbers are constantly shifting and swapping places",
+   "question": "Are the clock's numbers constantly shifting and swapping places?"
+  },
+  {
+   "id": "record_playing",
+   "type": "state",
+   "of": "record_player",
+   "desc": "the record player is playing a record",
+   "question": "Is the record player playing a record?"
+  },
+  {
+   "id": "sunbeam_from_window",
+   "type": "state",
+   "of": "sunbeam",
+   "desc": "the sunbeam pierces the frosted window in the wall",
+   "question": "Does the sunbeam pierce the frosted window in the wall?"
+  },
+  {
+   "id": "dust_in_sunbeam",
+   "type": "relation",
+   "of": [
+    "dust_particles",
+    "sunbeam"
+   ],
+   "desc": "the dust particles are within the sunbeam",
+   "question": "Are the dust particles within the sunbeam?"
+  },
+  {
+   "id": "candlelight_on_papers",
+   "type": "relation",
+   "of": [
+    "candlelight",
+    "papers"
+   ],
+   "desc": "the candlelight glows on some of the photographs and letters",
+   "question": "Does the candlelight glow on some of the photographs and letters?"
+  },
+  {
+   "id": "paintings",
+   "type": "entity",
+   "class": "painting",
+   "plural": "paintings",
+   "count": 2,
+   "count_exact": false,
+   "desc": "paintings hanging on the walls",
+   "question": "Are there paintings hanging on the walls?",
+   "box": [
+    50,
+    100,
+    974,
+    400
+   ]
+  },
+  {
+   "id": "books_precarious",
+   "type": "state",
+   "of": "photo_books",
+   "desc": "the stack of photography books is precarious",
+   "question": "Is the stack of photography books precarious?"
+  },
+  {
+   "id": "objects_different_versions",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera, key, and mirror are subtly different versions of the same object",
+   "question": "Do the camera, key, and mirror appear as subtly different versions of the same object?"
+  },
+  {
+   "id": "no_one_near_player",
+   "type": "absent",
+   "desc": "a person near the record player",
+   "question": "Is there anyone near the record player?"
+  },
+  {
+   "id": "armchair_cracked",
+   "type": "attribute",
+   "of": "armchair",
+   "desc": "the armchair is cracked with age",
+   "question": "Is the armchair cracked with age?"
+  },
+  {
+   "id": "earphones_cord",
+   "type": "attribute",
+   "of": "earphones",
+   "desc": "the earphones have a cord",
+   "question": "Do the earphones have a cord?"
+  },
+  {
+   "id": "mugs_faded_labels",
+   "type": "attribute",
+   "of": "mismatched_mugs",
+   "desc": "the mugs have faded labels",
+   "question": "Do the mugs have faded labels?"
+  },
+  {
+   "id": "mug_metallic_skin",
+   "type": "attribute",
+   "of": "mismatched_mugs",
+   "desc": "one mug contains a substance with a hardened metallic skin",
+   "question": "Does one mug contain a substance with a hardened metallic skin?"
+  },
+  {
+   "id": "papers_glowing",
+   "type": "state",
+   "of": "papers",
+   "desc": "some papers glow with an amber light",
+   "question": "Do some papers glow with an amber light?"
+  },
+  {
+   "id": "papers_folded_pockets",
+   "type": "attribute",
+   "of": "papers",
+   "desc": "some papers have folded pockets",
+   "question": "Do some papers have folded pockets?"
+  },
+  {
+   "id": "paintings_frames",
+   "type": "attribute",
+   "of": "paintings",
+   "desc": "the paintings have frames",
+   "question": "Do the paintings have frames?"
+  },
+  {
+   "id": "books_unstable",
+   "type": "state",
+   "of": "photo_books",
+   "desc": "the stack of photography books is unstable",
+   "question": "Is the stack of photography books unstable?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "dictionary",
+   "to": "typewriter",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0056",
+ "prompt": "The weathered leather armchair, cracked with age but still somehow regal, sits at the center of a dim, amber-lit room where the walls are not merely hung with paintings but seem to breathe with them, their frames subtly shifting perspective as if each canvas were alive and aware of its audience. From the chair’s left ear, a pair of earphones dangles like a pendant from a regal accessory—left bud perched on the armrest, its cord curling down to tangle with the soft pile of old photography books stacked in a precarious, almost intentional instability. One book is slightly ajar, as if it were caught mid-flip by an unseen hand, and its pages flutter faintly, though the room is still, stirred only by the slow, deliberate drift of a single sunbeam that pierces the frosted window, slicing diagonally across the space. Within this beam, the dust particles seem to hum in rhythm with the low static of the earphones, as though sound itself has a visual resonance. The sunbeam catches a coffee cup placed with deliberate neglect on the floor—half-empty, its steam curling in slow spirals, each loop a ghostly echo of a voice not quite heard. The cup is surrounded by a small colony of mismatched mugs, each with a faded label naming a distant city or a long-forgotten friend, and each filled with varying substances—milk, ink, even what looks like molten silver, which has begun to harden into a metallic skin. A typewriter sits nearby, not on a desk but balanced on the spine of a thick dictionary, its keys clacking softly with a ghostly rhythm, as if it were being typed on by someone just outside the visible spectrum. From the open top drawer of a wooden cabinet nearby, photographs and letters spill out in controlled chaos, some burning with the slow amber glow of candlelight, others folded and tucked into pockets made of folded time—yes, literal time pockets folded into the paper by an unknown hand, as though the photos could be stepped into. A clock above the fireplace does not tick but hums, its numbers constantly shifting and swapping places as if time itself were disoriented and playing hide-and-seek. The air is thick with the scent of aged paper, burnt coffee, and something floral and electric, as if someone had brewed a potion of memory and spilled it across the room. A cat sits on the windowsill, but it has three tails, and each tail is wrapped around a different version of the same object—a camera, a key, a mirror—each of them subtly different, as though drawn from parallel realities. The cat blinks, and for a moment, the room seems to flicker, the photographs changing slightly, the shadows rearranging themselves like pieces on a board. The coffee cup steams again, the chair creaks, and somewhere, deep in the room, a record begins to play, though no one is near the record player. It is not clear whether the earphones are receiving this music or emitting it, but either way, the walls seem to pulse in response, their color bleeding gently from sepia to a deep cobalt. In this impossible room, where time is a texture and space is a puzzle without a box, every object seems to exist in conversation with another, forming a language of silence and shadow, where meaning is not spoken but seen.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [
+   "node mismatched_mugs: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 14,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 65,
+   "n_uncovered": 5,
+   "proposed": 4,
+   "ungrounded": 0,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "cat_on_windowsill_rel",
+     "cat_on_windowsill"
+    ]
+   ]
+  }
+ }
+}

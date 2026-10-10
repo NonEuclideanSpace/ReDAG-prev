@@ -1,0 +1,365 @@
+{
+ "style": "pencil sketch with light color wash, loose expressive lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a backstage area with a brick wall",
+   "question": "Does the image show a backstage area with a brick wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall woman in a sequined gown",
+   "question": "Is there a tall woman in a sequined gown?",
+   "box": [
+    50,
+    100,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a tweed cap",
+   "question": "Is there an old man in a tweed cap?",
+   "box": [
+    350,
+    400,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "crate_man",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    380,
+    650,
+    570,
+    850
+   ]
+  },
+  {
+   "id": "boot",
+   "type": "entity",
+   "class": "leather boot",
+   "plural": "leather boots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worn leather boot",
+   "question": "Is there a worn leather boot?",
+   "box": [
+    450,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    420,
+    550,
+    520,
+    650
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in oversized suspenders",
+   "question": "Is there a young boy in oversized suspenders?",
+   "box": [
+    700,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "trumpet",
+   "type": "entity",
+   "class": "trumpet",
+   "plural": "trumpets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large brass trumpet",
+   "question": "Is there a large brass trumpet?",
+   "box": [
+    750,
+    850,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "crates_stack",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 3,
+   "count_exact": true,
+   "desc": "a stack of three wooden crates",
+   "question": "Is there a stack of three wooden crates?",
+   "box": [
+    600,
+    200,
+    800,
+    600
+   ]
+  },
+  {
+   "id": "fan",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the tall woman in a sequined gown holds a feathered fan loosely at her side",
+   "question": "Is the tall woman in a sequined gown holding a feathered fan loosely at her side?"
+  },
+  {
+   "id": "woman_rigid",
+   "type": "state",
+   "of": "woman",
+   "desc": "the tall woman in a sequined gown has a rigid posture",
+   "question": "Does the tall woman in a sequined gown have a rigid posture?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in a tweed cap is sitting",
+   "question": "Is the old man in a tweed cap sitting?"
+  },
+  {
+   "id": "man_slumped",
+   "type": "state",
+   "of": "man",
+   "desc": "the old man in a tweed cap has slumped shoulders",
+   "question": "Does the old man in a tweed cap have slumped shoulders?"
+  },
+  {
+   "id": "man_tying",
+   "type": "action",
+   "of": [
+    "man",
+    "boot"
+   ],
+   "desc": "the old man in a tweed cap ties the laces of the worn leather boot",
+   "question": "Is the old man in a tweed cap tying the laces of the worn leather boot?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat with white paws rests calmly",
+   "question": "Does the black cat with white paws rest calmly?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "relation",
+   "of": [
+    "boy",
+    "curtain"
+   ],
+   "desc": "the young boy in oversized suspenders points eagerly toward the heavy velvet curtain",
+   "question": "Is the young boy in oversized suspenders pointing eagerly toward the heavy velvet curtain?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the tall woman in a sequined gown stands next to the old man in a tweed cap",
+   "question": "Is the tall woman in a sequined gown standing next to the old man in a tweed cap?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate_man"
+   ],
+   "desc": "the old man in a tweed cap sits on the wooden crate",
+   "question": "Is the old man in a tweed cap sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_on_man",
+   "type": "relation",
+   "of": [
+    "cat",
+    "man"
+   ],
+   "desc": "the black cat with white paws rests on the knee of the old man in a tweed cap",
+   "question": "Is the black cat with white paws resting on the knee of the old man in a tweed cap?"
+  },
+  {
+   "id": "trumpet_beside_boy",
+   "type": "relation",
+   "of": [
+    "trumpet",
+    "boy"
+   ],
+   "desc": "the large brass trumpet lies beside the young boy in oversized suspenders",
+   "question": "Is the large brass trumpet lying beside the young boy in oversized suspenders?"
+  },
+  {
+   "id": "crates_behind_them",
+   "type": "relation",
+   "of": [
+    "crates_stack",
+    "man"
+   ],
+   "desc": "the stack of three wooden crates rises behind the old man in a tweed cap",
+   "question": "Is the stack of three wooden crates rising behind the old man in a tweed cap?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the tall woman in a sequined gown looks down at the old man in a tweed cap",
+   "question": "Is the tall woman in a sequined gown looking down at the old man in a tweed cap?"
+  },
+  {
+   "id": "no_mirror",
+   "type": "absent",
+   "desc": "a mirror",
+   "question": "Is there a mirror visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the tall woman in a sequined gown stands",
+   "question": "Is the tall woman in a sequined gown standing?"
+  },
+  {
+   "id": "boy_gesturing",
+   "type": "action",
+   "of": [
+    "boy",
+    "man"
+   ],
+   "desc": "the young boy in oversized suspenders gestures at the old man in a tweed cap",
+   "question": "Is the young boy in oversized suspenders gesturing at the old man in a tweed cap?"
+  },
+  {
+   "id": "curtain",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a heavy velvet curtain hanging partially open",
+   "question": "Is there a heavy velvet curtain hanging partially open?",
+   "box": [
+    750,
+    0,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "stage_light",
+   "type": "attribute",
+   "of": "curtain",
+   "desc": "bright stage light revealed by the curtain",
+   "question": "Is bright stage light revealed by the heavy velvet curtain?"
+  },
+  {
+   "id": "trumpet_dull",
+   "type": "attribute",
+   "of": "trumpet",
+   "desc": "the large brass trumpet has a dull unpolished surface",
+   "question": "Does the large brass trumpet have a dull unpolished surface?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat with white paws has narrowed eyes",
+   "question": "Does the black cat with white paws have narrowed eyes?"
+  },
+  {
+   "id": "cat_paws",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the black cat has white paws",
+   "question": "Does the black cat have white paws?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate_man",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "crates_stack",
+   "to": "curtain",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0031",
+ "prompt": "Rendered in a pencil sketch with light color wash, the scene captures a quiet moment backstage. On the left stands a tall woman in a sequined gown, her posture rigid as she holds a feathered fan loosely at her side. Next to her, near the center, sits an old man in a tweed cap on a wooden crate, his shoulders slumped in exhaustion while he ties the laces of a worn leather boot. A black cat with white paws rests calmly on the man's knee, watching the activity with narrowed eyes. To the right, a young boy in oversized suspenders points eagerly toward a heavy velvet curtain that hangs partially open, revealing a sliver of bright stage light. Beside the boy, a large brass trumpet lies on the floor, its surface dull and unpolished. Behind them, a stack of three wooden crates rises unevenly against the brick wall, serving as a makeshift shelf for various props. The woman in the sequined gown looks down at the old man, offering a silent nod of encouragement, while the boy continues to gesture at the curtain, seemingly urging the man to hurry. There is no mirror visible in the background, leaving the walls bare except for the rough texture of the bricks and the hanging curtain. The sketch lines are loose and expressive, capturing the hurried energy of the theater environment without cluttering the composition with unnecessary details or vibrant hues.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

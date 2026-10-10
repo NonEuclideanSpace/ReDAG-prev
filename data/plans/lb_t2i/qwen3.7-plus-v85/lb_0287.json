@@ -1,0 +1,494 @@
+{
+ "style": "surreal digital painting, dreamlike, high contrast, intricate details",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a surreal shoreline with ink-black water, twisting spiral cliffs, and a sky with a ringed sun",
+   "question": "Does the image depict a surreal shoreline with ink-black water?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "rowboat",
+   "type": "entity",
+   "class": "rowboat",
+   "plural": "rowboats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a warped rowboat half-buried in gravel",
+   "question": "Is there a warped rowboat?",
+   "box": [
+    100,
+    600,
+    500,
+    850
+   ]
+  },
+  {
+   "id": "oars",
+   "type": "entity",
+   "class": "oar",
+   "plural": "oars",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two splintered oars",
+   "question": "Are there two splintered oars?",
+   "box": [
+    150,
+    550,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "boulder",
+   "type": "entity",
+   "class": "boulder",
+   "plural": "boulders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moss-covered boulder",
+   "question": "Is there a moss-covered boulder?",
+   "box": [
+    520,
+    650,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "shell",
+   "type": "entity",
+   "class": "scallop shell",
+   "plural": "scallop shells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open scallop shell",
+   "question": "Is there an open scallop shell?",
+   "box": [
+    300,
+    850,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "crab",
+   "type": "entity",
+   "class": "crab",
+   "plural": "crabs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crab with gill-like wings",
+   "question": "Is there a crab with gill-like wings?",
+   "box": [
+    320,
+    780,
+    380,
+    840
+   ]
+  },
+  {
+   "id": "bird",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bird with feathers of liquid glass",
+   "question": "Is there a bird with feathers of liquid glass?",
+   "box": [
+    400,
+    100,
+    600,
+    300
+   ]
+  },
+  {
+   "id": "sun",
+   "type": "entity",
+   "class": "sun",
+   "plural": "suns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ring-shaped sun bisected and orbiting in opposite directions",
+   "question": "Is there a ring-shaped sun bisected and orbiting in opposite directions?",
+   "box": [
+    400,
+    50,
+    624,
+    200
+   ]
+  },
+  {
+   "id": "cliffs",
+   "type": "entity",
+   "class": "cliff",
+   "plural": "cliffs",
+   "count": 1,
+   "count_exact": false,
+   "desc": "twisting spiral cliffs",
+   "question": "Are there twisting spiral cliffs?",
+   "box": [
+    700,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "tide_pool",
+   "type": "entity",
+   "class": "tide pool",
+   "plural": "tide pools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tide pool reflecting the shell",
+   "question": "Is there a tide pool reflecting the shell?",
+   "box": [
+    250,
+    800,
+    500,
+    1024
+   ]
+  },
+  {
+   "id": "boat_gravel",
+   "type": "state",
+   "of": "rowboat",
+   "desc": "the rowboat is half-buried in the salt-encrusted gravel of the shore",
+   "question": "Is the rowboat half-buried in the salt-encrusted gravel of the shore?"
+  },
+  {
+   "id": "water_rising",
+   "type": "state",
+   "of": "rowboat",
+   "desc": "ink-black water rises from beneath the pebbles around the rowboat",
+   "question": "Is ink-black water rising from beneath the pebbles around the rowboat?"
+  },
+  {
+   "id": "oars_pulsing",
+   "type": "state",
+   "of": "oars",
+   "desc": "the oars have ends dissolving and reforming",
+   "question": "Do the oars have ends dissolving and reforming?"
+  },
+  {
+   "id": "boulder_tendrils",
+   "type": "state",
+   "of": "boulder",
+   "desc": "the green tendrils on the boulder are coiling",
+   "question": "Are the green tendrils on the boulder coiling?"
+  },
+  {
+   "id": "boulder_beside_oars",
+   "type": "relation",
+   "of": [
+    "boulder",
+    "oars"
+   ],
+   "desc": "the boulder is beside the oars",
+   "question": "Is the boulder beside the oars?"
+  },
+  {
+   "id": "shell_reflections",
+   "type": "action",
+   "of": [
+    "shell",
+    "tide_pool"
+   ],
+   "desc": "the shell casts fractured reflections onto the tide pool",
+   "question": "Is the shell casting fractured reflections onto the tide pool?"
+  },
+  {
+   "id": "crab_flying",
+   "type": "state",
+   "of": "crab",
+   "desc": "the crab is flying with rippling gill-like wings",
+   "question": "Is the crab flying with rippling gill-like wings?"
+  },
+  {
+   "id": "crab_carapace_reflecting",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the crab's carapace reflects the boat",
+   "question": "Does the crab's carapace reflect the boat?"
+  },
+  {
+   "id": "bird_hovering",
+   "type": "state",
+   "of": "bird",
+   "desc": "the bird is hovering overhead",
+   "question": "Is the bird hovering overhead?"
+  },
+  {
+   "id": "seaweed_dissolving",
+   "type": "action",
+   "of": [
+    "bird",
+    "tide_pool"
+   ],
+   "desc": "the seaweed trailing from the bird dissolves into the tide pool",
+   "question": "Does the seaweed trailing from the bird dissolve into the tide pool?"
+  },
+  {
+   "id": "vines_plugging",
+   "type": "relation",
+   "of": [
+    "rowboat",
+    "cliffs"
+   ],
+   "desc": "vine-cables run from the rowboat up into the cliffs and plug into rusted sockets",
+   "question": "Do vine-cables run from the rowboat up into the cliffs and plug into rusted sockets?"
+  },
+  {
+   "id": "horizon_door",
+   "type": "entity",
+   "class": "door",
+   "plural": "doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-open door at the horizon",
+   "question": "Is there a half-open door at the horizon?",
+   "box": [
+    0,
+    400,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "crab_landing",
+   "type": "state",
+   "of": "crab",
+   "desc": "the crab lands on its spindly legs",
+   "question": "Does the crab land on its spindly legs?"
+  },
+  {
+   "id": "ground_constellations",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the ground beneath the crab is a shifting map of constellations",
+   "question": "Is the ground beneath the crab a shifting map of constellations?"
+  },
+  {
+   "id": "gravel",
+   "type": "entity",
+   "class": "gravel",
+   "plural": "gravel",
+   "count": 1,
+   "count_exact": true,
+   "desc": "salt-encrusted gravel on the shore",
+   "question": "Is there salt-encrusted gravel on the shore?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "rowboat_gravel_relation",
+   "type": "relation",
+   "of": [
+    "rowboat",
+    "gravel"
+   ],
+   "desc": "the rowboat is half-buried in the gravel",
+   "question": "Is the rowboat half-buried in the gravel?"
+  },
+  {
+   "id": "sun_prismatic_waves",
+   "type": "attribute",
+   "of": "sun",
+   "desc": "the sun's light bends through prismatic waves",
+   "question": "Does the sun's light bend through prismatic waves?"
+  },
+  {
+   "id": "rocks_transforming",
+   "type": "state",
+   "of": "cliffs",
+   "desc": "the rocks turn momentarily into clocks, books, and faces that vanish",
+   "question": "Do the rocks turn momentarily into clocks, books, and faces that vanish?"
+  },
+  {
+   "id": "tide_seeping",
+   "type": "state",
+   "of": "cliffs",
+   "desc": "the black tide seeps into the cracks of the rocks",
+   "question": "Does the black tide seep into the cracks of the rocks?"
+  },
+  {
+   "id": "ground_map",
+   "type": "attribute",
+   "of": "gravel",
+   "desc": "the ground beneath the crab is a map of constellations with names",
+   "question": "Is the ground beneath the crab a map of constellations with names?"
+  },
+  {
+   "id": "crab_ground_relation",
+   "type": "relation",
+   "of": [
+    "crab",
+    "gravel"
+   ],
+   "desc": "the crab is above the shifting map of constellations",
+   "question": "Is the crab above the shifting map of constellations?"
+  },
+  {
+   "id": "rowboat_vines",
+   "type": "attribute",
+   "of": "rowboat",
+   "desc": "the rowboat is threaded with vines that are also cables",
+   "question": "Is the rowboat threaded with vines that are also cables?"
+  },
+  {
+   "id": "oars_fungi",
+   "type": "attribute",
+   "of": "oars",
+   "desc": "the oars are veined with luminescent fungi",
+   "question": "Are the oars veined with luminescent fungi?"
+  },
+  {
+   "id": "boulder_lattice",
+   "type": "attribute",
+   "of": "boulder",
+   "desc": "the boulder is covered in a living lattice of green tendrils",
+   "question": "Is the boulder covered in a living lattice of green tendrils?"
+  },
+  {
+   "id": "shell_glow",
+   "type": "attribute",
+   "of": "shell",
+   "desc": "the scallop shell glows with inner light",
+   "question": "Does the scallop shell glow with inner light?"
+  },
+  {
+   "id": "crab_carapace",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the crab's carapace is a mosaic of tiny mirrors",
+   "question": "Is the crab's carapace a mosaic of tiny mirrors?"
+  },
+  {
+   "id": "bird_seaweed",
+   "type": "attribute",
+   "of": "bird",
+   "desc": "the bird trails a long thread of seaweed",
+   "question": "Does the bird trail a long thread of seaweed?"
+  },
+  {
+   "id": "cliffs_sockets",
+   "type": "attribute",
+   "of": "cliffs",
+   "desc": "the cliffs have rusted sockets in the stone",
+   "question": "Do the cliffs have rusted sockets in the stone?"
+  },
+  {
+   "id": "tide_pool_sky_reflection",
+   "type": "attribute",
+   "of": "tide_pool",
+   "desc": "the tide pool reflects the sky",
+   "question": "Does the tide pool reflect the sky?"
+  },
+  {
+   "id": "boulder_tendrils_uncoiling",
+   "type": "state",
+   "of": "boulder",
+   "desc": "the green tendrils on the boulder are uncoiling",
+   "question": "Are the green tendrils on the boulder uncoiling?"
+  },
+  {
+   "id": "crab_carapace_reflects_sky",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the crab's carapace reflects the sky",
+   "question": "Does the crab's carapace reflect the sky?"
+  },
+  {
+   "id": "crab_carapace_reflects_cliffs",
+   "type": "attribute",
+   "of": "crab",
+   "desc": "the crab's carapace reflects the cliffs",
+   "question": "Does the crab's carapace reflect the cliffs?"
+  },
+  {
+   "id": "horizon_door_closed",
+   "type": "attribute",
+   "of": "horizon_door",
+   "desc": "the door at the horizon is half-closed",
+   "question": "Is the door at the horizon half-closed?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "rowboat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "boulder",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "shell",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cliffs",
+   "kind": "support"
+  },
+  {
+   "from": "gravel",
+   "to": "rowboat",
+   "kind": "support"
+  },
+  {
+   "from": "cliffs",
+   "to": "rowboat",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0287",
+ "prompt": "The rowboat, half-buried in the salt-encrusted gravel of the shore, groans as a tide of ink-black water rises from beneath the pebbles, its surface swirling with the ghostly images of drowned cities. The oars, splintered and veined with luminescent fungi, pulse faintly in time with the tides, their ends dissolving and reforming as if caught in an endless loop of birth and decay. Beside them, the moss-covered boulder is not merely moss but a living, breathing lattice of green tendrils that coil and uncoil, whispering to the wind in a language of clicks and whistles. The scallop shell, open and radiant, glows with an inner light, casting fractured reflections onto the tide pool below, where the crab is not scuttling but flying, propelled by delicate, gill-like wings that ripple with each stroke. Its carapace is a mosaic of tiny mirrors, reflecting the boat, the sky, and the surrounding cliffs, which twist upward into impossible spirals, defying gravity as if the world itself were unraveling at the seams. A bird with feathers of liquid glass hovers overhead, its form flickering between species—now a gull, now a heron, now something that never existed—trailing a long thread of seaweed that dangles into the tide pool, where it dissolves into the reflections of the shell and the sky. The sun is not a single point but a ring, bisected and orbiting in opposite directions, its light bending through prismatic waves that wash over the rocks, turning them momentarily into clocks, books, and faces that vanish before you can fully grasp them. The boat’s hull, warped and worn, is threaded with vines that are also cables, running from it up into the cliffs, where they plug into rusted sockets in the stone, like a machine feeding off the pulse of the earth. The tide, now black and thick as tar, seeps into the cracks of the rocks, bringing with it the sound of distant footsteps and a faint, rhythmic ticking. In the shallows, the crab lands again on its spindly legs, only to find the ground beneath it is no longer solid, but a shifting map of constellations that flicker with the names of drowned sailors and forgotten myths. Above, the sky ripples like the inside of a dream, and the horizon is a door—half-open, half-closed—through which the wind howls with voices that echo back the thoughts of those who look too long. Every object here is both itself and something else, and nothing is certain, yet everything fits together in a surreal, coherent symphony of transformation, light, and time.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 8,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 55,
+   "n_uncovered": 2,
+   "proposed": 2,
+   "ungrounded": 0,
+   "added": 2,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 15,
+   "new_nodes": 12,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 7,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

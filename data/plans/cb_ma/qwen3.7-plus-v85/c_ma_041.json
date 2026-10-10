@@ -1,0 +1,341 @@
+{
+ "style": "photorealistic, detailed, steampunk aesthetic",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for highlighting an alchemical device",
+   "question": "Is the background neutral and non-distracting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "device_base",
+   "type": "entity",
+   "class": "wooden base",
+   "plural": "wooden bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rough, splintered wooden base",
+   "question": "Is there a rough, splintered wooden base?",
+   "box": [
+    312,
+    700,
+    712,
+    950
+   ]
+  },
+  {
+   "id": "device_body",
+   "type": "entity",
+   "class": "alchemical device",
+   "plural": "alchemical devices",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a complex alchemical device made of dull brass with green patina spots",
+   "question": "Is there a complex alchemical device made of dull brass with green patina spots?",
+   "box": [
+    262,
+    200,
+    762,
+    750
+   ]
+  },
+  {
+   "id": "central_chamber",
+   "type": "entity",
+   "class": "spherical chamber",
+   "plural": "spherical chambers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a central spherical chamber",
+   "question": "Is there a central spherical chamber?",
+   "box": [
+    412,
+    350,
+    612,
+    550
+   ]
+  },
+  {
+   "id": "purple_liquid",
+   "type": "entity",
+   "class": "liquid",
+   "plural": "liquids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "fluorescent purple liquid",
+   "question": "Is there fluorescent purple liquid?",
+   "box": [
+    432,
+    370,
+    592,
+    530
+   ]
+  },
+  {
+   "id": "spiral_tubes",
+   "type": "entity",
+   "class": "spiral tube",
+   "plural": "spiral tubes",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three spiral glass tubes",
+   "question": "Are there exactly three spiral glass tubes?",
+   "box": [
+    300,
+    300,
+    724,
+    600
+   ]
+  },
+  {
+   "id": "pressure_gauges",
+   "type": "entity",
+   "class": "pressure gauge",
+   "plural": "pressure gauges",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five different pressure gauges",
+   "question": "Are there exactly five different pressure gauges?",
+   "box": [
+    280,
+    250,
+    744,
+    650
+   ]
+  },
+  {
+   "id": "manual",
+   "type": "entity",
+   "class": "manual",
+   "plural": "manuals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single, torn, leather-bound manual",
+   "question": "Is there a single, torn, leather-bound manual?",
+   "box": [
+    150,
+    400,
+    280,
+    600
+   ]
+  },
+  {
+   "id": "gas_lamp",
+   "type": "entity",
+   "class": "gas lamp",
+   "plural": "gas lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single attached gas lamp",
+   "question": "Is there a single attached gas lamp?",
+   "box": [
+    750,
+    300,
+    850,
+    500
+   ]
+  },
+  {
+   "id": "device_steaming",
+   "type": "state",
+   "of": "device_body",
+   "desc": "the alchemical device is actively steaming",
+   "question": "Is the alchemical device actively steaming?"
+  },
+  {
+   "id": "device_old_looking",
+   "type": "attribute",
+   "of": "device_body",
+   "desc": "the alchemical device looks old",
+   "question": "Does the alchemical device look old?"
+  },
+  {
+   "id": "liquid_bubbling",
+   "type": "state",
+   "of": "purple_liquid",
+   "desc": "the purple liquid is bubbling",
+   "question": "Is the purple liquid bubbling?"
+  },
+  {
+   "id": "lamp_glowing",
+   "type": "state",
+   "of": "gas_lamp",
+   "desc": "the gas lamp is glowing",
+   "question": "Is the gas lamp glowing?"
+  },
+  {
+   "id": "gauges_readings",
+   "type": "attribute",
+   "of": "pressure_gauges",
+   "desc": "the five pressure gauges show different readings",
+   "question": "Do the five pressure gauges show different readings?"
+  },
+  {
+   "id": "tubes_connect",
+   "type": "relation",
+   "of": [
+    "spiral_tubes",
+    "central_chamber"
+   ],
+   "desc": "the three spiral glass tubes connect to the central spherical chamber",
+   "question": "Do the three spiral glass tubes connect to the central spherical chamber?"
+  },
+  {
+   "id": "chamber_on_device",
+   "type": "relation",
+   "of": [
+    "central_chamber",
+    "device_body"
+   ],
+   "desc": "the central spherical chamber is part of the alchemical device",
+   "question": "Is the central spherical chamber part of the alchemical device?"
+  },
+  {
+   "id": "liquid_in_chamber",
+   "type": "relation",
+   "of": [
+    "purple_liquid",
+    "central_chamber"
+   ],
+   "desc": "the purple liquid is inside the central spherical chamber",
+   "question": "Is the purple liquid inside the central spherical chamber?"
+  },
+  {
+   "id": "device_on_base",
+   "type": "relation",
+   "of": [
+    "device_body",
+    "device_base"
+   ],
+   "desc": "the alchemical device rests on the wooden base",
+   "question": "Does the alchemical device rest on the wooden base?"
+  },
+  {
+   "id": "gauges_attached",
+   "type": "relation",
+   "of": [
+    "pressure_gauges",
+    "device_body"
+   ],
+   "desc": "the five pressure gauges are attached to the alchemical device",
+   "question": "Are the five pressure gauges attached to the alchemical device?"
+  },
+  {
+   "id": "manual_attached",
+   "type": "relation",
+   "of": [
+    "manual",
+    "device_body"
+   ],
+   "desc": "the torn leather-bound manual is attached by a chain to the alchemical device",
+   "question": "Is the torn leather-bound manual attached by a chain to the alchemical device?"
+  },
+  {
+   "id": "lamp_attached",
+   "type": "relation",
+   "of": [
+    "gas_lamp",
+    "device_body"
+   ],
+   "desc": "the gas lamp is attached to the alchemical device",
+   "question": "Is the gas lamp attached to the alchemical device?"
+  },
+  {
+   "id": "no_modern",
+   "type": "absent",
+   "desc": "modern design elements",
+   "question": "Are there any modern design elements in the image?"
+  },
+  {
+   "id": "no_polished",
+   "type": "absent",
+   "desc": "polished metal parts",
+   "question": "Are there any polished metal parts in the image?"
+  },
+  {
+   "id": "no_digital",
+   "type": "absent",
+   "desc": "digital displays",
+   "question": "Are there any digital displays in the image?"
+  },
+  {
+   "id": "no_red_liquid",
+   "type": "absent",
+   "desc": "red liquid",
+   "question": "Is there any red liquid in the image?"
+  },
+  {
+   "id": "no_stone_base",
+   "type": "absent",
+   "desc": "stone base",
+   "question": "Is the base made of stone?"
+  },
+  {
+   "id": "liquid_glowing",
+   "type": "state",
+   "of": "purple_liquid",
+   "desc": "the purple liquid is glowing",
+   "question": "Is the purple liquid glowing?"
+  },
+  {
+   "id": "chamber_cracked",
+   "type": "attribute",
+   "of": "central_chamber",
+   "desc": "the central spherical chamber is made of cracked glass",
+   "question": "Is the central spherical chamber made of cracked glass?"
+  },
+  {
+   "id": "base_feet",
+   "type": "attribute",
+   "of": "device_base",
+   "desc": "the wooden base has four carved claw-like feet",
+   "question": "Does the wooden base have four carved claw-like feet?"
+  },
+  {
+   "id": "manual_chain",
+   "type": "attribute",
+   "of": "manual",
+   "desc": "the manual is attached by a chain",
+   "question": "Is the manual attached by a chain?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "device_base",
+   "to": "device_body",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_041",
+ "prompt": "A single, complex, old-looking alchemical device, actively steaming. Its main body is made of dull brass with visible green patina spots. A central spherical chamber, made of cracked glass, contains a glowing, bubbling, fluorescent purple liquid. Exactly three spiral glass tubes connect to this chamber. The entire apparatus rests on a rough, splintered wooden base that has four carved claw-like feet. Five different pressure gauges are attached, and all of them show different readings. A single, torn, leather-bound manual is attached by a chain. A single, attached gas lamp is glowing, casting a dim light. Importantly, the device is not modern, its metal parts are not polished, it has no digital displays, the liquid inside is not red, and the base is not made of stone.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

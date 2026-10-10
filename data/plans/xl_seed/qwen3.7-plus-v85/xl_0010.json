@@ -1,0 +1,530 @@
+{
+ "style": "vibrant anime illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered bicycle repair shop interior with a concrete floor, a back wall and a window in the upper right",
+   "question": "Does the image show a cluttered bicycle repair shop interior with a concrete floor, a back wall and a window in the upper right?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young mechanic with spiky blue hair",
+   "question": "Is there a young mechanic?",
+   "box": [
+    380,
+    200,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man with glasses",
+   "question": "Is there an elderly man?",
+   "box": [
+    50,
+    250,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "mountain_bike",
+   "type": "entity",
+   "class": "mountain bike",
+   "plural": "mountain bikes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red mountain bike",
+   "question": "Is there a red mountain bike?",
+   "box": [
+    100,
+    400,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small black cat",
+   "question": "Is there a small black cat?",
+   "box": [
+    700,
+    500,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden workbench",
+   "question": "Is there a wooden workbench?",
+   "box": [
+    650,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "rack",
+   "plural": "racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall rack",
+   "question": "Is there a tall rack?",
+   "box": [
+    300,
+    100,
+    500,
+    600
+   ]
+  },
+  {
+   "id": "helmets",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three colorful helmets",
+   "question": "Are there three colorful helmets?",
+   "box": [
+    320,
+    120,
+    480,
+    250
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a striped shirt",
+   "question": "Is there a child in a striped shirt?",
+   "box": [
+    150,
+    700,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "tricycle",
+   "type": "entity",
+   "class": "tricycle",
+   "plural": "tricycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny tricycle",
+   "question": "Is there a tiny tricycle?",
+   "box": [
+    200,
+    800,
+    400,
+    980
+   ]
+  },
+  {
+   "id": "tires",
+   "type": "entity",
+   "class": "tire",
+   "plural": "tires",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of spare tires",
+   "question": "Is there a stack of spare tires?",
+   "box": [
+    50,
+    850,
+    200,
+    980
+   ]
+  },
+  {
+   "id": "assistant",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with pink pigtails",
+   "question": "Is there a girl?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal table",
+   "question": "Is there a metal table?",
+   "box": [
+    0,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "mechanic_wrench",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the young mechanic holds a silver wrench tightly",
+   "question": "Is the young mechanic holding a silver wrench tightly?"
+  },
+  {
+   "id": "man_expression",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man has a concerned expression",
+   "question": "Does the elderly man have a concerned expression?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man is leaning",
+   "question": "Is the elderly man leaning?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is sitting",
+   "question": "Is the small black cat sitting?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small black cat is watching intently",
+   "question": "Is the small black cat watching intently?"
+  },
+  {
+   "id": "cat_batting",
+   "type": "action",
+   "of": [
+    "cat",
+    "chain_link"
+   ],
+   "desc": "the small black cat bats at a hanging chain link",
+   "question": "Is the small black cat batting at a hanging chain link?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "elderly_man",
+    "mountain_bike"
+   ],
+   "desc": "the elderly man points at the rear derailleur of the red mountain bike",
+   "question": "Is the elderly man pointing at the rear derailleur of the red mountain bike?"
+  },
+  {
+   "id": "child_pushing",
+   "type": "action",
+   "of": [
+    "child",
+    "tricycle"
+   ],
+   "desc": "the child pushes the tiny tricycle",
+   "question": "Is the child pushing the tiny tricycle?"
+  },
+  {
+   "id": "assistant_handing",
+   "type": "action",
+   "of": [
+    "assistant",
+    "mechanic"
+   ],
+   "desc": "the girl with pink pigtails hands a grease tube to the young mechanic",
+   "question": "Is the girl with pink pigtails handing a grease tube to the young mechanic?"
+  },
+  {
+   "id": "man_left_mechanic",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "mechanic"
+   ],
+   "desc": "the elderly man is to the left of the young mechanic",
+   "question": "Is the elderly man to the left of the young mechanic?"
+  },
+  {
+   "id": "man_on_bike",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "mountain_bike"
+   ],
+   "desc": "the elderly man leans on the red mountain bike",
+   "question": "Is the elderly man leaning on the red mountain bike?"
+  },
+  {
+   "id": "cat_on_workbench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "workbench"
+   ],
+   "desc": "the small black cat sits on the wooden workbench",
+   "question": "Is the small black cat sitting on the wooden workbench?"
+  },
+  {
+   "id": "workbench_right",
+   "type": "relation",
+   "of": [
+    "workbench",
+    "mechanic"
+   ],
+   "desc": "the wooden workbench is to the right of the young mechanic",
+   "question": "Is the wooden workbench to the right of the young mechanic?"
+  },
+  {
+   "id": "helmets_on_rack",
+   "type": "relation",
+   "of": [
+    "helmets",
+    "rack"
+   ],
+   "desc": "the three colorful helmets are on the tall rack",
+   "question": "Are the three colorful helmets on the tall rack?"
+  },
+  {
+   "id": "rack_behind_mechanic",
+   "type": "relation",
+   "of": [
+    "rack",
+    "mechanic"
+   ],
+   "desc": "the tall rack is behind the young mechanic",
+   "question": "Is the tall rack behind the young mechanic?"
+  },
+  {
+   "id": "tricycle_near_tires",
+   "type": "relation",
+   "of": [
+    "tricycle",
+    "tires"
+   ],
+   "desc": "the tiny tricycle is near the stack of spare tires",
+   "question": "Is the tiny tricycle near the stack of spare tires?"
+  },
+  {
+   "id": "items_on_table",
+   "type": "relation",
+   "of": [
+    "screws_bolts_patches",
+    "table"
+   ],
+   "desc": "various screws, bolts, and rubber patches scatter across the metal table",
+   "question": "Do various screws, bolts, and rubber patches scatter across the metal table?"
+  },
+  {
+   "id": "chain_link",
+   "type": "entity",
+   "class": "chain link",
+   "plural": "chain links",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging chain link",
+   "question": "Is there a hanging chain link?",
+   "box": [
+    750,
+    400,
+    850,
+    550
+   ]
+  },
+  {
+   "id": "screws_bolts_patches",
+   "type": "entity",
+   "class": "small parts",
+   "plural": "small parts",
+   "count": 2,
+   "count_exact": false,
+   "desc": "various screws, bolts, and rubber patches",
+   "question": "Are there various screws, bolts, and rubber patches?",
+   "box": [
+    100,
+    850,
+    900,
+    1000
+   ]
+  },
+  {
+   "id": "mechanic_standing",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the young mechanic is standing",
+   "question": "Is the young mechanic standing?"
+  },
+  {
+   "id": "man_pointing_derailleur",
+   "type": "action",
+   "of": [
+    "elderly_man",
+    "mountain_bike"
+   ],
+   "desc": "the elderly man with glasses points at the rear derailleur of the red mountain bike",
+   "question": "Is the elderly man with glasses pointing at the rear derailleur of the red mountain bike?"
+  },
+  {
+   "id": "poster",
+   "type": "entity",
+   "class": "poster",
+   "plural": "posters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large poster of a racing cyclist",
+   "question": "Is there a large poster of a racing cyclist?",
+   "box": [
+    300,
+    50,
+    700,
+    400
+   ]
+  },
+  {
+   "id": "hanging_tools",
+   "type": "entity",
+   "class": "tools",
+   "plural": "tools",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hanging tools",
+   "question": "Are there hanging tools?",
+   "box": [
+    200,
+    100,
+    800,
+    500
+   ]
+  },
+  {
+   "id": "helmet_yellow",
+   "type": "attribute",
+   "of": "helmets",
+   "desc": "one helmet is yellow",
+   "question": "Is one of the three helmets yellow?"
+  },
+  {
+   "id": "helmet_green",
+   "type": "attribute",
+   "of": "helmets",
+   "desc": "one helmet is green",
+   "question": "Is one of the three helmets green?"
+  },
+  {
+   "id": "helmet_purple",
+   "type": "attribute",
+   "of": "helmets",
+   "desc": "one helmet is purple",
+   "question": "Is one of the three helmets purple?"
+  },
+  {
+   "id": "mechanic_hair",
+   "type": "attribute",
+   "of": "mechanic",
+   "desc": "the young mechanic has spiky blue hair",
+   "question": "Does the young mechanic have spiky blue hair?"
+  },
+  {
+   "id": "man_glasses",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man wears glasses",
+   "question": "Does the elderly man wear glasses?"
+  },
+  {
+   "id": "assistant_pigtails",
+   "type": "attribute",
+   "of": "assistant",
+   "desc": "the girl has pink pigtails",
+   "question": "Does the girl have pink pigtails?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "rack",
+   "to": "helmets",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "screws_bolts_patches",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0010",
+ "prompt": "In a cluttered bicycle repair shop rendered in vibrant anime illustration style, a young mechanic with spiky blue hair stands center foreground holding a silver wrench tightly. To her left, an elderly man with glasses leans on a red mountain bike, pointing at the rear derailleur with a concerned expression. A small black cat sits on a wooden workbench to the right, watching intently while batting at a hanging chain link. Behind the mechanic, a tall rack holds three colorful helmets: yellow, green, and purple. On the floor near the entrance, a child in a striped shirt pushes a tiny tricycle toward a stack of spare tires. A large poster of a racing cyclist hangs on the back wall, partially obscured by hanging tools. The mechanic’s assistant, a girl with pink pigtails, hands a grease tube to the main character from the left side. Sunlight streams through a dusty window on the upper right, illuminating floating dust particles and casting sharp shadows across the concrete floor. Various screws, bolts, and rubber patches scatter across the metal table in the immediate foreground. The scene captures a moment of collaborative problem-solving amidst organized chaos, with dynamic lines emphasizing movement and emotion in typical anime fashion.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

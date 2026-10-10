@@ -1,0 +1,443 @@
+{
+ "style": "cinematic film still, soft morning light, misty atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market at dawn with mist clinging to cobblestones",
+   "question": "Does the image show a quiet village market at dawn with mist on cobblestones?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral apron",
+   "question": "Is there an elderly woman wearing a floral apron?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "wooden_cart",
+   "type": "entity",
+   "class": "cart",
+   "plural": "carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cart",
+   "question": "Is there a wooden cart?",
+   "box": [
+    20,
+    500,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a blue cap",
+   "question": "Is there a young boy wearing a blue cap?",
+   "box": [
+    300,
+    450,
+    500,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "baskets",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of woven baskets",
+   "question": "Is there a stack of woven baskets?",
+   "box": [
+    700,
+    650,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vendor in a green vest",
+   "question": "Is there a man wearing a green vest?",
+   "box": [
+    400,
+    350,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "herbs",
+   "type": "entity",
+   "class": "herb",
+   "plural": "herbs",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a cluster of fresh herbs",
+   "question": "Is there a cluster of fresh herbs?",
+   "box": [
+    550,
+    700,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low table",
+   "question": "Is there a low table?",
+   "box": [
+    500,
+    750,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a grey coat",
+   "question": "Is there a person wearing a grey coat?",
+   "box": [
+    450,
+    250,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    100,
+    200,
+    250,
+    400
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crate",
+   "question": "Is there a crate?",
+   "box": [
+    80,
+    300,
+    220,
+    450
+   ]
+  },
+  {
+   "id": "woman_bag",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman holds a small paper bag",
+   "question": "Is the elderly woman holding a small paper bag?"
+  },
+  {
+   "id": "boy_eyes",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy has wide eyes",
+   "question": "Does the young boy have wide eyes?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "vendor_leaning",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the vendor is leaning forward",
+   "question": "Is the vendor leaning forward?"
+  },
+  {
+   "id": "customer_holding_tote",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the customer holds a reusable canvas tote",
+   "question": "Is the customer holding a reusable canvas tote?"
+  },
+  {
+   "id": "woman_beside_cart",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "wooden_cart"
+   ],
+   "desc": "the elderly woman stands beside the wooden cart",
+   "question": "Is the elderly woman standing beside the wooden cart?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "boy"
+   ],
+   "desc": "the elderly woman hands the paper bag to the young boy",
+   "question": "Is the elderly woman handing a paper bag to the young boy?"
+  },
+  {
+   "id": "boy_in_front_of_woman",
+   "type": "relation",
+   "of": [
+    "boy",
+    "elderly_woman"
+   ],
+   "desc": "the young boy stands directly in front of the elderly woman",
+   "question": "Is the young boy standing directly in front of the elderly woman?"
+  },
+  {
+   "id": "dog_next_to_baskets",
+   "type": "relation",
+   "of": [
+    "dog",
+    "baskets"
+   ],
+   "desc": "the brown dog sits next to the stack of woven baskets",
+   "question": "Is the brown dog sitting next to the stack of woven baskets?"
+  },
+  {
+   "id": "vendor_pointing_at_herbs",
+   "type": "action",
+   "of": [
+    "vendor",
+    "herbs"
+   ],
+   "desc": "the vendor points toward the cluster of fresh herbs",
+   "question": "Is the vendor pointing toward the cluster of fresh herbs?"
+  },
+  {
+   "id": "herbs_on_table",
+   "type": "relation",
+   "of": [
+    "herbs",
+    "table"
+   ],
+   "desc": "the herbs are displayed on the low table",
+   "question": "Are the herbs displayed on the low table?"
+  },
+  {
+   "id": "customer_behind_vendor",
+   "type": "relation",
+   "of": [
+    "customer",
+    "vendor"
+   ],
+   "desc": "the customer is behind the vendor",
+   "question": "Is the customer positioned behind the vendor?"
+  },
+  {
+   "id": "customer_looking_at_herbs",
+   "type": "action",
+   "of": [
+    "customer",
+    "herbs"
+   ],
+   "desc": "the customer looks at the herbs",
+   "question": "Is the customer looking at the herbs?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat perches atop the crate of apples",
+   "question": "Is the black cat perched atop the crate of apples?"
+  },
+  {
+   "id": "no_signage",
+   "type": "absent",
+   "desc": "modern signage",
+   "question": "Is there any modern signage visible in the image?"
+  },
+  {
+   "id": "elderly_woman_standing",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral apron is standing",
+   "question": "Is the elderly woman in a floral apron standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a blue cap is standing",
+   "question": "Is the young boy in a blue cap standing?"
+  },
+  {
+   "id": "pumpkins",
+   "type": "entity",
+   "class": "pumpkin",
+   "plural": "pumpkins",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright orange pumpkins",
+   "question": "Are there bright orange pumpkins?",
+   "box": [
+    60,
+    350,
+    340,
+    600
+   ]
+  },
+  {
+   "id": "cart_piled",
+   "type": "relation",
+   "of": [
+    "pumpkins",
+    "wooden_cart"
+   ],
+   "desc": "the pumpkins are piled high on the wooden cart",
+   "question": "Are the pumpkins piled high on the wooden cart?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "apples",
+   "question": "Are there apples?",
+   "box": [
+    110,
+    680,
+    240,
+    850
+   ]
+  },
+  {
+   "id": "crate_contains",
+   "type": "relation",
+   "of": [
+    "apples",
+    "crate"
+   ],
+   "desc": "the apples are in the crate",
+   "question": "Are the apples in the crate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wooden_cart",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "herbs",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "wooden_cart",
+   "to": "pumpkins",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "apples",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0094",
+ "prompt": "In the style of a cinematic film still, the scene captures a quiet village market at dawn where mist clings to the cobblestones. On the left, an elderly woman in a floral apron stands beside a wooden cart piled high with bright orange pumpkins. She is handing a small paper bag to a young boy in a blue cap who stands directly in front of her, his eyes wide with anticipation. To the right, a stray brown dog sits patiently next to a stack of woven baskets, its tail thumping softly against the ground. In the center, a vendor in a green vest leans forward, pointing toward a cluster of fresh herbs displayed on a low table. Behind him, a customer in a grey coat looks at the herbs with keen interest, holding a reusable canvas tote. Further back on the left, a black cat perches atop a crate of apples, watching the exchange with detached curiosity. The soft morning light filters through the haze, illuminating the dust motes dancing in the air. There is no modern signage visible in the background, preserving the timeless atmosphere of the rural setting. The interaction between the woman and the boy forms the emotional core, while the vendor and customer engage in a silent negotiation of quality. The dog remains a steady presence amidst the early morning activity, grounding the scene in everyday reality. Each figure is distinct, from the texture of the apron to the brim of the cap, creating a rich tapestry of rural life captured in a single frozen moment of clarity and calm.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

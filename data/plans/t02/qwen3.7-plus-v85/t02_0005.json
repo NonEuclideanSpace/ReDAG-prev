@@ -1,0 +1,154 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with short blue hair",
+   "question": "Is there a girl?",
+   "box": [
+    100,
+    300,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing round glasses",
+   "question": "Is there a boy wearing round glasses?",
+   "box": [
+    624,
+    250,
+    924,
+    850
+   ]
+  },
+  {
+   "id": "book",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with short blue hair holds an open book",
+   "question": "Is the girl with short blue hair holding an open book?"
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with short blue hair sits on the left side of a wooden table",
+   "question": "Is the girl sitting?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing round glasses is standing",
+   "question": "Is the boy wearing round glasses standing?"
+  },
+  {
+   "id": "girl_left_table",
+   "type": "relation",
+   "of": [
+    "girl",
+    "table"
+   ],
+   "desc": "the girl with short blue hair is on the left side of the wooden table",
+   "question": "Is the girl with short blue hair on the left side of the wooden table?"
+  },
+  {
+   "id": "boy_right_table",
+   "type": "relation",
+   "of": [
+    "boy",
+    "table"
+   ],
+   "desc": "the boy wearing round glasses is on the right side of the wooden table",
+   "question": "Is the boy wearing round glasses on the right side of the wooden table?"
+  },
+  {
+   "id": "girl_looking_boy",
+   "type": "action",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with short blue hair looks directly at the boy wearing round glasses",
+   "question": "Is the girl with short blue hair looking directly at the boy wearing round glasses?"
+  },
+  {
+   "id": "no_computer",
+   "type": "absent",
+   "desc": "a computer",
+   "question": "Is there a computer visible in the image?"
+  },
+  {
+   "id": "girl_hair",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl has short blue hair",
+   "question": "Does the girl have short blue hair?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0005",
+ "prompt": "In an anime style library reading room, a girl with short blue hair sits on the left side of a wooden table. A boy wearing round glasses stands on the right side of the same table. The girl holds an open book in her hands. She is looking directly at the boy. There is no computer visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

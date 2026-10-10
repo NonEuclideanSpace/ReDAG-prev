@@ -1,0 +1,192 @@
+{
+ "style": "photorealistic photo, warm ambient light, serene atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet library reading room",
+   "question": "Does the image show a quiet library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "wooden table",
+   "plural": "wooden tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    50,
+    200,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "young_man",
+   "type": "entity",
+   "class": "young man",
+   "plural": "young men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in a blue sweater",
+   "question": "Is there a young man in a blue sweater?",
+   "box": [
+    600,
+    220,
+    900,
+    720
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "open book",
+   "plural": "open books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    400,
+    600,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman with silver hair is sitting",
+   "question": "Is the elderly woman with silver hair sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in a blue sweater is leaning forward slightly",
+   "question": "Is the young man in a blue sweater leaning forward slightly?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "young_man",
+    "book"
+   ],
+   "desc": "the young man in a blue sweater is pointing at the open book",
+   "question": "Is the young man in a blue sweater pointing at the open book?"
+  },
+  {
+   "id": "book_on_table",
+   "type": "relation",
+   "of": [
+    "book",
+    "table"
+   ],
+   "desc": "the open book is lying on the wooden table",
+   "question": "Is the open book lying on the wooden table?"
+  },
+  {
+   "id": "woman_at_table",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "table"
+   ],
+   "desc": "the elderly woman with silver hair is at the wooden table",
+   "question": "Is the elderly woman with silver hair at the wooden table?"
+  },
+  {
+   "id": "man_at_table",
+   "type": "relation",
+   "of": [
+    "young_man",
+    "table"
+   ],
+   "desc": "the young man in a blue sweater is at the wooden table",
+   "question": "Is the young man in a blue sweater at the wooden table?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "electronic devices",
+   "question": "Are there any electronic devices visible in the image?"
+  },
+  {
+   "id": "book_between",
+   "type": "relation",
+   "of": [
+    "book",
+    "elderly_woman",
+    "young_man"
+   ],
+   "desc": "the open book is between the elderly woman and the young man",
+   "question": "Is the open book positioned between the elderly woman and the young man?"
+  },
+  {
+   "id": "elderly_woman_hair",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "silver hair",
+   "question": "Does the elderly woman have silver hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "book",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0067",
+ "prompt": "A photorealistic photo captures a quiet library reading room. On the left, an elderly woman with silver hair sits calmly at a wooden table. In the center, a young man in a blue sweater leans forward slightly. The young man is pointing at an open book lying on the table between them. There is no electronic device visible in the scene. The warm ambient light highlights the texture of the pages and the fabric of their clothes, creating a serene atmosphere focused entirely on the shared study material and the subtle gesture of guidance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,210 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a stage setting",
+   "question": "Does the image show a stage setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table in the image?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    150,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    674,
+    150,
+    974,
+    800
+   ]
+  },
+  {
+   "id": "cake",
+   "type": "entity",
+   "class": "tiered cake",
+   "plural": "tiered cakes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a white tiered cake",
+   "question": "Is there a white tiered cake?",
+   "box": [
+    412,
+    500,
+    612,
+    750
+   ]
+  },
+  {
+   "id": "flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a champagne flute",
+   "question": "Is the woman in a blue dress holding a champagne flute?"
+  },
+  {
+   "id": "gift_box",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a small gift box",
+   "question": "Is the woman in a blue dress holding a small gift box?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  },
+  {
+   "id": "woman_smiling",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is smiling gently",
+   "question": "Is the woman in a blue dress smiling gently?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is sitting",
+   "question": "Is the man in a black tuxedo sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is leaning forward slightly",
+   "question": "Is the man in a black tuxedo leaning forward slightly?"
+  },
+  {
+   "id": "man_looking",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black tuxedo looks at the woman in a blue dress",
+   "question": "Is the man in a black tuxedo looking at the woman in a blue dress?"
+  },
+  {
+   "id": "handing_gift",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress hands a small gift box to the man in a black tuxedo",
+   "question": "Is the woman in a blue dress handing a small gift box to the man in a black tuxedo?"
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake",
+    "table"
+   ],
+   "desc": "the white tiered cake rests on the table",
+   "question": "Does the white tiered cake rest on the table?"
+  },
+  {
+   "id": "woman_left_of_cake",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cake"
+   ],
+   "desc": "the woman in a blue dress is to the left of the white tiered cake",
+   "question": "Is the woman in a blue dress to the left of the white tiered cake?"
+  },
+  {
+   "id": "man_right_of_cake",
+   "type": "relation",
+   "of": [
+    "man",
+    "cake"
+   ],
+   "desc": "the man in a black tuxedo is to the right of the white tiered cake",
+   "question": "Is the man in a black tuxedo to the right of the white tiered cake?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "cake",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0022",
+ "prompt": "In a photorealistic photo, a woman in a blue dress stands on the left holding a champagne flute. A man in a black tuxedo sits on the right looking at her. Between them, center stage, rests a white tiered cake. The woman is smiling gently while the man leans forward slightly. She is handing a small gift box to him across the table. There is no confetti in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

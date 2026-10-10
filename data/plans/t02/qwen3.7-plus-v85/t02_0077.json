@@ -1,0 +1,162 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet airport gate area",
+   "question": "Does the image depict a quiet airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    100,
+    300,
+    400,
+    850
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "suitcase",
+   "plural": "suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver suitcase",
+   "question": "Is there a silver suitcase?",
+   "box": [
+    480,
+    550,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is sitting",
+   "question": "Is the woman in the blue coat sitting?"
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat has a relaxed posture",
+   "question": "Does the woman in the blue coat have a relaxed posture?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman",
+    "suitcase"
+   ],
+   "desc": "the woman in the blue coat is looking at the silver suitcase",
+   "question": "Is the woman in the blue coat looking at the silver suitcase?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in the blue coat sits on the metal bench",
+   "question": "Is the woman in the blue coat sitting on the metal bench?"
+  },
+  {
+   "id": "suitcase_next_to_woman",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "woman"
+   ],
+   "desc": "the silver suitcase is next to the woman in the blue coat",
+   "question": "Is the silver suitcase next to the woman in the blue coat?"
+  },
+  {
+   "id": "no_crowd",
+   "type": "absent",
+   "desc": "a crowd in the background",
+   "question": "Is there a crowd in the background?"
+  },
+  {
+   "id": "suitcase_standing",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the silver suitcase stands upright",
+   "question": "Is the silver suitcase standing upright?"
+  },
+  {
+   "id": "suitcase_handle",
+   "type": "state",
+   "of": "suitcase",
+   "desc": "the silver suitcase has its handle extended",
+   "question": "Is the handle of the silver suitcase extended?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0077",
+ "prompt": "A pencil sketch with light color wash depicts a quiet airport gate. On the left, a woman in a blue coat sits on a metal bench, her posture relaxed as she waits. In the center, a silver suitcase stands upright next to her, its handle extended. The woman is looking at the silver suitcase, creating a moment of stillness before departure. There is no crowd in the background, keeping the focus entirely on these two elements. The soft wash adds a gentle tone to the graphite lines, highlighting the texture of the coat and the metallic sheen of the luggage without distracting from the simple composition.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

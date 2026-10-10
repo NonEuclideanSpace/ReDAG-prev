@@ -1,0 +1,280 @@
+{
+ "style": "watercolor illustration, soft washes, no sharp lines",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage scene with an industrial setting",
+   "question": "Does the image depict a quiet theatre backstage scene with an industrial setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    50,
+    600,
+    250,
+    850
+   ]
+  },
+  {
+   "id": "woman_blue",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    80,
+    350,
+    280,
+    750
+   ]
+  },
+  {
+   "id": "man_black",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a black suit",
+   "question": "Is there a tall man in a black suit?",
+   "box": [
+    300,
+    200,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large potted fern",
+   "question": "Is there a large potted fern?",
+   "box": [
+    450,
+    400,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "costume rack",
+   "plural": "costume racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging costume rack",
+   "question": "Is there a hanging costume rack?",
+   "box": [
+    750,
+    300,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow shirt",
+   "question": "Is there a young boy in a yellow shirt?",
+   "box": [
+    680,
+    450,
+    820,
+    850
+   ]
+  },
+  {
+   "id": "woman_gray",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older woman in a gray cardigan",
+   "question": "Is there an older woman in a gray cardigan?",
+   "box": [
+    830,
+    450,
+    970,
+    850
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in the blue dress is sitting",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "woman_blue",
+   "desc": "the woman in the blue dress has a relaxed posture",
+   "question": "Does the woman in the blue dress have a relaxed posture?"
+  },
+  {
+   "id": "man_holding_script",
+   "type": "attribute",
+   "of": "man_black",
+   "desc": "the tall man in the black suit holds a script loosely in one hand",
+   "question": "Is the tall man in the black suit holding a script loosely in one hand?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "rack"
+   ],
+   "desc": "the young boy in the yellow shirt points toward the hanging costume rack",
+   "question": "Is the young boy in the yellow shirt pointing toward the hanging costume rack?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "action",
+   "of": [
+    "woman_gray",
+    "rack"
+   ],
+   "desc": "the older woman in the gray cardigan looks at the costumes on the rack",
+   "question": "Is the older woman in the gray cardigan looking at the costumes on the rack?"
+  },
+  {
+   "id": "man_handing_sword",
+   "type": "action",
+   "of": [
+    "man_black",
+    "woman_blue"
+   ],
+   "desc": "the tall man in the black suit hands a small prop sword to the woman in the blue dress",
+   "question": "Is the tall man in the black suit handing a small prop sword to the woman in the blue dress?"
+  },
+  {
+   "id": "woman_on_crate",
+   "type": "relation",
+   "of": [
+    "woman_blue",
+    "crate"
+   ],
+   "desc": "the woman in the blue dress sits on the wooden crate",
+   "question": "Is the woman in the blue dress sitting on the wooden crate?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_black",
+    "woman_blue"
+   ],
+   "desc": "the tall man in the black suit stands next to the woman in the blue dress",
+   "question": "Is the tall man in the black suit standing next to the woman in the blue dress?"
+  },
+  {
+   "id": "rack_right_of_fern",
+   "type": "relation",
+   "of": [
+    "rack",
+    "fern"
+   ],
+   "desc": "the hanging costume rack is to the right of the large potted fern",
+   "question": "Is the hanging costume rack to the right of the large potted fern?"
+  },
+  {
+   "id": "woman_beside_boy",
+   "type": "relation",
+   "of": [
+    "woman_gray",
+    "boy"
+   ],
+   "desc": "the older woman in the gray cardigan stands beside the young boy",
+   "question": "Is the older woman in the gray cardigan standing beside the young boy?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "audience members",
+   "question": "Are there any audience members visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_black",
+   "desc": "the tall man in the black suit is standing",
+   "question": "Is the tall man in the black suit standing?"
+  },
+  {
+   "id": "fern_leaves",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the fern has broad green leaves",
+   "question": "Does the fern have broad green leaves?"
+  },
+  {
+   "id": "rack_fabrics",
+   "type": "attribute",
+   "of": "rack",
+   "desc": "the costume rack is filled with vibrant fabrics",
+   "question": "Is the costume rack filled with vibrant fabrics?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "woman_blue",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0075",
+ "prompt": "This watercolor illustration depicts a quiet theatre backstage scene. On the left, a woman in a blue dress sits on a wooden crate, her posture relaxed. Next to her stands a tall man in a black suit, holding a script loosely in one hand. In the center, a large potted fern with broad green leaves adds a touch of nature to the industrial setting. To the right of the fern, a young boy in a yellow shirt points toward a hanging costume rack filled with vibrant fabrics. Standing beside the boy is an older woman in a gray cardigan, looking at the costumes with interest. The man in the black suit is handing a small prop sword to the woman in the blue dress. There is no audience visible in this intimate behind-the-scenes moment. The soft washes of color blend gently, highlighting the textures of the fabric and the wood grain without sharp lines. The composition focuses strictly on these five distinct figures and objects, capturing a fleeting pause before the show begins. The spatial arrangement guides the eye from the seated figure on the left across to the interacting pair on the right.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop interior",
+   "question": "Does the image show a pottery workshop interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "vase",
+   "type": "entity",
+   "class": "clay vase",
+   "plural": "clay vases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall clay vase",
+   "question": "Is there a tall clay vase?",
+   "box": [
+    400,
+    150,
+    624,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    674,
+    200,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is sitting",
+   "question": "Is the woman in a blue apron sitting?"
+  },
+  {
+   "id": "woman_sponge",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a wet sponge",
+   "question": "Is the woman in a blue apron holding a wet sponge?"
+  },
+  {
+   "id": "vase_unglazed",
+   "type": "attribute",
+   "of": "vase",
+   "desc": "the tall clay vase is unglazed",
+   "question": "Is the tall clay vase unglazed?"
+  },
+  {
+   "id": "man_looking_vase",
+   "type": "action",
+   "of": [
+    "man",
+    "vase"
+   ],
+   "desc": "the man in a green shirt looks at the tall clay vase",
+   "question": "Is the man in a green shirt looking at the tall clay vase?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "vase_standing",
+   "type": "state",
+   "of": "vase",
+   "desc": "the tall clay vase is standing",
+   "question": "Is the tall clay vase standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0044",
+ "prompt": "In a photorealistic photo of a pottery workshop, a woman in a blue apron sits on the left. A tall clay vase stands in the center. A man in a green shirt is on the right. The woman is holding a wet sponge. The tall clay vase is unglazed. The man is looking at the tall clay vase. There is no window.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

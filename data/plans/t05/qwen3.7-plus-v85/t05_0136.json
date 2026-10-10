@@ -1,0 +1,310 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station interior with a wall and station lights",
+   "question": "Does the image show a fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian with black spots",
+   "question": "Is there a dalmatian with black spots?",
+   "box": [
+    320,
+    500,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue uniform",
+   "question": "Is there a woman in a blue uniform?",
+   "box": [
+    400,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "truck",
+   "type": "entity",
+   "class": "truck",
+   "plural": "trucks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large red truck",
+   "question": "Is there a large red truck?",
+   "box": [
+    350,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a gray coat",
+   "question": "Is there an old man in a gray coat?",
+   "box": [
+    750,
+    200,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall metal ladder",
+   "question": "Is there a tall metal ladder?",
+   "box": [
+    900,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_helmet",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear holds a shiny brass helmet",
+   "question": "Is the firefighter in yellow gear holding a shiny brass helmet?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots is sitting",
+   "question": "Is the dalmatian with black spots sitting?"
+  },
+  {
+   "id": "dalmatian_head_down",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots has its head resting on its paws",
+   "question": "Is the dalmatian with black spots resting its head on its paws?"
+  },
+  {
+   "id": "old_man_clipboard",
+   "type": "attribute",
+   "of": "old_man",
+   "desc": "the old man in a gray coat holds a clipboard",
+   "question": "Is the old man in a gray coat holding a clipboard?"
+  },
+  {
+   "id": "firefighter_left",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter in yellow gear is next to the dalmatian with black spots",
+   "question": "Is the firefighter in yellow gear next to the dalmatian with black spots?"
+  },
+  {
+   "id": "woman_points_truck",
+   "type": "action",
+   "of": [
+    "woman",
+    "truck"
+   ],
+   "desc": "the woman in a blue uniform points toward the large red truck",
+   "question": "Is the woman in a blue uniform pointing toward the large red truck?"
+  },
+  {
+   "id": "old_man_looks_woman",
+   "type": "action",
+   "of": [
+    "old_man",
+    "woman"
+   ],
+   "desc": "the old man in a gray coat looks at the woman in a blue uniform",
+   "question": "Is the old man in a gray coat looking at the woman in a blue uniform?"
+  },
+  {
+   "id": "ladder_beside_man",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "old_man"
+   ],
+   "desc": "the tall metal ladder is beside the old man in a gray coat",
+   "question": "Is the tall metal ladder beside the old man in a gray coat?"
+  },
+  {
+   "id": "firefighter_hands_dalmatian",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter in yellow gear hands the shiny brass helmet to the dalmatian with black spots",
+   "question": "Is the firefighter in yellow gear handing the shiny brass helmet to the dalmatian with black spots?"
+  },
+  {
+   "id": "dalmatian_lifts_head",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots lifts its head slightly",
+   "question": "Is the dalmatian with black spots lifting its head slightly?"
+  },
+  {
+   "id": "woman_gestures_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "old_man"
+   ],
+   "desc": "the woman in a blue uniform gestures for the old man in a gray coat to inspect the truck",
+   "question": "Is the woman in a blue uniform gesturing for the old man in a gray coat to inspect the truck?"
+  },
+  {
+   "id": "no_smoke",
+   "type": "absent",
+   "desc": "smoke in the air",
+   "question": "Is there any smoke in the air?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear stands",
+   "question": "Is the firefighter in yellow gear standing?"
+  },
+  {
+   "id": "truck_parked",
+   "type": "state",
+   "of": "truck",
+   "desc": "the large red truck is parked",
+   "question": "Is the large red truck parked?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall in the fire station",
+   "question": "Is there a wall in the fire station?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "station_lights",
+   "type": "entity",
+   "class": "light fixture",
+   "plural": "light fixtures",
+   "count": 1,
+   "count_exact": false,
+   "desc": "station lights",
+   "question": "Are there station lights visible?",
+   "box": [
+    100,
+    50,
+    924,
+    150
+   ]
+  },
+  {
+   "id": "truck_chrome_wheels",
+   "type": "attribute",
+   "of": "truck",
+   "desc": "the large red truck has chrome wheels",
+   "question": "Does the large red truck have chrome wheels?"
+  },
+  {
+   "id": "ladder_leans_wall",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "wall"
+   ],
+   "desc": "the tall metal ladder leans against the wall",
+   "question": "Does the tall metal ladder lean against the wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wall",
+   "to": "ladder",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0136",
+ "prompt": "In this oil painting, a firefighter in yellow gear stands on the left, holding a shiny brass helmet. Next to him on the left sits a dalmatian with black spots, resting its head on its paws. In the center, a woman in a blue uniform points toward a large red truck parked prominently. The truck has chrome wheels that gleam under the station lights. On the right, an old man in a gray coat looks at the woman while holding a clipboard. Beside him on the right leans a tall metal ladder against the wall. The firefighter hands the helmet to the dalmatian, who lifts its head slightly. The woman gestures for the old man to inspect the truck. There is no smoke in the air.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "model": "Qwen3.8-27B",
+ "settings": {
+  "thr": 0.5,
+  "rescue_min": 0.7,
+  "confirm_band": [
+   0.5,
+   0.8
+  ],
+  "full_side": 896,
+  "crop_min": 448,
+  "crop_max": 1024,
+  "two_stage": true,
+  "locate": true,
+  "min_box_side": 16,
+  "max_box_area": 0.7,
+  "count_mode": "number"
+ },
+ "metrics": {
+  "overall": {
+   "false_fail": 0.013513513513513514,
+   "detect_n": 0.46875,
+   "detect_u": 0.56,
+   "n_y": 444,
+   "n_u": 50,
+   "n_n": 96
+  },
+  "by_type": {
+   "attribute": {
+    "false_fail": 0.0,
+    "detect_n": 1.0,
+    "detect_u": 0.8,
+    "n_y": 18,
+    "n_u": 5,
+    "n_n": 1
+   },
+   "relation": {
+    "false_fail": 0.0196078431372549,
+    "detect_n": null,
+    "detect_u": 0.7777777777777778,
+    "n_y": 51,
+    "n_u": 9,
+    "n_n": 0
+   },
+   "entity": {
+    "false_fail": 0.017857142857142856,
+    "detect_n": 0.7142857142857143,
+    "detect_u": 0.45454545454545453,
+    "n_y": 168,
+    "n_u": 11,
+    "n_n": 7
+   },
+   "count": {
+    "false_fail": 0.01282051282051282,
+    "detect_n": 0.44047619047619047,
+    "detect_u": 0.0,
+    "n_y": 78,
+    "n_u": 4,
+    "n_n": 84
+   },
+   "pair": {
+    "false_fail": 0.0,
+    "detect_n": null,
+    "detect_u": null,
+    "n_y": 32,
+    "n_u": 0,
+    "n_n": 0
+   },
+   "state": {
+    "false_fail": 0.0,
+    "detect_n": 0.0,
+    "detect_u": 0.7,
+    "n_y": 59,
+    "n_u": 10,
+    "n_n": 1
+   },
+   "action": {
+    "false_fail": 0.045454545454545456,
+    "detect_n": 0.6666666666666666,
+    "detect_u": 0.625,
+    "n_y": 22,
+    "n_u": 8,
+    "n_n": 3
+   },
+   "background": {
+    "false_fail": 0.0,
+    "detect_n": null,
+    "detect_u": 0.0,
+    "n_y": 16,
+    "n_u": 3,
+    "n_n": 0
+   }
+  },
+  "by_size": {
+   "medium": {
+    "false_fail": 0.006993006993006993,
+    "detect_n": 0.8571428571428571,
+    "detect_u": 0.7857142857142857,
+    "n_y": 143,
+    "n_u": 14,
+    "n_n": 7
+   },
+   "small": {
+    "false_fail": 0.04838709677419355,
+    "detect_n": 0.6666666666666666,
+    "detect_u": 0.42857142857142855,
+    "n_y": 62,
+    "n_u": 7,
+    "n_n": 3
+   },
+   "large": {
+    "false_fail": 0.008849557522123894,
+    "detect_n": 0.0,
+    "detect_u": 0.6363636363636364,
+    "n_y": 113,
+    "n_u": 22,
+    "n_n": 2
+   }
+  }
+ },
+ "dup_detect": 0.44047619047619047,
+ "n_scored": 590,
+ "fmt_fail_rate": 0.0,
+ "coord_mode": "norm1000",
+ "coord_check": {
+  "coord_mode": "norm1000",
+  "iou_abs": 0.3906530674379662,
+  "iou_norm": 0.9898396069477463,
+  "raw": "```json\n[\n\t{\"bbox_2d\": [586, 259, 782, 521], \"label\": \"red square\"}\n]\n```"
+ },
+ "checks": {
+  "enough_items": true,
+  "false_fail": true,
+  "detect_n": false,
+  "detect_u": false,
+  "dup_detect": false,
+  "fmt": true
+ },
+ "thresholds": {
+  "false_fail_max": 0.02,
+  "detect_n_min": 0.9,
+  "detect_u_min": 0.7,
+  "dup_detect_min": 0.8,
+  "fmt_fail_max": 0.01,
+  "min_items": 300
+ },
+ "sec": 631.5,
+ "time": "2026-10-09 17:33:36",
+ "summary": "false_fail=0.013513513513513514 detect_n=0.46875 detect_u=0.56 dup=0.44047619047619047 fmt=0.0000 n=590",
+ "pass": false
+}

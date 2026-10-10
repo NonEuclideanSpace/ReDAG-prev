@@ -1,0 +1,134 @@
+{
+ "style": "photorealistic photo, night lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop party scene at night",
+   "question": "Does the image show a rooftop party scene at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stool",
+   "question": "Is there a stool?",
+   "box": [
+    460,
+    600,
+    564,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a silver dress",
+   "question": "Is there a woman in a silver dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a blue suit",
+   "question": "Is there a man in a blue suit?",
+   "box": [
+    400,
+    200,
+    624,
+    800
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the silver dress holds a champagne flute",
+   "question": "Is the woman in the silver dress holding a champagne flute?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the blue suit is sitting",
+   "question": "Is the man in the blue suit sitting?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the silver dress is looking at the man in the blue suit",
+   "question": "Is the woman in the silver dress looking at the man in the blue suit?"
+  },
+  {
+   "id": "man_on_stool",
+   "type": "relation",
+   "of": [
+    "man",
+    "stool"
+   ],
+   "desc": "the man in the blue suit sits on the stool",
+   "question": "Is the man in the blue suit sitting on the stool?"
+  },
+  {
+   "id": "no_rain",
+   "type": "absent",
+   "desc": "rain",
+   "question": "Is there any rain visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the silver dress is standing",
+   "question": "Is the woman in the silver dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0012",
+ "prompt": "A photorealistic photo captures a rooftop party at night. On the left, a woman in a silver dress stands holding a champagne flute. In the center, a man in a blue suit sits on a stool. The woman is looking at the man. There is no rain visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

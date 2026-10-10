@@ -1,0 +1,494 @@
+{
+ "style": "photorealistic photo, sharp focus, natural colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "interior of a vintage train dining car with large windows showing blurred rushing scenery",
+   "question": "Does the image show the interior of a vintage train dining car with large windows showing blurred rushing scenery?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral blouse",
+   "question": "Is there an elderly woman in a floral blouse?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier with wiry grey fur",
+   "question": "Is there a small terrier with wiry grey fur?",
+   "box": [
+    100,
+    750,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a crisp white apron",
+   "question": "Is there a waiter in a crisp white apron?",
+   "box": [
+    400,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "young_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in a blue suit",
+   "question": "Is there a young man in a blue suit?",
+   "box": [
+    650,
+    250,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "couple_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a green dress",
+   "question": "Is there a woman in a green dress?",
+   "box": [
+    850,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "couple_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bearded man in a tweed jacket",
+   "question": "Is there a bearded man in a tweed jacket?",
+   "box": [
+    880,
+    320,
+    1024,
+    820
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    860,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "candle",
+   "type": "entity",
+   "class": "candle",
+   "plural": "candles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a candle",
+   "question": "Is there a candle?",
+   "box": [
+    900,
+    550,
+    950,
+    650
+   ]
+  },
+  {
+   "id": "pasta_plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a half-eaten plate of pasta",
+   "question": "Is there a half-eaten plate of pasta?",
+   "box": [
+    920,
+    620,
+    990,
+    680
+   ]
+  },
+  {
+   "id": "elderly_woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral blouse sits upright",
+   "question": "Is the elderly woman in a floral blouse sitting upright?"
+  },
+  {
+   "id": "terrier_resting",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier with wiry grey fur rests calmly",
+   "question": "Is the small terrier with wiry grey fur resting calmly?"
+  },
+  {
+   "id": "waiter_leaning",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter in a crisp white apron leans forward",
+   "question": "Is the waiter in a crisp white apron leaning forward?"
+  },
+  {
+   "id": "waiter_handing",
+   "type": "action",
+   "of": [
+    "waiter",
+    "young_man"
+   ],
+   "desc": "the waiter in a crisp white apron hands a silver tray to the young man in a blue suit",
+   "question": "Is the waiter in a crisp white apron handing a silver tray to the young man in a blue suit?"
+  },
+  {
+   "id": "young_man_reaching",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in a blue suit reaches out",
+   "question": "Is the young man in a blue suit reaching out?"
+  },
+  {
+   "id": "young_man_looking",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man in a blue suit looks at a glass of red wine",
+   "question": "Is the young man in a blue suit looking at a glass of red wine?"
+  },
+  {
+   "id": "couple_woman_pointing",
+   "type": "action",
+   "of": [
+    "couple_woman",
+    "couple_man"
+   ],
+   "desc": "the woman in a green dress points emphatically at the menu held by the bearded man in a tweed jacket",
+   "question": "Is the woman in a green dress pointing emphatically at the menu held by the bearded man in a tweed jacket?"
+  },
+  {
+   "id": "couple_man_looking",
+   "type": "relation",
+   "of": [
+    "couple_man",
+    "menu"
+   ],
+   "desc": "the bearded man in a tweed jacket looks down at the menu",
+   "question": "Is the bearded man in a tweed jacket looking down at the menu?"
+  },
+  {
+   "id": "elderly_woman_on_bench",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral blouse sits on the plush bench",
+   "question": "Is the elderly woman in a floral blouse sitting on a plush bench?"
+  },
+  {
+   "id": "terrier_next_to_woman",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "elderly_woman"
+   ],
+   "desc": "the small terrier with wiry grey fur lies next to the feet of the elderly woman in a floral blouse",
+   "question": "Is the small terrier with wiry grey fur lying next to the feet of the elderly woman in a floral blouse?"
+  },
+  {
+   "id": "couple_man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "couple_man",
+    "couple_woman"
+   ],
+   "desc": "the bearded man in a tweed jacket sits next to the woman in a green dress",
+   "question": "Is the bearded man in a tweed jacket sitting next to the woman in a green dress?"
+  },
+  {
+   "id": "candle_on_table",
+   "type": "relation",
+   "of": [
+    "candle",
+    "table"
+   ],
+   "desc": "the flickering candle is on the wooden table",
+   "question": "Is the flickering candle on the wooden table?"
+  },
+  {
+   "id": "pasta_on_table",
+   "type": "relation",
+   "of": [
+    "pasta_plate",
+    "table"
+   ],
+   "desc": "the half-eaten plate of pasta is on the wooden table",
+   "question": "Is the half-eaten plate of pasta on the wooden table?"
+  },
+  {
+   "id": "no_clock",
+   "type": "absent",
+   "desc": "digital clock",
+   "question": "Is there any digital clock visible in the image?"
+  },
+  {
+   "id": "silver_tray",
+   "type": "entity",
+   "class": "tray",
+   "plural": "trays",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver tray",
+   "question": "Is there a silver tray?",
+   "box": [
+    480,
+    550,
+    620,
+    650
+   ]
+  },
+  {
+   "id": "glass_wine",
+   "type": "entity",
+   "class": "wine glass",
+   "plural": "wine glasses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass of red wine",
+   "question": "Is there a glass of red wine?",
+   "box": [
+    550,
+    580,
+    650,
+    700
+   ]
+  },
+  {
+   "id": "menu",
+   "type": "entity",
+   "class": "menu",
+   "plural": "menus",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a menu",
+   "question": "Is there a menu?",
+   "box": [
+    780,
+    550,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "velvet_seat",
+   "type": "entity",
+   "class": "seat",
+   "plural": "seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet seat",
+   "question": "Is there a velvet seat?",
+   "box": [
+    50,
+    400,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "plush_bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush bench",
+   "question": "Is there a plush bench?",
+   "box": [
+    50,
+    400,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "terrier_on_floor",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier with wiry grey fur rests on the floor",
+   "question": "Is the small terrier with wiry grey fur resting on the floor?"
+  },
+  {
+   "id": "waiter_holds_tray",
+   "type": "attribute",
+   "of": "waiter",
+   "desc": "the waiter in a crisp white apron holds a silver tray",
+   "question": "Is the waiter in a crisp white apron holding a silver tray?"
+  },
+  {
+   "id": "young_man_holds_glass",
+   "type": "attribute",
+   "of": "young_man",
+   "desc": "the young man in a blue suit holds a glass of red wine",
+   "question": "Is the young man in a blue suit holding a glass of red wine?"
+  },
+  {
+   "id": "couple_man_holds_menu",
+   "type": "attribute",
+   "of": "couple_man",
+   "desc": "the bearded man in a tweed jacket holds a menu",
+   "question": "Is the bearded man in a tweed jacket holding a menu?"
+  },
+  {
+   "id": "elderly_woman_on_velvet",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "velvet_seat"
+   ],
+   "desc": "the elderly woman in a floral blouse sits against the velvet seat",
+   "question": "Is the elderly woman in a floral blouse sitting against the velvet seat?"
+  },
+  {
+   "id": "elderly_woman_on_plush",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "plush_bench"
+   ],
+   "desc": "the elderly woman in a floral blouse sits on the plush bench",
+   "question": "Is the elderly woman in a floral blouse sitting on the plush bench?"
+  },
+  {
+   "id": "table_between_couple",
+   "type": "relation",
+   "of": [
+    "table",
+    "couple_woman",
+    "couple_man"
+   ],
+   "desc": "the wooden table is between the woman in a green dress and the bearded man in a tweed jacket",
+   "question": "Is the wooden table between the woman in a green dress and the bearded man in a tweed jacket?"
+  },
+  {
+   "id": "elderly_woman_rigid",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral blouse has rigid posture",
+   "question": "Does the elderly woman in a floral blouse have rigid posture?"
+  },
+  {
+   "id": "terrier_head_tilted",
+   "type": "state",
+   "of": "terrier",
+   "desc": "the small terrier with wiry grey fur has its head tilted slightly upward",
+   "question": "Is the head of the small terrier with wiry grey fur tilted slightly upward?"
+  },
+  {
+   "id": "couple_man_confused",
+   "type": "state",
+   "of": "couple_man",
+   "desc": "the bearded man in a tweed jacket has an expression of mild confusion",
+   "question": "Does the bearded man in a tweed jacket have an expression of mild confusion?"
+  },
+  {
+   "id": "candle_lit",
+   "type": "state",
+   "of": "candle",
+   "desc": "the candle is lit",
+   "question": "Is the candle lit?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "candle",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "pasta_plate",
+   "kind": "support"
+  },
+  {
+   "from": "velvet_seat",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "plush_bench",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0090",
+ "prompt": "A photorealistic photo captures a lively moment inside a vintage train dining car. On the left, an elderly woman in a floral blouse sits upright, her posture rigid against the velvet seat. Beside her, a small terrier with wiry grey fur rests calmly on the floor, its head tilted slightly upward. In the center, a waiter in a crisp white apron leans forward, extending his right hand to offer a silver tray. Opposite him, a young man in a blue suit reaches out to accept a glass of red wine, his eyes fixed on the liquid. To the right, a couple shares a booth; the woman in a green dress points emphatically at the menu held by her companion, a bearded man in a tweed jacket who looks down at the page with mild confusion. The wooden table between them holds a flickering candle and a half-eaten plate of pasta. The background reveals blurred scenery rushing past the large windows, suggesting motion. There is no digital clock visible anywhere in the frame. The elderly woman in a floral blouse sits on the plush bench. The small terrier with wiry grey fur lies next to her feet. The waiter in a crisp white apron hands the tray to the young man in a blue suit. The young man in a blue suit looks at the glass of red wine. The woman in a green dress points at the menu. The bearded man in a tweed jacket sits next to the woman in a green dress. The scene is rendered with sharp focus and natural colors, emphasizing the textures of fabric and glass.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 12,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

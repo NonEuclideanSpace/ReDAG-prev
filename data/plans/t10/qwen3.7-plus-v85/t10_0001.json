@@ -1,0 +1,324 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with polished tile floor and overhead lights",
+   "question": "Does the image show an airport gate area with a polished tile floor and overhead lights?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    100,
+    350,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow raincoat",
+   "question": "Is there a small child in a yellow raincoat?",
+   "box": [
+    320,
+    450,
+    480,
+    800
+   ]
+  },
+  {
+   "id": "teddy_bear",
+   "type": "entity",
+   "class": "plush teddy bear",
+   "plural": "plush teddy bears",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plush teddy bear",
+   "question": "Is there a plush teddy bear?",
+   "box": [
+    380,
+    550,
+    450,
+    650
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    450,
+    300,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "suitcase",
+   "type": "entity",
+   "class": "rolling suitcase",
+   "plural": "rolling suitcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling suitcase",
+   "question": "Is there a rolling suitcase?",
+   "box": [
+    620,
+    650,
+    720,
+    850
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "elderly person",
+   "plural": "elderly people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a knitted hat",
+   "question": "Is there an elderly person in a knitted hat?",
+   "box": [
+    700,
+    320,
+    850,
+    780
+   ]
+  },
+  {
+   "id": "teenager",
+   "type": "entity",
+   "class": "teenager",
+   "plural": "teenagers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teenager in a green hoodie",
+   "question": "Is there a teenager in a green hoodie?",
+   "box": [
+    820,
+    380,
+    980,
+    820
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is sitting",
+   "question": "Is the woman in a blue coat sitting?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow raincoat is standing",
+   "question": "Is the small child in a yellow raincoat standing?"
+  },
+  {
+   "id": "child_holding_bear",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the small child in a yellow raincoat holds a plush teddy bear",
+   "question": "Is the small child in a yellow raincoat holding a plush teddy bear?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow raincoat looks up",
+   "question": "Is the small child in a yellow raincoat looking up?"
+  },
+  {
+   "id": "man_checking_watch",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit checks his wristwatch",
+   "question": "Is the man in a gray suit checking his wristwatch?"
+  },
+  {
+   "id": "elderly_pointing",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person in a knitted hat points",
+   "question": "Is the elderly person in a knitted hat pointing?"
+  },
+  {
+   "id": "teenager_looking",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in a green hoodie looks in the direction of the pointing",
+   "question": "Is the teenager in a green hoodie looking in the direction indicated by the elderly person?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in a blue coat sits on the metal bench",
+   "question": "Is the woman in a blue coat sitting on the metal bench?"
+  },
+  {
+   "id": "child_next_to_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child in a yellow raincoat is next to the woman in a blue coat",
+   "question": "Is the small child in a yellow raincoat next to the woman in a blue coat?"
+  },
+  {
+   "id": "suitcase_against_man",
+   "type": "relation",
+   "of": [
+    "suitcase",
+    "man"
+   ],
+   "desc": "the rolling suitcase rests against the leg of the man in a gray suit",
+   "question": "Is the rolling suitcase resting against the leg of the man in a gray suit?"
+  },
+  {
+   "id": "no_food_drink",
+   "type": "absent",
+   "desc": "food",
+   "question": "Are there any food items visible in the image?"
+  },
+  {
+   "id": "woman_attentive",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat has an attentive posture",
+   "question": "Does the woman in a blue coat have an attentive posture?"
+  },
+  {
+   "id": "child_curious",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow raincoat has a curious expression",
+   "question": "Does the small child in a yellow raincoat have a curious expression?"
+  },
+  {
+   "id": "child_looking_at_woman",
+   "type": "relation",
+   "of": [
+    "child",
+    "woman"
+   ],
+   "desc": "the small child in a yellow raincoat looks up at the woman in a blue coat",
+   "question": "Is the small child in a yellow raincoat looking up at the woman in a blue coat?"
+  },
+  {
+   "id": "man_focused",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit has a focused expression",
+   "question": "Does the man in a gray suit have a focused expression?"
+  },
+  {
+   "id": "elderly_points_screen",
+   "type": "action",
+   "of": [
+    "elderly_person",
+    "teenager"
+   ],
+   "desc": "the elderly person in a knitted hat points toward the departure screen, drawing the attention of the teenager",
+   "question": "Is the elderly person in a knitted hat pointing in a way that draws the attention of the teenager in a green hoodie?"
+  },
+  {
+   "id": "teenager_interested",
+   "type": "state",
+   "of": "teenager",
+   "desc": "the teenager in a green hoodie looks with interest",
+   "question": "Does the teenager in a green hoodie look with interest?"
+  },
+  {
+   "id": "suitcase_tag",
+   "type": "attribute",
+   "of": "suitcase",
+   "desc": "the rolling suitcase has a bright red tag",
+   "question": "Does the rolling suitcase have a bright red tag?"
+  },
+  {
+   "id": "no_drink",
+   "type": "absent",
+   "desc": "drink",
+   "question": "Are there any drink items visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0001",
+ "prompt": "A photorealistic photo captures a busy airport gate scene with precise detail. On the left, a woman in a blue coat sits on a metal bench, her posture relaxed yet attentive as she waits. Next to her, a small child in a yellow raincoat stands holding a plush teddy bear, looking up at the woman with curiosity. In the center, a man in a gray suit checks his wristwatch, his expression focused on the time. To his right, a rolling suitcase with a bright red tag rests upright against his leg, suggesting imminent travel. Further right, an elderly person in a knitted hat points toward the departure screen, drawing the attention of a nearby teenager in a green hoodie who looks in that direction with interest. The floor is polished tile, reflecting the overhead lights softly. There is no food or drink visible in the scene, keeping the focus entirely on the travelers and their immediate surroundings. The composition balances the figures across the frame, creating a natural snapshot of transit life.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

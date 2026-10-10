@@ -1,0 +1,126 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a snowy town square",
+   "question": "Does the image show a snowy town square?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "old_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old man in a blue coat",
+   "question": "Is there an old man in a blue coat?",
+   "box": [
+    50,
+    300,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a yellow hat",
+   "question": "Is there a small child in a yellow hat?",
+   "box": [
+    400,
+    350,
+    620,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black dog",
+   "question": "Is there a black dog?",
+   "box": [
+    700,
+    450,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "old_man_standing",
+   "type": "state",
+   "of": "old_man",
+   "desc": "the old man in a blue coat is standing",
+   "question": "Is the old man in a blue coat standing?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a yellow hat is pointing",
+   "question": "Is the small child in a yellow hat pointing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the black dog is sitting",
+   "question": "Is the black dog sitting?"
+  },
+  {
+   "id": "child_points_at_dog",
+   "type": "action",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the small child in a yellow hat points at the black dog",
+   "question": "Is the small child in a yellow hat pointing at the black dog?"
+  },
+  {
+   "id": "old_man_looks_at_child",
+   "type": "action",
+   "of": [
+    "old_man",
+    "child"
+   ],
+   "desc": "the old man in a blue coat looks at the small child in a yellow hat",
+   "question": "Is the old man in a blue coat looking at the small child in a yellow hat?"
+  },
+  {
+   "id": "no_sun",
+   "type": "absent",
+   "desc": "sun in the sky",
+   "question": "Is there a sun in the sky?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0026",
+ "prompt": "In a pencil sketch with light color wash, a snowy town square unfolds. On the left, an old man in a blue coat stands firmly. In the center, a small child in a yellow hat points eagerly. To the right, a black dog sits calmly on the snow. The child points at the black dog. The old man looks at the child. There is no sun in the sky.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

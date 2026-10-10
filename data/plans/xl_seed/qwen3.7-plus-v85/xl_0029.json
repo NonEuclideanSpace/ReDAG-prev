@@ -1,0 +1,406 @@
+{
+ "style": "3D animated film still, vibrant colors, polished look, soft shadows",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cozy carpenter's workshop",
+   "question": "Does the image show a cozy carpenter's workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window letting in sunlight",
+   "question": "Is there a window letting in sunlight?",
+   "box": [
+    800,
+    50,
+    980,
+    400
+   ]
+  },
+  {
+   "id": "carpenter",
+   "type": "entity",
+   "class": "carpenter",
+   "plural": "carpenters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cheerful carpenter with a large nose",
+   "question": "Is there a cheerful carpenter with a large nose?",
+   "box": [
+    350,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "board",
+   "type": "entity",
+   "class": "wooden board",
+   "plural": "wooden boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a smooth wooden board",
+   "question": "Is there a smooth wooden board?",
+   "box": [
+    300,
+    600,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "shavings",
+   "type": "entity",
+   "class": "wood shavings",
+   "plural": "wood shavings",
+   "count": 2,
+   "count_exact": false,
+   "desc": "curly wood shavings",
+   "question": "Are there curly wood shavings?",
+   "box": [
+    500,
+    550,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robotic assistant",
+   "plural": "robotic assistants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a robotic assistant with round eyes",
+   "question": "Is there a robotic assistant with round eyes?",
+   "box": [
+    100,
+    250,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chair",
+   "question": "Is there a chair?",
+   "box": [
+    50,
+    500,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "clamp",
+   "type": "entity",
+   "class": "clamp",
+   "plural": "clamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clamp",
+   "question": "Is there a clamp?",
+   "box": [
+    150,
+    650,
+    220,
+    750
+   ]
+  },
+  {
+   "id": "apprentice",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small apprentice with oversized ears",
+   "question": "Is there a small apprentice with oversized ears?",
+   "box": [
+    700,
+    300,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "duck",
+   "type": "entity",
+   "class": "toy duck",
+   "plural": "toy ducks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a toy duck",
+   "question": "Is there a toy duck?",
+   "box": [
+    750,
+    600,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cat with wide expressive eyes",
+   "question": "Is there a cat with wide expressive eyes?",
+   "box": [
+    800,
+    700,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "sawdust",
+   "type": "entity",
+   "class": "pile of sawdust",
+   "plural": "piles of sawdust",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pile of sawdust",
+   "question": "Is there a pile of sawdust?",
+   "box": [
+    780,
+    750,
+    920,
+    850
+   ]
+  },
+  {
+   "id": "carpenter_pushing",
+   "type": "action",
+   "of": [
+    "carpenter",
+    "board"
+   ],
+   "desc": "the carpenter pushes a hand plane across the wooden board",
+   "question": "Is the carpenter pushing a hand plane across the wooden board?"
+  },
+  {
+   "id": "shavings_flying",
+   "type": "state",
+   "of": "shavings",
+   "desc": "the wood shavings are flying",
+   "question": "Are the wood shavings flying?"
+  },
+  {
+   "id": "robot_holding_clamp",
+   "type": "action",
+   "of": [
+    "robot",
+    "clamp"
+   ],
+   "desc": "the robotic assistant holds the clamp",
+   "question": "Is the robotic assistant holding the clamp?"
+  },
+  {
+   "id": "clamp_on_chair",
+   "type": "relation",
+   "of": [
+    "clamp",
+    "chair"
+   ],
+   "desc": "the clamp is on the chair leg",
+   "question": "Is the clamp on the chair leg?"
+  },
+  {
+   "id": "apprentice_painting_duck",
+   "type": "action",
+   "of": [
+    "apprentice",
+    "duck"
+   ],
+   "desc": "the apprentice paints the toy duck yellow using a fine brush",
+   "question": "Is the apprentice painting the toy duck?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is sleeping",
+   "question": "Is the cat sleeping?"
+  },
+  {
+   "id": "cat_on_sawdust",
+   "type": "relation",
+   "of": [
+    "cat",
+    "sawdust"
+   ],
+   "desc": "the cat is on the pile of sawdust",
+   "question": "Is the cat on the pile of sawdust?"
+  },
+  {
+   "id": "sawdust_near_window",
+   "type": "relation",
+   "of": [
+    "sawdust",
+    "window"
+   ],
+   "desc": "the pile of sawdust is near the window",
+   "question": "Is the pile of sawdust near the window?"
+  },
+  {
+   "id": "carpenter_standing",
+   "type": "state",
+   "of": "carpenter",
+   "desc": "the cheerful carpenter with a large nose and goggles is standing",
+   "question": "Is the cheerful carpenter with a large nose and goggles standing?"
+  },
+  {
+   "id": "robot_standing",
+   "type": "state",
+   "of": "robot",
+   "desc": "the robotic assistant with round eyes is standing",
+   "question": "Is the robotic assistant with round eyes standing?"
+  },
+  {
+   "id": "apprentice_standing",
+   "type": "state",
+   "of": "apprentice",
+   "desc": "the small apprentice with oversized ears is standing",
+   "question": "Is the small apprentice with oversized ears standing?"
+  },
+  {
+   "id": "robot_left_carpenter",
+   "type": "relation",
+   "of": [
+    "robot",
+    "carpenter"
+   ],
+   "desc": "the robotic assistant with round eyes is to the left of the cheerful carpenter with a large nose and goggles",
+   "question": "Is the robotic assistant with round eyes to the left of the cheerful carpenter with a large nose and goggles?"
+  },
+  {
+   "id": "apprentice_right",
+   "type": "relation",
+   "of": [
+    "apprentice",
+    "carpenter"
+   ],
+   "desc": "the small apprentice with oversized ears is to the right of the cheerful carpenter with a large nose and goggles",
+   "question": "Is the small apprentice with oversized ears to the right of the cheerful carpenter with a large nose and goggles?"
+  },
+  {
+   "id": "chair_leg",
+   "type": "attribute",
+   "of": "chair",
+   "desc": "the chair has a leg",
+   "question": "Does the chair have a visible leg?"
+  },
+  {
+   "id": "shelves",
+   "type": "entity",
+   "class": "shelf",
+   "plural": "shelves",
+   "count": 1,
+   "count_exact": false,
+   "desc": "shelves stocked with colorful jars",
+   "question": "Are there shelves stocked with colorful jars?",
+   "box": [
+    50,
+    50,
+    974,
+    300
+   ]
+  },
+  {
+   "id": "blueprint",
+   "type": "entity",
+   "class": "blueprint",
+   "plural": "blueprints",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blueprint pinned to the wall showing detailed drawings of a birdhouse",
+   "question": "Is there a blueprint pinned to the wall showing detailed drawings of a birdhouse?",
+   "box": [
+    800,
+    100,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "carpenter_goggles",
+   "type": "attribute",
+   "of": "carpenter",
+   "desc": "the carpenter wears goggles",
+   "question": "Does the carpenter wear goggles?"
+  },
+  {
+   "id": "duck_yellow",
+   "type": "attribute",
+   "of": "duck",
+   "desc": "the toy duck is yellow",
+   "question": "Is the toy duck yellow?"
+  },
+  {
+   "id": "apprentice_brush",
+   "type": "attribute",
+   "of": "apprentice",
+   "desc": "the apprentice uses a fine brush",
+   "question": "Is the apprentice using a fine brush?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "clamp",
+   "kind": "support"
+  },
+  {
+   "from": "sawdust",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0029",
+ "prompt": "Inside a cozy carpenter's workshop, stylized characters with exaggerated features work on various projects. In the center, a cheerful carpenter with a large nose and goggles pushes a hand plane across a smooth wooden board, sending curly shavings flying. To his left, a robotic assistant with round eyes holds a clamp steady on a chair leg. On the right, a small apprentice with oversized ears paints a toy duck yellow using a fine brush. A cat with wide expressive eyes sleeps on a pile of sawdust near a window. Shelves in the background are stocked with colorful jars of nails, screws, and varnish. A blueprint is pinned to the wall, showing detailed drawings of a birdhouse. Sunlight streams through the window, illuminating dust particles dancing in the air. The lighting is bright and inviting, with soft shadows that enhance the three-dimensional forms. Materials like wood grain, metal tools, and fabric aprons are rendered with smooth, clean textures typical of animation. The colors are vibrant and saturated, creating a playful and warm atmosphere. This scene is a 3D animated film still, characterized by its polished look, appealing character designs, and clear visual storytelling without realistic imperfections.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

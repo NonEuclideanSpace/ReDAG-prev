@@ -1,0 +1,308 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a subway platform with tracks and a wall featuring a digital map",
+   "question": "Does the image depict a subway platform?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "metal bench",
+   "plural": "metal benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench in the image?",
+   "box": [
+    350,
+    600,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "man_red_scarf",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "entity",
+   "class": "umbrella",
+   "plural": "umbrellas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black umbrella",
+   "question": "Is there a black umbrella?",
+   "box": [
+    150,
+    300,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "woman_blue_coat",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue coat",
+   "question": "Is there a woman wearing a blue coat?",
+   "box": [
+    400,
+    450,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a gray cat",
+   "question": "Is there a gray cat?",
+   "box": [
+    580,
+    650,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "boy_yellow_hat",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing a yellow hat",
+   "question": "Is there a boy wearing a yellow hat?",
+   "box": [
+    750,
+    300,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "old_woman_green_dress",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman wearing a green dress",
+   "question": "Is there an elderly woman wearing a green dress?",
+   "box": [
+    850,
+    350,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "man_holding_umbrella",
+   "type": "attribute",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf holds the black umbrella upright",
+   "question": "Is the man wearing a red scarf holding the black umbrella upright?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman_blue_coat",
+   "desc": "the woman wearing a blue coat is sitting",
+   "question": "Is the woman wearing a blue coat sitting?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the gray cat is resting calmly",
+   "question": "Is the gray cat resting calmly?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "state",
+   "of": "boy_yellow_hat",
+   "desc": "the boy wearing a yellow hat is pointing",
+   "question": "Is the boy wearing a yellow hat pointing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy_yellow_hat",
+   "desc": "the boy wearing a yellow hat is standing",
+   "question": "Is the boy wearing a yellow hat standing?"
+  },
+  {
+   "id": "old_woman_looking",
+   "type": "state",
+   "of": "old_woman_green_dress",
+   "desc": "the elderly woman wearing a green dress is looking",
+   "question": "Is the elderly woman wearing a green dress looking?"
+  },
+  {
+   "id": "man_looking_at_woman",
+   "type": "action",
+   "of": [
+    "man_red_scarf",
+    "woman_blue_coat"
+   ],
+   "desc": "the man wearing a red scarf looks at the woman wearing a blue coat",
+   "question": "Is the man wearing a red scarf looking at the woman wearing a blue coat?"
+  },
+  {
+   "id": "woman_next_to_cat",
+   "type": "relation",
+   "of": [
+    "woman_blue_coat",
+    "cat"
+   ],
+   "desc": "the woman wearing a blue coat is next to the gray cat",
+   "question": "Is the woman wearing a blue coat next to the gray cat?"
+  },
+  {
+   "id": "boy_beside_old_woman",
+   "type": "relation",
+   "of": [
+    "boy_yellow_hat",
+    "old_woman_green_dress"
+   ],
+   "desc": "the boy wearing a yellow hat is beside the elderly woman wearing a green dress",
+   "question": "Is the boy wearing a yellow hat beside the elderly woman wearing a green dress?"
+  },
+  {
+   "id": "no_train",
+   "type": "absent",
+   "desc": "a train on the tracks",
+   "question": "Is there a train visible on the tracks?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_red_scarf",
+   "desc": "the man wearing a red scarf is standing",
+   "question": "Is the man wearing a red scarf standing?"
+  },
+  {
+   "id": "boy_pointing_map",
+   "type": "relation",
+   "of": [
+    "boy_yellow_hat",
+    "digital_map"
+   ],
+   "desc": "the boy wearing a yellow hat points at the digital map on the wall",
+   "question": "Is the boy wearing a yellow hat pointing at the digital map on the wall?"
+  },
+  {
+   "id": "old_woman_looking_map",
+   "type": "relation",
+   "of": [
+    "old_woman_green_dress",
+    "digital_map"
+   ],
+   "desc": "the elderly woman wearing a green dress looks at the digital map on the wall",
+   "question": "Is the elderly woman wearing a green dress looking at the digital map on the wall?"
+  },
+  {
+   "id": "digital_map",
+   "type": "entity",
+   "class": "digital map",
+   "plural": "digital maps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a digital map on the wall",
+   "question": "Is there a digital map on the wall?",
+   "box": [
+    750,
+    200,
+    980,
+    500
+   ]
+  },
+  {
+   "id": "boy_pointing_at_map",
+   "type": "action",
+   "of": [
+    "boy_yellow_hat",
+    "digital_map"
+   ],
+   "desc": "the boy wearing a yellow hat points at the digital map",
+   "question": "Is the boy wearing a yellow hat pointing at the digital map?"
+  },
+  {
+   "id": "old_woman_looking_at_map",
+   "type": "action",
+   "of": [
+    "old_woman_green_dress",
+    "digital_map"
+   ],
+   "desc": "the elderly woman wearing a green dress looks at the digital map",
+   "question": "Is the elderly woman wearing a green dress looking at the digital map?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman_blue_coat",
+   "kind": "support"
+  },
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0032",
+ "prompt": "A pencil sketch with light color wash depicts a subway platform. On the left, a man in a red scarf stands holding a black umbrella upright. In the center, a woman in a blue coat sits on a metal bench next to a gray cat resting calmly. To the right, a boy in a yellow hat points at a digital map on the wall while standing beside an old woman in a green dress who looks at the same map. The man in the red scarf is looking at the woman in the blue coat. There is no train visible on the tracks.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

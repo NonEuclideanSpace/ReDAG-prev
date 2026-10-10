@@ -1,0 +1,417 @@
+{
+ "style": "photorealistic night photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a city street at night",
+   "question": "Does the image show a city street at night?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "streetlamp",
+   "type": "entity",
+   "class": "streetlamp",
+   "plural": "streetlamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a streetlamp",
+   "question": "Is there a streetlamp?",
+   "box": [
+    800,
+    50,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "taxi",
+   "type": "entity",
+   "class": "taxi",
+   "plural": "taxis",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a taxi",
+   "question": "Is there a taxi?",
+   "box": [
+    100,
+    400,
+    350,
+    600
+   ]
+  },
+  {
+   "id": "building_entrance",
+   "type": "entity",
+   "class": "building entrance",
+   "plural": "building entrances",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a building entrance",
+   "question": "Is there a building entrance?",
+   "box": [
+    50,
+    200,
+    250,
+    500
+   ]
+  },
+  {
+   "id": "pedestrian",
+   "type": "entity",
+   "class": "pedestrian",
+   "plural": "pedestrians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pedestrian",
+   "question": "Is there a pedestrian?",
+   "box": [
+    400,
+    350,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    550,
+    550,
+    850,
+    700
+   ]
+  },
+  {
+   "id": "traffic_light",
+   "type": "entity",
+   "class": "traffic light",
+   "plural": "traffic lights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a traffic light",
+   "question": "Is there a traffic light?",
+   "box": [
+    450,
+    50,
+    550,
+    200
+   ]
+  },
+  {
+   "id": "billboard",
+   "type": "entity",
+   "class": "billboard",
+   "plural": "billboards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a billboard",
+   "question": "Is there a billboard?",
+   "box": [
+    600,
+    150,
+    900,
+    400
+   ]
+  },
+  {
+   "id": "posters",
+   "type": "entity",
+   "class": "poster",
+   "plural": "posters",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two posters",
+   "question": "Are there two posters?",
+   "box": [
+    620,
+    180,
+    880,
+    380
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    820,
+    500,
+    880,
+    650
+   ]
+  },
+  {
+   "id": "pigeons",
+   "type": "entity",
+   "class": "pigeon",
+   "plural": "pigeons",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four pigeons",
+   "question": "Are there four pigeons?",
+   "box": [
+    300,
+    650,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "trash_can",
+   "type": "entity",
+   "class": "trash can",
+   "plural": "trash cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a trash can",
+   "question": "Is there a trash can?",
+   "box": [
+    360,
+    500,
+    420,
+    600
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a puddle",
+   "question": "Is there a puddle?",
+   "box": [
+    200,
+    700,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "pedestrian_standing",
+   "type": "state",
+   "of": "pedestrian",
+   "desc": "the pedestrian is standing",
+   "question": "Is the pedestrian standing?"
+  },
+  {
+   "id": "pedestrian_looking",
+   "type": "relation",
+   "of": [
+    "pedestrian",
+    "billboard"
+   ],
+   "desc": "the pedestrian is looking at the billboard",
+   "question": "Is the pedestrian looking at the billboard?"
+  },
+  {
+   "id": "pedestrian_crossing",
+   "type": "action",
+   "of": [
+    "pedestrian",
+    "taxi"
+   ],
+   "desc": "the pedestrian is crossing toward the taxi",
+   "question": "Is the pedestrian crossing toward the taxi?"
+  },
+  {
+   "id": "taxi_parked",
+   "type": "relation",
+   "of": [
+    "taxi",
+    "building_entrance"
+   ],
+   "desc": "the taxi is parked in front of the building entrance",
+   "question": "Is the taxi parked in front of the building entrance?"
+  },
+  {
+   "id": "pedestrian_next_to_bench",
+   "type": "relation",
+   "of": [
+    "pedestrian",
+    "bench"
+   ],
+   "desc": "the pedestrian is standing next to the bench",
+   "question": "Is the pedestrian standing next to the bench?"
+  },
+  {
+   "id": "traffic_light_above_intersection",
+   "type": "state",
+   "of": "traffic_light",
+   "desc": "the traffic light is above the intersection",
+   "question": "Is the traffic light above the intersection?"
+  },
+  {
+   "id": "billboard_behind_bench",
+   "type": "relation",
+   "of": [
+    "billboard",
+    "bench"
+   ],
+   "desc": "the billboard is behind the bench",
+   "question": "Is the billboard behind the bench?"
+  },
+  {
+   "id": "streetlamp_taller_than_bench",
+   "type": "relation",
+   "of": [
+    "streetlamp",
+    "bench"
+   ],
+   "desc": "the streetlamp is taller than the bench",
+   "question": "Is the streetlamp taller than the bench?"
+  },
+  {
+   "id": "posters_on_billboard",
+   "type": "relation",
+   "of": [
+    "posters",
+    "billboard"
+   ],
+   "desc": "the posters are on the billboard",
+   "question": "Are the posters on the billboard?"
+  },
+  {
+   "id": "bicycle_shorter_than_bench",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "bench"
+   ],
+   "desc": "the bicycle is shorter than the bench",
+   "question": "Is the bicycle shorter than the bench?"
+  },
+  {
+   "id": "bicycle_leans_streetlamp",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "streetlamp"
+   ],
+   "desc": "the bicycle leans against the streetlamp",
+   "question": "Does the bicycle lean against the streetlamp?"
+  },
+  {
+   "id": "pigeons_on_sidewalk",
+   "type": "relation",
+   "of": [
+    "pigeons",
+    "sidewalk"
+   ],
+   "desc": "the pigeons are on the sidewalk",
+   "question": "Are the pigeons on the sidewalk?"
+  },
+  {
+   "id": "trash_can_beside_taxi",
+   "type": "relation",
+   "of": [
+    "trash_can",
+    "taxi"
+   ],
+   "desc": "the trash can is beside the taxi",
+   "question": "Is the trash can beside the taxi?"
+  },
+  {
+   "id": "puddle_reflects_streetlamp",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects the streetlamp",
+   "question": "Does the puddle reflect the streetlamp?"
+  },
+  {
+   "id": "sidewalk",
+   "type": "entity",
+   "class": "sidewalk",
+   "plural": "sidewalks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sidewalk",
+   "question": "Is there a sidewalk?",
+   "box": [
+    0,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "road",
+   "type": "entity",
+   "class": "road",
+   "plural": "roads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a road",
+   "question": "Is there a road?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "streetlamp_tall",
+   "type": "attribute",
+   "of": "streetlamp",
+   "desc": "the streetlamp is tall",
+   "question": "Is the streetlamp tall?"
+  },
+  {
+   "id": "bench_long",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the bench is long",
+   "question": "Is the bench long?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "billboard",
+   "to": "posters",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_076",
+ "prompt": "A city street at night, where a tall streetlamp illuminates a sidewalk. A taxi is parked in front of a building entrance. A pedestrian is standing next to a long bench. A traffic light is above an intersection. A billboard is behind the bench. The streetlamp is taller than the bench. The billboard has two posters on it, and a bicycle, which is shorter than the bench, leans against the streetlamp. On the sidewalk, there are some pigeons, and their number is double the number of posters. A trash can is beside the taxi. A puddle reflecting the streetlamp is between the sidewalk and the road. The pedestrian is looking at the billboard and is crossing toward the taxi.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

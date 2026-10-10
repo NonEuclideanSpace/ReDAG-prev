@@ -1,0 +1,352 @@
+{
+ "style": "oil painting, thick brushstrokes, warm earth tones, rustic atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic farmyard with dirt ground, large oak trees in the distance, and dappled sunlight",
+   "question": "Does the image depict a rustic farmyard with dirt ground, large oak trees in the distance, and dappled sunlight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "elderly man",
+   "plural": "elderly men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly farmer in a plaid shirt",
+   "question": "Is there an elderly farmer wearing a plaid shirt?",
+   "box": [
+    350,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "chickens",
+   "type": "entity",
+   "class": "chicken",
+   "plural": "chickens",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a flock of chickens",
+   "question": "Are there multiple chickens?",
+   "box": [
+    300,
+    700,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "horse",
+   "type": "entity",
+   "class": "horse",
+   "plural": "horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown horse",
+   "question": "Is there a brown horse?",
+   "box": [
+    50,
+    250,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "fence",
+   "type": "entity",
+   "class": "wooden fence",
+   "plural": "wooden fences",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence",
+   "question": "Is there a wooden fence?",
+   "box": [
+    0,
+    400,
+    400,
+    600
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young child in overalls",
+   "question": "Is there a young child wearing overalls?",
+   "box": [
+    700,
+    300,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "entity",
+   "class": "basket",
+   "plural": "baskets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a basket containing fresh eggs",
+   "question": "Is there a basket containing fresh eggs?",
+   "box": [
+    750,
+    550,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "watering_can",
+   "type": "entity",
+   "class": "watering can",
+   "plural": "watering cans",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty watering can",
+   "question": "Is there a rusty watering can?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "grass_patch",
+   "type": "entity",
+   "class": "patch of grass",
+   "plural": "patches of grass",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patch of green grass",
+   "question": "Is there a patch of green grass?",
+   "box": [
+    50,
+    850,
+    350,
+    1024
+   ]
+  },
+  {
+   "id": "barn_door",
+   "type": "entity",
+   "class": "barn door",
+   "plural": "barn doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red barn door",
+   "question": "Is there a red barn door?",
+   "box": [
+    400,
+    50,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "hay_bales",
+   "type": "entity",
+   "class": "hay bale",
+   "plural": "hay bales",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked hay bales",
+   "question": "Are there stacked hay bales?",
+   "box": [
+    420,
+    200,
+    580,
+    350
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    650,
+    600,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    680,
+    700,
+    780,
+    800
+   ]
+  },
+  {
+   "id": "farmer_feeding",
+   "type": "action",
+   "of": [
+    "farmer",
+    "chickens"
+   ],
+   "desc": "the elderly farmer feeds corn kernels to the chickens",
+   "question": "Is the elderly farmer feeding corn kernels to the chickens?"
+  },
+  {
+   "id": "chickens_gathered",
+   "type": "relation",
+   "of": [
+    "chickens",
+    "farmer"
+   ],
+   "desc": "the chickens are gathered around the farmer's boots",
+   "question": "Are the chickens gathered around the farmer's boots?"
+  },
+  {
+   "id": "horse_leaning",
+   "type": "state",
+   "of": "horse",
+   "desc": "the brown horse is leaning its head forward",
+   "question": "Is the brown horse leaning its head forward?"
+  },
+  {
+   "id": "horse_over_fence",
+   "type": "relation",
+   "of": [
+    "horse",
+    "fence"
+   ],
+   "desc": "the brown horse's head is over the wooden fence",
+   "question": "Is the brown horse's head positioned over the wooden fence?"
+  },
+  {
+   "id": "horse_nuzzling",
+   "type": "action",
+   "of": [
+    "horse",
+    "farmer"
+   ],
+   "desc": "the brown horse nuzzles the farmer's shoulder",
+   "question": "Is the brown horse nuzzling the farmer's shoulder?"
+  },
+  {
+   "id": "child_holding",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the young child holds the basket of fresh eggs",
+   "question": "Is the young child holding the basket of fresh eggs?"
+  },
+  {
+   "id": "child_looking",
+   "type": "action",
+   "of": [
+    "child",
+    "horse"
+   ],
+   "desc": "the young child looks up at the horse with wonder",
+   "question": "Is the young child looking up at the horse with an expression of wonder?"
+  },
+  {
+   "id": "watering_can_lying",
+   "type": "state",
+   "of": "watering_can",
+   "desc": "the rusty watering can lies on its side",
+   "question": "Is the rusty watering can lying on its side?"
+  },
+  {
+   "id": "watering_can_near_grass",
+   "type": "relation",
+   "of": [
+    "watering_can",
+    "grass_patch"
+   ],
+   "desc": "the rusty watering can is near the patch of green grass",
+   "question": "Is the rusty watering can positioned near the patch of green grass?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat sits atop the wooden crate",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat is on top of the wooden crate",
+   "question": "Is the black cat on top of the wooden crate?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "chickens"
+   ],
+   "desc": "the black cat watches the chickens with keen interest",
+   "question": "Is the black cat watching the chickens with an alert expression?"
+  },
+  {
+   "id": "barn_door_open",
+   "type": "state",
+   "of": "barn_door",
+   "desc": "the red barn door is open",
+   "question": "Is the red barn door open?"
+  },
+  {
+   "id": "hay_in_barn",
+   "type": "relation",
+   "of": [
+    "hay_bales",
+    "barn_door"
+   ],
+   "desc": "the hay bales are visible through the open barn door",
+   "question": "Are the hay bales visible through the open barn door?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0008",
+ "prompt": "In a rustic farmyard, an elderly farmer in a plaid shirt feeds corn kernels to a flock of chickens gathered around his boots in the center. A brown horse stands on the left, leaning its head over a wooden fence to nuzzle the farmer's shoulder affectionately. To the right, a young child in overalls holds a basket of fresh eggs, looking up at the horse with wonder. In the foreground, a rusty watering can lies on its side near a patch of green grass. A red barn door stands open in the background, revealing dark interior shadows and stacked hay bales. A black cat sits atop a wooden crate near the center-right, watching the chickens with keen interest. Sunlight filters through large oak trees in the distance, casting dappled light across the dirt ground. The thick brushstrokes capture the texture of the animal fur and the weathered wood of the fence. Warm earth tones dominate the palette, with touches of vibrant red and green adding contrast. The atmosphere is peaceful and timeless, evoking a sense of rural tranquility. This is an oil painting.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 2,
+  "warnings": []
+ }
+}

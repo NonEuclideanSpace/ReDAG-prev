@@ -1,0 +1,252 @@
+{
+ "style": "oil painting, rustic farm scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rustic farm field during harvest",
+   "question": "Does the image depict a rustic farm field during harvest?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man_straw_hat",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a straw hat",
+   "question": "Is there a man in a straw hat?",
+   "box": [
+    350,
+    250,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    700,
+    500,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "cart_wheel",
+   "type": "entity",
+   "class": "cart wheel",
+   "plural": "cart wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cart wheel",
+   "question": "Is there a wooden cart wheel?",
+   "box": [
+    850,
+    450,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in yellow overalls",
+   "question": "Is there a child in yellow overalls?",
+   "box": [
+    650,
+    300,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "older_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an older man in a gray vest",
+   "question": "Is there an older man in a gray vest?",
+   "box": [
+    400,
+    100,
+    650,
+    500
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a woven basket",
+   "question": "Is the woman in a blue apron holding a woven basket?"
+  },
+  {
+   "id": "man_sheaf",
+   "type": "attribute",
+   "of": "man_straw_hat",
+   "desc": "the man in a straw hat lifts a heavy golden sheaf of wheat",
+   "question": "Is the man in a straw hat lifting a sheaf of wheat?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is standing",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "man_bending",
+   "type": "state",
+   "of": "man_straw_hat",
+   "desc": "the man in a straw hat is bending over",
+   "question": "Is the man in a straw hat bending over?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is sitting",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in yellow overalls points toward the horizon",
+   "question": "Is the child in yellow overalls pointing toward the horizon?"
+  },
+  {
+   "id": "older_man_watching",
+   "type": "action",
+   "of": [
+    "older_man",
+    "man_straw_hat"
+   ],
+   "desc": "the older man in a gray vest watches the activity",
+   "question": "Is the older man in a gray vest watching the activity?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man_straw_hat"
+   ],
+   "desc": "the woman in a blue apron looks at the man in a straw hat",
+   "question": "Is the woman in a blue apron looking at the man in a straw hat?"
+  },
+  {
+   "id": "dog_beside_wheel",
+   "type": "relation",
+   "of": [
+    "dog",
+    "cart_wheel"
+   ],
+   "desc": "the brown dog sits beside the wooden cart wheel",
+   "question": "Is the brown dog sitting beside the wooden cart wheel?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dog"
+   ],
+   "desc": "the child in yellow overalls stands next to the brown dog",
+   "question": "Is the child in yellow overalls standing next to the brown dog?"
+  },
+  {
+   "id": "no_machinery",
+   "type": "absent",
+   "desc": "modern machinery",
+   "question": "Is there any modern machinery visible in the field?"
+  },
+  {
+   "id": "child_standing",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in yellow overalls is standing",
+   "question": "Is the child in yellow overalls standing?"
+  },
+  {
+   "id": "older_man_behind_group",
+   "type": "relation",
+   "of": [
+    "older_man",
+    "woman"
+   ],
+   "desc": "the older man in a gray vest is behind the woman in the blue apron",
+   "question": "Is the older man in a gray vest behind the woman in the blue apron?"
+  },
+  {
+   "id": "sheaf_heavy_golden",
+   "type": "attribute",
+   "of": "man_straw_hat",
+   "desc": "the sheaf of wheat lifted by the man is heavy and golden",
+   "question": "Is the sheaf of wheat lifted by the man heavy and golden?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0121",
+ "prompt": "This oil painting depicts a rustic farm scene during harvest. On the left, a woman in a blue apron stands holding a woven basket. In the center, a man in a straw hat bends over to lift a heavy golden sheaf of wheat. To the right, a brown dog sits patiently beside a wooden cart wheel. Near the cart, a child in yellow overalls points toward the horizon. Behind them, an older man in a gray vest watches the activity. The woman in the blue apron looks at the man in the straw hat. The child in yellow overalls stands next to the brown dog. There is no modern machinery visible in the field.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

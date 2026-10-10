@@ -1,0 +1,402 @@
+{
+ "style": "surreal photorealistic, dreamlike atmosphere, pale diffuse lighting, impossible refractions",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a warehouse interior with cracked concrete walls and a cracked floor",
+   "question": "Does the image show a warehouse interior with cracked concrete walls and a cracked floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "window",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shattered windowpane",
+   "question": "Is there a shattered windowpane?",
+   "box": [
+    100,
+    50,
+    400,
+    350
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusty red stool",
+   "question": "Is there a rusty red stool?",
+   "box": [
+    150,
+    500,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a faded yellow bicycle",
+   "question": "Is there a faded yellow bicycle?",
+   "box": [
+    650,
+    450,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low weathered wooden crate",
+   "question": "Is there a low weathered wooden crate?",
+   "box": [
+    400,
+    700,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "coffee mug",
+   "plural": "coffee mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single empty porcelain coffee mug",
+   "question": "Is there a single empty porcelain coffee mug?",
+   "box": [
+    480,
+    650,
+    540,
+    720
+   ]
+  },
+  {
+   "id": "spider",
+   "type": "entity",
+   "class": "spider",
+   "plural": "spiders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single impossibly large spider",
+   "question": "Is there a single impossibly large spider?",
+   "box": [
+    50,
+    400,
+    200,
+    550
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ghostly teacup hovering in midair",
+   "question": "Is there a ghostly teacup hovering in midair?",
+   "box": [
+    300,
+    200,
+    380,
+    280
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror reflecting a forest",
+   "question": "Is there a mirror reflecting a forest?",
+   "box": [
+    700,
+    100,
+    850,
+    250
+   ]
+  },
+  {
+   "id": "book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    800,
+    300,
+    900,
+    380
+   ]
+  },
+  {
+   "id": "ivy_on_stool",
+   "type": "attribute",
+   "of": "stool",
+   "desc": "vines of artificial ivy are threaded through the stool's frame",
+   "question": "Are vines of artificial ivy threaded through the stool's frame?"
+  },
+  {
+   "id": "wheel_spinning",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle's front wheel is spinning slowly",
+   "question": "Is the bicycle's front wheel spinning slowly?"
+  },
+  {
+   "id": "mug_reflection",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the interior of the mug reflects a distorted miniature version of the room",
+   "question": "Does the interior of the mug reflect a distorted miniature version of the room?"
+  },
+  {
+   "id": "light_refraction",
+   "type": "attribute",
+   "of": "window",
+   "desc": "light passing through the window refracts into impossible colors rippling across the floor",
+   "question": "Does light passing through the window refract into impossible colors rippling across the floor?"
+  },
+  {
+   "id": "web",
+   "type": "attribute",
+   "of": "spider",
+   "desc": "a web woven by the spider stretching across space",
+   "question": "Is there a web woven by the spider stretching across space?"
+  },
+  {
+   "id": "stool_tilted",
+   "type": "state",
+   "of": "stool",
+   "desc": "the stool is tilted precariously",
+   "question": "Is the stool tilted precariously?"
+  },
+  {
+   "id": "stool_against_wall",
+   "type": "state",
+   "of": "stool",
+   "desc": "the stool is against the wall",
+   "question": "Is the stool positioned against the wall?"
+  },
+  {
+   "id": "bicycle_nearby",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "stool"
+   ],
+   "desc": "the bicycle is nearby the stool",
+   "question": "Is the bicycle positioned nearby the stool?"
+  },
+  {
+   "id": "crate_between",
+   "type": "relation",
+   "of": [
+    "crate",
+    "stool",
+    "bicycle"
+   ],
+   "desc": "the crate is between the stool and the bicycle",
+   "question": "Is the crate positioned between the stool and the bicycle?"
+  },
+  {
+   "id": "mug_on_crate",
+   "type": "relation",
+   "of": [
+    "mug",
+    "crate"
+   ],
+   "desc": "the mug stands on the crate",
+   "question": "Is the mug standing on the crate?"
+  },
+  {
+   "id": "spider_on_wall",
+   "type": "state",
+   "of": "spider",
+   "desc": "the spider scuttles across the wall",
+   "question": "Is the spider on the wall?"
+  },
+  {
+   "id": "footprints",
+   "type": "entity",
+   "class": "footprint",
+   "plural": "footprints",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a trail of footprints on the floor",
+   "question": "Are there footprints on the floor?",
+   "box": [
+    100,
+    800,
+    900,
+    1000
+   ]
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects a forest",
+   "question": "Does the mirror reflect a forest?"
+  },
+  {
+   "id": "book_state",
+   "type": "state",
+   "of": "book",
+   "desc": "the book is open",
+   "question": "Is the book open?"
+  },
+  {
+   "id": "dust_motes",
+   "type": "entity",
+   "class": "dust motes",
+   "plural": "dust motes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "dust motes spiraling through the air",
+   "question": "Are there dust motes spiraling through the air?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "book_opening_closing",
+   "type": "state",
+   "of": "book",
+   "desc": "the book is opening and closing on its own",
+   "question": "Is the book opening and closing on its own?"
+  },
+  {
+   "id": "web_tethered_teacup",
+   "type": "relation",
+   "of": [
+    "spider",
+    "teacup"
+   ],
+   "desc": "a strand of the spider's web is tethered to the ghostly teacup",
+   "question": "Is a strand of the spider's web tethered to the ghostly teacup?"
+  },
+  {
+   "id": "web_tethered_mirror",
+   "type": "relation",
+   "of": [
+    "spider",
+    "mirror"
+   ],
+   "desc": "a strand of the spider's web is tethered to the mirror",
+   "question": "Is a strand of the spider's web tethered to the mirror?"
+  },
+  {
+   "id": "web_tethered_book",
+   "type": "relation",
+   "of": [
+    "spider",
+    "book"
+   ],
+   "desc": "a strand of the spider's web is tethered to the book",
+   "question": "Is a strand of the spider's web tethered to the book?"
+  },
+  {
+   "id": "stool_frame",
+   "type": "attribute",
+   "of": "stool",
+   "desc": "the stool has a bent metal frame",
+   "question": "Does the rusty red stool have a bent metal frame?"
+  },
+  {
+   "id": "mug_condition",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug is cracked and chipped",
+   "question": "Is the porcelain coffee mug cracked and chipped?"
+  },
+  {
+   "id": "spider_sheen",
+   "type": "attribute",
+   "of": "spider",
+   "desc": "the spider has a metallic sheen",
+   "question": "Does the impossibly large spider have a metallic sheen?"
+  },
+  {
+   "id": "ivy_glow",
+   "type": "state",
+   "of": "stool",
+   "desc": "the ivy on the stool is glowing faintly",
+   "question": "Are the vines of artificial ivy on the stool glowing faintly?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "mug",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0245",
+ "prompt": "The warehouse breathes, its cracked concrete walls exhaling dust motes that spiral lazily through the pale afternoon light, catching the faint shimmer of time frozen mid-collapse. The rusty red stool, tilted precariously against the wall, seems to be both anchor and artifact in a scene where gravity itself appears hesitant. Its bent metal frame is threaded through with vines of artificial ivy that glow faintly, their bioluminescence pulsing in time with the rhythmic creak of the faded yellow bicycle nearby, whose wobbling front wheel now seems to spin slowly without external influence, each revolution stirring the air like a metronome for the unseen forces at work. Between the two, on a low, weathered wooden crate, the single empty coffee mug stands as if it were a sentinel, its porcelain surface cracked and chipped but reflecting in its interior a distorted miniature version of the entire room—an endless, recursive illusion of the abandoned space trapped in a loop of fading memory. The light, pale and diffuse, bends as it passes through the shattered windowpane, refracting into impossible colors that ripple across the cracked floor, illuminating a trail of footprints that dissolve with each step you imagine taking, as though the scene resists intrusion. A single spider, impossibly large and glistening with metallic sheen, scuttles across the cracked wall, weaving a web that stretches across time and space, each strand tethered to objects that no longer exist: a ghostly teacup hovering in midair, a mirror reflecting not the room but a forest that does not exist, a book that opens and closes on its own, its pages whispering names in a language no one has heard in centuries. The bicycle seems to shift when you look away, sometimes a rusted relic, other times gleaming with chrome and new rubber tires, as if it exists in a superposition of its own history, waiting for an observer to decide its fate. The stool creaks in time with the bicycle’s spinning wheel, and the coffee mug’s reflection ripples in perfect synchrony with the sound, as if all the elements are nodes in a vast, invisible network of cause and consequence, each affecting the other in ways just beyond perception. A breeze, warm and smelling faintly of cinnamon and rust, stirs the dust and makes the vines glow brighter, sending their light rippling through the veins of the stool and the spokes of the wheel in synchronized pulses, as if the warehouse itself were alive, dreaming in cycles, and you were a spectator in a dream that dreams itself into being, a world of impossible coherence held together by the delicate, interwoven tension of forgotten objects, surreal geometry, and the soft hum of things left behind.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "book_open",
+     "book_state"
+    ]
+   ]
+  }
+ }
+}

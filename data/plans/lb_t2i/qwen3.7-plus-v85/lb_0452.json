@@ -1,0 +1,631 @@
+{
+ "style": "cinematic noir, dim lighting, rain-slicked surfaces, neon reflections, moody atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim city street at night with wet asphalt, a building facade with a broken window and an awning, and a street sign",
+   "question": "Does the image show a dim city street at night with wet asphalt, a building facade with a broken window and an awning, and a street sign?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    350,
+    200,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "hydrant",
+   "type": "entity",
+   "class": "fire hydrant",
+   "plural": "fire hydrants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted fire hydrant painted with a mural of a city skyline swallowed by water",
+   "question": "Is there a rusted fire hydrant painted with a mural of a city skyline swallowed by water?",
+   "box": [
+    150,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "boxes",
+   "type": "entity",
+   "class": "cardboard box",
+   "plural": "cardboard boxes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of cardboard boxes",
+   "question": "Is there a stack of cardboard boxes?",
+   "box": [
+    600,
+    600,
+    850,
+    900
+   ]
+  },
+  {
+   "id": "laptop",
+   "type": "entity",
+   "class": "laptop",
+   "plural": "laptops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small glowing laptop",
+   "question": "Is there a small glowing laptop?",
+   "box": [
+    650,
+    550,
+    800,
+    650
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat",
+   "question": "Is there a stray cat?",
+   "box": [
+    200,
+    750,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle",
+   "question": "Is there a bicycle?",
+   "box": [
+    800,
+    300,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "street_sign",
+   "type": "entity",
+   "class": "street sign",
+   "plural": "street signs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a street sign",
+   "question": "Is there a street sign?",
+   "box": [
+    850,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "chain",
+   "plural": "chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a chain",
+   "question": "Is there a chain?",
+   "box": [
+    820,
+    600,
+    880,
+    700
+   ]
+  },
+  {
+   "id": "sneaker",
+   "type": "entity",
+   "class": "sneaker",
+   "plural": "sneakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child’s sneaker half-buried in a crack in the sidewalk",
+   "question": "Is there a child’s sneaker half-buried in a crack in the sidewalk?",
+   "box": [
+    500,
+    900,
+    580,
+    980
+   ]
+  },
+  {
+   "id": "newspapers",
+   "type": "entity",
+   "class": "newspaper",
+   "plural": "newspapers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of old newspapers",
+   "question": "Is there a stack of old newspapers?",
+   "box": [
+    100,
+    800,
+    250,
+    950
+   ]
+  },
+  {
+   "id": "hologram",
+   "type": "entity",
+   "class": "holographic text",
+   "plural": "holographic texts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a holographic line of text reading 'Reconnect to Grid?' with a blinking red dot",
+   "question": "Is there a holographic line of text reading 'Reconnect to Grid?' with a blinking red dot?",
+   "box": [
+    680,
+    480,
+    780,
+    530
+   ]
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman is leaning",
+   "question": "Is the woman leaning?"
+  },
+  {
+   "id": "cat_crouching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is crouching low",
+   "question": "Is the cat crouching low?"
+  },
+  {
+   "id": "woman_glancing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman glances up with an unreadable expression",
+   "question": "Is the woman glancing up?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is turning its head to watch the hydrant mural",
+   "question": "Is the cat turning its head to watch the hydrant mural?"
+  },
+  {
+   "id": "woman_reaching",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman reaches out",
+   "question": "Is the woman reaching out?"
+  },
+  {
+   "id": "cat_leaping",
+   "type": "action",
+   "of": [
+    "cat",
+    "hydrant"
+   ],
+   "desc": "the cat leaps onto the hydrant",
+   "question": "Is the cat leaping onto the hydrant?"
+  },
+  {
+   "id": "woman_behind_hydrant",
+   "type": "relation",
+   "of": [
+    "woman",
+    "hydrant"
+   ],
+   "desc": "the woman is beside the fire hydrant",
+   "question": "Is the woman beside the fire hydrant?"
+  },
+  {
+   "id": "laptop_on_boxes",
+   "type": "relation",
+   "of": [
+    "laptop",
+    "boxes"
+   ],
+   "desc": "the laptop is balanced on the stack of cardboard boxes",
+   "question": "Is the laptop balanced on the stack of cardboard boxes?"
+  },
+  {
+   "id": "cat_looking_at_laptop",
+   "type": "relation",
+   "of": [
+    "cat",
+    "laptop"
+   ],
+   "desc": "the cat's eyes are locked on the laptop screen",
+   "question": "Are the cat's eyes locked on the laptop screen?"
+  },
+  {
+   "id": "bicycle_chained_to_sign",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "street_sign"
+   ],
+   "desc": "the bicycle is chained to the street sign",
+   "question": "Is the bicycle chained to the street sign?"
+  },
+  {
+   "id": "chain_on_bicycle",
+   "type": "relation",
+   "of": [
+    "chain",
+    "bicycle"
+   ],
+   "desc": "the chain is around the bicycle frame",
+   "question": "Is the chain around the bicycle frame?"
+  },
+  {
+   "id": "awning_above",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "an awning is above the woman and the cat",
+   "question": "Is an awning visible above the woman and the cat?"
+  },
+  {
+   "id": "no_windows_intact",
+   "type": "absent",
+   "desc": "intact windows in the building facade",
+   "question": "Are there any intact windows in the building facade?"
+  },
+  {
+   "id": "puddles",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "puddles on the street",
+   "question": "Are there puddles on the street?",
+   "box": [
+    0,
+    850,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    400,
+    900,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "woman_boots",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears boots",
+   "question": "Does the woman wear boots?"
+  },
+  {
+   "id": "woman_beanie_water",
+   "type": "state",
+   "of": "woman",
+   "desc": "water trickles from the brim of the woman's beanie",
+   "question": "Is water trickling from the brim of the woman's beanie?"
+  },
+  {
+   "id": "laptop_raindrops",
+   "type": "state",
+   "of": "laptop",
+   "desc": "rainwater beads on the laptop screen",
+   "question": "Are there raindrops beading on the laptop screen?"
+  },
+  {
+   "id": "cat_fur",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has matted black fur",
+   "question": "Does the cat have matted black fur?"
+  },
+  {
+   "id": "chain_pried",
+   "type": "state",
+   "of": "chain",
+   "desc": "the chain is pried open with its ends curling outward",
+   "question": "Is the chain pried open?"
+  },
+  {
+   "id": "sneaker_in_crack",
+   "type": "state",
+   "of": "sneaker",
+   "desc": "the sneaker is half-buried in a crack in the sidewalk",
+   "question": "Is the sneaker half-buried in a crack in the sidewalk?"
+  },
+  {
+   "id": "moth_near_puddle",
+   "type": "relation",
+   "of": [
+    "moth",
+    "puddles"
+   ],
+   "desc": "the moth circles near a puddle",
+   "question": "Is the moth circling near a puddle?"
+  },
+  {
+   "id": "newspapers_behind_woman",
+   "type": "relation",
+   "of": [
+    "newspapers",
+    "woman"
+   ],
+   "desc": "the stack of newspapers is behind the woman",
+   "question": "Is the stack of newspapers behind the woman?"
+  },
+  {
+   "id": "hydrant_shadow",
+   "type": "state",
+   "of": "hydrant",
+   "desc": "the hydrant casts a distorted shadow",
+   "question": "Does the hydrant cast a distorted shadow?"
+  },
+  {
+   "id": "hologram_above_laptop",
+   "type": "relation",
+   "of": [
+    "hologram",
+    "laptop"
+   ],
+   "desc": "the holographic text hovers above the laptop keyboard",
+   "question": "Is the holographic text hovering above the laptop keyboard?"
+  },
+  {
+   "id": "woman_glances_at_cat",
+   "type": "action",
+   "of": [
+    "woman",
+    "cat"
+   ],
+   "desc": "the woman glances at the cat",
+   "question": "Is the woman glancing at the cat?"
+  },
+  {
+   "id": "woman_jacket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a weathered leather jacket",
+   "question": "Is the woman wearing a weathered leather jacket?"
+  },
+  {
+   "id": "woman_beanie",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a battered beanie",
+   "question": "Is the woman wearing a battered beanie?"
+  },
+  {
+   "id": "hydrant_mural",
+   "type": "attribute",
+   "of": "hydrant",
+   "desc": "the fire hydrant is painted with a mural",
+   "question": "Is the fire hydrant painted with a mural?"
+  },
+  {
+   "id": "laptop_content",
+   "type": "attribute",
+   "of": "laptop",
+   "desc": "the laptop screen displays lines of code and cryptic diagrams",
+   "question": "Does the laptop screen display lines of code?"
+  },
+  {
+   "id": "cat_eyes",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the cat has golden eyes",
+   "question": "Does the cat have golden eyes?"
+  },
+  {
+   "id": "bicycle_frame",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a dented frame",
+   "question": "Does the bicycle have a dented frame?"
+  },
+  {
+   "id": "sign_text",
+   "type": "attribute",
+   "of": "street_sign",
+   "desc": "the street sign reads 'No Parking: Temporary Construction'",
+   "question": "Does the street sign read 'No Parking: Temporary Construction'?"
+  },
+  {
+   "id": "hologram_dot",
+   "type": "attribute",
+   "of": "hologram",
+   "desc": "the hologram includes a blinking red dot",
+   "question": "Does the hologram include a blinking red dot?"
+  },
+  {
+   "id": "woman_boots_splash",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman's boots are splashing in puddles",
+   "question": "Are the woman's boots splashing in puddles?"
+  },
+  {
+   "id": "cat_on_hydrant",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is on the fire hydrant",
+   "question": "Is the cat on the fire hydrant?"
+  },
+  {
+   "id": "awning_drips_chain",
+   "type": "state",
+   "of": "chain",
+   "desc": "water drips from the awning onto the chain",
+   "question": "Does water drip from the awning onto the chain?"
+  },
+  {
+   "id": "cat_beside_woman",
+   "type": "relation",
+   "of": [
+    "cat",
+    "woman"
+   ],
+   "desc": "the stray cat is beside the woman",
+   "question": "Is the stray cat beside the woman?"
+  },
+  {
+   "id": "woman_expression",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman has an unreadable expression",
+   "question": "Does the woman have an unreadable expression?"
+  },
+  {
+   "id": "chain_ends",
+   "type": "state",
+   "of": "chain",
+   "desc": "the ends of the chain are curling outward",
+   "question": "Are the ends of the chain curling outward?"
+  },
+  {
+   "id": "laptop_diagrams",
+   "type": "attribute",
+   "of": "laptop",
+   "desc": "the laptop screen displays cryptic diagrams",
+   "question": "Does the laptop screen display cryptic diagrams?"
+  },
+  {
+   "id": "chain_rusted",
+   "type": "attribute",
+   "of": "chain",
+   "desc": "the chain is rusted",
+   "question": "Is the chain rusted?"
+  },
+  {
+   "id": "woman_fingers",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman's fingers are visible",
+   "question": "Are the woman's fingers visible?"
+  },
+  {
+   "id": "mural_content",
+   "type": "attribute",
+   "of": "hydrant",
+   "desc": "the mural depicts a city skyline swallowed by water",
+   "question": "Does the mural depict a city skyline swallowed by water?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "boxes",
+   "to": "laptop",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "bicycle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "hydrant",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "boxes",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "newspapers",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0452",
+ "prompt": "A dim city street breathes with the hush of falling rain, the air thick with the scent of damp asphalt and distant fried food. A woman in a weathered leather jacket leans against a rusted fire hydrant, its iron surface shimmering under the flickering glow of a streetlamp that casts broken halos in the mist. Her boots splash faintly in puddles as water trickles from the brim of her battered beanie, but she doesn’t move—her attention fixed on a small, glowing laptop balanced precariously on a stack of cardboard boxes. Rainwater beads on the screen, distorting the lines of code and cryptic diagrams she’s meticulously crafting. Beside her, a stray cat, fur matted with grime and glinting like black silk in the dim light, crouches low, its golden eyes locked on the screen as if decoding the secrets of human obsession. The cat is not alone in the shadows; the awning above them drips slowly, the rhythm almost musical, as it drips onto the rusted chain of a nearby bicycle. The bike’s dented frame, still wet from a storm long past, is chained to a street sign that reads *No Parking: Temporary Construction*. The chain has been pried open at the bottom, the ends curling outward as if resisting the idea of being fixed again. A child’s sneaker, half-buried in a crack in the sidewalk, seems to catch the falling water like a tiny, useless dam, redirecting a droplet into a tiny puddle where a moth circles, drawn to the reflected light from the laptop. Behind the woman, a stack of old newspapers rustles as the wind slips through a broken window above, its shattered pane letting in a beam of green neon that flickers across the pavement and warps the shadow of the hydrant into something alien, like the silhouette of a prehistoric beast. The hydrant itself is painted over with a mural—part of a community project—depicting a city skyline swallowed by water, its buildings crumbling like sandcastles. Yet here, the mural seems to interact with the real world: a single raindrop, landing on the painted bridge, ripples outward across the surface as if the paint were actually wet. The cat, momentarily distracted, turns its head to watch the illusion unfold, and in that instant, the woman glances up, her expression unreadable as if she sees not the cat, but the mirror of her own solitude. The laptop’s glow intensifies slightly, as though reacting to her gaze, and a holographic line of text appears, suspended in midair, hovering just above the keyboard like a ghost of a thought. It reads: *Reconnect to Grid?* Below it, a blinking red dot pulses in rhythm with the dripping water. Somewhere in the distance, a siren wails, fading in and out like a forgotten memory, and the woman reaches out slowly, her fingers trembling, as if she is about to answer not just a prompt, but a question that has followed her across time and memory. The cat leaps soundlessly onto the hydrant, claws gripping the rust, and for a heartbeat, the entire scene holds its breath—a woman on the edge of a decision, a machine waiting to respond, a creature weighing the cost of curiosity, and a world suspended between reality and dream.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [
+   "node hydrant: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 78,
+   "n_uncovered": 3,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 8,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "woman_behind_newspapers",
+     "newspapers_behind_woman"
+    ],
+    [
+     "cat_watching_hydrant",
+     "cat_watching"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,445 @@
+{
+ "style": "realistic medieval workshop scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a medieval blacksmith’s workshop",
+   "question": "Does the image show a medieval blacksmith’s workshop?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "blacksmith",
+   "type": "entity",
+   "class": "blacksmith",
+   "plural": "blacksmiths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blacksmith",
+   "question": "Is there a blacksmith?",
+   "box": [
+    300,
+    200,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "anvil",
+   "type": "entity",
+   "class": "anvil",
+   "plural": "anvils",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an anvil",
+   "question": "Is there an anvil?",
+   "box": [
+    400,
+    600,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "sword_blade",
+   "type": "entity",
+   "class": "sword blade",
+   "plural": "sword blades",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sword blade",
+   "question": "Is there a sword blade?",
+   "box": [
+    420,
+    616,
+    580,
+    664
+   ]
+  },
+  {
+   "id": "hammer",
+   "type": "entity",
+   "class": "hammer",
+   "plural": "hammers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hammer",
+   "question": "Is there a hammer?",
+   "box": [
+    450,
+    400,
+    550,
+    550
+   ]
+  },
+  {
+   "id": "furnace",
+   "type": "entity",
+   "class": "furnace",
+   "plural": "furnaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large furnace",
+   "question": "Is there a large furnace?",
+   "box": [
+    100,
+    300,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "bellows",
+   "type": "entity",
+   "class": "bellows",
+   "plural": "bellows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a set of bellows",
+   "question": "Is there a set of bellows?",
+   "box": [
+    50,
+    500,
+    150,
+    650
+   ]
+  },
+  {
+   "id": "workbench",
+   "type": "entity",
+   "class": "workbench",
+   "plural": "workbenches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a workbench",
+   "question": "Is there a workbench?",
+   "box": [
+    650,
+    550,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "horseshoes",
+   "type": "entity",
+   "class": "horseshoe",
+   "plural": "horseshoes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two finished horseshoes",
+   "question": "Are there exactly two finished horseshoes?",
+   "box": [
+    700,
+    560,
+    850,
+    620
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "rack",
+   "plural": "racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rack",
+   "question": "Is there a rack?",
+   "box": [
+    800,
+    100,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "tongs",
+   "type": "entity",
+   "class": "tongs",
+   "plural": "tongs",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four tongs",
+   "question": "Are there exactly four tongs?",
+   "box": [
+    820,
+    150,
+    930,
+    280
+   ]
+  },
+  {
+   "id": "bucket",
+   "type": "entity",
+   "class": "bucket",
+   "plural": "buckets",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bucket of water",
+   "question": "Is there a bucket of water?",
+   "box": [
+    700,
+    820,
+    850,
+    950
+   ]
+  },
+  {
+   "id": "shield",
+   "type": "entity",
+   "class": "shield",
+   "plural": "shields",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shield",
+   "question": "Is there a shield?",
+   "box": [
+    680,
+    600,
+    780,
+    800
+   ]
+  },
+  {
+   "id": "post",
+   "type": "entity",
+   "class": "post",
+   "plural": "posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a post outside",
+   "question": "Is there a post outside?",
+   "box": [
+    900,
+    400,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "horse",
+   "type": "entity",
+   "class": "horse",
+   "plural": "horses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a horse",
+   "question": "Is there a horse?",
+   "box": [
+    920,
+    300,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "blacksmith_striking",
+   "type": "action",
+   "of": [
+    "blacksmith",
+    "sword_blade"
+   ],
+   "desc": "the blacksmith is striking the sword blade with the hammer",
+   "question": "Is the blacksmith striking the sword blade with the hammer?"
+  },
+  {
+   "id": "anvil_front_furnace",
+   "type": "relation",
+   "of": [
+    "anvil",
+    "furnace"
+   ],
+   "desc": "the anvil is in front of the furnace",
+   "question": "Is the anvil in front of the furnace?"
+  },
+  {
+   "id": "bellows_next_furnace",
+   "type": "relation",
+   "of": [
+    "bellows",
+    "furnace"
+   ],
+   "desc": "the bellows are next to the furnace",
+   "question": "Are the bellows next to the furnace?"
+  },
+  {
+   "id": "workbench_right_anvil",
+   "type": "relation",
+   "of": [
+    "workbench",
+    "anvil"
+   ],
+   "desc": "the workbench is to the right of the anvil",
+   "question": "Is the workbench to the right of the anvil?"
+  },
+  {
+   "id": "horseshoes_on_workbench",
+   "type": "relation",
+   "of": [
+    "horseshoes",
+    "workbench"
+   ],
+   "desc": "the horseshoes are on the workbench",
+   "question": "Are the horseshoes on the workbench?"
+  },
+  {
+   "id": "rack_on_wall",
+   "type": "relation",
+   "of": [
+    "rack",
+    "wall"
+   ],
+   "desc": "the rack is on the wall",
+   "question": "Is the rack on the wall?"
+  },
+  {
+   "id": "tongs_on_rack",
+   "type": "relation",
+   "of": [
+    "tongs",
+    "rack"
+   ],
+   "desc": "the tongs are on the rack",
+   "question": "Are the tongs on the rack?"
+  },
+  {
+   "id": "bucket_under_workbench",
+   "type": "relation",
+   "of": [
+    "bucket",
+    "workbench"
+   ],
+   "desc": "the bucket is under the workbench",
+   "question": "Is the bucket under the workbench?"
+  },
+  {
+   "id": "shield_against_wall",
+   "type": "relation",
+   "of": [
+    "shield",
+    "bucket"
+   ],
+   "desc": "the shield is leaning against the wall behind the bucket",
+   "question": "Is the shield leaning against the wall behind the bucket?"
+  },
+  {
+   "id": "horse_tied_post",
+   "type": "relation",
+   "of": [
+    "horse",
+    "post"
+   ],
+   "desc": "the horse is tied to the post",
+   "question": "Is the horse tied to the post?"
+  },
+  {
+   "id": "post_outside_doorway",
+   "type": "state",
+   "of": "post",
+   "desc": "the post is outside the doorway",
+   "question": "Is the post outside the doorway?"
+  },
+  {
+   "id": "blacksmith_standing",
+   "type": "state",
+   "of": "blacksmith",
+   "desc": "the blacksmith is standing",
+   "question": "Is the blacksmith standing?"
+  },
+  {
+   "id": "furnace_larger_anvil",
+   "type": "relation",
+   "of": [
+    "furnace",
+    "anvil"
+   ],
+   "desc": "the furnace is much larger than the anvil",
+   "question": "Is the furnace much larger than the anvil?"
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": false,
+   "desc": "a wall with a rack and a shield",
+   "question": "Is there a wall with a rack and a shield?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "doorway",
+   "type": "entity",
+   "class": "doorway",
+   "plural": "doorways",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doorway leading outside",
+   "question": "Is there a doorway leading outside?",
+   "box": [
+    800,
+    100,
+    950,
+    600
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "workbench",
+   "to": "horseshoes",
+   "kind": "support"
+  },
+  {
+   "from": "workbench",
+   "to": "bucket",
+   "kind": "support"
+  },
+  {
+   "from": "wall",
+   "to": "rack",
+   "kind": "support"
+  },
+  {
+   "from": "anvil",
+   "to": "sword_blade",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_073",
+ "prompt": "A medieval blacksmith’s workshop. A blacksmith is striking a sword blade on an anvil with a hammer. The anvil is in front of a furnace, and a set of bellows is positioned next to the furnace. To the right of the anvil is a workbench. On the workbench are two finished horseshoes. On a rack on the wall are some tongs, and the number of tongs is twice the number of horseshoes. The furnace is much larger than the anvil. A bucket of water is under the workbench, and a shield is leaning against a wall behind the bucket. A horse is tied to a post outside a doorway.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,492 @@
+{
+ "style": "surreal digital art, dreamlike atmosphere, dramatic lighting with prisms and molten gold hues",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with walls covered in mirrors showing fragments of the past",
+   "question": "Does the image show a room with walls covered in mirrors displaying fragmented images?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "skylight",
+   "type": "entity",
+   "class": "skylight",
+   "plural": "skylights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fractured skylight",
+   "question": "Is there a fractured skylight?",
+   "box": [
+    300,
+    0,
+    724,
+    150
+   ]
+  },
+  {
+   "id": "desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarred wooden desk",
+   "question": "Is there a scarred wooden desk?",
+   "box": [
+    100,
+    500,
+    924,
+    900
+   ]
+  },
+  {
+   "id": "lipstick",
+   "type": "entity",
+   "class": "lipstick tube",
+   "plural": "lipstick tubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage half-open lipstick tube",
+   "question": "Is there a vintage half-open lipstick tube?",
+   "box": [
+    200,
+    600,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "lipstick_spill",
+   "type": "relation",
+   "of": [
+    "lipstick",
+    "desk"
+   ],
+   "desc": "crimson liquid spilling from the lipstick tube onto the desk",
+   "question": "Is crimson liquid spilling from the lipstick tube onto the desk?"
+  },
+  {
+   "id": "legal_pad",
+   "type": "entity",
+   "class": "legal pad",
+   "plural": "legal pads",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow legal pad",
+   "question": "Is there a yellow legal pad?",
+   "box": [
+    350,
+    580,
+    550,
+    750
+   ]
+  },
+  {
+   "id": "note_text",
+   "type": "attribute",
+   "of": "legal_pad",
+   "desc": "the text 'Don’t forget the speech' written on the legal pad",
+   "question": "Is the text 'Don’t forget the speech' written on the legal pad?"
+  },
+  {
+   "id": "paperweight",
+   "type": "entity",
+   "class": "paperweight",
+   "plural": "paperweights",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass serpent-shaped paperweight",
+   "question": "Is there a brass serpent-shaped paperweight?",
+   "box": [
+    520,
+    600,
+    600,
+    680
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "grandfather clock",
+   "plural": "grandfather clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grandfather clock with an open chest cavity revealing gears",
+   "question": "Is there a grandfather clock with an open chest cavity revealing gears?",
+   "box": [
+    800,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "typewriter",
+   "type": "entity",
+   "class": "typewriter",
+   "plural": "typewriters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter",
+   "question": "Is there a typewriter?",
+   "box": [
+    100,
+    650,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "telephone",
+   "type": "entity",
+   "class": "telephone",
+   "plural": "telephones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a telephone",
+   "question": "Is there a telephone?",
+   "box": [
+    600,
+    400,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "teacup",
+   "type": "entity",
+   "class": "teacup",
+   "plural": "teacups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacup",
+   "question": "Is there a teacup?",
+   "box": [
+    850,
+    650,
+    920,
+    720
+   ]
+  },
+  {
+   "id": "tea_smoke",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "black liquid spilling from the teacup into the air",
+   "question": "Is black liquid spilling from the teacup into the air?"
+  },
+  {
+   "id": "ribbon_floor",
+   "type": "entity",
+   "class": "typewriter ribbon",
+   "plural": "typewriter ribbons",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a typewriter ribbon",
+   "question": "Is there a typewriter ribbon?",
+   "box": [
+    750,
+    850,
+    900,
+    950
+   ]
+  },
+  {
+   "id": "spectacles",
+   "type": "entity",
+   "class": "spectacles",
+   "plural": "spectacles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pair of spectacles",
+   "question": "Is there a pair of spectacles?",
+   "box": [
+    150,
+    651,
+    220,
+    699
+   ]
+  },
+  {
+   "id": "shadow_corner",
+   "type": "entity",
+   "class": "shadow",
+   "plural": "shadows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadow",
+   "question": "Is there a shadow?",
+   "box": [
+    0,
+    800,
+    100,
+    1024
+   ]
+  },
+  {
+   "id": "ribbon_state",
+   "type": "state",
+   "of": "ribbon_floor",
+   "desc": "the typewriter ribbon is looping",
+   "question": "Is the typewriter ribbon looping?"
+  },
+  {
+   "id": "paperweight_on_pad",
+   "type": "relation",
+   "of": [
+    "paperweight",
+    "legal_pad"
+   ],
+   "desc": "the brass serpent paperweight is on the corner of the legal pad",
+   "question": "Is the brass serpent paperweight on the corner of the legal pad?"
+  },
+  {
+   "id": "clock_behind_desk",
+   "type": "relation",
+   "of": [
+    "clock",
+    "desk"
+   ],
+   "desc": "the grandfather clock is behind the desk",
+   "question": "Is the grandfather clock behind the desk?"
+  },
+  {
+   "id": "typewriter_beside_phone",
+   "type": "relation",
+   "of": [
+    "typewriter",
+    "telephone"
+   ],
+   "desc": "the typewriter is beside the telephone",
+   "question": "Is the typewriter beside the telephone?"
+  },
+  {
+   "id": "teacup_on_desk",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "desk"
+   ],
+   "desc": "the teacup is on the edge of the desk",
+   "question": "Is the teacup on the edge of the desk?"
+  },
+  {
+   "id": "ribbon_around_clock",
+   "type": "relation",
+   "of": [
+    "ribbon_floor",
+    "clock"
+   ],
+   "desc": "the typewriter ribbon loops around the base of the grandfather clock",
+   "question": "Does the typewriter ribbon loop around the base of the grandfather clock?"
+  },
+  {
+   "id": "spectacles_on_typewriter",
+   "type": "relation",
+   "of": [
+    "spectacles",
+    "typewriter"
+   ],
+   "desc": "the spectacles are perched on the typewriter",
+   "question": "Are the spectacles perched on the typewriter?"
+  },
+  {
+   "id": "smoke_cords",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "telephone"
+   ],
+   "desc": "the black liquid smoke from the teacup coils around the telephone cord",
+   "question": "Does the black liquid smoke from the teacup coil around the telephone cord?"
+  },
+  {
+   "id": "telephone_cord",
+   "type": "entity",
+   "class": "cord",
+   "plural": "cords",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hanging telephone cord",
+   "question": "Is there a hanging telephone cord?",
+   "box": [
+    600,
+    200,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "ribbon_floor_pos",
+   "type": "relation",
+   "of": [
+    "ribbon_floor",
+    "clock"
+   ],
+   "desc": "the typewriter ribbon is on the floor beneath the shadow of the skylight and loops around the base of the grandfather clock",
+   "question": "Is the typewriter ribbon on the floor looping around the base of the grandfather clock?"
+  },
+  {
+   "id": "spectacles_glow",
+   "type": "state",
+   "of": "spectacles",
+   "desc": "the spectacles glow faintly with internal light",
+   "question": "Do the spectacles glow faintly with internal light?"
+  },
+  {
+   "id": "telephone_state",
+   "type": "state",
+   "of": "telephone",
+   "desc": "the telephone receiver is hovering midair",
+   "question": "Is the telephone receiver hovering in midair?"
+  },
+  {
+   "id": "teacup_balance",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "desk"
+   ],
+   "desc": "the teacup balances precariously on the edge",
+   "question": "Is the teacup balancing precariously on the edge of the desk?"
+  },
+  {
+   "id": "clock_hands_spinning",
+   "type": "state",
+   "of": "clock",
+   "desc": "the hands of the grandfather clock are spinning",
+   "question": "Are the hands of the grandfather clock spinning?"
+  },
+  {
+   "id": "clock_gears_spinning",
+   "type": "state",
+   "of": "clock",
+   "desc": "the gears inside the grandfather clock are spinning in reverse",
+   "question": "Are the gears inside the grandfather clock spinning in reverse?"
+  },
+  {
+   "id": "legal_pad_beside_lipstick",
+   "type": "relation",
+   "of": [
+    "legal_pad",
+    "lipstick"
+   ],
+   "desc": "the yellow legal pad is beside the vintage lipstick tube",
+   "question": "Is the yellow legal pad beside the vintage lipstick tube?"
+  },
+  {
+   "id": "paperweight_eyes",
+   "type": "attribute",
+   "of": "paperweight",
+   "desc": "eyes of blackened glass on the brass serpent paperweight",
+   "question": "Does the brass serpent paperweight have eyes made of blackened glass?"
+  },
+  {
+   "id": "spectacles_galaxies",
+   "type": "attribute",
+   "of": "spectacles",
+   "desc": "swirling galaxies in the lenses of the spectacles",
+   "question": "Do the lenses of the spectacles contain swirling galaxies?"
+  },
+  {
+   "id": "skylight_light",
+   "type": "attribute",
+   "of": "skylight",
+   "desc": "an elongated ribbon of molten gold light from the skylight",
+   "question": "Does the fractured skylight cast an elongated ribbon of molten gold light?"
+  },
+  {
+   "id": "legal_pad_curling",
+   "type": "state",
+   "of": "legal_pad",
+   "desc": "the edges of the yellow legal pad are curling",
+   "question": "Are the edges of the yellow legal pad curling?"
+  },
+  {
+   "id": "teacup_black_liquid",
+   "type": "attribute",
+   "of": "teacup",
+   "desc": "the teacup is filled with ink-black tea",
+   "question": "Is the teacup filled with ink-black tea?"
+  },
+  {
+   "id": "tea_coiling",
+   "type": "relation",
+   "of": [
+    "teacup",
+    "telephone_cord"
+   ],
+   "desc": "the black liquid from the teacup coils around the telephone cord",
+   "question": "Does the black liquid from the teacup coil around the telephone cord?"
+  },
+  {
+   "id": "shadow_location",
+   "type": "state",
+   "of": "shadow_corner",
+   "desc": "the shadow is in the corner of the room",
+   "question": "Is the shadow in the corner of the room?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "desk",
+   "to": "lipstick",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "legal_pad",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "typewriter",
+   "kind": "support"
+  },
+  {
+   "from": "desk",
+   "to": "teacup",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0130",
+ "prompt": "The desk, scarred with the ghosts of countless debates and deadlines, stands beneath a fractured skylight that distorts the sun into an elongated ribbon of molten gold, casting shifting prisms across the objects arranged in silent conspiracy. The vintage lipstick tube, half-open and trembling as if exhaling its last crimson breath, spills a thread of color onto the wood grain, where it congeals into a puddle of liquid memory, shimmering with reflections of a voice that is not yet spoken. Beside it, the yellow legal pad leans forward, its edges curling like a tongue about to reveal a truth, the note inside—\"Don’t forget the speech\"—written in looping, nervous script that seems to writhe and rearrange itself when viewed peripherally. A brass paperweight, a serpent coiled in eternal vigilance, clamps down on the corner of the page, its gilded scales rippling like a mirage, its eyes—two smudges of blackened glass—seeming to watch the room through tiny slits in the air. Behind the desk, a grandfather clock ticks backward, its hands spinning like dancers caught in a storm, while inside its open chest cavity, gears and clockwork spin in reverse to produce forward time, a paradox humming with low, electric warmth. The walls are covered in mirrors that don’t reflect the present but fragments of the past—images flickering between childhood memories, forgotten dreams, and half-remembered lies. A typewriter rests beside a telephone that rings with no one on the line, its receiver hovering midair as if held by an invisible hand, whispering inaudible words into the void. A teacup, filled with a swirling ink-black tea, balances precariously on the edge of the desk, spilling into the air like a liquid trail of smoke that floats up and coils around the hanging telephone cord, forming an intricate, spiraling glyph that glows faintly. On the floor, beneath the spill of shadow from the skylight, a typewriter ribbon is caught mid-roll, looping around the base of the clock, as if trying to rewrite time itself. A pair of spectacles, perched on the edge of the typewriter, glows faintly with an internal light, the lenses filled with tiny galaxies that swirl in tandem with the ticking clock. The room feels both abandoned and alive, a stage between acts where every object is both spectator and performer, bound in a taut web of cause and consequence that defies the laws of linear thought. The air smells of old paper, citrus, and something sweet and unnameable, as if memory itself had taken the form of perfume. A shadow moves at the corner of the room—though nothing is there—its presence felt in the shifting angles of the mirrors, the warping of light, and the whisper of a voice that fades before it is fully heard. The scene holds its breath, balanced on the knife-edge between what is and what could be, a moment frozen in the act of unraveling.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 36,
+   "n_uncovered": 5,
+   "proposed": 5,
+   "ungrounded": 2,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

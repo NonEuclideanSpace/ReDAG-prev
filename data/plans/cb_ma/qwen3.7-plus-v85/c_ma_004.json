@@ -1,0 +1,225 @@
+{
+ "style": "photorealistic, atmospheric, foggy twilight",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an abandoned railway yard in foggy twilight",
+   "question": "Does the image show an abandoned railway yard in foggy twilight?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "locomotive",
+   "type": "entity",
+   "class": "steam locomotive",
+   "plural": "steam locomotives",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive black old-style steam locomotive",
+   "question": "Is there a massive black old-style steam locomotive?",
+   "box": [
+    100,
+    200,
+    924,
+    850
+   ]
+  },
+  {
+   "id": "locomotive_boiler",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has a cylindrical boiler covered in golden metallic fittings",
+   "question": "Does the locomotive have a cylindrical boiler covered in golden metallic fittings?"
+  },
+  {
+   "id": "locomotive_smokestack",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has a tall conical smokestack",
+   "question": "Does the locomotive have a tall conical smokestack?"
+  },
+  {
+   "id": "locomotive_wheels",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has four large dark wheels",
+   "question": "Does the locomotive have four large dark wheels?"
+  },
+  {
+   "id": "locomotive_cowcatcher",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has a triangular cowcatcher painted bright red",
+   "question": "Does the locomotive have a triangular cowcatcher painted bright red?"
+  },
+  {
+   "id": "locomotive_steam",
+   "type": "state",
+   "of": "locomotive",
+   "desc": "the locomotive releases thick white steam from its smokestack",
+   "question": "Is the locomotive releasing thick white steam from its smokestack?"
+  },
+  {
+   "id": "locomotive_dirty",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive is dirty with dark staining",
+   "question": "Is the locomotive dirty with dark staining?"
+  },
+  {
+   "id": "locomotive_peeling_paint",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "paint is peeling from the locomotive's surfaces revealing weathered metal",
+   "question": "Is paint peeling from the locomotive's surfaces, revealing weathered metal?"
+  },
+  {
+   "id": "headlights",
+   "type": "entity",
+   "class": "headlight",
+   "plural": "headlights",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two golden metallic headlights",
+   "question": "Are there two golden metallic headlights?",
+   "box": [
+    150,
+    400,
+    350,
+    500
+   ]
+  },
+  {
+   "id": "bell",
+   "type": "entity",
+   "class": "bell",
+   "plural": "bells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden metallic bell",
+   "question": "Is there a golden metallic bell?",
+   "box": [
+    450,
+    250,
+    550,
+    320
+   ]
+  },
+  {
+   "id": "whistle",
+   "type": "entity",
+   "class": "whistle assembly",
+   "plural": "whistle assemblies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a whistle assembly of three vertical silver metallic pipes",
+   "question": "Is there a whistle assembly consisting of three vertical silver metallic pipes?",
+   "box": [
+    600,
+    250,
+    700,
+    350
+   ]
+  },
+  {
+   "id": "headlights_flank",
+   "type": "relation",
+   "of": [
+    "headlights",
+    "locomotive"
+   ],
+   "desc": "the two headlights flank the front of the locomotive",
+   "question": "Do the two headlights flank the front of the locomotive?"
+  },
+  {
+   "id": "bell_on_boiler",
+   "type": "relation",
+   "of": [
+    "bell",
+    "locomotive"
+   ],
+   "desc": "the bell is positioned atop the locomotive's boiler",
+   "question": "Is the bell positioned atop the locomotive's boiler?"
+  },
+  {
+   "id": "no_electronics",
+   "type": "absent",
+   "desc": "modern electronics on the locomotive",
+   "question": "Are there any modern electronics visible on the locomotive?"
+  },
+  {
+   "id": "locomotive_pipes",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has reddish-brown pipes on its boiler",
+   "question": "Does the locomotive have reddish-brown pipes on its boiler?"
+  },
+  {
+   "id": "locomotive_spokes",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive's wheels have visible spoke patterns",
+   "question": "Do the locomotive's wheels have visible spoke patterns?"
+  },
+  {
+   "id": "locomotive_rust",
+   "type": "attribute",
+   "of": "locomotive",
+   "desc": "the locomotive has brown rust patches",
+   "question": "Does the locomotive have brown rust patches?"
+  },
+  {
+   "id": "headlights_cracked",
+   "type": "attribute",
+   "of": "headlights",
+   "desc": "the headlights have cracked glass lenses",
+   "question": "Do the headlights have cracked glass lenses?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "locomotive",
+   "to": "headlights",
+   "kind": "support"
+  },
+  {
+   "from": "locomotive",
+   "to": "bell",
+   "kind": "support"
+  },
+  {
+   "from": "locomotive",
+   "to": "whistle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_004",
+ "prompt": "A single old-style steam-powered locomotive engine in an abandoned railway yard during a foggy twilight. The locomotive is massive and black, with a cylindrical boiler covered in golden metallic fittings and reddish-brown pipes. Its smokestack is tall and conical, currently releasing thick white steam into the misty air. The engine has four large dark wheels with visible spoke patterns, and its cowcatcher is triangular and painted bright red. The locomotive is dirty, showing years of dark staining and brown rust patches. Two golden metallic headlights flank the front, their glass lenses cracked but still reflecting the dim light. The locomotive's bell is golden metallic and positioned atop the boiler, while the whistle assembly consists of three vertical silver metallic pipes. Paint is peeling from various surfaces, revealing the weathered metal underneath. The locomotive displays no modern electronics.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

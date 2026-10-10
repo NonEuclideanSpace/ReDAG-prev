@@ -1,0 +1,162 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station interior",
+   "question": "Does the image depict a fire station interior?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a firefighter in yellow gear",
+   "question": "Is there a firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dalmatian",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dalmatian",
+   "question": "Is there a dalmatian?",
+   "box": [
+    380,
+    500,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue jacket",
+   "question": "Is there a child in a blue jacket?",
+   "box": [
+    670,
+    200,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a hose",
+   "question": "Is the firefighter holding a hose?"
+  },
+  {
+   "id": "dalmatian_sitting",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "child_looking",
+   "type": "action",
+   "of": [
+    "child",
+    "dalmatian"
+   ],
+   "desc": "the child looks at the dalmatian",
+   "question": "Is the child looking at the dalmatian?"
+  },
+  {
+   "id": "firefighter_pointing",
+   "type": "action",
+   "of": [
+    "firefighter",
+    "dalmatian"
+   ],
+   "desc": "the firefighter points toward the dalmatian",
+   "question": "Is the firefighter pointing toward the dalmatian?"
+  },
+  {
+   "id": "child_next_to_dog",
+   "type": "relation",
+   "of": [
+    "child",
+    "dalmatian"
+   ],
+   "desc": "the child stands next to the dalmatian",
+   "question": "Is the child standing next to the dalmatian?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the scene?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter in yellow gear is standing",
+   "question": "Is the firefighter in yellow gear standing?"
+  },
+  {
+   "id": "dalmatian_on_floor",
+   "type": "state",
+   "of": "dalmatian",
+   "desc": "the dalmatian with black spots sits on the floor",
+   "question": "Is the dalmatian with black spots sitting on the floor?"
+  },
+  {
+   "id": "dalmatian_spots",
+   "type": "attribute",
+   "of": "dalmatian",
+   "desc": "the dalmatian has black spots",
+   "question": "Does the dalmatian have black spots?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0027",
+ "prompt": "An oil painting depicts a fire station interior. On the left, a firefighter in yellow gear stands holding a hose. In the center, a dalmatian with black spots sits calmly on the floor. On the right, a child in a blue jacket looks at the dog. The firefighter points toward the animal. The child stands next to the dog. There is no fire truck visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  }
+ }
+}

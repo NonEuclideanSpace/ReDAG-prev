@@ -1,0 +1,157 @@
+{
+ "style": "hyperrealistic product photography, macro lens, studio lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral dark background suitable for product photography",
+   "question": "Is the background a neutral dark setting suitable for product photography?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "base",
+   "type": "entity",
+   "class": "base",
+   "plural": "bases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirrored black acrylic base",
+   "question": "Is there a mirrored black acrylic base?",
+   "box": [
+    200,
+    700,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "prism",
+   "type": "entity",
+   "class": "prism",
+   "plural": "prisms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single dodecahedral rock-crystal prism",
+   "question": "Is there a single dodecahedral rock-crystal prism?",
+   "box": [
+    350,
+    300,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "prism_faces",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "each of the twelve faces is beveled",
+   "question": "Are each of the twelve faces of the prism beveled?"
+  },
+  {
+   "id": "prism_rutile",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "golden rutile needles radiating internally within the prism",
+   "question": "Do golden rutile needles radiate internally within the prism?"
+  },
+  {
+   "id": "prism_inclusion",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "a tiny iridescent inclusion forming a rainbow halo at the centre of the prism",
+   "question": "Is there a tiny iridescent inclusion forming a rainbow halo at the centre of the prism?"
+  },
+  {
+   "id": "prism_hallmark",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "a platinum hallmark \"Pt 950\" laser-etched on one facet corner of the prism",
+   "question": "Is a platinum hallmark \"Pt 950\" laser-etched on one facet corner of the prism?"
+  },
+  {
+   "id": "prism_on_base",
+   "type": "relation",
+   "of": [
+    "prism",
+    "base"
+   ],
+   "desc": "the prism is placed on the base",
+   "question": "Is the prism placed on the base?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks in the crystal",
+   "question": "Are there any cracks in the crystal?"
+  },
+  {
+   "id": "no_chips",
+   "type": "absent",
+   "desc": "chips on the crystal",
+   "question": "Are there any chips on the crystal?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic inclusions in the crystal",
+   "question": "Are there any plastic inclusions in the crystal?"
+  },
+  {
+   "id": "base_strip",
+   "type": "attribute",
+   "of": "base",
+   "desc": "the base edge carries a thin teal-neon reflection strip",
+   "question": "Does the base edge carry a thin teal-neon reflection strip?"
+  },
+  {
+   "id": "prism_transparent",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "the quartz prism is flawlessly transparent",
+   "question": "Is the quartz prism flawlessly transparent?"
+  },
+  {
+   "id": "prism_grooves",
+   "type": "attribute",
+   "of": "prism",
+   "desc": "the faces have micro-grooved textures",
+   "question": "Do the faces of the prism have micro-grooved textures?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "base",
+   "to": "prism",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_083",
+ "prompt": "Show a single dodecahedral rock-crystal prism placed on a mirrored black acrylic base. The quartz prism is flawlessly transparent and each of its twelve faces is beveled with micro-grooved textures. Golden rutile needles radiate internally, and a tiny iridescent inclusion forms a rainbow halo at the centre. A platinum hallmark \"Pt 950\" is laser-etched on one facet corner. The base edge carries a thin teal-neon reflection strip. The crystal bears no cracks, no chips, and contains no plastic inclusions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

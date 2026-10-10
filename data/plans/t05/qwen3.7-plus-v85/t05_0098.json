@@ -1,0 +1,281 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a busy farm harvest scene with orchard rows and an old oak tree",
+   "question": "Does the image show a busy farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a blue flannel shirt",
+   "question": "Is there a farmer in a blue flannel shirt?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a yellow sunhat",
+   "question": "Is there a woman in a yellow sunhat?",
+   "box": [
+    380,
+    220,
+    650,
+    820
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "wooden ladder",
+   "plural": "wooden ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden ladder",
+   "question": "Is there a wooden ladder?",
+   "box": [
+    550,
+    150,
+    700,
+    750
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in denim overalls",
+   "question": "Is there a child in denim overalls?",
+   "box": [
+    700,
+    500,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "hay_bale",
+   "type": "entity",
+   "class": "hay bale",
+   "plural": "hay bales",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hay bale",
+   "question": "Is there a hay bale?",
+   "box": [
+    680,
+    600,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "cow",
+   "type": "entity",
+   "class": "cow",
+   "plural": "cows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black and white cow",
+   "question": "Is there a black and white cow?",
+   "box": [
+    850,
+    400,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "farmer_apples",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer in a blue flannel shirt holds a bushel of apples",
+   "question": "Is the farmer in a blue flannel shirt holding a bushel of apples?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a yellow sunhat is pointing",
+   "question": "Is the woman in a yellow sunhat pointing?"
+  },
+  {
+   "id": "woman_looking_ladder",
+   "type": "relation",
+   "of": [
+    "woman",
+    "ladder"
+   ],
+   "desc": "the woman in a yellow sunhat is looking at the wooden ladder",
+   "question": "Is the woman in a yellow sunhat looking at the wooden ladder?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in denim overalls is sitting",
+   "question": "Is the child in denim overalls sitting?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in denim overalls is reaching out",
+   "question": "Is the child in denim overalls reaching out?"
+  },
+  {
+   "id": "cow_grazing",
+   "type": "state",
+   "of": "cow",
+   "desc": "the black and white cow is grazing",
+   "question": "Is the black and white cow grazing?"
+  },
+  {
+   "id": "child_on_hay",
+   "type": "relation",
+   "of": [
+    "child",
+    "hay_bale"
+   ],
+   "desc": "the child in denim overalls sits on the hay bale",
+   "question": "Is the child in denim overalls sitting on the hay bale?"
+  },
+  {
+   "id": "cow_next_to_child",
+   "type": "relation",
+   "of": [
+    "cow",
+    "child"
+   ],
+   "desc": "the black and white cow is next to the child in denim overalls",
+   "question": "Is the black and white cow next to the child in denim overalls?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "farmer",
+    "child"
+   ],
+   "desc": "the farmer in a blue flannel shirt hands a red apple to the child in denim overalls",
+   "question": "Is the farmer in a blue flannel shirt handing a red apple to the child in denim overalls?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the image?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer in a blue flannel shirt is standing",
+   "question": "Is the farmer in a blue flannel shirt standing?"
+  },
+  {
+   "id": "orchard_rows",
+   "type": "entity",
+   "class": "orchard row",
+   "plural": "orchard rows",
+   "count": 2,
+   "count_exact": false,
+   "desc": "orchard rows",
+   "question": "Are there orchard rows?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "oak_tree",
+   "type": "entity",
+   "class": "oak tree",
+   "plural": "oak trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old oak tree",
+   "question": "Is there an old oak tree?",
+   "box": [
+    600,
+    50,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "ladder_against_tree",
+   "type": "relation",
+   "of": [
+    "ladder",
+    "oak_tree"
+   ],
+   "desc": "the wooden ladder leans against the old oak tree",
+   "question": "Is the wooden ladder leaning against the old oak tree?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "hay_bale",
+   "to": "child",
+   "kind": "support"
+  },
+  {
+   "from": "oak_tree",
+   "to": "ladder",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0098",
+ "prompt": "A photorealistic photo captures a busy farm harvest scene. On the left, a farmer in a blue flannel shirt stands holding a bushel of apples. In the center, a woman in a yellow sunhat points toward the orchard rows while looking at a wooden ladder leaning against an old oak tree. To the right, a child in denim overalls sits on a hay bale next to a black and white cow grazing calmly. The farmer hands a red apple to the child, who reaches out eagerly. The woman’s gesture directs attention to the ladder, suggesting more fruit remains high up. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

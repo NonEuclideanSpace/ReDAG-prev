@@ -1,0 +1,493 @@
+{
+ "style": "photorealistic photo, vintage atmosphere, warm lighting, motion blur outside",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "interior of a vintage train dining car with wooden paneling and windows showing a twilight landscape with motion blur",
+   "question": "Does the image show the interior of a vintage train dining car with wooden paneling and windows looking out onto a twilight landscape with motion blur?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    50,
+    300,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "terrier",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small terrier",
+   "question": "Is there a small terrier?",
+   "box": [
+    250,
+    550,
+    400,
+    700
+   ]
+  },
+  {
+   "id": "table_left",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table?",
+   "box": [
+    300,
+    600,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plate",
+   "question": "Is there a plate?",
+   "box": [
+    350,
+    616,
+    420,
+    664
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter in a crisp white apron",
+   "question": "Is there a waiter in a crisp white apron?",
+   "box": [
+    450,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    550,
+    500,
+    620,
+    580
+   ]
+  },
+  {
+   "id": "young_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young man in a blue suit",
+   "question": "Is there a young man in a blue suit?",
+   "box": [
+    600,
+    300,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "businessman",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a businessman in a pinstripe jacket",
+   "question": "Is there a businessman in a pinstripe jacket?",
+   "box": [
+    800,
+    300,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "pocket_watch",
+   "type": "entity",
+   "class": "pocket watch",
+   "plural": "pocket watches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pocket watch",
+   "question": "Is there a pocket watch?",
+   "box": [
+    876,
+    546,
+    924,
+    594
+   ]
+  },
+  {
+   "id": "briefcase",
+   "type": "entity",
+   "class": "briefcase",
+   "plural": "briefcases",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leather briefcase",
+   "question": "Is there a leather briefcase?",
+   "box": [
+    820,
+    650,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "seat_right",
+   "type": "entity",
+   "class": "seat",
+   "plural": "seats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an empty seat",
+   "question": "Is there an empty seat?",
+   "box": [
+    820,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    100,
+    350,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "window_child",
+   "type": "entity",
+   "class": "window",
+   "plural": "windows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a window glass",
+   "question": "Is there a window glass?",
+   "box": [
+    50,
+    200,
+    200,
+    500
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman sits upright",
+   "question": "Is the elderly woman sitting upright?"
+  },
+  {
+   "id": "terrier_resting",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "table_left"
+   ],
+   "desc": "the terrier rests its chin on the table edge",
+   "question": "Is the terrier resting its chin on the table edge?"
+  },
+  {
+   "id": "terrier_looking",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "plate"
+   ],
+   "desc": "the terrier's eyes are fixed on the plate",
+   "question": "Are the terrier's eyes fixed on the plate?"
+  },
+  {
+   "id": "waiter_leaning",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter leans forward",
+   "question": "Is the waiter leaning forward?"
+  },
+  {
+   "id": "man_reaching",
+   "type": "state",
+   "of": "young_man",
+   "desc": "the young man reaches out",
+   "question": "Is the young man reaching out?"
+  },
+  {
+   "id": "businessman_looking",
+   "type": "state",
+   "of": "businessman",
+   "desc": "the businessman looks intently at his pocket watch",
+   "question": "Is the businessman looking intently at his pocket watch?"
+  },
+  {
+   "id": "briefcase_closed",
+   "type": "state",
+   "of": "briefcase",
+   "desc": "the briefcase is closed",
+   "question": "Is the briefcase closed?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "relation",
+   "of": [
+    "child",
+    "window_child"
+   ],
+   "desc": "the child points excitedly with finger pressed against the glass",
+   "question": "Is the child pointing excitedly with a finger pressed against the glass?"
+  },
+  {
+   "id": "steam_rising",
+   "type": "state",
+   "of": "teapot",
+   "desc": "steam rises from the teapot",
+   "question": "Is steam rising from the teapot?"
+  },
+  {
+   "id": "woman_booth",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman sits against the velvet booth",
+   "question": "Is the elderly woman sitting against a velvet booth?"
+  },
+  {
+   "id": "terrier_beside_woman",
+   "type": "relation",
+   "of": [
+    "terrier",
+    "elderly_woman"
+   ],
+   "desc": "the terrier is beside the elderly woman",
+   "question": "Is the terrier beside the elderly woman?"
+  },
+  {
+   "id": "plate_on_table",
+   "type": "relation",
+   "of": [
+    "plate",
+    "table_left"
+   ],
+   "desc": "the plate is on the table",
+   "question": "Is the plate on the table?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "waiter",
+    "young_man"
+   ],
+   "desc": "the waiter hands the silver teapot to the young man",
+   "question": "Is the waiter handing the silver teapot to the young man?"
+  },
+  {
+   "id": "businessman_right_couple",
+   "type": "relation",
+   "of": [
+    "businessman",
+    "elderly_woman"
+   ],
+   "desc": "the businessman is to the right of the elderly woman and her companion",
+   "question": "Is the businessman to the right of the elderly woman?"
+  },
+  {
+   "id": "briefcase_on_seat",
+   "type": "relation",
+   "of": [
+    "briefcase",
+    "seat_right"
+   ],
+   "desc": "the briefcase sits on the empty seat",
+   "question": "Is the briefcase sitting on the empty seat?"
+  },
+  {
+   "id": "briefcase_next_businessman",
+   "type": "relation",
+   "of": [
+    "briefcase",
+    "businessman"
+   ],
+   "desc": "the briefcase is next to the businessman",
+   "question": "Is the briefcase next to the businessman?"
+  },
+  {
+   "id": "child_across_aisle",
+   "type": "relation",
+   "of": [
+    "child",
+    "elderly_woman"
+   ],
+   "desc": "the child is across the aisle from the elderly woman",
+   "question": "Is the child across the aisle from the elderly woman?"
+  },
+  {
+   "id": "child_window_relation",
+   "type": "relation",
+   "of": [
+    "child",
+    "window_child"
+   ],
+   "desc": "the child is near the window glass",
+   "question": "Is the child near the window glass?"
+  },
+  {
+   "id": "no_digital",
+   "type": "absent",
+   "desc": "digital screens",
+   "question": "Are there any digital screens visible in the carriage?"
+  },
+  {
+   "id": "booth",
+   "type": "entity",
+   "class": "velvet booth",
+   "plural": "velvet booths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet booth",
+   "question": "Is there a velvet booth?",
+   "box": [
+    0,
+    400,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman_booth_relation",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "booth"
+   ],
+   "desc": "the elderly woman sits against the velvet booth",
+   "question": "Is the elderly woman sitting against the velvet booth?"
+  },
+  {
+   "id": "woman_rigid_posture",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman has a rigid posture",
+   "question": "Does the elderly woman have a rigid posture?"
+  },
+  {
+   "id": "no_smartphone",
+   "type": "absent",
+   "desc": "smartphones",
+   "question": "Are there any smartphones visible in the carriage?"
+  },
+  {
+   "id": "terrier_fur",
+   "type": "attribute",
+   "of": "terrier",
+   "desc": "wiry gray fur",
+   "question": "Does the terrier have wiry gray fur?"
+  },
+  {
+   "id": "briefcase_latches",
+   "type": "attribute",
+   "of": "briefcase",
+   "desc": "brass latches",
+   "question": "Does the briefcase have brass latches?"
+  },
+  {
+   "id": "man_hands",
+   "type": "attribute",
+   "of": "young_man",
+   "desc": "both hands reaching out",
+   "question": "Is the young man using both hands to reach out?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table_left",
+   "to": "plate",
+   "kind": "support"
+  },
+  {
+   "from": "seat_right",
+   "to": "briefcase",
+   "kind": "support"
+  },
+  {
+   "from": "booth",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0104",
+ "prompt": "In this photorealistic photo, a vintage train dining car glides through a twilight landscape. On the left, an elderly woman in a floral dress sits upright, her posture rigid against the velvet booth. Beside her, a small terrier with wiry gray fur rests its chin on the table edge, eyes fixed on the plate before it. In the center, a waiter in a crisp white apron leans forward, carefully handing a silver teapot to a young man in a blue suit who reaches out with both hands to receive it. To the right of the couple, a businessman in a pinstripe jacket looks intently at his pocket watch, ignoring the scene around him. Next to him, a leather briefcase sits closed on the empty seat, its brass latches gleaming under the warm overhead lights. Across the aisle, a child in a yellow raincoat points excitedly at the passing scenery outside the window, their finger pressed against the cold glass. There is no digital screen or smartphone visible anywhere in the carriage, preserving the analog atmosphere of the era. The wooden paneling reflects the soft glow of the lamps, highlighting the texture of the fabrics and the steam rising from the tea. The composition captures a fleeting moment of connection and solitude within the confined space, where each individual remains absorbed in their own world despite the proximity. The motion blur outside contrasts with the sharp clarity of the interior details, emphasizing the stillness within the moving vessel.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

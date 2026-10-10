@@ -1,0 +1,414 @@
+{
+ "style": "surreal cinematic photography, dramatic lighting, dust motes, high contrast",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an attic room with a crooked leaded window and warped walls",
+   "question": "Does the image show an attic room with a crooked leaded window and warped walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden crate",
+   "question": "Is there a weathered wooden crate of the room?",
+   "box": [
+    360,
+    550,
+    660,
+    850
+   ]
+  },
+  {
+   "id": "phone",
+   "type": "entity",
+   "class": "rotary telephone",
+   "plural": "rotary telephones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered rotary telephone",
+   "question": "Is there a weathered rotary telephone?",
+   "box": [
+    420,
+    480,
+    600,
+    620
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "stepladder",
+   "plural": "stepladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted stepladder",
+   "question": "Is there a rusted stepladder?",
+   "box": [
+    700,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "chimes",
+   "type": "entity",
+   "class": "wind chime",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wind chimes made of broken porcelain and sea glass",
+   "question": "Are there wind chimes?",
+   "box": [
+    750,
+    50,
+    950,
+    300
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    480,
+    450,
+    540,
+    510
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dusty mirror",
+   "question": "Is there a dusty mirror?",
+   "box": [
+    100,
+    400,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "door",
+   "type": "entity",
+   "class": "hidden door",
+   "plural": "hidden doors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hidden door disguised as a patch of warped ceiling, slightly open",
+   "question": "Is there a hidden door disguised as a patch of warped ceiling, slightly open?",
+   "box": [
+    50,
+    50,
+    250,
+    200
+   ]
+  },
+  {
+   "id": "phone_tilted",
+   "type": "state",
+   "of": "phone",
+   "desc": "the receiver of the rotary telephone is slightly tilted",
+   "question": "Is the receiver of the rotary telephone slightly tilted?"
+  },
+  {
+   "id": "cord_snaking",
+   "type": "attribute",
+   "of": "phone",
+   "desc": "the phone cord snakes in lazy curves across the crate and wraps around the ladder",
+   "question": "Does the phone cord snake across the crate and wrap around the ladder?"
+  },
+  {
+   "id": "phone_on_crate",
+   "type": "relation",
+   "of": [
+    "phone",
+    "crate"
+   ],
+   "desc": "the rotary telephone sits atop the wooden crate",
+   "question": "Is the rotary telephone sitting atop the wooden crate?"
+  },
+  {
+   "id": "ladder_against_wall",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the stepladder leans against the warped wall",
+   "question": "Is the stepladder leaning against the warped wall?"
+  },
+  {
+   "id": "ladder_to_ceiling",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the stepladder ascends into the ceiling",
+   "question": "Does the stepladder ascend into the ceiling?"
+  },
+  {
+   "id": "chimes_near_ladder",
+   "type": "relation",
+   "of": [
+    "chimes",
+    "ladder"
+   ],
+   "desc": "the wind chimes hang near the top of the stepladder",
+   "question": "Do the wind chimes hang near the top of the stepladder?"
+  },
+  {
+   "id": "moth_near_phone",
+   "type": "relation",
+   "of": [
+    "moth",
+    "phone"
+   ],
+   "desc": "the moth circles the mouthpiece of the rotary telephone",
+   "question": "Is the moth circling the mouthpiece of the rotary telephone?"
+  },
+  {
+   "id": "mirror_behind_crate",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "crate"
+   ],
+   "desc": "the dusty mirror is behind the wooden crate",
+   "question": "Is the dusty mirror behind the wooden crate?"
+  },
+  {
+   "id": "door_in_corner",
+   "type": "state",
+   "of": "door",
+   "desc": "the hidden door is in the corner of the ceiling",
+   "question": "Is the hidden door in the corner of the ceiling?"
+  },
+  {
+   "id": "no_windows_other",
+   "type": "absent",
+   "desc": "any other windows besides the crooked leaded one",
+   "question": "Are there any other windows besides the crooked leaded one?"
+  },
+  {
+   "id": "moth_wings_folded",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth has its wings folded",
+   "question": "Does the moth have its wings folded?"
+  },
+  {
+   "id": "mirror_reflection",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the dusty mirror reflects a dim corridor lined with telephones",
+   "question": "Does the dusty mirror reflect a dim corridor?"
+  },
+  {
+   "id": "moth_rising",
+   "type": "state",
+   "of": "moth",
+   "desc": "the moth rises",
+   "question": "Is the moth rising?"
+  },
+  {
+   "id": "door_reveals_attic",
+   "type": "state",
+   "of": "door",
+   "desc": "the hidden door reveals a glimpse of another attic",
+   "question": "Does the hidden door reveal a glimpse of another attic?"
+  },
+  {
+   "id": "dust_motes",
+   "type": "entity",
+   "class": "dust motes",
+   "plural": "dust motes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "motes of dust illuminated by sunlight",
+   "question": "Are there motes of dust visible in the sunlight?",
+   "box": [
+    100,
+    100,
+    924,
+    500
+   ]
+  },
+  {
+   "id": "dust_dancing",
+   "type": "state",
+   "of": "dust_motes",
+   "desc": "the dust motes are dancing in slow spirals",
+   "question": "Are the dust motes arranged in spiral patterns as if dancing?"
+  },
+  {
+   "id": "ladder_wrapped",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the rusted stepladder is wrapped by the phone cord",
+   "question": "Is the phone cord wrapped around the rusted stepladder?"
+  },
+  {
+   "id": "chimes_hanging",
+   "type": "state",
+   "of": "chimes",
+   "desc": "the wind chimes are hanging from the ceiling",
+   "question": "Are the wind chimes hanging from the ceiling?"
+  },
+  {
+   "id": "mirror_leaning",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the dusty mirror leans at an angle",
+   "question": "Is the dusty mirror leaning at an angle?"
+  },
+  {
+   "id": "door_creaking",
+   "type": "state",
+   "of": "door",
+   "desc": "the hidden door creaks open slightly",
+   "question": "Is the hidden door slightly open?"
+  },
+  {
+   "id": "other_attic_moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth in the other attic",
+   "question": "Is there a moth visible in the reflection of the other attic?",
+   "box": [
+    800,
+    200,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "other_attic_phone",
+   "type": "entity",
+   "class": "rotary telephone",
+   "plural": "rotary telephones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a different rotary telephone in the other attic",
+   "question": "Is there a different rotary telephone visible in the reflection of the other attic?",
+   "box": [
+    750,
+    400,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "other_attic_chimes",
+   "type": "entity",
+   "class": "wind chimes",
+   "plural": "wind chimes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wind chimes in the other attic",
+   "question": "Are there wind chimes visible in the reflection of the other attic?",
+   "box": [
+    850,
+    50,
+    980,
+    180
+   ]
+  },
+  {
+   "id": "other_moth_circles_other_phone",
+   "type": "relation",
+   "of": [
+    "other_attic_moth",
+    "other_attic_phone"
+   ],
+   "desc": "the moth in the other attic circles the different telephone",
+   "question": "Is the moth in the other attic circling the different telephone?"
+  },
+  {
+   "id": "chimes_material",
+   "type": "attribute",
+   "of": "chimes",
+   "desc": "the wind chimes are made of broken porcelain and hollowed sea glass",
+   "question": "Are the wind chimes made of broken porcelain and hollowed sea glass?"
+  },
+  {
+   "id": "moth_wings_sun",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth's wings catch the sun",
+   "question": "Do the moth's wings catch the sun?"
+  },
+  {
+   "id": "reflection_phones",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the reflected corridor is lined with telephones",
+   "question": "Is the corridor reflected in the mirror lined with telephones?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "phone",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "ladder",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0455",
+ "prompt": "The attic breathes, if only in fits and starts—sunlight fractures through a crooked, leaded window, slicing across the room like a blade of gold, illuminating motes of dust that dance like living things in slow spirals. At the center of it all, a weathered rotary telephone sits atop a wooden crate, its receiver slightly tilted, as if recently dropped mid-conversation. The phone cord snakes in lazy curves across the crate’s worn surface, wrapping itself around a rusted stepladder leaning against a warped wall. The ladder, though old and corroded, is somehow still ascending—though not into space, but into the ceiling, where it vanishes behind a tangle of hanging wind chimes. The chimes, carved from broken porcelain and hollowed sea glass, rattle softly in the wind that slips through the cracked window, their sound echoing like whispers of forgotten names. Just beyond the ladder’s top, a moth circles the mouthpiece of the phone, wings catching the sun, its presence almost reverent. The air is thick with the scent of aged wood and iron, and somewhere beneath the creak of the chimes, the attic floor shudders faintly—though whether from the wind or the weight of time itself is unclear. Behind the crate, a dusty mirror leans at an angle, reflecting not the room, but a corridor that seems to exist between moments—dim, flickering, and always just out of focus. The corridor is lined with telephones, all identical to the one in the room, their cords tangled like veins in the wall, stretching toward the shadows beyond the frame. One phone begins to ring, and as it does, the moth freezes mid-wingbeat, and the wind chimes fall silent. A shadow flickers across the wall, and the mirror distorts—just for a heartbeat—showing the attic not as it is, but as it might become: a room suspended in mid-collapse, with all the objects caught between past and present, their positions altered subtly, their relationships redefined. The moth drifts down to the phone’s cradle, its wings folding in as if it too understands the pause. Somewhere deep in the walls, gears turn and old tape loops shift. The floor trembles again, but this time with purpose. A hidden door in the corner of the room, disguised as a patch of warped ceiling, creaks open slightly, revealing a glimpse of another attic—identical, yet subtly different: a moth there is circling a different telephone, the chimes there have just begun to rattle. The room is no longer a room but a hinge, a pivot point between realities, where the air is electric with the hum of unresolved calls and the flutter of wings. The phone begins to ring again, and as the moth rises once more, the light through the window shifts—gold to silver, then back again—and the attic holds its breath.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 6,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 53,
+   "n_uncovered": 7,
+   "proposed": 5,
+   "ungrounded": 1,
+   "added": 4,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

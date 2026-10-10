@@ -1,0 +1,146 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a botanical greenhouse with a glass ceiling and lush emerald and jade foliage",
+   "question": "Does the image depict a botanical greenhouse with a glass ceiling and lush emerald and jade foliage?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey hat",
+   "question": "Is there a man in a grey hat?",
+   "box": [
+    550,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small potted fern",
+   "question": "Is there a small potted fern?",
+   "box": [
+    380,
+    450,
+    550,
+    650
+   ]
+  },
+  {
+   "id": "woman_holding_fern",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds the small potted fern",
+   "question": "Is the woman in the blue dress holding the small potted fern?"
+  },
+  {
+   "id": "woman_extending_hand",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress extends her hand",
+   "question": "Is the woman in the blue dress extending her hand?"
+  },
+  {
+   "id": "man_looking_at_fern",
+   "type": "action",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in the grey hat looks at the potted fern",
+   "question": "Is the man in the grey hat looking at the potted fern?"
+  },
+  {
+   "id": "man_right_of_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the grey hat is to the right of the woman in the blue dress",
+   "question": "Is the man in the grey hat to the right of the woman in the blue dress?"
+  },
+  {
+   "id": "no_bench",
+   "type": "absent",
+   "desc": "a bench",
+   "question": "Is there a bench visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress stands",
+   "question": "Is the woman in the blue dress standing?"
+  },
+  {
+   "id": "fern_green_leaves",
+   "type": "attribute",
+   "of": "fern",
+   "desc": "the small potted fern has green leaves",
+   "question": "Does the small potted fern have green leaves?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0030",
+ "prompt": "In an oil painting of a botanical greenhouse, a woman in a blue dress stands on the left holding a small potted fern. To her right, a man in a grey hat looks at the plant she offers. The two figures share a quiet moment as she extends her hand to show him the green leaves. Sunlight filters through the glass ceiling, illuminating dust motes dancing in the air around them. There is no bench visible in the scene. The lush foliage surrounds them, creating a vibrant backdrop of emerald and jade hues that contrasts with their muted attire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

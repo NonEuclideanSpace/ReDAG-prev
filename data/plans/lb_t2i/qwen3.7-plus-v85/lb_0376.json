@@ -1,0 +1,513 @@
+{
+ "style": "surreal digital art, dimly lit, eerie atmosphere, glowing elements, dreamlike",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered home gym with cracked tile floor and walls",
+   "question": "Does the image show a cluttered home gym with a cracked tile floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "barbell",
+   "type": "entity",
+   "class": "barbell",
+   "plural": "barbells",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a semi-translucent barbell",
+   "question": "Is there a semi-translucent barbell?",
+   "box": [
+    200,
+    300,
+    824,
+    500
+   ]
+  },
+  {
+   "id": "dumbbells",
+   "type": "entity",
+   "class": "dumbbell",
+   "plural": "dumbbells",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two wooden dumbbells",
+   "question": "Are there two wooden dumbbells?",
+   "box": [
+    300,
+    550,
+    724,
+    750
+   ]
+  },
+  {
+   "id": "water_bottle",
+   "type": "entity",
+   "class": "water bottle",
+   "plural": "water bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a water bottle",
+   "question": "Is there a water bottle?",
+   "box": [
+    100,
+    600,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "puddle",
+   "type": "entity",
+   "class": "puddle",
+   "plural": "puddles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small, silver, iridescent puddle",
+   "question": "Is there a small, silver, iridescent puddle?",
+   "box": [
+    120,
+    680,
+    280,
+    750
+   ]
+  },
+  {
+   "id": "shoes",
+   "type": "entity",
+   "class": "running shoe",
+   "plural": "running shoes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "a pair of running shoes laced together",
+   "question": "Is there a pair of running shoes laced together?",
+   "box": [
+    350,
+    750,
+    550,
+    850
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror hanging askew",
+   "question": "Is there a mirror hanging askew?",
+   "box": [
+    800,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "wall clock",
+   "plural": "wall clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wall clock",
+   "question": "Is there a wall clock?",
+   "box": [
+    50,
+    50,
+    150,
+    150
+   ]
+  },
+  {
+   "id": "treadmill",
+   "type": "entity",
+   "class": "treadmill",
+   "plural": "treadmills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a treadmill in the corner",
+   "question": "Is there a treadmill in the corner?",
+   "box": [
+    850,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "yoga_mat_orb",
+   "type": "entity",
+   "class": "hovering orb",
+   "plural": "hovering orbs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hovering orb made of yoga mat material",
+   "question": "Is there a hovering orb made of yoga mat material?",
+   "box": [
+    400,
+    200,
+    500,
+    300
+   ]
+  },
+  {
+   "id": "towel_ribbon",
+   "type": "entity",
+   "class": "ribbon of fabric",
+   "plural": "ribbons of fabric",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ribbon of fabric",
+   "question": "Is there a ribbon of fabric?",
+   "box": [
+    200,
+    200,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "sub_gym",
+   "type": "entity",
+   "class": "gym scene",
+   "plural": "gym scenes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a subterranean gym visible through shifted floor tiles",
+   "question": "Is a subterranean gym visible through gaps in the floor tiles?",
+   "box": [
+    100,
+    750,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "bottle_state",
+   "type": "state",
+   "of": "water_bottle",
+   "desc": "the water bottle is lying on its side",
+   "question": "Is the water bottle lying on its side?"
+  },
+  {
+   "id": "barbell_diagonal",
+   "type": "state",
+   "of": "barbell",
+   "desc": "the barbell is positioned diagonally",
+   "question": "Is the barbell positioned diagonally?"
+  },
+  {
+   "id": "dumbbells_roots",
+   "type": "state",
+   "of": "dumbbells",
+   "desc": "the dumbbells have roots",
+   "question": "Do the dumbbells have roots?"
+  },
+  {
+   "id": "shoe_levitating",
+   "type": "state",
+   "of": "shoes",
+   "desc": "one running shoe is levitating in a spiral",
+   "question": "Is one of the running shoes levitating in a spiral?"
+  },
+  {
+   "id": "barbell_on_dumbbells",
+   "type": "relation",
+   "of": [
+    "barbell",
+    "dumbbells"
+   ],
+   "desc": "the barbell rests across the dumbbells",
+   "question": "Is the barbell resting across the dumbbells?"
+  },
+  {
+   "id": "puddle_near_bottle",
+   "type": "relation",
+   "of": [
+    "puddle",
+    "water_bottle"
+   ],
+   "desc": "the puddle is next to the water bottle",
+   "question": "Is the puddle next to the water bottle?"
+  },
+  {
+   "id": "shoes_beyond_puddle",
+   "type": "relation",
+   "of": [
+    "shoes",
+    "puddle"
+   ],
+   "desc": "the running shoes are just beyond the puddle",
+   "question": "Are the running shoes positioned just beyond the puddle?"
+  },
+  {
+   "id": "mirror_on_wall",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror hangs on the wall",
+   "question": "Is the mirror hanging on the wall?"
+  },
+  {
+   "id": "clock_on_wall",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock is on the wall",
+   "question": "Is the clock on the wall?"
+  },
+  {
+   "id": "mat_in_floor",
+   "type": "relation",
+   "of": [
+    "yoga_mat_orb",
+    "sub_gym"
+   ],
+   "desc": "the orb emerges from the floor tiles",
+   "question": "Does the orb appear to emerge from the floor tiles?"
+  },
+  {
+   "id": "no_windows",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows in the image?"
+  },
+  {
+   "id": "barbell_translucent",
+   "type": "attribute",
+   "of": "barbell",
+   "desc": "the barbell has a semi-translucent metallic sheen",
+   "question": "Does the barbell have a semi-translucent metallic sheen?"
+  },
+  {
+   "id": "dumbbells_humming",
+   "type": "state",
+   "of": "dumbbells",
+   "desc": "the wooden dumbbells are humming with resonance",
+   "question": "Are the wooden dumbbells depicted as humming or vibrating with resonance?"
+  },
+  {
+   "id": "mirror_reflection_hallway",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects an endless hallway of mirrored gyms",
+   "question": "Does the mirror reflect an endless hallway of mirrored gyms?"
+  },
+  {
+   "id": "clock_backwards",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock hands are circling in slow, deliberate loops ticking backwards",
+   "question": "Are the clock hands circling in slow, deliberate loops, indicating backward time?"
+  },
+  {
+   "id": "treadmill_powering",
+   "type": "state",
+   "of": "treadmill",
+   "desc": "the treadmill is powering itself",
+   "question": "Is the treadmill powering itself?"
+  },
+  {
+   "id": "shoes_twitching",
+   "type": "state",
+   "of": "shoes",
+   "desc": "the running shoes twitch occasionally",
+   "question": "Do the running shoes appear to be twitching?"
+  },
+  {
+   "id": "towel_weaving",
+   "type": "action",
+   "of": [
+    "towel_ribbon",
+    "barbell",
+    "dumbbells",
+    "shoes",
+    "yoga_mat_orb"
+   ],
+   "desc": "the ribbon of fabric weaves between the floating objects binding them",
+   "question": "Does the ribbon of fabric weave between the floating objects, binding them?"
+  },
+  {
+   "id": "water_reflects_transformations",
+   "type": "attribute",
+   "of": "puddle",
+   "desc": "the puddle reflects the transformations of the scene in microcosm",
+   "question": "Does the puddle reflect the transformations of the surrounding objects?"
+  },
+  {
+   "id": "barbell_runner",
+   "type": "attribute",
+   "of": "barbell",
+   "desc": "the ghostly image of a runner mid-sprint frozen in motion inside the barbell",
+   "question": "Does the semi-translucent barbell contain a ghostly image of a runner mid-sprint?"
+  },
+  {
+   "id": "dumbbells_veins",
+   "type": "attribute",
+   "of": "dumbbells",
+   "desc": "tiny glowing sap-like veins exposed by the split grain of the dumbbells",
+   "question": "Do the wooden dumbbells have tiny glowing sap-like veins exposed by their split grain?"
+  },
+  {
+   "id": "dumbbells_trees",
+   "type": "attribute",
+   "of": "dumbbells",
+   "desc": "miniature trees sprouting from the wooden dumbbells",
+   "question": "Are miniature trees sprouting from the wooden dumbbells?"
+  },
+  {
+   "id": "mirror_gyms",
+   "type": "attribute",
+   "of": "mirror",
+   "desc": "the mirror reflects mirrored gyms with subtle differences including one with the barbell in motion, one where the water bottle has grown into a forest, and one where the running shoes are walking",
+   "question": "Does the mirror reflect an endless hallway of mirrored gyms with subtle differences, such as a barbell in motion, a water bottle grown into a forest, and walking running shoes?"
+  },
+  {
+   "id": "sub_gym_unison",
+   "type": "attribute",
+   "of": "sub_gym",
+   "desc": "identical objects in the subterranean gym perform in perfect unison with their above-ground counterparts",
+   "question": "Do the identical objects in the subterranean gym perform in perfect unison with their above-ground counterparts?"
+  },
+  {
+   "id": "treadmill_reflection",
+   "type": "relation",
+   "of": [
+    "treadmill",
+    "mirror"
+   ],
+   "desc": "the ghostly runner in the barbell runs on the treadmill in the reflection of the mirror",
+   "question": "Is the ghostly runner in the barbell running on the treadmill in the reflection of the mirror?"
+  },
+  {
+   "id": "puddle_rippling",
+   "type": "state",
+   "of": "puddle",
+   "desc": "the puddle is rippling",
+   "question": "Is the puddle rippling?"
+  },
+  {
+   "id": "shoes_knots_looping",
+   "type": "attribute",
+   "of": "shoes",
+   "desc": "strange, looping shapes in the shoelace knots",
+   "question": "Are there strange, looping shapes in the shoelace knots?"
+  },
+  {
+   "id": "shoe_lifted",
+   "type": "state",
+   "of": "shoes",
+   "desc": "one shoe is slightly lifted",
+   "question": "Is one shoe slightly lifted?"
+  },
+  {
+   "id": "mirror_glass_rippling",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror glass is rippling like water",
+   "question": "Is the mirror glass rippling like water?"
+  },
+  {
+   "id": "orb_pulsing_light",
+   "type": "state",
+   "of": "yoga_mat_orb",
+   "desc": "the orb is emitting soft, pulsing light",
+   "question": "Is the orb emitting soft, pulsing light?"
+  },
+  {
+   "id": "barbell_runner_inside",
+   "type": "attribute",
+   "of": "barbell",
+   "desc": "a ghostly image of a runner visible inside the barbell",
+   "question": "Is a ghostly image of a runner visible inside the barbell?"
+  },
+  {
+   "id": "dumbbells_small_trees",
+   "type": "attribute",
+   "of": "dumbbells",
+   "desc": "small trees growing from the dumbbells",
+   "question": "Are small trees growing from the dumbbells?"
+  },
+  {
+   "id": "bottle_cap_askew",
+   "type": "attribute",
+   "of": "water_bottle",
+   "desc": "the water bottle has an askew cap",
+   "question": "Does the water bottle have an askew cap?"
+  },
+  {
+   "id": "towel_woven",
+   "type": "state",
+   "of": "towel_ribbon",
+   "desc": "the ribbon of fabric is woven between objects",
+   "question": "Is the ribbon of fabric woven between objects?"
+  },
+  {
+   "id": "trees_barbell_leaves",
+   "type": "attribute",
+   "of": "dumbbells",
+   "desc": "the trees have barbell-shaped leaves",
+   "question": "Do the trees have barbell-shaped leaves?"
+  },
+  {
+   "id": "roots_into_floor",
+   "type": "state",
+   "of": "dumbbells",
+   "desc": "the roots go into the floor",
+   "question": "Do the roots go into the floor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "dumbbells",
+   "to": "barbell",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dumbbells",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "water_bottle",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "shoes",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0376",
+ "prompt": "In the heart of a dimly lit, cluttered home gym, the barbell rests diagonally across two wooden dumbbells, their worn surfaces gleaming faintly under the flickering overhead light. A water bottle lies on its side nearby, its cap askew, spilling a small, silver puddle onto the cracked tile floor. The water, oddly iridescent, seems to ripple without wind or touch, as if disturbed by an unseen presence. A pair of running shoes, laced tightly together, sits just beyond the spill, one foot slightly lifted as if mid-step. The laces are knotted into strange, looping shapes that pulse faintly, as if breathing in sync with the rhythm of a heartbeat that isn’t there. Above them, the barbell has begun to morph, its metallic sheen shifting to a semi-translucent state, revealing within it the ghostly image of a runner mid-sprint, frozen in motion. The wooden dumbbells, now humming with a low resonance, seem to grow roots into the floor, their grain splitting open to expose tiny, glowing sap-like veins. From these veins sprout miniature trees with barbell-shaped leaves that sway even though no breeze is present. A mirror hangs askew on the wall, its glass rippling like water, reflecting not the room but an endless hallway of mirrored gyms, each with the same setup but subtly different: one with the barbell in motion, another where the water bottle has grown into a small forest, and yet another where the running shoes are walking on their own. A clock on the wall ticks backwards, its hands circling in slow, deliberate loops that somehow make the room feel both timeless and fractured. The tiles beneath the water puddle have begun to shift, flipping like puzzle pieces to reveal a subterranean gym far below, where identical objects perform in perfect unison with their above-ground counterparts. In one corner, a treadmill powers itself, the ghostly runner in the barbell running on it in the reflection of the mirror, the motion causing the real barbell to vibrate and flicker. The air shimmers with static, each breath carrying the scent of wet earth and ozone, as if the gym is on the verge of becoming a portal. A yoga mat, half-buried in the floor’s shifting tiles, slowly unrolls and inflates into a hovering orb, emitting soft, pulsing light that interacts with the mirror’s reflections, creating ripples that affect the trees made of dumbbells. The running shoes twitch occasionally, as if responding to the ghost runner’s cadence, and one of them begins to levitate, tracing a slow spiral in the air. A gym towel, previously lying crumpled, unrolls into a ribbon of fabric that weaves between the floating objects, binding them in a surreal, invisible net of movement and purpose. Every object is now in motion, in some form—rotating, vibrating, or transforming—yet the scene remains oddly serene, as if this chaotic beauty is the only true state of balance. The barbell and dumbbells, once rigid and separate, now form a symbiotic structure, their boundaries blurring in the ambient glow of the space. The spilled water reflects all these transformations in microcosm, a shimmering pond of impossible moments frozen and flowing at once. The entire scene is a paradoxical dance of stillness and motion, of tangible and surreal, a gym that is no longer a gym but a gateway to an infinite loop of potential and paradox.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 7,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 11,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,309 @@
+{
+ "style": "oil painting, dim lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dim backstage area with a wall and a mirror",
+   "question": "Does the image show a dim backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    150,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    300,
+    300,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large worn wooden crate",
+   "question": "Is there a large worn wooden crate?",
+   "box": [
+    400,
+    500,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    480,
+    480,
+    620,
+    600
+   ]
+  },
+  {
+   "id": "dancer",
+   "type": "entity",
+   "class": "dancer",
+   "plural": "dancers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dancer in white tights",
+   "question": "Is there a dancer in white tights?",
+   "box": [
+    750,
+    150,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "ropes",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of coiled ropes",
+   "question": "Is there a pile of coiled ropes?",
+   "box": [
+    850,
+    700,
+    1000,
+    900
+   ]
+  },
+  {
+   "id": "man_script",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a script",
+   "question": "Is the man wearing a red scarf holding a script?"
+  },
+  {
+   "id": "man_pencil",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a pencil",
+   "question": "Is the man wearing a red scarf holding a pencil?"
+  },
+  {
+   "id": "man_looking_down",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf looks down",
+   "question": "Does the man wearing a red scarf look down?"
+  },
+  {
+   "id": "woman_looking_script",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress looks at the script",
+   "question": "Does the woman in the blue dress look at the script?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress leans forward",
+   "question": "Does the woman in the blue dress lean forward?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat sleeps",
+   "question": "Is the black cat sleeping?"
+  },
+  {
+   "id": "dancer_pointing",
+   "type": "state",
+   "of": "dancer",
+   "desc": "the dancer in white tights points",
+   "question": "Is the dancer in white tights pointing?"
+  },
+  {
+   "id": "dancer_poised",
+   "type": "state",
+   "of": "dancer",
+   "desc": "the dancer in white tights maintains a poised stance",
+   "question": "Does the dancer in white tights maintain a poised stance?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man wearing a red scarf hands a pencil to the woman in the blue dress",
+   "question": "Is the man wearing a red scarf handing a pencil to the woman in the blue dress?"
+  },
+  {
+   "id": "woman_next_to_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is next to the man wearing a red scarf",
+   "question": "Is the woman in the blue dress next to the man wearing a red scarf?"
+  },
+  {
+   "id": "crate_center",
+   "type": "state",
+   "of": "crate",
+   "desc": "the large wooden crate is in the center of the backstage area",
+   "question": "Is the large wooden crate in the center of the backstage area?"
+  },
+  {
+   "id": "cat_on_crate",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the black cat is on top of the large wooden crate",
+   "question": "Is the black cat on top of the large wooden crate?"
+  },
+  {
+   "id": "dancer_points_mirror",
+   "type": "relation",
+   "of": [
+    "dancer",
+    "mirror"
+   ],
+   "desc": "the dancer in white tights points toward the mirror on the wall",
+   "question": "Does the dancer in white tights point toward the mirror on the wall?"
+  },
+  {
+   "id": "dancer_near_ropes",
+   "type": "relation",
+   "of": [
+    "dancer",
+    "ropes"
+   ],
+   "desc": "the dancer in white tights is near the pile of coiled ropes",
+   "question": "Is the dancer in white tights near the pile of coiled ropes?"
+  },
+  {
+   "id": "no_audience",
+   "type": "absent",
+   "desc": "an audience",
+   "question": "Is there an audience visible in the image?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf stands",
+   "question": "Is the man wearing a red scarf standing?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress sits",
+   "question": "Is the woman in the blue dress sitting?"
+  },
+  {
+   "id": "crate_on_floor",
+   "type": "state",
+   "of": "crate",
+   "desc": "the large wooden crate rests on the floor",
+   "question": "Does the large wooden crate rest on the floor of the backstage area?"
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror on the wall reflecting darkness",
+   "question": "Is there a mirror on the wall reflecting darkness?",
+   "box": [
+    850,
+    100,
+    1000,
+    400
+   ]
+  },
+  {
+   "id": "script_pages",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the script held by the man has yellowed pages",
+   "question": "Does the script held by the man have yellowed pages?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0137",
+ "prompt": "In this oil painting, a man in a red scarf stands on the left side of the dim backstage area. He is holding a script tightly. Next to him sits a woman in a blue dress who is looking at the script he holds. In the center, a large wooden crate rests on the floor. A cat with black fur sleeps on top of the crate. To the right, a dancer in white tights points toward a mirror on the wall. The dancer is standing near a pile of ropes. There is no audience visible in the scene. The man in the red scarf is handing a pencil to the woman in the blue dress. The cat with black fur is resting peacefully. The dancer in white tights maintains a poised stance. The wooden crate appears worn and sturdy. The mirror reflects only darkness. The ropes are coiled neatly. The script has yellowed pages. The woman in the blue dress leans forward slightly. The man in the red scarf looks down at her.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

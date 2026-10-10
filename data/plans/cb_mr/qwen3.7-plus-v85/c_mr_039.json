@@ -1,0 +1,397 @@
+{
+ "style": "cinematic sci-fi realism",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling alien marketplace on a desert planet",
+   "question": "Does the image show a bustling alien marketplace on a desert planet?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "market stall",
+   "plural": "market stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a market stall",
+   "question": "Is there a market stall?",
+   "box": [
+    200,
+    400,
+    824,
+    900
+   ]
+  },
+  {
+   "id": "merchant",
+   "type": "entity",
+   "class": "alien merchant",
+   "plural": "alien merchants",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall alien merchant with green skin",
+   "question": "Is there a tall alien merchant with green skin?",
+   "box": [
+    650,
+    100,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "astronaut",
+   "type": "entity",
+   "class": "human astronaut",
+   "plural": "human astronauts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a human astronaut in a bulky white spacesuit",
+   "question": "Is there a human astronaut in a bulky white spacesuit?",
+   "box": [
+    100,
+    250,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "crystal",
+   "type": "entity",
+   "class": "crystal",
+   "plural": "crystals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glowing, floating crystal",
+   "question": "Is there a glowing, floating crystal?",
+   "box": [
+    450,
+    300,
+    574,
+    424
+   ]
+  },
+  {
+   "id": "cage",
+   "type": "entity",
+   "class": "cage",
+   "plural": "cages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cage",
+   "question": "Is there a cage?",
+   "box": [
+    300,
+    550,
+    420,
+    670
+   ]
+  },
+  {
+   "id": "creatures",
+   "type": "entity",
+   "class": "creature",
+   "plural": "creatures",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two small, furry, six-legged creatures",
+   "question": "Are there two small, furry, six-legged creatures?",
+   "box": [
+    320,
+    580,
+    400,
+    650
+   ]
+  },
+  {
+   "id": "fruits",
+   "type": "entity",
+   "class": "fruit",
+   "plural": "fruits",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four purple fruits",
+   "question": "Are there four purple fruits?",
+   "box": [
+    440,
+    550,
+    600,
+    670
+   ]
+  },
+  {
+   "id": "coins",
+   "type": "entity",
+   "class": "coin",
+   "plural": "coins",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five metallic coins",
+   "question": "Are there five metallic coins?",
+   "box": [
+    620,
+    580,
+    750,
+    650
+   ]
+  },
+  {
+   "id": "second_alien",
+   "type": "entity",
+   "class": "alien",
+   "plural": "aliens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a larger, different alien",
+   "question": "Is there a larger, different alien?",
+   "box": [
+    50,
+    150,
+    250,
+    600
+   ]
+  },
+  {
+   "id": "scanner",
+   "type": "attribute",
+   "of": "astronaut",
+   "desc": "the astronaut holds a scanner device",
+   "question": "Is the astronaut holding a scanner device?"
+  },
+  {
+   "id": "merchant_holding_crystal",
+   "type": "attribute",
+   "of": "merchant",
+   "desc": "the merchant holds up the glowing crystal",
+   "question": "Is the merchant holding up the glowing crystal?"
+  },
+  {
+   "id": "fruits_bizarre_looking",
+   "type": "state",
+   "of": "fruits",
+   "desc": "the purple fruits look bizarre",
+   "question": "Do the purple fruits look bizarre?"
+  },
+  {
+   "id": "merchant_pushing_fruit",
+   "type": "action",
+   "of": [
+    "merchant",
+    "fruits"
+   ],
+   "desc": "the merchant pushes the pile of fruit towards the astronaut",
+   "question": "Is the merchant pushing the pile of fruit towards the astronaut?"
+  },
+  {
+   "id": "astronaut_pointing_scanner",
+   "type": "action",
+   "of": [
+    "astronaut",
+    "crystal"
+   ],
+   "desc": "the astronaut points the scanner at the crystal",
+   "question": "Is the astronaut pointing the scanner at the crystal?"
+  },
+  {
+   "id": "merchant_behind_stall",
+   "type": "relation",
+   "of": [
+    "merchant",
+    "stall"
+   ],
+   "desc": "the merchant stands behind the stall",
+   "question": "Is the merchant standing behind the stall?"
+  },
+  {
+   "id": "stall_between",
+   "type": "relation",
+   "of": [
+    "stall",
+    "merchant",
+    "astronaut"
+   ],
+   "desc": "the stall is between the merchant and the astronaut",
+   "question": "Is the stall positioned between the merchant and the astronaut?"
+  },
+  {
+   "id": "cage_left_of_fruits",
+   "type": "relation",
+   "of": [
+    "cage",
+    "fruits"
+   ],
+   "desc": "the cage is to the left of the pile of purple fruits",
+   "question": "Is the cage to the left of the pile of purple fruits?"
+  },
+  {
+   "id": "creatures_in_cage",
+   "type": "relation",
+   "of": [
+    "creatures",
+    "cage"
+   ],
+   "desc": "the creatures are inside the cage",
+   "question": "Are the creatures inside the cage?"
+  },
+  {
+   "id": "items_on_stall_cage",
+   "type": "relation",
+   "of": [
+    "cage",
+    "stall"
+   ],
+   "desc": "the cage is on the stall",
+   "question": "Is the cage on the stall?"
+  },
+  {
+   "id": "fruits_on_stall",
+   "type": "relation",
+   "of": [
+    "fruits",
+    "stall"
+   ],
+   "desc": "the fruits are on the stall",
+   "question": "Are the fruits on the stall?"
+  },
+  {
+   "id": "coins_on_stall",
+   "type": "relation",
+   "of": [
+    "coins",
+    "stall"
+   ],
+   "desc": "the coins are on the stall",
+   "question": "Are the coins on the stall?"
+  },
+  {
+   "id": "crystal_larger_than_cage",
+   "type": "relation",
+   "of": [
+    "crystal",
+    "cage"
+   ],
+   "desc": "the crystal is larger than the cage",
+   "question": "Is the crystal visually larger than the cage?"
+  },
+  {
+   "id": "second_alien_walking",
+   "type": "state",
+   "of": "second_alien",
+   "desc": "the larger alien is walking",
+   "question": "Is the larger alien walking?"
+  },
+  {
+   "id": "second_alien_behind_astronaut",
+   "type": "relation",
+   "of": [
+    "second_alien",
+    "astronaut"
+   ],
+   "desc": "the larger alien is behind the astronaut",
+   "question": "Is the larger alien behind the astronaut?"
+  },
+  {
+   "id": "merchant_standing",
+   "type": "state",
+   "of": "merchant",
+   "desc": "the tall, three-eyed alien merchant with green skin is standing",
+   "question": "Is the tall, three-eyed alien merchant with green skin standing?"
+  },
+  {
+   "id": "astronaut_standing",
+   "type": "state",
+   "of": "astronaut",
+   "desc": "the human astronaut in a bulky white spacesuit is standing",
+   "question": "Is the human astronaut in a bulky white spacesuit standing?"
+  },
+  {
+   "id": "merchant_eyes",
+   "type": "attribute",
+   "of": "merchant",
+   "desc": "the alien merchant has three eyes",
+   "question": "Does the alien merchant have three eyes?"
+  },
+  {
+   "id": "merchant_hands",
+   "type": "attribute",
+   "of": "merchant",
+   "desc": "the alien merchant has three hands",
+   "question": "Does the alien merchant have three hands?"
+  },
+  {
+   "id": "astronaut_helmet",
+   "type": "attribute",
+   "of": "astronaut",
+   "desc": "the human astronaut wears a helmet with a reflective visor",
+   "question": "Does the human astronaut wear a helmet with a reflective visor?"
+  },
+  {
+   "id": "stall_awning",
+   "type": "attribute",
+   "of": "stall",
+   "desc": "the market stall has an awning made of strange fabric",
+   "question": "Does the market stall have an awning made of strange fabric?"
+  },
+  {
+   "id": "merchant_taller_astronaut",
+   "type": "relation",
+   "of": [
+    "merchant",
+    "astronaut"
+   ],
+   "desc": "the alien merchant is taller than the human astronaut",
+   "question": "Is the alien merchant taller than the human astronaut?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stall",
+   "to": "cage",
+   "kind": "support"
+  },
+  {
+   "from": "stall",
+   "to": "fruits",
+   "kind": "support"
+  },
+  {
+   "from": "stall",
+   "to": "coins",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_039",
+ "prompt": "In a bustling alien marketplace on a desert planet, a tall, three-eyed alien merchant with green skin is standing behind a market stall. The stall has an awning made of strange fabric. The merchant, who is taller than the human astronaut, is holding up a glowing, floating crystal and showing it to a human astronaut in a bulky white spacesuit. The astronaut is pointing a scanner device at the crystal. The market stall is between the merchant and the astronaut. On the stall, there is a cage to the left of a pile of bizarre-looking purple fruits. The cage contains two small, furry, six-legged creatures. The number of purple fruits is twice the number of creatures in the cage. Also on the stall are some metallic coins, and their number is one more than the number of purple fruits. The floating crystal is larger than the cage on the stall. The astronaut is standing closer to the stall than a larger, different alien who is walking behind the astronaut. The merchant is using one of its three hands to push the pile of fruit towards the astronaut. The astronaut has a helmet with a reflective visor.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node astronaut: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 1,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

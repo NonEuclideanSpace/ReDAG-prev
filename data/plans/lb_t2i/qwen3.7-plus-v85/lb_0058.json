@@ -1,0 +1,630 @@
+{
+ "style": "surreal photorealistic, dynamic motion blur, warm golden lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with a deep blue and gold shag carpet",
+   "question": "Does the image show a room with a deep blue and gold shag carpet?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ball",
+   "type": "entity",
+   "class": "rubber ball",
+   "plural": "rubber balls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red rubber ball",
+   "question": "Is there a red rubber ball?",
+   "box": [
+    480,
+    850,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "blocks",
+   "type": "entity",
+   "class": "wooden block",
+   "plural": "wooden blocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a tower of hand-painted wooden blocks",
+   "question": "Is there a tower of hand-painted wooden blocks?",
+   "box": [
+    700,
+    600,
+    800,
+    750
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small music box",
+   "question": "Is there a small music box?",
+   "box": [
+    650,
+    620,
+    720,
+    680
+   ]
+  },
+  {
+   "id": "curtains",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "translucent handwoven curtains",
+   "question": "Are there translucent handwoven curtains?",
+   "box": [
+    800,
+    0,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "bookshelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bookshelf",
+   "question": "Is there a bookshelf?",
+   "box": [
+    100,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "cactus",
+   "type": "entity",
+   "class": "potted cactus",
+   "plural": "potted cacti",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted cactus",
+   "question": "Is there a potted cactus?",
+   "box": [
+    120,
+    350,
+    220,
+    500
+   ]
+  },
+  {
+   "id": "painting",
+   "type": "entity",
+   "class": "framed painting",
+   "plural": "framed paintings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a framed painting of a desert landscape",
+   "question": "Is there a framed painting of a desert landscape?",
+   "box": [
+    500,
+    100,
+    700,
+    300
+   ]
+  },
+  {
+   "id": "airplanes",
+   "type": "entity",
+   "class": "paper airplane",
+   "plural": "paper airplanes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hand-folded paper airplanes with tiny handwriting",
+   "question": "Are there hand-folded paper airplanes with tiny handwriting?",
+   "box": [
+    300,
+    400,
+    400,
+    450
+   ]
+  },
+  {
+   "id": "flying_airplane",
+   "type": "entity",
+   "class": "paper airplane",
+   "plural": "paper airplanes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single hand-folded paper airplane in mid-air",
+   "question": "Is there a single hand-folded paper airplane in mid-air?",
+   "box": [
+    500,
+    300,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "pendulum",
+   "type": "entity",
+   "class": "pendulum mechanism",
+   "plural": "pendulum mechanisms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a complex pendulum mechanism suspended from the ceiling",
+   "question": "Is there a complex pendulum mechanism?",
+   "box": [
+    600,
+    0,
+    700,
+    200
+   ]
+  },
+  {
+   "id": "jar",
+   "type": "entity",
+   "class": "glass jar",
+   "plural": "glass jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass jar containing fireflies",
+   "question": "Is there a glass jar?",
+   "box": [
+    750,
+    400,
+    850,
+    550
+   ]
+  },
+  {
+   "id": "fireflies",
+   "type": "entity",
+   "class": "firefly",
+   "plural": "fireflies",
+   "count": 2,
+   "count_exact": false,
+   "desc": "glowing fireflies inside the jar",
+   "question": "Are there glowing fireflies inside the jar?",
+   "box": [
+    760,
+    420,
+    840,
+    530
+   ]
+  },
+  {
+   "id": "ball_stopped",
+   "type": "relation",
+   "of": [
+    "ball",
+    "bookshelf"
+   ],
+   "desc": "the red rubber ball is stationary at the base of the bookshelf",
+   "question": "Is the red rubber ball stationary at the base of the bookshelf?"
+  },
+  {
+   "id": "blocks_tipping",
+   "type": "state",
+   "of": "blocks",
+   "desc": "the tower of wooden blocks is tipping over",
+   "question": "Is the tower of wooden blocks tipping over?"
+  },
+  {
+   "id": "music_box_spinning",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the small music box is spinning",
+   "question": "Is the small music box spinning?"
+  },
+  {
+   "id": "cactus_leaning",
+   "type": "state",
+   "of": "cactus",
+   "desc": "the potted cactus is leaning to the left",
+   "question": "Is the potted cactus leaning to the left?"
+  },
+  {
+   "id": "painting_vibrating",
+   "type": "state",
+   "of": "painting",
+   "desc": "the framed painting has blurred edges",
+   "question": "Does the framed painting have blurred edges?"
+  },
+  {
+   "id": "airplanes_teetering",
+   "type": "state",
+   "of": "airplanes",
+   "desc": "the stack of paper airplanes is teetering",
+   "question": "Is the stack of paper airplanes teetering?"
+  },
+  {
+   "id": "pendulum_swinging",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the pendulum mechanism is swinging",
+   "question": "Is the pendulum mechanism swinging?"
+  },
+  {
+   "id": "jar_shifting",
+   "type": "state",
+   "of": "jar",
+   "desc": "the glass jar is shifting slightly",
+   "question": "Is the glass jar shifting slightly?"
+  },
+  {
+   "id": "ball_hits_blocks",
+   "type": "action",
+   "of": [
+    "ball",
+    "blocks"
+   ],
+   "desc": "the red rubber ball has struck the tower of blocks",
+   "question": "Has the red rubber ball struck the tower of blocks?"
+  },
+  {
+   "id": "block_hits_music_box",
+   "type": "action",
+   "of": [
+    "blocks",
+    "music_box"
+   ],
+   "desc": "a falling block strikes the music box",
+   "question": "Is a falling block striking the music box?"
+  },
+  {
+   "id": "airplane_brushes_string",
+   "type": "action",
+   "of": [
+    "flying_airplane",
+    "pendulum"
+   ],
+   "desc": "the flying paper airplane brushes against the pendulum string",
+   "question": "Is the flying paper airplane brushing against the pendulum string?"
+  },
+  {
+   "id": "twine_pulls_jar",
+   "type": "action",
+   "of": [
+    "pendulum",
+    "jar"
+   ],
+   "desc": "the pendulum pulls the jar via twine",
+   "question": "Is the pendulum pulling the jar via twine?"
+  },
+  {
+   "id": "blocks_on_windowsill",
+   "type": "relation",
+   "of": [
+    "blocks",
+    "windowsill"
+   ],
+   "desc": "the tower of blocks is stacked near the windowsill",
+   "question": "Is the tower of blocks stacked near the windowsill?"
+  },
+  {
+   "id": "music_box_on_windowsill",
+   "type": "relation",
+   "of": [
+    "music_box",
+    "windowsill"
+   ],
+   "desc": "the music box rests on the windowsill",
+   "question": "Does the music box rest on the windowsill?"
+  },
+  {
+   "id": "cactus_on_bookshelf",
+   "type": "relation",
+   "of": [
+    "cactus",
+    "bookshelf"
+   ],
+   "desc": "the potted cactus is perched on the edge of the bookshelf",
+   "question": "Is the potted cactus perched on the edge of the bookshelf?"
+  },
+  {
+   "id": "painting_on_wall",
+   "type": "relation",
+   "of": [
+    "painting",
+    "wall"
+   ],
+   "desc": "the framed painting hangs on the wall",
+   "question": "Does the framed painting hang on the wall?"
+  },
+  {
+   "id": "airplanes_near_bookshelf",
+   "type": "relation",
+   "of": [
+    "airplanes",
+    "bookshelf"
+   ],
+   "desc": "the stack of paper airplanes is near the bookshelf",
+   "question": "Is the stack of paper airplanes near the bookshelf?"
+  },
+  {
+   "id": "shadows_on_bookshelf",
+   "type": "relation",
+   "of": [
+    "curtains",
+    "bookshelf"
+   ],
+   "desc": "kaleidoscopic shadows from the curtains ripple across the bookshelf",
+   "question": "Do kaleidoscopic shadows from the curtains ripple across the bookshelf?"
+  },
+  {
+   "id": "light_on_cactus",
+   "type": "relation",
+   "of": [
+    "curtains",
+    "cactus"
+   ],
+   "desc": "sunlight through the curtains bathes the cactus",
+   "question": "Does sunlight through the curtains bathe the cactus?"
+  },
+  {
+   "id": "twine",
+   "type": "entity",
+   "class": "twine",
+   "plural": "twines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a length of twine",
+   "question": "Is there a length of twine?",
+   "box": [
+    600,
+    400,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "string",
+   "type": "entity",
+   "class": "string",
+   "plural": "strings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a string",
+   "question": "Is there a string?",
+   "box": [
+    500,
+    200,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "dust",
+   "type": "entity",
+   "class": "dust particles",
+   "plural": "dust particles",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floating dust particles illuminated by light",
+   "question": "Are there floating dust particles visible in the light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "ball_caroms",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is moving wildly across the carpet",
+   "question": "Is the red rubber ball depicted in motion across the carpet?"
+  },
+  {
+   "id": "fireflies_glowing",
+   "type": "state",
+   "of": "fireflies",
+   "desc": "the fireflies are glowing with bioluminescence",
+   "question": "Are the fireflies glowing?"
+  },
+  {
+   "id": "pendulum_from_ceiling",
+   "type": "relation",
+   "of": [
+    "pendulum",
+    "ceiling"
+   ],
+   "desc": "the pendulum mechanism is suspended from the ceiling",
+   "question": "Is the pendulum mechanism suspended from the ceiling?"
+  },
+  {
+   "id": "twine_tied_to_jar",
+   "type": "relation",
+   "of": [
+    "twine",
+    "jar"
+   ],
+   "desc": "the twine is tied to the jar",
+   "question": "Is the twine tied to the jar?"
+  },
+  {
+   "id": "pendulum_tugs_twine",
+   "type": "action",
+   "of": [
+    "pendulum",
+    "twine"
+   ],
+   "desc": "the pendulum tugs on the twine",
+   "question": "Is the pendulum tugging on the twine?"
+  },
+  {
+   "id": "airplane_glides_past_curtains",
+   "type": "relation",
+   "of": [
+    "flying_airplane",
+    "curtains"
+   ],
+   "desc": "the flying paper airplane glides past the curtains",
+   "question": "Is the flying paper airplane gliding past the curtains?"
+  },
+  {
+   "id": "ball_on_carpet",
+   "type": "state",
+   "of": "ball",
+   "desc": "the red rubber ball is on the carpet",
+   "question": "Is the red rubber ball on the carpet?"
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a windowsill",
+   "question": "Is there a windowsill?",
+   "box": [
+    0,
+    400,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "wall",
+   "type": "entity",
+   "class": "wall",
+   "plural": "walls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the back wall",
+   "question": "Is there a back wall?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "ceiling",
+   "type": "entity",
+   "class": "ceiling",
+   "plural": "ceilings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "the ceiling",
+   "question": "Is there a ceiling?",
+   "box": [
+    0,
+    0,
+    1024,
+    100
+   ]
+  },
+  {
+   "id": "airplanes_marked",
+   "type": "attribute",
+   "of": "airplanes",
+   "desc": "the paper airplanes are marked with notes in tiny handwriting",
+   "question": "Are the paper airplanes marked with notes in tiny handwriting?"
+  },
+  {
+   "id": "jar_contains_fireflies",
+   "type": "attribute",
+   "of": "jar",
+   "desc": "the glass jar contains fireflies",
+   "question": "Does the glass jar contain fireflies?"
+  },
+  {
+   "id": "string_part_pendulum",
+   "type": "relation",
+   "of": [
+    "string",
+    "pendulum"
+   ],
+   "desc": "the string is part of the pendulum mechanism",
+   "question": "Is the string part of the pendulum mechanism?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bookshelf",
+   "to": "cactus",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "blocks",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "music_box",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "blocks",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "music_box",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0058",
+ "prompt": "The red rubber ball, defying all sense of gravity and momentum, caroms wildly across the geometric pattern of the deep blue and gold shag carpet, its bounce triggering a chain reaction that begins with the tipping of a precarious tower of hand-painted wooden blocks stacked near the windowsill like a forgotten game abandoned mid-thought. As the first block falls, it strikes a small music box resting on the windowsill, sending it spinning into the sunlight that streams in through translucent, handwoven curtains, their delicate weave casting kaleidoscopic shadows that ripple and twist across the bookshelf in slow, breathing waves. The music box, once activated by the accidental nudge, emits a soft, melancholic melody that seems to vibrate through the room, subtly shifting the atmosphere as if sound had a physical form. The potted cactus, perched on the edge of the bookshelf and leaning precariously to the left as if watching the scene unfold with wary curiosity, is now bathed in this golden light, its spines catching the beams and refracting them into tiny, glittering stars that flicker across the back wall. A framed painting of a desert landscape on the wall begins to vibrate faintly in response to the sound, the colors bleeding slightly at the edges as if the image is struggling to escape the confines of its frame. Nearby, a stack of paper airplanes—each one hand-folded and marked with notes in tiny handwriting—teeters under the vibrations, and one, its wings trembling, finally launches itself into the air with a silent sigh, gliding past the curtains and into the light. As it does, it brushes against a string that is part of a complex pendulum mechanism suspended from the ceiling, rigged to swing only in response to the slightest air disturbance. The pendulum swings, tugging gently on a length of twine that is tied to a jar of fireflies kept as if in some enchanted hibernation, the glass now shifting slightly as the twine tightens, waking the insects from their dreamlike state. They stir and glow, their soft bioluminescence mixing with the sunlight in the room, illuminating the floating dust particles like motes of stardust caught in a dream. At the same time, the music box melody crescendos and fades, leaving behind a silence so profound it seems to echo. In the center of it all, the rubber ball comes to a sudden stop against the base of the bookshelf, as if waiting for its next cue in this surreal symphony of objects in motion.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 35,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 7,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "blocks_near_windowsill",
+     "blocks_on_windowsill"
+    ]
+   ]
+  }
+ }
+}

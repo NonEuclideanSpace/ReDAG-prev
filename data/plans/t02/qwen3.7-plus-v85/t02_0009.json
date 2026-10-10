@@ -1,0 +1,126 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rocky mountain campsite with jagged peaks under a clear sky and open ground",
+   "question": "Does the background show a rocky mountain campsite with jagged peaks under a clear sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "hiker",
+   "type": "entity",
+   "class": "hiker",
+   "plural": "hikers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hiker in a blue jacket",
+   "question": "Is there a hiker in a blue jacket?",
+   "box": [
+    50,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "camper",
+   "type": "entity",
+   "class": "camper",
+   "plural": "campers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a camper in a green hat",
+   "question": "Is there a camper in a green hat?",
+   "box": [
+    624,
+    300,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "fire_pit",
+   "type": "entity",
+   "class": "fire pit",
+   "plural": "fire pits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small fire pit",
+   "question": "Is there a small fire pit?",
+   "box": [
+    700,
+    700,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "hiker_sitting",
+   "type": "state",
+   "of": "hiker",
+   "desc": "the hiker in the blue jacket is sitting",
+   "question": "Is the hiker in the blue jacket sitting?"
+  },
+  {
+   "id": "camper_standing",
+   "type": "state",
+   "of": "camper",
+   "desc": "the camper in the green hat is standing",
+   "question": "Is the camper in the green hat standing?"
+  },
+  {
+   "id": "hiker_mug",
+   "type": "attribute",
+   "of": "hiker",
+   "desc": "the hiker in the blue jacket holds a metal mug",
+   "question": "Is the hiker in the blue jacket holding a metal mug?"
+  },
+  {
+   "id": "camper_looking",
+   "type": "action",
+   "of": [
+    "camper",
+    "hiker"
+   ],
+   "desc": "the camper in the green hat looks at the hiker in the blue jacket",
+   "question": "Is the camper in the green hat looking at the hiker in the blue jacket?"
+  },
+  {
+   "id": "camper_near_pit",
+   "type": "relation",
+   "of": [
+    "camper",
+    "fire_pit"
+   ],
+   "desc": "the camper in the green hat is near the small fire pit",
+   "question": "Is the camper in the green hat near the small fire pit?"
+  },
+  {
+   "id": "no_tent",
+   "type": "absent",
+   "desc": "a tent",
+   "question": "Is there a tent visible in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0009",
+ "prompt": "In an anime style illustration, a hiker in a blue jacket sits on the left side of a rocky mountain campsite. A camper in a green hat stands on the right side near a small fire pit. The hiker in the blue jacket is holding a metal mug. The camper in the green hat is looking at the hiker in the blue jacket. There is no tent visible in the scene. The background features jagged peaks under a clear sky. The two figures are distinct and separated by the open ground. The composition focuses strictly on these two individuals and their immediate surroundings without additional clutter or distractions.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

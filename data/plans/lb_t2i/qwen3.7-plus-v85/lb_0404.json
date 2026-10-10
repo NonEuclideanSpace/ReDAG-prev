@@ -1,0 +1,496 @@
+{
+ "style": "surreal digital painting, dreamlike atmosphere, impossible geometry, golden hour lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a park with a low bloated sun, elongated shadows, and a sky of clouds stitched with gold threads",
+   "question": "Does the image show a park scene with a low bloated sun, elongated shadows, and a sky where clouds appear stitched with gold threads?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered wooden bench half-buried in sideways-growing ferns, with a cracked post revealing folded paper cranes",
+   "question": "Is there a weathered wooden bench half-buried in ferns, with a cracked post showing folded paper cranes inside?",
+   "box": [
+    50,
+    600,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "megaphone",
+   "type": "entity",
+   "class": "megaphone",
+   "plural": "megaphones",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an upside-down megaphone",
+   "question": "Is there an upside-down megaphone?",
+   "box": [
+    150,
+    620,
+    250,
+    700
+   ]
+  },
+  {
+   "id": "umbrella",
+   "type": "entity",
+   "class": "umbrella",
+   "plural": "umbrellas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open umbrella",
+   "question": "Is there an open umbrella?",
+   "box": [
+    300,
+    500,
+    500,
+    700
+   ]
+  },
+  {
+   "id": "pages",
+   "type": "entity",
+   "class": "page",
+   "plural": "pages",
+   "count": 2,
+   "count_exact": false,
+   "desc": "loose pages fluttering in the air and on the ground",
+   "question": "Are there loose pages visible in the image?",
+   "box": [
+    400,
+    300,
+    800,
+    800
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child wearing mismatched socks",
+   "question": "Is there a child wearing mismatched socks?",
+   "box": [
+    600,
+    650,
+    750,
+    950
+   ]
+  },
+  {
+   "id": "tree",
+   "type": "entity",
+   "class": "tree",
+   "plural": "trees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tree with branches bending at impossible angles",
+   "question": "Is there a tree with branches bending at impossible angles?",
+   "box": [
+    700,
+    100,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "bicycle",
+   "type": "entity",
+   "class": "bicycle",
+   "plural": "bicycles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bicycle with a punctured tire",
+   "question": "Is there a bicycle with a punctured tire?",
+   "box": [
+    750,
+    600,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "wooden_bird",
+   "type": "entity",
+   "class": "wooden bird",
+   "plural": "wooden birds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small wooden bird",
+   "question": "Is there a small wooden bird?",
+   "box": [
+    800,
+    620,
+    850,
+    670
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "paper lantern",
+   "plural": "paper lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a floating paper lantern",
+   "question": "Is there a floating paper lantern?",
+   "box": [
+    500,
+    100,
+    600,
+    200
+   ]
+  },
+  {
+   "id": "fern_roots",
+   "type": "entity",
+   "class": "ferns",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": false,
+   "desc": "overgrown ferns growing sideways",
+   "question": "Are there overgrown ferns growing sideways?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "megaphone_upside_down",
+   "type": "state",
+   "of": "megaphone",
+   "desc": "the megaphone is lying upside-down",
+   "question": "Is the megaphone lying upside-down?"
+  },
+  {
+   "id": "cord_coiled",
+   "type": "state",
+   "of": "megaphone",
+   "desc": "the megaphone's cord is coiled neatly beside it",
+   "question": "Is the megaphone's cord coiled neatly beside the megaphone?"
+  },
+  {
+   "id": "umbrella_open",
+   "type": "state",
+   "of": "umbrella",
+   "desc": "the umbrella is flipped open",
+   "question": "Is the umbrella flipped open?"
+  },
+  {
+   "id": "child_wonder",
+   "type": "state",
+   "of": "child",
+   "desc": "the child has a face of perfect wonder",
+   "question": "Does the child have a face of perfect wonder?"
+  },
+  {
+   "id": "bird_holding_paper",
+   "type": "state",
+   "of": "wooden_bird",
+   "desc": "the wooden bird holds a folded newspaper in its beak",
+   "question": "Is the wooden bird holding a folded newspaper in its beak?"
+  },
+  {
+   "id": "lantern_floating",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the paper lantern is floating in the air",
+   "question": "Is the paper lantern floating in the air?"
+  },
+  {
+   "id": "megaphone_on_bench",
+   "type": "relation",
+   "of": [
+    "megaphone",
+    "bench"
+   ],
+   "desc": "the megaphone lies on the bench",
+   "question": "Is the megaphone lying on the bench?"
+  },
+  {
+   "id": "umbrella_near_megaphone",
+   "type": "relation",
+   "of": [
+    "umbrella",
+    "megaphone"
+   ],
+   "desc": "the umbrella is near the megaphone",
+   "question": "Is the umbrella positioned near the megaphone?"
+  },
+  {
+   "id": "child_chasing_page",
+   "type": "action",
+   "of": [
+    "child",
+    "pages"
+   ],
+   "desc": "the child chases a page that looks like a torn letter fragment",
+   "question": "Is the child chasing a page that resembles a torn letter fragment?"
+  },
+  {
+   "id": "bicycle_against_tree",
+   "type": "relation",
+   "of": [
+    "bicycle",
+    "tree"
+   ],
+   "desc": "the bicycle leans against the tree trunk",
+   "question": "Is the bicycle leaning against the tree trunk?"
+  },
+  {
+   "id": "bird_on_bike",
+   "type": "relation",
+   "of": [
+    "wooden_bird",
+    "bicycle"
+   ],
+   "desc": "the wooden bird is perched on the bicycle seat",
+   "question": "Is the wooden bird perched on the bicycle seat?"
+  },
+  {
+   "id": "cord_around_tree",
+   "type": "relation",
+   "of": [
+    "megaphone",
+    "tree"
+   ],
+   "desc": "the megaphone cord wraps around the base of the tree",
+   "question": "Does the megaphone cord wrap around the base of the tree?"
+  },
+  {
+   "id": "grass_folding_page",
+   "type": "state",
+   "of": "pages",
+   "desc": "the grass bends over a fallen page",
+   "question": "Does the grass bend over one of the fallen pages as if folding it?"
+  },
+  {
+   "id": "fern_on_bench",
+   "type": "relation",
+   "of": [
+    "bench",
+    "fern_roots"
+   ],
+   "desc": "the bench is half-buried in the overgrown ferns",
+   "question": "Is the weathered wooden bench half-buried in the overgrown ferns?"
+  },
+  {
+   "id": "pen_in_tire",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "the bicycle has a pen piercing its punctured tire",
+   "question": "Does the bicycle have a pen piercing its punctured tire?"
+  },
+  {
+   "id": "headline_visible",
+   "type": "attribute",
+   "of": "wooden_bird",
+   "desc": "the newspaper held by the wooden bird shows the headline 'Local Man Claims Time is Made of Postcards'",
+   "question": "Does the newspaper held by the wooden bird show the headline 'Local Man Claims Time is Made of Postcards'?"
+  },
+  {
+   "id": "letters_in_post",
+   "type": "attribute",
+   "of": "bench",
+   "desc": "the hollow in the bench post contains typewritten letters folded into cranes",
+   "question": "Does the hollow in the bench post contain typewritten letters folded into cranes?"
+  },
+  {
+   "id": "cord_at_base",
+   "type": "relation",
+   "of": [
+    "megaphone",
+    "tree"
+   ],
+   "desc": "the megaphone cord wraps around the root system at the base of the tree",
+   "question": "Does the megaphone cord wrap around the root system at the base of the tree?"
+  },
+  {
+   "id": "child_socks",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child wears mismatched socks",
+   "question": "Is the child wearing mismatched socks?"
+  },
+  {
+   "id": "tree_impossible",
+   "type": "state",
+   "of": "tree",
+   "desc": "the tree branches bend at impossible angles",
+   "question": "Do the tree branches bend at impossible angles?"
+  },
+  {
+   "id": "bicycle_punctured",
+   "type": "state",
+   "of": "bicycle",
+   "desc": "the bicycle tire is punctured by a pen",
+   "question": "Is the bicycle tire punctured by a pen?"
+  },
+  {
+   "id": "lantern_dim",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the paper lantern has a dim but persistent flame",
+   "question": "Does the paper lantern have a dim but persistent flame?"
+  },
+  {
+   "id": "bench_cracked",
+   "type": "state",
+   "of": "bench",
+   "desc": "a bench post is cracked open revealing a hollow",
+   "question": "Is a bench post cracked open, revealing a hollow?"
+  },
+  {
+   "id": "fern_on_tree",
+   "type": "relation",
+   "of": [
+    "fern_roots",
+    "tree"
+   ],
+   "desc": "the overgrown ferns grow around the tree roots",
+   "question": "Do the overgrown ferns grow around the tree roots?"
+  },
+  {
+   "id": "megaphone_unbalanced",
+   "type": "state",
+   "of": "megaphone",
+   "desc": "the megaphone is unbalanced",
+   "question": "Is the megaphone unbalanced?"
+  },
+  {
+   "id": "umbrella_ribs_flexing",
+   "type": "state",
+   "of": "umbrella",
+   "desc": "the umbrella ribs are flexing",
+   "question": "Are the umbrella ribs flexing?"
+  },
+  {
+   "id": "child_paused",
+   "type": "state",
+   "of": "child",
+   "desc": "the child is paused mid-stride",
+   "question": "Is the child paused mid-stride?"
+  },
+  {
+   "id": "child_wide_eyes",
+   "type": "state",
+   "of": "child",
+   "desc": "the child has wide eyes",
+   "question": "Does the child have wide eyes?"
+  },
+  {
+   "id": "tree_lattice_canopy",
+   "type": "state",
+   "of": "tree",
+   "desc": "the tree branches form a lattice-like canopy",
+   "question": "Do the tree branches form a lattice-like canopy?"
+  },
+  {
+   "id": "bird_newspaper",
+   "type": "attribute",
+   "of": "wooden_bird",
+   "desc": "the wooden bird has a folded newspaper clamped in its beak",
+   "question": "Does the wooden bird have a folded newspaper clamped in its beak?"
+  },
+  {
+   "id": "lantern_dim_flame",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the lantern has a dim flame",
+   "question": "Does the lantern have a dim flame?"
+  },
+  {
+   "id": "bicycle_pen_stuck",
+   "type": "attribute",
+   "of": "bicycle",
+   "desc": "a pen is stuck in the bicycle tire",
+   "question": "Is a pen stuck in the bicycle tire?"
+  },
+  {
+   "id": "ferns_at_base",
+   "type": "relation",
+   "of": [
+    "fern_roots",
+    "tree"
+   ],
+   "desc": "the ferns grow around the base of the tree",
+   "question": "Do the ferns grow around the base of the tree?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "megaphone",
+   "kind": "support"
+  },
+  {
+   "from": "bicycle",
+   "to": "wooden_bird",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0404",
+ "prompt": "The sun, low and bloated, casts elongated shadows across the park, where time seems to stretch and fold over itself like a piece of origami. A megaphone lies upside-down on a weathered wooden bench, its cord coiled neatly beside it like a sleeping serpent waiting to strike. A sudden gust of wind, thick with the scent of petrichor and forgotten ink, flips open a nearby umbrella—its ribs flexing in protest—as the canvas catches the megaphone’s mouthpiece, lifting it just enough to send a burst of wind through the treetops, shaking loose not leaves, but pages—some fluttering to the ground, others caught midair in a slow, spiraling dance. In the background, a child chases one such leaf, a torn scrap that looks uncannily like a fragment of handwritten letter, the ink smudged and blurred by the rain. The child, dressed in mismatched socks and mismatched thoughts, giggles with the kind of laughter that only comes when logic is suspended, and the leaf leads not forward, but sideways—toward a tree whose branches bend at impossible angles, forming a canopy that seems less a natural formation than an architectural impossibility, a lattice of limbs that loop back on themselves. A bicycle leans against the trunk, its tire punctured not by a nail but by a pen—metal and ink entwined in a silent pact. The seat of the bike is occupied by a small wooden bird, perched on a saddle with a folded newspaper clamped between its beak, the headline just visible: *Local Man Claims Time is Made of Postcards.* The bench, though solid enough to hold the megaphone, is actually half-buried in a patch of overgrown ferns that grow sideways, their fronds unspooling in the opposite direction of gravity, as if defying the very laws of growth. The cord of the megaphone snakes around the base of the tree, wrapping itself gently around the root system like a vine with memory, humming faintly with the static of a thousand forgotten voices. Above, the sky is a patchwork of clouds stitched together with threads of gold, each seam glowing as if someone has torn apart a tapestry and tried to reweave it while blindfolded. A paper lantern, its flame dim but persistent, floats between two realities—its flame fed not by wax, but by the wind itself, drawing breath from the movement of the leaf-chase, the umbrella’s sudden expansion, the coiled megaphone cord twitching slightly as if responding to a voice it once knew. A bench post is cracked open, revealing a hollow filled with typewritten letters, each one folded into a crane, their creases sharp and precise, yet each one slightly askew as if folded by someone whose hands moved to a different rhythm. The ground, too, plays its part: where the leaf falls, the grass rises to meet it, bending as if in recognition, then slowly folding over the page like a tongue lapping at a secret. The child, now paused mid-stride, looks up with wide eyes and a face of perfect wonder, as if understanding the rules of this world just enough to question them—and the world, in turn, seems to pause as well, hanging on the breath of that single moment, where every object is both cause and effect, every motion is both beginning and end, and the megaphone, now unbalanced, emits a single word: *Again.*",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay+dedupe",
+  "attempts": 3,
+  "warnings": [
+   "node bench: entity question is long (18 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 73,
+   "n_uncovered": 7,
+   "proposed": 4,
+   "ungrounded": 2,
+   "added": 1,
+   "dropped": 1
+  },
+  "atomize": {
+   "rewrites": 13,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 3,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "bird_perched",
+     "bird_on_bike"
+    ]
+   ]
+  }
+ }
+}

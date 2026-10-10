@@ -1,0 +1,340 @@
+{
+ "style": "oil painting with visible brushstrokes, misty dawn atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a misty village market at dawn",
+   "question": "Does the image depict a misty village market scene at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "wooden cart",
+   "plural": "wooden carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden cart",
+   "question": "Is there a wooden cart?",
+   "box": [
+    50,
+    400,
+    350,
+    700
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an old woman in a blue shawl",
+   "question": "Is there an old woman wearing a blue shawl?",
+   "box": [
+    280,
+    250,
+    450,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy wearing a yellow cap?",
+   "box": [
+    400,
+    300,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "baker",
+   "type": "entity",
+   "class": "baker",
+   "plural": "bakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a baker in a white apron",
+   "question": "Is there a baker wearing a white apron?",
+   "box": [
+    700,
+    250,
+    900,
+    700
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden table",
+   "question": "Is there a wooden table?",
+   "box": [
+    750,
+    500,
+    1000,
+    800
+   ]
+  },
+  {
+   "id": "bread",
+   "type": "entity",
+   "class": "bread loaf",
+   "plural": "bread loaves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of fresh bread loaves",
+   "question": "Is there a stack of fresh bread loaves?",
+   "box": [
+    800,
+    450,
+    950,
+    550
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    900,
+    480,
+    1000,
+    580
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    300,
+    800,
+    600,
+    950
+   ]
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the old woman in a blue shawl is standing",
+   "question": "Is the old woman in a blue shawl standing?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is sitting",
+   "question": "Is the black cat sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down and asleep",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "woman_beside_cart",
+   "type": "relation",
+   "of": [
+    "woman",
+    "cart"
+   ],
+   "desc": "the old woman in a blue shawl stands beside the wooden cart",
+   "question": "Is the old woman in a blue shawl standing beside the wooden cart?"
+  },
+  {
+   "id": "boy_taking_apple",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the young boy in a yellow cap reaches out to take a red apple from the old woman's hand",
+   "question": "Is the young boy in a yellow cap reaching out to take a red apple from the old woman's hand?"
+  },
+  {
+   "id": "baker_pointing",
+   "type": "action",
+   "of": [
+    "baker",
+    "bread"
+   ],
+   "desc": "the baker in a white apron points toward the stack of fresh bread loaves",
+   "question": "Is the baker in a white apron pointing toward the stack of fresh bread loaves?"
+  },
+  {
+   "id": "bread_on_table",
+   "type": "relation",
+   "of": [
+    "bread",
+    "table"
+   ],
+   "desc": "the stack of fresh bread loaves rests on the table",
+   "question": "Does the stack of fresh bread loaves rest on the table?"
+  },
+  {
+   "id": "cat_on_table",
+   "type": "relation",
+   "of": [
+    "cat",
+    "table"
+   ],
+   "desc": "the black cat sits on the edge of the table",
+   "question": "Is the black cat sitting on the edge of the table?"
+  },
+  {
+   "id": "no_vehicles",
+   "type": "absent",
+   "desc": "modern vehicles",
+   "question": "Are there any modern vehicles in the image?"
+  },
+  {
+   "id": "no_electric_lights",
+   "type": "absent",
+   "desc": "electric lights",
+   "question": "Are there any electric lights visible in the image?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight breaking through clouds",
+   "question": "Is there sunlight breaking through the clouds?"
+  },
+  {
+   "id": "woman_holding_apple",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the old woman in a blue shawl holds a red apple",
+   "question": "Is the old woman in a blue shawl holding a red apple?"
+  },
+  {
+   "id": "dog_on_cobblestones",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog lies on the cobblestones",
+   "question": "Is the brown dog lying on the cobblestones?"
+  },
+  {
+   "id": "cobblestones",
+   "type": "entity",
+   "class": "cobblestone ground",
+   "plural": "cobblestone grounds",
+   "count": 1,
+   "count_exact": true,
+   "desc": "cobblestone ground",
+   "question": "Is there cobblestone ground?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dog_asleep",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is asleep",
+   "question": "Is the brown dog asleep?"
+  },
+  {
+   "id": "apples_pile",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "several apples",
+   "question": "Are there several apples?",
+   "box": [
+    100,
+    350,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "apples_on_cart",
+   "type": "relation",
+   "of": [
+    "apples_pile",
+    "cart"
+   ],
+   "desc": "the apples are piled on the wooden cart",
+   "question": "Are the apples piled on the wooden cart?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "bread",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cat",
+   "kind": "support"
+  },
+  {
+   "from": "cart",
+   "to": "apples_pile",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0143",
+ "prompt": "In this oil painting, a misty village market awakens at dawn. On the left, an old woman in a blue shawl stands beside a wooden cart piled with apples. In the center, a young boy in a yellow cap reaches out to take a red apple from her hand. To the right, a baker in a white apron points toward a stack of fresh bread loaves resting on a table. A black cat sits calmly on the edge of that same table, watching the exchange. Near the foreground, a brown dog lies asleep on the cobblestones, ignoring the early activity. The scene captures quiet morning commerce without modern vehicles or electric lights. There is no sunlight breaking through the clouds yet. The composition remains simple and focused on these five distinct figures and their immediate surroundings. The textures of fabric, fruit, and stone are rendered with visible brushstrokes typical of the medium. The interaction between the woman and the boy is gentle, while the baker's gesture directs attention to his goods. The cat observes passively, and the dog remains undisturbed by the waking world around it.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

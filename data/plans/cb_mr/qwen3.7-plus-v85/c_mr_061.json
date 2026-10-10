@@ -1,0 +1,316 @@
+{
+ "style": "photorealistic 3D render",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral studio background",
+   "question": "Is the background a neutral studio setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large wooden crate",
+   "question": "Is there a large wooden crate?",
+   "box": [
+    100,
+    400,
+    500,
+    800
+   ]
+  },
+  {
+   "id": "stone_block",
+   "type": "entity",
+   "class": "block",
+   "plural": "blocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone block",
+   "question": "Is there a stone block?",
+   "box": [
+    520,
+    500,
+    700,
+    800
+   ]
+  },
+  {
+   "id": "red_cubes",
+   "type": "entity",
+   "class": "cube",
+   "plural": "cubes",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two red cubes",
+   "question": "Are there exactly two red cubes?",
+   "box": [
+    150,
+    350,
+    350,
+    450
+   ]
+  },
+  {
+   "id": "green_spheres",
+   "type": "entity",
+   "class": "sphere",
+   "plural": "spheres",
+   "count": 4,
+   "count_exact": true,
+   "desc": "four green spheres",
+   "question": "Are there exactly four green spheres?",
+   "box": [
+    360,
+    350,
+    500,
+    450
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small robot",
+   "question": "Is there a small robot?",
+   "box": [
+    400,
+    450,
+    550,
+    700
+   ]
+  },
+  {
+   "id": "blue_cylinders",
+   "type": "entity",
+   "class": "cylinder",
+   "plural": "cylinders",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three blue cylinders",
+   "question": "Are there exactly three blue cylinders?",
+   "box": [
+    200,
+    380,
+    600,
+    480
+   ]
+  },
+  {
+   "id": "yellow_pyramid",
+   "type": "entity",
+   "class": "pyramid",
+   "plural": "pyramids",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow pyramid",
+   "question": "Is there a yellow pyramid?",
+   "box": [
+    600,
+    550,
+    750,
+    700
+   ]
+  },
+  {
+   "id": "glass_jar",
+   "type": "entity",
+   "class": "jar",
+   "plural": "jars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass jar",
+   "question": "Is there a glass jar?",
+   "box": [
+    610,
+    450,
+    740,
+    560
+   ]
+  },
+  {
+   "id": "crate_adjacent_stone",
+   "type": "relation",
+   "of": [
+    "crate",
+    "stone_block"
+   ],
+   "desc": "the wooden crate is adjacent to the stone block",
+   "question": "Is the wooden crate adjacent to the stone block?"
+  },
+  {
+   "id": "cubes_on_crate",
+   "type": "relation",
+   "of": [
+    "red_cubes",
+    "crate"
+   ],
+   "desc": "the two red cubes are on top of the wooden crate",
+   "question": "Are the two red cubes on top of the wooden crate?"
+  },
+  {
+   "id": "cubes_left_spheres",
+   "type": "relation",
+   "of": [
+    "red_cubes",
+    "green_spheres"
+   ],
+   "desc": "the two red cubes are positioned to the left of the group of green spheres",
+   "question": "Are the two red cubes positioned to the left of the group of green spheres?"
+  },
+  {
+   "id": "robot_behind_sphere",
+   "type": "relation",
+   "of": [
+    "robot",
+    "green_spheres"
+   ],
+   "desc": "the small robot is standing behind one of the green spheres",
+   "question": "Is the small robot standing behind one of the green spheres?"
+  },
+  {
+   "id": "robot_front_stone",
+   "type": "relation",
+   "of": [
+    "robot",
+    "stone_block"
+   ],
+   "desc": "the small robot is in front of the stone block",
+   "question": "Is the small robot in front of the stone block?"
+  },
+  {
+   "id": "cylinder_between_cube_pyramid",
+   "type": "relation",
+   "of": [
+    "blue_cylinders",
+    "red_cubes",
+    "yellow_pyramid"
+   ],
+   "desc": "one blue cylinder is between one of the red cubes and the yellow pyramid",
+   "question": "Is one blue cylinder positioned between one of the red cubes and the yellow pyramid?"
+  },
+  {
+   "id": "jar_over_pyramid",
+   "type": "relation",
+   "of": [
+    "glass_jar",
+    "yellow_pyramid"
+   ],
+   "desc": "the glass jar is over the yellow pyramid",
+   "question": "Is the glass jar over the yellow pyramid?"
+  },
+  {
+   "id": "robot_pushing_cylinder",
+   "type": "action",
+   "of": [
+    "robot",
+    "blue_cylinders"
+   ],
+   "desc": "the small robot is pushing one of the blue cylinders",
+   "question": "Is the small robot pushing one of the blue cylinders?"
+  },
+  {
+   "id": "robot_pointing_pyramid",
+   "type": "action",
+   "of": [
+    "robot",
+    "yellow_pyramid"
+   ],
+   "desc": "the small robot is pointing at the yellow pyramid",
+   "question": "Is the small robot pointing at the yellow pyramid?"
+  },
+  {
+   "id": "robot_standing",
+   "type": "state",
+   "of": "robot",
+   "desc": "the small robot is standing",
+   "question": "Is the small robot standing?"
+  },
+  {
+   "id": "stone_smaller_crate",
+   "type": "relation",
+   "of": [
+    "stone_block",
+    "crate"
+   ],
+   "desc": "the stone block is smaller than the wooden crate",
+   "question": "Is the stone block smaller than the wooden crate?"
+  },
+  {
+   "id": "robot_shorter_cubes",
+   "type": "relation",
+   "of": [
+    "robot",
+    "red_cubes"
+   ],
+   "desc": "the small robot is shorter than the red cubes",
+   "question": "Is the small robot shorter than the red cubes?"
+  },
+  {
+   "id": "jar_taller_pyramid",
+   "type": "relation",
+   "of": [
+    "glass_jar",
+    "yellow_pyramid"
+   ],
+   "desc": "the glass jar is taller than the yellow pyramid",
+   "question": "Is the glass jar taller than the yellow pyramid?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "red_cubes",
+   "kind": "support"
+  },
+  {
+   "from": "stone_block",
+   "to": "glass_jar",
+   "kind": "support"
+  },
+  {
+   "from": "yellow_pyramid",
+   "to": "glass_jar",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_061",
+ "prompt": "A scene with a wooden crate and a stone block adjacent to it. The wooden crate is larger than the stone block. On top of the wooden crate are two red cubes, positioned to the left of a group of green spheres. The number of green spheres is twice the number of red cubes. A small robot, which is shorter than the red cubes, is standing behind one of the green spheres and in front of the stone block. A blue cylinder is between one of the red cubes and a yellow pyramid. The number of blue cylinders is one more than the number of red cubes. The yellow pyramid is under a glass jar, and the jar is taller than the pyramid. The small robot is pushing one of the blue cylinders and pointing at the yellow pyramid.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 2,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "style": "children's picture book illustration with bold outlines and flat colors",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a friendly car repair garage interior with shelves holding oil cans and spare parts in bright primary colors, a large clock on the back wall showing noon, and sunlight streaming through a high window",
+   "question": "Does the image show a friendly car repair garage interior with shelves holding oil cans and spare parts, a large clock on the back wall showing noon, and sunlight streaming through a high window?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "car",
+   "type": "entity",
+   "class": "car",
+   "plural": "cars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red car with its hood lifted, revealing a simple engine block",
+   "question": "Is there a red car with its hood lifted, revealing a simple engine block?",
+   "box": [
+    312,
+    400,
+    712,
+    800
+   ]
+  },
+  {
+   "id": "mechanic",
+   "type": "entity",
+   "class": "mechanic",
+   "plural": "mechanics",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mechanic in blue overalls",
+   "question": "Is there a mechanic in blue overalls?",
+   "box": [
+    250,
+    200,
+    450,
+    700
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    50,
+    250,
+    250,
+    750
+   ]
+  },
+  {
+   "id": "toolbox",
+   "type": "entity",
+   "class": "toolbox",
+   "plural": "toolboxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open toolbox containing a wrench, a screwdriver, and a rag",
+   "question": "Is there an open toolbox containing a wrench, a screwdriver, and a rag?",
+   "box": [
+    750,
+    600,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "tire_stack",
+   "type": "entity",
+   "class": "tire stack",
+   "plural": "tire stacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of tires",
+   "question": "Is there a stack of tires?",
+   "box": [
+    780,
+    700,
+    920,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fluffy white cat",
+   "question": "Is there a fluffy white cat?",
+   "box": [
+    790,
+    680,
+    910,
+    780
+   ]
+  },
+  {
+   "id": "mechanic_smiling",
+   "type": "state",
+   "of": "mechanic",
+   "desc": "the mechanic is smiling",
+   "question": "Is the mechanic smiling?"
+  },
+  {
+   "id": "child_curious",
+   "type": "state",
+   "of": "child",
+   "desc": "the child looks curious and excited",
+   "question": "Does the child look curious and excited?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the fluffy white cat is sleeping",
+   "question": "Is the fluffy white cat sleeping?"
+  },
+  {
+   "id": "mechanic_gesturing",
+   "type": "action",
+   "of": [
+    "mechanic",
+    "child"
+   ],
+   "desc": "the mechanic gestures toward the engine, explaining its function to the child",
+   "question": "Is the mechanic gesturing toward the engine while interacting with the child?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "car"
+   ],
+   "desc": "the child points at the engine of the red car",
+   "question": "Is the child pointing at the engine of the red car?"
+  },
+  {
+   "id": "toolbox_on_floor",
+   "type": "state",
+   "of": "toolbox",
+   "desc": "the toolbox sits on the floor",
+   "question": "Is the toolbox sitting on the floor?"
+  },
+  {
+   "id": "cat_on_tires",
+   "type": "relation",
+   "of": [
+    "cat",
+    "tire_stack"
+   ],
+   "desc": "the fluffy white cat is on top of the tire stack",
+   "question": "Is the fluffy white cat on top of the tire stack?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tire_stack",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0039",
+ "prompt": "This children's picture book illustration presents a friendly car repair garage with bold outlines and flat colors. In the center, a smiling mechanic in blue overalls lifts the hood of a red car, revealing a simple engine block. To the left, a child in a yellow shirt points at the engine, looking curious and excited. On the right, a toolbox sits open on the floor, containing a wrench, a screwdriver, and a rag. A fluffy white cat sleeps on top of a tire stack in the foreground, unaware of the activity. Behind the car, shelves hold oil cans and spare parts in bright primary colors. A large clock on the back wall shows the time as noon. Sunlight streams in through a high window, illuminating the clean, organized space. The mechanic gestures toward the engine, explaining its function to the child. The interaction is educational and warm, fostering a sense of wonder about how things work. The composition is balanced, with the car anchoring the center and the characters framing it on either side. The simple shapes and cheerful palette make the scene inviting and easy to understand for young readers, emphasizing learning and cooperation in a safe environment.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v4",
+  "attempts": 1,
+  "warnings": []
+ }
+}

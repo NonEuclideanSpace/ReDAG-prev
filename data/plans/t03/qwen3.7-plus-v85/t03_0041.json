@@ -1,0 +1,180 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception setting",
+   "question": "Does the image depict a wedding reception setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    150,
+    350,
+    950
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man?",
+   "box": [
+    380,
+    150,
+    680,
+    950
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    400,
+    400,
+    650,
+    950
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    400,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a champagne flute",
+   "question": "Is the woman in the blue dress holding a champagne flute?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is sitting",
+   "question": "Is the man in the black tuxedo sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is leaning back slightly",
+   "question": "Is the man in the black tuxedo leaning back slightly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting calmly",
+   "question": "Is the golden retriever sitting calmly?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress looks at the man in the black tuxedo",
+   "question": "Is the woman in the blue dress looking at the man in the black tuxedo?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever is next to the man in the black tuxedo",
+   "question": "Is the golden retriever next to the man in the black tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake",
+   "question": "Is there any cake visible in the image?"
+  },
+  {
+   "id": "woman_dress",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue dress",
+   "question": "Does the woman wear a blue dress?"
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wears a black tuxedo",
+   "question": "Does the man wear a black tuxedo?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0041",
+ "prompt": "In an oil painting of a wedding reception, a woman in a blue dress stands on the left holding a champagne flute. In the center, a man in a black tuxedo sits on a wooden chair, leaning back slightly. To the right, a golden retriever sits calmly next to the man. The woman looks at the man. There is no cake visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

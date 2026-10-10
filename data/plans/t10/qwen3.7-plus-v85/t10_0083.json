@@ -1,0 +1,391 @@
+{
+ "style": "photorealistic photo, bright even lighting, sterile hospital atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with linoleum floor and a closed door in the center background",
+   "question": "Does the image show a sterile hospital corridor with a linoleum floor and a closed door?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a hard plastic chair",
+   "question": "Is there a hard plastic chair?",
+   "box": [
+    50,
+    600,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman",
+   "question": "Is there an elderly woman?",
+   "box": [
+    80,
+    300,
+    280,
+    800
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young nurse in blue scrubs",
+   "question": "Is there a young nurse in blue scrubs?",
+   "box": [
+    300,
+    250,
+    480,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    450,
+    200,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    550,
+    700,
+    700,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow raincoat",
+   "question": "Is there a child in a yellow raincoat?",
+   "box": [
+    650,
+    500,
+    800,
+    900
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    750,
+    200,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "digital screen",
+   "plural": "digital screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a digital screen",
+   "question": "Is there a digital screen?",
+   "box": [
+    850,
+    100,
+    1000,
+    300
+   ]
+  },
+  {
+   "id": "guard",
+   "type": "entity",
+   "class": "security guard",
+   "plural": "security guards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall security guard in a black uniform",
+   "question": "Is there a tall security guard in a black uniform?",
+   "box": [
+    900,
+    200,
+    1024,
+    850
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman with silver hair is sitting with slumped posture",
+   "question": "Is the elderly woman with silver hair sitting with a slumped posture?"
+  },
+  {
+   "id": "nurse_holding_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the young nurse in blue scrubs holds a clipboard against her chest",
+   "question": "Is the young nurse in blue scrubs holding a clipboard against her chest?"
+  },
+  {
+   "id": "man_gesturing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf gestures urgently with a flushed face",
+   "question": "Is the man wearing a red scarf gesturing urgently with a flushed face?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting patiently",
+   "question": "Is the small brown dog sitting patiently?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow raincoat is looking up",
+   "question": "Is the child in the yellow raincoat looking up?"
+  },
+  {
+   "id": "guard_listening",
+   "type": "state",
+   "of": "guard",
+   "desc": "the tall security guard in a black uniform listens intently",
+   "question": "Is the tall security guard in a black uniform listening intently?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman with silver hair sits on the hard plastic chair",
+   "question": "Is the elderly woman with silver hair sitting on the hard plastic chair?"
+  },
+  {
+   "id": "nurse_next_to_woman",
+   "type": "relation",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the young nurse in blue scrubs stands next to the elderly woman with silver hair",
+   "question": "Is the young nurse in blue scrubs standing next to the elderly woman with silver hair?"
+  },
+  {
+   "id": "dog_beside_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the small brown dog sits beside the man wearing a red scarf",
+   "question": "Is the small brown dog sitting beside the man wearing a red scarf?"
+  },
+  {
+   "id": "child_beside_man",
+   "type": "relation",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in the yellow raincoat is beside the man wearing a red scarf",
+   "question": "Is the child in the yellow raincoat beside the man wearing a red scarf?"
+  },
+  {
+   "id": "doctor_points_screen",
+   "type": "action",
+   "of": [
+    "doctor",
+    "screen"
+   ],
+   "desc": "the doctor in a white coat points at the digital screen",
+   "question": "Is the doctor in a white coat pointing at the digital screen?"
+  },
+  {
+   "id": "doctor_explains_guard",
+   "type": "action",
+   "of": [
+    "doctor",
+    "guard"
+   ],
+   "desc": "the doctor in a white coat explains something to the tall security guard in a black uniform",
+   "question": "Is the doctor in a white coat explaining something to the tall security guard in a black uniform?"
+  },
+  {
+   "id": "nurse_looks_woman",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the young nurse in blue scrubs looks at the elderly woman with silver hair",
+   "question": "Is the young nurse in blue scrubs looking at the elderly woman with silver hair?"
+  },
+  {
+   "id": "man_hands_tissue",
+   "type": "action",
+   "of": [
+    "man",
+    "child"
+   ],
+   "desc": "the man wearing a red scarf hands a crumpled tissue to the child in the yellow raincoat",
+   "question": "Is the man wearing a red scarf handing a crumpled tissue to the child in the yellow raincoat?"
+  },
+  {
+   "id": "child_reaches_tissue",
+   "type": "action",
+   "of": [
+    "child",
+    "man"
+   ],
+   "desc": "the child in the yellow raincoat reaches out to accept the tissue from the man wearing a red scarf",
+   "question": "Is the child in the yellow raincoat reaching out to accept a tissue from the man wearing a red scarf?"
+  },
+  {
+   "id": "child_holds_leash",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in the yellow raincoat holds the leash of the small brown dog",
+   "question": "Is the child in the yellow raincoat holding the leash of the small brown dog?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the young nurse in blue scrubs is standing",
+   "question": "Is the young nurse in blue scrubs standing?"
+  },
+  {
+   "id": "man_flushed",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf has a flushed face",
+   "question": "Does the man wearing a red scarf have a flushed face?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog sits on the linoleum floor",
+   "question": "Is the small brown dog sitting on the linoleum floor?"
+  },
+  {
+   "id": "doctor_next_to_guard",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "guard"
+   ],
+   "desc": "the doctor in a white coat is beside the tall security guard in a black uniform",
+   "question": "Is the doctor in a white coat beside the tall security guard in a black uniform?"
+  },
+  {
+   "id": "child_wide_eyes",
+   "type": "attribute",
+   "of": "child",
+   "desc": "the child in the yellow raincoat has wide eyes",
+   "question": "Does the child in the yellow raincoat have wide eyes?"
+  },
+  {
+   "id": "screen_on_wall",
+   "type": "state",
+   "of": "screen",
+   "desc": "the digital screen is mounted on the wall",
+   "question": "Is the digital screen mounted on the wall of the corridor?"
+  },
+  {
+   "id": "woman_silver_hair",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman has silver hair",
+   "question": "Does the elderly woman have silver hair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0083",
+ "prompt": "A photorealistic photo captures a tense moment in a sterile hospital corridor. On the left, an elderly woman with silver hair sits on a hard plastic chair, her posture slumped in exhaustion. Next to her stands a young nurse in blue scrubs, holding a clipboard tightly against her chest. In the center of the frame, a man in a red scarf gestures urgently toward a closed door, his face flushed with anxiety. Beside him, a small brown dog sits patiently on the linoleum floor, its leash held firmly by a child in a yellow raincoat who looks up at the man with wide eyes. To the right, a doctor in a white coat points at a digital screen mounted on the wall, explaining something to a tall security guard in a black uniform who listens intently. The nurse is looking at the elderly woman, offering silent comfort through her steady gaze. The man in the red scarf is handing a crumpled tissue to the child in the yellow raincoat, who reaches out with a small hand to accept it. The brown dog is sitting on the floor, remaining calm amidst the chaos. There is no blood visible anywhere in the scene, maintaining a clean and clinical atmosphere despite the emotional weight of the situation. The lighting is bright and even, highlighting the textures of the clothing and the reflective surfaces of the medical equipment. The composition draws the eye from the seated woman on the left to the interacting group in the center, ending with the professional exchange on the right.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

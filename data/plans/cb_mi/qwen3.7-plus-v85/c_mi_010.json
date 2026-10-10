@@ -1,0 +1,342 @@
+{
+ "style": "photorealistic interior photography, warm evening lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a comfortable family living room with hardwood floors and a patterned area rug",
+   "question": "Does the image show a comfortable family living room with hardwood floors and a patterned area rug?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sofa",
+   "type": "entity",
+   "class": "sofa",
+   "plural": "sofas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a leather sofa",
+   "question": "Is there a leather sofa?",
+   "box": [
+    50,
+    400,
+    600,
+    800
+   ]
+  },
+  {
+   "id": "fireplace",
+   "type": "entity",
+   "class": "fireplace",
+   "plural": "fireplaces",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone fireplace with a mantle",
+   "question": "Is there a stone fireplace with a mantle?",
+   "box": [
+    300,
+    100,
+    700,
+    500
+   ]
+  },
+  {
+   "id": "coffee_table",
+   "type": "entity",
+   "class": "coffee table",
+   "plural": "coffee tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a glass coffee table",
+   "question": "Is there a glass coffee table?",
+   "box": [
+    200,
+    700,
+    500,
+    900
+   ]
+  },
+  {
+   "id": "floor_lamps",
+   "type": "entity",
+   "class": "floor lamp",
+   "plural": "floor lamps",
+   "count": 2,
+   "count_exact": false,
+   "desc": "floor lamps casting gentle illumination",
+   "question": "Are there floor lamps casting gentle illumination?",
+   "box": [
+    800,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "bookshelves_items",
+   "type": "entity",
+   "class": "item",
+   "plural": "items",
+   "count": 2,
+   "count_exact": false,
+   "desc": "family photos, classic novels, and board games displayed on shelves",
+   "question": "Are there family photos, classic novels, and board games displayed on shelves?",
+   "box": [
+    750,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "tv",
+   "type": "entity",
+   "class": "television",
+   "plural": "televisions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large flat-screen television",
+   "question": "Is there a large flat-screen television?",
+   "box": [
+    400,
+    50,
+    600,
+    200
+   ]
+  },
+  {
+   "id": "speakers",
+   "type": "entity",
+   "class": "speaker",
+   "plural": "speakers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "speakers in corner positions",
+   "question": "Are there speakers in corner positions?",
+   "box": [
+    900,
+    800,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "side_tables",
+   "type": "entity",
+   "class": "side table",
+   "plural": "side tables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "side tables",
+   "question": "Are there side tables?",
+   "box": [
+    50,
+    600,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "vases",
+   "type": "entity",
+   "class": "vase",
+   "plural": "vases",
+   "count": 1,
+   "count_exact": false,
+   "desc": "decorative vases",
+   "question": "Are there decorative vases?",
+   "box": [
+    60,
+    580,
+    190,
+    750
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "grandfather clock",
+   "plural": "grandfather clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a grandfather clock in the corner",
+   "question": "Is there a grandfather clock in the corner?",
+   "box": [
+    900,
+    100,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "coffee_table_items",
+   "type": "attribute",
+   "of": "coffee_table",
+   "desc": "the glass coffee table holds magazines, remote controls, and ceramic coasters",
+   "question": "Does the glass coffee table hold magazines, remote controls, and ceramic coasters?"
+  },
+  {
+   "id": "vases_on_tables",
+   "type": "relation",
+   "of": [
+    "vases",
+    "side_tables"
+   ],
+   "desc": "the decorative vases are on the side tables",
+   "question": "Are the decorative vases on the side tables?"
+  },
+  {
+   "id": "sofa_faces_fireplace",
+   "type": "relation",
+   "of": [
+    "sofa",
+    "fireplace"
+   ],
+   "desc": "the leather sofa faces the stone fireplace",
+   "question": "Does the leather sofa face the stone fireplace?"
+  },
+  {
+   "id": "tv_above_mantle",
+   "type": "relation",
+   "of": [
+    "tv",
+    "fireplace"
+   ],
+   "desc": "the television is mounted above the fireplace mantle",
+   "question": "Is the television mounted above the fireplace mantle?"
+  },
+  {
+   "id": "no_exercise_equipment",
+   "type": "absent",
+   "desc": "exercise equipment or yoga mats",
+   "question": "Are there any exercise equipment or yoga mats in the image?"
+  },
+  {
+   "id": "no_office_supplies",
+   "type": "absent",
+   "desc": "office supplies like staplers or hole punchers",
+   "question": "Are there any office supplies like staplers or hole punchers in the image?"
+  },
+  {
+   "id": "fireplace_flames",
+   "type": "state",
+   "of": "fireplace",
+   "desc": "the stone fireplace has warm flames crackling inside",
+   "question": "Are there warm flames crackling inside the stone fireplace?"
+  },
+  {
+   "id": "bookshelves",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": false,
+   "desc": "built-in bookshelves",
+   "question": "Are there built-in bookshelves?",
+   "box": [
+    50,
+    50,
+    300,
+    600
+   ]
+  },
+  {
+   "id": "curtains",
+   "type": "entity",
+   "class": "curtain",
+   "plural": "curtains",
+   "count": 1,
+   "count_exact": false,
+   "desc": "window curtains framing views of the garden outside",
+   "question": "Are there window curtains framing views of the garden outside?",
+   "box": [
+    800,
+    50,
+    1024,
+    500
+   ]
+  },
+  {
+   "id": "decorations",
+   "type": "entity",
+   "class": "decoration",
+   "plural": "decorations",
+   "count": 1,
+   "count_exact": false,
+   "desc": "holiday decorations adding seasonal charm",
+   "question": "Are there holiday decorations adding seasonal charm?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sofa_pillows",
+   "type": "attribute",
+   "of": "sofa",
+   "desc": "soft throw pillows on the leather sofa",
+   "question": "Are there soft throw pillows on the leather sofa?"
+  },
+  {
+   "id": "sofa_blanket",
+   "type": "attribute",
+   "of": "sofa",
+   "desc": "a knitted blanket draped over the leather sofa",
+   "question": "Is a knitted blanket draped over the leather sofa?"
+  },
+  {
+   "id": "tv_content",
+   "type": "state",
+   "of": "tv",
+   "desc": "the television shows the evening news",
+   "question": "Does the television show the evening news?"
+  },
+  {
+   "id": "flowers_in_vases",
+   "type": "attribute",
+   "of": "vases",
+   "desc": "fresh flowers in the decorative vases",
+   "question": "Are there fresh flowers in the decorative vases?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "side_tables",
+   "to": "vases",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mi_010",
+ "prompt": "A comfortable family living room during holiday evening, where a leather sofa faces a stone fireplace crackling with warm flames. Soft throw pillows and a knitted blanket drape over the furniture while a glass coffee table holds magazines, remote controls, and ceramic coasters. Floor lamps cast gentle illumination across hardwood floors covered by a patterned area rug, while built-in bookshelves display family photos alongside classic novels and board games. A large flat-screen television mounted above the mantle shows the evening news, while speakers deliver clear audio from their corner positions. However, this cozy domestic space contains no exercise equipment or yoga mats, keeping the atmosphere focused on relaxation rather than physical activity. You won't spot any office supplies like staplers or hole punchers either, maintaining clear separation between work and leisure environments. Decorative vases hold fresh flowers on side tables, while window curtains frame views of the garden outside. A grandfather clock ticks steadily in the corner, and holiday decorations add seasonal charm throughout the welcoming space.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v81+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

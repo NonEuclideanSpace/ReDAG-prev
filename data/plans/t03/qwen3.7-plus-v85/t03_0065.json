@@ -1,0 +1,158 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a farm harvest scene",
+   "question": "Does the image show a farm harvest scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "farmer",
+   "type": "entity",
+   "class": "farmer",
+   "plural": "farmers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a farmer in a blue hat",
+   "question": "Is there a farmer wearing a blue hat?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "scarecrow",
+   "type": "entity",
+   "class": "scarecrow",
+   "plural": "scarecrows",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a scarecrow wearing a straw hat",
+   "question": "Is there a scarecrow wearing a straw hat?",
+   "box": [
+    400,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    750,
+    400,
+    980,
+    800
+   ]
+  },
+  {
+   "id": "basket",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds a basket",
+   "question": "Is the farmer holding a basket?"
+  },
+  {
+   "id": "wheat",
+   "type": "attribute",
+   "of": "farmer",
+   "desc": "the farmer holds wheat",
+   "question": "Is the farmer holding wheat?"
+  },
+  {
+   "id": "farmer_standing",
+   "type": "state",
+   "of": "farmer",
+   "desc": "the farmer is standing",
+   "question": "Is the farmer standing?"
+  },
+  {
+   "id": "scarecrow_standing",
+   "type": "state",
+   "of": "scarecrow",
+   "desc": "the scarecrow is standing",
+   "question": "Is the scarecrow standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dog is sitting",
+   "question": "Is the dog sitting?"
+  },
+  {
+   "id": "dog_looking",
+   "type": "relation",
+   "of": [
+    "dog",
+    "scarecrow"
+   ],
+   "desc": "the dog is looking at the scarecrow",
+   "question": "Is the dog looking at the scarecrow?"
+  },
+  {
+   "id": "handing_wheat",
+   "type": "action",
+   "of": [
+    "farmer",
+    "scarecrow"
+   ],
+   "desc": "the farmer is handing wheat to the scarecrow",
+   "question": "Is the farmer handing wheat to the scarecrow?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor in the image?"
+  },
+  {
+   "id": "scarecrow_plaid",
+   "type": "attribute",
+   "of": "scarecrow",
+   "desc": "the scarecrow wears a plaid shirt",
+   "question": "Does the scarecrow wear a plaid shirt?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0065",
+ "prompt": "In a flat vector illustration of a farm harvest, a farmer in a blue hat stands on the left holding a basket. A scarecrow with a plaid shirt stands in the center wearing a straw hat. A brown dog sits on the right looking at the scarecrow. The farmer is handing wheat to the scarecrow. There is no tractor in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

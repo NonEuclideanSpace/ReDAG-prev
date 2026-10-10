@@ -1,0 +1,149 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area with blurred terminal windows and seating areas",
+   "question": "Does the background show an airport gate area with blurred terminal windows and seating areas?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench in the image?",
+   "box": [
+    550,
+    600,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    100,
+    200,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow hat",
+   "question": "Is there a child in a yellow hat?",
+   "box": [
+    600,
+    400,
+    850,
+    800
+   ]
+  },
+  {
+   "id": "woman_boarding_pass",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue coat holds a boarding pass",
+   "question": "Is the woman in the blue coat holding a boarding pass?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue coat is standing",
+   "question": "Is the woman in the blue coat standing?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow hat is sitting",
+   "question": "Is the child in the yellow hat sitting?"
+  },
+  {
+   "id": "child_looking_up",
+   "type": "state",
+   "of": "child",
+   "desc": "the child in the yellow hat is looking up",
+   "question": "Is the child in the yellow hat looking up?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in the blue coat is to the left of the child",
+   "question": "Is the woman in the blue coat to the left of the child?"
+  },
+  {
+   "id": "child_on_bench",
+   "type": "relation",
+   "of": [
+    "child",
+    "bench"
+   ],
+   "desc": "the child in the yellow hat sits on the bench",
+   "question": "Is the child in the yellow hat sitting on the bench?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "child"
+   ],
+   "desc": "the woman in the blue coat hands the boarding pass to the child",
+   "question": "Is the woman in the blue coat handing the boarding pass to the child?"
+  },
+  {
+   "id": "no_luggage",
+   "type": "absent",
+   "desc": "luggage",
+   "question": "Is there any luggage visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "child",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0001",
+ "prompt": "In a photorealistic photo, a woman in a blue coat stands on the left side of an airport gate, holding a boarding pass. A child in a yellow hat sits on a bench to the right, looking up at the woman. The woman is handing the boarding pass to the child. There is no luggage visible in the scene. The background features blurred terminal windows and seating areas, keeping the focus strictly on the two figures and their exchange.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v82+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

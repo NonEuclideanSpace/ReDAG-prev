@@ -1,0 +1,265 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an airport gate area",
+   "question": "Does the image show an airport gate area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a metal bench",
+   "question": "Is there a metal bench?",
+   "box": [
+    50,
+    600,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue coat",
+   "question": "Is there a woman in a blue coat?",
+   "box": [
+    80,
+    450,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a gray suit",
+   "question": "Is there a man in a gray suit?",
+   "box": [
+    400,
+    300,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a yellow shirt",
+   "question": "Is there a child in a yellow shirt?",
+   "box": [
+    700,
+    450,
+    850,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    750,
+    750,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "elderly_person",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly person in a green hat",
+   "question": "Is there an elderly person in a green hat?",
+   "box": [
+    500,
+    200,
+    700,
+    600
+   ]
+  },
+  {
+   "id": "departure_board",
+   "type": "entity",
+   "class": "departure board",
+   "plural": "departure boards",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a departure board",
+   "question": "Is there a departure board?",
+   "box": [
+    750,
+    100,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "briefcase",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the gray suit holds a black briefcase",
+   "question": "Is the man in the gray suit holding a black briefcase?"
+  },
+  {
+   "id": "map",
+   "type": "attribute",
+   "of": "elderly_person",
+   "desc": "the elderly person in a green hat holds a paper map",
+   "question": "Is the elderly person in a green hat holding a paper map?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue coat is sitting",
+   "question": "Is the woman in a blue coat sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a gray suit is standing",
+   "question": "Is the man in a gray suit standing?"
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "departure_board"
+   ],
+   "desc": "the child in a yellow shirt points at the departure board",
+   "question": "Is the child in a yellow shirt pointing at the departure board?"
+  },
+  {
+   "id": "child_looking",
+   "type": "action",
+   "of": [
+    "child",
+    "departure_board"
+   ],
+   "desc": "the child in a yellow shirt looks at the departure board",
+   "question": "Is the child in a yellow shirt looking at the departure board?"
+  },
+  {
+   "id": "elderly_looking",
+   "type": "state",
+   "of": "elderly_person",
+   "desc": "the elderly person in a green hat is looking at the paper map",
+   "question": "Is the elderly person in a green hat looking at the paper map?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the gray suit hands a boarding pass to the woman in the blue coat",
+   "question": "Is the man in the gray suit handing a boarding pass to the woman in the blue coat?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the woman in a blue coat sits on the metal bench",
+   "question": "Is the woman in a blue coat sitting on the metal bench?"
+  },
+  {
+   "id": "dog_next_to_child",
+   "type": "relation",
+   "of": [
+    "dog",
+    "child"
+   ],
+   "desc": "the small brown dog is next to the child in a yellow shirt",
+   "question": "Is the small brown dog next to the child in a yellow shirt?"
+  },
+  {
+   "id": "dog_on_floor",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog sits on the floor",
+   "question": "Is the small brown dog sitting on the floor?"
+  },
+  {
+   "id": "elderly_behind_others",
+   "type": "relation",
+   "of": [
+    "elderly_person",
+    "child"
+   ],
+   "desc": "the elderly person in a green hat is behind the child and the dog",
+   "question": "Is the elderly person in a green hat positioned behind the child and the dog?"
+  },
+  {
+   "id": "no_digital_screen",
+   "type": "absent",
+   "desc": "a digital screen displaying flight information",
+   "question": "Is there a digital screen displaying flight information in the image?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog is sitting",
+   "question": "Is the small brown dog sitting?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0077",
+ "prompt": "In a pencil sketch with light color wash, an airport gate scene unfolds. On the left, a woman in a blue coat sits on a metal bench. In the center, a man in a gray suit stands holding a black briefcase. To the right, a child in a yellow shirt points at a departure board. Next to the child, a small brown dog sits patiently on the floor. Behind them, an elderly person in a green hat looks at a paper map. The man in the gray suit is handing a boarding pass to the woman in the blue coat. The child in the yellow shirt is looking at the departure board. There is no digital screen displaying flight information.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v84",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 1,
+  "base_tag": "qwen3.7-plus-v5"
+ }
+}

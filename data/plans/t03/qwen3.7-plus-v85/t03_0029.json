@@ -1,0 +1,183 @@
+{
+ "style": "oil painting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a hospital corridor with walls",
+   "question": "Does the image show a hospital corridor with walls?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bench",
+   "question": "Is there a bench?",
+   "box": [
+    350,
+    600,
+    674,
+    850
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    380,
+    250,
+    644,
+    750
+   ]
+  },
+  {
+   "id": "wheelchair",
+   "type": "entity",
+   "class": "wheelchair",
+   "plural": "wheelchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shiny metal wheelchair",
+   "question": "Is there a shiny metal wheelchair?",
+   "box": [
+    750,
+    400,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse holds a clipboard",
+   "question": "Is the nurse holding a clipboard?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse is standing",
+   "question": "Is the nurse standing?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the elderly woman is sitting",
+   "question": "Is the elderly woman sitting?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "nurse"
+   ],
+   "desc": "the elderly woman is looking at the nurse",
+   "question": "Is the elderly woman looking at the nurse?"
+  },
+  {
+   "id": "wheelchair_empty",
+   "type": "state",
+   "of": "wheelchair",
+   "desc": "the wheelchair is empty",
+   "question": "Is the wheelchair empty?"
+  },
+  {
+   "id": "nurse_pointing",
+   "type": "action",
+   "of": [
+    "nurse",
+    "woman"
+   ],
+   "desc": "the nurse points toward the seated woman",
+   "question": "Is the nurse pointing toward the seated woman?"
+  },
+  {
+   "id": "woman_on_bench",
+   "type": "relation",
+   "of": [
+    "woman",
+    "bench"
+   ],
+   "desc": "the elderly woman sits on the bench",
+   "question": "Is the elderly woman sitting on the bench?"
+  },
+  {
+   "id": "no_doctor",
+   "type": "absent",
+   "desc": "a doctor",
+   "question": "Is there a doctor present in the image?"
+  },
+  {
+   "id": "wheelchair_against_wall",
+   "type": "state",
+   "of": "wheelchair",
+   "desc": "the shiny metal wheelchair rests against the wall",
+   "question": "Is the shiny metal wheelchair resting against the wall of the corridor?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0029",
+ "prompt": "In an oil painting of a hospital corridor, a nurse in blue scrubs stands on the left holding a clipboard. In the center, an elderly woman in a floral dress sits on a bench looking at the nurse. On the right, a shiny metal wheelchair rests empty against the wall. The nurse is pointing toward the seated woman. There is no doctor present.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

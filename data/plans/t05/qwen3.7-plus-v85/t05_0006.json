@@ -1,0 +1,292 @@
+{
+ "style": "anime style",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a shipyard dock",
+   "question": "Does the image show a shipyard dock?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in blue overalls",
+   "question": "Is there a woman in blue overalls?",
+   "box": [
+    320,
+    180,
+    550,
+    780
+   ]
+  },
+  {
+   "id": "anchor",
+   "type": "entity",
+   "class": "anchor",
+   "plural": "anchors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large rusted anchor",
+   "question": "Is there a large rusted anchor?",
+   "box": [
+    400,
+    600,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    450,
+    650,
+    600,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy in a yellow hat",
+   "question": "Is there a boy in a yellow hat?",
+   "box": [
+    750,
+    250,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "man_clipboard",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in a red scarf holds a clipboard",
+   "question": "Is the man in a red scarf holding a clipboard?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in blue overalls points with her right hand",
+   "question": "Is the woman in blue overalls pointing with her right hand?"
+  },
+  {
+   "id": "woman_wrench",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in blue overalls holds a wrench",
+   "question": "Is the woman in blue overalls holding a wrench?"
+  },
+  {
+   "id": "boy_wide_eyes",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a yellow hat has wide eyes",
+   "question": "Does the boy in a yellow hat have wide eyes?"
+  },
+  {
+   "id": "man_left",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a red scarf is next to the woman in blue overalls",
+   "question": "Is the man in a red scarf next to the woman in blue overalls?"
+  },
+  {
+   "id": "woman_water",
+   "type": "relation",
+   "of": [
+    "woman",
+    "water"
+   ],
+   "desc": "the woman in blue overalls points toward the water",
+   "question": "Is the woman in blue overalls pointing toward the water?"
+  },
+  {
+   "id": "anchor_planks",
+   "type": "state",
+   "of": "anchor",
+   "desc": "the large rusted anchor rests on the wooden planks",
+   "question": "Is the large rusted anchor resting on the wooden planks?"
+  },
+  {
+   "id": "dog_beside_anchor",
+   "type": "relation",
+   "of": [
+    "dog",
+    "anchor"
+   ],
+   "desc": "the brown dog sits beside the large rusted anchor",
+   "question": "Is the brown dog sitting beside the large rusted anchor?"
+  },
+  {
+   "id": "dog_looking_woman",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the brown dog looks up at the woman in blue overalls",
+   "question": "Is the brown dog looking up at the woman in blue overalls?"
+  },
+  {
+   "id": "boy_watching",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in a yellow hat watches the woman in blue overalls",
+   "question": "Is the boy in a yellow hat watching the woman in blue overalls?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in blue overalls hands a wrench to the man in a red scarf",
+   "question": "Is the woman in blue overalls handing a wrench to the man in a red scarf?"
+  },
+  {
+   "id": "no_crane",
+   "type": "absent",
+   "desc": "a crane",
+   "question": "Is there a crane visible in the background?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a red scarf stands",
+   "question": "Is the man in a red scarf standing?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog sits",
+   "question": "Is the brown dog sitting?"
+  },
+  {
+   "id": "water",
+   "type": "entity",
+   "class": "water",
+   "plural": "waters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "water",
+   "question": "Is there water visible in the scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "planks",
+   "type": "entity",
+   "class": "wooden planks",
+   "plural": "wooden planks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "wooden planks of the dock",
+   "question": "Are there wooden planks forming the dock surface?",
+   "box": [
+    0,
+    500,
+    1024,
+    1024
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "anchor",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "dog",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "anchor",
+   "kind": "support"
+  },
+  {
+   "from": "planks",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0006",
+ "prompt": "In an anime style scene at a shipyard dock, a man in a red scarf stands on the left holding a clipboard. Next to him, a woman in blue overalls points toward the water with her right hand. In the center, a large rusted anchor rests heavily on the wooden planks. A brown dog sits calmly beside the anchor, looking up at the woman. On the right, a boy in a yellow hat watches the interaction with wide eyes. The woman is handing a wrench to the man in the red scarf. The brown dog is sitting on the dock near the rusted anchor. There is no crane visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

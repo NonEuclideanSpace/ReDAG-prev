@@ -1,0 +1,125 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sports court",
+   "question": "Does the image show a sports court?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "player",
+   "type": "entity",
+   "class": "player",
+   "plural": "players",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a player in blue shorts",
+   "question": "Is there a player in blue shorts?",
+   "box": [
+    50,
+    300,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "referee",
+   "type": "entity",
+   "class": "referee",
+   "plural": "referees",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a referee in a striped shirt",
+   "question": "Is there a referee in a striped shirt?",
+   "box": [
+    600,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "high chair",
+   "plural": "high chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a high chair",
+   "question": "Is there a high chair?",
+   "box": [
+    650,
+    400,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "player_standing",
+   "type": "state",
+   "of": "player",
+   "desc": "the player in blue shorts is standing",
+   "question": "Is the player in blue shorts standing?"
+  },
+  {
+   "id": "referee_sitting",
+   "type": "state",
+   "of": "referee",
+   "desc": "the referee in the striped shirt is sitting",
+   "question": "Is the referee in the striped shirt sitting?"
+  },
+  {
+   "id": "player_looking",
+   "type": "action",
+   "of": [
+    "player",
+    "referee"
+   ],
+   "desc": "the player in blue shorts is looking at the referee in the striped shirt",
+   "question": "Is the player in blue shorts looking at the referee in the striped shirt?"
+  },
+  {
+   "id": "referee_on_chair",
+   "type": "relation",
+   "of": [
+    "referee",
+    "chair"
+   ],
+   "desc": "the referee in the striped shirt sits on the high chair",
+   "question": "Is the referee in the striped shirt sitting on the high chair?"
+  },
+  {
+   "id": "no_volleyball",
+   "type": "absent",
+   "desc": "volleyball",
+   "question": "Is there a volleyball in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "referee",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0058",
+ "prompt": "In a pencil sketch with light color wash, a player in blue shorts stands on the left side of the court. A referee in a striped shirt sits on a high chair on the right side. The player in blue shorts is looking at the referee in the striped shirt. There is no volleyball in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

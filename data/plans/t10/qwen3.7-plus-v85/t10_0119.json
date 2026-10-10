@@ -1,0 +1,350 @@
+{
+ "style": "watercolor illustration with loose brushstrokes, soft bleeding pigments, paper texture, vibrant hues",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a construction site with an unfinished structure, muddy ground, and a pale blue sky",
+   "question": "Does the image depict a construction site?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane",
+   "plural": "cranes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large orange crane",
+   "question": "Is there a large orange crane?",
+   "box": [
+    600,
+    50,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "lumber",
+   "type": "entity",
+   "class": "lumber stack",
+   "plural": "lumber stacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stack of lumber",
+   "question": "Is there a stack of lumber?",
+   "box": [
+    700,
+    600,
+    900,
+    800
+   ]
+  },
+  {
+   "id": "worker_yellow",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker wearing a yellow hard hat",
+   "question": "Is there a worker wearing a yellow hard hat?",
+   "box": [
+    100,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "worker_green",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a second worker in green coveralls",
+   "question": "Is there a second worker wearing green coveralls?",
+   "box": [
+    150,
+    420,
+    350,
+    920
+   ]
+  },
+  {
+   "id": "foreman",
+   "type": "entity",
+   "class": "foreman",
+   "plural": "foremen",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a foreman wearing blue overalls",
+   "question": "Is there a foreman wearing blue overalls?",
+   "box": [
+    400,
+    350,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "engineer",
+   "type": "entity",
+   "class": "engineer",
+   "plural": "engineers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an engineer wearing a white shirt",
+   "question": "Is there an engineer wearing a white shirt?",
+   "box": [
+    750,
+    400,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small brown dog",
+   "question": "Is there a small brown dog?",
+   "box": [
+    800,
+    750,
+    920,
+    950
+   ]
+  },
+  {
+   "id": "wrench",
+   "type": "attribute",
+   "of": "worker_yellow",
+   "desc": "the worker in the yellow hard hat holds a heavy wrench",
+   "question": "Is the worker in the yellow hard hat holding a heavy wrench?"
+  },
+  {
+   "id": "blueprints",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer holds rolled blueprints tightly against their chest",
+   "question": "Is the engineer holding rolled blueprints tightly against their chest?"
+  },
+  {
+   "id": "worker_yellow_standing",
+   "type": "state",
+   "of": "worker_yellow",
+   "desc": "the worker in the yellow hard hat stands firmly",
+   "question": "Is the worker in the yellow hard hat standing firmly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog sits patiently",
+   "question": "Is the small brown dog sitting?"
+  },
+  {
+   "id": "foreman_pointing",
+   "type": "action",
+   "of": [
+    "foreman",
+    "lumber"
+   ],
+   "desc": "the foreman points decisively toward the stack of lumber",
+   "question": "Is the foreman pointing decisively toward the stack of lumber?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "worker_yellow",
+    "worker_green"
+   ],
+   "desc": "the worker in the yellow hard hat hands the heavy wrench to the second worker",
+   "question": "Is the worker in the yellow hard hat handing a heavy wrench to the second worker?"
+  },
+  {
+   "id": "foreman_looking",
+   "type": "relation",
+   "of": [
+    "foreman",
+    "engineer"
+   ],
+   "desc": "the foreman looks intently at the engineer",
+   "question": "Is the foreman looking intently at the engineer?"
+  },
+  {
+   "id": "worker_green_behind",
+   "type": "relation",
+   "of": [
+    "worker_green",
+    "worker_yellow"
+   ],
+   "desc": "the second worker stands just behind the worker in the yellow hard hat",
+   "question": "Is the second worker standing just behind the worker in the yellow hard hat?"
+  },
+  {
+   "id": "dog_beside_engineer",
+   "type": "relation",
+   "of": [
+    "dog",
+    "engineer"
+   ],
+   "desc": "the small brown dog sits beside the engineer",
+   "question": "Is the small brown dog sitting beside the engineer?"
+  },
+  {
+   "id": "no_fencing",
+   "type": "absent",
+   "desc": "safety fencing in the foreground",
+   "question": "Is there any safety fencing visible in the foreground?"
+  },
+  {
+   "id": "crane_arm_extended",
+   "type": "state",
+   "of": "crane",
+   "desc": "the crane's arm is extended high",
+   "question": "Is the crane's arm extended high?"
+  },
+  {
+   "id": "worker_yellow_boots",
+   "type": "attribute",
+   "of": "worker_yellow",
+   "desc": "the worker in the yellow hard hat wears boots",
+   "question": "Does the worker in the yellow hard hat wear boots?"
+  },
+  {
+   "id": "engineer_sleeves",
+   "type": "attribute",
+   "of": "engineer",
+   "desc": "the engineer has crumpled sleeves",
+   "question": "Does the engineer have crumpled sleeves?"
+  },
+  {
+   "id": "dog_tail",
+   "type": "state",
+   "of": "dog",
+   "desc": "the small brown dog's tail is curled around its paws",
+   "question": "Is the small brown dog's tail curled around its paws?"
+  },
+  {
+   "id": "unfinished_structure",
+   "type": "entity",
+   "class": "structure",
+   "plural": "structures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an unfinished structure",
+   "question": "Is there an unfinished structure?",
+   "box": [
+    500,
+    100,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "mud",
+   "type": "entity",
+   "class": "mud",
+   "plural": "patches of mud",
+   "count": 1,
+   "count_exact": false,
+   "desc": "muddy ground depicted with earthy browns and grays",
+   "question": "Is there muddy ground depicted with earthy browns and grays?",
+   "box": [
+    0,
+    700,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "sky",
+   "type": "entity",
+   "class": "sky",
+   "plural": "skies",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pale blue sky",
+   "question": "Is there a pale blue sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    300
+   ]
+  },
+  {
+   "id": "worker_yellow_mud",
+   "type": "relation",
+   "of": [
+    "worker_yellow",
+    "mud"
+   ],
+   "desc": "the worker in the yellow hard hat has boots planted in the mud",
+   "question": "Are the boots of the worker in the yellow hard hat planted in the mud?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "mud",
+   "to": "worker_yellow",
+   "kind": "support"
+  },
+  {
+   "from": "mud",
+   "to": "worker_green",
+   "kind": "support"
+  },
+  {
+   "from": "mud",
+   "to": "foreman",
+   "kind": "support"
+  },
+  {
+   "from": "mud",
+   "to": "engineer",
+   "kind": "support"
+  },
+  {
+   "from": "mud",
+   "to": "dog",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0119",
+ "prompt": "A watercolor illustration depicts a bustling construction site where soft pigments bleed into the paper texture. On the left, a worker in a yellow hard hat stands firmly with boots planted in mud. In the center, a foreman wearing blue overalls points decisively toward a stack of lumber. To the right, an engineer in a white shirt holds rolled blueprints tightly against their chest. A small brown dog sits patiently beside the engineer, its tail curled around its paws. The worker in the yellow hard hat is handing a heavy wrench to a colleague in green coveralls who stands just behind them. The foreman in blue overalls looks intently at the engineer in the white shirt, creating a visual line of communication across the scene. A large orange crane looms in the background, its arm extended high above the unfinished structure. There is no safety fencing visible in the foreground. The scene captures the raw energy of labor through loose brushstrokes and vibrant hues. The mud beneath the workers' feet is depicted with earthy browns and grays, contrasting with the bright safety gear. The sky above is a wash of pale blue, suggesting early morning light. Each figure is distinct, from the crumpled sleeves of the engineer to the sturdy posture of the worker. The dog adds a touch of warmth to the industrial setting. The interaction between the two workers emphasizes teamwork, while the gaze between the foreman and engineer highlights supervision. The absence of barriers gives the space an open, accessible feel despite the ongoing work.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 8,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

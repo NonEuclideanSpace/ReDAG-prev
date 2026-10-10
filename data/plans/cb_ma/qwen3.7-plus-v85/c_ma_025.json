@@ -1,0 +1,227 @@
+{
+ "style": "photorealistic product photography, high detail, macro lens",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral surface supporting the music box",
+   "question": "Is there a neutral surface supporting the object?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "music_box",
+   "type": "entity",
+   "class": "music box",
+   "plural": "music boxes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elaborate Victorian-era music box crafted from polished dark wood",
+   "question": "Is there an elaborate Victorian-era music box crafted from polished dark wood?",
+   "box": [
+    212,
+    212,
+    812,
+    812
+   ]
+  },
+  {
+   "id": "lid",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "a hinged lid on the music box decorated with iridescent floral designs",
+   "question": "Does the music box have a hinged lid decorated with iridescent floral designs?"
+  },
+  {
+   "id": "lid_open",
+   "type": "state",
+   "of": "music_box",
+   "desc": "the lid of the music box is open",
+   "question": "Is the lid of the music box open?"
+  },
+  {
+   "id": "ballerina",
+   "type": "entity",
+   "class": "figurine",
+   "plural": "figurines",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning ballerina figurine dressed in a fluffy pink dress",
+   "question": "Is there a spinning ballerina figurine dressed in a fluffy pink dress inside the music box?",
+   "box": [
+    462,
+    350,
+    562,
+    550
+   ]
+  },
+  {
+   "id": "ballerina_face",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "the ballerina's face painted with rosy cheeks",
+   "question": "Is the ballerina's face painted with rosy cheeks?"
+  },
+  {
+   "id": "interior_lining",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "the interior of the music box lined with deep purple fabric",
+   "question": "Is the interior of the music box lined with deep purple fabric?"
+  },
+  {
+   "id": "mirrors",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three tiny mirrors positioned around the dancing area",
+   "question": "Are there three tiny mirrors positioned around the dancing area inside the music box?",
+   "box": [
+    350,
+    400,
+    674,
+    600
+   ]
+  },
+  {
+   "id": "viewing_window",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "a clear viewing window in the base revealing the musical movement",
+   "question": "Is there a clear viewing window in the base of the music box revealing the musical movement?"
+  },
+  {
+   "id": "gears_springs",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "shiny metallic gears and springs powering the mechanism visible through the window",
+   "question": "Are shiny metallic gears and springs powering the mechanism visible through the window?"
+  },
+  {
+   "id": "melody_comb",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "a melody comb with multiple precisely arranged teeth",
+   "question": "Is there a melody comb with multiple precisely arranged teeth visible in the mechanism?"
+  },
+  {
+   "id": "feet",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "four small metallic feet on the music box carved with decorative leaf patterns",
+   "question": "Does the music box have four small metallic feet carved with decorative leaf patterns?"
+  },
+  {
+   "id": "no_damage",
+   "type": "absent",
+   "desc": "signs of damage on the music box",
+   "question": "Are there any signs of damage on the music box?"
+  },
+  {
+   "id": "no_batteries",
+   "type": "absent",
+   "desc": "modern batteries in the music box",
+   "question": "Are there any modern batteries in the music box?"
+  },
+  {
+   "id": "ballerina_spinning",
+   "type": "state",
+   "of": "ballerina",
+   "desc": "the ballerina figurine is spinning",
+   "question": "Is the ballerina figurine spinning?"
+  },
+  {
+   "id": "mirrors_around_ballerina",
+   "type": "relation",
+   "of": [
+    "mirrors",
+    "ballerina"
+   ],
+   "desc": "the three tiny mirrors are positioned around the ballerina figurine",
+   "question": "Are the three tiny mirrors positioned around the ballerina figurine?"
+  },
+  {
+   "id": "music_box_inlays",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "intricate decorative inlays on the music box",
+   "question": "Does the music box have intricate decorative inlays?"
+  },
+  {
+   "id": "music_box_shape",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "the music box is rectangular with curved corners",
+   "question": "Is the music box rectangular with curved corners?"
+  },
+  {
+   "id": "lid_borders",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "golden ornate borders on the lid",
+   "question": "Does the lid have golden ornate borders?"
+  },
+  {
+   "id": "ballerina_eyes",
+   "type": "attribute",
+   "of": "ballerina",
+   "desc": "bright blue eyes on the ballerina's face",
+   "question": "Does the ballerina have bright blue eyes?"
+  },
+  {
+   "id": "lining_wear",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "gentle wear patterns on the deep purple fabric lining",
+   "question": "Does the deep purple fabric lining show gentle wear patterns?"
+  },
+  {
+   "id": "feet_age",
+   "type": "attribute",
+   "of": "music_box",
+   "desc": "signs of age on the metallic feet",
+   "question": "Do the metallic feet show signs of age?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "music_box",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_025",
+ "prompt": "A single elaborate Victorian-era music box crafted from polished dark wood with intricate decorative inlays. The box is rectangular with curved corners and features a hinged lid decorated with iridescent floral designs and golden ornate borders. Its mechanism plays a melodic tune when the lid opens, revealing a spinning ballerina figurine dressed in a fluffy pink dress. The music box is not electronic, operating purely through traditional clockwork mechanics. Four small metallic feet elevate the box from the surface, each carved with decorative leaf patterns and showing signs of age. The interior is lined with deep purple fabric that shows gentle wear patterns, while the ballerina's face is painted with rosy cheeks and bright blue eyes. Three tiny mirrors are positioned around the dancing area to create infinite reflections, and the musical movement is visible through a clear viewing window in the base. Shiny metallic gears and springs power the mechanism, while the melody comb has multiple precisely arranged teeth. The box shows no signs of damage and contains no modern batteries, maintaining its authentic vintage craftsmanship.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node music_box: entity question is long (20 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

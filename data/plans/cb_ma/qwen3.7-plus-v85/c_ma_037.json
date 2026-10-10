@@ -1,0 +1,215 @@
+{
+ "style": "fantasy digital art, bioluminescent, iridescent",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark background suitable for highlighting bioluminescence",
+   "question": "Is the background dark enough to highlight the glowing elements?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "crystal_rock",
+   "type": "entity",
+   "class": "rock",
+   "plural": "rocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crystal rock",
+   "question": "Is there a crystal rock?",
+   "box": [
+    300,
+    700,
+    724,
+    950
+   ]
+  },
+  {
+   "id": "alien_flower",
+   "type": "entity",
+   "class": "flower",
+   "plural": "flowers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single alien flower",
+   "question": "Is there a single alien flower?",
+   "box": [
+    350,
+    200,
+    674,
+    750
+   ]
+  },
+  {
+   "id": "flower_center",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the flower center contains a cluster of several yellow spherical pods",
+   "question": "Does the flower center contain a cluster of several yellow spherical pods?"
+  },
+  {
+   "id": "stem",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the flower has a metallic silver spiral-shaped stem",
+   "question": "Does the flower have a metallic silver spiral-shaped stem?"
+  },
+  {
+   "id": "leaves",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the plant has two large triangular leaves",
+   "question": "Does the plant have two large triangular leaves?"
+  },
+  {
+   "id": "petals_translucent",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the petals are partially translucent",
+   "question": "Are the petals partially translucent?"
+  },
+  {
+   "id": "plant_iridescent",
+   "type": "state",
+   "of": "alien_flower",
+   "desc": "the entire plant is iridescent",
+   "question": "Is the entire plant iridescent?"
+  },
+  {
+   "id": "pollen",
+   "type": "entity",
+   "class": "pollen",
+   "plural": "pollen clouds",
+   "count": 1,
+   "count_exact": false,
+   "desc": "glowing pollen floating in the air",
+   "question": "Is there glowing pollen floating in the air?",
+   "box": [
+    200,
+    100,
+    824,
+    600
+   ]
+  },
+  {
+   "id": "flower_on_rock",
+   "type": "relation",
+   "of": [
+    "alien_flower",
+    "crystal_rock"
+   ],
+   "desc": "the flower sprouts from the crystal rock",
+   "question": "Does the flower sprout from the crystal rock?"
+  },
+  {
+   "id": "pollen_around_flower",
+   "type": "relation",
+   "of": [
+    "pollen",
+    "alien_flower"
+   ],
+   "desc": "the pollen floats around the flower",
+   "question": "Is the pollen floating around the flower?"
+  },
+  {
+   "id": "no_withered",
+   "type": "absent",
+   "desc": "withered appearance",
+   "question": "Does the plant look withered?"
+  },
+  {
+   "id": "no_thorns",
+   "type": "absent",
+   "desc": "thorns on the plant",
+   "question": "Are there any thorns on the plant?"
+  },
+  {
+   "id": "stem_not_green",
+   "type": "absent",
+   "desc": "green color on the stem",
+   "question": "Is the stem green?"
+  },
+  {
+   "id": "flower_opened",
+   "type": "state",
+   "of": "alien_flower",
+   "desc": "the alien flower is fully opened",
+   "question": "Is the alien flower fully opened?"
+  },
+  {
+   "id": "petals_count",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the alien flower has exactly five petals",
+   "question": "Does the alien flower have exactly five petals?"
+  },
+  {
+   "id": "leaves_frosty",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the leaves are covered in a frosty texture",
+   "question": "Are the leaves covered in a frosty texture?"
+  },
+  {
+   "id": "petals_glowing_blue",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the petals are glowing blue",
+   "question": "Are the petals glowing blue?"
+  },
+  {
+   "id": "petals_serrated",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the petals have serrated edges",
+   "question": "Do the petals have serrated edges?"
+  },
+  {
+   "id": "petals_striped",
+   "type": "attribute",
+   "of": "alien_flower",
+   "desc": "the petals feature a striped pattern with purple stripes",
+   "question": "Do the petals feature a striped pattern with purple stripes?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crystal_rock",
+   "to": "alien_flower",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_037",
+ "prompt": "A single, fully opened, alien flower sprouting from a crystal rock. The flower has exactly five large, bioluminescent petals that are glowing blue. All the petals are partially translucent, have serrated edges, and feature a striped pattern with purple stripes. The center of the flower contains a cluster of several yellow, spherical pods. Its stem is a metallic silver color and is spiral-shaped. The plant has two large, triangular leaves covered in a frosty texture. The entire plant is iridescent. Some glowing pollen is floating in the air around the flower. This plant is not withered, it has no thorns, and its stem is not green.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [
+   "node alien_flower: entity question is long (17 words); should only ask presence + identifying look"
+  ],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 4,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

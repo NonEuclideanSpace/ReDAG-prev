@@ -1,0 +1,586 @@
+{
+ "style": "surreal cinematic photography, hazy golden hour lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "an arid plain with cracked red clay under a setting sun",
+   "question": "Does the image show an arid plain with cracked red clay under a setting sun?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "tripod",
+   "type": "entity",
+   "class": "tripod",
+   "plural": "tripods",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tripod",
+   "question": "Is there a tripod?",
+   "box": [
+    460,
+    400,
+    564,
+    800
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "film camera",
+   "plural": "film cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a weathered film camera",
+   "question": "Is there a weathered film camera?",
+   "box": [
+    480,
+    350,
+    544,
+    420
+   ]
+  },
+  {
+   "id": "cable",
+   "type": "entity",
+   "class": "cable",
+   "plural": "cables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a frayed cable",
+   "question": "Is there a frayed cable?",
+   "box": [
+    480,
+    420,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "windsocks",
+   "type": "entity",
+   "class": "windsock",
+   "plural": "windsocks",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright fabric windsocks",
+   "question": "Are there bright fabric windsocks?",
+   "box": [
+    100,
+    200,
+    300,
+    500
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "folding table",
+   "plural": "folding tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a folding table",
+   "question": "Is there a folding table?",
+   "box": [
+    600,
+    600,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "cups_cards",
+   "type": "entity",
+   "class": "coffee cup",
+   "plural": "coffee cups",
+   "count": 2,
+   "count_exact": false,
+   "desc": "half-empty coffee cups",
+   "question": "Are there half-empty coffee cups?",
+   "box": [
+    650,
+    580,
+    850,
+    650
+   ]
+  },
+  {
+   "id": "notebook",
+   "type": "entity",
+   "class": "notebook",
+   "plural": "notebooks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open notebook",
+   "question": "Is there an open notebook?",
+   "box": [
+    700,
+    620,
+    800,
+    680
+   ]
+  },
+  {
+   "id": "drape",
+   "type": "entity",
+   "class": "fabric drape",
+   "plural": "fabric drapes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shimmering iridescent fabric drape",
+   "question": "Is there a shimmering iridescent fabric drape?",
+   "box": [
+    550,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "posts",
+   "type": "entity",
+   "class": "wooden post",
+   "plural": "wooden posts",
+   "count": 2,
+   "count_exact": true,
+   "desc": "two wooden posts",
+   "question": "Are there two wooden posts?",
+   "box": [
+    550,
+    300,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "crane",
+   "type": "entity",
+   "class": "crane arm",
+   "plural": "crane arms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large mechanical crane arm",
+   "question": "Is there a large mechanical crane arm?",
+   "box": [
+    0,
+    0,
+    400,
+    400
+   ]
+  },
+  {
+   "id": "gondola",
+   "type": "entity",
+   "class": "gondola",
+   "plural": "gondolas",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a suspended gondola",
+   "question": "Is there a suspended gondola?",
+   "box": [
+    100,
+    100,
+    200,
+    200
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single mirror",
+   "question": "Is there a single mirror?",
+   "box": [
+    120,
+    120,
+    180,
+    180
+   ]
+  },
+  {
+   "id": "wires_roots",
+   "type": "entity",
+   "class": "tangle",
+   "plural": "tangles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tangle of wires and roots",
+   "question": "Is there a tangle of wires and roots?",
+   "box": [
+    400,
+    800,
+    700,
+    950
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "shadowy figure",
+   "plural": "shadowy figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shadowy figure",
+   "question": "Is there a shadowy figure?",
+   "box": [
+    600,
+    350,
+    700,
+    550
+   ]
+  },
+  {
+   "id": "tripod_sunk",
+   "type": "state",
+   "of": "tripod",
+   "desc": "the tripod legs are sunk into the ground",
+   "question": "Are the tripod legs sunk into the ground?"
+  },
+  {
+   "id": "camera_dangling",
+   "type": "relation",
+   "of": [
+    "camera",
+    "tripod"
+   ],
+   "desc": "the film camera is dangling from the tripod",
+   "question": "Is the film camera dangling from the tripod?"
+  },
+  {
+   "id": "lens_upward",
+   "type": "state",
+   "of": "camera",
+   "desc": "the camera lens is tilted sharply upward",
+   "question": "Is the camera lens tilted sharply upward?"
+  },
+  {
+   "id": "windsocks_twisting",
+   "type": "state",
+   "of": "windsocks",
+   "desc": "the windsocks are twisting",
+   "question": "Are the windsocks twisting?"
+  },
+  {
+   "id": "notebook_open",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the notebook is open",
+   "question": "Is the notebook open?"
+  },
+  {
+   "id": "mirror_turning",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror is turning slowly",
+   "question": "Is the mirror turning slowly?"
+  },
+  {
+   "id": "camera_on_tripod",
+   "type": "relation",
+   "of": [
+    "camera",
+    "tripod"
+   ],
+   "desc": "the camera hangs from the tripod",
+   "question": "Does the camera hang from the tripod?"
+  },
+  {
+   "id": "cable_connected",
+   "type": "relation",
+   "of": [
+    "cable",
+    "camera"
+   ],
+   "desc": "the cable is connected to the camera",
+   "question": "Is the cable connected to the camera?"
+  },
+  {
+   "id": "table_beside_tripod",
+   "type": "relation",
+   "of": [
+    "table",
+    "tripod"
+   ],
+   "desc": "the folding table is beside the tripod",
+   "question": "Is the folding table beside the tripod?"
+  },
+  {
+   "id": "items_on_table",
+   "type": "relation",
+   "of": [
+    "cups_cards",
+    "table"
+   ],
+   "desc": "the coffee cups and memory cards are on the table",
+   "question": "Are the coffee cups and memory cards on the table?"
+  },
+  {
+   "id": "notebook_on_table",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "table"
+   ],
+   "desc": "the notebook lies on the table",
+   "question": "Does the notebook lie on the table?"
+  },
+  {
+   "id": "drape_between_posts",
+   "type": "relation",
+   "of": [
+    "drape",
+    "posts"
+   ],
+   "desc": "the drape is rigged between the wooden posts",
+   "question": "Is the drape rigged between the wooden posts?"
+  },
+  {
+   "id": "posts_behind_table",
+   "type": "relation",
+   "of": [
+    "posts",
+    "table"
+   ],
+   "desc": "the wooden posts are behind the table",
+   "question": "Are the wooden posts behind the table?"
+  },
+  {
+   "id": "gondola_on_crane",
+   "type": "relation",
+   "of": [
+    "gondola",
+    "crane"
+   ],
+   "desc": "the gondola is suspended from the crane arm",
+   "question": "Is the gondola suspended from the crane arm?"
+  },
+  {
+   "id": "mirror_in_gondola",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "gondola"
+   ],
+   "desc": "the mirror is inside the gondola",
+   "question": "Is the mirror inside the gondola?"
+  },
+  {
+   "id": "cable_through_tangle",
+   "type": "relation",
+   "of": [
+    "cable",
+    "wires_roots"
+   ],
+   "desc": "the cable winds through the tangle of wires and roots",
+   "question": "Does the cable wind through the tangle of wires and roots?"
+  },
+  {
+   "id": "figure_behind_drape",
+   "type": "relation",
+   "of": [
+    "figure",
+    "drape"
+   ],
+   "desc": "the shadowy figure is behind the drape",
+   "question": "Is the shadowy figure behind the drape?"
+  },
+  {
+   "id": "tripod_stands",
+   "type": "state",
+   "of": "tripod",
+   "desc": "the tripod stands",
+   "question": "Is the tripod standing?"
+  },
+  {
+   "id": "cable_trailing",
+   "type": "state",
+   "of": "cable",
+   "desc": "the cable trails along the ground",
+   "question": "Does the cable trail along the ground?"
+  },
+  {
+   "id": "camera_reflection",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "camera"
+   ],
+   "desc": "the mirror reflects the camera lens",
+   "question": "Does the mirror reflect the camera lens?"
+  },
+  {
+   "id": "tripod_legs_scorched",
+   "type": "attribute",
+   "of": "tripod",
+   "desc": "the tripod has scorched and bent iron legs",
+   "question": "Does the tripod have scorched and bent iron legs?"
+  },
+  {
+   "id": "crane_neck_bends",
+   "type": "state",
+   "of": "crane",
+   "desc": "the crane arm's neck bends like a mechanical crane bird",
+   "question": "Does the crane arm's neck bend like a mechanical crane bird?"
+  },
+  {
+   "id": "notebook_notes",
+   "type": "attribute",
+   "of": "notebook",
+   "desc": "the notebook has handwritten notes",
+   "question": "Does the open notebook contain handwritten notes?"
+  },
+  {
+   "id": "cards_frayed",
+   "type": "attribute",
+   "of": "cups_cards",
+   "desc": "the memory cards have frayed edges",
+   "question": "Do the stacked memory cards have frayed edges?"
+  },
+  {
+   "id": "notebook_beside_tripod",
+   "type": "relation",
+   "of": [
+    "notebook",
+    "tripod"
+   ],
+   "desc": "the notebook is beside the tripod",
+   "question": "Is the open notebook beside the tripod?"
+  },
+  {
+   "id": "memory_cards",
+   "type": "entity",
+   "class": "memory card",
+   "plural": "memory cards",
+   "count": 2,
+   "count_exact": false,
+   "desc": "stacked memory cards with frayed edges",
+   "question": "Are there stacked memory cards with frayed edges?",
+   "box": [
+    320,
+    656,
+    380,
+    704
+   ]
+  },
+  {
+   "id": "items_on_table_2",
+   "type": "relation",
+   "of": [
+    "cups_cards",
+    "table"
+   ],
+   "desc": "the coffee cups are on the table",
+   "question": "Are the coffee cups on the folding table?"
+  },
+  {
+   "id": "cards_on_table",
+   "type": "relation",
+   "of": [
+    "memory_cards",
+    "table"
+   ],
+   "desc": "the memory cards are on the table",
+   "question": "Are the memory cards on the folding table?"
+  },
+  {
+   "id": "cable_knotted",
+   "type": "attribute",
+   "of": "cable",
+   "desc": "the cable is knotted",
+   "question": "Is the cable knotted?"
+  },
+  {
+   "id": "notebook_pages_curling",
+   "type": "state",
+   "of": "notebook",
+   "desc": "the notebook pages are curling",
+   "question": "Are the notebook pages curling?"
+  },
+  {
+   "id": "windsocks_fluttering",
+   "type": "state",
+   "of": "windsocks",
+   "desc": "the windsocks are fluttering",
+   "question": "Are the windsocks fluttering?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "tripod",
+   "to": "camera",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cups_cards",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "notebook",
+   "kind": "support"
+  },
+  {
+   "from": "posts",
+   "to": "drape",
+   "kind": "support"
+  },
+  {
+   "from": "crane",
+   "to": "gondola",
+   "kind": "support"
+  },
+  {
+   "from": "gondola",
+   "to": "mirror",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "memory_cards",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0305",
+ "prompt": "In the hazy glow of a setting sun that casts golden ripples over the arid plain, a solitary tripod stands in the center of a makeshift film set carved from the bones of the earth. Its iron legs, scorched and bent from years of desert heat, sink deep into the cracked red clay, as if the ground itself has tried to swallow it whole. From its cradle dangles a weathered film camera, connected by a frayed and knotted cable, its lens tilted sharply upward, catching the last embers of daylight before they are swallowed by the coming dusk. Around it, the air hums with the restless motion of time—windsocks twist and gyrate like sentient beings, their bright fabric fluttering erratically, whispering in a language of currents and pressure shifts. Beside the tripod, a folding table groans under the weight of half-empty coffee cups and memory cards stacked like talismans, their edges frayed from use, their contents unknown. A lone notebook lies open, pages curling in the dry breeze, its handwritten notes half-legible, scrawled in looping, desperate strokes that suggest the writer is chasing a story slipping through their fingers. A drape of shimmering, iridescent fabric has been rigged between two wooden posts behind the table, its surface reflecting not just the colors of the scene but ghostly echoes of what once was—scenes replaying like broken films, overlaid in layers that shift when no one is looking. Above it all, a crane arm of impossible proportions juts from the horizon, defying logic, as if it had grown from the land itself. Its long neck bends like a mechanical crane bird, a suspended gondola dangling from its beak, containing a single mirror that turns slowly, reflecting the camera lens with obsessive care. The camera’s cable, now trailing along the ground, winds through a tangle of wires and roots that sprout from the earth like veins, feeding the machinery with an energy that is neither electric nor organic, but something in between. In the distance, a shadowy figure moves behind the drape, not quite solid, not quite a mirage, their presence inferred only by the way the fabric trembles in response to their touch. As the sun sinks lower, the horizon warps into a kaleidoscope of heat and color, and the entire scene becomes a dream caught between the real and the imagined, where every object seems to watch, to move, to change, in a slow, deliberate dance of creation and undoing. The windsocks pause mid-sway, as if in reverence to the moment, while the camera, for a brief second, aligns perfectly with the mirror in the sky, capturing an image of itself—flickering in the glass, caught in an endless loop of reflection and exposure.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 50,
+   "n_uncovered": 6,
+   "proposed": 3,
+   "ungrounded": 0,
+   "added": 3,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 4,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

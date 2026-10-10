@@ -1,0 +1,351 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling school science fair",
+   "question": "Does the image depict a bustling school science fair?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table in the image?",
+   "box": [
+    512,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "cage",
+   "type": "entity",
+   "class": "cage",
+   "plural": "cages",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cage",
+   "question": "Is there a cage in the image?",
+   "box": [
+    300,
+    750,
+    600,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow dress",
+   "question": "Is there a girl in a yellow dress?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy with glasses",
+   "question": "Is there a boy?",
+   "box": [
+    400,
+    250,
+    600,
+    750
+   ]
+  },
+  {
+   "id": "robot",
+   "type": "entity",
+   "class": "robot",
+   "plural": "robots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver robot",
+   "question": "Is there a silver robot?",
+   "box": [
+    650,
+    550,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "beaker",
+   "type": "entity",
+   "class": "beaker",
+   "plural": "beakers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a blue beaker",
+   "question": "Is there a blue beaker?",
+   "box": [
+    850,
+    600,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "teacher",
+   "type": "entity",
+   "class": "teacher",
+   "plural": "teachers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a teacher in a gray suit",
+   "question": "Is there a teacher in a gray suit?",
+   "box": [
+    550,
+    150,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "rabbit",
+   "type": "entity",
+   "class": "rabbit",
+   "plural": "rabbits",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white rabbit",
+   "question": "Is there a small white rabbit?",
+   "box": [
+    350,
+    800,
+    550,
+    980
+   ]
+  },
+  {
+   "id": "project",
+   "type": "entity",
+   "class": "science project",
+   "plural": "science projects",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a science project",
+   "question": "Is there a science project?",
+   "box": [
+    100,
+    500,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "liquid",
+   "type": "attribute",
+   "of": "beaker",
+   "desc": "bubbling liquid inside the blue beaker",
+   "question": "Is there bubbling liquid inside the blue beaker?"
+  },
+  {
+   "id": "girl_proud",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in the yellow dress looks proud",
+   "question": "Does the girl in the yellow dress look proud?"
+  },
+  {
+   "id": "boy_leaning",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy with glasses leans forward intently",
+   "question": "Does the boy with glasses lean forward intently?"
+  },
+  {
+   "id": "robot_sitting",
+   "type": "state",
+   "of": "robot",
+   "desc": "the silver robot is sitting",
+   "question": "Is the silver robot sitting?"
+  },
+  {
+   "id": "rabbit_resting",
+   "type": "state",
+   "of": "rabbit",
+   "desc": "the small white rabbit is resting",
+   "question": "Is the small white rabbit resting?"
+  },
+  {
+   "id": "girl_pointing_robot",
+   "type": "action",
+   "of": [
+    "girl",
+    "robot"
+   ],
+   "desc": "the girl in the yellow dress points at the silver robot",
+   "question": "Is the girl in the yellow dress pointing at the silver robot?"
+  },
+  {
+   "id": "boy_looking_beaker",
+   "type": "action",
+   "of": [
+    "boy",
+    "beaker"
+   ],
+   "desc": "the boy with glasses looks at the blue beaker",
+   "question": "Is the boy with glasses looking at the blue beaker?"
+  },
+  {
+   "id": "teacher_observing",
+   "type": "action",
+   "of": [
+    "teacher",
+    "boy"
+   ],
+   "desc": "the teacher in the gray suit observes the boy with glasses",
+   "question": "Is the teacher in the gray suit observing the boy with glasses?"
+  },
+  {
+   "id": "girl_beside_project",
+   "type": "relation",
+   "of": [
+    "girl",
+    "project"
+   ],
+   "desc": "the girl in the yellow dress stands beside her project",
+   "question": "Is the girl in the yellow dress standing beside her project?"
+  },
+  {
+   "id": "robot_on_table",
+   "type": "relation",
+   "of": [
+    "robot",
+    "table"
+   ],
+   "desc": "the silver robot sits on the table",
+   "question": "Is the silver robot sitting on the table?"
+  },
+  {
+   "id": "beaker_next_to_robot",
+   "type": "relation",
+   "of": [
+    "beaker",
+    "robot"
+   ],
+   "desc": "the blue beaker is next to the silver robot",
+   "question": "Is the blue beaker next to the silver robot?"
+  },
+  {
+   "id": "teacher_behind_boy",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "boy"
+   ],
+   "desc": "the teacher in the gray suit is behind the boy with glasses",
+   "question": "Is the teacher in the gray suit behind the boy with glasses?"
+  },
+  {
+   "id": "teacher_next_to_boy",
+   "type": "relation",
+   "of": [
+    "teacher",
+    "boy"
+   ],
+   "desc": "the teacher in the gray suit stands next to the boy with glasses",
+   "question": "Is the teacher in the gray suit standing next to the boy with glasses?"
+  },
+  {
+   "id": "rabbit_in_cage",
+   "type": "relation",
+   "of": [
+    "rabbit",
+    "cage"
+   ],
+   "desc": "the small white rabbit rests in the cage",
+   "question": "Is the small white rabbit resting in the cage?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "girl_standing",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl in the yellow dress stands",
+   "question": "Is the girl in the yellow dress standing?"
+  },
+  {
+   "id": "teacher_standing",
+   "type": "state",
+   "of": "teacher",
+   "desc": "the teacher in the gray suit stands",
+   "question": "Is the teacher in the gray suit standing?"
+  },
+  {
+   "id": "boy_glasses",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wears glasses",
+   "question": "Does the boy wear glasses?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "robot",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "beaker",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0050",
+ "prompt": "This photorealistic photo captures a bustling school science fair. On the left, a girl in a yellow dress stands proudly beside her project. In the center, a boy with glasses leans forward intently. To his right, a silver robot sits on the table. Next to the robot, a blue beaker holds bubbling liquid. Behind them, a teacher in a gray suit observes closely. In the foreground, a small white rabbit rests in a cage. The girl in the yellow dress is pointing at the silver robot. The boy with glasses is looking at the blue beaker. The teacher in the gray suit is standing next to the boy with glasses. The silver robot is sitting on the table. There is no fire in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

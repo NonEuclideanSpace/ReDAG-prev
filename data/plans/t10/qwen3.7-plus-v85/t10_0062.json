@@ -1,0 +1,319 @@
+{
+ "style": "cinematic film still, gritty, twilight lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a gritty shipyard dock with wet concrete and industrial decay",
+   "question": "Does the image show a gritty shipyard dock with wet concrete and industrial decay?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "worker",
+   "type": "entity",
+   "class": "worker",
+   "plural": "workers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a worker in a yellow hard hat",
+   "question": "Is there a worker in a yellow hard hat?",
+   "box": [
+    50,
+    300,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "chain",
+   "type": "entity",
+   "class": "anchor chain",
+   "plural": "anchor chains",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted anchor chain",
+   "question": "Is there a rusted anchor chain?",
+   "box": [
+    260,
+    600,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue raincoat",
+   "question": "Is there a woman in a blue raincoat?",
+   "box": [
+    380,
+    250,
+    580,
+    950
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a large brown crate",
+   "question": "Is there a large brown crate?",
+   "box": [
+    550,
+    500,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    700,
+    200,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray black dog",
+   "question": "Is there a stray black dog?",
+   "box": [
+    850,
+    400,
+    980,
+    700
+   ]
+  },
+  {
+   "id": "ropes",
+   "type": "entity",
+   "class": "rope",
+   "plural": "ropes",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a pile of ropes",
+   "question": "Is there a pile of ropes?",
+   "box": [
+    880,
+    650,
+    1000,
+    850
+   ]
+  },
+  {
+   "id": "worker_clipboard",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds a clipboard close to his chest",
+   "question": "Is the worker in the yellow hard hat holding a clipboard close to his chest?"
+  },
+  {
+   "id": "worker_pen",
+   "type": "attribute",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat holds a pen",
+   "question": "Is the worker in the yellow hard hat holding a pen?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue raincoat points decisively",
+   "question": "Is the woman in the blue raincoat pointing decisively?"
+  },
+  {
+   "id": "man_tablet",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a tablet device",
+   "question": "Is the man in the red scarf holding a tablet device?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_crouching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the stray black dog crouches low",
+   "question": "Is the stray black dog crouching low?"
+  },
+  {
+   "id": "dog_watching",
+   "type": "state",
+   "of": "dog",
+   "desc": "the stray black dog watches with wary eyes",
+   "question": "Does the stray black dog have a wary expression?"
+  },
+  {
+   "id": "chain_beside_worker",
+   "type": "relation",
+   "of": [
+    "chain",
+    "worker"
+   ],
+   "desc": "the rusted anchor chain lies beside the worker in the yellow hard hat",
+   "question": "Is the rusted anchor chain beside the worker in the yellow hard hat?"
+  },
+  {
+   "id": "crate_next_to_woman",
+   "type": "relation",
+   "of": [
+    "crate",
+    "woman"
+   ],
+   "desc": "the large brown crate sits next to the woman in the blue raincoat",
+   "question": "Is the large brown crate next to the woman in the blue raincoat?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in the red scarf sits on the edge of the large brown crate",
+   "question": "Is the man in the red scarf sitting on the edge of the large brown crate?"
+  },
+  {
+   "id": "dog_behind_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the stray black dog is behind the man in the red scarf",
+   "question": "Is the stray black dog behind the man in the red scarf?"
+  },
+  {
+   "id": "dog_near_ropes",
+   "type": "relation",
+   "of": [
+    "dog",
+    "ropes"
+   ],
+   "desc": "the stray black dog is near the pile of ropes",
+   "question": "Is the stray black dog near the pile of ropes?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "worker",
+    "woman"
+   ],
+   "desc": "the worker in the yellow hard hat hands a pen to the woman in the blue raincoat",
+   "question": "Is the worker in the yellow hard hat handing a pen to the woman in the blue raincoat?"
+  },
+  {
+   "id": "no_water",
+   "type": "absent",
+   "desc": "water",
+   "question": "Is there any water visible in the image?"
+  },
+  {
+   "id": "worker_standing",
+   "type": "state",
+   "of": "worker",
+   "desc": "the worker in the yellow hard hat stands firmly",
+   "question": "Is the worker in the yellow hard hat standing firmly?"
+  },
+  {
+   "id": "chain_coiled",
+   "type": "state",
+   "of": "chain",
+   "desc": "the rusted anchor chain is coiled in a heavy heap",
+   "question": "Is the rusted anchor chain coiled in a heavy heap?"
+  },
+  {
+   "id": "chain_moisture",
+   "type": "attribute",
+   "of": "chain",
+   "desc": "the iron links of the anchor chain gleam with moisture",
+   "question": "Do the iron links of the anchor chain gleam with moisture?"
+  },
+  {
+   "id": "crate_stencils",
+   "type": "attribute",
+   "of": "crate",
+   "desc": "the large brown crate is marked with faded white stencils",
+   "question": "Is the large brown crate marked with faded white stencils?"
+  },
+  {
+   "id": "crate_unopened",
+   "type": "state",
+   "of": "crate",
+   "desc": "the large brown crate is unopened",
+   "question": "Is the large brown crate unopened?"
+  },
+  {
+   "id": "woman_arm_extended",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue raincoat has her arm extended",
+   "question": "Does the woman in the blue raincoat have her arm extended?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0062",
+ "prompt": "A cinematic film still captures a gritty shipyard dock at twilight. On the far left, a worker in a yellow hard hat stands firmly on wet concrete, holding a clipboard close to his chest. Beside him, a rusted anchor chain lies coiled in a heavy heap, its iron links gleaming with moisture. In the center foreground, a woman in a blue raincoat points decisively toward the horizon, her arm extended with urgency. Next to her, a large brown crate sits unopened, marked with faded white stencils. To the right, a man in a red scarf looks intently at a tablet device, ignoring the commotion around him. Behind him, a stray black dog crouches low near a pile of ropes, watching the scene with wary eyes. The worker in the yellow hard hat is handing a pen to the woman in the blue raincoat, bridging the gap between them. The man in the red scarf is sitting on the edge of the large brown crate, balancing carefully as he reviews data. There is no water visible in the frame, only the industrial decay of the dock itself. The composition emphasizes the stark contrast between the vibrant safety gear and the dull gray surroundings, grounding the viewer in the tactile reality of maritime labor.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

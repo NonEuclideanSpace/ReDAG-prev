@@ -1,0 +1,185 @@
+{
+ "style": "fantasy digital art, high detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "rocky ground",
+   "question": "Does the image show rocky ground?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "golem",
+   "type": "entity",
+   "class": "golem",
+   "plural": "golems",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a humanoid figure made of translucent purple crystal shards",
+   "question": "Is there a humanoid figure made of translucent purple crystal shards?",
+   "box": [
+    312,
+    100,
+    712,
+    900
+   ]
+  },
+  {
+   "id": "golem_standing",
+   "type": "state",
+   "of": "golem",
+   "desc": "the golem is in a standing pose",
+   "question": "Is the golem in a standing pose?"
+  },
+  {
+   "id": "golem_no_face",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem has no discernible face",
+   "question": "Does the golem have no discernible face?"
+  },
+  {
+   "id": "golem_limbs",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem has two arms and two legs",
+   "question": "Does the golem have two arms and two legs?"
+  },
+  {
+   "id": "golem_texture",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem's surface is reflective",
+   "question": "Is the golem's surface reflective?"
+  },
+  {
+   "id": "golem_glow",
+   "type": "state",
+   "of": "golem",
+   "desc": "the golem glows with a soft internal light",
+   "question": "Does the golem glow with a soft internal light?"
+  },
+  {
+   "id": "core",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "a spherical core glowing bright white is visible in the golem's chest",
+   "question": "Is a spherical core glowing bright white visible in the golem's chest?"
+  },
+  {
+   "id": "moss_on_legs",
+   "type": "state",
+   "of": "golem",
+   "desc": "moss from the ground is growing on the golem's legs",
+   "question": "Is moss growing on the golem's legs?"
+  },
+  {
+   "id": "no_smooth",
+   "type": "absent",
+   "desc": "smooth surface on the golem",
+   "question": "Is the golem's surface smooth?"
+  },
+  {
+   "id": "no_metal",
+   "type": "absent",
+   "desc": "metal material on the golem",
+   "question": "Is the golem made of metal?"
+  },
+  {
+   "id": "no_movement",
+   "type": "absent",
+   "desc": "motion blur or movement",
+   "question": "Is there any motion blur or movement visible?"
+  },
+  {
+   "id": "no_clothing",
+   "type": "absent",
+   "desc": "clothing on the golem",
+   "question": "Is the golem wearing any clothing?"
+  },
+  {
+   "id": "moss_ground",
+   "type": "entity",
+   "class": "moss",
+   "plural": "moss",
+   "count": 1,
+   "count_exact": false,
+   "desc": "some moss on the ground",
+   "question": "Is there some moss on the ground?",
+   "box": [
+    100,
+    800,
+    924,
+    1024
+   ]
+  },
+  {
+   "id": "golem_feet_planted",
+   "type": "relation",
+   "of": [
+    "golem",
+    "moss_ground"
+   ],
+   "desc": "the golem's feet are planted on the rocky ground",
+   "question": "Are the golem's feet planted on the rocky ground?"
+  },
+  {
+   "id": "golem_fingers",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem has five fingers on each hand",
+   "question": "Does the golem have five fingers on each hand?"
+  },
+  {
+   "id": "golem_rough",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem's surface has a rough texture",
+   "question": "Does the golem's surface have a rough texture?"
+  },
+  {
+   "id": "golem_cracked",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "parts of the golem's crystal body are cracked",
+   "question": "Are parts of the golem's crystal body cracked?"
+  },
+  {
+   "id": "golem_steady_light",
+   "type": "attribute",
+   "of": "golem",
+   "desc": "the golem's internal light is steady",
+   "question": "Is the golem's internal light steady?"
+  }
+ ],
+ "edges": [],
+ "id": "c_ma_035",
+ "prompt": "A single, weathered, crystalline golem in a standing pose. Its entire humanoid body is made of a translucent purple crystal and is composed of many sharp, geometric shards. The golem has two arms and two legs, with five fingers on each hand, but it has no discernible face. Its surface is reflective, with a rough texture, and some parts of its crystal body are cracked. It glows with a soft internal light. In its chest, a single, spherical core is visible, and this core glows bright white. The golem's feet are planted on the rocky ground, and some moss is growing on its legs. Critically, its surface is not smooth, it is not made of metal, it is not moving, its internal light is not flickering, and it does not have any clothing.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 6,
+   "new_nodes": 6,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "style": "photorealistic product photography, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a neutral background suitable for product display",
+   "question": "Is the background neutral and suitable for product display?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cushion",
+   "type": "entity",
+   "class": "cushion",
+   "plural": "cushions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crimson velvet cushion",
+   "question": "Is there a crimson velvet cushion?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "flute",
+   "type": "entity",
+   "class": "flute",
+   "plural": "flutes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pale-celadon jade flute",
+   "question": "Is there a pale-celadon jade flute?",
+   "box": [
+    150,
+    400,
+    874,
+    650
+   ]
+  },
+  {
+   "id": "flute_holes",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "the pale-celadon jade flute has eight evenly spaced finger holes",
+   "question": "Does the pale-celadon jade flute have eight evenly spaced finger holes?"
+  },
+  {
+   "id": "flute_engravings",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "subtle cloud engravings flow along the length of the pale-celadon jade flute",
+   "question": "Do subtle cloud engravings flow along the length of the pale-celadon jade flute?"
+  },
+  {
+   "id": "flute_mouthpiece",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "a narrow band of inlaid silver wire circles the mouthpiece of the pale-celadon jade flute",
+   "question": "Does a narrow band of inlaid silver wire circle the mouthpiece of the pale-celadon jade flute?"
+  },
+  {
+   "id": "tassel",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "a royal-purple silk tassel hangs from the tail end of the pale-celadon jade flute",
+   "question": "Does a royal-purple silk tassel hang from the tail end of the pale-celadon jade flute?"
+  },
+  {
+   "id": "pearls",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "tiny white pearls adorn the knot of the royal-purple silk tassel on the pale-celadon jade flute",
+   "question": "Do tiny white pearls adorn the knot of the royal-purple silk tassel on the pale-celadon jade flute?"
+  },
+  {
+   "id": "flute_on_cushion",
+   "type": "relation",
+   "of": [
+    "flute",
+    "cushion"
+   ],
+   "desc": "the pale-celadon jade flute is positioned on the crimson velvet cushion",
+   "question": "Is the pale-celadon jade flute positioned on the crimson velvet cushion?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks on the jade surface",
+   "question": "Are there any cracks on the jade surface of the flute?"
+  },
+  {
+   "id": "no_chips",
+   "type": "absent",
+   "desc": "chips on the jade surface",
+   "question": "Are there any chips on the jade surface of the flute?"
+  },
+  {
+   "id": "no_wood",
+   "type": "absent",
+   "desc": "wooden components",
+   "question": "Are there any wooden components in the image?"
+  },
+  {
+   "id": "flute_straight",
+   "type": "state",
+   "of": "flute",
+   "desc": "the pale-celadon jade flute is straight",
+   "question": "Is the pale-celadon jade flute straight?"
+  },
+  {
+   "id": "jade_gleams",
+   "type": "state",
+   "of": "flute",
+   "desc": "the jade surface of the flute gleams softly",
+   "question": "Does the jade surface of the flute gleam softly?"
+  },
+  {
+   "id": "flute_hole_rims",
+   "type": "attribute",
+   "of": "flute",
+   "desc": "the finger holes of the pale-celadon jade flute are rimmed with polished gold rings",
+   "question": "Are the finger holes of the pale-celadon jade flute rimmed with polished gold rings?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cushion",
+   "to": "flute",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_080",
+ "prompt": "Illustrate a single pale-celadon jade flute positioned on a crimson velvet cushion. The straight flute bears eight evenly spaced finger holes, each rimmed with polished gold rings. Subtle cloud engravings flow along its length, and a royal-purple silk tassel hangs from the tail end. Tiny white pearls adorn the tassel knot. A narrow band of inlaid silver wire circles the mouthpiece. The jade surface gleams softly and shows no cracks, no chips, and absolutely no wooden components.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

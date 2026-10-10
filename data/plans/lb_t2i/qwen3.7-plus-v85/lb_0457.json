@@ -1,0 +1,630 @@
+{
+ "style": "surreal digital painting, magical realism, atmospheric lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a cluttered study interior with a stone windowsill, mismatched books, gears, and instruments on shelves",
+   "question": "Does the image show a cluttered study interior with a stone windowsill and shelves holding books, gears, and instruments?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "telescope",
+   "type": "entity",
+   "class": "telescope",
+   "plural": "telescopes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brass telescope",
+   "question": "Is there a brass telescope?",
+   "box": [
+    460,
+    500,
+    564,
+    600
+   ]
+  },
+  {
+   "id": "mirror_patch",
+   "type": "entity",
+   "class": "air distortion",
+   "plural": "air distortions",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a mirror-like patch of air",
+   "question": "Is there a mirror-like patch of air?",
+   "box": [
+    580,
+    300,
+    780,
+    500
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair with spiraling grain",
+   "question": "Is there a wooden chair with spiraling grain?",
+   "box": [
+    100,
+    550,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "raincoat",
+   "type": "entity",
+   "class": "raincoat",
+   "plural": "raincoats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a yellow raincoat",
+   "question": "Is there a yellow raincoat?",
+   "box": [
+    120,
+    450,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "bowl",
+   "plural": "bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a shallow bowl",
+   "question": "Is there a shallow bowl?",
+   "box": [
+    300,
+    750,
+    450,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    600,
+    520,
+    750,
+    620
+   ]
+  },
+  {
+   "id": "pendulum",
+   "type": "entity",
+   "class": "pendulum",
+   "plural": "pendulums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pendulum",
+   "question": "Is there a pendulum?",
+   "box": [
+    480,
+    0,
+    544,
+    300
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small clock with three hands",
+   "question": "Is there a small clock with three hands?",
+   "box": [
+    800,
+    200,
+    900,
+    300
+   ]
+  },
+  {
+   "id": "paper",
+   "type": "entity",
+   "class": "sheet of paper",
+   "plural": "sheets of paper",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a sheet of paper",
+   "question": "Is there a sheet of paper?",
+   "box": [
+    850,
+    100,
+    950,
+    180
+   ]
+  },
+  {
+   "id": "scarf",
+   "type": "entity",
+   "class": "scarf",
+   "plural": "scarves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a forgotten scarf",
+   "question": "Is there a forgotten scarf?",
+   "box": [
+    150,
+    580,
+    250,
+    650
+   ]
+  },
+  {
+   "id": "telescope_centered",
+   "type": "relation",
+   "of": [
+    "telescope",
+    "windowsill"
+   ],
+   "desc": "the brass telescope sits at the center of the windowsill",
+   "question": "Is the brass telescope sitting at the center of the windowsill?"
+  },
+  {
+   "id": "telescope_aimed",
+   "type": "state",
+   "of": "telescope",
+   "desc": "the brass telescope is aimed at the mirror-like patch",
+   "question": "Is the brass telescope aimed at the mirror-like patch?"
+  },
+  {
+   "id": "raincoat_dangling",
+   "type": "state",
+   "of": "raincoat",
+   "desc": "the yellow raincoat is dangling",
+   "question": "Is the yellow raincoat dangling?"
+  },
+  {
+   "id": "raincoat_sleeve_touching",
+   "type": "relation",
+   "of": [
+    "raincoat",
+    "bowl"
+   ],
+   "desc": "one sleeve of the yellow raincoat brushes the surface of the shallow bowl",
+   "question": "Does one sleeve of the yellow raincoat brush the surface of the shallow bowl?"
+  },
+  {
+   "id": "cat_balancing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat balances on the narrow edge of the sill",
+   "question": "Is the black cat balancing on the narrow edge of the sill?"
+  },
+  {
+   "id": "cat_looking",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat looks between the mirror patch and the storm",
+   "question": "Is the black cat looking between the mirror patch and the storm?"
+  },
+  {
+   "id": "pendulum_swinging",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the pendulum swings lazily",
+   "question": "Is the pendulum swinging lazily?"
+  },
+  {
+   "id": "clock_ticking_backwards",
+   "type": "state",
+   "of": "clock",
+   "desc": "the small clock ticks backwards",
+   "question": "Does the small clock tick backwards?"
+  },
+  {
+   "id": "paper_flickering",
+   "type": "state",
+   "of": "paper",
+   "desc": "the sheet of paper flickers between languages",
+   "question": "Does the sheet of paper flicker between languages?"
+  },
+  {
+   "id": "chair_embedded",
+   "type": "state",
+   "of": "chair",
+   "desc": "the wooden chair is embedded in a vortex of slow motion",
+   "question": "Is the wooden chair embedded in a vortex of slow motion?"
+  },
+  {
+   "id": "mirror_forest",
+   "type": "attribute",
+   "of": "mirror_patch",
+   "desc": "the mirror-like patch reveals glimpses of an alien forest",
+   "question": "Does the mirror-like patch reveal glimpses of an alien forest?"
+  },
+  {
+   "id": "bowl_symbols",
+   "type": "attribute",
+   "of": "bowl",
+   "desc": "ripples in the bowl form dissolving letters and symbols",
+   "question": "Do ripples in the bowl form dissolving letters and symbols?"
+  },
+  {
+   "id": "telescope_reflection",
+   "type": "attribute",
+   "of": "telescope",
+   "desc": "the telescope reflects the room behind it",
+   "question": "Does the telescope reflect the room behind it?"
+  },
+  {
+   "id": "cat_tail_distortion",
+   "type": "relation",
+   "of": [
+    "cat",
+    "telescope"
+   ],
+   "desc": "the cat's tail passes through the telescope's frame causing distortion",
+   "question": "Does the cat's tail pass through the telescope's frame causing distortion?"
+  },
+  {
+   "id": "chair_beside_sill",
+   "type": "relation",
+   "of": [
+    "chair",
+    "telescope"
+   ],
+   "desc": "the wooden chair is beside the telescope",
+   "question": "Is the wooden chair beside the telescope?"
+  },
+  {
+   "id": "scarf_on_chair",
+   "type": "relation",
+   "of": [
+    "scarf",
+    "chair"
+   ],
+   "desc": "the forgotten scarf is on the wooden chair",
+   "question": "Is the forgotten scarf on the wooden chair?"
+  },
+  {
+   "id": "birds",
+   "type": "entity",
+   "class": "bird",
+   "plural": "birds",
+   "count": 2,
+   "count_exact": false,
+   "desc": "birds",
+   "question": "Are there birds?",
+   "box": [
+    100,
+    50,
+    924,
+    300
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "entity",
+   "class": "lamp",
+   "plural": "lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a distant lamp inside the room",
+   "question": "Is there a distant lamp inside the room?",
+   "box": [
+    850,
+    100,
+    950,
+    250
+   ]
+  },
+  {
+   "id": "pin",
+   "type": "entity",
+   "class": "pin",
+   "plural": "pins",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver pin hovering near the wall",
+   "question": "Is there a silver pin hovering near the wall?",
+   "box": [
+    700,
+    400,
+    750,
+    450
+   ]
+  },
+  {
+   "id": "raincoat_damp",
+   "type": "attribute",
+   "of": "raincoat",
+   "desc": "the yellow raincoat is damp from the rain",
+   "question": "Is the yellow raincoat damp?"
+  },
+  {
+   "id": "bowl_rainwater",
+   "type": "attribute",
+   "of": "bowl",
+   "desc": "the shallow bowl contains rainwater",
+   "question": "Does the shallow bowl contain rainwater?"
+  },
+  {
+   "id": "cat_watchful",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is watchful",
+   "question": "Is the black cat watchful?"
+  },
+  {
+   "id": "pendulum_glass_bob",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the pendulum has a glass bob",
+   "question": "Does the pendulum have a glass bob?"
+  },
+  {
+   "id": "pendulum_tiny_birds",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "tiny birds dart inside the pendulum's glass bob",
+   "question": "Do tiny birds dart inside the pendulum's glass bob?"
+  },
+  {
+   "id": "clock_shadow",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the small clock has a fourth shadow",
+   "question": "Does the small clock have a fourth shadow?"
+  },
+  {
+   "id": "clock_numbers_rearranging",
+   "type": "state",
+   "of": "clock",
+   "desc": "the clock's numbers rearrange when birds pass through the mirror",
+   "question": "Do the clock's numbers rearrange when birds pass through the mirror?"
+  },
+  {
+   "id": "birds_mirror_sky",
+   "type": "relation",
+   "of": [
+    "birds",
+    "mirror_patch"
+   ],
+   "desc": "the birds spiral and dive in the storm beyond the mirror patch",
+   "question": "Do the birds spiral and dive in the storm beyond the mirror patch?"
+  },
+  {
+   "id": "lamp_glow",
+   "type": "relation",
+   "of": [
+    "lamp",
+    "bowl"
+   ],
+   "desc": "the distant lamp casts a dim glow on the bowl of rainwater",
+   "question": "Does the distant lamp cast a dim glow on the bowl of rainwater?"
+  },
+  {
+   "id": "pin_paper",
+   "type": "relation",
+   "of": [
+    "pin",
+    "paper"
+   ],
+   "desc": "the silver pin pins the sheet of paper to the wall",
+   "question": "Does the silver pin pin the sheet of paper to the wall?"
+  },
+  {
+   "id": "telescope_reflects_birds",
+   "type": "relation",
+   "of": [
+    "telescope",
+    "birds"
+   ],
+   "desc": "the telescope reflects the birds",
+   "question": "Does the telescope reflect the birds?"
+  },
+  {
+   "id": "telescope_reflects_storm",
+   "type": "state",
+   "of": "telescope",
+   "desc": "the telescope reflects the storm",
+   "question": "Does the telescope reflect the storm?"
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stone windowsill",
+   "question": "Is there a stone windowsill?",
+   "box": [
+    0,
+    400,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "mirror_beyond_sill",
+   "type": "relation",
+   "of": [
+    "mirror_patch",
+    "windowsill"
+   ],
+   "desc": "the mirror-like patch of air is suspended just beyond the sill",
+   "question": "Is the mirror-like patch of air suspended just beyond the windowsill?"
+  },
+  {
+   "id": "cat_on_sill",
+   "type": "relation",
+   "of": [
+    "cat",
+    "windowsill"
+   ],
+   "desc": "the black cat balances on the narrow edge of the sill",
+   "question": "Is the black cat balancing on the narrow edge of the windowsill?"
+  },
+  {
+   "id": "paper_on_wall",
+   "type": "relation",
+   "of": [
+    "paper",
+    "pin"
+   ],
+   "desc": "the sheet of paper is pinned to the wall",
+   "question": "Is the sheet of paper pinned to the wall?"
+  },
+  {
+   "id": "bowl_on_surface",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "chair"
+   ],
+   "desc": "the shallow bowl is on a surface near the wooden chair",
+   "question": "Is the shallow bowl on a surface near the wooden chair?"
+  },
+  {
+   "id": "telescope_worn",
+   "type": "attribute",
+   "of": "telescope",
+   "desc": "the brass telescope is worn smooth",
+   "question": "Is the brass telescope worn smooth?"
+  },
+  {
+   "id": "raincoat_lights",
+   "type": "attribute",
+   "of": "raincoat",
+   "desc": "the yellow raincoat has tiny flickering lights on its fabric",
+   "question": "Does the yellow raincoat have tiny flickering lights on its fabric?"
+  },
+  {
+   "id": "bowl_liquid_light",
+   "type": "attribute",
+   "of": "bowl",
+   "desc": "the shallow bowl contains liquid light",
+   "question": "Does the shallow bowl contain liquid light?"
+  },
+  {
+   "id": "cat_sleek",
+   "type": "attribute",
+   "of": "cat",
+   "desc": "the black cat is sleek",
+   "question": "Is the black cat sleek?"
+  },
+  {
+   "id": "windowsill_condensation",
+   "type": "attribute",
+   "of": "windowsill",
+   "desc": "the stone windowsill is slick with condensation",
+   "question": "Is the stone windowsill slick with condensation?"
+  },
+  {
+   "id": "mirror_rippling",
+   "type": "state",
+   "of": "mirror_patch",
+   "desc": "the mirror-like patch of air is rippling like water",
+   "question": "Is the mirror-like patch of air rippling like water?"
+  },
+  {
+   "id": "paper_shifting_text",
+   "type": "attribute",
+   "of": "paper",
+   "desc": "the sheet of paper has shifting text",
+   "question": "Does the sheet of paper have shifting text?"
+  },
+  {
+   "id": "birds_spiraling",
+   "type": "state",
+   "of": "birds",
+   "desc": "the birds are spiraling and diving through the clouds",
+   "question": "Are the birds spiraling and diving through the clouds?"
+  },
+  {
+   "id": "bowl_overflowing",
+   "type": "state",
+   "of": "bowl",
+   "desc": "the shallow bowl is overflowing",
+   "question": "Is the shallow bowl overflowing?"
+  },
+  {
+   "id": "bob_miniature_storm",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the glass bob contains a miniature storm",
+   "question": "Does the glass bob contain a miniature storm?"
+  },
+  {
+   "id": "raincoat_on_chair",
+   "type": "relation",
+   "of": [
+    "raincoat",
+    "chair"
+   ],
+   "desc": "the yellow raincoat hangs from the wooden chair",
+   "question": "Does the yellow raincoat hang from the wooden chair?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "raincoat",
+   "kind": "support"
+  },
+  {
+   "from": "chair",
+   "to": "scarf",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0457",
+ "prompt": "The brass telescope, worn smooth by years of weather and curious fingers, sits at the precise center of a stone windowsill slick with condensation and the lingering taste of last week’s storm. Its lens is trained not at the sky, but at a strange mirror-like patch of air suspended just beyond the sill, where reality seems to ripple like disturbed water, revealing glimpses of a forest that does not belong to this world. A yellow raincoat, still damp from the rain, dangles from the wooden chair beside it, one sleeve brushing the surface of a shallow bowl of rainwater that overflows with liquid light, catching the dim glow of a distant lamp inside the room. A black cat, sleek and watchful, balances on the narrow edge of the sill, its eyes flicking between the mirror patch and the storm beyond it, where birds spiral and dive through the clouds, only to reappear moments later—identical in form, but slightly askew, as if drawn from another dimension. The telescope’s polished metal reflects not only the birds and the storm but also the room behind it: a cluttered study filled with mismatched books, gears, and instruments that hum faintly with the energy of an unknown force. A pendulum swings lazily from the ceiling, its bob made of glass and containing a miniature storm of its own, with tiny birds darting inside. The raincoat is not merely wet—it is alive with tiny, flickering lights that move like trapped fireflies along its fabric, as if the garment is catching pieces of the storm within itself. A small clock with three hands and a fourth shadow ticks backwards, its numbers rearranging each time the birds pass through the mirror. The chair, creaking slightly under the weight of a forgotten scarf, is embedded in a vortex of slow motion, its wooden grain spiraling like a whirlpool frozen in time. The cat’s tail occasionally passes through the telescope’s frame, briefly distorting the reflection, causing the birds to scatter in the mirror-world and real sky alike. In the bowl of water, ripples form letters and symbols that dissolve just as quickly, as if trying to send a message that cannot be read. A single sheet of paper, pinned to the wall by a silver pin that seems to hover, flickers between languages and alphabets that the observer cannot decipher. The storm, meanwhile, does not feel external but internal—like a living thing breathing through the architecture of the room, feeding off the energy of the objects and creatures within it. Every element seems to pulse in a shared rhythm, an invisible thread of causality tying the raincoat’s glow to the cat’s gaze, the telescope’s reflection to the pendulum’s sway, the storm outside to the one within the glass. It is a moment suspended in the architecture of impossible logic, where the laws of physics and narrative blur, and the scene becomes a stage where the real and the surreal coexist in a delicate, ever-shifting balance.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 39,
+   "n_uncovered": 1,
+   "proposed": 1,
+   "ungrounded": 0,
+   "added": 1,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 14,
+   "new_nodes": 11,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 2,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

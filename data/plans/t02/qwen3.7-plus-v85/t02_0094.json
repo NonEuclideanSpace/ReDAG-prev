@@ -1,0 +1,144 @@
+{
+ "style": "cinematic film still, misty atmosphere, dawn lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a misty village market at dawn",
+   "question": "Does the image show a misty village market at dawn?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman",
+   "question": "Is there a woman?",
+   "box": [
+    50,
+    200,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy",
+   "question": "Is there a boy?",
+   "box": [
+    650,
+    250,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue shawl holds a woven basket",
+   "question": "Is the woman in a blue shawl holding a woven basket?"
+  },
+  {
+   "id": "woman_apple",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue shawl holds an apple",
+   "question": "Is the woman in a blue shawl holding an apple?"
+  },
+  {
+   "id": "boy_looking",
+   "type": "relation",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy in a yellow cap is looking at the woman",
+   "question": "Is the boy in a yellow cap looking towards the woman?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman in a blue shawl hands the apple to the boy in a yellow cap",
+   "question": "Is the woman in a blue shawl handing an apple to the boy in a yellow cap?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "direct sunlight",
+   "question": "Is there any direct sunlight visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue shawl is standing",
+   "question": "Is the woman in a blue shawl standing?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy in a yellow cap is standing",
+   "question": "Is the boy in a yellow cap standing?"
+  },
+  {
+   "id": "woman_shawl",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman wears a blue shawl",
+   "question": "Does the woman wear a blue shawl?"
+  },
+  {
+   "id": "boy_cap",
+   "type": "attribute",
+   "of": "boy",
+   "desc": "the boy wears a yellow cap",
+   "question": "Does the boy wear a yellow cap?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0094",
+ "prompt": "In this cinematic film still, a woman in a blue shawl stands on the left side of a misty village market at dawn. She is holding a woven basket. A boy in a yellow cap stands on the right side. He is looking at the woman. The woman is handing an apple to the boy. There is no sunlight.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

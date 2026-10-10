@@ -1,0 +1,241 @@
+{
+ "style": "photorealistic product photography, high contrast, focused lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark neutral background",
+   "question": "Is the scene set against a dark neutral background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cube",
+   "type": "entity",
+   "class": "acrylic cube",
+   "plural": "acrylic cubes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clear acrylic cube",
+   "question": "Is there a clear acrylic cube?",
+   "box": [
+    312,
+    212,
+    712,
+    812
+   ]
+  },
+  {
+   "id": "meteorite",
+   "type": "entity",
+   "class": "meteorite fragment",
+   "plural": "meteorite fragments",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an etched-iron meteorite fragment",
+   "question": "Is there an etched-iron meteorite fragment?",
+   "box": [
+    412,
+    362,
+    612,
+    662
+   ]
+  },
+  {
+   "id": "plates",
+   "type": "entity",
+   "class": "metal plate",
+   "plural": "metal plates",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three triangular metal plates",
+   "question": "Are there three triangular metal plates?",
+   "box": [
+    432,
+    402,
+    592,
+    622
+   ]
+  },
+  {
+   "id": "plaque",
+   "type": "entity",
+   "class": "brass plaque",
+   "plural": "brass plaques",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tiny brass plaque",
+   "question": "Is there a tiny brass plaque?",
+   "box": [
+    482,
+    748,
+    542,
+    796
+   ]
+  },
+  {
+   "id": "meteorite_in_cube",
+   "type": "relation",
+   "of": [
+    "meteorite",
+    "cube"
+   ],
+   "desc": "the meteorite fragment is mounted inside the acrylic cube",
+   "question": "Is the meteorite fragment mounted inside the acrylic cube?"
+  },
+  {
+   "id": "plates_on_meteorite",
+   "type": "relation",
+   "of": [
+    "plates",
+    "meteorite"
+   ],
+   "desc": "the triangular metal plates are bolted to the meteorite fragment",
+   "question": "Are the triangular metal plates bolted to the meteorite fragment?"
+  },
+  {
+   "id": "meteorite_above_base",
+   "type": "relation",
+   "of": [
+    "meteorite",
+    "cube"
+   ],
+   "desc": "the meteorite fragment is supported above the base of the cube",
+   "question": "Is the meteorite fragment supported above the base of the cube?"
+  },
+  {
+   "id": "plaque_at_front",
+   "type": "relation",
+   "of": [
+    "plaque",
+    "cube"
+   ],
+   "desc": "the brass plaque sits at the front of the acrylic cube",
+   "question": "Does the brass plaque sit at the front of the acrylic cube?"
+  },
+  {
+   "id": "argon_gas",
+   "type": "attribute",
+   "of": "cube",
+   "desc": "the interior of the acrylic cube is filled with argon gas",
+   "question": "Is the interior of the acrylic cube filled with argon gas?"
+  },
+  {
+   "id": "no_rust",
+   "type": "absent",
+   "desc": "rust on the iron meteorite",
+   "question": "Is there any rust on the iron meteorite?"
+  },
+  {
+   "id": "no_scratches",
+   "type": "absent",
+   "desc": "scratches on the acrylic cube",
+   "question": "Are there any scratches on the acrylic cube?"
+  },
+  {
+   "id": "no_plastic_bolts",
+   "type": "absent",
+   "desc": "plastic bolts in the display",
+   "question": "Are there any plastic bolts in the display?"
+  },
+  {
+   "id": "bolts",
+   "type": "entity",
+   "class": "bolt",
+   "plural": "bolts",
+   "count": 3,
+   "count_exact": true,
+   "desc": "three metal bolts",
+   "question": "Are there three metal bolts?",
+   "box": [
+    400,
+    450,
+    624,
+    574
+   ]
+  },
+  {
+   "id": "plates_supporting",
+   "type": "action",
+   "of": [
+    "plates",
+    "meteorite"
+   ],
+   "desc": "the triangular metal plates support the meteorite fragment",
+   "question": "Do the triangular metal plates support the meteorite fragment?"
+  },
+  {
+   "id": "spotlight",
+   "type": "attribute",
+   "of": "meteorite",
+   "desc": "the meteorite fragment is illuminated by a focused white spotlight",
+   "question": "Is the meteorite fragment illuminated by a focused white spotlight?"
+  },
+  {
+   "id": "widmanstatten_lines",
+   "type": "attribute",
+   "of": "meteorite",
+   "desc": "the meteorite fragment shows silver-grey Widmanstätten lines",
+   "question": "Does the meteorite fragment show silver-grey Widmanstätten lines?"
+  },
+  {
+   "id": "plaque_engraving",
+   "type": "attribute",
+   "of": "plaque",
+   "desc": "the brass plaque is engraved with \"Campo del Cielo\"",
+   "question": "Is the brass plaque engraved with \"Campo del Cielo\"?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cube",
+   "to": "meteorite",
+   "kind": "support"
+  },
+  {
+   "from": "meteorite",
+   "to": "plates",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_089",
+ "prompt": "Display a single etched-iron meteorite fragment mounted in a clear acrylic cube. The octahedrite patterns (Widmanstätten lines) shimmer silver-grey under a focused white spotlight. Three triangular metal plates are bolted to the fragment, supporting it above the acrylic base. A tiny brass plaque engraved with \"Campo del Cielo\" sits at the front. Inside the cube walls, argon gas fills the chamber. The iron shows no rust, the acrylic shows no scratches, and the display contains no plastic bolts.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "plates_bolted",
+     "plates_on_meteorite"
+    ]
+   ]
+  }
+ }
+}

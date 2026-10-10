@@ -1,0 +1,169 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a fire station interior with a concrete floor",
+   "question": "Does the image depict a fire station interior with a concrete floor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "firefighter",
+   "type": "entity",
+   "class": "firefighter",
+   "plural": "firefighters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall firefighter in yellow gear",
+   "question": "Is there a tall firefighter in yellow gear?",
+   "box": [
+    50,
+    100,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dalmatian",
+   "plural": "dalmatians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spotted dalmatian dog",
+   "question": "Is there a spotted dalmatian dog?",
+   "box": [
+    380,
+    600,
+    640,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a child in a blue jacket",
+   "question": "Is there a child in a blue jacket?",
+   "box": [
+    700,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "firefighter_hose",
+   "type": "attribute",
+   "of": "firefighter",
+   "desc": "the firefighter holds a coiled hose tightly",
+   "question": "Is the firefighter holding a coiled hose tightly?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dalmatian is sitting",
+   "question": "Is the dalmatian sitting?"
+  },
+  {
+   "id": "dog_looking_up",
+   "type": "state",
+   "of": "dog",
+   "desc": "the dalmatian is looking up attentively",
+   "question": "Is the dalmatian looking up attentively?"
+  },
+  {
+   "id": "firefighter_looking_down",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the firefighter looks down",
+   "question": "Is the firefighter looking down?"
+  },
+  {
+   "id": "firefighter_next_to_dog",
+   "type": "relation",
+   "of": [
+    "firefighter",
+    "dog"
+   ],
+   "desc": "the firefighter stands next to the dalmatian",
+   "question": "Is the firefighter standing next to the dalmatian?"
+  },
+  {
+   "id": "no_fire_truck",
+   "type": "absent",
+   "desc": "a fire truck",
+   "question": "Is there a fire truck visible in the background?"
+  },
+  {
+   "id": "firefighter_standing",
+   "type": "state",
+   "of": "firefighter",
+   "desc": "the tall firefighter in yellow gear is standing",
+   "question": "Is the tall firefighter in yellow gear standing?"
+  },
+  {
+   "id": "helmets",
+   "type": "entity",
+   "class": "helmet",
+   "plural": "helmets",
+   "count": 2,
+   "count_exact": false,
+   "desc": "hanging helmets",
+   "question": "Are there hanging helmets?",
+   "box": [
+    700,
+    50,
+    950,
+    200
+   ]
+  },
+  {
+   "id": "child_pointing",
+   "type": "action",
+   "of": [
+    "child",
+    "helmets"
+   ],
+   "desc": "the child in a blue jacket points at the hanging helmets",
+   "question": "Is the child in a blue jacket pointing at the hanging helmets?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0071",
+ "prompt": "A pencil sketch with light color wash depicts a fire station interior. On the left stands a tall firefighter in yellow gear, holding a coiled hose tightly. In the center sits a spotted dalmatian dog on the concrete floor, looking up attentively. To the right, a child in a blue jacket points at the hanging helmets above. The firefighter looks down at the dog while standing next to it. There is no fire truck visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 2,
+   "cleanup": 1
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

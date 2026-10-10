@@ -1,0 +1,218 @@
+{
+ "style": "watercolor illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a theatre backstage setting",
+   "question": "Does the image depict a theatre backstage setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green vest",
+   "question": "Is there a man in a green vest?",
+   "box": [
+    380,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "wooden crate",
+   "plural": "wooden crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    400,
+    600,
+    630,
+    900
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    700,
+    400,
+    900,
+    600
+   ]
+  },
+  {
+   "id": "rack",
+   "type": "entity",
+   "class": "costume rack",
+   "plural": "costume racks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a costume rack",
+   "question": "Is there a costume rack?",
+   "box": [
+    680,
+    300,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_holding_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue dress holds a script",
+   "question": "Is the woman in a blue dress holding a script?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green vest is sitting",
+   "question": "Is the man in a green vest sitting?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green vest is looking at the woman",
+   "question": "Is the man in a green vest looking at the woman in the blue dress?"
+  },
+  {
+   "id": "cat_resting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat is resting",
+   "question": "Is the black cat resting?"
+  },
+  {
+   "id": "woman_on_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress is to the left of the man",
+   "question": "Is the woman in a blue dress to the left of the man in the green vest?"
+  },
+  {
+   "id": "man_on_crate",
+   "type": "relation",
+   "of": [
+    "man",
+    "crate"
+   ],
+   "desc": "the man in a green vest sits on the wooden crate",
+   "question": "Is the man in a green vest sitting on the wooden crate?"
+  },
+  {
+   "id": "cat_on_rack",
+   "type": "relation",
+   "of": [
+    "cat",
+    "rack"
+   ],
+   "desc": "the black cat rests on the costume rack",
+   "question": "Is the black cat resting on the costume rack?"
+  },
+  {
+   "id": "rack_next_to_man",
+   "type": "relation",
+   "of": [
+    "rack",
+    "man"
+   ],
+   "desc": "the costume rack is next to the man",
+   "question": "Is the costume rack next to the man in the green vest?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue dress hands the script to the man in a green vest",
+   "question": "Is the woman in a blue dress handing the script to the man in a green vest?"
+  },
+  {
+   "id": "no_spotlight",
+   "type": "absent",
+   "desc": "spotlight",
+   "question": "Is there a spotlight visible in the scene?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue dress is standing",
+   "question": "Is the woman in a blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "rack",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0075",
+ "prompt": "In a watercolor illustration of a theatre backstage, a woman in a blue dress stands on the left holding a script. In the center, a man in a green vest sits on a wooden crate looking at her. On the right, a black cat rests on a costume rack next to the man. The woman is handing the script to the man. There is no spotlight visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

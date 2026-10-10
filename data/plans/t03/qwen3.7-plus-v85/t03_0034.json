@@ -1,0 +1,204 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor",
+   "question": "Does the image show a sterile hospital corridor?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    380,
+    250,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "wheelchair",
+   "type": "entity",
+   "class": "wheelchair",
+   "plural": "wheelchairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wheelchair",
+   "question": "Is there a wheelchair?",
+   "box": [
+    360,
+    500,
+    660,
+    950
+   ]
+  },
+  {
+   "id": "doctor",
+   "type": "entity",
+   "class": "doctor",
+   "plural": "doctors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a doctor in a white coat",
+   "question": "Is there a doctor in a white coat?",
+   "box": [
+    720,
+    200,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress is sitting",
+   "question": "Is the elderly woman in a floral dress sitting?"
+  },
+  {
+   "id": "doctor_pointing",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "screen"
+   ],
+   "desc": "the doctor in a white coat points at the digital screen on the wall",
+   "question": "Is the doctor in a white coat pointing at the digital screen on the wall?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_woman"
+   ],
+   "desc": "the nurse in blue scrubs looks at the elderly woman in a floral dress",
+   "question": "Is the nurse in blue scrubs looking at the elderly woman in a floral dress?"
+  },
+  {
+   "id": "woman_on_wheelchair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "wheelchair"
+   ],
+   "desc": "the elderly woman in a floral dress sits on the wheelchair",
+   "question": "Is the elderly woman in a floral dress sitting on the wheelchair?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through windows",
+   "question": "Is there sunlight streaming through windows in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs is standing",
+   "question": "Is the nurse in blue scrubs standing?"
+  },
+  {
+   "id": "doctor_pointing_screen",
+   "type": "relation",
+   "of": [
+    "doctor",
+    "screen"
+   ],
+   "desc": "the doctor in a white coat points at the digital screen",
+   "question": "Is the doctor in a white coat pointing at the digital screen?"
+  },
+  {
+   "id": "screen",
+   "type": "entity",
+   "class": "digital screen",
+   "plural": "digital screens",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a digital screen mounted on the wall",
+   "question": "Is there a digital screen mounted on the wall?",
+   "box": [
+    750,
+    200,
+    950,
+    400
+   ]
+  },
+  {
+   "id": "screen_mounted",
+   "type": "state",
+   "of": "screen",
+   "desc": "the digital screen is mounted on the wall",
+   "question": "Is the digital screen mounted on the wall?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wheelchair",
+   "to": "elderly_woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0034",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly woman in a floral dress sits on a wheelchair. On the right, a doctor in a white coat points at a digital screen mounted on the wall. The nurse looks at the elderly woman. There is no sunlight streaming through windows.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

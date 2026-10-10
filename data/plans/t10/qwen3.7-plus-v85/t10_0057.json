@@ -1,0 +1,404 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a lively wedding reception scene",
+   "question": "Does the image show a lively wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "velvet chair",
+   "plural": "velvet chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a velvet chair",
+   "question": "Is there a velvet chair?",
+   "box": [
+    50,
+    400,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "elderly woman",
+   "plural": "elderly women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a floral dress",
+   "question": "Is there an elderly woman in a floral dress?",
+   "box": [
+    60,
+    250,
+    280,
+    850
+   ]
+  },
+  {
+   "id": "man_tuxedo",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall man in a black tuxedo",
+   "question": "Is there a tall man in a black tuxedo?",
+   "box": [
+    280,
+    150,
+    450,
+    900
+   ]
+  },
+  {
+   "id": "bride",
+   "type": "entity",
+   "class": "bride",
+   "plural": "brides",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a bride in a white lace gown",
+   "question": "Is there a bride in a white lace gown?",
+   "box": [
+    400,
+    200,
+    600,
+    900
+   ]
+  },
+  {
+   "id": "child",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small child in a blue suit",
+   "question": "Is there a small child in a blue suit?",
+   "box": [
+    550,
+    450,
+    700,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a table",
+   "question": "Is there a table?",
+   "box": [
+    500,
+    600,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "groom",
+   "type": "entity",
+   "class": "groom",
+   "plural": "grooms",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a groom in a grey vest",
+   "question": "Is there a groom in a grey vest?",
+   "box": [
+    750,
+    200,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "pillar",
+   "type": "entity",
+   "class": "pillar",
+   "plural": "pillars",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pillar",
+   "question": "Is there a pillar?",
+   "box": [
+    850,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    780,
+    750,
+    980,
+    950
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress is sitting",
+   "question": "Is the elderly woman in a floral dress sitting?"
+  },
+  {
+   "id": "woman_relaxed",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress has a relaxed posture",
+   "question": "Does the elderly woman in a floral dress have a relaxed posture?"
+  },
+  {
+   "id": "man_smiling",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a black tuxedo has a gentle smile",
+   "question": "Does the tall man in a black tuxedo have a gentle smile?"
+  },
+  {
+   "id": "man_holding_flute",
+   "type": "attribute",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a black tuxedo holds a champagne flute",
+   "question": "Is the tall man in a black tuxedo holding a champagne flute?"
+  },
+  {
+   "id": "bride_laughing",
+   "type": "state",
+   "of": "bride",
+   "desc": "the bride in a white lace gown is laughing",
+   "question": "Is the bride in a white lace gown laughing?"
+  },
+  {
+   "id": "child_reaching",
+   "type": "state",
+   "of": "child",
+   "desc": "the small child in a blue suit is reaching",
+   "question": "Is the small child in a blue suit reaching?"
+  },
+  {
+   "id": "groom_leaning",
+   "type": "state",
+   "of": "groom",
+   "desc": "the groom in a grey vest is leaning",
+   "question": "Is the groom in a grey vest leaning?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is lying down",
+   "question": "Is the golden retriever lying down?"
+  },
+  {
+   "id": "dog_head_on_paws",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever rests its head on its paws",
+   "question": "Does the golden retriever rest its head on its paws?"
+  },
+  {
+   "id": "woman_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_woman",
+    "chair"
+   ],
+   "desc": "the elderly woman in a floral dress sits on the velvet chair",
+   "question": "Is the elderly woman in a floral dress sitting on the velvet chair?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man_tuxedo",
+    "elderly_woman"
+   ],
+   "desc": "the tall man in a black tuxedo stands next to the elderly woman in a floral dress",
+   "question": "Is the tall man in a black tuxedo standing next to the elderly woman in a floral dress?"
+  },
+  {
+   "id": "bride_pointing_at_child",
+   "type": "action",
+   "of": [
+    "bride",
+    "child"
+   ],
+   "desc": "the bride in a white lace gown points at the small child in a blue suit",
+   "question": "Is the bride in a white lace gown pointing at the small child in a blue suit?"
+  },
+  {
+   "id": "child_near_table",
+   "type": "relation",
+   "of": [
+    "child",
+    "table"
+   ],
+   "desc": "the small child in a blue suit is near the table",
+   "question": "Is the small child in a blue suit near the table?"
+  },
+  {
+   "id": "groom_against_pillar",
+   "type": "relation",
+   "of": [
+    "groom",
+    "pillar"
+   ],
+   "desc": "the groom in a grey vest leans against the pillar",
+   "question": "Is the groom in a grey vest leaning against the pillar?"
+  },
+  {
+   "id": "groom_looking_at_bride",
+   "type": "action",
+   "of": [
+    "groom",
+    "bride"
+   ],
+   "desc": "the groom in a grey vest looks at the bride in a white lace gown",
+   "question": "Is the groom in a grey vest looking at the bride in a white lace gown?"
+  },
+  {
+   "id": "dog_near_groom",
+   "type": "relation",
+   "of": [
+    "dog",
+    "groom"
+   ],
+   "desc": "the golden retriever is near the groom in a grey vest",
+   "question": "Is the golden retriever near the groom in a grey vest?"
+  },
+  {
+   "id": "no_confetti",
+   "type": "absent",
+   "desc": "confetti in the air",
+   "question": "Is there any confetti in the air?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man_tuxedo",
+   "desc": "the tall man in a black tuxedo is standing",
+   "question": "Is the tall man in a black tuxedo standing?"
+  },
+  {
+   "id": "woman_watching",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a floral dress is watching the festivities",
+   "question": "Is the elderly woman in a floral dress watching the festivities?"
+  },
+  {
+   "id": "cake_slice",
+   "type": "entity",
+   "class": "cake slice",
+   "plural": "cake slices",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a slice of cake",
+   "question": "Is there a slice of cake?",
+   "box": [
+    480,
+    580,
+    560,
+    640
+   ]
+  },
+  {
+   "id": "cake_on_table",
+   "type": "relation",
+   "of": [
+    "cake_slice",
+    "table"
+   ],
+   "desc": "the slice of cake is on the table",
+   "question": "Is the slice of cake on the table?"
+  },
+  {
+   "id": "dog_on_rug",
+   "type": "relation",
+   "of": [
+    "dog",
+    "rug"
+   ],
+   "desc": "the golden retriever lies on the rug",
+   "question": "Is the golden retriever lying on the rug?"
+  },
+  {
+   "id": "rug",
+   "type": "entity",
+   "class": "rug",
+   "plural": "rugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rug",
+   "question": "Is there a rug?",
+   "box": [
+    600,
+    800,
+    950,
+    980
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_woman",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "cake_slice",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0057",
+ "prompt": "A cinematic film still captures a lively wedding reception scene. On the left, an elderly woman in a floral dress sits on a velvet chair, her posture relaxed as she watches the festivities. Next to her stands a tall man in a black tuxedo, holding a champagne flute with a gentle smile. In the center, a bride in a white lace gown laughs while pointing at a small child in a blue suit who is reaching for a slice of cake on the table. To the right, a groom in a grey vest leans against a pillar, looking at the bride with affection. A golden retriever lies on the rug near the groom, resting its head on its paws. There is no confetti in the air. The elderly woman is positioned on the left side of the frame. The bride and child occupy the center. The groom and dog are on the right. The man in the tuxedo stands next to the elderly woman. The bride is pointing at the child. The child is reaching for the cake. The groom is looking at the bride. The dog is lying on the rug.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 3,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

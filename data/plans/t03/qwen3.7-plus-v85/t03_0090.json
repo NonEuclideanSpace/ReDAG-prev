@@ -1,0 +1,158 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a train dining car interior",
+   "question": "Does the image show the interior of a train dining car?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table in the image?",
+   "box": [
+    200,
+    600,
+    824,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "teapot",
+   "type": "entity",
+   "class": "teapot",
+   "plural": "teapots",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver teapot",
+   "question": "Is there a silver teapot?",
+   "box": [
+    450,
+    550,
+    574,
+    700
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a grey suit",
+   "question": "Is there a man in a grey suit?",
+   "box": [
+    650,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is sitting upright",
+   "question": "Is the woman in the blue dress sitting upright?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is sitting",
+   "question": "Is the man in the grey suit sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the grey suit is leaning forward",
+   "question": "Is the man in the grey suit leaning forward?"
+  },
+  {
+   "id": "teapot_on_table",
+   "type": "relation",
+   "of": [
+    "teapot",
+    "table"
+   ],
+   "desc": "the silver teapot rests on the table",
+   "question": "Is the silver teapot resting on the table?"
+  },
+  {
+   "id": "woman_looking_teapot",
+   "type": "action",
+   "of": [
+    "woman",
+    "teapot"
+   ],
+   "desc": "the woman in the blue dress is looking at the silver teapot",
+   "question": "Is the woman in the blue dress looking at the silver teapot?"
+  },
+  {
+   "id": "man_next_to_teapot",
+   "type": "relation",
+   "of": [
+    "man",
+    "teapot"
+   ],
+   "desc": "the man in the grey suit is sitting next to the silver teapot",
+   "question": "Is the man in the grey suit sitting next to the silver teapot?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "table",
+   "to": "teapot",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0090",
+ "prompt": "A photorealistic photo captures a train dining car scene. On the left, a woman in a blue dress sits upright. In the center, a silver teapot rests on the table. On the right, a man in a grey suit leans forward. The woman in the blue dress is looking at the silver teapot. The man in the grey suit is sitting next to the silver teapot. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

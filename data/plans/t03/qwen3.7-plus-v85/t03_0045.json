@@ -1,0 +1,201 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a train dining car booth",
+   "question": "Does the image show the interior of a train dining car booth?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a dining table",
+   "question": "Is there a dining table in the image?",
+   "box": [
+    300,
+    500,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man wearing a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    50,
+    200,
+    350,
+    800
+   ]
+  },
+  {
+   "id": "waiter",
+   "type": "entity",
+   "class": "waiter",
+   "plural": "waiters",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a waiter wearing a white apron",
+   "question": "Is there a waiter wearing a white apron?",
+   "box": [
+    400,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman wearing a blue hat",
+   "question": "Is there a woman wearing a blue hat?",
+   "box": [
+    650,
+    200,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf is sitting",
+   "question": "Is the man wearing a red scarf sitting?"
+  },
+  {
+   "id": "man_fork",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man wearing a red scarf holds a silver fork poised above his plate",
+   "question": "Is the man wearing a red scarf holding a silver fork poised above a plate?"
+  },
+  {
+   "id": "waiter_standing",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter wearing a white apron is standing",
+   "question": "Is the waiter wearing a white apron standing?"
+  },
+  {
+   "id": "waiter_leaning",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter wearing a white apron leans forward slightly",
+   "question": "Does the waiter wearing a white apron lean forward slightly?"
+  },
+  {
+   "id": "waiter_extending_hand",
+   "type": "state",
+   "of": "waiter",
+   "desc": "the waiter wearing a white apron extends his hand",
+   "question": "Does the waiter wearing a white apron extend his hand?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "waiter"
+   ],
+   "desc": "the woman wearing a blue hat looks at the waiter",
+   "question": "Is the woman wearing a blue hat looking at the waiter?"
+  },
+  {
+   "id": "man_watching",
+   "type": "state",
+   "of": "man",
+   "desc": "the man wearing a red scarf watches calmly",
+   "question": "Is the man wearing a red scarf watching calmly?"
+  },
+  {
+   "id": "waiter_beside_table",
+   "type": "relation",
+   "of": [
+    "waiter",
+    "table"
+   ],
+   "desc": "the waiter wearing a white apron stands beside the table",
+   "question": "Is the waiter wearing a white apron standing beside the table?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "waiter",
+    "woman"
+   ],
+   "desc": "the waiter wearing a white apron hands a glass of water to the woman wearing a blue hat",
+   "question": "Is the waiter wearing a white apron handing a glass of water to the woman wearing a blue hat?"
+  },
+  {
+   "id": "no_window",
+   "type": "absent",
+   "desc": "windows",
+   "question": "Are there any windows visible in the background?"
+  },
+  {
+   "id": "plate",
+   "type": "entity",
+   "class": "plate",
+   "plural": "plates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plate",
+   "question": "Is there a plate?",
+   "box": [
+    200,
+    650,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "man_fork_plate",
+   "type": "relation",
+   "of": [
+    "man",
+    "plate"
+   ],
+   "desc": "the man wearing a red scarf holds a fork above the plate",
+   "question": "Is the man wearing a red scarf holding a fork above the plate?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0045",
+ "prompt": "In a pencil sketch with light color wash, a man in a red scarf sits on the left side of a train dining car booth. He holds a silver fork poised above his plate. In the center, a waiter in a white apron stands beside the table. The waiter leans forward slightly while extending his hand. On the right, a woman in a blue hat looks at the waiter. The waiter is handing a glass of water to the woman. The man in the red scarf watches this exchange calmly. There is no window visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

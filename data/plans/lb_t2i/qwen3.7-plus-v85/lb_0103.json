@@ -1,0 +1,407 @@
+{
+ "style": "surreal digital art, amber lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a room with a large window showing a forest outside, with dusty air and amber light",
+   "question": "Does the image show a room with a large window looking out onto a forest, illuminated by amber light?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "windowsill",
+   "type": "entity",
+   "class": "windowsill",
+   "plural": "windowsills",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden windowsill",
+   "question": "Is there a wooden windowsill?",
+   "box": [
+    0,
+    600,
+    1024,
+    750
+   ]
+  },
+  {
+   "id": "camera",
+   "type": "entity",
+   "class": "camera",
+   "plural": "cameras",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a red vintage camera",
+   "question": "Is there a red vintage camera?",
+   "box": [
+    400,
+    550,
+    624,
+    700
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "entity",
+   "class": "mug",
+   "plural": "mugs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a steaming coffee mug",
+   "question": "Is there a steaming coffee mug?",
+   "box": [
+    100,
+    580,
+    250,
+    720
+   ]
+  },
+  {
+   "id": "film_stack",
+   "type": "entity",
+   "class": "film roll",
+   "plural": "film rolls",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of rolled-up film",
+   "question": "Is there a stack of rolled-up film?",
+   "box": [
+    260,
+    600,
+    380,
+    700
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black sleek cat",
+   "question": "Is there a black sleek cat?",
+   "box": [
+    700,
+    580,
+    900,
+    720
+   ]
+  },
+  {
+   "id": "string",
+   "type": "entity",
+   "class": "string",
+   "plural": "strings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a loose string",
+   "question": "Is there a loose string?",
+   "box": [
+    750,
+    650,
+    850,
+    750
+   ]
+  },
+  {
+   "id": "camera_reflection",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera's polished surface reflects a shimmering tunnel of inverted colors",
+   "question": "Does the camera's polished surface reflect a shimmering tunnel of inverted colors?"
+  },
+  {
+   "id": "camera_aperture",
+   "type": "state",
+   "of": "camera",
+   "desc": "the camera's aperture is pulsing like a living eye",
+   "question": "Is the camera's aperture pulsing like a living eye?"
+  },
+  {
+   "id": "mug_steam",
+   "type": "state",
+   "of": "mug",
+   "desc": "steam rises from the mug in slow spirals",
+   "question": "Is steam rising from the mug in slow spirals?"
+  },
+  {
+   "id": "mug_reflection",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug shows a reflection of a different window",
+   "question": "Does the mug show a reflection of a different window?"
+  },
+  {
+   "id": "cat_perching",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat is perching at the edge of the sill",
+   "question": "Is the cat perching at the edge of the sill?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat's tail is curled around the loose string",
+   "question": "Is the cat's tail curled around the loose string?"
+  },
+  {
+   "id": "cat_gaze",
+   "type": "state",
+   "of": "cat",
+   "desc": "the cat has a steady, unblinking gaze",
+   "question": "Does the cat have a steady, unblinking gaze?"
+  },
+  {
+   "id": "camera_on_sill",
+   "type": "relation",
+   "of": [
+    "camera",
+    "windowsill"
+   ],
+   "desc": "the camera rests on the windowsill",
+   "question": "Is the camera resting on the windowsill?"
+  },
+  {
+   "id": "mug_beside_film",
+   "type": "relation",
+   "of": [
+    "mug",
+    "film_stack"
+   ],
+   "desc": "the mug is beside the stack of film",
+   "question": "Is the mug beside the stack of film?"
+  },
+  {
+   "id": "film_beside_camera",
+   "type": "relation",
+   "of": [
+    "film_stack",
+    "camera"
+   ],
+   "desc": "the stack of film is beside the camera",
+   "question": "Is the stack of film beside the camera?"
+  },
+  {
+   "id": "cat_on_sill",
+   "type": "relation",
+   "of": [
+    "cat",
+    "windowsill"
+   ],
+   "desc": "the cat is on the windowsill",
+   "question": "Is the cat on the windowsill?"
+  },
+  {
+   "id": "leaves",
+   "type": "entity",
+   "class": "leaf",
+   "plural": "leaves",
+   "count": 2,
+   "count_exact": false,
+   "desc": "leaves outside the window",
+   "question": "Are there leaves visible outside the window?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  },
+  {
+   "id": "figure",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a figure in a yellow coat",
+   "question": "Is there a figure in a yellow coat?",
+   "box": [
+    800,
+    100,
+    950,
+    350
+   ]
+  },
+  {
+   "id": "camera_twitching",
+   "type": "state",
+   "of": "camera",
+   "desc": "the camera is twitching",
+   "question": "Is the camera twitching?"
+  },
+  {
+   "id": "shutter_open",
+   "type": "state",
+   "of": "camera",
+   "desc": "the camera's shutter is open",
+   "question": "Is the camera's shutter open?"
+  },
+  {
+   "id": "sill_shifting",
+   "type": "state",
+   "of": "windowsill",
+   "desc": "the windowsill is shifting position",
+   "question": "Is the windowsill shifting position?"
+  },
+  {
+   "id": "steam_clinging",
+   "type": "relation",
+   "of": [
+    "mug",
+    "camera"
+   ],
+   "desc": "steam from the mug clings to the camera's glass",
+   "question": "Does steam from the mug cling to the camera's glass?"
+  },
+  {
+   "id": "cat_holding_string",
+   "type": "action",
+   "of": [
+    "cat",
+    "string"
+   ],
+   "desc": "the cat clutches the loose string",
+   "question": "Is the cat clutching the loose string?"
+  },
+  {
+   "id": "figure_passing",
+   "type": "state",
+   "of": "figure",
+   "desc": "the figure in the yellow coat is passing by",
+   "question": "Is the figure in the yellow coat passing by?"
+  },
+  {
+   "id": "leaves_twisting",
+   "type": "state",
+   "of": "leaves",
+   "desc": "the leaves outside twist and invert midair",
+   "question": "Do the leaves outside twist and invert midair?"
+  },
+  {
+   "id": "film_frames_flickering",
+   "type": "state",
+   "of": "film_stack",
+   "desc": "the frames in the stack of film flicker between images",
+   "question": "Do the frames in the stack of film flicker between images?"
+  },
+  {
+   "id": "sill_carved",
+   "type": "attribute",
+   "of": "windowsill",
+   "desc": "the wooden windowsill is carved with intricate patterns of constellations",
+   "question": "Is the wooden windowsill carved with intricate patterns of constellations?"
+  },
+  {
+   "id": "leaves_shimmering",
+   "type": "state",
+   "of": "leaves",
+   "desc": "the leaves outside shimmer with light",
+   "question": "Do the leaves outside shimmer with light?"
+  },
+  {
+   "id": "mug_half_empty",
+   "type": "state",
+   "of": "mug",
+   "desc": "the mug is half-empty",
+   "question": "Is the mug half-empty?"
+  },
+  {
+   "id": "camera_reflection_corridors",
+   "type": "attribute",
+   "of": "camera",
+   "desc": "the camera's polished surface reflects mirrored corridors",
+   "question": "Does the camera's polished surface reflect mirrored corridors?"
+  },
+  {
+   "id": "mug_reflection_cat",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug shows a reflection of a different cat",
+   "question": "Does the mug show a reflection of a different cat?"
+  },
+  {
+   "id": "mug_reflection_sky",
+   "type": "attribute",
+   "of": "mug",
+   "desc": "the mug shows a reflection of a different sky",
+   "question": "Does the mug show a reflection of a different sky?"
+  },
+  {
+   "id": "leaves_reversing",
+   "type": "state",
+   "of": "leaves",
+   "desc": "the leaves outside reverse midair",
+   "question": "Do the leaves outside reverse midair?"
+  },
+  {
+   "id": "sill_carved_symbols",
+   "type": "attribute",
+   "of": "windowsill",
+   "desc": "the wooden windowsill is carved with forgotten symbols",
+   "question": "Is the wooden windowsill carved with forgotten symbols?"
+  },
+  {
+   "id": "leaves_bioluminescent",
+   "type": "attribute",
+   "of": "leaves",
+   "desc": "the light on the leaves is bioluminescent",
+   "question": "Is the light on the leaves bioluminescent?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "windowsill",
+   "to": "camera",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "mug",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "film_stack",
+   "kind": "support"
+  },
+  {
+   "from": "windowsill",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0103",
+ "prompt": "The sun hangs low, casting amber light through a dusty pane that distorts the view of a forest teeming with life, yet the window itself is a mirror to the chaos inside—a realm where reality folds upon itself. The vintage red camera rests on the wooden windowsill, its polished surface reflecting not the cat or the leaves beyond, but instead a shimmering tunnel of inverted colors and mirrored corridors that twist and collapse into itself, a recursive dreamscape trapped in the glass. The lens captures this paradox, its aperture pulsing like a living eye, as though it too is aware of the weight of its gaze. To the left, a steaming mug of coffee perches beside a stack of rolled-up film, the steam rising in slow spirals that occasionally cling to the camera’s glass, fogging it with ghostly imprints of trees, birds, and the flicker of a passing figure in a yellow coat—each image fading before it can be understood. The cat, black and sleek, perches at the edge of the sill, its tail curled around a loose string that seems to lead nowhere and everywhere at once, as if the string is a tether to an unseen force beyond the room. The leaves outside do not merely fall; they twist, invert, and at times reverse midair, caught in a gravitational pull that seems to emanate from the camera’s lens, where reality bends to meet the surreal. Inside the stack of film, the frames do not record the present, but alternate realities—each frame flickering between the mundane and the impossible, a girl walking backwards down a hallway, a flock of birds made of clockwork, a man dissolving into smoke before reassembling from ash. The wooden sill, carved with intricate patterns of constellations and forgotten symbols, begins to creak as the camera’s weight and the energy in the room cause it to subtly shift, its position altering with each breath of the cat, each gust of wind, each pulse of the film’s unseen projector. The cat’s gaze is steady, unblinking, as if it is not watching the leaves but calculating their purpose in a vast equation only it understands. The loose string it clutches vibrates faintly, humming with a frequency that causes the leaves outside to shimmer with bioluminescent light, as though the string is a bridge between two dimensions. The camera occasionally twitches, its shutter snapping open for no reason, capturing moments that were never there—a storm raging in a bottle, a tree growing from a clock face, a city folding itself into origami. The mug, now half-empty, shows a reflection that no longer matches the room, revealing a different window, a different cat, a different sky, as if it has become a portal. And through it all, the wind howls with a sound that is both a song and a warning, wrapping itself around the sill like a living thread, tightening the air with the tension of a story not yet finished.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "atomize": {
+   "rewrites": 8,
+   "new_nodes": 7,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 1,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 6,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

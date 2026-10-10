@@ -1,0 +1,142 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image show a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    350,
+    500,
+    674,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white lace dress",
+   "question": "Is there a woman in a white lace dress?",
+   "box": [
+    50,
+    100,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    380,
+    150,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the white lace dress holds a champagne flute",
+   "question": "Is the woman in the white lace dress holding a champagne flute?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the white lace dress is standing",
+   "question": "Is the woman in the white lace dress standing?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is sitting",
+   "question": "Is the man in the black tuxedo sitting?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in the black tuxedo sits on the wooden chair",
+   "question": "Is the man in the black tuxedo sitting on the wooden chair?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in the black tuxedo is next to the woman in the white lace dress",
+   "question": "Is the man in the black tuxedo next to the woman in the white lace dress?"
+  },
+  {
+   "id": "woman_looking_at_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the white lace dress looks at the man in the black tuxedo",
+   "question": "Is the woman in the white lace dress looking at the man in the black tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake",
+   "question": "Is there a cake visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0015",
+ "prompt": "A photorealistic photo captures a wedding reception scene. On the left, a woman in a white lace dress stands holding a champagne flute. In the center, a man in a black tuxedo sits on a wooden chair next to her. The woman is looking at the man. There is no cake visible in the frame.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

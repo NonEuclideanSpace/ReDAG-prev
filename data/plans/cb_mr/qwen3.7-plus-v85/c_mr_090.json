@@ -1,0 +1,487 @@
+{
+ "style": "photorealistic interior photography",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a library reading room",
+   "question": "Does the image show a library reading room?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "checkout_desk",
+   "type": "entity",
+   "class": "desk",
+   "plural": "desks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a checkout desk at the entrance",
+   "question": "Is there a checkout desk?",
+   "box": [
+    350,
+    600,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "librarian",
+   "type": "entity",
+   "class": "librarian",
+   "plural": "librarians",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a librarian",
+   "question": "Is there a librarian?",
+   "box": [
+    400,
+    300,
+    600,
+    700
+   ]
+  },
+  {
+   "id": "books_stack",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 3,
+   "count_exact": true,
+   "desc": "a stack of three books",
+   "question": "Is there a stack of exactly three books?",
+   "box": [
+    450,
+    620,
+    550,
+    680
+   ]
+  },
+  {
+   "id": "reading_table",
+   "type": "entity",
+   "class": "table",
+   "plural": "tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reading table",
+   "question": "Is there a reading table?",
+   "box": [
+    200,
+    700,
+    800,
+    950
+   ]
+  },
+  {
+   "id": "reader",
+   "type": "entity",
+   "class": "reader",
+   "plural": "readers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reader",
+   "question": "Is there a reader?",
+   "box": [
+    450,
+    550,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "desk_lamp",
+   "type": "entity",
+   "class": "lamp",
+   "plural": "lamps",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a desk lamp",
+   "question": "Is there a desk lamp?",
+   "box": [
+    300,
+    650,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "open_book",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an open book",
+   "question": "Is there an open book?",
+   "box": [
+    320,
+    720,
+    420,
+    780
+   ]
+  },
+  {
+   "id": "rolling_ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rolling ladder",
+   "question": "Is there a rolling ladder?",
+   "box": [
+    50,
+    200,
+    250,
+    900
+   ]
+  },
+  {
+   "id": "patron",
+   "type": "entity",
+   "class": "person",
+   "plural": "people",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a patron",
+   "question": "Is there a patron?",
+   "box": [
+    100,
+    100,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "clock",
+   "plural": "clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a clock",
+   "question": "Is there a clock?",
+   "box": [
+    480,
+    50,
+    540,
+    110
+   ]
+  },
+  {
+   "id": "globe",
+   "type": "entity",
+   "class": "globe",
+   "plural": "globes",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a globe",
+   "question": "Is there a globe?",
+   "box": [
+    680,
+    650,
+    780,
+    850
+   ]
+  },
+  {
+   "id": "pedestal",
+   "type": "entity",
+   "class": "pedestal",
+   "plural": "pedestals",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a pedestal",
+   "question": "Is there a pedestal?",
+   "box": [
+    690,
+    750,
+    770,
+    850
+   ]
+  },
+  {
+   "id": "cup",
+   "type": "entity",
+   "class": "cup",
+   "plural": "cups",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a cup",
+   "question": "Is there a cup?",
+   "box": [
+    700,
+    700,
+    750,
+    750
+   ]
+  },
+  {
+   "id": "pens",
+   "type": "entity",
+   "class": "pen",
+   "plural": "pens",
+   "count": 5,
+   "count_exact": true,
+   "desc": "five pens",
+   "question": "Are there exactly five pens visible?",
+   "box": [
+    701,
+    701,
+    749,
+    749
+   ]
+  },
+  {
+   "id": "chairs",
+   "type": "entity",
+   "class": "chair",
+   "plural": "chairs",
+   "count": 6,
+   "count_exact": true,
+   "desc": "six chairs",
+   "question": "Are there exactly six chairs along the right wall?",
+   "box": [
+    850,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "globe_on_pedestal",
+   "type": "relation",
+   "of": [
+    "globe",
+    "pedestal"
+   ],
+   "desc": "the globe is on the pedestal",
+   "question": "Is the globe on the pedestal?"
+  },
+  {
+   "id": "librarian_behind_desk",
+   "type": "relation",
+   "of": [
+    "librarian",
+    "checkout_desk"
+   ],
+   "desc": "the librarian stands behind the checkout desk",
+   "question": "Is the librarian standing behind the checkout desk?"
+  },
+  {
+   "id": "books_on_desk",
+   "type": "relation",
+   "of": [
+    "books_stack",
+    "checkout_desk"
+   ],
+   "desc": "the stack of three books sits on the checkout desk",
+   "question": "Is the stack of three books sitting on the checkout desk?"
+  },
+  {
+   "id": "reader_at_table",
+   "type": "relation",
+   "of": [
+    "reader",
+    "reading_table"
+   ],
+   "desc": "the reader sits at the reading table",
+   "question": "Is the reader sitting at the reading table?"
+  },
+  {
+   "id": "lamp_shines_on_book",
+   "type": "action",
+   "of": [
+    "desk_lamp",
+    "open_book"
+   ],
+   "desc": "the desk lamp shines onto the open book",
+   "question": "Is the desk lamp shining onto the open book?"
+  },
+  {
+   "id": "open_book_on_table",
+   "type": "relation",
+   "of": [
+    "open_book",
+    "reading_table"
+   ],
+   "desc": "the open book is on the reading table",
+   "question": "Is the open book on the reading table?"
+  },
+  {
+   "id": "ladder_against_shelves",
+   "type": "relation",
+   "of": [
+    "rolling_ladder",
+    "bookshelves"
+   ],
+   "desc": "the rolling ladder is positioned against the bookshelves",
+   "question": "Is the rolling ladder positioned against the bookshelves?"
+  },
+  {
+   "id": "patron_on_ladder",
+   "type": "relation",
+   "of": [
+    "patron",
+    "rolling_ladder"
+   ],
+   "desc": "the patron is standing on the rolling ladder",
+   "question": "Is the patron standing on the rolling ladder?"
+  },
+  {
+   "id": "clock_above_entrance",
+   "type": "relation",
+   "of": [
+    "clock",
+    "checkout_desk"
+   ],
+   "desc": "the clock is mounted above the entrance near the desk",
+   "question": "Is the clock mounted high up, above the area of the entrance/desk?"
+  },
+  {
+   "id": "globe_beside_desk",
+   "type": "relation",
+   "of": [
+    "globe",
+    "checkout_desk"
+   ],
+   "desc": "the globe is beside the checkout desk",
+   "question": "Is the globe beside the checkout desk?"
+  },
+  {
+   "id": "cup_near_globe",
+   "type": "relation",
+   "of": [
+    "cup",
+    "globe"
+   ],
+   "desc": "the cup is near the globe",
+   "question": "Is the cup near the globe?"
+  },
+  {
+   "id": "pens_in_cup",
+   "type": "relation",
+   "of": [
+    "pens",
+    "cup"
+   ],
+   "desc": "the pens are in the cup",
+   "question": "Are the pens inside the cup?"
+  },
+  {
+   "id": "reader_closer_to_lamp",
+   "type": "relation",
+   "of": [
+    "reader",
+    "desk_lamp"
+   ],
+   "desc": "the reader is closer to the desk lamp than to the shelves",
+   "question": "Is the reader visually closer to the desk lamp than to the bookshelves?"
+  },
+  {
+   "id": "librarian_standing",
+   "type": "state",
+   "of": "librarian",
+   "desc": "the librarian stands",
+   "question": "Is the librarian standing?"
+  },
+  {
+   "id": "reader_sitting",
+   "type": "state",
+   "of": "reader",
+   "desc": "the reader sits",
+   "question": "Is the reader sitting?"
+  },
+  {
+   "id": "patron_standing",
+   "type": "state",
+   "of": "patron",
+   "desc": "the patron stands",
+   "question": "Is the patron standing?"
+  },
+  {
+   "id": "bookshelves",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": false,
+   "desc": "tall dark-wood bookshelves lining the left wall",
+   "question": "Are there tall dark-wood bookshelves lining the left wall?",
+   "box": [
+    0,
+    0,
+    200,
+    1024
+   ]
+  },
+  {
+   "id": "shelves_taller_librarian",
+   "type": "relation",
+   "of": [
+    "bookshelves",
+    "librarian"
+   ],
+   "desc": "the bookshelves are taller than the librarian",
+   "question": "Are the bookshelves taller than the librarian?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "checkout_desk",
+   "to": "books_stack",
+   "kind": "support"
+  },
+  {
+   "from": "reading_table",
+   "to": "open_book",
+   "kind": "support"
+  },
+  {
+   "from": "reading_table",
+   "to": "desk_lamp",
+   "kind": "support"
+  },
+  {
+   "from": "pedestal",
+   "to": "globe",
+   "kind": "support"
+  },
+  {
+   "from": "checkout_desk",
+   "to": "globe",
+   "kind": "support"
+  }
+ ],
+ "id": "c_mr_090",
+ "prompt": "A library reading room with tall, dark-wood bookshelves lining the left wall. A librarian stands behind a checkout desk at the room’s entrance. The bookshelves are taller than the librarian. On the desk sits a stack of three books to be shelved. A reader sits at a reading table in the center. A desk lamp shines onto an open book on the table. Along the right wall is a row of chairs, and their number is twice the number of books on the checkout desk. A rolling ladder is positioned against the bookshelves, and a patron is standing on the ladder to reach a high shelf. A clock is mounted above the entrance. A globe on a pedestal is beside the checkout desk, and near the globe is a cup with some pens; the number of pens is two more than the number of books on the desk. The reader is closer to the desk lamp than to the shelves.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 2,
+   "new_nodes": 1,
+   "added": 1,
+   "set_count": 1,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

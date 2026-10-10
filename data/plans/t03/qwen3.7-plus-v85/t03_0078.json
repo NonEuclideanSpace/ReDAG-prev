@@ -1,0 +1,175 @@
+{
+ "style": "photorealistic photo, quiet village market at dawn, soft lighting",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet village market scene",
+   "question": "Does the image show a quiet village market scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "elderly_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly woman in a blue shawl",
+   "question": "Is there an elderly woman in a blue shawl?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden crate",
+   "question": "Is there a wooden crate?",
+   "box": [
+    380,
+    500,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "boy",
+   "plural": "boys",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young boy in a yellow cap",
+   "question": "Is there a young boy in a yellow cap?",
+   "box": [
+    670,
+    250,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "woman_apple",
+   "type": "attribute",
+   "of": "elderly_woman",
+   "desc": "the elderly woman holds a single apple",
+   "question": "Is the elderly woman holding a single apple?"
+  },
+  {
+   "id": "boy_reaching",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy is reaching out his hand",
+   "question": "Is the young boy reaching out his hand?"
+  },
+  {
+   "id": "handing_over",
+   "type": "action",
+   "of": [
+    "elderly_woman",
+    "boy"
+   ],
+   "desc": "the elderly woman is handing the apple to the young boy",
+   "question": "Is the elderly woman handing an apple to the young boy?"
+  },
+  {
+   "id": "no_glare",
+   "type": "absent",
+   "desc": "sunlight glare",
+   "question": "Is there any sunlight glare in the image?"
+  },
+  {
+   "id": "elderly_woman_stands",
+   "type": "state",
+   "of": "elderly_woman",
+   "desc": "the elderly woman in a blue shawl stands",
+   "question": "Is the elderly woman in a blue shawl standing?"
+  },
+  {
+   "id": "crate_sits",
+   "type": "state",
+   "of": "crate",
+   "desc": "the wooden crate overflowing with bright red apples sits",
+   "question": "Is the wooden crate overflowing with bright red apples sitting?"
+  },
+  {
+   "id": "boy_waits",
+   "type": "state",
+   "of": "boy",
+   "desc": "the young boy in a yellow cap waits",
+   "question": "Is the young boy in a yellow cap waiting?"
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "bright red apples",
+   "question": "Are there bright red apples?",
+   "box": [
+    380,
+    480,
+    644,
+    700
+   ]
+  },
+  {
+   "id": "crate_apples_relation",
+   "type": "relation",
+   "of": [
+    "apples",
+    "crate"
+   ],
+   "desc": "the bright red apples are in the wooden crate",
+   "question": "Are the bright red apples in the wooden crate?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "crate",
+   "to": "apples",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0078",
+ "prompt": "In a photorealistic photo, the scene captures a quiet village market at dawn. On the left stands an elderly woman in a blue shawl. In the center sits a wooden crate overflowing with bright red apples. To the right waits a young boy in a yellow cap. The elderly woman is holding a single apple. The young boy is reaching out his hand. The interaction shows the elderly woman handing the apple to the young boy. There is no sunlight glare.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

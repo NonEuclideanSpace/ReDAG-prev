@@ -1,0 +1,152 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a log",
+   "question": "Is there a log?",
+   "box": [
+    50,
+    600,
+    350,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    100,
+    400,
+    300,
+    700
+   ]
+  },
+  {
+   "id": "tent",
+   "type": "entity",
+   "class": "tent",
+   "plural": "tents",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a green tent",
+   "question": "Is there a green tent?",
+   "box": [
+    400,
+    300,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is sitting",
+   "question": "Is the woman in the blue beanie sitting?"
+  },
+  {
+   "id": "woman_on_log",
+   "type": "relation",
+   "of": [
+    "woman",
+    "log"
+   ],
+   "desc": "the woman in the blue beanie sits on the log",
+   "question": "Is the woman in the blue beanie sitting on the log?"
+  },
+  {
+   "id": "tent_upright",
+   "type": "state",
+   "of": "tent",
+   "desc": "the green tent stands upright",
+   "question": "Is the green tent standing upright?"
+  },
+  {
+   "id": "woman_looking_tent",
+   "type": "action",
+   "of": [
+    "woman",
+    "tent"
+   ],
+   "desc": "the woman in the blue beanie looks at the green tent",
+   "question": "Is the woman in the blue beanie looking at the green tent?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "rocky_backdrop",
+   "type": "entity",
+   "class": "rocky backdrop",
+   "plural": "rocky backdrops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rocky backdrop",
+   "question": "Is there a rocky backdrop?",
+   "box": [
+    0,
+    0,
+    1024,
+    400
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "woman",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0092",
+ "prompt": "This flat vector illustration depicts a mountain campsite. On the left, a woman in a blue beanie sits on a log. In the center, a green tent stands upright against the rocky backdrop. The woman in the blue beanie looks at the green tent. There is no fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

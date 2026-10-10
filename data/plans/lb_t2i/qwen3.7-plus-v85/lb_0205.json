@@ -1,0 +1,490 @@
+{
+ "style": "surreal cinematic photography, high contrast, golden lighting, dreamlike atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "the interior of a warehouse with water-stained ceilings and concrete floors",
+   "question": "Does the image show the interior of a warehouse with water-stained ceilings and concrete floors?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "projector",
+   "type": "entity",
+   "class": "projector",
+   "plural": "projectors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vintage film projector",
+   "question": "Is there a vintage film projector in the image?",
+   "box": [
+    100,
+    800,
+    300,
+    950
+   ]
+  },
+  {
+   "id": "mirror",
+   "type": "entity",
+   "class": "mirror",
+   "plural": "mirrors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vast cracked mirror",
+   "question": "Is there a vast cracked mirror?",
+   "box": [
+    400,
+    50,
+    900,
+    250
+   ]
+  },
+  {
+   "id": "clock",
+   "type": "entity",
+   "class": "analog clock",
+   "plural": "analog clocks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an analog clock",
+   "question": "Is there an analog clock?",
+   "box": [
+    600,
+    300,
+    750,
+    450
+   ]
+  },
+  {
+   "id": "film_reels",
+   "type": "entity",
+   "class": "film reel",
+   "plural": "film reels",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of yellowed film reels",
+   "question": "Is there a stack of yellowed film reels?",
+   "box": [
+    760,
+    320,
+    900,
+    480
+   ]
+  },
+  {
+   "id": "ladder",
+   "type": "entity",
+   "class": "ladder",
+   "plural": "ladders",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rusted metal ladder",
+   "question": "Is there a rusted metal ladder?",
+   "box": [
+    50,
+    400,
+    200,
+    800
+   ]
+  },
+  {
+   "id": "pendulum",
+   "type": "entity",
+   "class": "pendulum",
+   "plural": "pendulums",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a massive pendulum suspended from rafters",
+   "question": "Is there a massive pendulum suspended from rafters?",
+   "box": [
+    400,
+    0,
+    600,
+    400
+   ]
+  },
+  {
+   "id": "moth",
+   "type": "entity",
+   "class": "moth",
+   "plural": "moths",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a moth",
+   "question": "Is there a moth?",
+   "box": [
+    350,
+    500,
+    450,
+    600
+   ]
+  },
+  {
+   "id": "floor_panel",
+   "type": "entity",
+   "class": "floor panel",
+   "plural": "floor panels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a partially lifted floor panel revealing dark water",
+   "question": "Is there a partially lifted floor panel revealing dark water?",
+   "box": [
+    150,
+    900,
+    350,
+    1024
+   ]
+  },
+  {
+   "id": "water_drop",
+   "type": "entity",
+   "class": "water drop",
+   "plural": "water drops",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a single elongated water drop",
+   "question": "Is there a single elongated water drop?",
+   "box": [
+    500,
+    700,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "mirror_ceiling",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror is on the ceiling",
+   "question": "Is the mirror on the ceiling?"
+  },
+  {
+   "id": "mirror_tilted",
+   "type": "state",
+   "of": "mirror",
+   "desc": "the mirror is angled at a tilt",
+   "question": "Is the mirror angled at a tilt?"
+  },
+  {
+   "id": "projector_beam",
+   "type": "attribute",
+   "of": "projector",
+   "desc": "the projector emits a beam of golden light",
+   "question": "Does the projector emit a beam of golden light?"
+  },
+  {
+   "id": "clock_blurred",
+   "type": "state",
+   "of": "clock",
+   "desc": "the numbers on the clock are blurred and distorted",
+   "question": "Are the numbers on the clock blurred and distorted?"
+  },
+  {
+   "id": "reels_spinning",
+   "type": "state",
+   "of": "film_reels",
+   "desc": "the film reels are spinning",
+   "question": "Are the film reels spinning?"
+  },
+  {
+   "id": "ladder_glowing",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the rungs of the ladder are glowing with a golden hue",
+   "question": "Are the rungs of the ladder glowing?"
+  },
+  {
+   "id": "pendulum_threads",
+   "type": "state",
+   "of": "pendulum",
+   "desc": "the chain of the pendulum unravels into thin shimmering threads",
+   "question": "Does the chain of the pendulum unravel into thin shimmering threads?"
+  },
+  {
+   "id": "projector_twitching",
+   "type": "state",
+   "of": "projector",
+   "desc": "the lens of the projector is twitching",
+   "question": "Is the lens of the projector twitching?"
+  },
+  {
+   "id": "beam_reflection",
+   "type": "relation",
+   "of": [
+    "projector",
+    "mirror"
+   ],
+   "desc": "the projector's beam reflects off the mirror",
+   "question": "Does the projector's beam reflect off the mirror?"
+  },
+  {
+   "id": "reels_beside_clock",
+   "type": "relation",
+   "of": [
+    "film_reels",
+    "clock"
+   ],
+   "desc": "the film reels are beside the clock",
+   "question": "Are the film reels beside the clock?"
+  },
+  {
+   "id": "ladder_leaning",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the ladder leans against the warehouse structure",
+   "question": "Does the ladder lean against the warehouse structure?"
+  },
+  {
+   "id": "moth_in_beam",
+   "type": "relation",
+   "of": [
+    "moth",
+    "projector"
+   ],
+   "desc": "the moth is inside the projector's light beam",
+   "question": "Is the moth inside the projector's light beam?"
+  },
+  {
+   "id": "cable_to_panel",
+   "type": "relation",
+   "of": [
+    "projector",
+    "floor_panel"
+   ],
+   "desc": "a black cable connects the projector to the floor panel",
+   "question": "Does a black cable connect the projector to the floor panel?"
+  },
+  {
+   "id": "drop_from_intersection",
+   "type": "relation",
+   "of": [
+    "water_drop",
+    "projector"
+   ],
+   "desc": "the water drop falls from the intersection of the light beams",
+   "question": "Does the water drop fall from the intersection of the light beams?"
+  },
+  {
+   "id": "rafters",
+   "type": "entity",
+   "class": "rafter",
+   "plural": "rafters",
+   "count": 1,
+   "count_exact": false,
+   "desc": "warehouse rafters",
+   "question": "Are there warehouse rafters visible?",
+   "box": [
+    0,
+    0,
+    1024,
+    150
+   ]
+  },
+  {
+   "id": "cable",
+   "type": "entity",
+   "class": "cable",
+   "plural": "cables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a thick black cable",
+   "question": "Is there a thick black cable?",
+   "box": [
+    480,
+    600,
+    544,
+    800
+   ]
+  },
+  {
+   "id": "pendulum_suspended",
+   "type": "relation",
+   "of": [
+    "pendulum",
+    "rafters"
+   ],
+   "desc": "the massive pendulum is suspended from the rafters",
+   "question": "Is the massive pendulum suspended from the rafters?"
+  },
+  {
+   "id": "ladder_buried",
+   "type": "state",
+   "of": "ladder",
+   "desc": "the rusted metal ladder is half-buried in dust",
+   "question": "Is the rusted metal ladder half-buried in dust?"
+  },
+  {
+   "id": "clock_halted",
+   "type": "state",
+   "of": "clock",
+   "desc": "the analog clock is halted",
+   "question": "Is the analog clock halted?"
+  },
+  {
+   "id": "beam_intersection",
+   "type": "relation",
+   "of": [
+    "projector",
+    "floor_panel"
+   ],
+   "desc": "the projector's beam intersects with the reflection from the dark water in the floor panel",
+   "question": "Does the projector's beam intersect with the reflection from the dark water in the floor panel?"
+  },
+  {
+   "id": "ghostly_figure",
+   "type": "entity",
+   "class": "figure",
+   "plural": "figures",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a ghostly figure on the floor",
+   "question": "Is there a ghostly figure visible on the floor?",
+   "box": [
+    200,
+    850,
+    400,
+    950
+   ]
+  },
+  {
+   "id": "mirror_reflection_clock",
+   "type": "relation",
+   "of": [
+    "mirror",
+    "clock"
+   ],
+   "desc": "the mirror reflects the image of the clock",
+   "question": "Does the mirror reflect the image of the analog clock?"
+  },
+  {
+   "id": "moth_shadow",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth casts a shadow that grows and shrinks",
+   "question": "Does the moth cast a shadow that changes size?"
+  },
+  {
+   "id": "reels_sprockets",
+   "type": "attribute",
+   "of": "film_reels",
+   "desc": "the film reels have visible sprocket holes",
+   "question": "Do the film reels have visible sprocket holes?"
+  },
+  {
+   "id": "particles_images",
+   "type": "relation",
+   "of": [
+    "pendulum",
+    "water_drop"
+   ],
+   "desc": "the shimmering threads form flickering images",
+   "question": "Do the shimmering threads from the pendulum form flickering images?"
+  },
+  {
+   "id": "images_landscapes",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the flickering images include landscapes",
+   "question": "Do the flickering images include landscapes?"
+  },
+  {
+   "id": "images_cities",
+   "type": "attribute",
+   "of": "pendulum",
+   "desc": "the flickering images include cities",
+   "question": "Do the flickering images include cities?"
+  },
+  {
+   "id": "clock_time",
+   "type": "attribute",
+   "of": "clock",
+   "desc": "the analog clock shows the time 3:07",
+   "question": "Does the analog clock show the time 3:07?"
+  },
+  {
+   "id": "moth_wings",
+   "type": "attribute",
+   "of": "moth",
+   "desc": "the moth has wings patterned like celluloid frames",
+   "question": "Are the moth's wings patterned like celluloid frames?"
+  },
+  {
+   "id": "drop_image",
+   "type": "attribute",
+   "of": "water_drop",
+   "desc": "the water drop contains a miniature image of the warehouse",
+   "question": "Does the water drop contain a miniature image of the warehouse?"
+  },
+  {
+   "id": "hands_blurred",
+   "type": "state",
+   "of": "clock",
+   "desc": "the hands of the clock are blurred and distorted",
+   "question": "Are the hands of the clock blurred and distorted?"
+  },
+  {
+   "id": "rungs_golden",
+   "type": "attribute",
+   "of": "ladder",
+   "desc": "the rungs of the ladder have a golden hue",
+   "question": "Do the rungs of the ladder have a golden hue?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bg",
+   "to": "ladder",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "projector",
+   "kind": "support"
+  },
+  {
+   "from": "rafters",
+   "to": "pendulum",
+   "kind": "support"
+  }
+ ],
+ "id": "lb_0205",
+ "prompt": "In the hushed, echoing belly of the warehouse, the projector breathes a dusty sigh, its lone beam piercing the stagnant air like a spear of liquid gold. The light ascends to the water-stained ceiling, where it reflects off a vast, cracked mirror angled at an impossible tilt, sending the image of the clock back down the shaft in a spiral of infinite recursion—each reflection more warped and ghostly than the last, the numbers on the frozen hands blurring and distorting as if time itself is unraveling in reverse. The analog clock, though halted at 3:07, hums faintly, its gears creaking with a life that defies stillness, while the stack of yellowed film reels beside it slowly spins as if pulled by an unseen current, their spools whispering sprocket holes that click in rhythm with the ticking clock. The rusted ladder, half-buried in dust and leaning at a precarious angle, vibrates faintly, as if responding to the pulse of the projector’s beam, its metal rungs glowing faintly in the same golden hue. Suspended from the rafters above, a massive pendulum sways without gravity, its chain unraveling into thin, shimmering threads that fall like silk into the light cone, dissolving into motes of phosphene-like particles that briefly coalesce into flickering images from forgotten films—faces frozen in silent screams, landscapes that fold into themselves, and cities that crumble in slow motion. A moth, its wings patterned like celluloid frames, flutters inside the light beam, caught in an endless loop between the projector lens and the mirror, its shadow growing and shrinking with each cycle of reflection, its body warping subtly as if caught between dimensions. The concrete floor beneath the light is not flat but rippling, like the surface of a disturbed pond, revealing faint impressions of previous moments—footprints that fade, shadows that flicker, a ghostly figure that seems to step forward before dissolving into static. The projector itself is alive in a mechanical way, its lens twitching slightly, its motor whirring with an almost sentient intent, as if it is trying to adjust for a scene that cannot be framed. A thick, black cable snakes from its base down into a floor panel that has partially lifted, revealing a chasm of dark water reflecting the ceiling like a mirror—but this reflection is inverted, and in it, the projector points not upward but downward, casting a second beam that intersects the first at a sharp angle, creating a lattice of light and shadow where the two beams meet. The intersection point pulses faintly, as if charged with energy, and from it, a single drop of water falls, slowing as it descends, elongating into a thin thread that holds the image of a miniature version of the entire warehouse in suspension, a self-contained, flickering universe that seems on the verge of collapse. The sound of the clock is no longer a mere tick but a rhythmic pulse, reverberating through the space, syncing with the flicker of the mirror’s reflections, the rotation of the film reels, and the fall of the water drop, as if all the elements of the scene are caught in a single, intricate rhythm that defies logic but feels inevitable.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v6",
+  "facts_pass": {
+   "n_facts": 68,
+   "n_uncovered": 8,
+   "proposed": 7,
+   "ungrounded": 1,
+   "added": 6,
+   "dropped": 0
+  },
+  "atomize": {
+   "rewrites": 5,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 2,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

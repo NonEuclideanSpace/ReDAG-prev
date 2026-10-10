@@ -1,0 +1,177 @@
+{
+ "style": "photorealistic photo, high fidelity texture",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a pottery workshop with shelves filled with finished ceramics in the background",
+   "question": "Does the image show a pottery workshop with shelves filled with finished ceramics in the background?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "wheel",
+   "type": "entity",
+   "class": "pottery wheel",
+   "plural": "pottery wheels",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a spinning pottery wheel",
+   "question": "Is there a spinning pottery wheel?",
+   "box": [
+    50,
+    600,
+    450,
+    950
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    400,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green shirt",
+   "question": "Is there a man in a green shirt?",
+   "box": [
+    600,
+    150,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "bowl",
+   "type": "entity",
+   "class": "clay bowl",
+   "plural": "clay bowls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wet clay bowl",
+   "question": "Is there a wet clay bowl?",
+   "box": [
+    150,
+    650,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "tool",
+   "type": "entity",
+   "class": "sculpting tool",
+   "plural": "sculpting tools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden sculpting tool",
+   "question": "Is there a wooden sculpting tool?",
+   "box": [
+    450,
+    550,
+    650,
+    650
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron is sitting",
+   "question": "Is the woman in a blue apron sitting?"
+  },
+  {
+   "id": "woman_shaping",
+   "type": "action",
+   "of": [
+    "woman",
+    "bowl"
+   ],
+   "desc": "the woman in a blue apron is shaping the wet clay bowl",
+   "question": "Is the woman in a blue apron shaping the wet clay bowl?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a green shirt is standing",
+   "question": "Is the man in a green shirt standing?"
+  },
+  {
+   "id": "man_next_to_woman",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green shirt is next to the woman in a blue apron",
+   "question": "Is the man in a green shirt next to the woman in a blue apron?"
+  },
+  {
+   "id": "handing_tool",
+   "type": "action",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a green shirt is handing the wooden sculpting tool to the woman in a blue apron",
+   "question": "Is the man in a green shirt handing the wooden sculpting tool to the woman in a blue apron?"
+  },
+  {
+   "id": "bowl_on_wheel",
+   "type": "relation",
+   "of": [
+    "bowl",
+    "wheel"
+   ],
+   "desc": "the wet clay bowl is on the spinning pottery wheel",
+   "question": "Is the wet clay bowl on the spinning pottery wheel?"
+  },
+  {
+   "id": "no_camera",
+   "type": "absent",
+   "desc": "camera equipment",
+   "question": "Is there any camera equipment visible in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "wheel",
+   "to": "bowl",
+   "kind": "support"
+  }
+ ],
+ "id": "t02_0044",
+ "prompt": "In a photorealistic photo of a pottery workshop, a woman in a blue apron sits on the left side of the frame. She is shaping a wet clay bowl on a spinning wheel. Next to her on the right stands a man in a green shirt. He is handing a wooden sculpting tool to the seated woman. The background features shelves filled with finished ceramics. There is no camera equipment visible in the scene. The focus remains strictly on the two individuals and their immediate workspace, capturing the texture of the clay and the fabric of their clothing with high fidelity.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

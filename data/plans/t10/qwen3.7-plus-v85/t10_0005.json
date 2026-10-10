@@ -1,0 +1,413 @@
+{
+ "style": "anime style, soft sunlight, peaceful library atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet library reading room with tall windows, polished wooden floors, bookshelves along the back wall, and a plush rug",
+   "question": "Does the image show a quiet library reading room with tall windows, polished wooden floors, bookshelves, and a plush rug?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl with twin braids",
+   "question": "Is there a girl with twin braids?",
+   "box": [
+    50,
+    400,
+    350,
+    850
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fluffy white cat",
+   "question": "Is there a fluffy white cat?",
+   "box": [
+    300,
+    550,
+    500,
+    750
+   ]
+  },
+  {
+   "id": "boy",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a boy wearing round glasses",
+   "question": "Is there a boy wearing round glasses?",
+   "box": [
+    450,
+    250,
+    650,
+    800
+   ]
+  },
+  {
+   "id": "stack_books",
+   "type": "entity",
+   "class": "book",
+   "plural": "books",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a towering stack of hardcover books",
+   "question": "Is there a towering stack of hardcover books?",
+   "box": [
+    620,
+    150,
+    750,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue cardigan",
+   "question": "Is there a woman in a blue cardigan?",
+   "box": [
+    700,
+    300,
+    900,
+    850
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a tweed jacket",
+   "question": "Is there an elderly man in a tweed jacket?",
+   "box": [
+    800,
+    200,
+    980,
+    600
+   ]
+  },
+  {
+   "id": "child_raincoat",
+   "type": "entity",
+   "class": "child",
+   "plural": "children",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young child in a yellow raincoat",
+   "question": "Is there a young child in a yellow raincoat?",
+   "box": [
+    750,
+    650,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "stool",
+   "type": "entity",
+   "class": "stool",
+   "plural": "stools",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a low stool",
+   "question": "Is there a low stool?",
+   "box": [
+    780,
+    850,
+    920,
+    980
+   ]
+  },
+  {
+   "id": "girl_sitting",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with twin braids is sitting cross-legged",
+   "question": "Is the girl with twin braids sitting cross-legged?"
+  },
+  {
+   "id": "girl_eyes",
+   "type": "state",
+   "of": "girl",
+   "desc": "the girl with twin braids has wide eyes",
+   "question": "Does the girl with twin braids have wide eyes?"
+  },
+  {
+   "id": "girl_book",
+   "type": "attribute",
+   "of": "girl",
+   "desc": "the girl with twin braids holds an open book",
+   "question": "Is the girl with twin braids holding an open book?"
+  },
+  {
+   "id": "cat_sleeping",
+   "type": "state",
+   "of": "cat",
+   "desc": "the fluffy white cat is sleeping",
+   "question": "Is the fluffy white cat sleeping?"
+  },
+  {
+   "id": "cat_tail",
+   "type": "state",
+   "of": "cat",
+   "desc": "the fluffy white cat has its tail curled around its paws",
+   "question": "Is the fluffy white cat's tail curled around its paws?"
+  },
+  {
+   "id": "boy_standing",
+   "type": "state",
+   "of": "boy",
+   "desc": "the boy wearing round glasses is standing",
+   "question": "Is the boy wearing round glasses standing?"
+  },
+  {
+   "id": "boy_pointing",
+   "type": "action",
+   "of": [
+    "boy",
+    "stack_books"
+   ],
+   "desc": "the boy wearing round glasses points at the stack of hardcover books",
+   "question": "Is the boy wearing round glasses pointing at the stack of hardcover books?"
+  },
+  {
+   "id": "boy_explaining",
+   "type": "action",
+   "of": [
+    "boy",
+    "woman"
+   ],
+   "desc": "the boy wearing round glasses explains something to the woman in a blue cardigan",
+   "question": "Is the boy wearing round glasses explaining something to the woman in a blue cardigan?"
+  },
+  {
+   "id": "woman_listening",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue cardigan is listening intently",
+   "question": "Is the woman in a blue cardigan listening intently?"
+  },
+  {
+   "id": "woman_nodding",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue cardigan is nodding slightly",
+   "question": "Is the woman in a blue cardigan nodding slightly?"
+  },
+  {
+   "id": "woman_adjusting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue cardigan adjusts her spectacles",
+   "question": "Is the woman in a blue cardigan adjusting her spectacles?"
+  },
+  {
+   "id": "man_reaching",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed jacket reaches up to pull a volume from a high shelf",
+   "question": "Is the elderly man in a tweed jacket reaching up to pull a volume from a high shelf?"
+  },
+  {
+   "id": "man_posture",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed jacket has a slightly stooped posture",
+   "question": "Does the elderly man in a tweed jacket have a slightly stooped posture?"
+  },
+  {
+   "id": "child_sitting",
+   "type": "state",
+   "of": "child_raincoat",
+   "desc": "the young child in a yellow raincoat is sitting",
+   "question": "Is the young child in a yellow raincoat sitting?"
+  },
+  {
+   "id": "child_drawing",
+   "type": "state",
+   "of": "child_raincoat",
+   "desc": "the young child in a yellow raincoat draws in a sketchbook with a bright red crayon",
+   "question": "Is the young child in a yellow raincoat drawing in a sketchbook with a bright red crayon?"
+  },
+  {
+   "id": "girl_looking_boy",
+   "type": "relation",
+   "of": [
+    "girl",
+    "boy"
+   ],
+   "desc": "the girl with twin braids is looking at the boy wearing round glasses",
+   "question": "Is the girl with twin braids looking at the boy wearing round glasses?"
+  },
+  {
+   "id": "cat_next_to_girl",
+   "type": "relation",
+   "of": [
+    "cat",
+    "girl"
+   ],
+   "desc": "the fluffy white cat is next to the girl with twin braids",
+   "question": "Is the fluffy white cat next to the girl with twin braids?"
+  },
+  {
+   "id": "cat_on_rug",
+   "type": "state",
+   "of": "cat",
+   "desc": "the fluffy white cat is on the plush rug",
+   "question": "Is the fluffy white cat on the plush rug?"
+  },
+  {
+   "id": "boy_beside_stack",
+   "type": "relation",
+   "of": [
+    "boy",
+    "stack_books"
+   ],
+   "desc": "the boy wearing round glasses stands beside the stack of hardcover books",
+   "question": "Is the boy wearing round glasses standing beside the stack of hardcover books?"
+  },
+  {
+   "id": "woman_right_of_boy",
+   "type": "relation",
+   "of": [
+    "woman",
+    "boy"
+   ],
+   "desc": "the woman in a blue cardigan is to the right of the boy wearing round glasses",
+   "question": "Is the woman in a blue cardigan to the right of the boy wearing round glasses?"
+  },
+  {
+   "id": "man_behind_group",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "boy"
+   ],
+   "desc": "the elderly man in a tweed jacket is behind the boy wearing round glasses",
+   "question": "Is the elderly man in a tweed jacket behind the boy wearing round glasses?"
+  },
+  {
+   "id": "child_on_stool",
+   "type": "relation",
+   "of": [
+    "child_raincoat",
+    "stool"
+   ],
+   "desc": "the young child in a yellow raincoat sits on the low stool",
+   "question": "Is the young child in a yellow raincoat sitting on the low stool?"
+  },
+  {
+   "id": "no_tech",
+   "type": "absent",
+   "desc": "laptops",
+   "question": "Are there any laptops in the image?"
+  },
+  {
+   "id": "shelf",
+   "type": "entity",
+   "class": "bookshelf",
+   "plural": "bookshelves",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a high bookshelf",
+   "question": "Is there a high bookshelf?",
+   "box": [
+    600,
+    50,
+    950,
+    600
+   ]
+  },
+  {
+   "id": "volume",
+   "type": "attribute",
+   "of": "elderly_man",
+   "desc": "the elderly man in a tweed jacket holds a volume from the shelf",
+   "question": "Is the elderly man in a tweed jacket holding a volume from the shelf?"
+  },
+  {
+   "id": "crayon",
+   "type": "attribute",
+   "of": "child_raincoat",
+   "desc": "the young child in a yellow raincoat holds a bright red crayon",
+   "question": "Is the young child in a yellow raincoat holding a bright red crayon?"
+  },
+  {
+   "id": "man_reaching_shelf",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "shelf"
+   ],
+   "desc": "the elderly man in a tweed jacket reaches up to the high bookshelf",
+   "question": "Is the elderly man in a tweed jacket reaching up to the high bookshelf?"
+  },
+  {
+   "id": "no_smartphones",
+   "type": "absent",
+   "desc": "smartphones",
+   "question": "Are there any smartphones in the image?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "stool",
+   "to": "child_raincoat",
+   "kind": "support"
+  },
+  {
+   "from": "bg",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t10_0005",
+ "prompt": "In a quiet library reading room rendered in anime style, sunlight filters through tall windows onto polished wooden floors. On the left side of the frame, a girl with twin braids sits cross-legged on a plush rug, her eyes wide with curiosity as she holds an open book. Next to her, a fluffy white cat sleeps soundly, its tail curled neatly around its paws. In the center, a boy wearing round glasses stands beside a towering stack of hardcover books, pointing enthusiastically at a specific spine while explaining something to his companion. To his right, a woman in a blue cardigan listens intently, nodding slightly as she adjusts her spectacles. Behind them, near the back wall, an elderly man in a tweed jacket reaches up to pull a volume from a high shelf, his posture slightly stooped but determined. In the foreground on the right, a young child in a yellow raincoat sits on a low stool, drawing quietly in a sketchbook with a bright red crayon. The girl with twin braids is looking at the boy with round glasses, creating a sense of shared discovery. The fluffy white cat is sitting on the rug next to the girl, adding warmth to the scene. There is no digital technology such as laptops or smartphones visible anywhere in the room, preserving the timeless atmosphere of printed knowledge and quiet study. The composition balances the vertical lines of the bookshelves with the horizontal spread of the readers, emphasizing the peaceful coexistence of different generations within this sanctuary of literature.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 4,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 1,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 2,
+   "ungrounded": 2,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,414 @@
+{
+ "style": "3D animated film still, exaggerated features, smooth shiny textures, warm lighting, cozy atmosphere",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a bustling night market with wet pavement, dark blue sky, and distant stalls",
+   "question": "Does the image show a bustling night market scene with wet pavement and a dark blue sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "cart",
+   "type": "entity",
+   "class": "food cart",
+   "plural": "food carts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a food cart",
+   "question": "Is there a food cart?",
+   "box": [
+    300,
+    400,
+    724,
+    900
+   ]
+  },
+  {
+   "id": "vendor",
+   "type": "entity",
+   "class": "vendor",
+   "plural": "vendors",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a vendor",
+   "question": "Is there a vendor?",
+   "box": [
+    450,
+    250,
+    650,
+    600
+   ]
+  },
+  {
+   "id": "customer",
+   "type": "entity",
+   "class": "customer",
+   "plural": "customers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a customer in a purple hoodie",
+   "question": "Is there a customer wearing a purple hoodie?",
+   "box": [
+    50,
+    300,
+    250,
+    800
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a stray cat with fluffy white fur",
+   "question": "Is there a stray cat with fluffy white fur?",
+   "box": [
+    800,
+    500,
+    980,
+    750
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "entity",
+   "class": "crate",
+   "plural": "crates",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a crate",
+   "question": "Is there a crate?",
+   "box": [
+    780,
+    650,
+    950,
+    850
+   ]
+  },
+  {
+   "id": "lantern",
+   "type": "entity",
+   "class": "lantern",
+   "plural": "lanterns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a lantern with glowing orange light",
+   "question": "Is there a lantern with glowing orange light?",
+   "box": [
+    100,
+    50,
+    300,
+    300
+   ]
+  },
+  {
+   "id": "steamers",
+   "type": "entity",
+   "class": "bamboo steamer",
+   "plural": "bamboo steamers",
+   "count": 2,
+   "count_exact": false,
+   "desc": "a stack of bamboo steamers",
+   "question": "Is there a stack of bamboo steamers?",
+   "box": [
+    680,
+    550,
+    800,
+    700
+   ]
+  },
+  {
+   "id": "flags",
+   "type": "entity",
+   "class": "flag",
+   "plural": "flags",
+   "count": 2,
+   "count_exact": false,
+   "desc": "strings of colorful flags",
+   "question": "Are there strings of colorful flags?",
+   "box": [
+    200,
+    50,
+    800,
+    200
+   ]
+  },
+  {
+   "id": "stall",
+   "type": "entity",
+   "class": "market stall",
+   "plural": "market stalls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "another market stall",
+   "question": "Is there another market stall?",
+   "box": [
+    0,
+    100,
+    200,
+    400
+   ]
+  },
+  {
+   "id": "apples",
+   "type": "entity",
+   "class": "apple",
+   "plural": "apples",
+   "count": 2,
+   "count_exact": false,
+   "desc": "piles of bright red apples",
+   "question": "Are there piles of bright red apples?",
+   "box": [
+    20,
+    250,
+    180,
+    350
+   ]
+  },
+  {
+   "id": "vegetables",
+   "type": "entity",
+   "class": "vegetable",
+   "plural": "vegetables",
+   "count": 2,
+   "count_exact": false,
+   "desc": "green vegetables",
+   "question": "Are there green vegetables?",
+   "box": [
+    20,
+    350,
+    180,
+    400
+   ]
+  },
+  {
+   "id": "fish",
+   "type": "entity",
+   "class": "fish",
+   "plural": "fish",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a fish hanging from a hook",
+   "question": "Is there a fish hanging from a hook?",
+   "box": [
+    820,
+    400,
+    920,
+    500
+   ]
+  },
+  {
+   "id": "wok_noodles",
+   "type": "attribute",
+   "of": "vendor",
+   "desc": "the vendor stirs a wok containing noodles",
+   "question": "Is the vendor stirring a wok?"
+  },
+  {
+   "id": "steam",
+   "type": "state",
+   "of": "vendor",
+   "desc": "steam rises from the wok in stylized swirls",
+   "question": "Is steam rising from the wok in stylized swirls?"
+  },
+  {
+   "id": "customer_chopsticks",
+   "type": "attribute",
+   "of": "customer",
+   "desc": "the customer holds chopsticks",
+   "question": "Is the customer holding chopsticks?"
+  },
+  {
+   "id": "customer_looking",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer looks eagerly at the food",
+   "question": "Does the customer look eagerly at the food?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "relation",
+   "of": [
+    "cat",
+    "crate"
+   ],
+   "desc": "the cat sits on the crate",
+   "question": "Is the cat sitting on the crate?"
+  },
+  {
+   "id": "fish_hanging",
+   "type": "relation",
+   "of": [
+    "fish",
+    "cat"
+   ],
+   "desc": "the fish hangs from a hook above the cat",
+   "question": "Is the fish hanging from a hook above the cat?"
+  },
+  {
+   "id": "cat_watching",
+   "type": "action",
+   "of": [
+    "cat",
+    "fish"
+   ],
+   "desc": "the cat watches the fish",
+   "question": "Is the cat watching the fish?"
+  },
+  {
+   "id": "lantern_hanging",
+   "type": "state",
+   "of": "lantern",
+   "desc": "the lantern hangs from a string",
+   "question": "Is the lantern hanging from a string?"
+  },
+  {
+   "id": "steamers_on_counter",
+   "type": "relation",
+   "of": [
+    "steamers",
+    "cart"
+   ],
+   "desc": "the stack of bamboo steamers sits on the counter next to the wok",
+   "question": "Is the stack of bamboo steamers sitting on the cart's counter next to the wok?"
+  },
+  {
+   "id": "steamers_ajar",
+   "type": "state",
+   "of": "steamers",
+   "desc": "the lids of the bamboo steamers are slightly ajar",
+   "question": "Are the lids of the bamboo steamers slightly ajar?"
+  },
+  {
+   "id": "flags_behind_vendor",
+   "type": "relation",
+   "of": [
+    "flags",
+    "vendor"
+   ],
+   "desc": "the strings of colorful flags are behind the vendor",
+   "question": "Are the strings of colorful flags behind the vendor?"
+  },
+  {
+   "id": "flags_fluttering",
+   "type": "state",
+   "of": "flags",
+   "desc": "the colorful flags flutter in the breeze",
+   "question": "Do the colorful flags appear to be fluttering?"
+  },
+  {
+   "id": "apples_on_stall",
+   "type": "relation",
+   "of": [
+    "apples",
+    "stall"
+   ],
+   "desc": "the piles of bright red apples are on the background stall",
+   "question": "Are the piles of bright red apples displayed on the background stall?"
+  },
+  {
+   "id": "vegetables_on_stall",
+   "type": "relation",
+   "of": [
+    "vegetables",
+    "stall"
+   ],
+   "desc": "the green vegetables are on the background stall",
+   "question": "Are the green vegetables displayed on the background stall?"
+  },
+  {
+   "id": "customer_left_vendor",
+   "type": "relation",
+   "of": [
+    "customer",
+    "vendor"
+   ],
+   "desc": "the customer stands to the left of the vendor",
+   "question": "Is the customer standing to the left of the vendor?"
+  },
+  {
+   "id": "cat_right_vendor",
+   "type": "relation",
+   "of": [
+    "cat",
+    "vendor"
+   ],
+   "desc": "the cat is on the right relative to the vendor",
+   "question": "Is the cat positioned on the right side relative to the vendor?"
+  },
+  {
+   "id": "vendor_stands",
+   "type": "state",
+   "of": "vendor",
+   "desc": "the vendor stands",
+   "question": "Is the vendor standing?"
+  },
+  {
+   "id": "customer_stands",
+   "type": "state",
+   "of": "customer",
+   "desc": "the customer in a purple hoodie stands",
+   "question": "Is the customer in a purple hoodie standing?"
+  },
+  {
+   "id": "wok_contents",
+   "type": "attribute",
+   "of": "vendor",
+   "desc": "the wok contains noodles",
+   "question": "Does the wok contain noodles?"
+  },
+  {
+   "id": "vendor_mustache",
+   "type": "attribute",
+   "of": "vendor",
+   "desc": "the vendor has a large mustache",
+   "question": "Does the vendor have a large mustache?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cart",
+   "to": "steamers",
+   "kind": "support"
+  },
+  {
+   "from": "crate",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "xl_0009",
+ "prompt": "At a bustling night market, a vendor with a large mustache stirs a wok of noodles on a cart in the center, steam rising in stylized swirls. A customer in a purple hoodie stands to the left, holding chopsticks and looking eagerly at the food. On the right, a stray cat with fluffy white fur sits on a crate, watching a fish hang from a hook above. In the foreground, a lantern with glowing orange light hangs from a string, illuminating the scene with warm hues. A stack of bamboo steamers sits on the counter next to the wok, lids slightly ajar. Behind the vendor, strings of colorful flags flutter in the breeze against a dark blue sky. Another stall in the background displays piles of bright red apples and green vegetables. The characters have exaggerated features and smooth, shiny textures typical of modern animation. Reflections on the wet pavement suggest recent rain, adding depth to the composition. The lighting creates a cozy, inviting atmosphere amidst the urban chaos. Every element is carefully positioned to guide the eye through the narrative of the meal. This is a 3D animated film still.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 3,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 3,
+   "new_nodes": 2,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 4,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 1,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

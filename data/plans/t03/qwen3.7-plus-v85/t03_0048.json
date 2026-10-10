@@ -1,0 +1,213 @@
+{
+ "style": "oil painting style, night scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a rooftop under a night sky",
+   "question": "Does the image show a rooftop under a night sky?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    380,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    400,
+    400,
+    630,
+    950
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small white cat",
+   "question": "Is there a small white cat?",
+   "box": [
+    750,
+    350,
+    950,
+    550
+   ]
+  },
+  {
+   "id": "railing",
+   "type": "entity",
+   "class": "railing",
+   "plural": "railings",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a rooftop railing",
+   "question": "Is there a rooftop railing?",
+   "box": [
+    700,
+    500,
+    1024,
+    600
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a champagne flute upright",
+   "question": "Is the woman in the blue dress holding a champagne flute upright?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is sitting",
+   "question": "Is the man in the black tuxedo sitting?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black tuxedo is leaning back",
+   "question": "Is the man in the black tuxedo leaning back?"
+  },
+  {
+   "id": "cat_perched",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat is perched",
+   "question": "Is the small white cat perched?"
+  },
+  {
+   "id": "cat_gazing",
+   "type": "state",
+   "of": "cat",
+   "desc": "the small white cat is gazing outward",
+   "question": "Is the small white cat gazing outward?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue dress is looking at the man in the black tuxedo",
+   "question": "Is the woman in the blue dress looking at the man in the black tuxedo?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in the black tuxedo sits on the wooden chair",
+   "question": "Is the man in the black tuxedo sitting on the wooden chair?"
+  },
+  {
+   "id": "cat_on_railing",
+   "type": "relation",
+   "of": [
+    "cat",
+    "railing"
+   ],
+   "desc": "the small white cat is on the railing",
+   "question": "Is the small white cat on the railing?"
+  },
+  {
+   "id": "no_music_equipment",
+   "type": "absent",
+   "desc": "music equipment",
+   "question": "Is there any music equipment visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress is standing",
+   "question": "Is the woman in the blue dress standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "man",
+   "kind": "support"
+  },
+  {
+   "from": "railing",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0048",
+ "prompt": "In an oil painting style, a rooftop party unfolds under the night sky. On the left stands a woman in a blue dress holding a champagne flute upright. In the center sits a man in a black tuxedo on a wooden chair, leaning back casually. To the right rests a small white cat perched on the railing, gazing outward. The woman in the blue dress is looking at the man in the black tuxedo. There is no music equipment visible in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

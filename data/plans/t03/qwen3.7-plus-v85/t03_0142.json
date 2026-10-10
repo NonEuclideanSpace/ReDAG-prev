@@ -1,0 +1,176 @@
+{
+ "style": "flat vector illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a simple indoor or greenhouse setting",
+   "question": "Does the image show a simple indoor or greenhouse setting?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "bench",
+   "type": "entity",
+   "class": "bench",
+   "plural": "benches",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden bench",
+   "question": "Is there a wooden bench?",
+   "box": [
+    700,
+    600,
+    1024,
+    900
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    300,
+    800
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a green hat",
+   "question": "Is there a man in a green hat?",
+   "box": [
+    380,
+    180,
+    640,
+    820
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "fern",
+   "plural": "ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a tall fern",
+   "question": "Is there a tall fern?",
+   "box": [
+    550,
+    100,
+    750,
+    600
+   ]
+  },
+  {
+   "id": "cat",
+   "type": "entity",
+   "class": "cat",
+   "plural": "cats",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black cat",
+   "question": "Is there a black cat?",
+   "box": [
+    750,
+    500,
+    950,
+    750
+   ]
+  },
+  {
+   "id": "woman_can",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a small watering can",
+   "question": "Is the woman in a blue apron holding a small watering can?"
+  },
+  {
+   "id": "woman_looking",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron looks at the man",
+   "question": "Is the woman in a blue apron looking at the man?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "relation",
+   "of": [
+    "man",
+    "fern"
+   ],
+   "desc": "the man in a green hat points toward the fern",
+   "question": "Is the man in a green hat pointing toward the fern?"
+  },
+  {
+   "id": "cat_sitting",
+   "type": "state",
+   "of": "cat",
+   "desc": "the black cat sits calmly",
+   "question": "Is the black cat sitting calmly?"
+  },
+  {
+   "id": "cat_on_bench",
+   "type": "relation",
+   "of": [
+    "cat",
+    "bench"
+   ],
+   "desc": "the black cat sits on the wooden bench",
+   "question": "Is the black cat sitting on the wooden bench?"
+  },
+  {
+   "id": "no_sunlight",
+   "type": "absent",
+   "desc": "sunlight streaming through a glass roof",
+   "question": "Is there sunlight streaming through a glass roof in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron stands",
+   "question": "Is the woman in a blue apron standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "bench",
+   "to": "cat",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0142",
+ "prompt": "In a flat vector illustration, a woman in a blue apron stands on the left holding a small watering can. In the center, a man in a green hat points toward a tall fern. On the right, a black cat sits calmly on a wooden bench. The woman looks at the man while he gestures to the plant. There is no sunlight streaming through the glass roof.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

@@ -1,0 +1,254 @@
+{
+ "style": "photorealistic photo",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sterile hospital corridor with a door sign and an entrance area",
+   "question": "Does the image show a sterile hospital corridor with a door sign and an entrance area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "nurse",
+   "type": "entity",
+   "class": "nurse",
+   "plural": "nurses",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a nurse in blue scrubs",
+   "question": "Is there a nurse in blue scrubs?",
+   "box": [
+    50,
+    200,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "elderly_man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man in a gray coat",
+   "question": "Is there an elderly man in a gray coat?",
+   "box": [
+    380,
+    250,
+    640,
+    850
+   ]
+  },
+  {
+   "id": "young_woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a young woman in a pink dress",
+   "question": "Is there a young woman in a pink dress?",
+   "box": [
+    720,
+    220,
+    970,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "plastic chair",
+   "plural": "plastic chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a plastic chair",
+   "question": "Is there a plastic chair?",
+   "box": [
+    400,
+    550,
+    620,
+    950
+   ]
+  },
+  {
+   "id": "iv_stand",
+   "type": "entity",
+   "class": "iv stand",
+   "plural": "iv stands",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a silver IV stand",
+   "question": "Is there a silver IV stand?",
+   "box": [
+    650,
+    300,
+    750,
+    900
+   ]
+  },
+  {
+   "id": "fern",
+   "type": "entity",
+   "class": "potted fern",
+   "plural": "potted ferns",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a potted fern",
+   "question": "Is there a potted fern?",
+   "box": [
+    850,
+    600,
+    980,
+    850
+   ]
+  },
+  {
+   "id": "table",
+   "type": "entity",
+   "class": "small table",
+   "plural": "small tables",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a small table",
+   "question": "Is there a small table?",
+   "box": [
+    820,
+    700,
+    1000,
+    950
+   ]
+  },
+  {
+   "id": "nurse_clipboard",
+   "type": "attribute",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs holds a clipboard",
+   "question": "Is the nurse in blue scrubs holding a clipboard?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "elderly_man",
+   "desc": "the elderly man in a gray coat is sitting",
+   "question": "Is the elderly man in a gray coat sitting?"
+  },
+  {
+   "id": "woman_leaning",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress is leaning",
+   "question": "Is the young woman in a pink dress leaning?"
+  },
+  {
+   "id": "nurse_looking",
+   "type": "action",
+   "of": [
+    "nurse",
+    "elderly_man"
+   ],
+   "desc": "the nurse in blue scrubs looks at the elderly man in a gray coat",
+   "question": "Is the nurse in blue scrubs looking at the elderly man in a gray coat?"
+  },
+  {
+   "id": "woman_pointing",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress points at the door sign",
+   "question": "Is the young woman in a pink dress pointing at the door sign?"
+  },
+  {
+   "id": "man_on_chair",
+   "type": "relation",
+   "of": [
+    "elderly_man",
+    "chair"
+   ],
+   "desc": "the elderly man in a gray coat sits on the plastic chair",
+   "question": "Is the elderly man in a gray coat sitting on the plastic chair?"
+  },
+  {
+   "id": "woman_against_wall",
+   "type": "state",
+   "of": "young_woman",
+   "desc": "the young woman in a pink dress leans against the wall",
+   "question": "Is the young woman in a pink dress leaning against the wall?"
+  },
+  {
+   "id": "iv_next_to_man",
+   "type": "relation",
+   "of": [
+    "iv_stand",
+    "elderly_man"
+   ],
+   "desc": "the silver IV stand is next to the elderly man in a gray coat",
+   "question": "Is the silver IV stand next to the elderly man in a gray coat?"
+  },
+  {
+   "id": "fern_on_table",
+   "type": "relation",
+   "of": [
+    "fern",
+    "table"
+   ],
+   "desc": "the potted fern rests on the small table",
+   "question": "Does the potted fern rest on the small table?"
+  },
+  {
+   "id": "no_blood",
+   "type": "absent",
+   "desc": "blood",
+   "question": "Is there any blood visible in the image?"
+  },
+  {
+   "id": "nurse_standing",
+   "type": "state",
+   "of": "nurse",
+   "desc": "the nurse in blue scrubs stands",
+   "question": "Is the nurse in blue scrubs standing?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "chair",
+   "to": "elderly_man",
+   "kind": "support"
+  },
+  {
+   "from": "table",
+   "to": "fern",
+   "kind": "support"
+  }
+ ],
+ "id": "t05_0083",
+ "prompt": "A photorealistic photo captures a sterile hospital corridor. On the left, a nurse in blue scrubs stands holding a clipboard. In the center, an elderly man in a gray coat sits on a plastic chair. To the right, a young woman in a pink dress leans against the wall. A silver IV stand is positioned next to the seated man. A potted fern rests on a small table near the entrance. The nurse is looking at the elderly man. The young woman is pointing at a door sign. The elderly man is sitting on the chair. The IV stand is next to the elderly man. There is no blood visible anywhere in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay+dedupe",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83",
+  "dedupe_of": "qwen3.7-plus-v84",
+  "dedupe": {
+   "merged": [],
+   "dropped": [
+    [
+     "woman_pointing_sign",
+     "woman_pointing"
+    ]
+   ]
+  }
+ }
+}

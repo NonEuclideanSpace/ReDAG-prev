@@ -1,0 +1,146 @@
+{
+ "model": "Qwen3.8-27B",
+ "settings": {
+  "thr": 0.5,
+  "full_side": 896,
+  "crop_min": 448,
+  "crop_max": 1024,
+  "two_stage": true,
+  "locate": true,
+  "min_box_side": 16,
+  "max_box_area": 0.7,
+  "count_mode": "number"
+ },
+ "metrics": {
+  "overall": {
+   "false_fail": 0.02702702702702703,
+   "detect_n": 0.7804878048780488,
+   "detect_u": 0.3835616438356164,
+   "n_y": 481,
+   "n_u": 73,
+   "n_n": 41
+  },
+  "by_type": {
+   "attribute": {
+    "false_fail": 0.10526315789473684,
+    "detect_n": null,
+    "detect_u": 0.6,
+    "n_y": 19,
+    "n_u": 5,
+    "n_n": 0
+   },
+   "relation": {
+    "false_fail": 0.0,
+    "detect_n": null,
+    "detect_u": 0.5,
+    "n_y": 47,
+    "n_u": 14,
+    "n_n": 0
+   },
+   "entity": {
+    "false_fail": 0.011627906976744186,
+    "detect_n": 0.5,
+    "detect_u": 0.6,
+    "n_y": 172,
+    "n_u": 10,
+    "n_n": 4
+   },
+   "count": {
+    "false_fail": 0.042735042735042736,
+    "detect_n": 0.8529411764705882,
+    "detect_u": 0.26666666666666666,
+    "n_y": 117,
+    "n_u": 15,
+    "n_n": 34
+   },
+   "pair": {
+    "false_fail": 0.0,
+    "detect_n": null,
+    "detect_u": null,
+    "n_y": 32,
+    "n_u": 0,
+    "n_n": 0
+   },
+   "state": {
+    "false_fail": 0.03571428571428571,
+    "detect_n": 0.0,
+    "detect_u": 0.2857142857142857,
+    "n_y": 56,
+    "n_u": 14,
+    "n_n": 1
+   },
+   "action": {
+    "false_fail": 0.09523809523809523,
+    "detect_n": 0.5,
+    "detect_u": 0.3076923076923077,
+    "n_y": 21,
+    "n_u": 13,
+    "n_n": 2
+   },
+   "background": {
+    "false_fail": 0.0,
+    "detect_n": null,
+    "detect_u": 0.0,
+    "n_y": 17,
+    "n_u": 2,
+    "n_n": 0
+   }
+  },
+  "by_size": {
+   "medium": {
+    "false_fail": 0.006993006993006993,
+    "detect_n": 0.3333333333333333,
+    "detect_u": 0.6666666666666666,
+    "n_y": 143,
+    "n_u": 21,
+    "n_n": 3
+   },
+   "small": {
+    "false_fail": 0.05084745762711865,
+    "detect_n": 0.3333333333333333,
+    "detect_u": 0.2,
+    "n_y": 59,
+    "n_u": 10,
+    "n_n": 3
+   },
+   "large": {
+    "false_fail": 0.035398230088495575,
+    "detect_n": 1.0,
+    "detect_u": 0.32,
+    "n_y": 113,
+    "n_u": 25,
+    "n_n": 1
+   }
+  }
+ },
+ "dup_detect": 0.8529411764705882,
+ "n_scored": 595,
+ "fmt_fail_rate": 0.0,
+ "coord_mode": "norm1000",
+ "coord_check": {
+  "coord_mode": "norm1000",
+  "iou_abs": 0.3906530674379662,
+  "iou_norm": 0.9898396069477463,
+  "raw": "```json\n[\n\t{\"bbox_2d\": [586, 259, 782, 521], \"label\": \"red square\"}\n]\n```"
+ },
+ "checks": {
+  "enough_items": true,
+  "false_fail": false,
+  "detect_n": false,
+  "detect_u": false,
+  "dup_detect": true,
+  "fmt": true
+ },
+ "thresholds": {
+  "false_fail_max": 0.02,
+  "detect_n_min": 0.9,
+  "detect_u_min": 0.7,
+  "dup_detect_min": 0.8,
+  "fmt_fail_max": 0.01,
+  "min_items": 300
+ },
+ "sec": 601.6,
+ "time": "2026-10-09 16:59:45",
+ "summary": "false_fail=0.02702702702702703 detect_n=0.7804878048780488 detect_u=0.3835616438356164 dup=0.8529411764705882 fmt=0.0000 n=595",
+ "pass": false
+}

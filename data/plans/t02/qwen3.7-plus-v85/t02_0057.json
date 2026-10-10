@@ -1,0 +1,112 @@
+{
+ "style": "cinematic film still",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a wedding reception scene",
+   "question": "Does the image show a wedding reception scene?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a white gown",
+   "question": "Is there a woman in a white gown?",
+   "box": [
+    50,
+    100,
+    400,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black tuxedo",
+   "question": "Is there a man in a black tuxedo?",
+   "box": [
+    550,
+    100,
+    900,
+    900
+   ]
+  },
+  {
+   "id": "woman_flute",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a white gown holds a champagne flute",
+   "question": "Is the woman in a white gown holding a champagne flute?"
+  },
+  {
+   "id": "man_looking",
+   "type": "relation",
+   "of": [
+    "man",
+    "woman"
+   ],
+   "desc": "the man in a black tuxedo is looking at the woman",
+   "question": "Is the man in a black tuxedo looking at the woman in a white gown?"
+  },
+  {
+   "id": "man_extending",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in a black tuxedo is extending his hand",
+   "question": "Is the man in a black tuxedo extending his hand?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a white gown is handing the glass to the man in a black tuxedo",
+   "question": "Is the woman in a white gown handing the glass to the man in a black tuxedo?"
+  },
+  {
+   "id": "no_cake",
+   "type": "absent",
+   "desc": "cake",
+   "question": "Is there any cake visible in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a white gown is standing",
+   "question": "Is the woman in a white gown standing?"
+  }
+ ],
+ "edges": [],
+ "id": "t02_0057",
+ "prompt": "A cinematic film still captures a wedding reception scene. On the left, a woman in a white gown stands holding a champagne flute. In the center, a man in a black tuxedo looks at her while extending his hand. The woman is handing the glass to the man. There is no cake visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

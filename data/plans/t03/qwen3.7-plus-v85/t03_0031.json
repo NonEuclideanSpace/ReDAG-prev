@@ -1,0 +1,132 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a quiet theatre backstage area",
+   "question": "Does the image depict a quiet theatre backstage area?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue dress",
+   "question": "Is there a woman in a blue dress?",
+   "box": [
+    50,
+    150,
+    300,
+    900
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "entity",
+   "class": "wooden chair",
+   "plural": "wooden chairs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden chair",
+   "question": "Is there a wooden chair?",
+   "box": [
+    400,
+    400,
+    624,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a black hat",
+   "question": "Is there a man in a black hat?",
+   "box": [
+    724,
+    150,
+    974,
+    900
+   ]
+  },
+  {
+   "id": "woman_script",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue dress holds a script",
+   "question": "Is the woman in the blue dress holding a script?"
+  },
+  {
+   "id": "man_looking_down",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black hat is looking down",
+   "question": "Is the man in the black hat looking down?"
+  },
+  {
+   "id": "man_pointing",
+   "type": "action",
+   "of": [
+    "man",
+    "chair"
+   ],
+   "desc": "the man in the black hat points at the wooden chair",
+   "question": "Is the man in the black hat pointing at the wooden chair?"
+  },
+  {
+   "id": "no_mirror",
+   "type": "absent",
+   "desc": "a mirror",
+   "question": "Is there a mirror in the image?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue dress stands tall",
+   "question": "Is the woman in the blue dress standing tall?"
+  },
+  {
+   "id": "chair_sitting",
+   "type": "state",
+   "of": "chair",
+   "desc": "the wooden chair sits empty",
+   "question": "Is the wooden chair sitting empty?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the black hat leans forward",
+   "question": "Is the man in the black hat leaning forward?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0031",
+ "prompt": "A pencil sketch with light color wash depicts a quiet theatre backstage. On the left, a woman in a blue dress stands tall. In the center, a wooden chair sits empty. On the right, a man in a black hat leans forward. The woman is holding a script. The man is looking down. The man in the black hat is pointing at the wooden chair. There is no mirror.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 3,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

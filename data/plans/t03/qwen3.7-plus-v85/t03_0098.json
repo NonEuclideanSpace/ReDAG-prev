@@ -1,0 +1,191 @@
+{
+ "style": "photorealistic photo, sunlit farm scene",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a sunlit farm scene with dry grass during harvest",
+   "question": "Does the image show a sunlit farm scene with dry grass?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "fence_post",
+   "type": "entity",
+   "class": "fence post",
+   "plural": "fence posts",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a wooden fence post",
+   "question": "Is there a wooden fence post?",
+   "box": [
+    450,
+    300,
+    550,
+    800
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue apron",
+   "question": "Is there a woman in a blue apron?",
+   "box": [
+    50,
+    200,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an elderly man with a gray beard",
+   "question": "Is there an elderly man with a gray beard?",
+   "box": [
+    400,
+    250,
+    650,
+    850
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "golden retriever",
+   "plural": "golden retrievers",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a golden retriever",
+   "question": "Is there a golden retriever?",
+   "box": [
+    700,
+    500,
+    950,
+    900
+   ]
+  },
+  {
+   "id": "woman_basket",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in a blue apron holds a woven basket",
+   "question": "Is the woman in a blue apron holding a woven basket?"
+  },
+  {
+   "id": "man_leaning",
+   "type": "state",
+   "of": "man",
+   "desc": "the elderly man with a gray beard is leaning",
+   "question": "Is the elderly man with a gray beard leaning?"
+  },
+  {
+   "id": "dog_sitting",
+   "type": "state",
+   "of": "dog",
+   "desc": "the golden retriever is sitting",
+   "question": "Is the golden retriever sitting?"
+  },
+  {
+   "id": "woman_left",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron is to the left of the elderly man",
+   "question": "Is the woman in a blue apron to the left of the elderly man?"
+  },
+  {
+   "id": "man_center",
+   "type": "relation",
+   "of": [
+    "man",
+    "fence_post"
+   ],
+   "desc": "the elderly man leans against the wooden fence post",
+   "question": "Is the elderly man leaning against the wooden fence post?"
+  },
+  {
+   "id": "dog_right",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever is to the right of the elderly man",
+   "question": "Is the golden retriever to the right of the elderly man?"
+  },
+  {
+   "id": "handover",
+   "type": "action",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in a blue apron hands a ripe red apple to the elderly man",
+   "question": "Is the woman in a blue apron handing a ripe red apple to the elderly man?"
+  },
+  {
+   "id": "dog_looking",
+   "type": "relation",
+   "of": [
+    "dog",
+    "woman"
+   ],
+   "desc": "the golden retriever looks at the apple being exchanged between the woman and the man",
+   "question": "Is the golden retriever looking at the apple being exchanged between the woman and the man?"
+  },
+  {
+   "id": "no_tractor",
+   "type": "absent",
+   "desc": "a tractor",
+   "question": "Is there a tractor visible in the background?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in a blue apron stands",
+   "question": "Is the woman in a blue apron standing?"
+  },
+  {
+   "id": "dog_looking_apple",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the golden retriever looks at the apple being handed to the elderly man",
+   "question": "Is the golden retriever looking at the apple being handed to the elderly man?"
+  }
+ ],
+ "edges": [],
+ "id": "t03_0098",
+ "prompt": "A photorealistic photo captures a sunlit farm scene during harvest. On the left stands a woman in a blue apron holding a woven basket. In the center, an elderly man with a gray beard leans against a wooden fence post. To the right, a golden retriever sits calmly on the dry grass. The woman is handing a ripe red apple to the elderly man. The golden retriever is looking at the apple being exchanged. There is no tractor visible in the background.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 2,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

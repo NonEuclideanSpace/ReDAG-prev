@@ -1,0 +1,195 @@
+{
+ "style": "anime style illustration",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite",
+   "question": "Does the image show a mountain campsite?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue beanie",
+   "question": "Is there a woman in a blue beanie?",
+   "box": [
+    50,
+    300,
+    350,
+    900
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man in a red scarf?",
+   "box": [
+    380,
+    250,
+    650,
+    900
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    550,
+    600,
+    750,
+    850
+   ]
+  },
+  {
+   "id": "girl",
+   "type": "entity",
+   "class": "girl",
+   "plural": "girls",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a girl in a yellow jacket",
+   "question": "Is there a girl in a yellow jacket?",
+   "box": [
+    700,
+    280,
+    980,
+    900
+   ]
+  },
+  {
+   "id": "backpack",
+   "type": "entity",
+   "class": "backpack",
+   "plural": "backpacks",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a black backpack",
+   "question": "Is there a black backpack?",
+   "box": [
+    800,
+    750,
+    950,
+    950
+   ]
+  },
+  {
+   "id": "woman_sitting",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue beanie is sitting",
+   "question": "Is the woman in the blue beanie sitting?"
+  },
+  {
+   "id": "man_standing",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is standing",
+   "question": "Is the man in the red scarf standing?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "man_holding_pot",
+   "type": "attribute",
+   "of": "man",
+   "desc": "the man in the red scarf holds a metal pot",
+   "question": "Is the man in the red scarf holding a metal pot?"
+  },
+  {
+   "id": "woman_looking_man",
+   "type": "relation",
+   "of": [
+    "woman",
+    "man"
+   ],
+   "desc": "the woman in the blue beanie is looking at the man in the red scarf",
+   "question": "Is the woman in the blue beanie looking at the man in the red scarf?"
+  },
+  {
+   "id": "dog_next_to_man",
+   "type": "relation",
+   "of": [
+    "dog",
+    "man"
+   ],
+   "desc": "the brown dog is next to the man in the red scarf",
+   "question": "Is the brown dog next to the man in the red scarf?"
+  },
+  {
+   "id": "girl_pointing_dog",
+   "type": "action",
+   "of": [
+    "girl",
+    "dog"
+   ],
+   "desc": "the girl in the yellow jacket points at the brown dog",
+   "question": "Is the girl in the yellow jacket pointing at the brown dog?"
+  },
+  {
+   "id": "backpack_near_girl",
+   "type": "relation",
+   "of": [
+    "backpack",
+    "girl"
+   ],
+   "desc": "the black backpack is near the girl in the yellow jacket",
+   "question": "Is the black backpack near the girl in the yellow jacket?"
+  },
+  {
+   "id": "man_handing_girl",
+   "type": "action",
+   "of": [
+    "man",
+    "girl"
+   ],
+   "desc": "the man in the red scarf is handing the metal pot to the girl in the yellow jacket",
+   "question": "Is the man in the red scarf handing the metal pot to the girl in the yellow jacket?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  }
+ ],
+ "edges": [],
+ "id": "t05_0009",
+ "prompt": "In an anime style illustration, a woman in a blue beanie sits on the left side of a mountain campsite. A man in a red scarf stands in the center holding a metal pot. A brown dog lies next to the man in the red scarf. A girl in a yellow jacket points at the brown dog from the right side. A black backpack rests on the ground near the girl in the yellow jacket. The woman in the blue beanie is looking at the man in the red scarf. The man in the red scarf is handing the metal pot to the girl in the yellow jacket. There is no fire in the scene.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "base_tag": "qwen3.7-plus-v5",
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

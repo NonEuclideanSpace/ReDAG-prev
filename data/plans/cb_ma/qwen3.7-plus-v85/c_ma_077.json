@@ -1,0 +1,186 @@
+{
+ "style": "photorealistic product photography, high contrast, macro detail",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a dark neutral background emphasizing the reflective obsidian slab",
+   "question": "Does the image feature a dark neutral background that emphasizes the foreground objects?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "slab",
+   "type": "entity",
+   "class": "slab",
+   "plural": "slabs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a reflective black obsidian slab",
+   "question": "Is there a reflective black obsidian slab?",
+   "box": [
+    100,
+    600,
+    924,
+    950
+   ]
+  },
+  {
+   "id": "bottle",
+   "type": "entity",
+   "class": "perfume bottle",
+   "plural": "perfume bottles",
+   "count": 1,
+   "count_exact": true,
+   "desc": "an amethyst-crystal perfume bottle",
+   "question": "Is there an amethyst-crystal perfume bottle?",
+   "box": [
+    380,
+    200,
+    644,
+    750
+   ]
+  },
+  {
+   "id": "stopper",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "a diamond-cut clear stopper on the bottle",
+   "question": "Does the bottle have a diamond-cut clear stopper?"
+  },
+  {
+   "id": "collar",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "a platinum filigree collar set with eight tiny white opals wraps the neck",
+   "question": "Does the bottle have a platinum filigree collar?"
+  },
+  {
+   "id": "liquid_content",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "pale-lilac perfume flecked with suspended silver particles",
+   "question": "Does the bottle contain pale-lilac perfume?"
+  },
+  {
+   "id": "condensation",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "fine condensation beads near the liquid line on the bottle",
+   "question": "Are there fine condensation beads near the liquid line on the bottle?"
+  },
+  {
+   "id": "nozzle",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "a small platinum spray nozzle beneath the stopper",
+   "question": "Is there a small platinum spray nozzle visible beneath the stopper?"
+  },
+  {
+   "id": "bottle_on_slab",
+   "type": "relation",
+   "of": [
+    "bottle",
+    "slab"
+   ],
+   "desc": "the perfume bottle standing on the obsidian slab",
+   "question": "Is the perfume bottle standing on the obsidian slab?"
+  },
+  {
+   "id": "no_cracks",
+   "type": "absent",
+   "desc": "cracks in the crystal",
+   "question": "Are there any cracks in the crystal bottle?"
+  },
+  {
+   "id": "no_scratches",
+   "type": "absent",
+   "desc": "scratches on the surface of the bottle",
+   "question": "Are there any scratches on the surface of the bottle?"
+  },
+  {
+   "id": "no_plastic",
+   "type": "absent",
+   "desc": "plastic components",
+   "question": "Are there any plastic components in the image?"
+  },
+  {
+   "id": "bottle_standing",
+   "type": "state",
+   "of": "bottle",
+   "desc": "the perfume bottle is standing",
+   "question": "Is the perfume bottle standing?"
+  },
+  {
+   "id": "bottle_octagonal",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle is octagonal",
+   "question": "Is the perfume bottle octagonal?"
+  },
+  {
+   "id": "bottle_purple",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the bottle is vividly purple",
+   "question": "Is the perfume bottle vividly purple?"
+  },
+  {
+   "id": "collar_opals",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the collar is set with eight tiny white opals",
+   "question": "Is the collar on the bottle set with eight tiny white opals?"
+  },
+  {
+   "id": "liquid_silver",
+   "type": "attribute",
+   "of": "bottle",
+   "desc": "the perfume is flecked with suspended silver particles",
+   "question": "Is the perfume inside the bottle flecked with suspended silver particles?"
+  },
+  {
+   "id": "no_slab_scratches",
+   "type": "absent",
+   "desc": "scratches on the surface of the slab",
+   "question": "Are there any scratches on the surface of the obsidian slab?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "slab",
+   "to": "bottle",
+   "kind": "support"
+  }
+ ],
+ "id": "c_ma_077",
+ "prompt": "Depict a single amethyst-crystal perfume bottle standing on a reflective obsidian slab. The bottle is octagonal, vividly purple, and topped with a diamond-cut clear stopper. A platinum filigree collar set with eight tiny white opals wraps the neck. Inside glimmers a pale-lilac perfume flecked with suspended silver particles, while fine condensation beads appear near the liquid line. A small platinum spray nozzle hides beneath the stopper. The crystal shows no cracks, the surface bears no scratches, and the piece contains no plastic components.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 2,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 4,
+   "new_nodes": 5,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 0,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}

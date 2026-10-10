@@ -1,0 +1,192 @@
+{
+ "style": "pencil sketch with light color wash",
+ "nodes": [
+  {
+   "id": "bg",
+   "type": "background",
+   "desc": "a mountain campsite with grass",
+   "question": "Does the image depict a mountain campsite with grass?",
+   "box": [
+    0,
+    0,
+    1024,
+    1024
+   ]
+  },
+  {
+   "id": "log",
+   "type": "entity",
+   "class": "log",
+   "plural": "logs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a log",
+   "question": "Is there a log?",
+   "box": [
+    50,
+    600,
+    300,
+    750
+   ]
+  },
+  {
+   "id": "man",
+   "type": "entity",
+   "class": "man",
+   "plural": "men",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a man in a red scarf",
+   "question": "Is there a man wearing a red scarf?",
+   "box": [
+    80,
+    450,
+    280,
+    700
+   ]
+  },
+  {
+   "id": "dog",
+   "type": "entity",
+   "class": "dog",
+   "plural": "dogs",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a brown dog",
+   "question": "Is there a brown dog?",
+   "box": [
+    400,
+    550,
+    650,
+    750
+   ]
+  },
+  {
+   "id": "woman",
+   "type": "entity",
+   "class": "woman",
+   "plural": "women",
+   "count": 1,
+   "count_exact": true,
+   "desc": "a woman in a blue hat",
+   "question": "Is there a woman wearing a blue hat?",
+   "box": [
+    750,
+    400,
+    950,
+    800
+   ]
+  },
+  {
+   "id": "mug",
+   "type": "attribute",
+   "of": "woman",
+   "desc": "the woman in the blue hat holds a mug",
+   "question": "Is the woman in the blue hat holding a mug?"
+  },
+  {
+   "id": "man_sitting",
+   "type": "state",
+   "of": "man",
+   "desc": "the man in the red scarf is sitting",
+   "question": "Is the man in the red scarf sitting?"
+  },
+  {
+   "id": "dog_lying",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is lying down",
+   "question": "Is the brown dog lying down?"
+  },
+  {
+   "id": "woman_standing",
+   "type": "state",
+   "of": "woman",
+   "desc": "the woman in the blue hat is standing",
+   "question": "Is the woman in the blue hat standing?"
+  },
+  {
+   "id": "man_on_log",
+   "type": "relation",
+   "of": [
+    "man",
+    "log"
+   ],
+   "desc": "the man in the red scarf sits on the log",
+   "question": "Is the man in the red scarf sitting on the log?"
+  },
+  {
+   "id": "man_looking_at_dog",
+   "type": "action",
+   "of": [
+    "man",
+    "dog"
+   ],
+   "desc": "the man in the red scarf looks at the brown dog",
+   "question": "Is the man in the red scarf looking at the brown dog?"
+  },
+  {
+   "id": "woman_next_to_dog",
+   "type": "relation",
+   "of": [
+    "woman",
+    "dog"
+   ],
+   "desc": "the woman in the blue hat is next to the brown dog",
+   "question": "Is the woman in the blue hat next to the brown dog?"
+  },
+  {
+   "id": "no_fire",
+   "type": "absent",
+   "desc": "fire",
+   "question": "Is there any fire in the image?"
+  },
+  {
+   "id": "dog_calm",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog is calm",
+   "question": "Is the brown dog calm?"
+  },
+  {
+   "id": "dog_on_grass",
+   "type": "state",
+   "of": "dog",
+   "desc": "the brown dog lies on the grass",
+   "question": "Is the brown dog lying on the grass?"
+  }
+ ],
+ "edges": [
+  {
+   "from": "log",
+   "to": "man",
+   "kind": "support"
+  }
+ ],
+ "id": "t03_0097",
+ "prompt": "A pencil sketch with light color wash depicts a mountain campsite. On the left, a man in a red scarf sits on a log. In the center, a brown dog lies calmly on the grass. To the right, a woman in a blue hat stands holding a mug. The man looks at the dog. The woman is next to the dog. There is no fire.",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "meta": {
+  "planner": "qwen3.7-plus:v8+replay+replay+replay+replay",
+  "attempts": 1,
+  "warnings": [],
+  "coverage_added": 1,
+  "coverage_dropped": 0,
+  "base_tag": "qwen3.7-plus-v5",
+  "atomize": {
+   "rewrites": 1,
+   "new_nodes": 0,
+   "added": 0,
+   "set_count": 0,
+   "deleted": 0,
+   "reverted": 1,
+   "ungrounded": 0,
+   "repair": 0,
+   "cleanup": 0
+  },
+  "replay_of": "qwen3.7-plus-v83"
+ }
+}
