@@ -5,9 +5,9 @@ import random
 
 from common import P0, load_set, plan_dir
 
-from draftdag.paths import gates_dir
-from draftdag.planner import DEFAULT_MODEL, audit_plan
-from draftdag.schema import Plan
+from redag.paths import gates_dir
+from redag.planner import DEFAULT_MODEL, audit_plan
+from redag.schema import Plan
 
 ap = argparse.ArgumentParser(description="Planner gate: questions beyond the prompt, and uncovered requirements, on a sample of plans.")
 ap.add_argument("--set", required=True)

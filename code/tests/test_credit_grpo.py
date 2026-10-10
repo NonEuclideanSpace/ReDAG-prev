@@ -10,10 +10,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fixtures import lab_plan
 
-from draftdag.conditions import build_conditions
-from draftdag.credit import box_to_grid, partition, region_credit
-from draftdag.grpo import ode_step, region_ratio_loss, sde_coeffs, sde_mean, sde_step, token_logprob
-from draftdag.table import Column, Rec
+from redag.conditions import build_conditions
+from redag.credit import box_to_grid, partition, region_credit
+from redag.grpo import ode_step, region_ratio_loss, sde_coeffs, sde_mean, sde_step, token_logprob
+from redag.table import Column, Rec
 
 
 def _col(conds, scores, statuses=None):

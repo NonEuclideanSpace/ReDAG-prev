@@ -1,4 +1,4 @@
-"""Every module under draftdag/ and every script compiles and the library modules import (catches syntax errors in
+"""Every module under redag/ and every script compiles and the library modules import (catches syntax errors in
 code paths the mock tests never reach, such as calibrate.py's gate writer)."""
 import importlib
 import os
@@ -11,11 +11,11 @@ sys.path.insert(0, CODE)
 
 
 def test_imports():
-    for sub in ("draftdag", "scripts"):
+    for sub in ("redag", "scripts"):
         for fn in sorted(os.listdir(os.path.join(CODE, sub))):
             if fn.endswith(".py"):
                 py_compile.compile(os.path.join(CODE, sub, fn), doraise=True)
-    for mod in ("draftdag.calibrate", "draftdag.labels", "draftdag.planner", "draftdag.schema", "draftdag.vlm", "draftdag.verify", "draftdag.diagnose", "draftdag.loop", "draftdag.report", "draftdag.preflight"):
+    for mod in ("redag.calibrate", "redag.labels", "redag.planner", "redag.schema", "redag.vlm", "redag.verify", "redag.diagnose", "redag.loop", "redag.report", "redag.preflight"):
         importlib.import_module(mod)
 
 

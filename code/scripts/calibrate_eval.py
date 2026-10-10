@@ -4,7 +4,7 @@ import os
 
 from common import P0, add_vlm_args, make_vlm, plan_dir
 
-from draftdag.calibrate import GATE, run_calibration
+from redag.calibrate import GATE, run_calibration
 
 ap = argparse.ArgumentParser(description="Evaluator gate: score the label set with the production verification path and compare with reference labels.")
 ap.add_argument("--items", required=True, help="labels/<set>/items.jsonl")

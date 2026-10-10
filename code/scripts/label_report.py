@@ -8,7 +8,7 @@ from collections import Counter
 
 from common import P0
 
-from draftdag.labels import agreement, read_jsonl
+from redag.labels import agreement, read_jsonl
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--name", required=True)

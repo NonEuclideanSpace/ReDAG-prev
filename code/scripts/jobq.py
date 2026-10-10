@@ -20,7 +20,7 @@ import time
 
 from common import P0
 
-from draftdag.preflight import allowed_gpus, load_machine
+from redag.preflight import allowed_gpus, load_machine
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--queue", required=True, help="queue file (relative to the current directory, else under P0)")

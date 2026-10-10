@@ -4,8 +4,8 @@ import os
 
 from common import P0, ids_filter, load_set, plan_dir, shard
 
-from draftdag.planner import DEFAULT_MODEL, load_or_plan
-from draftdag.schema import Plan, add_generated_nodes
+from redag.planner import DEFAULT_MODEL, load_or_plan
+from redag.schema import Plan, add_generated_nodes
 
 ap = argparse.ArgumentParser(description="Make DAG plans for a prompt set (planner v4).")
 ap.add_argument("--set", required=True)

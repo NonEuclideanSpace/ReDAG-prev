@@ -48,7 +48,7 @@ print("vllm", vllm.__version__, "torch", torch.__version__, "gpus", torch.cuda.d
 EOF
 
 echo "== tests (no GPU needed)"
-cd "$P0/code" && PYTHONPATH="$P0/code" "$GP" -c "import draftdag" && bash tests/run_all.sh | tail -1
+cd "$P0/code" && PYTHONPATH="$P0/code" "$GP" -c "import redag" && bash tests/run_all.sh | tail -1
 
 # Qwen-Image-2.1 is 33 GB in bf16 (text encoder 17.5 + transformer 14.2 + VAE 1.4): on cards under 40 GB it only runs with CPU offload
 MEM_GB=$("$GP" -c "import torch; print(int(min(torch.cuda.get_device_properties(i).total_memory for i in range(torch.cuda.device_count()))/2**30) if torch.cuda.device_count() else 0)")

@@ -4,8 +4,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from draftdag.dedupe import dedupe_children, dedupe_plan, lost_by_merge, merge_entities, para_key  # noqa: E402
-from draftdag.schema import Plan  # noqa: E402
+from redag.dedupe import dedupe_children, dedupe_plan, lost_by_merge, merge_entities, para_key  # noqa: E402
+from redag.schema import Plan  # noqa: E402
 
 
 def plan():

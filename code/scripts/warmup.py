@@ -3,9 +3,9 @@ import os
 
 from common import P0, plan_dir
 
-from draftdag.executor_qi21 import load_pipe
-from draftdag.policy_qi21 import QI21Policy
-from draftdag.warmup import Warmup, accepted_from_runs
+from redag.executor_qi21 import load_pipe
+from redag.policy_qi21 import QI21Policy
+from redag.warmup import Warmup, accepted_from_runs
 
 ap = argparse.ArgumentParser(description="Regression warm-up on accepted edits (before GRPO only).")
 ap.add_argument("--runs", nargs="+", required=True)

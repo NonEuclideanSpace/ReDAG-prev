@@ -1,4 +1,4 @@
-"""Write a plan tag with its twin nodes removed (draftdag.dedupe: twin child questions, and the entity merges a reviewed
+"""Write a plan tag with its twin nodes removed (redag.dedupe: twin child questions, and the entity merges a reviewed
 config lists), without any model call. Every prompt of --tiers gets a plan under --out-tag: a copy of the --src-tag plan
 when nothing was removed. Per-plan records go to <set>/<out-tag>/_dedupe.jsonl; the plan's meta gets "dedupe".
   python scripts/dedupe_plans.py --src-tag qwen3.7-plus-v84 --out-tag qwen3.7-plus-v85 --merges configs/dedupe_merges_v85.json"""
@@ -8,7 +8,7 @@ import os
 
 from common import P0, plan_dir
 
-from draftdag.dedupe import dedupe_plan
+from redag.dedupe import dedupe_plan
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--src-tag", required=True)

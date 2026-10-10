@@ -10,7 +10,7 @@ import time
 
 from common import P0
 
-from draftdag.preflight import allowed_gpus, load_machine, require_preflight
+from redag.preflight import allowed_gpus, load_machine, require_preflight
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--cmd", required=True)

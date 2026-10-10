@@ -8,8 +8,8 @@ import time
 
 from common import P0, ids_filter, load_set, plan_dir, shard
 
-from draftdag.schema import Plan
-from draftdag.views import save_png
+from redag.schema import Plan
+from redag.views import save_png
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", default=None)
@@ -46,13 +46,13 @@ elif args.set and args.tag:
 else:
     raise SystemExit("give --set and --tag, or --picks")
 if args.executor == "mock":
-    from draftdag.mock import MockExecutor
+    from redag.mock import MockExecutor
 else:
     if not args.skip_preflight:
-        from draftdag.preflight import require_preflight
+        from redag.preflight import require_preflight
 
         require_preflight()
-    from draftdag.executor_qi21 import QI21
+    from redag.executor_qi21 import QI21
 
     ex = QI21(steps=args.qi_steps, res=args.size)
 
@@ -103,7 +103,7 @@ for i, r in enumerate(rows):
         continue
     claim(d)
     if args.executor == "mock":
-        from draftdag.schema import add_generated_nodes
+        from redag.schema import add_generated_nodes
 
         ex = MockExecutor(add_generated_nodes(Plan(plan.to_dict())), seed=args.seed)
     seed = random.Random(f"{args.seed}:{r['id']}").randrange(2 ** 31)

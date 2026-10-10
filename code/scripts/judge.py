@@ -4,9 +4,9 @@ import os
 
 from common import P0, add_vlm_args, load_set, make_vlm, plan_dir
 
-from draftdag.report import judge_run
-from draftdag.schema import Plan, add_generated_nodes
-from draftdag.verify import VerifyConfig
+from redag.report import judge_run
+from redag.schema import Plan, add_generated_nodes
+from redag.verify import VerifyConfig
 
 ap = argparse.ArgumentParser(description="Score a run's final images with an independent judge (different model family); never used inside the loop.")
 ap.add_argument("--run", required=True)

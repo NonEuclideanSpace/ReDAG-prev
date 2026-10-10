@@ -15,9 +15,9 @@ from PIL import Image
 
 from common import P0
 
-from draftdag.executor_qi21 import load_pipe
-from draftdag.paths import gates_dir
-from draftdag.policy_qi21 import QI21Policy
+from redag.executor_qi21 import load_pipe
+from redag.paths import gates_dir
+from redag.policy_qi21 import QI21Policy
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--canvas", required=True, help="an image to edit")

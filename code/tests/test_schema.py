@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fixtures import lab_plan
 
-from draftdag.conditions import affected_conditions, build_conditions, is_askable, region_of
-from draftdag.schema import Plan, strip_generated
+from redag.conditions import affected_conditions, build_conditions, is_askable, region_of
+from redag.schema import Plan, strip_generated
 
 
 def test_generated_nodes_and_graph():
@@ -79,7 +79,7 @@ def test_validation_catches_bad_plans():
 
 
 def test_inexact_count_has_no_count_node():
-    from draftdag.schema import add_generated_nodes
+    from redag.schema import add_generated_nodes
 
     d = lab_plan().to_dict()
     d["nodes"] = [n for n in d["nodes"] if n["type"] in ("background", "entity", "attribute", "state", "action", "relation", "absent")]

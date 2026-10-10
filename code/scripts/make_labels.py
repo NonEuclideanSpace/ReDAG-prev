@@ -5,8 +5,8 @@ import random
 
 from common import P0, plan_dir, run_dir
 
-from draftdag.labels import attach_questions, items_from_run, make_sheet, read_jsonl, write_jsonl
-from draftdag.schema import Plan, add_generated_nodes
+from redag.labels import attach_questions, items_from_run, make_sheet, read_jsonl, write_jsonl
+from redag.schema import Plan, add_generated_nodes
 
 ap = argparse.ArgumentParser(description="Build a label set (items + HTML sheet) from one or more runs.")
 ap.add_argument("--runs", nargs="*", default=[], help="loop runs (traces)")
@@ -55,7 +55,7 @@ def plan_of(pid):
     return plans.get(pid)
 
 
-from draftdag.conditions import build_conditions  # noqa: E402
+from redag.conditions import build_conditions  # noqa: E402
 
 for r in args.drafts_runs:
     rd = run_dir(r)

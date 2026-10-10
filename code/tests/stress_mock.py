@@ -10,9 +10,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fixtures import lab_plan
 
-from draftdag.conditions import build_conditions
-from draftdag.loop import Loop, LoopConfig
-from draftdag.mock import MockExecutor, MockVLM, Truth
+from redag.conditions import build_conditions
+from redag.loop import Loop, LoopConfig
+from redag.mock import MockExecutor, MockVLM, Truth
 
 
 def truly_satisfied(plan, conds, truth):

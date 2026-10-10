@@ -4,8 +4,8 @@ import os
 
 from common import P0
 
-from draftdag.report import run_metrics
-from draftdag.stats import summarise_traces
+from redag.report import run_metrics
+from redag.stats import summarise_traces
 
 ap = argparse.ArgumentParser(description="Summarise a run: progress, metrics, acceptance by op, interference, decision mix. Writes stats.json usable by --stats.")
 ap.add_argument("--run", required=True)

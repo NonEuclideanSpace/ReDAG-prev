@@ -13,8 +13,8 @@ sys.path.insert(0, HERE)
 
 from fixtures import lab_plan  # noqa: E402
 
-from draftdag.planner import _grow_box, atomize_pass, audit_plan, facts_pass  # noqa: E402
-from draftdag.schema import strip_generated  # noqa: E402
+from redag.planner import _grow_box, atomize_pass, audit_plan, facts_pass  # noqa: E402
+from redag.schema import strip_generated  # noqa: E402
 
 
 def test_planner_offline():
@@ -165,7 +165,7 @@ def test_atomize_pass():
     assert outcomes == {("supervisor", 1): "lost", ("researcher_b", 1): "ungrounded", ("beaker", 1): "reverted", ("supervisor", 2): "kept", ("beaker", 2): "kept"}, outcomes
     assert all("evidence" not in n and "_grp" not in n for n in out["nodes"])
     assert out["meta"]["atomize"]["rewrites"] == 2 and out["meta"]["atomize"]["deleted"] == 1 and out["meta"]["atomize"]["repair"] == 2
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     assert not Plan(out).validate(max_nodes=128)[0]
 
     def nothing(messages, model=None, tag="", max_tokens=0, **kw):
@@ -203,7 +203,7 @@ def test_atomize_ship():
     its parts as new nodes hands its id to the first part (hull_look), so the bundled question does not stay beside its
     parts; a new node that an absent node already asks is not added (ship_no_rot); a new entity that makes an untouched
     entity place itself on it reverts its group (mast); deletions follow the node's own words."""
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     d = ship_plan()
     assert not Plan(json.loads(json.dumps(d))).validate(max_nodes=128)[0]
     seen, prompts = [], []
@@ -307,7 +307,7 @@ def test_atomize_lift_repeats():
     """A background split that adds an entity turns an untouched state placing its entity on it into a relation (as the
     first pass does); a kept node that still asks what one of its new nodes asks is not applied; a sound state is
     deleted even when the entity's own description uses the word."""
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     W = H = 1024
     d = dict(id="court_0001", canvas=[W, H], edges=[], prompt=("A beach volleyball court with sand and a net. A player wears a blue jersey with white numbers. "
                                                             "A dog sits near the net and barks loudly. A crackling campfire with burning logs burns behind the court."), nodes=[
@@ -381,7 +381,7 @@ def test_atomize_dependency_message():
 def test_atomize_retry_and_cycle():
     """A reply that is not one JSON object is asked for once more; support edges the planner proposed that close a cycle
     are dropped, and the rewrites stay."""
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     d = ship_plan()
     tags = []
 
@@ -437,7 +437,7 @@ def test_atomize_alias_same_kind():
 def test_atomize_cleanup_parts():
     """After the rewrites, a rewritten child node that only bundles nodes another rewrite made goes; one that merely
     shares a word with another fact ("a red cup" and "a red hat") stays."""
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     W = H = 1024
     d = dict(id="hall_0001", canvas=[W, H], edges=[], prompt=("In a school hallway a man in a red hat holds a red cup that smells of coffee. A cleaning cart with a mop and a "
                                                            "bucket of soapy water stands nearby; the cart holds a mop, a bucket of soapy water and towels."), nodes=[
@@ -473,7 +473,7 @@ def test_atomize_participants_and_relative():
     """A kept relation the planner put on another entity takes that entity when it is in the plan (and keeps its old
     participants' place otherwise: the rewrite is not applied); a position relative to another object ("on the left side
     of the waterhole") is not a frame position, so the node is not deleted; one in the image frame is."""
-    from draftdag.schema import Plan
+    from redag.schema import Plan
     W = H = 1024
     d = dict(id="sav_0001", canvas=[W, H], edges=[], prompt=("A savannah with a waterhole in the center. Four elephants drink on the left side of the waterhole; a boy reaches "
                                                           "for a cookie jar on the coffee table, and a girl stands on the left side of the image."), nodes=[

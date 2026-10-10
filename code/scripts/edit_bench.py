@@ -9,8 +9,8 @@ import time
 
 from common import P0, shard
 
-from draftdag.commit import region_commit
-from draftdag.views import load_image, save_png, to_rgb
+from redag.commit import region_commit
+from redag.views import load_image, save_png, to_rgb
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--instructions", required=True, help="jsonl with pid, canvas, instruction, op, node, ntype, region")
@@ -29,16 +29,16 @@ rows = shard([json.loads(l) for l in open(args.instructions, encoding="utf-8") i
 out = os.path.join(P0, "runs", args.run)
 os.makedirs(out, exist_ok=True)
 if args.executor == "mock":
-    from draftdag.mock import MockExecutor
-    from draftdag.schema import Plan, add_generated_nodes
+    from redag.mock import MockExecutor
+    from redag.schema import Plan, add_generated_nodes
 
     ex = MockExecutor(add_generated_nodes(Plan.load(args.plan)), seed=args.seed)
 else:
     if not args.skip_preflight:
-        from draftdag.preflight import require_preflight
+        from redag.preflight import require_preflight
 
         require_preflight()
-    from draftdag.executor_qi21 import QI21
+    from redag.executor_qi21 import QI21
 
     ex = QI21(steps=args.qi_steps, res=args.qi_res)
 rng = random.Random(args.seed)

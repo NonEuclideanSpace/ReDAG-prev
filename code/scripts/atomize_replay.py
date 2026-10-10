@@ -12,7 +12,7 @@ import os
 
 from common import P0, plan_dir
 
-from draftdag.planner import atomize_pass
+from redag.planner import atomize_pass
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--src-tag", required=True)

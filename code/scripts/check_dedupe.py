@@ -10,8 +10,8 @@ import os
 
 from common import P0, plan_dir
 
-from draftdag.planner import LOST_FREE, MOD_FREE, NONVISUAL_WORD, SPLIT_FREE, _content, _frame_sub, _of_ids, planner_errors
-from draftdag.schema import Plan
+from redag.planner import LOST_FREE, MOD_FREE, NONVISUAL_WORD, SPLIT_FREE, _content, _frame_sub, _of_ids, planner_errors
+from redag.schema import Plan
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--src-tag", required=True)

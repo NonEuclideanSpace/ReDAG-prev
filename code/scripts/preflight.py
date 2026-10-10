@@ -4,7 +4,7 @@ import os
 
 from common import P0
 
-from draftdag.preflight import run_preflight
+from redag.preflight import run_preflight
 
 ap = argparse.ArgumentParser(description="Machine preflight: GPU allowlist, arithmetic consistency, optional render test, model checksums.")
 ap.add_argument("--machine", default=os.path.join(P0, "configs", "machine.json"))
@@ -14,7 +14,7 @@ args = ap.parse_args()
 
 
 def factory():
-    from draftdag.executor_qi21 import QI21
+    from redag.executor_qi21 import QI21
 
     return QI21(steps=8, res=512)
 

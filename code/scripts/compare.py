@@ -4,7 +4,7 @@ import os
 
 from common import P0
 
-from draftdag.report import compare, contact_sheet, run_metrics
+from redag.report import compare, contact_sheet, run_metrics
 
 ap = argparse.ArgumentParser(description="Paired comparison of two runs on their common prompts, plus contact sheets for eyeballing.")
 ap.add_argument("--a", required=True)

@@ -7,8 +7,8 @@ import os
 
 from common import P0, add_vlm_args, make_vlm
 
-from draftdag.report import run_metrics
-from draftdag.views import load_image, resize_min_side, to_rgb
+from redag.report import run_metrics
+from redag.views import load_image, resize_min_side, to_rgb
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--run", required=True)

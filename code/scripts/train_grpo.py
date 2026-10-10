@@ -4,10 +4,10 @@ import os
 
 from common import P0, add_vlm_args, load_json, make_vlm, plan_dir
 
-from draftdag.executor_qi21 import load_pipe
-from draftdag.paths import gates_dir
-from draftdag.policy_qi21 import QI21Policy
-from draftdag.train import TrainConfig, Trainer, states_from_runs
+from redag.executor_qi21 import load_pipe
+from redag.paths import gates_dir
+from redag.policy_qi21 import QI21Policy
+from redag.train import TrainConfig, Trainer, states_from_runs
 
 ap = argparse.ArgumentParser(description="DAGFlow-GRPO on Qwen-Image-2.1 from the loop's own states.")
 ap.add_argument("--runs", nargs="+", required=True, help="runs whose branches become training states")

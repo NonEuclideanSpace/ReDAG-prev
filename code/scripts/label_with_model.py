@@ -10,7 +10,7 @@ import os
 
 from common import P0, add_vlm_args, make_vlm
 
-from draftdag.labels import label_items_with_model, read_jsonl, write_jsonl
+from redag.labels import label_items_with_model, read_jsonl, write_jsonl
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--name", required=True, help="labels/<name>/")

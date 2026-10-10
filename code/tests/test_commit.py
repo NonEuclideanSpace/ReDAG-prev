@@ -6,7 +6,7 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from draftdag.commit import grids_overlap, merge_commits, region_commit, touched_fraction
+from redag.commit import grids_overlap, merge_commits, region_commit, touched_fraction
 
 
 def _canvas(seed=0, size=512):

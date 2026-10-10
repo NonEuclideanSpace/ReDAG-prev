@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import P0, load_set, plan_dir, shard
 
-from draftdag.planner import DEFAULT_MODEL, coverage_pass, facts_pass
+from redag.planner import DEFAULT_MODEL, coverage_pass, facts_pass
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", required=True)

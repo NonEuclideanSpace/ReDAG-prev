@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import P0, plan_dir
 
-from draftdag.planner import DEFAULT_MODEL, atomize_pass
+from redag.planner import DEFAULT_MODEL, atomize_pass
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--out-tag", required=True)

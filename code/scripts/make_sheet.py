@@ -7,7 +7,7 @@ import random
 
 from common import P0
 
-from draftdag.labels import make_sheet, read_jsonl, write_jsonl
+from redag.labels import make_sheet, read_jsonl, write_jsonl
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--name", required=True)

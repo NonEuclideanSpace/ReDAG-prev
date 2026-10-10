@@ -1,4 +1,4 @@
-from draftdag.schema import Plan, add_generated_nodes
+from redag.schema import Plan, add_generated_nodes
 
 
 def lab_plan(W=1024, H=1024):

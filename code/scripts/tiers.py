@@ -9,7 +9,7 @@ import os
 
 from common import P0, load_set, plan_dir
 
-from draftdag.schema import Plan, add_generated_nodes
+from redag.schema import Plan, add_generated_nodes
 
 TIERS = (("<=15", 0, 15), ("16-25", 16, 25), ("26-35", 26, 35), ("36-50", 36, 50), (">50", 51, 10 ** 6))
 ap = argparse.ArgumentParser()

@@ -11,7 +11,7 @@ import os
 
 from common import P0, plan_dir
 
-from draftdag.planner import SPLIT_FREE, _content, _names, _of_ids, likely_bundled
+from redag.planner import SPLIT_FREE, _content, _names, _of_ids, likely_bundled
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--tags", required=True, help="comma list; BASE = the prompt's tag in data/tiers.json")

@@ -17,10 +17,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import P0, add_vlm_args, make_vlm, plan_dir
 
-from draftdag.calibrate import load_plans
-from draftdag.labels import effective_label, read_jsonl
-from draftdag.vlm import BBOX_RE, _norm_tok
-from draftdag.views import load_image, to_rgb
+from redag.calibrate import load_plans
+from redag.labels import effective_label, read_jsonl
+from redag.vlm import BBOX_RE, _norm_tok
+from redag.views import load_image, to_rgb
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--items", required=True)

@@ -14,9 +14,9 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import P0, plan_dir
 
-from draftdag.conditions import build_conditions
-from draftdag.planner import api_chat, parse_json
-from draftdag.schema import Plan, add_generated_nodes
+from redag.conditions import build_conditions
+from redag.planner import api_chat, parse_json
+from redag.schema import Plan, add_generated_nodes
 
 MATCH = """Scene description:
 {prompt}

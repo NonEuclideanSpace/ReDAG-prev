@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from PIL import Image
 
-from draftdag.labels import acceptance_metrics, agreement, eval_metrics, label_items_with_model
+from redag.labels import acceptance_metrics, agreement, eval_metrics, label_items_with_model
 
 
 class Fake:
@@ -47,7 +47,7 @@ def test_labels():
 
 
 def test_effective_label_flips_inverted():
-    from draftdag.labels import effective_label, eval_metrics
+    from redag.labels import effective_label, eval_metrics
 
     items = [dict(id="a", kind="cond", ntype="count", inv=True), dict(id="b", kind="cond", ntype="entity", inv=False)]
     assert effective_label(items[0], "y") == "n" and effective_label(items[0], "n") == "y" and effective_label(items[0], "u") == "u"

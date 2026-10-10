@@ -4,7 +4,7 @@ import os
 
 from common import P0
 
-from draftdag.preflight import sha256_file
+from redag.preflight import sha256_file
 
 ap = argparse.ArgumentParser(description="Record sizes and sha256 of the model files under models/<dir> into configs/models.json (used by preflight and by the final deliverable check).")
 ap.add_argument("--dirs", nargs="+", required=True)

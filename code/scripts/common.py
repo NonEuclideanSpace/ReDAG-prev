@@ -6,7 +6,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
-from draftdag.paths import P0  # noqa: E402
+from redag.paths import P0  # noqa: E402
 
 
 def add_vlm_args(ap):
@@ -33,7 +33,7 @@ def secret(name):
 
 
 def make_vlm(args, require_gate=True):
-    from draftdag.vlm import VLM
+    from redag.vlm import VLM
 
     v = VLM(args.vlm_url, args.vlm_model, api_key=secret(args.vlm_key_env), mode=args.vlm_mode, workers=args.vlm_workers, cache_path=args.vlm_cache, require_gate=require_gate and not args.no_gate)
     if require_gate and not args.no_gate:

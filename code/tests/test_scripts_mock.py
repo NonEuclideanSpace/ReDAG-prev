@@ -17,7 +17,7 @@ sys.path.insert(0, HERE)
 
 from fixtures import lab_plan
 
-from draftdag.schema import strip_generated
+from redag.schema import strip_generated
 
 
 def run(cmd, env, cwd):

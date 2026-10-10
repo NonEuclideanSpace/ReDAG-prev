@@ -5,9 +5,9 @@ import time
 
 from common import P0, add_vlm_args, ids_filter, load_json, load_set, make_vlm, plan_dir, run_dir, shard
 
-from draftdag.loop import Loop, LoopConfig
-from draftdag.schema import Plan, add_generated_nodes
-from draftdag.stats import Stats
+from redag.loop import Loop, LoopConfig
+from redag.schema import Plan, add_generated_nodes
+from redag.stats import Stats
 
 ap = argparse.ArgumentParser(description="Run the DAG loop (stage 1 drafts, optional stage 2 repair) over a prompt set.")
 ap.add_argument("--set", required=True)
@@ -56,21 +56,21 @@ for r in rows:
 print(f"{len(plans)} plans", flush=True)
 
 if args.executor == "mock":
-    from draftdag.conditions import build_conditions
-    from draftdag.mock import MockExecutor, MockVLM
+    from redag.conditions import build_conditions
+    from redag.mock import MockExecutor, MockVLM
 
     assert plans
     ex = MockExecutor(plans[0], seed=cfg.seed)
     vlm = MockVLM(plans[0], build_conditions(plans[0]), seed=cfg.seed)
 else:
     if not args.skip_preflight:
-        from draftdag.preflight import require_preflight
+        from redag.preflight import require_preflight
 
         require_preflight()
     if args.no_gate:
         raise SystemExit("the loop never runs without an evaluator gate; run scripts/calibrate_eval.py first")
     vlm = make_vlm(args, require_gate=True)
-    from draftdag.executor_qi21 import QI21
+    from redag.executor_qi21 import QI21
 
     ex = QI21(steps=args.qi_steps, res=args.qi_res)
     if args.lora:
@@ -78,7 +78,7 @@ else:
 
 drafts_jsonl = None
 if args.drafts_from:
-    from draftdag.executor import PreDrawn
+    from redag.executor import PreDrawn
 
     drafts_jsonl = args.drafts_from if args.drafts_from.endswith(".jsonl") else os.path.join(run_dir(args.drafts_from), "drafts.jsonl")
     ex = PreDrawn(ex, drafts_jsonl, size=cfg.size)
@@ -87,8 +87,8 @@ loop = Loop(ex, vlm, cfg, out, stats=Stats.load(args.stats))
 t0 = time.time()
 for i, plan in enumerate(plans):
     if args.executor == "mock":
-        from draftdag.conditions import build_conditions
-        from draftdag.mock import MockExecutor, MockVLM
+        from redag.conditions import build_conditions
+        from redag.mock import MockExecutor, MockVLM
 
         loop.ex = MockExecutor(plan, seed=cfg.seed)
         if drafts_jsonl:

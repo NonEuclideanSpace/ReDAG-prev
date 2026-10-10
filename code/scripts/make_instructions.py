@@ -9,8 +9,8 @@ import random
 
 from common import P0, plan_dir, run_dir
 
-from draftdag.diagnose import KEEP_TAIL
-from draftdag.schema import CHILD_TYPES, MULTI_TYPES, Plan
+from redag.diagnose import KEEP_TAIL
+from redag.schema import CHILD_TYPES, MULTI_TYPES, Plan
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--drafts-run", default=None, help="scripts/draw.py run: templated rows")

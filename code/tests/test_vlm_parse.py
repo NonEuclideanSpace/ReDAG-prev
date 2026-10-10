@@ -6,7 +6,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from draftdag.vlm import VLM, digit_dist, parse_count  # noqa: E402
+from redag.vlm import VLM, digit_dist, parse_count  # noqa: E402
 
 
 def fake_post(top):

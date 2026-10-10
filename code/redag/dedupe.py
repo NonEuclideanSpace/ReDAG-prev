@@ -17,8 +17,8 @@ objects and a pair node that wants two different individuals, so a twin entity m
 import json
 import re
 
-from draftdag.planner import LOST_FREE, MOD_FREE, NONVISUAL_WORD, SPLIT_FREE, _content, _cstem, _frame_sub, _of_ids, _placed_on_other, _qnames, _words
-from draftdag.schema import MULTI_TYPES, Plan
+from redag.planner import LOST_FREE, MOD_FREE, NONVISUAL_WORD, SPLIT_FREE, _content, _cstem, _frame_sub, _of_ids, _placed_on_other, _qnames, _words
+from redag.schema import MULTI_TYPES, Plan
 
 PARA_DROP = {"a", "an", "the", "is", "are", "does", "do", "there", "any"}
 CHILD = ("attribute", "state", "relation", "action", "absent")

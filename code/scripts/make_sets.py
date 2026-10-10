@@ -16,7 +16,7 @@ import random
 
 from common import P0
 
-from draftdag.planner import DEFAULT_MODEL, api_chat, parse_json
+from redag.planner import DEFAULT_MODEL, api_chat, parse_json
 
 TIERS = {"t02": (2, 1, 1, 1), "t03": (3, 2, 1, 1), "t05": (5, 3, 2, 1), "t10": (6, 3, 2, 1), "t20": (10, 6, 4, 2), "t30": (14, 9, 6, 2), "t40": (18, 12, 8, 3)}
 SETTINGS = ["a busy restaurant kitchen", "a village market at dawn", "a hospital corridor", "a mountain campsite", "a subway platform", "a school science fair", "a shipyard dock", "a theatre backstage", "a farm during harvest", "a rooftop party at night", "a fire station", "a library reading room", "a beach volleyball tournament", "an airport gate", "a pottery workshop", "a snowy town square", "a construction site", "a wedding reception", "a botanical greenhouse", "a train dining car"]

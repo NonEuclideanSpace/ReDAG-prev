@@ -10,8 +10,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 from common import P0, plan_dir
 
-from draftdag.planner import audit_plan
-from draftdag.schema import Plan
+from redag.planner import audit_plan
+from redag.schema import Plan
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--tags", required=True)

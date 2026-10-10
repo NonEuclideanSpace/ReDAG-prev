@@ -12,12 +12,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fixtures import lab_plan
 
-from draftdag.conditions import build_conditions
-from draftdag.grpo import sde_coeffs, sde_mean, sde_step, token_logprob
-from draftdag.loop import Loop, LoopConfig
-from draftdag.mock import MockExecutor, MockVLM
-from draftdag.schema import strip_generated
-from draftdag.train import TrainConfig, Trainer, states_from_runs
+from redag.conditions import build_conditions
+from redag.grpo import sde_coeffs, sde_mean, sde_step, token_logprob
+from redag.loop import Loop, LoopConfig
+from redag.mock import MockExecutor, MockVLM
+from redag.schema import strip_generated
+from redag.train import TrainConfig, Trainer, states_from_runs
 
 
 class DummyPolicy:
