@@ -1,0 +1,89 @@
+{
+  "computation_nodes": 57,
+  "executed_computation_nodes": 57,
+  "selected_result": "final_no_lora_8step.png",
+  "final_result": "final_scene.png",
+  "selection_reason": "Visual inspection: 8-step CFG1 preserves natural light and faces; 40-step CFG4 shows dark grain and texture artifacts in this scene",
+  "missing_nodes": [],
+  "removed_lora_nodes": [
+    110,
+    53
+  ],
+  "source_reproduction": "ComfyUI Qwen-Image-Edit-2511 GGUF, exact conditioning and sampler nodes",
+  "source_modifications": [
+    "RMBG INSPYRENET replaced with requested SAM2.1",
+    "Missing browser temporary canvas replaced with saved-transform renderer",
+    "Five generated inputs and one generated background replace absent original input files",
+    "New scene seating transforms saved separately",
+    "40-step comparison changes steps/end and CFG; 8-step result preserves sampler settings"
+  ],
+  "reference_latent_shapes": [
+    [
+      1,
+      16,
+      1,
+      87,
+      189
+    ],
+    [
+      1,
+      16,
+      1,
+      115,
+      250
+    ]
+  ],
+  "seed": 603311763670135,
+  "artifacts": [
+    {
+      "file": "composite_new_scene.png",
+      "size": [
+        2000,
+        920
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "final_no_lora_8step.png",
+      "size": [
+        2000,
+        920
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "final_no_lora_40step.png",
+      "size": [
+        2000,
+        920
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "final_qwen21.png",
+      "size": [
+        1536,
+        704
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "sampler_elapsed_seconds": [
+    50.556,
+    387.93
+  ],
+  "model_integrity": {
+    "qwen_image_vae.safetensors": {
+      "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+      "matches_hf_lfs": true
+    },
+    "qwen-image-edit-2511-Q4_K_M.gguf": {
+      "sha256": "8677bac90627adbbc11efab87b1870e701c4eb3689ee865a3de8ab81b705a723",
+      "matches_hf_lfs": true
+    },
+    "qwen_2.5_vl_7b_fp8_scaled.safetensors": {
+      "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4",
+      "matches_hf_lfs": true
+    }
+  }
+}

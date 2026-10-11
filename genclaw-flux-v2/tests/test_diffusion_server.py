@@ -2,16 +2,19 @@ import base64
 import io
 import json
 import socket
+import sys
 import threading
 import time
 from pathlib import Path
+from contextlib import nullcontext
+from types import SimpleNamespace
 
 import pytest
 import uvicorn
 from fastapi.testclient import TestClient
 from PIL import Image
 
-from server.diffusion_server import DiffusionEngine, create_app, fill_canvas
+from server.diffusion_server import DiffusionEngine, GenerationRequest, create_app, fill_canvas
 
 
 def encoded_image(color="red", size=(320, 192)):
@@ -80,6 +83,19 @@ def test_reference_bytes_and_aspect_ratio(configured, tmp_path):
     assert calls[0][1][0].getpixel((0, 0)) == (255, 0, 0)
     assert Image.open(output).size == (320, 192)
     assert json.loads(Path(output).with_suffix(".json").read_text())["reference_count"] == 1
+
+
+def test_qwen_pipeline_receives_all_reference_images(monkeypatch):
+    calls = []
+    engine = DiffusionEngine("qwen-image", "/unused")
+    engine.load = lambda: None
+    engine.pipe = lambda **kwargs: calls.append(kwargs) or SimpleNamespace(images=[Image.new("RGB", (320, 192))])
+    monkeypatch.setitem(sys.modules, "torch", SimpleNamespace(Generator=lambda device: SimpleNamespace(manual_seed=lambda seed: seed), inference_mode=nullcontext))
+    images = [Image.new("RGB", (320, 192), "red"), Image.new("RGB", (320, 192), "blue")]
+    output, mode = engine.generate(GenerationRequest(prompt="merge both", width=320, height=192), images, 1)
+    assert mode == "img2img" and output.size == (320, 192)
+    assert len(calls[0]["image"]) == 2
+    assert [image.getpixel((0, 0)) for image in calls[0]["image"]] == [(255, 0, 0), (0, 0, 255)]
 
 
 def test_text_layout_uses_same_remote_backend(configured, tmp_path):
@@ -203,4 +219,3 @@ def test_busy_worker_does_not_start_second_generation():
     finally:
         finish.set()
         thread.join(timeout=5)
-

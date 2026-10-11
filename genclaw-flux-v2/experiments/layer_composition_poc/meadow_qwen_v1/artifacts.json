@@ -1,0 +1,76 @@
+{
+  "node_id": "20f5103924494dc4869143c85e7e294b",
+  "node_type": "layer_composition",
+  "depends_on": [
+    "bicycle_fence",
+    "cat_truck",
+    "woman",
+    "retriever"
+  ],
+  "input_artifacts": [
+    {
+      "source": "../../draftdag_poc/compositor_demo/layers/bicycle_fence.png",
+      "sha256": "0ca461e0094a3b9ce6038bfb5124b16206a328b06b6ce802aa046be25e6893e4"
+    },
+    {
+      "source": "../../draftdag_poc/compositor_demo/layers/cat_truck.png",
+      "sha256": "b6044458fb161ef52718c6742cda9db2301847ad8a855bf825c2ea85181107b9"
+    },
+    {
+      "source": "../../draftdag_poc/compositor_demo/layers/woman.png",
+      "sha256": "2c67eccb734dca62f315c12963556773e3b18a03d150b9bed419a2a63a868423"
+    },
+    {
+      "source": "../../draftdag_poc/compositor_demo/layers/retriever.png",
+      "sha256": "89b71d54a9b47003df5a78c3bbf5b395c4c72c52773300c2e8e9c657c4c7816b"
+    }
+  ],
+  "output_artifacts": [
+    "scene_ir.json",
+    "scene_layout.png",
+    "foreground.png",
+    "foreground_mask.png",
+    "prompt.txt",
+    "final.png",
+    "final.json"
+  ],
+  "generation": {
+    "status": "completed",
+    "input_artifacts": [
+      "scene_layout.png"
+    ],
+    "prompt_file": "prompt.txt",
+    "seed": 261014,
+    "steps": 30,
+    "model": "qwen-image",
+    "base_url": "http://127.0.0.1:8190",
+    "guidance": 1.0,
+    "output_artifacts": [
+      "final.png",
+      "final.json"
+    ],
+    "worker_metadata": {
+      "backend": "qwen-image",
+      "mode": "img2img",
+      "seed": 261014,
+      "condition_image_count": 1,
+      "width": 1024,
+      "height": 576,
+      "steps": 30,
+      "guidance": 1.0,
+      "strength": 0.92,
+      "strength_applied": false,
+      "lora": null,
+      "elapsed_seconds": 30.179,
+      "warnings": [],
+      "reference_count": 1
+    }
+  },
+  "limitations": [
+    "Auto layout is a row, not semantic relation or pose planning.",
+    "Qwen receives one flattened PNG; Scene IR is not a model control input.",
+    "Visual conditioning is soft: identity, pose and layout are not hard locked.",
+    "Current QwenImage21Pipeline has no mask/strength-based preservation here.",
+    "No efficacy claim without a controlled multi-person comparison."
+  ]
+}

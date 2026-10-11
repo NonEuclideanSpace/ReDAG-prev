@@ -1,0 +1,844 @@
+{
+  "fixed_prompt_sha256": "61dc1482e651aea991520cac99e1891b01bd46e0c49d767e2d13815c178a4cbc",
+  "source": "HiCoGen Chain of Synthesis, adapted as a branch-based DAG; not a reproduction of its trained model",
+  "paper": "https://arxiv.org/html/2511.19965",
+  "execution_status": "plan_only_backend_missing",
+  "required_backend": "subject-conditioned composer accepting reusable clean latents and a spatially constrained scene assembler",
+  "current_backend_limitation": "Qwen-Image-2.1 endpoint accepts PNG references but exposes neither reusable clean latents nor a protected region/mask merge. Repeated calls regenerate the whole scene.",
+  "nodes": {
+    "layout": {
+      "node_id": "layout",
+      "node_type": "layout",
+      "operation": "structural_layout_draft",
+      "depends_on": [],
+      "target_scope": "Meadow composition: left woman/fence, right oak/truck, distant tower; reserved relation corridors",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "layout.json",
+        "draft.png"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "woman": {
+      "node_id": "woman",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "One woman, bent pose",
+      "covers_checklist_ids": [
+        "woman"
+      ],
+      "spatial_anchor": "left foreground",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "straw_hat": {
+      "node_id": "straw_hat",
+      "node_type": "attribute",
+      "operation": "single_attribute_generation",
+      "depends_on": [],
+      "target_scope": "Straw hat belonging to woman",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "floral_dress": {
+      "node_id": "floral_dress",
+      "node_type": "attribute",
+      "operation": "single_attribute_generation",
+      "depends_on": [],
+      "target_scope": "Floral sundress belonging to woman",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "hose": {
+      "node_id": "hose",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Garden hose and adjustable nozzle",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "retriever": {
+      "node_id": "retriever",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Running golden retriever",
+      "covers_checklist_ids": [
+        "retriever"
+      ],
+      "spatial_anchor": "center-left ground",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "red_ball": {
+      "node_id": "red_ball",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Red tennis ball",
+      "covers_checklist_ids": [
+        "red_ball"
+      ],
+      "spatial_anchor": "center ground",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "terrier": {
+      "node_id": "terrier",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Small terrier in digging pose",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "leather_harness": {
+      "node_id": "leather_harness",
+      "node_type": "attribute",
+      "operation": "single_attribute_generation",
+      "depends_on": [],
+      "target_scope": "Small leather harness belonging to terrier",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "oak": {
+      "node_id": "oak",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Ancient oak with low branch",
+      "covers_checklist_ids": [],
+      "spatial_anchor": "right",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "fence": {
+      "node_id": "fence",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Rusted fence",
+      "covers_checklist_ids": [],
+      "spatial_anchor": "left background",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "bicycle": {
+      "node_id": "bicycle",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Bicycle",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "basket_daisies": {
+      "node_id": "basket_daisies",
+      "node_type": "attribute",
+      "operation": "single_attribute_generation",
+      "depends_on": [],
+      "target_scope": "Wicker basket containing wilted daisies",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "truck": {
+      "node_id": "truck",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Pickup truck with visible hood",
+      "covers_checklist_ids": [
+        "truck"
+      ],
+      "spatial_anchor": "near oak",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "ivy": {
+      "node_id": "ivy",
+      "node_type": "attribute",
+      "operation": "single_attribute_generation",
+      "depends_on": [],
+      "target_scope": "Ivy covering pickup truck",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "cat": {
+      "node_id": "cat",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "One perched cat",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "clock_tower": {
+      "node_id": "clock_tower",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Distant clock tower",
+      "covers_checklist_ids": [
+        "clock_tower"
+      ],
+      "spatial_anchor": "far background",
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "drone": {
+      "node_id": "drone",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Small hovering drone",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "ladybugs": {
+      "node_id": "ladybugs",
+      "node_type": "unit",
+      "operation": "single_semantic_unit_generation",
+      "depends_on": [],
+      "target_scope": "Swarm of recognizable ladybugs",
+      "covers_checklist_ids": [
+        "ladybugs"
+      ],
+      "spatial_anchor": null,
+      "input_artifacts": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "woman_styled": {
+      "node_id": "woman_styled",
+      "node_type": "subject",
+      "operation": "clean_latent_conditioned_binding",
+      "depends_on": [
+        "woman",
+        "straw_hat",
+        "floral_dress"
+      ],
+      "target_scope": "Bind hat and dress to the woman; no other subjects",
+      "covers_checklist_ids": [],
+      "spatial_anchor": "left foreground",
+      "input_artifacts": [
+        "woman/partial.png",
+        "woman/clean_latent.pt",
+        "straw_hat/partial.png",
+        "straw_hat/clean_latent.pt",
+        "floral_dress/partial.png",
+        "floral_dress/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "terrier_equipped": {
+      "node_id": "terrier_equipped",
+      "node_type": "subject",
+      "operation": "clean_latent_conditioned_binding",
+      "depends_on": [
+        "terrier",
+        "leather_harness"
+      ],
+      "target_scope": "Bind harness to terrier and retain digging pose",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "terrier/partial.png",
+        "terrier/clean_latent.pt",
+        "leather_harness/partial.png",
+        "leather_harness/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "bicycle_loaded": {
+      "node_id": "bicycle_loaded",
+      "node_type": "subject",
+      "operation": "clean_latent_conditioned_binding",
+      "depends_on": [
+        "bicycle",
+        "basket_daisies"
+      ],
+      "target_scope": "Put wicker basket with wilted daisies on bicycle",
+      "covers_checklist_ids": [
+        "wicker_basket"
+      ],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "bicycle/partial.png",
+        "bicycle/clean_latent.pt",
+        "basket_daisies/partial.png",
+        "basket_daisies/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "truck_covered": {
+      "node_id": "truck_covered",
+      "node_type": "subject",
+      "operation": "clean_latent_conditioned_binding",
+      "depends_on": [
+        "truck",
+        "ivy"
+      ],
+      "target_scope": "Put ivy on the pickup without obscuring its hood",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "truck/partial.png",
+        "truck/clean_latent.pt",
+        "ivy/partial.png",
+        "ivy/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "environment": {
+      "node_id": "environment",
+      "node_type": "subscene",
+      "operation": "clean_latent_conditioned_local_composition",
+      "depends_on": [
+        "layout",
+        "oak",
+        "fence",
+        "clock_tower"
+      ],
+      "target_scope": "Meadow, sky, oak-right, fence-left, distant clock tower",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "layout/layout.json",
+        "layout/draft.png",
+        "oak/partial.png",
+        "oak/clean_latent.pt",
+        "fence/partial.png",
+        "fence/clean_latent.pt",
+        "clock_tower/partial.png",
+        "clock_tower/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "woman_hose": {
+      "node_id": "woman_hose",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "woman_styled",
+        "hose"
+      ],
+      "target_scope": "Woman hand adjusts nozzle; water forms a visible curved arc",
+      "covers_checklist_ids": [
+        "woman_adjusts_hose",
+        "water_arc"
+      ],
+      "spatial_anchor": "left foreground",
+      "input_artifacts": [
+        "woman_styled/partial.png",
+        "woman_styled/clean_latent.pt",
+        "hose/partial.png",
+        "hose/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "retriever_ball": {
+      "node_id": "retriever_ball",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "retriever",
+        "red_ball"
+      ],
+      "target_scope": "Retriever chases red ball",
+      "covers_checklist_ids": [],
+      "spatial_anchor": "center ground",
+      "input_artifacts": [
+        "retriever/partial.png",
+        "retriever/clean_latent.pt",
+        "red_ball/partial.png",
+        "red_ball/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "terrier_oak": {
+      "node_id": "terrier_oak",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "terrier_equipped",
+        "oak"
+      ],
+      "target_scope": "Terrier actively digs at oak trunk base",
+      "covers_checklist_ids": [
+        "terrier_digs_oak"
+      ],
+      "spatial_anchor": "right oak base",
+      "input_artifacts": [
+        "terrier_equipped/partial.png",
+        "terrier_equipped/clean_latent.pt",
+        "oak/partial.png",
+        "oak/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "bicycle_fence": {
+      "node_id": "bicycle_fence",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "bicycle_loaded",
+        "fence"
+      ],
+      "target_scope": "Bicycle physically leans against rusted fence",
+      "covers_checklist_ids": [
+        "bicycle_fence"
+      ],
+      "spatial_anchor": "left background",
+      "input_artifacts": [
+        "bicycle_loaded/partial.png",
+        "bicycle_loaded/clean_latent.pt",
+        "fence/partial.png",
+        "fence/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "cat_truck": {
+      "node_id": "cat_truck",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "cat",
+        "truck_covered"
+      ],
+      "target_scope": "Cat paws perched ON the truck hood",
+      "covers_checklist_ids": [
+        "cat_on_hood"
+      ],
+      "spatial_anchor": "right near oak",
+      "input_artifacts": [
+        "cat/partial.png",
+        "cat/clean_latent.pt",
+        "truck_covered/partial.png",
+        "truck_covered/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "ladybug_bridge": {
+      "node_id": "ladybug_bridge",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "ladybugs",
+        "oak",
+        "red_ball"
+      ],
+      "target_scope": "Ladybug chain starts on low oak branch and reaches toward red ball",
+      "covers_checklist_ids": [
+        "ladybug_bridge"
+      ],
+      "spatial_anchor": "oak-to-ball corridor",
+      "input_artifacts": [
+        "ladybugs/partial.png",
+        "ladybugs/clean_latent.pt",
+        "oak/partial.png",
+        "oak/clean_latent.pt",
+        "red_ball/partial.png",
+        "red_ball/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "drone_sky": {
+      "node_id": "drone_sky",
+      "node_type": "relation",
+      "operation": "clean_latent_conditioned_relation",
+      "depends_on": [
+        "drone",
+        "environment"
+      ],
+      "target_scope": "Drone above scene, not on ground",
+      "covers_checklist_ids": [
+        "drone"
+      ],
+      "spatial_anchor": "upper sky",
+      "input_artifacts": [
+        "drone/partial.png",
+        "drone/clean_latent.pt",
+        "environment/partial.png",
+        "environment/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "left_cluster": {
+      "node_id": "left_cluster",
+      "node_type": "subscene",
+      "operation": "clean_latent_conditioned_local_composition",
+      "depends_on": [
+        "woman_hose",
+        "bicycle_fence"
+      ],
+      "target_scope": "Left interactions with consistent scale",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "woman_hose/partial.png",
+        "woman_hose/clean_latent.pt",
+        "bicycle_fence/partial.png",
+        "bicycle_fence/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "ground_cluster": {
+      "node_id": "ground_cluster",
+      "node_type": "subscene",
+      "operation": "clean_latent_conditioned_local_composition",
+      "depends_on": [
+        "retriever_ball"
+      ],
+      "target_scope": "Dog chasing ball, with unoccluded red ball",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "retriever_ball/partial.png",
+        "retriever_ball/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "right_cluster": {
+      "node_id": "right_cluster",
+      "node_type": "subscene",
+      "operation": "clean_latent_conditioned_local_composition",
+      "depends_on": [
+        "terrier_oak",
+        "cat_truck"
+      ],
+      "target_scope": "Oak-base digging and cat-on-hood, without identity confusion",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "terrier_oak/partial.png",
+        "terrier_oak/clean_latent.pt",
+        "cat_truck/partial.png",
+        "cat_truck/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "bridge_cluster": {
+      "node_id": "bridge_cluster",
+      "node_type": "subscene",
+      "operation": "clean_latent_conditioned_local_composition",
+      "depends_on": [
+        "ladybug_bridge",
+        "ground_cluster",
+        "right_cluster"
+      ],
+      "target_scope": "Cross-branch bridge must terminate near the SAME ball and oak",
+      "covers_checklist_ids": [
+        "bridge_endpoints"
+      ],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "ladybug_bridge/partial.png",
+        "ladybug_bridge/clean_latent.pt",
+        "ground_cluster/partial.png",
+        "ground_cluster/clean_latent.pt",
+        "right_cluster/partial.png",
+        "right_cluster/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png",
+        "clean_latent.pt"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "scene_assembly": {
+      "node_id": "scene_assembly",
+      "node_type": "assembly",
+      "operation": "spatially_constrained_visual_assembly",
+      "depends_on": [
+        "layout",
+        "environment",
+        "left_cluster",
+        "ground_cluster",
+        "right_cluster",
+        "bridge_cluster",
+        "drone_sky"
+      ],
+      "target_scope": "Spatially place completed local visual units once; do not re-render each prior unit",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "layout/layout.json",
+        "layout/draft.png",
+        "environment/partial.png",
+        "environment/clean_latent.pt",
+        "left_cluster/partial.png",
+        "left_cluster/clean_latent.pt",
+        "ground_cluster/partial.png",
+        "ground_cluster/clean_latent.pt",
+        "right_cluster/partial.png",
+        "right_cluster/clean_latent.pt",
+        "bridge_cluster/partial.png",
+        "bridge_cluster/clean_latent.pt",
+        "drone_sky/partial.png",
+        "drone_sky/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "composition.png",
+        "placements.json"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    },
+    "final_render": {
+      "node_id": "final_render",
+      "node_type": "final",
+      "operation": "one_scene_level_render",
+      "depends_on": [
+        "scene_assembly",
+        "left_cluster",
+        "ground_cluster",
+        "right_cluster",
+        "bridge_cluster"
+      ],
+      "target_scope": "One scene-level refinement with preserved visual conditions; no repeated whole-scene additions",
+      "covers_checklist_ids": [],
+      "spatial_anchor": null,
+      "input_artifacts": [
+        "scene_assembly/composition.png",
+        "scene_assembly/placements.json",
+        "left_cluster/partial.png",
+        "left_cluster/clean_latent.pt",
+        "ground_cluster/partial.png",
+        "ground_cluster/clean_latent.pt",
+        "right_cluster/partial.png",
+        "right_cluster/clean_latent.pt",
+        "bridge_cluster/partial.png",
+        "bridge_cluster/clean_latent.pt"
+      ],
+      "output_artifacts": [
+        "final.png"
+      ],
+      "status": "planned_unexecuted",
+      "preservation_rule": "Do not redraw completed full-scene pixels; consume parent visual artifacts and synthesize only this node's target scope."
+    }
+  }
+}

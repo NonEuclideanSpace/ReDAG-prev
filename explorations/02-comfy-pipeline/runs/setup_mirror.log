@@ -1,0 +1,91 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting scipy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8e/6d/41991e503e51fc1134502694c5fa7a1671501a17ffa12716a4a9151af3df/scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 159.1 kB/s eta 0:00:00
+Collecting torchsde
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/dd/1f/b67ebd7e19ffe259f05d3cf4547326725c3113d640c277030be3e9998d6f/torchsde-0.2.6-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 143.9 kB/s eta 0:00:00
+Collecting gguf
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b3/bb/d71d6da82763528c2c2ed6b59a9d6142c6595545a4c448e2085d155e88c2/gguf-0.19.0-py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.5/118.5 kB 70.9 kB/s eta 0:00:00
+Collecting comfy-kitchen==0.2.37
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/79/34/efa0202ae45acff2601294708ff76fe71598f0eef0a1e30d8f8c275baba5/comfy_kitchen-0.2.37-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (59.2 MB)
+     ━                                        1.9/59.2 MB 64.4 kB/s eta 0:14:52
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 438, in _error_catcher
+    yield
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 561, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 527, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/cachecontrol/filewrapper.py", line 90, in read
+    data = self.__fp.read(amt)
+  File "/home/lipz/miniconda3/envs/uno_env/lib/python3.10/http/client.py", line 471, in read
+    s = self.fp.read(amt)
+  File "/home/lipz/miniconda3/envs/uno_env/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "/home/lipz/miniconda3/envs/uno_env/lib/python3.10/ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/lipz/miniconda3/envs/uno_env/lib/python3.10/ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 160, in exc_logging_wrapper
+    status = run_func(*args)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 247, in wrapper
+    return func(self, options, args)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/commands/install.py", line 419, in run
+    requirement_set = resolver.resolve(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 92, in resolve
+    result = self._result = resolver.resolve(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/resolvelib/resolvers.py", line 481, in resolve
+    state = resolution.resolve(requirements, max_rounds=max_rounds)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/resolvelib/resolvers.py", line 348, in resolve
+    self._add_to_criteria(self.state.criteria, r, parent=None)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/resolvelib/resolvers.py", line 172, in _add_to_criteria
+    if not criterion.candidates:
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/resolvelib/structs.py", line 151, in __bool__
+    return bool(self._sequence)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 155, in __bool__
+    return any(self)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 143, in <genexpr>
+    return (c for c in iterator if id(c) not in self._incompatible_ids)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 47, in _iter_built
+    candidate = func()
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 206, in _make_candidate_from_link
+    self._link_candidate_cache[link] = LinkCandidate(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 297, in __init__
+    super().__init__(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 162, in __init__
+    self.dist = self._prepare()
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 231, in _prepare
+    dist = self._prepare_distribution()
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 308, in _prepare_distribution
+    return preparer.prepare_linked_requirement(self._ireq, parallel_builds=True)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 491, in prepare_linked_requirement
+    return self._prepare_linked_requirement(req, parallel_builds)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 536, in _prepare_linked_requirement
+    local_file = unpack_url(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 166, in unpack_url
+    file = get_http_url(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/operations/prepare.py", line 107, in get_http_url
+    from_path, content_type = download(link, temp_dir.path)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/network/download.py", line 147, in __call__
+    for chunk in chunks:
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/cli/progress_bars.py", line 53, in _rich_progress_bar
+    for chunk in iterable:
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_internal/network/utils.py", line 63, in response_chunks
+    for chunk in response.raw.stream(
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 622, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 560, in read
+    with self._error_catcher():
+  File "/home/lipz/miniconda3/envs/uno_env/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/lipz/DraftDAG/DraftDAG/explorations/02-comfy-pipeline/.venv/lib/python3.10/site-packages/pip/_vendor/urllib3/response.py", line 443, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='pypi.tuna.tsinghua.edu.cn', port=443): Read timed out.

@@ -1,0 +1,26 @@
+{
+  "method": "Qwen img2img conditioned on placed foreground composite, followed by deterministic original-foreground alpha replacement",
+  "layout_reference": "../composite_photoreal_background.png",
+  "model_output": "model_raw.png",
+  "foreground_mask": "foreground_mask.png",
+  "locked_output": "final_locked.png",
+  "layer_manifest": "../manifest_photoreal.json",
+  "model": "Qwen-Image-2.1",
+  "mode": "img2img",
+  "reference_count": 1,
+  "seed": 261013,
+  "steps": 30,
+  "guidance": 1.0,
+  "mask_convention": "white = original foreground protected; black = generated background visible",
+  "validation": {
+    "fully_opaque_foreground_pixels": 63665,
+    "max_rgb_difference_on_fully_opaque_foreground": 0,
+    "fraction_of_fully_unprotected_pixels_changed_by_more_than_3_rgb_levels": 0.92233
+  },
+  "limitations": [
+    "QwenImage21Pipeline does not accept a mask_image in this installed version; model_raw.png is a full-image regeneration, not masked diffusion.",
+    "Original foreground pixels are restored after generation, while semitransparent antialiased edges blend with the generated image.",
+    "Model-generated subjects can potentially leak outside the protected mask, creating ghosts; no pixel or latent lock exists inside the model.",
+    "Visible contact-shadow and cutout-edge improvements in this single attempt are modest."
+  ]
+}

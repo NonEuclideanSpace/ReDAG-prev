@@ -1,0 +1,100 @@
+{
+  "prompt_sha256": "61dc1482e651aea991520cac99e1891b01bd46e0c49d767e2d13815c178a4cbc",
+  "nodes": {
+    "object_branch": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "environment_branch": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "relation_branch": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "character_woman": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "character_retriever": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "character_terrier": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "character_cat": {
+      "node_type": "branch",
+      "depends_on": []
+    },
+    "character_branch": {
+      "node_type": "branch_group",
+      "depends_on": [
+        "character_woman",
+        "character_retriever",
+        "character_terrier",
+        "character_cat"
+      ]
+    },
+    "merge_1": {
+      "node_type": "merge",
+      "depends_on": [
+        "environment_branch",
+        "object_branch"
+      ]
+    },
+    "merge_2_woman": {
+      "node_type": "merge",
+      "depends_on": [
+        "merge_1",
+        "character_woman"
+      ]
+    },
+    "merge_2_retriever": {
+      "node_type": "merge",
+      "depends_on": [
+        "merge_2_woman",
+        "character_retriever"
+      ]
+    },
+    "merge_2_terrier": {
+      "node_type": "merge",
+      "depends_on": [
+        "merge_2_retriever",
+        "character_terrier"
+      ]
+    },
+    "merge_2": {
+      "node_type": "merge",
+      "depends_on": [
+        "merge_2_terrier",
+        "character_cat"
+      ]
+    },
+    "merge_3": {
+      "node_type": "merge",
+      "depends_on": [
+        "merge_2",
+        "relation_branch"
+      ]
+    },
+    "final_refinement": {
+      "node_type": "final",
+      "depends_on": [
+        "merge_1",
+        "merge_2_woman",
+        "merge_2_retriever",
+        "merge_2_terrier",
+        "merge_2",
+        "merge_3",
+        "character_branch",
+        "object_branch",
+        "environment_branch",
+        "relation_branch"
+      ]
+    }
+  },
+  "execution_note": "Seven independent drafts run concurrently. One local GPU worker serializes diffusion; each character has its own draft and partial image."
+}

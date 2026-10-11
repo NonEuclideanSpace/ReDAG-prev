@@ -1,0 +1,17 @@
+{
+  "canvas": [1024, 576],
+  "background_color": [48, 48, 56, 255],
+  "layers": [
+    {"name": "car", "source": "car.png", "position": [680, 280], "scale": 0.5, "z_order": 0},
+    {"name": "person_A", "source": "person_A.png", "position": [290, 225], "scale": 0.5, "z_order": 3},
+    {"name": "person_B", "source": "person_B.png", "position": [440, 225], "scale": 0.5, "z_order": 2},
+    {"name": "person_C", "source": "person_C.png", "position": [620, 245], "scale": 0.4, "z_order": 4},
+    {"name": "person_D", "source": "person_D.png", "position": [820, 220], "scale": 0.4, "z_order": 1}
+  ],
+  "relations": [
+    {"subject": "person_A", "predicate": "grabs_handbag_from", "object": "person_B"},
+    {"subject": "person_C", "predicate": "runs_toward", "objects": ["person_A", "person_B"]},
+    {"subject": "person_D", "predicate": "stands_beside", "object": "car"}
+  ],
+  "metadata": {"note": "Placement template only. Adjust scale/position to your cropped asset dimensions. Relation records do not enforce pose in diffusion."}
+}

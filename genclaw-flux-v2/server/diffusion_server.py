@@ -155,9 +155,9 @@ class DiffusionEngine:
             raise RuntimeError("CUDA is unavailable; launch this worker in the GPU environment.")
         kind = backend_kind(self.backend)
         if kind == "qwen":
-            cls = getattr(diffusers, "QwenImage21Pipeline", None)
+            cls = getattr(diffusers, "QwenImage21Pipeline", None) or getattr(diffusers, "QwenImagePipeline", None)
             if cls is None:
-                raise RuntimeError("diffusers does not provide QwenImage21Pipeline; install the Qwen-Image-2.1 compatible diffusers build.")
+                raise RuntimeError("diffusers does not provide a Qwen Image pipeline; install the Qwen-Image-2.1 compatible diffusers build.")
         else:
             cls = diffusers.FluxFillPipeline if kind == "fill" else diffusers.FluxPipeline
         pipe = cls.from_pretrained(str(self.model_path), torch_dtype=torch.bfloat16,
@@ -195,10 +195,16 @@ class DiffusionEngine:
         generator = torch.Generator(device="cpu").manual_seed(seed)
         kwargs = dict(num_inference_steps=req.steps, guidance_scale=req.guidance, generator=generator)
         if kind == "qwen":
+            qwen_kwargs = dict(num_inference_steps=req.steps, true_cfg_scale=req.guidance,
+                               generator=generator, output_resolution=max(req.width, req.height))
             if images:
-                raise RuntimeError("qwen-image backend does not support reference images in this worker.")
+                conditions = [to_canvas(image, req.width, req.height) for image in images]
+                with torch.inference_mode():
+                    result = self.pipe(prompt=req.prompt, image=conditions if len(conditions) > 1 else conditions[0],
+                                       width=req.width, height=req.height, **qwen_kwargs).images[0]
+                return result, "img2img"
             with torch.inference_mode():
-                result = self.pipe(prompt=req.prompt, width=req.width, height=req.height, **kwargs).images[0]
+                result = self.pipe(prompt=req.prompt, width=req.width, height=req.height, **qwen_kwargs).images[0]
             return result, "text-to-image"
         if kind == "fill":
             canvas, mask, crop = fill_canvas(images, req.width, req.height)
@@ -279,8 +285,10 @@ def create_app(engine: DiffusionEngine, token: str = "") -> FastAPI:
             image.convert("RGB").save(buffer, format="PNG")
             return {"image_base64": base64.b64encode(buffer.getvalue()).decode("ascii"),
                     "backend": engine.backend, "mode": mode, "seed": seed,
+                    "condition_image_count": len(images),
                     "width": image.width, "height": image.height, "steps": req.steps,
                     "guidance": req.guidance, "strength": req.strength,
+                    "strength_applied": kind == "edit",
                     "lora": Path(engine.lora_path).name if engine.lora_path else None,
                     "elapsed_seconds": round(time.monotonic() - start, 3),
                     "warnings": ["Experimental reference-panel conditioning; layout/text fidelity is not guaranteed."]

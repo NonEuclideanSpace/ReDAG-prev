@@ -1,0 +1,218 @@
+{
+  "prompt_sha256": "61dc1482e651aea991520cac99e1891b01bd46e0c49d767e2d13815c178a4cbc",
+  "backend": "qwen-image-2.1 PNG-reference approximation",
+  "limitation": "No clean-latent reuse or pixel locking; only one full-scene diffusion call after local visual synthesis.",
+  "nodes": {
+    "woman": {
+      "node_type": "character_unit",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "woman",
+      "input_artifacts": []
+    },
+    "retriever": {
+      "node_type": "character_unit",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "retriever",
+      "input_artifacts": []
+    },
+    "terrier": {
+      "node_type": "character_unit",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "terrier",
+      "input_artifacts": []
+    },
+    "cat": {
+      "node_type": "character_unit",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "cat",
+      "input_artifacts": []
+    },
+    "environment": {
+      "node_type": "environment_unit",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "environment",
+      "input_artifacts": []
+    },
+    "woman_hose": {
+      "node_type": "local_relation",
+      "depends_on": [
+        "woman"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "woman_hose",
+      "input_artifacts": [
+        "woman/partial.png"
+      ]
+    },
+    "bicycle_fence": {
+      "node_type": "local_relation",
+      "depends_on": [],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "bicycle_fence",
+      "input_artifacts": []
+    },
+    "retriever_ball": {
+      "node_type": "local_relation",
+      "depends_on": [
+        "retriever"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "retriever_ball",
+      "input_artifacts": [
+        "retriever/partial.png"
+      ]
+    },
+    "terrier_oak": {
+      "node_type": "local_relation",
+      "depends_on": [
+        "terrier"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "terrier_oak",
+      "input_artifacts": [
+        "terrier/partial.png"
+      ]
+    },
+    "cat_truck": {
+      "node_type": "local_relation",
+      "depends_on": [
+        "cat"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "cat_truck",
+      "input_artifacts": [
+        "cat/partial.png"
+      ]
+    },
+    "ladybug_bridge": {
+      "node_type": "local_relation",
+      "depends_on": [
+        "retriever_ball",
+        "terrier_oak"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "ladybug_bridge",
+      "input_artifacts": [
+        "retriever_ball/partial.png",
+        "terrier_oak/partial.png"
+      ]
+    },
+    "left_cluster": {
+      "node_type": "local_subscene",
+      "depends_on": [
+        "bicycle_fence",
+        "woman_hose"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "left_cluster",
+      "input_artifacts": [
+        "bicycle_fence/partial.png",
+        "woman_hose/partial.png"
+      ]
+    },
+    "right_cluster": {
+      "node_type": "local_subscene",
+      "depends_on": [
+        "terrier_oak",
+        "cat_truck"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "partial.png"
+      ],
+      "node_id": "right_cluster",
+      "input_artifacts": [
+        "terrier_oak/partial.png",
+        "cat_truck/partial.png"
+      ]
+    },
+    "scene_assembly": {
+      "node_type": "spatial_draft",
+      "depends_on": [
+        "environment",
+        "bicycle_fence",
+        "woman_hose",
+        "retriever_ball",
+        "terrier_oak",
+        "cat_truck",
+        "ladybug_bridge"
+      ],
+      "output_artifacts": [
+        "draft.png",
+        "placements.json"
+      ],
+      "node_id": "scene_assembly",
+      "input_artifacts": [
+        "environment/draft.png",
+        "bicycle_fence/draft.png",
+        "woman_hose/draft.png",
+        "retriever_ball/draft.png",
+        "terrier_oak/draft.png",
+        "cat_truck/draft.png",
+        "ladybug_bridge/draft.png"
+      ]
+    },
+    "final_render": {
+      "node_type": "single_global_render",
+      "depends_on": [
+        "scene_assembly",
+        "left_cluster",
+        "right_cluster",
+        "retriever_ball",
+        "ladybug_bridge"
+      ],
+      "output_artifacts": [
+        "final.png"
+      ],
+      "node_id": "final_render",
+      "input_artifacts": [
+        "scene_assembly/draft.png",
+        "left_cluster/partial.png",
+        "right_cluster/partial.png",
+        "retriever_ball/partial.png",
+        "ladybug_bridge/partial.png"
+      ]
+    }
+  }
+}

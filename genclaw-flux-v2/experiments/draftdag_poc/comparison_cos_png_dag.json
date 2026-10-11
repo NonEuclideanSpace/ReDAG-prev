@@ -1,0 +1,233 @@
+{
+  "prompt_sha256": "61dc1482e651aea991520cac99e1891b01bd46e0c49d767e2d13815c178a4cbc",
+  "method": "same VLM checklist, each final image evaluated independently, uncertain counted false",
+  "baseline": {
+    "satisfied": 13,
+    "total": 15,
+    "image": "/home/lipz/DraftDAG/DraftDAG/genclaw-flux-v2/experiments/draftdag_poc/baseline/final.png"
+  },
+  "draftdag": {
+    "satisfied": 7,
+    "total": 15,
+    "image": "/home/lipz/DraftDAG/DraftDAG/genclaw-flux-v2/experiments/draftdag_poc/cos_png_dag/final.png"
+  },
+  "judge_model": "qwen-vl-plus",
+  "per_constraint": [
+    {
+      "id": "retriever",
+      "criterion": "A golden retriever is present and recognizable.",
+      "baseline": {
+        "id": "retriever",
+        "satisfied": true,
+        "reason": "A golden retriever is clearly visible running on the left side of the image."
+      },
+      "draftdag": {
+        "id": "retriever",
+        "satisfied": true,
+        "reason": "A golden retriever is clearly visible in the center of the image, running towards the right."
+      }
+    },
+    {
+      "id": "red_ball",
+      "criterion": "A red tennis ball is present.",
+      "baseline": {
+        "id": "red_ball",
+        "satisfied": true,
+        "reason": "A red tennis ball is visible in mid-air, being sprayed by the water arc."
+      },
+      "draftdag": {
+        "id": "red_ball",
+        "satisfied": true,
+        "reason": "A small red ball is visible on the ground near the dog."
+      }
+    },
+    {
+      "id": "woman",
+      "criterion": "A woman is present.",
+      "baseline": {
+        "id": "woman",
+        "satisfied": true,
+        "reason": "A woman wearing a floral dress and hat is present, holding a garden hose."
+      },
+      "draftdag": {
+        "id": "woman",
+        "satisfied": true,
+        "reason": "A woman wearing a hat and dress is present on the left side of the image."
+      }
+    },
+    {
+      "id": "woman_adjusts_hose",
+      "criterion": "The woman visibly adjusts or holds the garden hose nozzle.",
+      "baseline": {
+        "id": "woman_adjusts_hose",
+        "satisfied": true,
+        "reason": "The woman is visibly holding and adjusting the garden hose nozzle to spray water."
+      },
+      "draftdag": {
+        "id": "woman_adjusts_hose",
+        "satisfied": false,
+        "reason": "The woman is holding a hose, but there is no clear indication that she is adjusting or holding the nozzle."
+      }
+    },
+    {
+      "id": "water_arc",
+      "criterion": "The hose water forms a curved arc.",
+      "baseline": {
+        "id": "water_arc",
+        "satisfied": true,
+        "reason": "The water from the hose forms a clear curved arc towards the red ball."
+      },
+      "draftdag": {
+        "id": "water_arc",
+        "satisfied": true,
+        "reason": "The water from the hose forms a distinct curved arc towards the right side of the image."
+      }
+    },
+    {
+      "id": "terrier_digs_oak",
+      "criterion": "A distinct terrier is visibly digging at the oak base.",
+      "baseline": {
+        "id": "terrier_digs_oak",
+        "satisfied": false,
+        "reason": "There is no distinct terrier visible digging at the oak base; only a smaller dog is near the tree."
+      },
+      "draftdag": {
+        "id": "terrier_digs_oak",
+        "satisfied": false,
+        "reason": "There is no visible terrier digging at the base of the oak tree; only a larger dog is shown near the tree."
+      }
+    },
+    {
+      "id": "bicycle_fence",
+      "criterion": "A bicycle leans against the fence.",
+      "baseline": {
+        "id": "bicycle_fence",
+        "satisfied": true,
+        "reason": "A bicycle is leaning against a fence in the background."
+      },
+      "draftdag": {
+        "id": "bicycle_fence",
+        "satisfied": true,
+        "reason": "A bicycle leaning against a fence is visible on the left side of the image."
+      }
+    },
+    {
+      "id": "wicker_basket",
+      "criterion": "The bicycle has a wicker basket containing wilted daisies.",
+      "baseline": {
+        "id": "wicker_basket",
+        "satisfied": false,
+        "reason": "While there is a basket on the bicycle, it is not clearly identifiable as wicker or containing wilted daisies."
+      },
+      "draftdag": {
+        "id": "wicker_basket",
+        "satisfied": false,
+        "reason": "While the bicycle has a basket, it contains flowers, not wilted daisies, and the material of the basket is not clearly identifiable as wicker."
+      }
+    },
+    {
+      "id": "truck",
+      "criterion": "A pickup truck is present near the oak.",
+      "baseline": {
+        "id": "truck",
+        "satisfied": true,
+        "reason": "A pickup truck is visible on the right side of the image, partially covered in ivy."
+      },
+      "draftdag": {
+        "id": "truck",
+        "satisfied": true,
+        "reason": "A pickup truck is visible on the right side of the image, partially covered with greenery."
+      }
+    },
+    {
+      "id": "cat_on_hood",
+      "criterion": "The cat is visibly perched on the truck hood, not beside it.",
+      "baseline": {
+        "id": "cat_on_hood",
+        "satisfied": true,
+        "reason": "A cat is visibly perched on the hood of the truck."
+      },
+      "draftdag": {
+        "id": "cat_on_hood",
+        "satisfied": true,
+        "reason": "The cat is visibly perched on the hood of the truck, not beside it."
+      }
+    },
+    {
+      "id": "clock_tower",
+      "criterion": "A distant clock tower is visible.",
+      "baseline": {
+        "id": "clock_tower",
+        "satisfied": true,
+        "reason": "A distant clock tower is visible in the background on the left side of the image."
+      },
+      "draftdag": {
+        "id": "clock_tower",
+        "satisfied": false,
+        "reason": "There is no visible clock tower in the background or elsewhere in the image."
+      }
+    },
+    {
+      "id": "drone",
+      "criterion": "A drone is visible above the scene.",
+      "baseline": {
+        "id": "drone",
+        "satisfied": true,
+        "reason": "A drone is visible flying in the sky above the scene."
+      },
+      "draftdag": {
+        "id": "drone",
+        "satisfied": false,
+        "reason": "No drone is visible in the sky or above the scene."
+      }
+    },
+    {
+      "id": "ladybugs",
+      "criterion": "A swarm of ladybugs is visible.",
+      "baseline": {
+        "id": "ladybugs",
+        "satisfied": true,
+        "reason": "A swarm of small red objects resembling ladybugs is visible along the water arc."
+      },
+      "draftdag": {
+        "id": "ladybugs",
+        "satisfied": false,
+        "reason": "There are no visible ladybugs in the image."
+      }
+    },
+    {
+      "id": "ladybug_bridge",
+      "criterion": "The ladybugs visibly form a continuous bridge or chain.",
+      "baseline": {
+        "id": "ladybug_bridge",
+        "satisfied": true,
+        "reason": "The ladybugs are arranged in a continuous line, forming a bridge-like structure from the water arc."
+      },
+      "draftdag": {
+        "id": "ladybug_bridge",
+        "satisfied": false,
+        "reason": "Since there are no ladybugs, there can be no bridge or chain formed by them."
+      }
+    },
+    {
+      "id": "bridge_endpoints",
+      "criterion": "That ladybug bridge visibly runs from a low oak branch toward the red tennis ball.",
+      "baseline": {
+        "id": "bridge_endpoints",
+        "satisfied": true,
+        "reason": "The ladybug bridge starts from a low branch near the oak tree and extends towards the red tennis ball."
+      },
+      "draftdag": {
+        "id": "bridge_endpoints",
+        "satisfied": false,
+        "reason": "As there is no ladybug bridge, this criterion cannot be satisfied."
+      }
+    }
+  ],
+  "limitations": [
+    "One prompt, one stochastic generation per arm, one VLM evaluation per image; not a statistical result.",
+    "VLM judgments may be wrong; inspect image and reasons manually.",
+    "DAG uses extra LLM calls and hand-chosen coordinates; any gain is not attributable solely to DAG structure.",
+    "The final Qwen img2img stage redraws the whole canvas and may remove draft constraints."
+  ]
+}
